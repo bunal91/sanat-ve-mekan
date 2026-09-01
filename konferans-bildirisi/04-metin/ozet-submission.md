@@ -19,12 +19,12 @@ _(doldurulacak — güncel kurum)_
 **Authors' Email ID(s):**
 b.unal91@gmail.com _(kurumsal adres varsa o tercih edilmeli)_
 
-**Abstract:** _(247 kelime)_
+**Abstract:** _(250 kelime)_
 
-Eggshell waste is generated in large volumes worldwide, yet its use in design and construction remains dominated by its role as a mineral filler in polymer or cement matrices. This paper reports a fully bio-based alternative: a biocomposite produced from waste eggshell powder, agar, glycerol and water, developed over more than a year using eggshells collected from a single local patisserie.
-The primary contribution is a documented, reproducible production protocol covering component selection, preparation of the shell fraction, mixing sequence, casting and drying. This addresses a specific gap: without shared protocols, designer-led biofabrication remains confined to trial and error, and results cannot be compared across studies.
-Exploratory characterisation covers compressive behaviour, three-point flexure, flame response and water absorption. These tests used single specimens per formulation and are presented as preliminary indications rather than validated material properties. Within these limits, two formulation-behaviour relationships were consistent: reducing water while increasing eggshell and agar content raised load-bearing capacity, and halving the glycerol content shifted the material from an unmeasurably ductile state to a measurable flexural response (flexural strength 2.33 MPa, flexural modulus 192 MPa). The material self-extinguished within four seconds of flame removal, and absorbed 0.7 percent of its mass over 24 hours of immersion when shellac-coated.
-The paper argues that the low stiffness of such materials, conventionally reported as a deficiency, becomes an advantage under a resilience-based rather than a strength-based evaluation criterion, and positions designer-led biofabrication as an open field in which shared protocols must precede comparative characterisation.
+Eggshell waste is generated in large volumes worldwide, yet its use in design and construction remains dominated by its role as a mineral filler in polymer or cement matrices. This paper reports a fully bio-based alternative: a biocomposite of waste eggshell powder, agar, glycerol and water, developed over more than a year from a single local waste stream.
+The primary contribution is a documented, reproducible production protocol. Shells are heat-treated at 120 degrees Celsius, milled and sieved to a 150 micrometre fraction. Agar is dissolved in a water-glycerol phase at 95 degrees Celsius, then held at 80 degrees Celsius under continuous stirring for a total heating time of 55 minutes, with the shell fraction added incrementally near the end. The mixture is cast and dried for four days at ambient temperature without forced heating. This addresses a specific gap: without shared protocols, designer-led biofabrication remains confined to trial and error.
+Exploratory characterisation covers compressive behaviour, three-point flexure, flame response and water absorption. These used single specimens per formulation and are presented as preliminary indications, not validated material properties. Within these limits, two relationships were consistent: reducing water while increasing eggshell and agar content raised load-bearing capacity, and halving the glycerol content shifted the material from an unmeasurably ductile state to a measurable flexural response. The material self-extinguished within four seconds of flame removal.
+The paper argues that the low stiffness of such materials, conventionally reported as a deficiency, becomes an advantage under a resilience-based rather than a strength-based evaluation criterion.
 
 **Keywords:**
 eggshell waste, biocomposite, biofabrication protocol, material resilience, circular design
@@ -40,33 +40,20 @@ yazıldı; hâlâ oradaysan ya da başka bir kurumdaysan düzeltilecek.)_
 
 ---
 
-## ⚠ Bu özet henüz gönderilemez
+## Durum
 
-Özetin ikinci paragrafı bildirinin özgün katkısını "belgelenmiş, tekrarlanabilir
-üretim protokolü" olarak ilan ediyor. **Tezde bu protokol yok.** Tezdeki üretim
-anlatısı 3.2.2'de üç cümle:
+Üretim protokolü yazardan alındı ve İngilizce'ye çevrildi:
+`protokol-EN.md`. Özet artık protokolün gerçek parametrelerini içeriyor.
 
-> "Üretim süreci, gliserol ve su karışımına, toz haline getirilmiş su yosunu
-> (agar agar) katılarak pişirilmesiyle başlamıştır. Ardından, sterilize edilen,
-> öğütülen ve elenmiş yumurta kabuğu tozu, elde edilen karışıma eklenerek
-> malzemenin ana bileşeni oluşturulmuştur. Bu karışım, kalıplara dökülmüş ve
-> katı bir form kazanması için bekletilmiştir."
+**Gönderimden önce kapatılması gerekenler:**
 
-Tezin tamamını parametre açısından taradım; sıcaklık, süre, elek göz açıklığı
-veya kurutma koşulu geçmiyor. Elimizde yalnızca kütle oranları var.
+1. Basma numunelerinin hangi kalıpta üretildiği — 50 mm küp, protokoldeki
+   300×300×30 mm plakadan çıkamaz. (bkz. `protokol-EN.md` §4.6a)
+2. Kuruma büzülmesi ölçüldü mü — basma verisinin MPa olarak verilip
+   verilemeyeceği buna bağlı. (§4.6b)
+3. Güncel kurum ve e-posta.
+4. Danışman ikinci yazar olacak mı.
+5. Vesikalık fotoğraf + kurum logosu.
 
-### Yazardan gereken parametreler
-
-| Adım | Gereken |
-|---|---|
-| Sterilizasyon | Yöntem (kaynatma / fırın?), sıcaklık, süre |
-| Öğütme | Cihaz, süre; elek göz açıklığı veya tane boyutu aralığı |
-| Pişirme | Sıcaklık, süre, karıştırma; agarın çözündüğü an nasıl anlaşıldı |
-| Kabuk ilavesi | Karışımın hangi sıcaklığında eklendi (agar jelleşmesi için kritik) |
-| Kalıp | Malzeme (silikon / ahşap / metal), kalıp ayırıcı kullanıldı mı |
-| Kurutma | Ortam koşulu mu, sıcaklık/nem, kaç gün, ne zaman kalıptan çıkarıldı |
-| Büzülme | Kuruma sonrası boyut kaybı ölçüldü mü (basma verisi için kritik) |
-| Gomalak | Kaç kat, ne kadar bekletildi |
-
-Hatırladığın kadarıyla, "yaklaşık" olarak yeter — ama boş kalamaz. Protokol
-bölümü bildirinin en uzun bölümü olacak ve özgün katkı iddiası buna dayanıyor.
+1 ve 2 özeti etkilemiyor (özette basma sayısı yok), tam metni etkiliyor.
+3, 4 ve 5 özet için şart.
