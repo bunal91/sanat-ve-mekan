@@ -2,6 +2,8 @@
 ## 14 Haftalık Ders İzlencesi ve Ölçme–Değerlendirme Kurgusu
 ### İç Mimarlık Lisans Programı — 1. Sınıf
 
+> **REVİZYON NOTU (v2).** Ölçme kurgusu değişti: **sınav yok.** İki vize ve bir final, üçü de teslim edilen ve duvarda savunulan dosyalardır. Final, katmanlı bir derinlik kutusu ve sergidir. Atölye bankası, sergi kurgusu, stüdyo mührü kuralı ve makale planı için bkz. **`01-atolyeler-ve-arastirma.md`**.
+
 ---
 
 ## 1. DERSİN KİMLİĞİ VE KONUMU
@@ -62,21 +64,21 @@ Dersi başarıyla tamamlayan öğrenci:
 
 | Hafta | Konu | Stüdyo çalışması | Teslim |
 |---|---|---|---|
-| 1 | Nokta, iz, jest: çizim öncesi çizim | Isınma protokolü, çizgi merdiveni, daire/oval | **Teşhis çizimi (ön test)** |
-| 2 | Çizginin duygusu: ifade grameri | Duygu–çizgi matrisi, kör eşleştirme oyunu | Ödev 1 |
-| 3 | Zaman ve ritim: sesin notasyonu | Grafik partisyon | Ödev 2 |
-| 4 | Görmeyi öğrenmek: kontur, jest, negatif alan | Sandalye etüdü (5 yöntem) | — |
-| 5 | Ölçü, oran, eksen: görsel ölçme | Natürmort + öz-değerlendirme bindirmesi | Ödev 3 |
+| 1 | Nokta, iz, jest: çizim öncesi çizim | Isınma protokolü, çizgi merdiveni, daire | **Teşhis çizimi (ön test)** · onam + anket |
+| 2 | Çizginin duygusu: ifade grameri | Duygu matrisi + **kör eşleştirme oyunu** *(grup)* | Ödev 1 |
+| 3 | Zaman ve ritim: sesin notasyonu | Grafik partisyon + **tempo egzersizi** + **icra** *(grup)* | Ödev 2 |
+| 4 | Görmeyi öğrenmek: kontur, jest, negatif alan | Sandalye etüdü (5 yöntem) + **kısıt destesi** | — |
+| 5 | Ölçü, oran, eksen: görsel ölçme | Natürmort + bindirme + **kolektif ortalama** *(grup)* | Ödev 3 |
 | 6 | İki boyuttan hacme: temel katılar | Şeffaf katı inşası, mikro mekân | — |
-| 7 | **VİZE** — uygulama sınavı + ara portfolyo | 3 saatlik stüdyo sınavı | **Ara portfolyo** |
-| 8 | Perspektifin mantığı I: tek kaçış noktası | Oda kutusu, derinlik bölme | — |
-| 9 | Perspektifin mantığı II: iki kaçış noktası, mobilya, ölçek | Köşe perspektifi, figürle ölçek | Ödev 4 |
-| 10 | Işık ve değer: hatching, gölgelendirme | Ton skalası, tek kaynak etüdü | — |
-| 11 | Malzeme ve doku: iç mekânın yüzeyi | Doku kütüphanesi | Ödev 5 |
-| 12 | **Etüd haftası** — yerinde çizim (saha) | Grup çalışması, katmanlı belgeleme | Saha defteri |
-| 13 | Analitik ve kavramsal çizim: diyagramdan anlatıya | Çözümleme diyagramları, 12'li varyasyon | Final taslak kritiği |
-| 14 | Sentez ve sergi: pafta, sunum, kritik | Pin-up + akran değerlendirmesi | **Teşhis çizimi (son test)** |
-| Final haftası | **Final teslimi ve sözlü sunum** | — | **Final portfolyosu** |
+| 7 | **VİZE 1 — "Çizgi Sözlüğü" asma-teslimi** | **Ortak Alfabe atölyesi** *(grup)* | **Vize 1 dosyası (6 pafta)** |
+| 8 | Perspektifin mantığı I: tek kaçış noktası | Oda kutusu, üç göz seviyesi | — |
+| 9 | Perspektif II: iki kaçış noktası, mobilya, ölçek | **Kadavra enfes kesit** *(grup)* + sessiz kritik | Ödev 4 |
+| 10 | Işık, değer ve **atmosferik perspektif** | Ton skalası, kontrast kademelenmesi | — |
+| 11 | Malzeme, doku, saydamlık | **Frotaj havuzu** *(grup)* + malzeme kütüphanesi | **Vize 2 — "Mekân Dosyası"** |
+| 12 | **Etüd haftası** — yerinde çizim | Katmanlı belgeleme + **duyusal çeviri** *(grup)* | Saha defteri · Ödev 5 |
+| 13 | **Katman stüdyosu** — analiz, prova, ışık denemesi | Hafıza–gözlem karşılaştırması, kutu provası | Ara kritik |
+| 14 | **Sergi kurulumu ve açılışı** | Pin-up, ziyaretçi kartları, sunumlar | **Derinlik Kutusu** · **son test** |
+| Final haftası | **Final dosyası teslimi** (katman paftaları, kesit, süreç dosyası, katalog metni) | — | **Final dosyası** |
 
 ---
 
@@ -206,21 +208,26 @@ Orta karmaşıklıkta bir natürmort — iç mimarlık nesneleri: tabure, sürah
 
 ---
 
-### HAFTA 7 — VİZE: Uygulama Sınavı + Ara Portfolyo
+### HAFTA 7 — VİZE 1: "Çizgi Sözlüğü" Asma-Teslimi + Ortak Alfabe Atölyesi
 
-**Neden bu biçimde:** Çizim dersinde yazılı sınav geçersizdir; tek bir "güzel çizim" istemek ise şansa ve önceden hazırlığa açıktır. Bu nedenle vize, **kontrollü koşullarda, çok görevli bir stüdyo sınavıdır.** Her görev farklı bir öğrenme çıktısını ayrı ayrı ölçer.
+**Sınav yoktur.** Dosya sabah asılır, hoca ve öğrenciler duvar boyunca dolaşır, her öğrenciye masasında 5 dakikalık savunma yapılır.
 
-**3 saatlik sınav yapısı**
+**Vize 1 teslimi — 6 pafta (A3) + defter + süreç dosyası**
 
-| Bölüm | Süre | Görev | Ölçtüğü çıktı |
-|---|---|---|---|
-| A | 20 dk | Jest ve kontur serisi (verilen nesne, 6 poz) | ÖÇ1, ÖÇ2 |
-| B | 45 dk | Ölçülü natürmort kuruluşu | ÖÇ2 |
-| C | 55 dk | Hacim inşası: verilen üç katının kesişiminden bir kompozisyon, şeffaf çizim | ÖÇ3 |
-| D | 30 dk | İfade problemi: verilen bir kelimeyi/kısa sesi çizgiyle karşılama + lejant | ÖÇ6 |
-| — | 10 dk | Öz-değerlendirme formu: "En güçlü ve en zayıf bölümüm hangisi, neden?" | ÖÇ7 |
+| Pafta | İçerik | Hafta |
+|---|---|---|
+| 1 | Kişisel çizgi kataloğu — en az 40 çizgi türü, adlandırılmış ve sınıflandırılmış | 1 |
+| 2 | Duygu matrisi (12 kare) + kör eşleştirme sonuçları + 150 kelimelik yorum | 2 |
+| 3 | Grafik partisyon + lejant + icra notu | 3 |
+| 4 | Gözlem etüdleri — aynı nesne, beş yöntem | 4 |
+| 5 | Ölçü–oran analizi — kuruluş + bindirme + sapma notları | 5 |
+| 6 | Hacim inşası — şeffaf katılar, kesişimler, mikro mekân | 6 |
 
-**Ara portfolyo:** Hafta 1–6 arası tüm stüdyo çalışmaları + eskiz defteri, tarih sırasına göre, kapak sayfası ve 1 sayfalık kişisel gelişim notuyla teslim edilir.
+**Kapak:** Hafta 1 teşhis çiziminin fotokopisi + "bu altı haftada elimde ne değişti" başlıklı 250 kelimelik metin.
+
+**Güvenilirlik:** Sayfaların en az %60'ı **stüdyo mührü** (hoca parafı ve tarihi) taşımalıdır. Bkz. `01-atolyeler-ve-arastirma.md`, Bölüm II.2.
+
+**Dersin ikinci yarısı — Ortak Alfabe atölyesi *(grup)*:** Gruplar on mekânsal nitelik için grafik bir alfabe icat eder, lejantlarını değiştirir, birbirinin alfabesiyle mekân çizer ve doğru okunma oranını ölçer. Ayrıntı için atölye bankası A6.
 
 ---
 
@@ -289,7 +296,13 @@ Köşeden görülen bir iç mekân: en az 4 mobilya, 2 figür, 1 tekrar eden ele
 **Stüdyo — Malzeme Kütüphanesi**
 5×5 cm'lik karelerden oluşan bir panel: ahşap (damarlı/lamine), mermer, beton, tuğla, cam, ayna, fırçalanmış metal, krom, halı, keten, deri, bitki yaprağı. **Bu panel öğrencinin dönem boyunca ve sonraki stüdyo derslerinde kullanacağı kişisel referans kütüphanesidir.**
 
-**Ödev 5 — "Aynı sandalye, dört malzeme":** Hafta 4'ün sandalyesi ahşap, krom, saydam pleksi ve döşemeli olarak dört kez çizilir. Biçim sabit, malzeme değişken. Öğrenci malzemenin biçimden bağımsız bir temsil problemi olduğunu burada kavrar.
+**Grup atölyesi — Frotaj havuzu:** Herkes binadan ve çevresinden beş yüzeyin frotajını alır; izler sınıf duvarında ortak bir havuz oluşturur ve kalemle taklit edilerek çizime çevrilir. Ayrıntı için atölye bankası A8.
+
+**Ödev 5 — "Aynı sandalye, dört malzeme":** Hafta 4'ün sandalyesi ahşap, krom, saydam pleksi ve döşemeli olarak dört kez çizilir. Biçim sabit, malzeme değişken.
+
+### ⟶ VİZE 2 TESLİMİ — "Mekân Dosyası" *(hafta 11 sonunda asma-teslim)*
+
+Yine sınav yok; asma-teslim ve 5 dakikalık masa savunması. Öğrenci hafta 8'de seçtiği gerçek iç mekânı altı paftada çözümler: üç göz seviyesi · iki kaçış noktalı köşe perspektifi · kadavra enfes kesit ve bireysel bant değerlendirmesi · günün iki saatinde ışık etüdü · atmosferik perspektif kontrast kademelenmesi · malzeme kütüphanesi. Stüdyo mührü kuralı burada da geçerlidir.
 
 ---
 
@@ -316,88 +329,81 @@ Ekip, dört katmanı tek bir A1 paftada birleştirip 5 dakikada sunar. **Değerl
 
 ---
 
-### HAFTA 13 — Analitik ve Kavramsal Çizim: Diyagramdan Anlatıya
+### HAFTA 13 — Katman Stüdyosu: Analiz, Prova, Işık
 
-**Amaç:** Çizimi temsil aracından **düşünme aracına** yükseltmek. Dersin entelektüel zirvesi burasıdır.
+**Amaç:** Mekânı katmanlarına sökmek ve finalin kutusunu prova etmek. Analitik çizim bu hafta ayrı bir konu değil, katmanlaştırmanın kendisidir — bir mekânı ön plan / orta plan / arka plana ayırmak, onu çözümlemektir.
 
-**Anlatım (35 dk)**
-- Goldschmidt: eskiz "diyalektik" bir süreçtir — çizen, çizdiğine bakarak yeni şeyler görür ("seeing as / seeing that"), imgeler kademeli olarak dönüşür ve tasarımcı yeterli tutarlılığa ulaştığında durur. **Eskizin belirsizliği bir kusur değil, alternatif üretiminin motorudur.**
-- Analitik çizim: bir mekânı sökmek — taşıyıcı/dolgu, kütle/boşluk, dolu/boş, sirkülasyon, hiyerarşi, ışık, oran sistemi, aks
-- Kavram eskizi ve **düşünme hızı:** Bir fikir 30 saniyede kâğıda düşmezse tasarım süreci yavaşlar.
+**Anlatım**
+- Goldschmidt: eskiz diyalektik bir süreçtir; çizen, çizdiğine bakarak yeni şeyler görür ve yeterli tutarlılığa ulaşınca durur. Belirsizlik alternatif üretiminin motorudur.
+- Katman mantığı: neyi öne alırsan onu önemli ilan etmiş olursun. Katman kararı bir **anlam kararıdır.**
+- Havai (atmosferik) perspektifin fiziksel karşılığı: ön katman geniş ton aralığı ve keskin kontrast, arka katman dar aralık ve soluk kontrast. Bu kademelenme bozulursa derinlik çöker.
 
 **Stüdyo**
-1. Verilen bir iç mekân fotoğrafı üzerinden 6 analitik diyagram (her biri 10 dk)
-2. **12'li varyasyon matrisi:** Tek bir mekânsal problem (örn. "bir merdiven altını nasıl kullanırsın?") için 12 alternatif, her biri 3 dakikada, hepsi tek sayfada. Nicelik burada bilinçli olarak nitelikten önce gelir.
-3. Final projesi taslak paftalarının masa kritiği
+- **Hafıza–gözlem karşılaştırması:** 12. haftada sahada çizilen mekân, bu hafta hiçbir görsele bakmadan yeniden çizilir. İki çizim yan yana konur. *Hafızada kalan şey ön katmana gider* — katman kararının gerekçesi budur.
+- **12'li varyasyon matrisi:** Kutunun katman dizilimi için 12 alternatif, her biri 3 dakikada, tek sayfada.
+- **Kutu provası:** Katmanlar kesilmeden önce, ucuz kâğıtla birebir prova. Kutu ayakta, ışık takılı, delikten bakılarak test edilir. Ton kademelenmesi burada düzeltilir — kesilmiş katmanda düzeltmek zordur.
+- Masa kritiği: her öğrencinin kutusu delikten bakılarak kritik edilir.
 
 ---
 
-### HAFTA 14 — Sentez ve Sergi: Pafta, Sunum, Kritik
+### HAFTA 14 — Sergi: "Derinlik Odası"
 
-**Anlatım (25 dk)**
-- Pafta kompozisyonu: ızgara, hiyerarşi, boşluk yönetimi, okuma sırası
-- Çizim hiyerarşisi: kahraman çizim + destek çizimler + detaylar
-- Yazı ve çizim ilişkisi; başlık ve lejant düzeni
-- Sözlü sunum: 3 dakikada bir çizim dosyası nasıl anlatılır
+**Sabah — kurulum.** Kutular kaidelere, göz hizasına (110–150 cm) yerleştirilir. Her kutunun arkasındaki duvara **o kutunun düz katmanları** asılır. Künyeler ve QR kodları takılır.
 
-**Stüdyo — Pin-up ve Akran Değerlendirmesi**
-Tüm dönem işleri duvara asılır. Her öğrenci üç arkadaşına **akran kritiği kartı** doldurur:
-> **2 güçlü yön** (somut, çizime referanslı) + **1 soru** (yargı değil, merak: "Burada neden bu tekniği seçtin?")
+> **Serginin tezi:** Ziyaretçi önce delikten bakar ve yanılsamayı yaşar; sonra başını kaldırır ve duvarda yanılsamanın nasıl kurulduğunu görür. Sergi "bakın ne güzel" demez, **"derinlik bir kurgudur, işte kurulma biçimi"** der.
 
-Akran kritiği literatürde stüdyo değerlendirmesinin en gelişim getiren bileşenlerinden biridir; ancak rubrik önceden paylaşılmadan işlemez — bu yüzden ölçütler hafta 1'de dağıtılır.
+**Program:** 20 dk açılış · 60 dk sessiz gezinti · 45 dk üçer dakikalık öğrenci konuşmaları · 30 dk kapanış ve kartların toplanması.
 
-**Teşhis çizimi (son test):** Hafta 1'deki görev birebir tekrarlanır (kendi el + sandalye, 20 dk). Ardından hoca hafta 1 çizimlerini dağıtır. **İkisi yan yana konur ve final portfolyosunun ilk sayfası olur.**
+**Ziyaretçi kartı — serginin ölçme aracı.** Her ziyaretçi, her kutu için tek soruyu yanıtlar: *"Bu mekânda kendinizi nasıl hissettiniz?"* — hafta 2'nin 12 duygusundan biri işaretlenir. Öğrencinin hedeflediği atmosfer künyede yazmaz, kapalı zarfta hocadadır. Sergi sonunda hedeflenen ile algılanan karşılaştırılır. **Bu, dönemin ilk sorusunun mekân ölçeğinde tekrarıdır.**
+
+**Dış değerlendiriciler:** Bölüm dışından üç davetli (mimarlık, endüstriyel tasarım, psikoloji) rubrikle ayrıca puanlar. Hem notun güvenilirliğini artırır hem de araştırma için değerlendiriciler arası uyum verisi üretir.
+
+**Teşhis çizimi — son test:** Sergi kurulmadan önce, 1. haftanın görevi birebir tekrarlanır (kendi el + sandalye, 20 dk). Ardından hoca ilk hafta çizimlerini dağıtır; ikisi yan yana final dosyasının ilk sayfası olur.
 
 ---
 
-## 6. FİNAL PROJESİ: "BİR MEKÂNIN PORTRESİ"
+## 6. FİNAL: "DERİNLİK KUTUSU" VE SERGİ
 
-### Kurgu mantığı
-Final, yeni bir konu açmaz; **14 haftanın tüm tekniklerini tek bir mekân üzerinde toplar.** Böylece öğrenci her tekniğin ayrı bir hüner değil, tek bir anlatının farklı araçları olduğunu kavrar.
+Final, kâğıt üstünde kalan bir dosya değil, **katmanları arka arkaya dizilmiş, tek bir bakış deliğinden izlenen bir mekân kutusudur.** Ayrıntılı şartname, sergi kurgusu ve tür tarihi için bkz. `01-atolyeler-ve-arastirma.md`, Bölüm III.
 
-### Şartname
-Öğrenci **erişebildiği gerçek bir iç mekân** seçer (kendi evi olamaz; en az üç kez ziyaret edebileceği bir yer olmalı: bir kafe, dükkân, atölye, kütüphane, kuaför, terzi, çay ocağı, kitapçı, cami avlusu). Mekân 13. haftada hoca onayından geçer.
+**Özet şartname**
+- Dış ölçü en fazla 30 × 30 × 25 cm · **5–7 katman**, aralarında en az 3 cm · ön yüzde **tek bakış deliği** (15–25 mm) · arkadan veya üstten tek ışık kaynağı
+- Katmanların hepsi **elle çizilir**; fotoğraf, baskı, dijital çıktı yok. Renk yok
+- **Ton kuralı:** ön katman en geniş ton aralığı ve en keskin kontrast; her arka katmanda kontrast azalır. Bu kademelenme bozulursa derinlik çöker — havai perspektifin fiziksel sınavı budur
+- Konu: öğrencinin 12. haftada sahada çizdiği gerçek iç mekânın atmosferi
+- **En arka katman doğrudan gökyüzü değil, "dışarısı" olur** — bir pencere, kapı aralığı veya aydınlık; gökyüzü o açıklığın içinden görünür. İç mekân, ancak bir dış varsa iç mekândır
 
-**Teslim: 8 pafta (A3) + eskiz defteri + süreç dosyası**
+**Teslim paketi:** kutu (kurulu ve ışıklı) · katmanların düz hâli (A3 paftalar) · **kutunun kendi kesiti** (katman aralıkları ve bakış konisi ölçülü) · atmosfer sayfası (hafta 3'ün notasyon diliyle) · süreç dosyası · 300 kelimelik katalog metni.
 
-| Pafta | İçerik | İlişkili hafta |
-|---|---|---|
-| 1 | **Kapak + teşhis çizimi karşılaştırması** (ön test / son test yan yana) + 200 kelimelik gelişim metni | 1 & 14 |
-| 2 | **Atmosfer sayfası:** mekânın sesinin/duygusunun grafik notasyonu + lejant | 2, 3 |
-| 3 | **Gözlem etüdleri:** jest, kontur, negatif alan — mekânın karakteristik nesnesi üzerinden | 4 |
-| 4 | **Ölçü–oran analizi:** kuruluş çizimi + fotoğraf bindirmesi + sapma notları | 5 |
-| 5 | **Hacimsel çözümleme:** mekânın temel katılara indirgenmesi, şeffaf çizim | 6 |
-| 6 | **İki perspektif:** biri tek, biri iki kaçış noktalı; ölçek figürleriyle | 8, 9 |
-| 7 | **Işık etüdü:** günün iki farklı saatinde aynı görüş — tonlama tekniğiyle | 10 |
-| 8 | **Malzeme paneli + analitik diyagramlar + kapanış anlatısı** | 11, 13 |
-
-**Süreç dosyası:** Reddedilen denemeler, yırtılmış sayfalar, ilk taslaklar dâhil. **Not: temiz bir süreç dosyası düşük not alır.** Bu, öğrenciyi risk almaya ve çok denemeye teşvik eder.
-
-**Sözlü sunum:** 6 dakika sunum + 4 dakika soru. Sorular tekniğe değil **karara** yöneliktir: "Bu paftada neden bu görüş açısını seçtin?"
-
----
+**Türün dayanağı:** Samuel van Hoogstraten'in *Peepshow with Views of the Interior of a Dutch House* adlı perspektif kutusu (1655–60, National Gallery Londra, NG3832) — delikten bakıldığında bir Hollanda evinin iç mekânı olarak açılan, türün dünyada yalnızca altı örneği kalmış biçimi; 18. yüzyıl ortasından beri süregelen ve tiyatro dekorlarından türeyen tunnel book geleneği (standart 5–8 katman, 30–50 cm izleme mesafesi); barok sahne tasarımının kulis–fon derinliği; Do Ho Suh'un saydam kumaş mekânları.
 
 ## 7. ÖLÇME VE DEĞERLENDİRME
 
-### 7.1 Önerilen ağırlıklandırma
+### 7.1 Önerilen ağırlıklandırma — **sınav yok, üç teslim**
 
-| Bileşen | Ağırlık | Değerlendirme türü |
+| Bileşen | Ağırlık | Biçim |
 |---|---|---|
-| Eskiz defteri + haftalık stüdyo çalışmaları | **%20** | Süreç / sürekli |
-| Ara ödevler (Ödev 1–5, en iyi 4'ü sayılır) | **%15** | Ürün |
-| **Vize:** uygulama sınavı (%15) + ara portfolyo (%10) | **%25** | Ara sınav |
-| Saha etüdü + grup çalışması (Hafta 12) | **%10** | Grup (%6) + bireysel katman (%4) |
-| **Final portfolyosu + sözlü sunum** | **%30** | Sonuç ürünü |
+| Eskiz defteri + haftalık stüdyo üretimi *(süreç)* | **%15** | Sürekli |
+| Ara ödevler — 5 ödev, en iyi 4'ü sayılır | **%15** | Teslim |
+| **Vize 1 — "Çizgi Sözlüğü" dosyası** *(hafta 7)* | **%20** | Asma-teslim + 5 dk masa savunması |
+| **Vize 2 — "Mekân Dosyası"** *(hafta 11)* | **%20** | Asma-teslim + 5 dk masa savunması |
+| **Final — Derinlik Kutusu + katman paftaları + sergi** | **%30** | Sergi + dosya |
 | **Toplam** | **%100** | |
 
-> **Not:** "En iyi 4 ödev" kuralı, bir haftalık aksamanın dönemi çökertmesini engeller ve öğrenciyi bir ödevde risk almaya cesaretlendirir.
+Hiçbir bileşende sınav salonu, kapalı kapı veya süre baskısı yoktur.
 
-### 7.2 Yönetmelik uyumlu eşleme (tek vize + tek final zorunluysa)
+> ### 7.1.1 Stüdyo Mührü — sınavın yerini alan kural
+> Her ders sonunda, o gün stüdyoda üretilen sayfalar **hoca tarafından tarihlenip paraflanır.** Vize ve final dosyalarında sayfaların **en az %60'ı paraflı olmak zorundadır.**
+>
+> Bu tek kural sınavın yaptığı işi sınav olmadan yapar: yerinde üretimi garanti eder, dışarıdan yaptırmayı işlevsiz kılar, devamı doğal olarak zorunlu hâle getirir ve "asıl iş stüdyoda oluyor" mesajını verir. Destekleyicileri: zorunlu süreç dosyası, 5 dakikalık masa savunması ve isteğe bağlı olarak teslim haftasında stüdyoda üretilen sentez paftası.
 
-Çoğu üniversite otomasyonu tek bir vize ve tek bir final notu ister. Yukarıdaki kurgu şöyle eşlenir:
+### 7.2 Yönetmelik uyumlu eşleme (2 ara sınav + 1 final)
 
-**VİZE NOTU (%40)** = Uygulama sınavı %40 + Ara portfolyo %25 + Hafta 1–6 defteri %20 + Ödev 1–2 %15
-**FİNAL NOTU (%60)** = Final portfolyosu %55 + Sözlü sunum %15 + Saha etüdü ve grup çalışması %15 + Hafta 8–14 defteri %15
+- **Ara Sınav 1** = Çizgi Sözlüğü dosyası %70 + Hafta 1–6 defteri %15 + Ödev 1–2 %15
+- **Ara Sınav 2** = Mekân Dosyası %70 + Hafta 8–11 defteri %15 + Ödev 3–4 %15
+- **Final** = Derinlik Kutusu ve katman paftaları %55 + Süreç dosyası %20 + Sergi sunumu ve katalog metni %15 + Ödev 5 %10
+
+Ham not: **(Ara Sınav 1 + Ara Sınav 2) / 2 × 0,40 + Final × 0,60** — kurum yönetmeliğine göre ayarlanır.
 
 ### 7.3 Analitik rubrik (5 ölçüt × 4 düzey)
 
@@ -411,7 +417,7 @@ Rubrik **1. hafta öğrencilere dağıtılır.** Literatür, rubriğin erken pay
 | **D. Kavramsal karar ve anlatı**<br>(soyutlama, eşleme sistemi, kompozisyon) | Tutarlı ve gerekçelendirilmiş bir sistem kurmuş; pafta okunma sırası bilinçli | Sistem var, kısmen tutarlı; kompozisyon dengeli | Sistem zayıf veya rastlantısal; kompozisyon düzeltilmiş değil | Karar yok; ödev tamamlama düzeyinde |
 | **E. Süreç, süreklilik ve öz-yansıma** | Defter düzenli ve yoğun; çok deneme; kritiği somut olarak işlemiş; öz-değerlendirme kanıta dayalı | Defter düzenli; kritik kısmen uygulanmış | Defter aksamalı; denemeler yüzeysel | Defter yok/eksik; süreç izlenemiyor |
 
-**Puanlama:** Her ölçüt 20 puan üzerinden (4=20, 3=15, 2=10, 1=5), toplam 100. Ölçütler işin türüne göre farklı ağırlıklandırılabilir; örneğin hafta 2–3 ödevlerinde D ölçütü çift ağırlıklı, hafta 5–6'da A ölçütü çift ağırlıklıdır.
+**Puanlama:** Her ölçüt 20 puan üzerinden (4=20, 3=15, 2=10, 1=5), toplam 100. Ölçütler işin türüne göre ağırlıklandırılır: **Vize 1'de B ve D, Vize 2'de A ve C, finalde C ve D çift ağırlıklıdır.**
 
 ### 7.4 Biçimlendirici (formatif) ölçme araçları
 
