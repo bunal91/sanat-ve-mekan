@@ -23,29 +23,43 @@ Yüzey koruması: gomalak (shellac) — hidrofobik doğal reçine.
 
 P3 kütle: 173 g → yoğunluk 173/125 = **1,384 g/cm³**
 
-### ⚠ Tutarsızlık — çözülmeden bildiriye girmemeli
+### ✔ Tutarsızlık çözüldü
 
-50×50 mm yüzey alanı = 2500 mm². Buradan:
+**50 × 50 × 50 mm, kalıbın ölçüsüdür — kurumuş numunenin değil.** Malzeme
+kururken büzülüyor, dolayısıyla test edilen kesit kalıptan küçük.
 
-| Prototip | F/A hesabı | Tezdeki σ | İma edilen alan |
-|---|---|---|---|
-| P1 | 3890 N / 2500 = **1,56 MPa** | 2,55 MPa | 1525 mm² ≈ 39×39 |
-| P2 | 4300 N / 2500 = **1,72 MPa** | 3,12 MPa | 1378 mm² ≈ 37×37 |
-| P3 | 6800 N / 2500 = **2,72 MPa** | 4,10 MPa | 1659 mm² ≈ 41×41 |
+Bu, tezdeki MPa değerlerini **geçerli kılıyor.** Cihazın MPa raporlayabilmesi
+için bir alan girilmesi gerekir; girilen alanlar formülasyona göre farklı çıkıyor:
 
-Üç satırda da kN ile MPa birbirini tutmuyor, üstelik ima edilen alanlar da
-birbirinden farklı. Olası açıklamalar:
+| Prototip | F_max | σ | İma edilen kesit | Kenar |
+|---|---|---|---|---|
+| P1 | 3,89 kN | 2,55 MPa | 1525 mm² | ~39,1 mm |
+| P2 | 4,30 kN | 3,12 MPa | 1378 mm² | ~37,1 mm |
+| P3 | 6,80 kN | 4,10 MPa | 1659 mm² | ~40,7 mm |
 
-1. **Kuruma büzülmesi.** Numuneler 50 mm kalıba dökülüp kuruyunca ~37–41 mm'ye
-   büzülmüş olabilir (yüksek su oranı düşünülürse gayet olası). Bu durumda MPa
-   değerleri doğru, ama **yoğunluk hesabı yanlış** — 125 cm³ yerine gerçek hacim
-   kullanılmalı, yoğunluk 1,384'ten belirgin biçimde yüksek çıkar.
-2. Cihazın raporladığı MPa başka bir referans alana göre hesaplanmış.
-3. Hesap hatası.
+Üçü de 50 mm kalıptan %19–26 dogrusal büzülme aralığında ve birbirinden hafifçe
+farklı — yani her numune kuruduktan sonra ayrı ayrı ölçülüp cihaza girilmiş
+olmalı. Formülasyonların su oranı farklı olduğu için büzülmenin de farklı olması
+zaten beklenir: en az su içeren P3 en az büzülmüş (%19), en çok su içeren
+P2 en çok (%26). Fiziksel olarak tutarlı.
 
-**Yapılacak:** Test raporlarındaki gerçek numune ölçüleri kontrol edilecek.
-Tablo 5 tezde görsel olarak yerleştiği için metinden okunamadı; oradaki ham
-değerlere bakılmalı.
+**Sonuç:** Basma verisi bildiride MPa olarak raporlanabilir. Metinde şu
+belirtilmeli: numuneler 50 mm küp kalıplarda döküldü, kuruma sonrası kesit
+ölçüleri test anında ölçüldü, ancak bu ölçüler tezde kayıt altına alınmadı.
+
+> **Teyit edilecek:** Kuruma sonrası ölçümün laboratuvarda gerçekten yapıldığı.
+> Yukarıdaki çıkarım rakamların tutarlılığına dayanıyor.
+
+### ✔ Numune sayısı — n > 1
+
+Yazarın beyanı: her formülasyon için **birden fazla küp** üretildi ve raporlanan
+değerler bunların **ortalaması**. Tezdeki "üç adet prototip örnek" ifadesi üç
+*formülasyonu* anlatıyor, üç numuneyi değil.
+
+Bu, bildirinin en büyük zayıflığını ortadan kaldırıyor. **Formülasyon başına kaç
+küp olduğu öğrenilmeli** — n=3 veya üzeriyse standart sapmayla birlikte
+raporlanabilir ve çalışma "keşifsel" nitelemesinden çıkıp normal bir ön çalışma
+olur.
 
 ## 3. Eğilme testi — ASTM D790, üç nokta
 

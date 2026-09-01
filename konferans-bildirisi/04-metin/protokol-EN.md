@@ -96,7 +96,13 @@ dried surface as a hydrophobic finish.
 | Kuruma büzülmesi | **Var.** Protokol artık kuruma sonrası ölçü iddia etmiyor; verilen ölçüler kalıp ölçüsü olarak etiketlendi ve sınırlılık olarak beyan edildi. |
 | "Sterilizasyon" | "Heat treatment for decontamination and drying" olarak yazıldı |
 
-### ⚠ Kalan tek soru — basma gerilmesi
+### ✔ Basma gerilmesi — çözüldü
+
+50 mm kalıp ölçüsüdür; kurumuş küp daha küçük ve test anında ölçülmüş.
+Tezdeki 2,55 / 3,12 / 4,10 MPa değerleri geçerli, bildiride kullanılabilir.
+Ayrıntı: `../05-veri/tez-veri-dokumu.md` §2.
+
+### (arşiv) Önceki değerlendirme
 
 Büzülmenin varlığı teyit edildi ama **ölçülmedi**. Bu yüzden basma testindeki
 50 mm'nin neye ait olduğu hâlâ belirleyici:
