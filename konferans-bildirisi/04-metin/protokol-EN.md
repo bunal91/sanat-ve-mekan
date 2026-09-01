@@ -11,7 +11,7 @@ heat-treated in a laboratory oven at 120 °C for 20 minutes for decontamination
 and moisture removal. After cooling to room temperature, the shells were dried
 until no residual moisture remained.
 
-Dried shells were reduced to powder in a laboratory mechanical grinder, milling
+Dried shells were reduced to powder in a laboratory mechanical grinder; milling
 continued until a visually homogeneous fine powder was obtained. The powder was
 then sieved through a 150 µm (0.15 mm) mesh; only the passing fraction was used.
 This particle size is consistent with eggshell powder preparation procedures
@@ -22,9 +22,9 @@ reported in the composite literature.
 Water and glycerol were combined and stirred until homogeneous. Powdered agar
 was then introduced gradually under continuous stirring to prevent agglomeration.
 
-The mixture was heated to 95 °C under continuous mechanical stirring until the
-agar was fully dissolved in the liquid phase. The temperature was then reduced
-to 80 °C and cooking continued at this temperature, with stirring maintained
+The mixture was heated to 95 °C under continuous manual stirring until the agar
+was fully dissolved in the liquid phase. The temperature was then reduced to
+80 °C and cooking continued at this temperature, with stirring maintained
 throughout, allowing viscosity to develop and a homogeneous binder phase to form.
 Total heating time, across both stages, was 55 minutes. This two-stage regime —
 high-temperature dissolution followed by lower-temperature controlled cooking —
@@ -41,15 +41,25 @@ had been obtained.
 
 ## 4.4 Casting and drying
 
-The mixture was poured into prepared moulds and distributed evenly to maintain
-uniform thickness. Specimens remained in the moulds for four days for initial
-setting and drying.
+The mixture was poured into silicone moulds and distributed evenly to maintain
+uniform thickness. Silicone was selected for its flexibility, which allows
+demoulding without a release agent and without damaging the partially
+consolidated specimen. Mould geometry followed the requirements of each test:
+50 mm cube moulds for compression specimens, and flat moulds for the flexural,
+flame and water absorption specimens.
 
-Drying was carried out under controlled ambient conditions at approximately
-23 °C without forced heating, with specimens shielded from direct sunlight and
-excessive air movement. After four days, specimens were demoulded and left at
-ambient conditions to consolidate. Ambient drying over several days is likewise
-reported for agar-based biomaterials.
+Specimens remained in the moulds for four days for initial setting and drying.
+Drying was carried out under ambient conditions at approximately 23 °C without
+forced heating, with specimens shielded from direct sunlight and excessive air
+movement. After four days, specimens were demoulded and left under the same
+ambient conditions for a further seven days to consolidate. Ambient drying over
+several days is likewise reported for agar-based biomaterials.
+
+The material undergoes appreciable dimensional loss during drying as the water
+phase evaporates. Post-drying dimensions were not recorded during this study;
+the dimensions cited here are mould dimensions. This is treated as a limitation
+in Section 8, and any future application of this protocol should record specimen
+dimensions after drying rather than at casting.
 
 ## 4.5 Formulations
 
@@ -66,70 +76,60 @@ Mass proportions for the formulations characterised in Section 6:
 Gelatine, starch and vinegar were trialled as auxiliary components during
 development but are not part of the formulations reported here.
 
-For the water absorption specimen, a shellac coating was applied to the dried
-surface as a hydrophobic finish. _(Kaç kat, ne kadar beklendi — bilgi eksik.)_
+For the water absorption specimen, three coats of shellac were applied to the
+dried surface as a hydrophobic finish.
 
 ---
 
-## 4.6 ⚠ ÇÖZÜLMESİ GEREKEN NOKTALAR
+## 4.6 Çözülenler ve kalan tek soru
 
-### (a) Kalıp boyutu, basma numunesiyle çelişiyor — kritik
+### Kapatılanlar
 
-Protokol tek kalıp boyutu veriyor: **300 × 300 × 30 mm**.
+| Konu | Karar |
+|---|---|
+| 300 × 300 × 30 mm kalıp | **Yanlış, protokolden çıkarıldı.** Kalıp geometrisi teste göre değişiyor. |
+| Basma numunesi | 50 mm küp silikon kalıp — doğru, korundu |
+| Kalıp malzemesi | Silikon; esnekliği sayesinde kalıp ayırıcı gerekmiyor |
+| Karıştırma | Elle, sürekli |
+| Gomalak | 3 kat |
+| Demoulding sonrası | Oda koşullarında 7 gün konsolidasyon |
+| Kuruma büzülmesi | **Var.** Protokol artık kuruma sonrası ölçü iddia etmiyor; verilen ölçüler kalıp ölçüsü olarak etiketlendi ve sınırlılık olarak beyan edildi. |
+| "Sterilizasyon" | "Heat treatment for decontamination and drying" olarak yazıldı |
 
-| Test | Numune | 30 mm plakadan çıkar mı? |
-|---|---|---|
-| Basma | 50 × 50 × 50 mm | **HAYIR** — 50 mm > 30 mm |
-| Eğilme | 180 × 60 × 20 mm | Evet, kesilerek |
-| Alev | 40 × 50 mm | Kalınlık belirtilmemiş |
-| Su emme | 40 × 50 mm | Kalınlık belirtilmemiş |
+### ⚠ Kalan tek soru — basma gerilmesi
 
-50 mm'lik küp, 30 mm kalınlığındaki bir plakadan çıkarılamaz. Demek ki basma
-numuneleri **ayrı bir küp kalıpta** dökülmüş olmalı. Protokole eklenmeli:
-hangi numune hangi kalıpta üretildi, plakadan kesilenler nasıl kesildi.
+Büzülmenin varlığı teyit edildi ama **ölçülmedi**. Bu yüzden basma testindeki
+50 mm'nin neye ait olduğu hâlâ belirleyici:
 
-### (b) Büzülme — basma verisinin kaderi buna bağlı
+- **50 mm kalıp ölçüsüyse** (kurumuş küp daha küçük): tezdeki
+  2,55 / 3,12 / 4,10 MPa değerleri tutarlı olur, çünkü gerçek kesit ~37–41 mm.
+- **50 mm kurumuş küpün ölçüsüyse**: gerçek dayanımlar
+  1,56 / 1,72 / 2,72 MPa olur ve tezdeki değerler hatalıdır.
 
-Protokol kuruma sonrası boyutu "nominal 300 × 300 × 30 mm" diyor; yani kalıp
-ölçüsü, büzülme yok. Ama basma verisi bunun tersini ima ediyor:
+Kütle dengesinden çözmeye çalıştım ama olmuyor: bir karışım partisi
+(445 g ≈ 370 cm³) birden fazla küpe yetiyor, dolayısıyla 173 g'lık tek küpün
+hangi orana karşılık geldiği belirsiz.
 
-| Prototip | İma edilen kenar | 50 mm kalıba göre büzülme |
-|---|---|---|
-| C1 | 39,1 mm | %22 |
-| C2 | 37,1 mm | %26 |
-| C3 | 40,7 mm | %19 |
+**Karar:** Ölçülmüş bir değer olmadığı için bildiride basma verisi
+**yalnızca maksimum kuvvet (kN)** olarak raporlanacak — 3,89 / 4,30 / 6,80 kN —
+ve kuruma sonrası kesit alanının kaydedilmediği açıkça yazılacak. Bu, elimizdeki
+veriyle savunulabilir tek yol. Kurumuş numune veya cetvelli fotoğraf çıkarsa
+ölçüp MPa'ya dönebiliriz.
 
-İkisi aynı anda doğru olamaz. Üç ihtimal:
+Not: Bu, bildirinin iddiasını zayıflatmıyor. Formülasyon–davranış ilişkisi
+(su↓ + kabuk↑ + agar↑ → taşıma kapasitesi↑) kuvvet değerlerinden zaten okunuyor;
+üç numune de aynı kalıpta üretildiği için karşılaştırma geçerli.
 
-1. **Büzülme oldu ama ölçülmedi.** "Nominal" kelimesi kalıp ölçüsünü anlatıyor,
-   ölçülmüş değeri değil. Bu durumda MPa değerleri doğru, yoğunluk (1,384 g/cm³)
-   yanlış — gerçek hacim daha küçük, yoğunluk daha yüksek.
-2. **Büzülme olmadı**, MPa değerleri hatalı hesaplanmış. O zaman gerçek
-   dayanımlar 1,56 / 1,72 / 2,72 MPa.
-3. Elde kalmış kurumuş numune varsa **ölçülüp bitirilir.**
+### Hâlâ eksik (tam metin için, özeti engellemiyor)
 
-**En iyi çözüm:** Elinde kurumuş numune ya da fotoğraf varsa ölç. Yoksa
-bildiride basma verisi yalnızca **maksimum kuvvet (kN)** olarak raporlanır ve
-"kuruma büzülmesi kaydedilmediğinden kesit alanı belirsizdir, gerilme değeri
-verilmemiştir" denir. Dürüst ve savunulabilir.
+- Öğütücünün tipi ve öğütme süresi
+- Karışımın kalıba döküldüğü sıcaklık
+- Gomalak katları arası bekleme süresi
 
-### (c) Terim: "sterilizasyon"
+### Elle karıştırma üzerine bir not
 
-120 °C / 20 dakika kuru ısı, mikrobiyolojik sterilizasyon için yeterli değil
-(kuru ısı sterilizasyonu tipik olarak 160–170 °C ve 1–2 saat ister). Sterilite
-zaten doğrulanmadı. Metinde **"heat treatment for decontamination and drying"**
-denmesi daha doğru — böylece hakemin itiraz edeceği bir iddia kurulmamış olur.
-İşlemin kendisi değişmiyor, yalnızca adı.
-
-### (d) Küçük düzeltme
-
-Türkçe metinde "95 °C'ye kadar ısıtılmıştır… karışımın kaynama noktasına
-ulaşmasının ardından" deniyor. 95 °C kaynama noktası değil. İngilizce taslakta
-"kaynama noktası" ifadesi çıkarıldı, yalnızca sıcaklıklar bırakıldı.
-
-### (e) Eksik kalanlar
-
-- Kalıp malzemesi (silikon / ahşap / metal) ve kalıp ayırıcı kullanılıp kullanılmadığı
-- Gomalak: kaç kat, katlar arası bekleme, kuruma süresi
-- Karıştırma hızı veya yöntemi (elle / mekanik karıştırıcı, devir)
-- Demoulding sonrası konsolidasyon süresi ("oda koşullarında bekletilmiştir" — kaç gün?)
+Elle karıştırma kayıt altına alınmalı ve savunulmalı, gizlenmemeli: kesme hızı
+kontrol edilmiyor, bu bir tekrarlanabilirlik sınırı. Ama bildirinin konusu tam
+olarak *tasarımcı yürütücülüğündeki* biyofabrikasyon — atölye koşullarında,
+laboratuvar donanımı olmadan. Sınırı beyan etmek, çalışmanın kapsamını
+tanımlıyor.
