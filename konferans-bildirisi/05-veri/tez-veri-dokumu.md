@@ -63,15 +63,19 @@ değerler bunların **ortalaması**. Tezdeki "üç adet prototip örnek" ifadesi
 Bu, bildirinin en büyük zayıflığını ortadan kaldırıyor. Çalışma artık "tek
 numuneli keşifsel deneme" değil, n=3 ile yürütülmüş bir ön çalışma.
 
-**Kalan eksik:** Tek tek küplerin değerleri tezde yok, dolayısıyla standart
-sapma hesaplanamıyor. Laboratuvar raporunda üç küpün ayrı değerleri duruyorsa
-SD hesaplanıp `ortalama ± SD` biçiminde raporlanmalı — mühendislik hakeminin
-beklediği budur. Bulunamazsa "mean of three specimens; individual values not
-retained" denir.
+**Eğilme testi de n = 3** (yazar teyidi). Yani her iki mekanik test de
+formülasyon başına üç numuneyle yürütülmüş; özette "three specimens tested per
+formulation" olarak genelleştirildi.
 
-**Eğilme testi için n bilinmiyor.** Basma n=3 teyitli; eğilmenin de 3 numuneyle
-mi yapıldığı sorulmalı. Özette bu yüzden yalnızca basma için "three specimens
-per compression formulation" denildi.
+**Kalan eksik — standart sapma yok.** Tek tek küplerin değerleri elde olmadığı
+için yalnızca ortalamalar raporlanabiliyor. Bildiride şu ifade kullanılacak:
+
+> Values are means of three specimens per formulation; individual specimen
+> values were not retained, and standard deviations are therefore not reported.
+
+Bu, sınırlılıklar bölümünde de tekrarlanmalı. Ortalamayı SD'siz vermek
+mühendislik konferansında kabul edilebilir ama eleştiriye açık; beyan edilmesi
+şart.
 
 ## 3. Eğilme testi — ASTM D790, üç nokta
 
@@ -135,9 +139,9 @@ Bildirinin ampirik omurgası budur.
 
 ## 6. Metodolojik zayıflıklar (bildiride açıkça beyan edilmeli)
 
-1. ~~Her formülasyon için tek numune (n=1).~~ **Çözüldü:** basmada n=3.
-   Tek tek değerler elde yoksa standart sapma verilemez; eğilme için n hâlâ
-   teyit bekliyor.
+1. ~~Her formülasyon için tek numune (n=1).~~ **Çözüldü:** basma ve eğilmede
+   n=3. Kalan sınır: tek tek değerler elde olmadığı için standart sapma
+   verilemiyor, yalnızca ortalama raporlanıyor — beyan edilecek.
 2. **Basmada şekil değiştirme ölçülmemiş**, gözleme dayalı %10 varsayılmış.
    Bu nedenle basma verisinden U_r hesaplanmadı; yalnızca eğilme verisi kullanıldı.
 3. **Eğilmede tek geçerli numune** (P1 ölçülemedi).
