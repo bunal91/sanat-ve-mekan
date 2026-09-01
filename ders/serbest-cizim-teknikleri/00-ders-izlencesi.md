@@ -509,7 +509,40 @@ Sabit ritim, stüdyo derslerinde öğrenci güvenliğini ve verimi belirgin biç
 
 ---
 
-## 11. UYGULAMA NOTLARI VE RİSKLER
+## 11. KARŞILAŞTIRMALI ÇERÇEVE: BAŞKA PROGRAMLAR NE YAPIYOR?
+
+Bu izlence tasarlanırken hem Türkiye'deki hem yurt dışındaki program tanımları taranmıştır. Ortaya çıkan tablo, bu dersin nerede konumlandığını ve nerede farklılaştığını gösterir.
+
+### Türkiye'deki yaygın uygulama
+Türkçe ders bilgi paketlerinde serbest el çizim dersleri genellikle tek cümlelik bir tanımla verilir: *"Serbest el çizim teknikleri kullanılarak nesne, mimari mekân ve öğelerin iki ve üç boyutlu eskiz çalışmaları"* (Doğu Akdeniz Ü., ITAS106) ya da *"öğrenciye mesleki eskizlerde ve sunumlarda kullanılmak üzere serbest el çizim tekniklerini tanıtmak, bu yöntemleri kendini ifade yolunda bir araç olarak kullanmasını sağlamak"* (Marmara Ü.). Marmara'nın izlencesinde haftalar şu sırayla ilerler: temel yöntemler → sınıf içi eskiz incelemesi → perspektif ve kaynaklar → vize → renk ve figür → sunum teknikleri → final; değerlendirme %40 vize / %60 final biçimindedir.
+
+**Bu izlencenin farkı:** Aynı teknik omurgayı korur, ancak (a) ölçmeyi tek bir vize–final ikilisine sıkıştırmak yerine sürece yayar, (b) ön test–son test ve bindirme analizi gibi *kanıta dayalı* ölçme araçları ekler, (c) soyutlama ve notasyon haftalarıyla dersi salt teknik aktarımdan çıkarıp tasarım düşüncesine bağlar.
+
+### Uluslararası örnekler
+- **University of South Florida (Mimarlık):** gözlemsel çizim, haritalama, jest ve "yön bulma aracı olarak çizim" vurgusu — geniş bir yöntem, malzeme ve kavram yelpazesi.
+- **Harper College (IND 217):** iç ve dış mekânların serbest el eskizi, iç mekân perspektifi ağırlıklı.
+- **University of North Texas (ADES 2630):** dönem boyunca **sürekli gelişim gösteren bir eskiz defteri zorunluluğu** — bu izlencedeki defter protokolüyle örtüşür.
+- **Alamo Colleges (Arch Freehand Drawing II):** analiz çizimleri (yer analizi, kesit, piktoryal), gölge ve gölgelendirme, "görsel düşünme aracı olarak serbest el" vurgusu.
+- **UAL / Central Saint Martins ve Chelsea kısa programları:** ufuk çizgisi, kaçış noktası ve konstrüksiyon çizgileri üzerinden mekânsal nitelik okuması.
+- **University for the Creative Arts (FutureLearn):** mimarlık, iç mekân ve mobilya için üç boyutlu tasarım kariyerine hazırlayan temel çizim dizisi.
+
+**Ortak payda:** Tüm ciddi programlarda üç unsur değişmez — (1) süreklilik gerektiren bir eskiz defteri, (2) gözlemsel/yerinde çizim, (3) perspektif ve gölgelendirmenin birlikte öğretilmesi. Bu izlence üçünü de merkeze alır.
+
+---
+
+## 12. MESLEKİ VE AKREDİTASYON DAYANAĞI
+
+Ders yalnızca pedagojik değil, **mesleki olarak da gerekçelendirilebilir** — bu, bölüm kurullarında izlence savunurken önemlidir.
+
+Uluslararası iç mimarlık akreditasyon kuruluşu **CIDA (Council for Interior Design Accreditation)**, Profesyonel Standartlar'ında öğrenci öğrenme beklentilerini on üç standart altında toplar. Bunlardan **İletişim (Communication)** standardı, mezunun fikirlerini *serbest el ve dijital çizim, üç boyutlu model, render, fikir üretme eskizi (ideation sketching) ve kapsamlı görsel sunum* yoluyla aktarabilmesini şart koşar. **Tasarım Süreci (Design Process)** standardı ise fikir üretiminde eskizin rolünü doğrudan kapsar.
+
+Buradaki kritik nokta şudur: CIDA, el eskizini dijitalin *yerine* değil, **fikir üretme aşamasının aracı** olarak konumlandırır. Bu izlencedeki Hafta 13 (12'li varyasyon matrisi, kavram eskizi) doğrudan bu beklentiye karşılık gelir ve dersin dijital araçlarla rekabet eden değil, onları önceleyen bir yerde durduğunu gösterir.
+
+Goldschmidt'in tespiti bu savunmanın kuramsal ayağıdır: en hızlı ve verimli temsil aracı serbest el eskizidir; düşünme aracı, dış bellek ve iletişim aracı olarak aynı anda çalışır. Serbest el çizim eğitiminin kısıtlanması, literatürde öğrenci yaratıcılığının gelişimini olumsuz etkileyen bir etken olarak raporlanmaktadır.
+
+---
+
+## 13. UYGULAMA NOTLARI VE RİSKLER
 
 **Kalabalık sınıf (40+ öğrenci).** Masa kritiği yetişmez. Çözüm: sınıfı üç gruba bölüp haftada bir gruba derinlemesine kritik verin (3 haftada herkese sıra gelir), diğer haftalarda sessiz pin-up ve akran kritiği kullanın.
 
