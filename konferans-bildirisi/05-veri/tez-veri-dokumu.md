@@ -47,8 +47,9 @@ P2 en çok (%26). Fiziksel olarak tutarlı.
 belirtilmeli: numuneler 50 mm küp kalıplarda döküldü, kuruma sonrası kesit
 ölçüleri test anında ölçüldü, ancak bu ölçüler tezde kayıt altına alınmadı.
 
-> **Teyit edilecek:** Kuruma sonrası ölçümün laboratuvarda gerçekten yapıldığı.
-> Yukarıdaki çıkarım rakamların tutarlılığına dayanıyor.
+> **Teyit edildi (yazar):** Kuruma sonrası kesit ölçümü laboratuvarda gerçekten
+> yapılmıştır. MPa değerleri ölçülmüş kesitlere dayanıyor ve bildiride
+> kullanılabilir.
 
 ### ✔ Numune sayısı — n > 1
 
@@ -56,10 +57,21 @@ Yazarın beyanı: her formülasyon için **birden fazla küp** üretildi ve rapo
 değerler bunların **ortalaması**. Tezdeki "üç adet prototip örnek" ifadesi üç
 *formülasyonu* anlatıyor, üç numuneyi değil.
 
-Bu, bildirinin en büyük zayıflığını ortadan kaldırıyor. **Formülasyon başına kaç
-küp olduğu öğrenilmeli** — n=3 veya üzeriyse standart sapmayla birlikte
-raporlanabilir ve çalışma "keşifsel" nitelemesinden çıkıp normal bir ön çalışma
-olur.
+**Teyit edildi (yazar): formülasyon başına 3 küp (n = 3).** Raporlanan
+2,55 / 3,12 / 4,10 MPa değerleri bu üçünün ortalamasıdır.
+
+Bu, bildirinin en büyük zayıflığını ortadan kaldırıyor. Çalışma artık "tek
+numuneli keşifsel deneme" değil, n=3 ile yürütülmüş bir ön çalışma.
+
+**Kalan eksik:** Tek tek küplerin değerleri tezde yok, dolayısıyla standart
+sapma hesaplanamıyor. Laboratuvar raporunda üç küpün ayrı değerleri duruyorsa
+SD hesaplanıp `ortalama ± SD` biçiminde raporlanmalı — mühendislik hakeminin
+beklediği budur. Bulunamazsa "mean of three specimens; individual values not
+retained" denir.
+
+**Eğilme testi için n bilinmiyor.** Basma n=3 teyitli; eğilmenin de 3 numuneyle
+mi yapıldığı sorulmalı. Özette bu yüzden yalnızca basma için "three specimens
+per compression formulation" denildi.
 
 ## 3. Eğilme testi — ASTM D790, üç nokta
 
@@ -123,13 +135,14 @@ Bildirinin ampirik omurgası budur.
 
 ## 6. Metodolojik zayıflıklar (bildiride açıkça beyan edilmeli)
 
-1. **Her formülasyon için tek numune (n=1).** Standart sapma yok, tekrar yok.
-   Malzeme mühendisliği hakemleri ilk buna bakar. Ya n≥3 ile tekrarlanmalı ya da
-   bildiri açıkça "keşifsel ön çalışma" olarak konumlandırılmalı.
+1. ~~Her formülasyon için tek numune (n=1).~~ **Çözüldü:** basmada n=3.
+   Tek tek değerler elde yoksa standart sapma verilemez; eğilme için n hâlâ
+   teyit bekliyor.
 2. **Basmada şekil değiştirme ölçülmemiş**, gözleme dayalı %10 varsayılmış.
    Bu nedenle basma verisinden U_r hesaplanmadı; yalnızca eğilme verisi kullanıldı.
 3. **Eğilmede tek geçerli numune** (P1 ölçülemedi).
-4. **Basma kN↔MPa tutarsızlığı** (bkz. §2).
+4. ~~Basma kN↔MPa tutarsızlığı.~~ **Çözüldü:** 50 mm kalıp ölçüsü, kesitler
+   kuruma sonrası ölçülmüş (bkz. §2).
 5. Uzun vadeli performans, nem/sıcaklık döngüsü, mikrobiyal dayanım verisi yok.
 6. Tasarım önerisi gerçek mekânda uygulanmamış, prototip ölçeğinde.
 
