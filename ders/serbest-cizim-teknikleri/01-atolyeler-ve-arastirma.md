@@ -236,71 +236,102 @@ Ham not: **(Ara Sınav 1 + Ara Sınav 2) / 2 × 0,40 + Final × 0,60** — kurum
 
 ---
 
-# BÖLÜM III — FİNAL: "DERİNLİK KUTUSU" VE SERGİ
+# BÖLÜM III — FİNAL: "KATMAN DİYORAMASI"
 
-## III.1 Fikir saçma mı? Hayır — 370 yıllık bir tür
+## III.1 Tür: katmanlı gölge kutusu kartı
 
-Katmanları arka arkaya dizerek derinlik kurma fikri, sanat ve mimarlık tarihinde köklü ve tam olarak **iç mekâna** dair bir türdür:
+Katlanınca düz duran, açılınca derinleşen; kesilmiş kâğıt katmanlardan kurulmuş bir mekân sahnesi. Uluslararası adı **pop-up shadow box card / layered papercut diorama**. Yanlardaki katlama çizgili kanatlar katmanları taşır ve iş dosyanın içinde düz taşınır.
 
-- **Samuel van Hoogstraten, *Peepshow with Views of the Interior of a Dutch House*, 1655–60** (National Gallery, Londra, NG3832). Bir kutunun içine boyanmış, delikten bakıldığında bir Hollanda evinin iç mekânı olarak açılan perspektif kutusu. Türün 1650'lerden itibaren yaklaşık 25 yıl üretilmiş; **bugün dünyada yalnızca altı örneği kalmış.** Hoogstraten'inki iki bakış delikli tek örnek. Yani sizin tarif ettiğiniz şey, iç mimarlık temsilinin en erken deneysel biçimlerinden biri.
-- **Tunnel book / peepshow kitapları** — 18. yüzyıl ortasından itibaren, doğrudan **tiyatro sahne dekorlarından** esinlenerek gelişmiş kesme kâğıt katman geleneği. Bugün eğitimde perspektif, sıralama ve katman öğretmek için kullanılıyor; standart yapı **5–8 katman**, izleme mesafesi **30–50 cm**.
-- **Sahne tasarımı (scenografi)** — barok sahnenin kulis kanatları ve fon perdesi tam olarak bu mantıkla derinlik üretir.
-- **Do Ho Suh** — saydam kumaştan ördüğü mekânlarda, katmanlar üst üste geldikçe saydamlığın değişmesi işin asıl konusudur.
-- **Diorama, gölge kutusu, Joseph Cornell kutuları.**
+### Neden bu form, tek bakış delikli perspektif kutusundan daha uygun
 
-## III.2 Neden bu final pedagojik olarak *doğru* final
+1. **Katlanıp düzleşiyor.** Otuz öğrencilik sınıfta otuz kutu taşımak, saklamak ve sergilemek gerçek bir yüktür. Katlanır kart bu yükü sıfırlar.
+2. **Cepheden okunuyor.** Katman kenarları, boşluklar ve gölgeler açıktadır; serginin tezi — *derinlik bir kurgudur* — nesnenin kendisinde görünür.
+3. **Dış çerçeve resim düzleminin ta kendisidir.** Öğrenci pafta kompozisyonu ile mekân kompozisyonunu aynı anda çözer.
+4. **Ucuz ve düşük riskli.** Kaide, vitrin, elektrik gerekmez.
 
-Sıradan bir pafta teslimi ile karşılaştırıldığında bu kutu üç şeyi zorunlu kılar:
-
-1. **Atmosferik (havai) perspektifi bedenle öğretir.** Katmanlar fiziksel olarak ayrıldığında, hile işe yaramaz: ön katman yüksek kontrastlı, arka katman soluk ve düşük kontrastlı değilse **derinlik hissi çöker.** Öğrenci ton kademelenmesini kâğıt üzerinde değil, gözüyle test eder. Hafta 10'un dersi burada sınanır.
-2. **Perspektifin varsayımını görünür kılar.** Perspektif tek ve sabit bir göz varsayar. Kutunun **tek bakış deliği** bu varsayımı fiziksel bir nesneye çevirir. Öğrenci hafta 8'de öğrendiği "göz seviyesi" kavramını eliyle kurar.
-3. **Analitik çizimle aynı işlemdir.** Bir mekânı katmanlara sökmek, onu çözümlemektir: ön plan (nesne, temas), orta plan (mekânın kabuğu), arka plan (dışarısı, ışık kaynağı). Ayrı hafta gerektiren "analitik diyagram" konusu bu ürünün içine gömülür.
-
-**Sizin sıralamanız doğru** — obje → arkasında bir şey → en arkada gökyüzü/bulut. Tek öneri: iç mimarlık dersi olduğu için **en arka katman doğrudan gökyüzü değil, "dışarısı" olsun** — bir pencere, bir kapı aralığı, bir aydınlık; gökyüzü o açıklığın içinden görünsün. Çünkü iç mekân, ancak bir dış varsa iç mekândır. Bu tek karar, işi bir manzara kutusundan bir **iç mimarlık işine** çevirir.
-
-## III.3 Şartname — "Derinlik Kutusu"
-
-**Konu:** Öğrencinin 12. haftada sahada çizdiği gerçek iç mekânın atmosferi.
-
-**Kutu**
-- Dış ölçü en fazla **30 × 30 × 25 cm** (taşınabilir, rafa sığar, sergide standart kaide üstünde durur)
-- **5–7 katman**, aralarında en az 3 cm boşluk
-- Ön yüzde **tek bakış deliği** (çap 15–25 mm), göz seviyesinde
-- Arka veya üstten **tek ışık kaynağı** (LED şerit, pil kutusu; alev yok)
-- Kutunun kendisi ham malzemede kalır: gri karton, mukavva, siyah fon kartonu. Kutu bir sahne değil, bir alettir.
-
-**Katmanlar**
-- Her katman **elle çizilir.** Fotoğraf, baskı, dijital çıktı, hazır görsel yok
-- Malzeme: aydınger, ince eskiz kâğıdı, yarı saydam kâğıt, ince karton — kesilerek boşaltılır
-- **Ton kuralı (en kritik madde):** ön katman en geniş ton aralığını ve en keskin kontrastı taşır; her arka katmanda kontrast azalır, ton aralığı daralır. En arka katman en soluk olandır
-- **Her katman tek başına da bir çizim olarak ayakta durmalıdır**
-- Renk yok. Yalnızca kurşun, kömür, fineliner, gri marker
-
-**Teslim paketi**
-1. **Kutu** (kurulu, çalışır, ışıklı)
-2. **Katmanların düz hâli** — 5–7 katman A3 paftalar üzerinde, sırayla, tek tek okunabilir biçimde
-3. **Kutunun kendi kesiti** — kutuyu yandan gösteren, katman aralıklarını ve bakış konisini ölçülü gösteren bir çizim *(meta pafta: aleti çizen çizim)*
-4. **Atmosfer sayfası** — hafta 3'ün grafik notasyonu diliyle, mekânın sesi/duygusu
-5. **Süreç dosyası** — reddedilen katmanlar, prova fotoğrafları, ton denemeleri
-6. **Katalog metni** — 300 kelime, sergi kataloğuna girecek
+### Tarihsel dayanak
+Samuel van Hoogstraten'in perspektif kutusu (1655–60, National Gallery NG3832, dünyada altı örnek); 18. yüzyıldan beri süren ve tiyatro dekorlarından türeyen tunnel book / peepshow geleneği; barok sahnenin kulis–fon derinliği; Do Ho Suh'un saydam kumaş mekânları.
 
 ---
 
-## III.4 SERGİ: "Derinlik Odası"
+## III.2 İki kesin kural
+
+> **Kural 1 — Her katman önce elle çizilir; kesim, çizimin türevidir.**
+> Çizim paftaları teslimin zorunlu parçasıdır ve kesilen silüet o çizimle örtüşmek zorundadır. **Hazır şablon, indirilmiş SVG, plotter ve Cricut kesimi yasaktır.** Bu kural olmadan final bir el işi ödevine dönüşür.
+
+> **Kural 2 — Manzara değil, mekân.**
+> Dağ–orman sahnesi bu türün klasik ama jenerik konusudur. Bu derste konu, öğrencinin **12. haftada sahada kendi çizdiği gerçek iç mekândır**; silüetler o saha defterinden türetilir. Gökyüzü ancak bir pencereden görünürse girer.
+
+---
+
+## III.3 Şartname
+
+**Ölçü ve yapı**
+- Dış ölçü 25 × 25 cm ile 30 × 24 cm arası
+- **5–7 katman** + ön çerçeve + fon paneli
+- Katmanlar arası **3–8 mm**; köpüklü çift taraflı bant veya karton şerit
+- Açıkken toplam derinlik 6–12 cm; katlanınca tamamen düz
+- Her katmanda **8–12 mm kenar payı** — kanada yapışacak yüzey
+- Yan kanatlar katlama çizgili; kart dosyada düz taşınır
+
+**Malzeme ve kesim**
+- Kâğıt **160–200 gsm** fon kartonu veya bristol. Daha ince kâğıt sarkar ve ışığı fazla geçirir; 250 gsm üstü hem ışığı keser hem kesimi zorlaştırır
+- Maket bıçağı + kesim altlığı. Güvenlik brifingi zorunlu
+- **Renk: tek bir renk ailesi, en az 5 değer.** Monokrom zorunludur — dersin konusu renk değil **değer**
+- Işık isteğe bağlı: arkadan LED şerit veya pencereye yaslama; alev yok
+
+---
+
+## III.4 Değer sistemi — finalin asıl kavramsal kararı
+
+Örnek çalışmalarda uzaktaki dağlar **koyu**, öndeki zemin **açık** olabilir. Bu havai perspektifin tersidir ve *yanlış değildir.* İki meşru sistem vardır; öğrencinin bilinçli olarak birini seçip savunması finalin asıl kararıdır.
+
+| | **A · Mesafe mantığı** (havai perspektif) | **B · Grafik mantık** (notan / silüet) |
+|---|---|---|
+| Diziliş | Ön koyudan arkaya doğru kesintisiz açılır | Komşu katmanlar açık–koyu olarak alternatif dizilir |
+| Komşu kontrastı | Düşük ve düzenli | Yüksek ve zikzaklı |
+| Sonuç | Mesafe hissi güçlü; silüetler arkaya doğru erir | Her silüet kenarı sonuna kadar okunur; grafik, afişimsi |
+| Kaynak | Leonardo'dan bu yana havai perspektif kuralı | Bothwell & Mayfield, *Notan: The Dark-Light Principle of Design* |
+
+**Üçüncü bir alt-durum:** arka katman ışık kaynağının kendisiyse (pencere, kapı aralığı, aydınlık) sistem doğal olarak arkaya doğru açılır. Bu, B'nin fiziksel gerekçeli hâlidir ve iç mekân için en güçlü kurgudur — *iç mekân, ancak bir dış varsa iç mekândır.*
+
+**İki sistem de doğrudur; karıştırılması yanlıştır.** Öğrenci seçtiği sistemi değer skalası paftasında gösterir.
+
+---
+
+## III.5 Teslim paketi
+
+| # | Parça | Ne ölçer |
+|---|---|---|
+| 1 | **Katman diyoraması** — kurulu, açılıp katlanır | Ürünün kendisi |
+| 2 | **Katman çizimleri** — her katmanın *kesilmeden önceki* elle çizilmiş hâli, A3 paftada sırayla | Kesimin çizimden türediğinin kanıtı. **Bu pafta olmadan iş değerlendirilmez** |
+| 3 | **Kesim açınımı** — düz açılım, kenar payları ve boşluk ölçüleriyle | Teknik çizim ve ölçü bilinci |
+| 4 | **Üstten kesit** — katman aralıkları ve kanat katlama çizgileri ölçülü | Aleti çizen çizim |
+| 5 | **Değer sistemi paftası** — seçilen sistem, 5–9 adımlı skala, her katmanın skaladaki yeri | Kavramsal karar ve ton kontrolü (C, D) |
+| 6 | **Saha defteri sayfaları** — 12. haftanın gözlem çizimleri | Silüetlerin gerçek bir mekândan geldiğinin kanıtı |
+| 7 | **Atmosfer sayfası** — hafta 3'ün notasyon diliyle mekânın sesi | Dönemin ilk haftalarının geri dönüşü |
+| 8 | **Süreç dosyası + 300 kelimelik katalog metni** | Süreç ölçütü (E) |
+
+**Grup varyantı — önerilir: "Aynı mekân, iki sistem."** İkişer veya üçer kişilik gruplar *aynı* iç mekânı farklı değer sistemleriyle (A ve B) yapar. Yan yana sergilendiğinde aynı mekânın iki farklı okunuşu görülür; bu hem tartışmayı zenginleştirir hem de **Makale C için doğrudan karşılaştırmalı veri üretir.**
+
+---
+
+## III.6 SERGİ: "Derinlik Odası"
 
 Sergi bir kutlama değil, **dersin son ölçme aracıdır.**
 
 ### Mekân kurgusu
 - Loş bir mekân (stüdyo karartılabilir, fakülte fuayesi köşesi, galeri)
-- Kutular **kaidelerde, göz hizasında** (110–150 cm) — ziyaretçi eğilmek zorunda kalmaz; göz hizası dersin konusu olduğu için önemlidir
-- Her kutunun **arkasındaki duvarda, o kutunun düz katmanları** asılı
+- Diyoramalar **göz hizasında** (110–150 cm) bir raf hattında veya kaidelerde. Katlanır olduğu için ağır vitrin ve taşıma gerekmez
+- Her işin yanındaki duvarda **katman çizimleri ve değer sistemi paftası** asılı — yanılsama ve tarifi yan yana
+- Aydınlatma yandan ve üstten; katman kenarlarının kendi gölgesini düşürmesi işin yarısıdır
 - Yanında künye: öğrenci adı, mekânın adı, 300 kelimelik metin
 
 > ### Serginin tezi
-> Ziyaretçi önce delikten bakar ve yanılsamayı yaşar. Sonra başını kaldırır ve duvarda **yanılsamanın nasıl kurulduğunu** görür. Sergi "bakın ne güzel" demez; **"derinlik bir kurgudur ve işte kurulma biçimi"** der. Bu, bir iç mimarlık bölümünün söyleyebileceği en yerinde şeydir.
+> Ziyaretçi önce sahneye bakar ve derinliği yaşar. Sonra yana döner ve duvarda **o derinliğin birkaç düz çizimden nasıl kurulduğunu** görür. Sergi "bakın ne güzel" demez; **"derinlik bir kurgudur ve işte kurulma biçimi"** der. Bu, bir iç mimarlık bölümünün söyleyebileceği en yerinde şeydir.
 
 ### Ek katman: ses
-Her kutunun künyesine bir **QR kod** eklenir; hafta 3'te öğrencinin partisyonunu ürettiği parçaya veya sahada kaydettiği mekân sesine gider. Ziyaretçi delikten bakarken kulaklıkla o sesi dinler. Dönemin ilk üç haftası son haftada geri döner.
+Her işin künyesine bir **QR kod** eklenir; hafta 3'te öğrencinin partisyonunu ürettiği parçaya veya sahada kaydettiği mekân sesine gider. Ziyaretçi işe bakarken kulaklıkla o sesi dinler. Dönemin ilk üç haftası son haftada geri döner.
 
 ### Açılış programı
 | Süre | Bölüm |
@@ -311,7 +342,7 @@ Her kutunun künyesine bir **QR kod** eklenir; hafta 3'te öğrencinin partisyon
 | 30 dk | Kapanış, ziyaretçi kartlarının toplanması |
 
 ### Ziyaretçi kartı — *serginin ölçme aracı*
-Girişte her ziyaretçiye kart verilir. Her kutu için tek bir soru:
+Girişte her ziyaretçiye kart verilir. Her iş için tek bir soru:
 
 > **"Bu mekânda kendinizi nasıl hissettiniz?"** — verilen 12 kelimelik listeden bir tanesini işaretleyin.
 
