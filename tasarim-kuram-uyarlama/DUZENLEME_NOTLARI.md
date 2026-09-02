@@ -16,13 +16,15 @@ Hedef: Tasarım+Kuram yazım kuralları (https://dergipark.org.tr/tr/pub/tasarim
 
 | | Kelime |
 |---|---|
-| Metin + İngilizce öz (sınıra dâhil) | 5.078 |
+| Metin + İngilizce öz (sınıra dâhil) | 5.890 |
 | Türkçe genişletilmiş özet (sınıra dâhil) | 799 |
-| **Toplam (sınıra dâhil)** | **5.877 / 7.000** |
+| **Toplam (sınıra dâhil)** | **6.689 / 7.000** |
 | Başlıklar, şekil/tablo başlıkları, kaynakça (sınır dışı) | 864 |
+| Tablo içi metin (kural gereği sınır dışı) | 1.085 |
 
-Sınırın yaklaşık 1.100 kelime altındayız; kısaltma gerekmedi. İstenirse tartışma
-bölümü genişletilebilir.
+Tartışma bölümü 759 kelime ile genişletildiği hâlde sınırın altındayız. (Tablo
+içeriği de sayılsaydı 7.774 olurdu; yazım kuralı "tablolara ilişkin bilgiler"i
+sınır dışında tutuyor.)
 
 ## Kurallara uyum
 
@@ -67,6 +69,41 @@ doğrulanarak eklenen DOI'ler: Appels vd. (2019), Bhuvaneshwari vd. (2019),
 Ghazvinian vd. (2019), Girometta vd. (2019), Jiang vd. (2019), Vallas ve Courard
 (2017), Violano (2018), Xing vd. (2018), Yang vd. (2017).
 
+## Eklenen tartışma bölümü
+
+Sonuç bölümünden önce 759 kelimelik bir **Discussion** bölümü eklendi. Bölüm beş
+paragraftan oluşuyor: (1) deney bulgularının literatürdeki ölçüm sonuçlarıyla
+karşılaştırılması ve bu çalışmanın ölçüm değil mekânsal önerme ürettiğinin
+konumlandırılması; (2) miselyum literatürünün strüktürel iddiasına karşılık
+yarı-strüktürel iç mekân elemanının neden en gerçekçi yakın dönem uygulaması
+olduğu; (3) esnekliğin mekanizmadan malzemeye kayması ve hafifliğin kullanıcı
+faili olmanın ön koşulu hâline gelmesi; (4) Greenox örneğinde kabuk ölçeğindeki
+ekolojik performans ile iç mekân kararları arasındaki kopukluk ve sertifikasyon
+ölçütlerinin bunu görmemesi; (5) sınırlılıklar ve gelecek araştırma önerileri.
+Yeni kaynak eklenmedi; bölüm makalenin mevcut kaynakçasına dayanıyor.
+
+## Görsel tabloların gerçek Word tablosuna çevrilmesi
+
+Altı tablonun tamamı (Tablo 1–6) resim olmaktan çıkarılıp düz, klasik Word
+tablosuna dönüştürüldü: tek çizgili ince kenarlık, gölgelendirme yok, başlık
+satırı kalın, hücreler tek satır aralıklı.
+
+- Tablo 2, 3 ve 4'ün metni EMF dosyalarının içindeki metin kayıtlarından,
+  Tablo 1, 5 ve 6'nınki ekran görüntülerinden birebir aktarıldı.
+- "photography" sütunundaki fotoğraflar korundu: Tablo 2–4'ün fotoğrafları
+  EMF içindeki **gömülü özgün bitmap'lerden** çıkarıldı, dolayısıyla eski
+  ekran görüntüsünden daha yüksek çözünürlüklü (985 dpi'a kadar). Tablo 5 ve
+  6'nın fotoğrafları ise ekran görüntüsünden kırpıldığı için 200–257 dpi'da
+  kaldı; bunları özgün fotoğraflarla değiştirmen gerekiyor.
+- Tablo yazı boyutu: yedi sütunlu deney tablolarında 9 punto, Tablo 1 ve 6'da
+  10 punto. Yedi sütunlu bir tablo A4'te 12 puntoyla sığmıyor; gövde metni
+  12 punto olarak kaldı.
+- Dosya boyutu 23 MB'tan 9,4 MB'a indi (artık kullanılmayan tablo resimleri
+  pakete dâhil edilmedi).
+- Tablolarda düzeltilen yazım hataları: "unsufficient" → "insufficient",
+  "SUCCESSUL" → "SUCCESSFUL", "lumphy" → "lumpy", "could not grew more" →
+  "could not grow further". İçerik değiştirilmedi.
+
 ## Kontrol etmen gerekenler
 
 1. **Adinyira ve Kwofie (2013):** özgün künye bozuktu ("Adinyira, E.A., Divine,
@@ -99,11 +136,19 @@ Ghazvinian vd. (2019), Girometta vd. (2019), Jiang vd. (2019), Vallas ve Courard
 14. **Görsel çözünürlüğü:** tüm görseller baskı boyutunda 141–230 dpi arasında,
     yani 300 dpi kuralının altında. Görselleri özgün dosyalarından 300 dpi olarak
     yeniden dışa aktarman gerekiyor (liste: `gorseller_ayri_yukleme/00_GORSEL_LISTESI.txt`).
-15. **Tablolar görsel olarak yerleştirilmiş.** Tablo 2–6 birer resim (üçü EMF).
-    Dergi tabloların metin içinde olmasını bekler; bunları gerçek Word tablosuna
-    çevirmek gerekir. İstersen bu dönüştürmeyi yapabilirim.
-16. **Beyanlar bölümü** (etik beyan, çıkar çatışması, özgünlük raporu) LivenARCH'a
+15. **Tablo 2'deki fotoğraflarda tutarsızlık:** hücre metni "DAY 6" diyor, ancak
+    fotoğrafların üzerinde "DAY 12" / "DAY 12 MOSS GROWTH" yazıyor. Özgün
+    tabloda da böyleydi; hangisinin doğru olduğunu sen belirlemelisin.
+16. **Tablo 5, 2. satırın yorum hücresi** özgün hâlinde yarım kalmış:
+    "the ingredients were the combination of moulds #1 and #2, so the outcome."
+    Cümleyi tamamlaman gerekiyor.
+17. **Tablo 1** Jones vd. (2018)'den birebir aktarılan bir tablo; künye tablo
+    başlığında veriliyor, ancak yeniden basım izni gerekip gerekmediğini derginin
+    kurallarına göre kontrol et.
+18. **Tablo 5 ve 6'nın fotoğrafları** ekran görüntüsünden kırpıldı (200–257 dpi);
+    özgün fotoğraflarla değiştirilmeli.
+19. **Beyanlar bölümü** (etik beyan, çıkar çatışması, özgünlük raporu) LivenARCH'a
     özgü olduğu ve livenarch e-posta adresi içerdiği için çıkarıldı. Tasarım+Kuram
     süreci bunları isterse ayrı bir kapak dosyasına eklenmeli.
-17. **Kapak sayfası:** yazar adı, kurum, ORCID ve iletişim bilgisi anonim dosyada
+20. **Kapak sayfası:** yazar adı, kurum, ORCID ve iletişim bilgisi anonim dosyada
     yok; DergiPark'ın istediği ayrı kapak/başvuru dosyasını hazırlaman gerekiyor.

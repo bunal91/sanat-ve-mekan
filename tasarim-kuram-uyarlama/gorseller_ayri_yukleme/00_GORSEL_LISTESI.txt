@@ -1,19 +1,35 @@
 Gorsel dosyalari - baski boyutundaki etkin cozunurluk
 (Tasarim+Kuram kurali: en az 300 dpi, tiff/jpg/pdf)
 
-Tablo1_mycelium_brick_board_properties.png       1387x183 px      218 dpi    YETERSIZ (<300)
+SEKILLER
 Sekil1_Mycotecture.jpg                           728x473 px       191 dpi    YETERSIZ (<300)
 Sekil2_The_Growing_Pavilion.png                  838x626 px       219 dpi    YETERSIZ (<300)
 Sekil3_growing_process_of_mycelium.png           794x602 px       163 dpi    YETERSIZ (<300)
-Tablo2_Experiment_1.emf                          vektorel (EMF)   -          Word icinden PDF/TIFF olarak disa aktarilmali
-Tablo3_Experiment_2.emf                          vektorel (EMF)   -          Word icinden PDF/TIFF olarak disa aktarilmali
-Tablo4_Experiment_3.emf                          vektorel (EMF)   -          Word icinden PDF/TIFF olarak disa aktarilmali
-Tablo5_Experiment_4_a.png                        1074x592 px      167 dpi    YETERSIZ (<300)
-Tablo5_Experiment_4_b.png                        892x655 px       141 dpi    YETERSIZ (<300)
 Sekil4_progress_of_experiment_4.png              618x538 px       158 dpi    YETERSIZ (<300)
 Sekil5_Prototype_3.png                           716x583 px       221 dpi    YETERSIZ (<300)
-Tablo6_material_intervention_test.png            933x649 px       157 dpi    YETERSIZ (<300)
 Sekil6_Greenox_Urban_Residence.png               1026x492 px      206 dpi    YETERSIZ (<300)
 Sekil7_plan_scheme_a.jpg                         661x470 px       219 dpi    YETERSIZ (<300)
 Sekil7_plan_scheme_b.jpg                         696x492 px       230 dpi    YETERSIZ (<300)
 Sekil8_six_alternative_layouts.jpeg              1509x1904 px     220 dpi    YETERSIZ (<300)
+
+TABLO ICI FOTOGRAFLAR (tablolar artik gercek Word tablosu; fotograflar hucrelerde)
+Tablo2_satir1.png                  189x252 px       196 dpi    YETERSIZ (<300)
+Tablo2_satir2.png                  189x189 px       196 dpi    YETERSIZ (<300)
+Tablo3_satir1.png                  370x366 px       384 dpi    uygun
+Tablo3_satir2.png                  339x366 px       351 dpi    uygun
+Tablo3_satir3.png                  380x366 px       394 dpi    uygun
+Tablo3_satir4.png                  349x366 px       362 dpi    uygun
+Tablo4_satir1_DAY1.png             950x665 px       985 dpi    uygun
+Tablo4_satir1_DAY6.png             948x332 px       983 dpi    uygun
+Tablo4_satir2_DAY1.png             950x665 px       985 dpi    uygun
+Tablo4_satir2_DAY6.png             948x332 px       983 dpi    uygun
+Tablo4_satir3_DAY1.png             1423x332 px      1475 dpi   uygun
+Tablo4_satir3_DAY6.png             1419x332 px      1471 dpi   uygun
+Tablo5_satir1.png                  248x306 px       257 dpi    YETERSIZ (<300)
+Tablo5_satir2.png                  248x206 px       257 dpi    YETERSIZ (<300)
+Tablo5_satir3.png                  203x228 px       210 dpi    YETERSIZ (<300)
+Tablo5_satir4.png                  203x212 px       210 dpi    YETERSIZ (<300)
+Tablo5_satir5.png                  203x191 px       210 dpi    YETERSIZ (<300)
+Tablo6_ates_testi.png              445x153 px       200 dpi    YETERSIZ (<300)
+Tablo6_on_test.png                 445x184 px       200 dpi    YETERSIZ (<300)
+Tablo6_su_testi.png                445x253 px       200 dpi    YETERSIZ (<300)
