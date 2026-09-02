@@ -47,16 +47,50 @@ Makalenin kendi önerisi de bu: *"insan boyutu, ergonomi, yapı ve inşaat tekno
 
 ---
 
-## 1. Varsayımlar (lütfen kontrol edin)
+## 1. Ders parametreleri (kesinleşti)
 
-Bu kurgu şunları varsayıyor — farklıysa haftalık dağılım kaydırılır:
+| | |
+|---|---|
+| **Haftalık süre** | 8 saat stüdyo |
+| **Grup** | Hoca başına 15-16 öğrenci, **bireysel proje** |
+| **Mekân** | **Mersin Marina** — hoca tarafından verilen alan, herkes aynı kabuk |
+| **Saha gezisi** | **Hafta 2** |
+| **Hafta 1** | Proje brifi + teorik anlatım |
+| **Final jürisi** | Ayrı bir haftada (14 haftalık akışın dışında) |
 
-- **Haftalık süre:** 6-8 saat stüdyo (tek gün 8 saat veya iki gün 4'er saat). 4 saatlik tek oturumsa, atölyelerden birini haftaya yayın.
-- **Sınıf:** 15-25 öğrenci, **bireysel proje** (analiz aşamasında 2-3 kişilik araştırma eşleri olabilir).
-- **Mekân:** Hoca tarafından **verilen tek bir mekân** (herkes aynı kabuk, farklı marka). Bu, kritiği ve jüriyi kıyaslanabilir kılar — ilk kez veren bir hoca için en kolay yönetilebilir kurgudur.
-  *Alternatif:* öğrenci kendi mekânını seçer → daha çeşitli ama karşılaştırması zor, saha gezisi dağılır. **İlk yıl için önermiyorum.**
-- **Ölçek:** 150-400 m², tek veya iki katlı. İki katlı ise merdiven/galeri ayrı bir tasarım problemi olarak kazanılır (BAU bunu bilinçli yapıyor).
-- **Final jürisi Hafta 14'te.** Okulunuzda ayrı bir final sınav haftası varsa: Hafta 14 "teslim provası + tamamlama", jüri sınav haftasında yapılır.
+### Bunun akışa üç etkisi
+
+**1. Sekiz saat, tek başına teorik anlatımla dolmaz — dolmamalı da.**
+Ders ağırlıklı olarak kritikle geçecek. Bu yüzden kurguda teorik anlatım bloklar hâlinde ve kısa: Hafta 1'de 2,5-3 saat (aralarla), Hafta 2 ve 3'te 75'er dakika, sonrasında her günün başında 15-20 dakikalık mikro-ders. Günün geri kalanı masa masa kritik.
+
+**15-16 öğrenciye 8 saatte kritik verme aritmetiği:** öğrenci başına yaklaşık 25-30 dakika düşüyor. Bu rahat bir sayı, ama kendiliğinden olmuyor — **sıra listesi asın.** Aksi hâlde ilk gelen üç öğrenci saatin yarısını alıyor, son sıradakiler 10 dakikaya sıkışıyor. Öğleden önce 8, öğleden sonra 8 kişilik iki tur önerilir.
+
+**2. Saha gezisi Hafta 2'de olduğu için marka seçimi ona bağlanabilir.**
+Öğrenci mekânı görmeden marka seçerse, seçtiği marka ile marina bağlamı uyuşmayabilir. Bu yüzden akış şöyle: Hafta 1'de üç aday marka istenir → **Hafta 2'de saha gezisi yapılır** → gezinin ardından, aynı gün, marka onayı verilir. Öğrenci "bu markanın bu mekânda işi var mı" sorusunu mekânı gördükten sonra cevaplar.
+
+**3. Final ayrı haftada olduğu için Hafta 14 bir tampon.**
+Hafta 14 "teslim provası + tamamlama" olur, jüri sonraki haftadadır. Bu, ilk kez ders veren bir hoca için değerli bir güvenlik payı — Hafta 12-13'te işler sarkarsa 14 telafiye açık.
+
+---
+
+## 1b. Mersin Marina bağlamı — bu projeyi BAU örneğinden ayıran şey
+
+BAU'nun örneği Zorlu Center'da, **kapalı bir AVM** içinde. Mersin Marina ise **açık hava** bir yerleşim: Türkiye'nin Doğu Akdeniz'deki en büyük marinası, iskeleye çok yakın açık hava alışveriş ve yeme-içme alanlarıyla iç içe.
+
+Bu, öğrencinin kararlarının çoğunu değiştirir. Altı kısıtı brifte ve sunumda ayrıca vurguladım:
+
+| Kısıt | Tasarım sonucu |
+|---|---|
+| **Açık hava** | Vitrin iklime açık. Güneş, yağmur, rüzgâr, **tuzlu hava korozyonu** malzeme kararının parçası. |
+| **Akşam kullanımı** | Marina akşam canlanır. **Gece cephesi ve aydınlatma, gündüzden daha belirleyici.** |
+| **Yaya promenadı** | Müşteri otoparktan değil yürüyüş hattından geliyor; vitrin *yürürken* okunuyor. |
+| **Mevsimsellik** | Yaz zirvesi, kış sakin. Mekân iki farklı yoğunluğa aynı anda cevap vermeli. |
+| **Karma kullanıcı** | Tekne sahibi, Mersinli aile, turist — üç farklı hız, üç farklı beklenti. |
+| **Deniz ve manzara** | Bir yön diğerlerinden değerli. Vista, plan kararının girdisi. |
+
+> **Hoca notu — saha gezisinde yaptırın:** Bu altı maddeyi çıktı olarak elinize alın ve mevcut dükkânlar üzerinden tek tek gösterin. *Hangi dükkân akşam çalışıyor? Hangisinin malzemesi tuzdan yıpranmış? Hangisi promenaddan 30 metreden okunuyor, hangisi okunmuyor?* Öğrenciye bunları not aldırın — Hafta 7 vitrin atölyesinin ham maddesi bu.
+
+**Yerel marka avantajı:** Mersin ve Çukurova bağlamı marka seçimini kolaylaştırıyor — narenciye ve gurme gıda, zeytinyağı, deniz ve tekne ekipmanı, yerel tekstil, seramik ve zanaat atölyeleri. Hepsi mağazası olmayan küçük markalarla dolu kategoriler.
 
 ---
 
@@ -84,14 +118,15 @@ Renk kodu: 🎓 teorik ders · 🛠️ atölye · ✏️ kritik · ⚖️ jüri/
 
 ---
 
-#### **HAFTA 2 — Marka Anahtarı ve Kullanıcı Profili** 🎓 ✏️
-**Stüdyoda:**
+#### **HAFTA 2 — Saha Gezisi, Marka Anahtarı ve Marka Onayı** 🎓 ✏️
+**Stüdyoda (8 saat):**
+- **SAHA GEZİSİ — Mersin Marina** (2-2,5 saat). Verilen alan + çevredeki referans dükkânlar. Öğrenciler §1b'deki altı kısıt listesiyle dolaşır, fotoğraflar ve not tutar. *"Burada beni ne durdurdu, ne itti?"*
 - **Teorik Ders 2: Brand Key (Marka Anahtarı) + Persona** (75 dk)
   - Marka Anahtarı bileşenleri: rekabet, hedef kitle, hedefler, misyon, değerler, faydalar (işlevsel + duygusal), kişilik, görünüm, iletişim dili, öz
   - Persona: 3 persona üret, 1'i birincil. Demografi değil **davranış** yazdırın: nereden haberi oldu, ne kadar sürede karar veriyor, yanında kim var, elinde ne var, ne zaman geliyor
   - Ürün analizi: boyut, kırılganlık, SKU sayısı, dokunulur mu/denenir mi/koklanır mı, fiyat segmenti, stok devir hızı
-- **Saha gezisi** (mümkünse) — verilen mekân + çevresindeki 3 referans mağaza. Öğrenciler *"burada beni ne durdurdu, ne itti"* notu tutar.
-- **Marka onay turu:** her öğrenci 3 adayını 3 dakikada anlatır, hoca 1'ini onaylar. Çakışma yok — bir marka bir öğrenci.
+- **Marka onay turu — gezinin ardından, aynı gün** (yaklaşık 60 dk): her öğrenci 3 adayını 3 dakikada anlatır, hoca 1'ini onaylar. Çakışma yok — bir marka bir öğrenci. *Gezi önce yapıldığı için öğrenci artık "bu markanın bu mekânda işi var mı" sorusunu bilerek cevaplayabiliyor.*
+- Kalan sürede bireysel kritik ve poster üzerine çalışma
 
 **Ödev (Hafta 3 başına): ARAŞTIRMA POSTERİ (A1)**
 - Marka Anahtarı diyagramı
@@ -262,7 +297,14 @@ Renk kodu: 🎓 teorik ders · 🛠️ atölye · ✏️ kritik · ⚖️ jüri/
 
 ---
 
-#### **HAFTA 14 — ⚖️ FİNAL JÜRİSİ (%30)**
+#### **HAFTA 14 — Teslim Provası ve Tamamlama** ✏️
+Final jürisi ayrı bir haftada yapılacağı için Hafta 14 bir tampondur: eksiklerin kapatılması, pafta kurgusunun bitirilmesi, maketin tamamlanması. Hoca her öğrenciye son bir yazılı eksik listesi verir.
+
+> İşler Hafta 12-13'te sarkarsa telafiyi buraya sığdırabilirsiniz. İlk kez ders veren bir hoca için bu payı harcamadan bırakmayın.
+
+---
+
+#### **FİNAL JÜRİSİ (ayrı hafta) — %30**
 **Teslim paketi (tam set):**
 1. Analiz ve konsept özeti (1-2 pafta)
 2. Duyu × Yolculuk Matrisi + 3 İmza An

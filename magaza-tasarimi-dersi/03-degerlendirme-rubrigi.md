@@ -10,7 +10,7 @@
 | Araştırma Sunumu | 3 | %10 |
 | Vize 1 — Konsept Jürisi | 6 | %25 |
 | Vize 2 — Somutlaştırma Jürisi | 11 | %25 |
-| Final Jürisi | 14 | %30 |
+| Final Jürisi | ayrı hafta | %30 |
 | Stüdyo süreç performansı | Yarıyıl | %10 |
 
 ---
@@ -105,6 +105,8 @@ BİR SONRAKİ TESLİME KADAR 5 MADDE:
 | Stüdyo kültürüne katkı (akran kritiğine katılım, başkasının kritiğini dinleme) | 15 |
 
 > Kritiğe elinde bir şey olmadan gelmek = o hafta 0. Bunu ilk hafta net söyleyin ve ikinci haftadan itibaren uygulayın.
+
+> **8 saatlik gün, 15-16 öğrenci:** öğrenci başına ~25-30 dakika düşüyor. **Sıra listesi asın** — aksi hâlde ilk gelen üç öğrenci saatin yarısını alır, son sıradakiler 10 dakikaya sıkışır. Öğleden önce 8, öğleden sonra 8 kişilik iki tur işe yarıyor. Kritik sırasını her hafta kaydırın ki hep aynı kişiler yorgun saate düşmesin.
 
 ---
 

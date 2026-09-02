@@ -1,3 +1,9 @@
+> **Sunum dosyası hazır:** `Magaza-Tasarimi-Teorik-Giris.pptx` (43 slayt, konuşmacı notlarıyla).
+> Bu belge o sunumun içerik planı ve anlatım rehberidir. Sunum dokuz PART hâlinde kurgulandı ve Hafta 1'de hepsini anlatmanız beklenmiyor — her bölümün üstünde hangi haftaya ait olduğu yazıyor.
+> Kaynak betik: `deck.js` (düzenleyip `node deck.js` ile yeniden üretebilirsiniz).
+
+---
+
 # HAFTA 1 — Teorik Ders Planı
 ## "Satış Noktasından Deneyim Mekânına: Mağaza Tasarımına Giriş"
 **Süre: 90-120 dakika · ~45 slayt**
@@ -232,8 +238,19 @@ Hafta 2 sonunda hocanız 1'ini onaylayacak. Bir marka bir öğrenci.
 - **Kötü örnek de koyun.** Sadece ödüllü projeler gösterilirse öğrenci "ulaşılmaz" hissediyor ve kopyalamaya başlıyor.
 - Görsellerin künyesini slaytta gösterin — öğrenciden kaynak isteyecekseniz kendiniz örnek olun.
 
-**Zaman yönetimi:**
-90 dakikaya sığmazsa **Bölüm 4 ve 5'i Hafta 2-3'e bırakın.** Zaten kurguda Teorik Ders 2 (Marka Anahtarı + Persona) ve Teorik Ders 3 (Müşteri Yolculuğu + Duyular) olarak ayrılmış durumda. Hafta 1'de Bölüm 0-3 + 6 anlatıp, 4 ve 5'i tanıtım düzeyinde geçmek yeterli.
+**Zaman yönetimi — 8 saatlik ilk gün için önerilen bölüşüm:**
+
+| | |
+|---|---|
+| 09:30–10:00 | Ders tanıtımı, takvim, kurallar |
+| 10:00–11:30 | Sunum PART I–IV (aralarla) |
+| 11:30–12:00 | PART IX — dokuz kontrol sorusu, sentez |
+| 12:00–13:00 | Ara |
+| 13:00–14:00 | Proje brifi + Mersin Marina tanıtımı + altı bağlam kısıtı |
+| 14:00–14:30 | Marka seçim kriterleri ve şablon dağıtımı |
+| 14:30–17:30 | İyi/kötü örnek okuma, açık tartışma, soru-cevap; isteyene ilk kritik |
+
+**PART V–VIII'i bugün açmayın.** Sunumda duruyorlar ama Hafta 2, 3 ve Hafta 10 atölyesinde anlatılacak şekilde işaretlendiler. Hafta 1'de hepsini anlatmaya çalışırsanız hiçbiri akılda kalmaz.
 
 **İlk kez veriyorsanız:**
 Bölüm 1'deki açılış sorusuyla başlayın, slaytla değil. İlk 10 dakikada sınıfı konuşturursanız dönem boyunca konuşurlar.

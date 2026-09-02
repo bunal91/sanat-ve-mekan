@@ -15,19 +15,36 @@ Marka size verilmiyor. **Siz bulacaksınız.** Ve tam olarak bu yüzden bu proje
 
 ---
 
-## Mekân
+## Mekân — Mersin Marina
 
 **[HOCA DOLDURACAK]**
-- Konum:
+- Konum: Mersin Marina, Yenişehir / Mersin
 - Alan: yaklaşık ___ m²
 - Kat sayısı: ___
 - Tavan yüksekliği: ___ m
-- Cephe uzunluğu / vitrin cephesi: ___ m
+- Cephe / vitrin hattı uzunluğu: ___ m
 - Verilen altlıklar: plan, kesit, cephe, fotoğraflar
 
 Mekânın kabuğu (taşıyıcı, cephe hattı, kot) **verilidir ve değiştirilemez.** İç bölünme, tavan, zemin, cephe dolgusu ve vitrin sizindir.
 
+**Saha gezisi: Hafta 2.** Fotoğraf makinesi, metre ve defter getirin.
+
 ---
+
+## Marina kapalı bir AVM değildir — altı bağlam kısıtı
+
+Bu projeyi bir alışveriş merkezi içindeki mağazadan ayıran şey burası. Aşağıdaki altı madde, tasarım kararlarınızın çoğunu belirleyecek.
+
+| Kısıt | Sizin için ne anlama geliyor |
+|---|---|
+| **Açık hava** | Vitrininiz iklime açık. Güneş, yağmur, rüzgâr ve **tuzlu hava** artık malzeme kararınızın parçası. Kapalı AVM için doğru olan malzeme burada iki yılda biter. |
+| **Akşam kullanımı** | Marina akşam canlanır. **Vitrininizin gece görünümü, gündüz görünümünden daha önemli olabilir.** Cephe aydınlatması dekoratif bir ek değil, ana tasarım kararıdır. |
+| **Yaya promenadı** | Müşteri otoparktan değil, yürüyüş hattından geliyor. Vitrin *yürürken* okunuyor — durup bakarken değil. |
+| **Mevsimsellik** | Yaz zirvesi, kış sakin. Mekânınız iki farklı yoğunluğa aynı anda cevap vermeli. Kışın boş görünen bir mağaza, yazın tıkanan bir mağaza kadar başarısızdır. |
+| **Karma kullanıcı** | Tekne sahibi, Mersinli aile, turist. Üç farklı hız, üç farklı beklenti — personalarınızı buna göre kurun. |
+| **Deniz ve manzara** | Bir yön diğerlerinden değerli. Vista, plan kararınızın girdisidir; manzarayı sırtınıza almayın. |
+
+> **Saha gezisinde bunları arayın:** Hangi dükkân akşam çalışıyor, hangisi ölü? Hangisinin malzemesi tuzdan yıpranmış? Hangi vitrin 30 metreden okunuyor, hangisi okunmuyor? Not alın — Hafta 7 vitrin atölyesinde bu notları kullanacaksınız.
 
 ## Ne Yapmanız Bekleniyor
 
@@ -53,7 +70,7 @@ Mekânın kabuğu (taşıyıcı, cephe hattı, kot) **verilidir ve değiştirile
 15. Kasa, depo, personel, servis rotası
 16. Aydınlatma senaryosu, malzeme paleti, akustik, koku
 
-### Aşama 4 — Detay (Hafta 12-14)
+### Aşama 4 — Detay (Hafta 12-14 + final haftası)
 17. Kendi tasarladığınız bir teşhir ünitesinin 1/10-1/5 detayı
 18. 3 **İmza An**'ın 1/20 çözümü
 19. Sunum kurgusu ve paftalar
@@ -65,7 +82,7 @@ Mekânın kabuğu (taşıyıcı, cephe hattı, kot) **verilidir ve değiştirile
 **Dış kabuk:** cephe · vitrin · giriş/eşik · dekompresyon bölgesi
 **Satış alanı:** güç duvarı · sirkülasyon · yönlendirme · teşhir sistemleri · etkileşim/deneme alanı · oturma/bekleme · (varsa) deneme kabini
 **İşletme:** kasa/POS · kasa arkası yönetim · depo · personel alanı ve WC · mal kabul/servis rotası
-**Atmosfer:** aydınlatma senaryosu · malzeme-renk-doku · akustik/müzik · koku kaynağı · ısı/hava
+**Atmosfer:** aydınlatma senaryosu (**gece cephesi dahil**) · malzeme-renk-doku (**dış mekân dayanımı**) · akustik/müzik · koku kaynağı · ısı/hava
 **Teknik:** erişilebilirlik · sürdürülebilirlik/sökülebilirlik · kaçış rotası
 
 > ⚠️ **En sık kaybedilen puanlar burada:** depo, kasa arkası, personel alanı ve mal kabul rotası. Bir mağaza sadece müşterinin gördüğü yer değildir. Çalışanın günü de tasarlanır.
@@ -106,7 +123,7 @@ Marka Anahtarı · persona · ürün analizi · mekân analizi · senaryo · Duy
 Revize konsept · 1/50 tam set (plan, min. 2 kesit, cephe/vitrin) · 1/50 tavan-aydınlatma planı · arka ofis + kasa çözümü · yönlendirme şeması · **fiziksel malzeme paneli** · min. 3 iç mekân 3B'si · güncel matris + 3 İmza An
 **Format:** A1 pafta + maket + malzeme paneli · 10 dk sunum
 
-### Final teslim paketi (Hafta 14)
+### Final teslim paketi (final haftası)
 Analiz-konsept özeti · matris + İmza Anlar · 1/50 plan, min. 2 kesit, cephe, tavan planı · 1/20 kısmi plan + kesit · **1/10-1/5 mobilya/teşhir detayı (min. 1)** · malzeme paneli + lejant · min. 5 iç mekân görseli + 1 gece cephesi · fiziksel maket · yönlendirme ve grafik katman · erişilebilirlik notu
 **Format:** A1 pafta seti + maket + malzeme paneli · 12 dk sunum
 

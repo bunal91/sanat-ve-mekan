@@ -25,7 +25,7 @@ Pedagojik gerekçe üç maddede:
 - [ ] **Yaygın bir kurumsal mekân kimliği yok** — Google'da mağaza fotoğrafları çıkmıyor
 - [ ] **Gerçek ve doğrulanabilir** — çalışan bir web sitesi ve/veya aktif bir sosyal medya hesabı var (uydurma marka olmaz)
 - [ ] **Analiz edilecek malzeme var** — ürün gamı, marka dili, hikâyesi, müşterisi okunabiliyor
-- [ ] **Türkiye'de faaliyet gösteriyor** (yerel bağlam ve saha erişimi için)
+- [ ] **Türkiye'de faaliyet gösteriyor** (yerel bağlam ve saha erişimi için) — Mersin/Çukurova bölgesinden olması avantaj ama zorunlu değil
 
 ### TERCİH EDİLEN
 - [ ] Üretim hikâyesi anlatılabilir (zanaat, atölye, yerel üretim, tek kişi/küçük ekip)
@@ -65,6 +65,21 @@ Marka adı vermiyorum bilinçli olarak — **bulma işi öğrencinin.** Ama kate
 | **Kitap / bağımsız yayınevi** | Oturma, okuma, ışık, yoğunluk, etkinlik alanı |
 | **Bağımsız takı / aksesuar** | Küçük ürün-yüksek değer, güvenlik, vitrin dolabı, ayna, ışık |
 | **Board game / koleksiyon** | Oyun masası, sosyalleşme, etkinlik alanı, kutu teşhiri |
+
+### Mersin ve Çukurova bağlamına özel kategoriler
+
+Yerel bağlam marka bulmayı kolaylaştırıyor — ve marina konumu bazı kategorileri özellikle anlamlı kılıyor:
+
+| Kategori | Neden burada anlamlı |
+|---|---|
+| **Narenciye ürünleri** (limon/portakal bazlı gıda, kozmetik, reçel) | Çukurova'nın kimlik ürünü. Koku ve tat mekânsallaştırmaya çok açık. |
+| **Zeytinyağı ve gurme gıda** | Tadım noktası, şişe teşhiri, hediyelik ambalaj — güçlü bir mekânsal program. |
+| **Deniz ve tekne ekipmanı / denizci giyim** | Marina bağlamıyla doğrudan örtüşüyor. Büyük ürün, askı sistemi, servis tezgâhı problemi. |
+| **Yazlık tekstil, keten, hasır** | Mevsimsellik problemi net. Dokunma ve deneme kabini gerektiriyor. |
+| **Yerel seramik ve zanaat atölyesi** | Kırılganlık, tekil ürün, "üretimi göster" konsepti. |
+| **Tarsus/Çukurova el yapımı gıda** (bal, kuruyemiş, baharat) | Açık kap, tartı-paketleme, koku. |
+
+> **Marina bağlamı ile marka arasında bağ kurmak zorunlu değil** — ama kurulabiliyorsa proje kendiliğinden güçleniyor. Öğrenci "bu marka neden burada" sorusunu cevaplayabilmeli.
 
 > **Hoca notu:** Sınıfta kategori çeşitliliğini teşvik edin. 20 öğrencinin 12'si kahve markası seçerse jüri sıkıcı olur ve öğrenciler birbirinden kopyalar. Kategori başına maksimum 2-3 öğrenci kuralı koyabilirsiniz.
 
@@ -124,6 +139,8 @@ RİSK: Bu markayla ilgili yeterli bilgi bulabilecek miyim?
 | **Öz** | Tek cümlede bu marka nedir? Müşteri yorumları ne diyor? |
 
 **Kaynaklar:** marka web sitesi · Instagram (özellikle yorumlar) · ürün ambalajı · varsa basında çıkan yazılar · **mümkünse marka sahibiyle 20 dakikalık görüşme** (en değerli kaynak)
+
+> Yerel bir marka seçtiyseniz marka sahibine ulaşmak genelde kolaydır ve çok değerlidir. Küçük markalar bu tür ilgiye açık oluyor — bir öğrencinin 20 dakikalık telefon görüşmesi, bütün analizin kalitesini değiştiriyor.
 
 ### B. Persona (3 adet, 1'i birincil)
 
