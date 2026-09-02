@@ -1,0 +1,19 @@
+Gorsel dosyalari - baski boyutundaki etkin cozunurluk
+(Tasarim+Kuram kurali: en az 300 dpi, tiff/jpg/pdf)
+
+Tablo1_mycelium_brick_board_properties.png       1387x183 px      218 dpi    YETERSIZ (<300)
+Sekil1_Mycotecture.jpg                           728x473 px       191 dpi    YETERSIZ (<300)
+Sekil2_The_Growing_Pavilion.png                  838x626 px       219 dpi    YETERSIZ (<300)
+Sekil3_growing_process_of_mycelium.png           794x602 px       163 dpi    YETERSIZ (<300)
+Tablo2_Experiment_1.emf                          vektorel (EMF)   -          Word icinden PDF/TIFF olarak disa aktarilmali
+Tablo3_Experiment_2.emf                          vektorel (EMF)   -          Word icinden PDF/TIFF olarak disa aktarilmali
+Tablo4_Experiment_3.emf                          vektorel (EMF)   -          Word icinden PDF/TIFF olarak disa aktarilmali
+Tablo5_Experiment_4_a.png                        1074x592 px      167 dpi    YETERSIZ (<300)
+Tablo5_Experiment_4_b.png                        892x655 px       141 dpi    YETERSIZ (<300)
+Sekil4_progress_of_experiment_4.png              618x538 px       158 dpi    YETERSIZ (<300)
+Sekil5_Prototype_3.png                           716x583 px       221 dpi    YETERSIZ (<300)
+Tablo6_material_intervention_test.png            933x649 px       157 dpi    YETERSIZ (<300)
+Sekil6_Greenox_Urban_Residence.png               1026x492 px      206 dpi    YETERSIZ (<300)
+Sekil7_plan_scheme_a.jpg                         661x470 px       219 dpi    YETERSIZ (<300)
+Sekil7_plan_scheme_b.jpg                         696x492 px       230 dpi    YETERSIZ (<300)
+Sekil8_six_alternative_layouts.jpeg              1509x1904 px     220 dpi    YETERSIZ (<300)
