@@ -386,37 +386,40 @@ opener("II", "Atmosfer", "Mekânın, üründen bağımsız olarak davranışı e
 
 {
   const s = slide("II · ATMOSFER", "Mağazanın sunabileceği dört deneyim türü");
-  text(s, "Mağaza deneyimi tek bir biçimde kurulmaz. Aşağıdaki dört tür farklı mekânsal talepler üretir ve bir mağaza bunlardan yalnızca birini ya da birkaçını seçer.",
-       { one: true, y: 1.78, h: 0.65, size: 15 });
+  text(s, "Deneyim tek bir biçimde kurulmaz. Aşağıdaki dört tür, müşterinin mağazada ne yaptığına göre ayrışır ve her biri mekândan farklı bir şey ister. Bir mağaza dördünü birden iyi yapamaz; hangisini seçtiği bir tasarım kararıdır.",
+       { one: true, y: 1.72, h: 1.0, size: 15 });
 
-  const y0 = 2.75, w = 2.72, h = 2.45, gap = 0.25;
-  const kinds = [
-    ["Öğrenme", "Müşterinin etkin katıldığı, yeni bir şey öğrendiği deneyim.",
-     "atölye masası · demo alanı · oturma"],
-    ["Kişisel satış", "Satış görevlisinin rolü ürün gösterenden deneyim kuranına dönüşür.",
-     "danışma noktası · ölçü alma · birebir tezgâh"],
-    ["Çok kanallılık", "Müşteri birden çok kanaldan geliyor; mağaza bunları buluşturmalı.",
-     "stok sorgu · online sipariş teslim · iade"],
-    ["Hazine avı", "Sınırlı sürede bulunan ürünlerin yarattığı heyecan; hızlı ürün değişimi.",
+  const cy = 3.45, r = 0.86;
+  const items = [
+    ["Öğrenme", "Müşterinin etkin katıldığı deneyim; amaç yeni bir şey öğrenmek.",
+     "atölye masası · demo alanı · oturma düzeni"],
+    ["Kişisel\nsatış", "Satış görevlisinin rolü ürün gösterenden deneyim kurana dönüşür.",
+     "danışma noktası · birebir tezgâh · ölçü alma"],
+    ["Çok\nkanallılık", "Müşteri birden çok kanaldan geliyor; mağaza bunları buluşturmalı.",
+     "stok sorgu · online sipariş teslimi · iade noktası"],
+    ["Hazine\navı", "Sınırlı sürede bulunan ürünlerin yarattığı heyecan; hızlı ürün değişimi.",
      "esnek teşhir · kampanya alanı · değişebilir düzen"]
   ];
-  kinds.forEach((k, i) => {
-    const x = 0.85 + i * (w + gap);
-    zone(s, x, y0, w, h, "", i === 3 ? 1 : 0);
-    s.addText(k[0], { x: x + 0.24, y: y0 + 0.26, w: w - 0.48, h: 0.4, isTextBox: true,
-      margin: 0, fontFace: H, fontSize: 17, bold: true, color: i === 3 ? ACC : INK });
-    s.addText(k[1], { x: x + 0.24, y: y0 + 0.72, w: w - 0.48, h: 1.05, isTextBox: true,
-      margin: 0, fontFace: S, fontSize: 11, color: BODY, lineSpacing: 14 });
-    s.addText("MEKÂNSAL TALEP", { x: x + 0.24, y: y0 + 1.78, w: w - 0.48, h: 0.24,
-      isTextBox: true, margin: 0, fontFace: S, fontSize: 8, bold: true, color: FAINT, charSpacing: 1.4 });
-    s.addText(k[2], { x: x + 0.24, y: y0 + 2.0, w: w - 0.48, h: 0.4, isTextBox: true,
-      margin: 0, fontFace: S, fontSize: 10, color: i === 3 ? ACC : MUTED, lineSpacing: 12.5 });
+  const xs = [2.35, 5.4, 8.45, 11.5];
+  items.forEach((it, i) => {
+    const x = xs[i], hi = i === 0;
+    s.addShape(p.ShapeType.ellipse, { x: x - r, y: cy - r, w: r * 2, h: r * 2,
+      fill: { color: hi ? ACCT : PAPER }, line: { color: hi ? ACC : HAIR, width: hi ? 1.5 : 1 } });
+    s.addText(it[0], { x: x - r, y: cy - 0.45, w: r * 2, h: 0.9, isTextBox: true, margin: 0,
+      fontFace: S, fontSize: 11, bold: true, color: hi ? ACC : INK,
+      align: "center", valign: "middle", lineSpacing: 14 });
+    s.addText(it[1], { x: x - 1.42, y: cy + r + 0.22, w: 2.84, h: 1.0, isTextBox: true,
+      margin: 0, fontFace: S, fontSize: 10.5, color: MUTED, align: "center", lineSpacing: 13.5 });
+    s.addText("MEKÂNSAL TALEP", { x: x - 1.42, y: 5.62, w: 2.84, h: 0.24, isTextBox: true,
+      margin: 0, fontFace: S, fontSize: 8, bold: true, color: FAINT,
+      align: "center", charSpacing: 1.4 });
+    s.addText(it[2], { x: x - 1.42, y: 5.86, w: 2.84, h: 0.55, isTextBox: true, margin: 0,
+      fontFace: S, fontSize: 10, color: hi ? ACC : BODY, align: "center", lineSpacing: 12.5 });
+    if (i < 3) dline(s, x + r, cy, xs[i + 1] - r, cy, { col: HAIR, w: 1 });
   });
-  cap(s, M, 5.5, 11.4, "Her deneyim türü mekânda yer kaplar. Bir mağaza dördünü birden iyi yapamaz; hangisini seçtiği bir tasarım kararıdır.",
-      { size: 13, face: H, col: ACC, italic: true, h: 0.45 });
-  text(s, "Bu türler çok kanallı perakende üzerine yapılan çalışmalarda, özellikle genç kuşak müşterinin beklentileri üzerinden tanımlanıyor (Xi & Idris, 2026; Lindström, 2005).",
-       { one: true, y: 6.1, w: 11.4, h: 0.6, size: 12 });
-  s.addNotes("Öğrencilerin markasına hangi deneyim türünün uyduğunu düşündürün — bu, konsept kararını doğrudan besler.");
+  cap(s, M, 6.52, 10.9, "Her deneyim türü mekânda yer kaplar. Seçilmeyen türün alanını ayırmamak da bir karardır (Lindström, 2005; Xi & Idris, 2026).",
+      { size: 12.5, face: H, col: ACC, italic: true, h: 0.4 });
+  s.addNotes("Bir önceki slaydın devamı: orada deneyimin neyden oluştuğu, burada hangi biçimlerde kurulabileceği anlatılıyor. Öğrencilere kendi markalarına hangi türün uyduğunu düşündürün — bu, konsept kararını doğrudan besliyor.");
 }
 
 /* =========================================================
