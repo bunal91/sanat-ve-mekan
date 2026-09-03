@@ -2,7 +2,9 @@
 ## 14 Haftalık Ders İzlencesi ve Ölçme–Değerlendirme Kurgusu
 ### İç Mimarlık Lisans Programı — 1. Sınıf
 
-> **REVİZYON NOTU (v2).** Ölçme kurgusu değişti: **sınav yok.** İki vize ve bir final, üçü de teslim edilen ve duvarda savunulan dosyalardır. Final, katlanır bir katman diyoraması ve sergidir. Atölye bankası, sergi kurgusu, stüdyo mührü kuralı ve makale planı için bkz. **`01-atolyeler-ve-arastirma.md`**.
+> **REVİZYON NOTU (v3).** Perspektif dersiyle çakışmayı önlemek için perspektif kurgusu haftaları kaldırıldı; yerine hacimlerin farklı göz hizalarından serbest elle çizimi geldi. Malzeme/doku haftası çıkarıldı; yerine tarama ve ışık–gölge ayrı haftalara ayrıldı, 12. hafta tek bir nesnenin gözlem etüdüne ayrıldı. 4. haftaya sınıfça yapılan bir **görme yürüyüşü** eklendi.
+>
+> **(v2).** Ölçme kurgusu değişti: **sınav yok.** İki vize ve bir final, üçü de teslim edilen ve duvarda savunulan dosyalardır. Final, katlanır bir katman diyoraması ve sergidir. Atölye bankası, sergi kurgusu, stüdyo mührü kuralı ve makale planı için bkz. **`01-atolyeler-ve-arastirma.md`**.
 
 ---
 
@@ -28,14 +30,14 @@ Dolayısıyla dersin hedefi "güzel çizim" değil, **gören, ölçen, kuran, an
 
 ## 2. PEDAGOJİK OMURGA: DÖRT MODÜL
 
-Ders, birbirinin üzerine binen dört modül olarak kurgulanmıştır. Her modül bir öncekinin becerisini yeni bir bağlamda tekrar eder (**sarmal müfredat** mantığı): çizgi hafta 2'de ifade, hafta 10'da ton, hafta 11'de doku olarak geri gelir.
+Ders, birbirinin üzerine binen dört modül olarak kurgulanmıştır. Her modül bir öncekinin becerisini yeni bir bağlamda tekrar eder (**sarmal müfredat** mantığı): çizgi hafta 2'de ifade, hafta 9'da ton, hafta 13'te katman kenarı olarak geri gelir.
 
 | Modül | Hafta | Başlık | Temel soru |
 |---|---|---|---|
 | **A** | 1–3 | **Çizginin Grameri** — iz, ifade, notasyon | Çizgi ne söyler? |
 | **B** | 4–7 | **Görmenin İnşası** — gözlem, ölçü, hacim | Gördüğümü nasıl doğru kurarım? |
-| **C** | 8–11 | **Mekânın Temsili** — perspektif, ışık, malzeme | Üç boyutu iki boyutta nasıl inandırırım? |
-| **D** | 12–14 | **Anlatının Kurulması** — saha, analiz, sunum | Çizimle ne anlatıyorum? |
+| **C** | 8–11 | **Hacim, Ton ve Işık** — göz hizası, tarama, gölge | Üç boyutu iki boyutta nasıl inandırırım? |
+| **D** | 12–14 | **Katman ve Atmosfer** — nesne, katman, sergi | Derinliği nasıl kurarım? |
 
 ### Modüllerin akademik dayanakları
 
@@ -50,11 +52,11 @@ Ders, birbirinin üzerine binen dört modül olarak kurgulanmıştır. Her modü
 
 Dersi başarıyla tamamlayan öğrenci:
 
-- **ÖÇ1.** Çizgi, ton ve doku değişkenlerini bilinçli olarak kontrol eder; çizgi kalitesi ve hiyerarşisi kurar. *(Uygulama)*
+- **ÖÇ1.** Çizgi ve ton değişkenlerini bilinçli olarak kontrol eder; çizgi kalitesi ve hiyerarşisi kurar. *(Uygulama)*
 - **ÖÇ2.** Gözlemlediği nesne ve mekânı ölçü, oran ve eksen ilişkileriyle doğru kurar; kendi hatasını tespit eder. *(Analiz)*
 - **ÖÇ3.** Temel geometrik katıları (küp, silindir, küre, prizma, koni) serbest elle hacimsel olarak inşa eder ve birleştirir. *(Uygulama)*
-- **ÖÇ4.** Tek ve iki kaçış noktalı iç mekân perspektifini cetvel kullanmadan, göz seviyesi ve ölçek kararlarıyla birlikte kurar. *(Uygulama)*
-- **ÖÇ5.** Işık–gölge ve malzeme dokusunu tarama (hatching) ve tonlama teknikleriyle temsil eder. *(Uygulama)*
+- **ÖÇ4.** Temel hacimleri farklı göz hizalarından (üstten, hizada, alttan) cetvel kullanmadan inandırıcı biçimde kurar. *(Uygulama)*
+- **ÖÇ5.** Tarama (hatching) teknikleriyle denetimli bir ton aralığı üretir ve ışık–gölge ilişkisini temsil eder. *(Uygulama)*
 - **ÖÇ6.** Soyut bir içeriği (duygu, ses, atmosfer) tutarlı bir görsel eşleme sistemiyle çizime çevirir ve bu sistemi sözlü/yazılı gerekçelendirir. *(Sentez–Değerlendirme)*
 - **ÖÇ7.** Süreç defteri tutar, akran kritiğine katılır ve kendi gelişimini kanıta dayalı olarak değerlendirir. *(Değerlendirme)*
 
@@ -66,18 +68,18 @@ Dersi başarıyla tamamlayan öğrenci:
 |---|---|---|---|
 | 1 | Nokta, iz, jest: çizim öncesi çizim | Isınma protokolü, çizgi merdiveni, daire | **Teşhis çizimi (ön test)** · onam + anket |
 | 2 | Çizginin duygusu: ifade grameri | Duygu matrisi + **kör eşleştirme oyunu** *(grup)* | Ödev 1 |
-| 3 | Zaman ve ritim: sesin notasyonu | Grafik partisyon + **tempo egzersizi** + **icra** *(grup)* | Ödev 2 |
-| 4 | Görmeyi öğrenmek: kontur, jest, negatif alan | Sandalye etüdü (5 yöntem) + **kısıt destesi** | — |
+| 3 | Zaman ve ritim: sesin notasyonu | Grafik partisyon + **tempo** + **icra** *(grup)* | Ödev 2 |
+| 4 | **Bakmak ve çizmek** | **Görme yürüyüşü** *(sınıfça, dışarıda)* + kontur, jest, negatif alan | — |
 | 5 | Ölçü, oran, eksen: görsel ölçme | Natürmort + bindirme + **kolektif ortalama** *(grup)* | Ödev 3 |
-| 6 | İki boyuttan hacme: temel katılar | Şeffaf katı inşası, mikro mekân | — |
-| 7 | **VİZE 1 — "Çizgi Sözlüğü" asma-teslimi** | **Ortak Alfabe atölyesi** *(grup)* | **Vize 1 dosyası (6 pafta)** |
-| 8 | Perspektifin mantığı I: tek kaçış noktası | Oda kutusu, üç göz seviyesi | — |
-| 9 | Perspektif II: iki kaçış noktası, mobilya, ölçek | **Kadavra enfes kesit** *(grup)* + sessiz kritik | Ödev 4 |
-| 10 | Işık, değer ve **atmosferik perspektif** | Ton skalası, kontrast kademelenmesi | — |
-| 11 | Malzeme, doku, saydamlık | **Frotaj havuzu** *(grup)* + malzeme kütüphanesi | **Vize 2 — "Mekân Dosyası"** |
-| 12 | **Etüd haftası** — yerinde çizim | Katmanlı belgeleme + **duyusal çeviri** *(grup)* | Saha defteri · Ödev 5 |
-| 13 | **Katman stüdyosu** — analiz, prova, ışık denemesi | Hafıza–gözlem karşılaştırması, kutu provası | Ara kritik |
-| 14 | **Sergi kurulumu ve açılışı** | Pin-up, ziyaretçi kartları, sunumlar | **Katman diyoraması** · **son test** |
+| 6 | Hacim: temel katılar ve şeffaf çizim | 30 katı serisi, kesişimler, mikro mekân | — |
+| 7 | **VİZE 1 — "Çizgi Sözlüğü" asma-teslimi** | **Ortak Alfabe atölyesi** *(grup)* | **Vize 1 dosyası** |
+| 8 | **Hacimlerin perspektifi** — göz hizasının üstü ve altı | Bir küp, dokuz konum + **kadavra enfes kesit** *(grup)* | Ödev 4 |
+| 9 | **Tarama:** çizgiyle ton üretmek | Ton skalası, beş teknik + sessiz kritik | — |
+| 10 | **Işık ve gölge** | Tek kaynak etüdü, üç ışık yönü, kontrast kademelenmesi | Ödev 5 |
+| 11 | **Etüd haftası** — yerinde çizim · **VİZE 2 teslimi** | Katmanlı belgeleme + **duyusal çeviri** *(grup)* | **Vize 2 dosyası** |
+| 12 | **Obje günü** — yalnızca gördüğünüz açıdan | **Nesnenin etrafında sınıf** *(grup)* + uzun etüd | Obje etüdü |
+| 13 | **Katman stüdyosu** — diyorama katmanlarının kurgusu | Değer sistemi kararı, prova, kesim çevirisi | Ara kritik |
+| 14 | **Sergi kurulumu ve açılışı** | Ziyaretçi kartları, üçer dakikalık sunumlar | **Katman diyoraması** · **son test** |
 | Final haftası | **Final dosyası teslimi** (katman paftaları, kesit, süreç dosyası, katalog metni) | — | **Final dosyası** |
 
 ---
@@ -148,25 +150,44 @@ Değerlendirme ölçütü estetik değil **sistematiklik ve okunabilirliktir:** 
 
 ---
 
-### HAFTA 4 — Görmeyi Öğrenmek: Kontur, Jest, Negatif Alan
+### HAFTA 4 — Bakmak ve Çizmek
 
-**Amaç:** Sembolden gözleme geçiş. Öğrencinin "bildiği sandalye"yi değil, "gördüğü sandalye"yi çizmesi.
+**Amaç:** Sembolden gözleme geçiş. Öğrencinin "bildiği sandalye"yi değil, "gördüğü sandalye"yi çizmesi. Bu hafta iki yarıdan oluşur; ilki dışarıda.
 
-**Anlatım (25 dk)**
-- Nicolaïdes'in kör kontur yöntemi: kalem ucunun nesnenin konturuna gerçekten dokunduğuna inanmak; görme ile dokunmanın birlikte çalışması
-- Edwards'ın yaklaşımı: saf kontur, sembolik/adlandırıcı düşünmeyi askıya alır, algısal moda geçiş sağlar
-- Beş bileşen beceri modeli: kenarlar, boşluklar, ilişkiler, ışık–gölge, bütün
+---
 
-**Stüdyo — Aynı sandalye, beş yöntem**
-Model olarak bir sandalye (tercihen ikonik bir tasarım: Thonet No.14, Eames DSW, plastik bahçe sandalyesi — iç mimarlık için bilinçli bir seçim).
+#### İlk yarı — GÖRME YÜRÜYÜŞÜ *(sınıfça, dışarıda, ~85 dk)*
 
-1. **Kör kontur (5 dk):** Kâğıda bakmak yasak, kalem kalkmaz.
-2. **Modifiye kontur (10 dk):** Ara ara bakılır ama kalem yavaş, ölçülü.
-3. **Jest serisi (30 sn × 8):** Sandalyenin duruşu, ağırlığı, "hareketi" — detay yok.
-4. **Negatif alan (15 dk):** Yalnızca sandalyenin *arasındaki boşluklar* çizilir/koyulaştırılır.
-5. **Sentez (20 dk):** Dört yöntemin bilgisiyle tam bir gözlem çizimi.
+Bu dersin en önemli tek dersini veriyor: **çizim, kalem kâğıda değmeden önce başlar.**
 
-**Tartışma:** Beş çizim yan yana. Hangisi en "doğru"? Hangisi sandalyeyi en iyi *anlatıyor*? Bu ikisinin farklı sorular olduğu buradan öğretilir.
+Sınıf birlikte dışarı çıkar. Hedef: kampüs içinde, yürüme mesafesinde, karmaşık ama tek parça bir nesne — bir bank, bir bisiklet, bir merdiven korkuluğu, bir çeşme, bir ağaç kökü, bir kapı kolu, bir hidrant, bir kapı tokmağı.
+
+| Aşama | Süre | Ne yapılır |
+|---|---|---|
+| **1 · Sadece bakmak** | 10 dk | **Defter ve kalem çantada kalır.** Yalnızca bakılır. Hoca sesli sorular sorar: *Kaç parçadan oluşuyor? Parçalar nerede birleşiyor? En koyu yeri neresi? Hangi çizgi en uzun? Neresi seni şaşırttı?* Kimse yanıt vermez, herkes bakar. |
+| **2 · Hafızadan çizim** | 15 dk | Sınıfa dönülür (veya yerinde nesneye sırt dönülür). **Nesneye bakmadan** çizilir. |
+| **3 · Gözlemle çizim** | 25 dk | Nesnenin başına dönülür, bu kez bakarak çizilir. |
+| **4 · Karşılaştırma** | 15 dk | İki çizim yan yana konur. *Hafıza neyi tuttu, neyi attı?* |
+
+**Bulgu her zaman aynıdır ve öğretici olan da budur:** hafıza çizimi **şemayı** tutar — parça sayısını, adlandırılabilir kısımları, simetriyi. Gözlem çizimi ise şemanın olmadığı yerleri getirir: kaynak izleri, eğrilikler, orantısızlıklar, ezikler.
+
+> **Dersin çıkarımı:** Bakmak, çizmenin bir parçasıdır — hazırlığı değil. On dakika bakmadan başlanan çizim, hafızadan yapılmış bir çizimdir.
+
+**Not:** Hafıza çizimleri toplanır ve saklanır. Bunlar aynı zamanda araştırma verisidir (bkz. Makale A) — hafızada korunan eleman oranı ölçülebilir.
+
+---
+
+#### İkinci yarı — Aynı nesne, üç yöntem *(stüdyoda, ~60 dk)*
+
+Stüdyoya dönülür. Model: bir sandalye (tercihen ikonik bir tasarım — Thonet No.14, Eames DSW veya sıradan bir plastik bahçe sandalyesi).
+
+1. **Kör kontur (5 dk)** — kâğıda bakmak yasak, kalem kalkmaz. Nicolaïdes'in yöntemi: kalem ucunun konturuna gerçekten dokunduğuna inanmak.
+2. **Jest serisi (30 sn × 8)** — duruş, ağırlık, "hareket"; detay yok.
+3. **Negatif alan (20 dk)** — yalnızca sandalyenin *arasındaki boşluklar* koyulaştırılır.
+
+**Anlatım (25 dk, ilk yarıdan önce):** Betty Edwards'ın beş bileşen beceri modeli — kenarlar, boşluklar, ilişkiler, ışık–gölge, bütün. Ve şema/sembol sorunu: beyin ekonomiktir, her bakışta yeniden görmez.
+
+> **Süre uyarısı:** Bu hafta 4 saatlik blok gerektirir. 3 saatlik blokta ikinci yarı kör kontur ve negatif alanla sınırlanır; jest serisi 5. haftanın ısınmasına kayar.
 
 ---
 
@@ -219,7 +240,7 @@ Orta karmaşıklıkta bir natürmort — iç mimarlık nesneleri: tabure, sürah
 | 1 | Kişisel çizgi kataloğu — en az 40 çizgi türü, adlandırılmış ve sınıflandırılmış | 1 |
 | 2 | Duygu matrisi (12 kare) + kör eşleştirme sonuçları + 150 kelimelik yorum | 2 |
 | 3 | Grafik partisyon + lejant + icra notu | 3 |
-| 4 | Gözlem etüdleri — aynı nesne, beş yöntem | 4 |
+| 4 | **Görme yürüyüşü** — hafıza/gözlem çifti + kör kontur, jest, negatif alan | 4 |
 | 5 | Ölçü–oran analizi — kuruluş + bindirme + sapma notları | 5 |
 | 6 | Hacim inşası — şeffaf katılar, kesişimler, mikro mekân | 6 |
 
@@ -231,119 +252,158 @@ Orta karmaşıklıkta bir natürmort — iç mimarlık nesneleri: tabure, sürah
 
 ---
 
-### HAFTA 8 — Perspektifin Mantığı I: Tek Kaçış Noktası
+### HAFTA 8 — Hacimlerin Perspektifi: Göz Hizasının Üstü ve Altı
 
-**Amaç:** Perspektifi bir "kural seti" olarak değil, bir **görme mantığı** olarak kurmak. Cetvel yok; her şey serbest elle.
+> **Bu hafta perspektif dersi değildir.** Kaçış noktası, resim düzlemi, ölçü çizgisi ve kurallı perspektif kurgusu **Perspektif dersinin** konusudur ve orada cetvelle öğretilir. Burada yapılan iş farklıdır: **cetvelsiz, gözle, bir hacmin göz hizasına göre nasıl değiştiğini elde tutmak.** Ölçtüğümüz şey kurgu doğruluğu değil, elin hacim kurma refleksi. İki dersin iş bölümü budur ve izlencede açıkça yazılıdır.
 
-**Anlatım (35 dk)**
-- Ufuk çizgisi = göz seviyesi. Ufkun konumu mekânın duygusunu belirler (alçak ufuk: anıtsallık; yüksek ufuk: kavrayış, kontrol)
-- Kaçış noktası, resim düzlemi, izleyici konumu
-- Derinlik bölme: köşegen yöntemiyle eşit aralıkların perspektifte doğru daralması
-- Ölçü çizgisi (measuring line) ile gerçek boyutların perspektife taşınması
-
-**Stüdyo**
-1. Boş oda kutusu: zemin, tavan, üç duvar
-2. Kapı, pencere ve bir niş yerleştirme (yükseklikler ölçü çizgisiyle taşınır)
-3. Zemin karosu ızgarası — köşegenle bölme
-4. Aynı odayı üç farklı göz seviyesinden çizmek: oturan (110 cm), ayakta (160 cm), çocuk (90 cm). Mekân duygusunun nasıl değiştiği tartışılır — bu doğrudan iç mimarlık meselesidir.
-
----
-
-### HAFTA 9 — Perspektifin Mantığı II: İki Kaçış Noktası, Mobilya, Ölçek
+**Amaç:** Aynı hacmi yukarıdan, hizada ve aşağıdan çizebilmek; göz hizasının biçimi nasıl değiştirdiğini kavramak.
 
 **Anlatım (30 dk)**
-- Köşe perspektifi; iki kaçış noktasının ufuk üzerindeki konumu ve "distorsiyon konisi"
-- **Mobilya kutulaştırma:** Her mobilya önce bir prizmadır. Sandalye, masa, koltuk, dolap — kutudan yontarak.
-- **İnsan figürü ölçek anahtarıdır:** Ufuk çizgisi ayakta duran herkesin göz hizasından geçer; bu tek kural, mekândaki tüm figürleri doğru ölçeklemeye yeter.
-- Tekrar eden elemanlar: kolon dizisi, merdiven basamağı, aydınlatma — köşegen ve yarıya bölme yöntemleri
+- **Göz hizası nerede?** Ufuk çizgisi = gözünüzün yüksekliği. Yükseldikçe nesnenin üst yüzü açılır, alçaldıkça alt yüzü görünür.
+- **Küpün üç hâli:**
+  - göz hizasının **üstünde** → üst yüz görünmez, alt yüz görünür, dikeyler yukarı doğru toplanır
+  - **hizada** → yalnızca ön yüz ve kenarlar; üst yüz bir çizgiye iner
+  - **altında** → üst yüz açılır, en tanıdık hâl
+- **Elips kuralı:** elipsin küçük ekseni her zaman dairenin dönme eksenidir; göz hizasından uzaklaştıkça elips açılır, hizaya geldikçe bir çizgiye iner. Silindirde üst ve alt elips **aynı açıklıkta değildir** — alttaki daha açıktır.
+- **Şeffaf (wireframe) çizim** burada da zorunlu: nesnenin arka yüzü de çizilir.
 
 **Stüdyo**
-Köşeden görülen bir iç mekân: en az 4 mobilya, 2 figür, 1 tekrar eden eleman dizisi.
+1. **Bir küp, dokuz konum:** üç yükseklik (üst / hiza / alt) × üç yan konum (sol / karşı / sağ). Tek sayfada, hepsi şeffaf.
+2. Aynı egzersiz silindirle: elipsin açıklığının değişimi.
+3. **Kesişen hacimler:** silindir + küp, küre + prizma; arakesit çizgisini bulmak.
+4. Gerçek model: masaya bir kutu konur; öğrenciler sırayla ayağa kalkıp çömelerek aynı kutuyu üç yükseklikten çizer.
 
-**Ödev 4 — "Kendi Odam":** Öğrencinin kendi odası, iki farklı göz seviyesi ve iki farklı köşeden, serbest elle, 2 adet A3. Ölçüler kaba olarak yerinde alınır ve çizim kenarına not edilir. (Gözlem + kurgu + ölçek bilincini birlikte sınar.)
+**Grup atölyesi — Kadavra Enfes Kesit** *(bkz. atölye A7)*: Uzun bir şerit düşey beş banda ayrılır (bodrum · zemin · birinci kat · çatı arası · gökyüzü) ve her öğrenci yalnızca kendi bandını çizer. **Bu haftaya bağlanışı şu:** her bant farklı bir göz hizasından görülür. Aynı zamanda finalin katman mantığının ilk provasıdır.
+
+**Ödev 4 — "Bir küp, on iki göz hizası":** Tek bir küp, on iki farklı göz hizası ve açıdan, A3 tek sayfada, hepsi şeffaf. Yanına her birinin göz hizası bir ok ile not edilir.
 
 ---
 
-### HAFTA 10 — Işık ve Değer: Hatching ve Gölgelendirme
+### HAFTA 9 — Tarama: Çizgiyle Ton Üretmek
 
-**Amaç:** Çizgiden tona geçiş; hacmi ışıkla inandırmak.
+**Amaç:** Çizgiden tona geçiş. Bu hafta ışığı değil, **tekniği** çalışıyoruz: elde denetimli bir ton aralığı üretme becerisi.
+
+**Anlatım (30 dk)**
+- **Ton yoğunluğu üç değişkenin çarpımıdır:** çizgi aralığı × çizgi ağırlığı × kesişme sayısı. Kalemi bastırmak tek yol değildir — çoğu zaman en kötü yoldur.
+- **Teknikler ve karakterleri:**
+  - **paralel tarama** — sakin, yönlü, en denetimli
+  - **çapraz tarama (cross-hatching)** — mimari okunur, koyuya en hızlı çıkan
+  - **kontur taraması** — biçimi takip eder; iç mimarlıkta en işe yarayanı, çünkü tarama yönü yüzeyin yönünü anlatır
+  - **noktalama (stippling)** — atmosferik, yavaş, çok sabırlı
+  - **karalama (scumbling)** — dokusal, düzensiz
+  - **sürtme/dağıtma** — yumuşak ama kolayca kirlenir
+- Aynı ton, farklı tarama = farklı yüzey okuması. *(Malzeme ayrı bir hafta değil; buradaki tek cümle yeterlidir.)*
+
+**Stüdyo**
+1. **Dokuz adımlı ton skalası, beş teknikle beş kez.** Bu tek sayfa dönemin en çok kullanılan referansı olur ve Vize 2'ye girer.
+2. **Tek teknikle tam aralık:** yalnızca paralel tarama kullanarak 1'den 9'a çıkmak. Bastırmak yasak — sadece aralık ve kesişme.
+3. Buruşuk beyaz kâğıt etüdü: **kontur çizgisi kullanmadan**, yalnızca tonla biçim kurmak.
+4. **Kısıt destesi** *(A4)*: "sadece 3 ton", "sadece dikey çizgi", "silgi yok" kartlarıyla aynı nesne.
+5. **Sessiz kritik** *(A11)*: skalalar asılır, konuşulmaz, yapışkan notlarla değerlendirilir.
+
+**Opsiyonel açılış — Frotaj havuzu** *(A8, 20 dk)*: gerçek yüzeylerden alınan izler, kalemle taklit edilerek taramaya çevrilir. Dokunun "desen" değil **yapı** olduğunu gösterir.
+
+---
+
+### HAFTA 10 — Işık ve Gölge
+
+**Amaç:** Geçen haftanın tekniğini bir **ışık mantığına** bağlamak. Tarama artık süsleme değil, ışığın kaydı.
 
 **Anlatım (35 dk)**
-- **Değer skalası:** 9 adımlı gri skala. Öğrencilerin çoğu 3 tonla çizer; 7 tona çıkmak tek başına ciddi bir sıçramadır.
-- **Işığın anatomisi:** ışık alan yüzey → yarı ton → terminatör (en koyu şerit) → yansıyan ışık → çekirdek gölge → düşen gölge. Düşen gölgenin biçimi, ışığın konumu ve yüzeyin geometrisiyle kurulur.
-- **Teknikler:** paralel tarama (hatching), çapraz tarama (cross-hatching), **kontur taraması (contour hatching — formu takip eden tarama; iç mimarlıkta en işe yarayanı)**, noktalama (stippling), karalama (scumbling), sürtme/dağıtma (blending).
-- Teknik seçiminin anlamı: cross-hatching mimari, contour hatching organik, stippling atmosferik okunur.
+- **Işığın anatomisi:** ışık alan yüzey → yarı ton → **terminatör** (en koyu şerit) → yansıyan ışık → çekirdek gölge → **düşen gölge**.
+- **Düşen gölgenin geometrisi:** biçimi, ışığın konumu ve üzerine düştüğü yüzeyin geometrisiyle kurulur. Gölge nesneye değil, yüzeye aittir.
+- **Temas gölgesi:** nesnenin zemine değdiği yer her zaman en koyu noktadır. Tek başına bu ayrıntı, çizimi kâğıttan koparıp yere oturtur.
+- **Atmosferik (havai) perspektif:** uzaklaştıkça kontrast düşer, ton aralığı daralır. **Bu, finalin doğrudan hazırlığıdır** — diyoramada katmanların değer kademelenmesi tam olarak bu kurala dayanır.
 
 **Stüdyo**
-1. 9 adımlı ton skalası — beş farklı teknikle beş kez (bu tek sayfa dönemin en çok kullanılan referansı olur)
-2. Tek ışık kaynağı (yönlü lamba) altında küre, silindir, küp: form gölgesi + düşen gölge
-3. Buruşuk beyaz kâğıt etüdü: yalnızca tonla biçim kurmak, kontur çizgisi kullanmadan
-4. Hafta 6'daki mikro mekân çizimi ışıklandırılır
+1. Tek yönlü ışık (yönlü lamba) altında küre, silindir, küp: form gölgesi + düşen gölge + temas gölgesi.
+2. **Aynı natürmort, üç ışık yönü:** yandan, üstten, arkadan. Aynı nesne üç farklı nesne gibi görünür.
+3. **Kontrast kademelenmesi etüdü:** üç nesne ön–orta–arka dizilir; ön nesne tam aralıkla, arkadaki dar aralıkla çizilir. Diyoramanın provası.
+4. 6. haftanın mikro mekânı ışıklandırılır.
+
+**Ödev 5 — "Bir nesne, üç ışık":** Tek bir nesne, üç farklı ışık yönüyle üç kez. Her çizimin kenarına ışık kaynağının konumu bir diyagramla not edilir.
 
 ---
 
-### HAFTA 11 — Malzeme ve Doku: İç Mekânın Yüzeyi
+### HAFTA 11 — Etüd Haftası: Yerinde Çizim + VİZE 2 Teslimi
 
-**Amaç:** İç mimarın mesleki dağarcığını kurmak. Bu hafta doğrudan meslek pratiğine bağlanır.
+**Amaç:** Stüdyodan çıkmak — ve finalin mekânını bulmak. Bu haftada çizdiğiniz mekân, diyoramanızın orta ve arka katmanları olacak.
 
-**Anlatım (25 dk)**
-- Malzemenin üç değişkeni: **yansıtıcılık** (mat ↔ parlak), **saydamlık** (opak ↔ şeffaf), **yüzey dokusu** (düz ↔ pürüzlü)
-- Cam nasıl çizilir: cam çizilmez, camın *arkası* ve *yansıması* çizilir
-- Metal: sert kontrast, keskin ton geçişi. Mat yüzey: yumuşak geçiş, dar ton aralığı.
-- Ahşap damarı perspektife uyar; mermer damarı rastlantısaldır ama yönlüdür
-- Tekstil: kıvrım = ışık–gölge ritmi
-
-**Stüdyo — Malzeme Kütüphanesi**
-5×5 cm'lik karelerden oluşan bir panel: ahşap (damarlı/lamine), mermer, beton, tuğla, cam, ayna, fırçalanmış metal, krom, halı, keten, deri, bitki yaprağı. **Bu panel öğrencinin dönem boyunca ve sonraki stüdyo derslerinde kullanacağı kişisel referans kütüphanesidir.**
-
-**Grup atölyesi — Frotaj havuzu:** Herkes binadan ve çevresinden beş yüzeyin frotajını alır; izler sınıf duvarında ortak bir havuz oluşturur ve kalemle taklit edilerek çizime çevrilir. Ayrıntı için atölye bankası A8.
-
-**Ödev 5 — "Aynı sandalye, dört malzeme":** Hafta 4'ün sandalyesi ahşap, krom, saydam pleksi ve döşemeli olarak dört kez çizilir. Biçim sabit, malzeme değişken.
-
-### ⟶ VİZE 2 TESLİMİ — "Mekân Dosyası" *(hafta 11 sonunda asma-teslim)*
-
-Yine sınav yok; asma-teslim ve 5 dakikalık masa savunması. Öğrenci hafta 8'de seçtiği gerçek iç mekânı altı paftada çözümler: üç göz seviyesi · iki kaçış noktalı köşe perspektifi · kadavra enfes kesit ve bireysel bant değerlendirmesi · günün iki saatinde ışık etüdü · atmosferik perspektif kontrast kademelenmesi · malzeme kütüphanesi. Stüdyo mührü kuralı burada da geçerlidir.
-
----
-
-### HAFTA 12 — Etüd Haftası: Yerinde Çizim ve Grup Çalışması
-
-**Amaç:** Stüdyodan çıkmak. Kontrolsüz ışık, hareket eden insanlar, sınırlı zaman — gerçek koşullarda çizim.
-
-**Mekân önerileri:** tarihi bir han veya pasaj, kütüphane okuma salonu, bir kafe iç mekânı, tren/otobüs terminali, cami veya kilise iç mekânı, alışveriş merkezi atriyumu. Ölçüt: **katmanlı, insanlı, ışığı ilginç** olması.
+**Mekân önerileri:** tarihi han veya pasaj, kütüphane okuma salonu, kafe iç mekânı, terminal, cami veya kilise iç mekânı, AVM atriyumu. Ölçüt: **katmanlı, insanlı, ışığı ilginç** olması. Katmanlılık artık bir tercih değil, şart — çünkü final onu istiyor.
 
 **Yerinde çizim protokolü**
-- **5 dakika kuralı:** Önce oturup sadece bakmak. Kalem yok.
-- Hızlı eskiz kademeleri: 5 dk (kompozisyon) → 10 dk (yapı) → 20 dk (ton) → 30 dk (bütün)
-- **Açıklamalı eskiz (annotated sketch):** Çizim + el yazısı not + ok + ölçü birlikte. Bu, mesleki saha defterinin gerçek dilidir.
-- Sayfa kompozisyonu: kenar boşluğu, sayfa içinde birden çok ölçekte çizim
+- **5 dakika kuralı:** önce oturup sadece bakmak (4. haftanın görme yürüyüşünün kısaltılmış hâli)
+- Kademeler: 5 dk kompozisyon → 10 dk yapı → 20 dk ton → 30 dk bütün
+- **Açıklamalı eskiz:** çizim + el yazısı not + ok + ölçü birlikte
+- **Katman avı:** mekânı ön / orta / arka olarak ayırıp her birini ayrı bir sayfada çizmek
 
-**Grup çalışması — Katmanlı Belgeleme (4 kişilik ekipler)**
-Aynı mekân, dört farklı katman olarak çizilir ve sonra üst üste okunur:
-1. **Kabuk:** mekânın geometrisi, kütle–boşluk
-2. **Işık:** yalnızca ışık ve gölge lekeleri, çizgi yok
-3. **Doku ve malzeme:** yüzey haritası
-4. **Yaşam:** insan hareketi, sirkülasyon, oturma–durma noktaları, sesin haritası (hafta 3'ün notasyonu buraya geri döner)
+**Grup çalışması — Katmanlı belgeleme (3–4 kişi).** Aynı mekân üç katman olarak çizilir ve üst üste okunur: **kabuk** (geometri, kütle–boşluk) · **ışık** (yalnızca lekeler, çizgi yok) · **yaşam** (sirkülasyon, oturma–durma noktaları, sesin haritası). Not hem ortak paftaya hem bireysel katmana verilir.
 
-Ekip, dört katmanı tek bir A1 paftada birleştirip 5 dakikada sunar. **Değerlendirme hem ortak paftaya hem bireysel katmana verilir** (grup çalışmasında "bedavacılık" sorununu engeller).
+**Grup atölyesi — Duyusal Çeviri** *(A9)*: eşlerden birinin gözleri bağlanır, mekânda 5 dakika dolaştırılır, sonra gözünü açmadan çizer. Ölçü olarak yanlış ama atmosfer olarak doğru çıkan bu çizim, finalin kutusunda aranan şeyi tarif eder.
+
+### ⟶ VİZE 2 TESLİMİ — "Hacim ve Işık Dosyası" *(hafta 11 sonunda asma-teslim)*
+
+Sınav yok; asma-teslim ve 5 dakikalık masa savunması. Modül C'nin ürünü, altı pafta:
+
+| Pafta | İçerik | Hafta |
+|---|---|---|
+| 1 | **Bir küp, dokuz konum** — üç yükseklik × üç yan konum, hepsi şeffaf | 8 |
+| 2 | **Kesişen hacimler** — arakesit çizgileriyle, şeffaf | 8 |
+| 3 | **Tarama kütüphanesi** — dokuz adımlı ton skalası, beş teknikle | 9 |
+| 4 | **Işık etüdü** — tek kaynak altında küre/silindir/küp; terminatör, yansıyan ışık, temas gölgesi işaretli | 10 |
+| 5 | **Kontrast kademelenmesi** — ön/orta/arka üç nesne, daralan ton aralığı | 10 |
+| 6 | **Saha eskizleri** — diyoramanın mekânı; katman avı sayfaları | 11 |
+
+**Kapak sayfası:** "Bu mekânı bir yabancıya tek çizimle anlatsam hangisini gösterirdim?" — bir çizim seçilir, 200 kelimeyle gerekçelendirilir. Stüdyo mührü kuralı burada da geçerlidir.
 
 ---
 
-### HAFTA 13 — Katman Stüdyosu: Analiz, Prova, Işık
+### HAFTA 12 — Obje Günü: Yalnızca Gördüğünüz Açıdan
 
-**Amaç:** Mekânı katmanlarına sökmek ve finalin kutusunu prova etmek. Analitik çizim bu hafta ayrı bir konu değil, katmanlaştırmanın kendisidir — bir mekânı ön plan / orta plan / arka plana ayırmak, onu çözümlemektir.
+**Amaç:** Dönemin tüm araçlarını **tek bir nesne** üzerinde, **tek bir sabit bakış açısından** kullanmak.
 
-**Anlatım**
-- Goldschmidt: eskiz diyalektik bir süreçtir; çizen, çizdiğine bakarak yeni şeyler görür ve yeterli tutarlılığa ulaşınca durur. Belirsizlik alternatif üretiminin motorudur.
-- Katman mantığı: neyi öne alırsan onu önemli ilan etmiş olursun. Katman kararı bir **anlam kararıdır.**
-- Havai (atmosferik) perspektifin fiziksel karşılığı: ön katman geniş ton aralığı ve keskin kontrast, arka katman dar aralık ve soluk kontrast. Bu kademelenme bozulursa derinlik çöker.
+Bu hafta 4. haftanın tekrarı değildir. 4. hafta *görme yöntemlerini* öğretiyordu — kısa, çok denemeli, ölçüsüz. Bu hafta **tek oturuşta uzun bir etüddür**: ölçülü, tam tonlu, bitmiş.
+
+> **Ve bir işi daha var:** Diyoramanın **ön katmanı bir nesnedir.** Bugün çizdiğiniz nesne, finalin en öndeki katmanı olabilir. Bu hafta ile 13. hafta arasındaki bağ budur.
+
+**Nesneyi hoca getirir.** Seçim ölçütleri:
+- **Karmaşık ama tek parça** — söküp basitleştirilemeyen
+- **Farklı yüzeyler taşıyan** — mat, parlak, delikli, dokulu
+- **Işığı ilginç kıran** — içine giren, yansıtan, gölge deseni üreten
+- **En önemlisi: adını bilmediğiniz bir şey.** Öğrencinin şeması olmayan bir nesne, gözlemi zorunlu kılar. Bu, 4. haftada anlattığımız şema sorununun panzehiridir.
+
+**İyi nesne örnekleri:** eski bir daktilo, gramofon hunisi, bükülmüş metal iskemle, ahşap mengene, kuş kafesi, ezilmiş teneke, kurumuş bir bitki, el mikseri, bir motor parçası, deniz kabuğu, eski bir terazi, bir makara düzeneği.
+
+**Kural:** Nesne **yerinden oynatılmaz** ve öğrenci **yerini değiştirmez.** Herkes yalnızca kendi açısından gördüğünü çizer. Yandaki arkadaşınızın gördüğü şeyi çizmek serbest değildir — çünkü siz onu görmüyorsunuz.
 
 **Stüdyo**
-- **Hafıza–gözlem karşılaştırması:** 12. haftada sahada çizilen mekân, bu hafta hiçbir görsele bakmadan yeniden çizilir. İki çizim yan yana konur. *Hafızada kalan şey ön katmana gider* — katman kararının gerekçesi budur.
-- **12'li varyasyon matrisi:** Kutunun katman dizilimi için 12 alternatif, her biri 3 dakikada, tek sayfada.
-- **Çizimden kesime çeviri:** Her katmanın elle çizilmiş hâli kesilecek silüete dönüştürülür. Hangi çizgi kesim hattı, hangisi iç detay? Bu ayrım bir temsil kararıdır.
-- **Prova:** Katmanlar iyi kâğıda geçmeden önce ucuz kâğıtla birebir denenir; kanatlar takılır, açılıp kapatılır, cepheden bakılarak test edilir. **Değer kademelenmesi burada düzeltilir** — kesilmiş katmanda düzeltmek zordur. Maket bıçağı güvenlik brifingi ve kesim altlığı zorunlu.
-- Masa kritiği: her öğrencinin kutusu delikten bakılarak kritik edilir.
+1. **Yerleşim:** nesne merkezî bir masaya konur, sınıf çevresine halka olur. Kalabalık sınıfta 4–6 nesneli birkaç ada kurulur.
+2. **Kuruluş (20 dk):** dış zarf, ana eksenler, oran — 5. haftanın ölçme yöntemiyle.
+3. **Uzun etüd (90–110 dk):** tam tonlu, 9. haftanın tarama teknikleriyle, 10. haftanın ışık mantığıyla. Tek ve sabit bir ışık kaynağı kurulur ve ders boyunca değiştirilmez.
+4. **Ara mola disiplini:** molalardan sonra herkes **aynı yerine** oturur.
+
+**Grup atölyesi — Nesnenin Etrafında Sınıf** *(A12)*: Ders sonunda çizimler **oturma sırasına göre** duvara asılır. Halka açıldığında nesne odanın etrafında döner: aynı nesnenin 25 farklı doğrusu, yan yana. Tek bir bakışta hem "gördüğünü çizmek"in ne demek olduğu hem de perspektifin neden tek göz varsaydığı görülür.
+
+**Teslim:** Obje etüdü, imzalı ve mühürlü, final dosyasına girer.
+
+---
+
+### HAFTA 13 — Katman Stüdyosu: Diyoramanın Kurgulanması
+
+**Amaç:** 11. haftanın mekânını ve 12. haftanın nesnesini katmanlara ayırmak; diyoramayı kâğıt üzerinde kurup prova etmek.
+
+**Anlatım (30 dk)**
+- **Katman kararı bir anlam kararıdır:** neyi öne alırsan onu önemli ilan etmiş olursun.
+- Katman dizilimi: **ön = nesne** (12. hafta) · **orta = mekânın kabuğu** (11. hafta) · **arka = dışarısı**, bir pencere veya kapı aralığı; gökyüzü ancak oradan görünür.
+- **Değer sistemi seçimi** — finalin asıl kavramsal kararı: **(A) mesafe mantığı** (havai perspektif; ön koyudan arkaya kesintisiz açılır) veya **(B) grafik mantık** (notan/silüet; komşu katmanlar açık–koyu alternatif). İkisi de doğrudur; karıştırılması yanlıştır.
+- Goldschmidt: eskiz diyalektiktir — çizen, çizdiğine bakarak yeni şeyler görür.
+
+**Stüdyo**
+1. **12'li varyasyon matrisi:** katman dizilimi için 12 alternatif, her biri 3 dakikada, tek sayfada.
+2. **Çizimden kesime çeviri:** her katmanın elle çizilmiş hâli kesilecek silüete dönüştürülür. Hangi çizgi kesim hattı, hangisi iç detay? Bu ayrım bir temsil kararıdır.
+3. **Değer skalası paftası:** seçilen sistem, 9 adımlı skala, her katmanın skaladaki yeri.
+4. **Prova:** ucuz kâğıtla birebir deneme. Kanatlar takılır, açılıp kapatılır, cepheden bakılarak test edilir. **Değer kademelenmesi burada düzeltilir** — kesilmiş katmanda düzeltmek zordur.
+5. Güvenlik: maket bıçağı brifingi ve kesim altlığı zorunlu.
 
 ---
 
@@ -355,11 +415,11 @@ Ekip, dört katmanı tek bir A1 paftada birleştirip 5 dakikada sunar. **Değerl
 
 **Program:** 20 dk açılış · 60 dk sessiz gezinti · 45 dk üçer dakikalık öğrenci konuşmaları · 30 dk kapanış ve kartların toplanması.
 
-**Ziyaretçi kartı — serginin ölçme aracı.** Her ziyaretçi, her kutu için tek soruyu yanıtlar: *"Bu mekânda kendinizi nasıl hissettiniz?"* — hafta 2'nin 12 duygusundan biri işaretlenir. Öğrencinin hedeflediği atmosfer künyede yazmaz, kapalı zarfta hocadadır. Sergi sonunda hedeflenen ile algılanan karşılaştırılır. **Bu, dönemin ilk sorusunun mekân ölçeğinde tekrarıdır.**
+**Ziyaretçi kartı — serginin ölçme aracı.** Her ziyaretçi, her iş için tek soruyu yanıtlar: *"Bu mekânda kendinizi nasıl hissettiniz?"* — hafta 2'nin 12 duygusundan biri işaretlenir. Öğrencinin hedeflediği atmosfer künyede yazmaz, kapalı zarfta hocadadır. Sergi sonunda hedeflenen ile algılanan karşılaştırılır. **Bu, dönemin ilk sorusunun mekân ölçeğinde tekrarıdır.**
 
-**Dış değerlendiriciler:** Bölüm dışından üç davetli (mimarlık, endüstriyel tasarım, psikoloji) rubrikle ayrıca puanlar. Hem notun güvenilirliğini artırır hem de araştırma için değerlendiriciler arası uyum verisi üretir.
+**Dış değerlendiriciler:** Bölüm dışından üç davetli (mimarlık, endüstriyel tasarım, psikoloji) rubrikle ayrıca puanlar.
 
-**Teşhis çizimi — son test:** Sergi kurulmadan önce, 1. haftanın görevi birebir tekrarlanır (kendi el + sandalye, 20 dk). Ardından hoca ilk hafta çizimlerini dağıtır; ikisi yan yana final dosyasının ilk sayfası olur.
+**Teşhis çizimi — son test:** Sergi kurulmadan önce 1. haftanın görevi birebir tekrarlanır (kendi el + sandalye, 20 dk). Ardından hoca ilk hafta çizimlerini dağıtır; ikisi yan yana final dosyasının ilk sayfası olur.
 
 ---
 
@@ -371,11 +431,11 @@ Katlanınca düz duran, açılınca derinleşen, kesilmiş kâğıt katmanlardan
 - Dış ölçü 25 × 25 cm – 30 × 24 cm · **5–7 katman** + ön çerçeve + fon paneli · katmanlar arası 3–8 mm köpüklü bant · açıkken derinlik 6–12 cm, katlanınca düz
 - Kâğıt 160–200 gsm fon kartonu; maket bıçağıyla kesim
 - **Renk: tek bir renk ailesi, en az 5 değer** — monokrom zorunlu; dersin konusu renk değil değer
-- Konu: öğrencinin 12. haftada sahada çizdiği gerçek iç mekân
+- Konu: öğrencinin **11. haftada sahada çizdiği gerçek iç mekân**; **ön katman ise 12. haftanın obje etüdünden gelir**
 
 **İki kesin kural**
 1. **Her katman önce elle çizilir; kesim, çizimin türevidir.** Çizim paftaları teslimin zorunlu parçasıdır. Hazır şablon, indirilmiş SVG, plotter ve Cricut kesimi yasaktır — bu kural olmadan final bir el işi ödevine dönüşür.
-2. **Manzara değil, mekân.** Silüetler saha defterinden türetilir; gökyüzü ancak bir pencereden görünürse girer.
+2. **Manzara değil, mekân.** Silüetler 11. haftanın saha defterinden, ön katman 12. haftanın obje etüdünden türetilir; gökyüzü ancak bir pencereden görünürse girer.
 
 **Finalin asıl kavramsal kararı — değer sistemi.** İki meşru sistem vardır ve öğrenci bilinçli olarak birini seçip savunur: **(A) Mesafe mantığı** — havai perspektif; ön koyudan arkaya kesintisiz açılır, silüetler arkaya doğru erir. **(B) Grafik mantık** — notan/silüet; komşu katmanlar açık–koyu alternatif dizilir, her kenar sonuna kadar okunur. İkisi de doğrudur; karıştırılması yanlıştır. Arka katman ışık kaynağının kendisiyse (pencere, kapı aralığı) sistem doğal olarak arkaya açılır — bu B'nin fiziksel gerekçeli hâlidir ve iç mekân için en güçlü kurgudur.
 
@@ -421,7 +481,7 @@ Rubrik **1. hafta öğrencilere dağıtılır.** Literatür, rubriğin erken pay
 |---|---|---|---|---|
 | **A. Gözlem ve doğruluk**<br>(oran, ölçü, eksen, yapı) | Oranlar tutarlı; hatalar bilinçli tercih düzeyinde; kendi sapmasını tespit edip düzeltiyor | Genel kuruluş doğru; küçük sapmalar var ama bütünü bozmuyor | Belirgin oran hataları; ölçme yöntemi kısmen uygulanmış | Sembolik/ezber çizim; gözleme dayanmıyor |
 | **B. Çizgi kalitesi ve el kontrolü** | Çizgi kararlı, hiyerarşik, amaçlı; basınç ve ağırlık bilinçli | Çizgi genel olarak kontrollü; hiyerarşi kısmen kurulmuş | Tereddütlü, tüylü çizgi; tek ağırlıkta | Kontrolsüz; kalem tutuş ve hareket alışkanlığı oturmamış |
-| **C. Hacim, ışık ve malzeme temsili** | İnandırıcı hacim; 6+ ton; malzeme ayırt edilebilir; ışık mantığı tutarlı | Hacim okunuyor; 4–5 ton; malzeme kısmen ayrışıyor | Düz, yassı; 2–3 ton; teknik uygulanmış ama form kurmuyor | Ton yok veya rastgele; ışık kaynağı belirsiz |
+| **C. Hacim, ton ve ışık** | İnandırıcı hacim; 6+ ton; tarama biçimi takip ediyor; ışık mantığı tutarlı | Hacim okunuyor; 4–5 ton; tarama denetimli | Düz, yassı; 2–3 ton; teknik uygulanmış ama form kurmuyor | Ton yok veya rastgele; ışık kaynağı belirsiz |
 | **D. Kavramsal karar ve anlatı**<br>(soyutlama, eşleme sistemi, kompozisyon) | Tutarlı ve gerekçelendirilmiş bir sistem kurmuş; pafta okunma sırası bilinçli | Sistem var, kısmen tutarlı; kompozisyon dengeli | Sistem zayıf veya rastlantısal; kompozisyon düzeltilmiş değil | Karar yok; ödev tamamlama düzeyinde |
 | **E. Süreç, süreklilik ve öz-yansıma** | Defter düzenli ve yoğun; çok deneme; kritiği somut olarak işlemiş; öz-değerlendirme kanıta dayalı | Defter düzenli; kritik kısmen uygulanmış | Defter aksamalı; denemeler yüzeysel | Defter yok/eksik; süreç izlenemiyor |
 

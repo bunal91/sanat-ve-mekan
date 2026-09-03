@@ -5,6 +5,9 @@
 
 ## 0. NE DEĞİŞTİ
 
+> **v3 güncellemesi.** Perspektif dersiyle çakışma nedeniyle perspektif kurgusu haftaları kaldırıldı (yerine hacimlerin göz hizasına göre çizimi), malzeme/doku haftası çıkarıldı (tarama ve ışık–gölge ayrı haftalara ayrıldı), 12. hafta tek bir nesnenin uzun gözlem etüdüne ayrıldı ve 4. haftaya sınıfça yapılan bir **görme yürüyüşü** eklendi. Atölye bankası 12 atölyeye çıktı.
+
+
 | Konu | Önceki | Yeni |
 |---|---|---|
 | Ölçme biçimi | Hafta 7'de 3 saatlik uygulama sınavı | **Sınav yok.** İki teslim dosyası + bir final ürünü |
@@ -50,7 +53,7 @@ Lejantın işe yarayıp yaramadığı burada anlaşılır. Ders yılının en y�
 
 ---
 
-## A4 · Kısıt Destesi — *hafta 4 ve 10* — bireysel, sonra karşılaştırmalı
+## A4 · Kısıt Destesi — *hafta 9* — bireysel, sonra karşılaştırmalı
 Bir deste kart hazırlanır; her kartta tek bir kısıt:
 
 > *Kalemi kaldırma · Sadece 3 ton · Yalnızca negatif alan · 20 saniye · Kâğıda bakma · Sol elle · Sadece dikey çizgi · Silgi yok · Tek bir kesintisiz kontur · Nesneyi sadece gölgesinden çiz*
@@ -86,27 +89,27 @@ Kurallar: her nitelik tek bir grafik işaretle karşılanacak; işaretler birbir
 
 ---
 
-## A7 · Kadavra Enfes Kesit — *hafta 9* — **grup**
+## A7 · Kadavra Enfes Kesit — *hafta 8* — **grup**
 Sürrealistlerin katlanmış kâğıt oyununun mekânsal versiyonu.
 
 Uzun bir kâğıt şeridi düşey olarak beş bölüme ayrılır: **bodrum · zemin · birinci kat · çatı arası · gökyüzü.** Beş kişilik grupta herkes yalnızca kendi bandını çizer; sadece bir öncekinin **bant sınırındaki üç referans çizgisini** görür. Kâğıt katlanır, sıra ilerler.
 
 Sonunda açılır: tutarsız ama şaşırtıcı bir kesit çıkar. Tartışma "hangi bant komşusuyla konuşabilmiş?" üzerinden yürür — yani **süreklilik, hiza ve ölçek** üzerinden.
 
-**Bu atölye finalin provasıdır:** katmanların ayrı ayrı üretilip birlikte okunması meselesi burada ilk kez ortaya çıkar.
+**Haftaya bağlanışı:** her bant farklı bir göz hizasından görülür — 8. haftanın konusu tam olarak budur. **Aynı zamanda finalin provasıdır:** katmanların ayrı ayrı üretilip birlikte okunması meselesi burada ilk kez ortaya çıkar.
 
 ---
 
-## A8 · Frotaj Havuzu — *hafta 11* — **grup**
+## A8 · Frotaj Havuzu — *hafta 9, opsiyonel* — **grup**
 Her öğrenci binadan ve çevresinden **beş farklı yüzeyin frotajını** (kâğıdı yüzeye koyup kalemle sürterek iz alma — Max Ernst'in yöntemi) alır: beton, ahşap damarı, mozaik, kanal kapağı, ağaç kabuğu, tuğla derzi.
 
 Bütün frotajlar sınıf duvarında ortak bir havuz oluşturur. Öğrenci sonra bu izleri **kalemle taklit etmeye** çalışır: gerçek dokudan çizilmiş dokuya çeviri.
 
-Malzeme kütüphanesi (hafta 11 ödevi) bu havuzdan beslenir. Gerçek yüzeyle temas, dokunun "desen" değil "yapı" olduğunu öğretir.
+Malzeme artık ayrı bir hafta değil; bu atölye **tarama haftasının 20 dakikalık opsiyonel açılışıdır.** Gerçek yüzeyle temas, dokunun "desen" değil **yapı** olduğunu ve taramanın yönünün yüzeyin yönünü anlattığını gösterir.
 
 ---
 
-## A9 · Duyusal Çeviri — *hafta 12* — **grup** — *sahada*
+## A9 · Duyusal Çeviri — *hafta 11* — **grup** — *sahada*
 Pallasmaa'nın *Tenin Gözleri*'ne doğrudan bağlanan bir egzersiz.
 
 Sahada eşler oluşturulur. Bir öğrencinin **gözleri bağlanır** ve eşi tarafından mekân içinde 5 dakika dolaştırılır (güvenlik: kolundan tutarak, duraklarda durarak). Gören eş konuşmaz. Sonra gözü bağlı olan öğrenci gözlerini açmadan mekânı çizer.
@@ -117,22 +120,50 @@ Ardından roller değişir. Son aşamada iki çizim, mekânın "normal" gözlem 
 
 ---
 
-## A10 · Hafıza ve Gözlem — *hafta 12 → 13* — bireysel
-Sahada çizim yapılır (gözlem). **Bir hafta sonra, hiçbir görsele bakmadan aynı mekân yeniden çizilir** (hafıza). İki çizim yan yana konur.
+## A10 · Görme Yürüyüşü — *hafta 4* — **sınıfça, dışarıda**
+**Soru:** Bakmak çizmenin neresinde?
 
-Hafızanın neyi tuttuğu ve neyi attığı, bir mekânda gerçekten "önemli" olanın ne olduğunu gösterir — ve bu, kutunun katman kararlarının gerekçesidir. **Hafızada kalan şey ön katmana gider.**
+Dersin en önemli tek dersini veriyor: **çizim, kalem kâğıda değmeden önce başlar.**
 
-> **Araştırma değeri: orta-yüksek.** Ölçülebilir: hafıza çiziminde korunan eleman oranı.
+Sınıf birlikte dışarı çıkar. Hedef: yürüme mesafesinde, karmaşık ama tek parça bir nesne — bir bank, bisiklet, merdiven korkuluğu, çeşme, ağaç kökü, kapı tokmağı, hidrant.
+
+| Aşama | Süre | Ne yapılır |
+|---|---|---|
+| **1 · Sadece bakmak** | 10 dk | **Defter ve kalem çantada kalır.** Hoca sesli sorar: *Kaç parçadan oluşuyor? Parçalar nerede birleşiyor? En koyu yeri neresi? Hangi çizgi en uzun? Neresi seni şaşırttı?* Kimse yanıt vermez, herkes bakar. |
+| **2 · Hafızadan çizim** | 15 dk | Sınıfa dönülür veya nesneye sırt dönülür. **Bakmadan** çizilir. |
+| **3 · Gözlemle çizim** | 25 dk | Nesnenin başına dönülür, bakarak çizilir. |
+| **4 · Karşılaştırma** | 15 dk | İki çizim yan yana. *Hafıza neyi tuttu, neyi attı?* |
+
+**Bulgu her zaman aynıdır ve öğretici olan da budur:** hafıza çizimi **şemayı** tutar — parça sayısı, adlandırılabilir kısımlar, simetri. Gözlem çizimi şemanın olmadığı yerleri getirir: kaynak izleri, eğrilikler, orantısızlıklar, ezikler.
+
+> **Çıkarım:** Bakmak, çizmenin bir parçasıdır — hazırlığı değil. On dakika bakmadan başlanan çizim, hafızadan yapılmış bir çizimdir.
+
+**Uygulama notları:** Yağmur ihtimaline karşı iç mekân yedeği belirleyin (fakülte lobisinde bir nesne). Nesneyi derse gelmeden seçin ve kendiniz on dakika bakın — sorularınız oradan çıkacak. Hafıza çizimleri toplanıp saklanır.
+
+> **Araştırma değeri: yüksek.** Hafızada korunan eleman oranı sayılabilir; ön test–son test tasarımına doğal bir ek değişken.
 
 ---
 
-## A11 · Sessiz Kritik — *hafta 9 ve 11* — **grup**
+## A11 · Sessiz Kritik — *hafta 9 ve 12* — **grup**
 İşler asılır. **Kimse konuşmaz.** 15 dakika boyunca herkes dolaşır ve üç yapışkan not bırakır:
 - Yeşil: "burası çalışıyor"
 - Sarı: "burada bir soru var"
 - Mavi: "bunu ben de denemek isterdim"
 
 Sözlü kritikte konuşmayan öğrenciler burada konuşur. Ayrıca öğrenci kendi işinin üzerinde **notların nereye toplandığını** görür — bu, sözlü bir yorumdan daha nettir.
+
+---
+
+## A12 · Nesnenin Etrafında Sınıf — *hafta 12* — **grup**
+**Soru:** "Gördüğünü çiz" ne demek?
+
+12. haftanın obje etüdü bitince çizimler **oturma sırasına göre** duvara asılır. Halka açıldığında nesne odanın etrafında döner: aynı nesnenin yirmi beş farklı doğrusu, yan yana.
+
+Tek bir bakışta iki şey görülür:
+- **Hiçbiri yanlış değil.** Herkes gördüğünü çizmiş; farklar bakış açısından geliyor.
+- **Perspektif neden tek göz varsayar?** Cevap duvarda duruyor. Bu, finalin tek sabit bakış açılı kutusunun da gerekçesi.
+
+**Uygulama:** Asma sırasını bozmayın — sıra bozulursa etki kaybolur. Yere oturma düzeninin bir krokisini çizip duvara iliştirin.
 
 ---
 
@@ -183,7 +214,7 @@ Modül A ve B'nin ürünü. Öğrencinin kendi grafik dağarcığını katalogla
 | 1 | **Kişisel çizgi kataloğu** — kendi ürettiği en az 40 çizgi türü, adlandırılmış ve sınıflandırılmış | 1 |
 | 2 | **Duygu matrisi** (12 kare) + kör eşleştirme sonuçları + 150 kelimelik yorum | 2 |
 | 3 | **Grafik partisyon** + lejant + icra notu | 3 |
-| 4 | **Gözlem etüdleri** — aynı nesne, beş yöntem (kör kontur, modifiye kontur, jest, negatif alan, sentez) | 4 |
+| 4 | **Görme yürüyüşü** — hafıza çizimi ve gözlem çizimi yan yana + kör kontur, jest, negatif alan etüdleri | 4 |
 | 5 | **Ölçü–oran analizi** — kuruluş + fotoğraf bindirmesi + sapma notları | 5 |
 | 6 | **Hacim inşası** — şeffaf katılar, kesişimler, mikro mekân | 6 |
 
@@ -191,26 +222,24 @@ Modül A ve B'nin ürünü. Öğrencinin kendi grafik dağarcığını katalogla
 
 ---
 
-## II.4 VİZE 2 — "Mekân Dosyası" *(Hafta 11 teslim)*
+## II.4 VİZE 2 — "Hacim ve Işık Dosyası" *(Hafta 11 teslim)*
 
-Modül C'nin ürünü. Bir iç mekânın temsil araçlarıyla çözümlenmesi.
-
-Öğrenci hafta 8'de **gerçek bir iç mekân** seçer (kendi odası olabilir, ama tercihen değil). Aynı mekân dört farklı araçla ele alınır.
+Modül C'nin ürünü. Hacmin göz hizasına göre kurulması, tarama tekniği ve ışık mantığı.
 
 **Teslim: 6 pafta (A3) + defter + süreç dosyası**
 
 | Pafta | İçerik | Hafta |
 |---|---|---|
-| 1 | **Üç göz seviyesi** — aynı mekân, oturan (110 cm) / ayakta (160 cm) / çocuk (90 cm) perspektifi | 8 |
-| 2 | **İki kaçış noktalı köşe perspektifi** — en az 4 mobilya, 2 ölçek figürü, 1 tekrar dizisi | 9 |
-| 3 | **Kadavra enfes kesit** (grup çıktısı) + kendi bandının bireysel değerlendirmesi | 9 |
-| 4 | **Işık etüdü** — aynı görüş, günün iki farklı saatinde; 9 adımlı ton skalası ekli | 10 |
-| 5 | **Atmosferik perspektif etüdü** — ön/orta/arka plan kontrast kademelenmesi | 10 |
-| 6 | **Malzeme kütüphanesi** — 12 doku paneli + frotaj havuzundan üç çeviri | 11 |
+| 1 | **Bir küp, dokuz konum** — üç yükseklik (üst/hiza/alt) × üç yan konum, hepsi şeffaf, göz hizası okla işaretli | 8 |
+| 2 | **Kesişen hacimler** — silindir+küp, küre+prizma; arakesit çizgileri bulunmuş, şeffaf | 8 |
+| 3 | **Tarama kütüphanesi** — dokuz adımlı ton skalası, beş teknikle beş kez | 9 |
+| 4 | **Işık etüdü** — tek kaynak altında küre/silindir/küp; terminatör, yansıyan ışık ve temas gölgesi işaretli | 10 |
+| 5 | **Kontrast kademelenmesi** — ön/orta/arka üç nesne, arkaya doğru daralan ton aralığı | 10 |
+| 6 | **Saha eskizleri** — diyoramanın mekânı; katman avı sayfaları (ön/orta/arka ayrı ayrı) | 11 |
 
 **Kapak sayfası:** "Bu mekânı bir yabancıya tek çizimle anlatsam hangisini gösterirdim?" — bir çizim seçilir ve 200 kelimeyle gerekçelendirilir.
 
----
+> **Perspektif dersiyle iş bölümü.** Bu dosyada kaçış noktası kurgusu, ölçü çizgisi ve cetvelle çizilmiş perspektif **aranmaz** — onlar Perspektif dersinin konusudur. Burada aranan, aynı hacmin farklı göz hizalarından **cetvelsiz, gözle** inandırıcı biçimde kurulabilmesidir.
 
 ## II.5 Ağırlıklandırma
 
@@ -260,7 +289,7 @@ Samuel van Hoogstraten'in perspektif kutusu (1655–60, National Gallery NG3832,
 > Çizim paftaları teslimin zorunlu parçasıdır ve kesilen silüet o çizimle örtüşmek zorundadır. **Hazır şablon, indirilmiş SVG, plotter ve Cricut kesimi yasaktır.** Bu kural olmadan final bir el işi ödevine dönüşür.
 
 > **Kural 2 — Manzara değil, mekân.**
-> Dağ–orman sahnesi bu türün klasik ama jenerik konusudur. Bu derste konu, öğrencinin **12. haftada sahada kendi çizdiği gerçek iç mekândır**; silüetler o saha defterinden türetilir. Gökyüzü ancak bir pencereden görünürse girer.
+> Dağ–orman sahnesi bu türün klasik ama jenerik konusudur. Bu derste orta ve arka katmanlar **11. haftanın saha defterinden**, ön katman **12. haftanın obje etüdünden** türetilir. Gökyüzü ancak bir pencereden görünürse girer.
 
 ---
 
@@ -308,7 +337,7 @@ Samuel van Hoogstraten'in perspektif kutusu (1655–60, National Gallery NG3832,
 | 3 | **Kesim açınımı** — düz açılım, kenar payları ve boşluk ölçüleriyle | Teknik çizim ve ölçü bilinci |
 | 4 | **Üstten kesit** — katman aralıkları ve kanat katlama çizgileri ölçülü | Aleti çizen çizim |
 | 5 | **Değer sistemi paftası** — seçilen sistem, 5–9 adımlı skala, her katmanın skaladaki yeri | Kavramsal karar ve ton kontrolü (C, D) |
-| 6 | **Saha defteri sayfaları** — 12. haftanın gözlem çizimleri | Silüetlerin gerçek bir mekândan geldiğinin kanıtı |
+| 6 | **Saha defteri (H11) ve obje etüdü (H12)** | Silüetlerin gerçek bir mekândan ve gerçek bir nesneden geldiğinin kanıtı |
 | 7 | **Atmosfer sayfası** — hafta 3'ün notasyon diliyle mekânın sesi | Dönemin ilk haftalarının geri dönüşü |
 | 8 | **Süreç dosyası + 300 kelimelik katalog metni** | Süreç ölçütü (E) |
 
@@ -393,7 +422,8 @@ Bölüm hocaları, diğer bölümlerden (mimarlık, endüstriyel tasarım, psiko
 | **Çözümleme paneli 1** — sınıf içi | Hafta 2 | Kör eşleştirme oyunu, kayıt formu |
 | **Çözümleme paneli 2** — naif grup | Hafta 3–4 arası | Bölüm dışı 30–40 kişi, aynı kartlar, çevrimiçi form |
 | Çizgi değişkenleri kodlaması | Dönem sonrası | İki bağımsız kodlayıcı, 6 değişken × 5'li ölçek |
-| Final kutuları | Hafta 14 | Fotoğraf + katman taramaları |
+| **Hafıza–gözlem çiftleri** | Hafta 4 | Görme yürüyüşü; korunan eleman oranı kodlanır |
+| Final diyoramaları | Hafta 14 | Fotoğraf + katman taramaları |
 | **Ziyaretçi kartları** | Sergi | Hedeflenen ↔ algılanan atmosfer |
 
 ### Analiz
@@ -458,7 +488,7 @@ Doğru öğrenmiş bir öğrencide ön katmandan arka katmana **düzenli azalan 
 > Böylece "atmosferik perspektifi öğrendi mi?" sorusu, hoca kanaatinden **sayısal bir eğriye** dönüşür. Bu ölçüm, bildiğim kadarıyla çizim eğitimi yazınında kullanılmamıştır ve makalenin özgün katkısıdır.
 
 ### Ek veri
-- Hafta 10 kâğıt üstü ton etüdü ile kutu katmanı kontrast eğrisinin karşılaştırılması (aynı öğrenci, iki ortam)
+- Hafta 9–10 kâğıt üstü ton skalası ve ışık etüdü ile diyorama katmanı kontrast eğrisinin karşılaştırılması (aynı öğrenci, iki ortam)
 - Ara kritik notları ve revizyon sayısı
 - Sergi ziyaretçi verisi
 - Kısa öğrenci refleksiyonu (uzun rapor değil — o, gönderdiğiniz makalelerin alanı)
@@ -494,10 +524,11 @@ Derse eklenen tek yük, aşağıdaki satırlardır. Hiçbiri 15 dakikadan fazla 
 | 1 | **Teşhis çizimi (ön test)** — zaten programda | — | B |
 | 2 | Kör eşleştirme oyununun **kayıt formuyla** yapılması | +10 dk | A |
 | 3–4 | Naif panelin çevrimiçi doldurması (ders dışı) | — | A |
+| 4 | **Görme yürüyüşünün hafıza–gözlem çiftlerinin toplanması** | +5 dk | A, B |
 | 5 | Bindirme analizlerinin taranıp saklanması | +5 dk | B |
 | 7 | Vize 1 dosyalarının taranması | ders dışı | A, B |
-| 10 | Ton etütlerinin taranması | +5 dk | C |
-| 12 | Hafıza–gözlem çifti çizimlerinin toplanması | +5 dk | A |
+| 9–10 | Ton skalalarının ve ışık etütlerinin taranması | +5 dk | C |
+| 12 | Obje etütlerinin oturma krokisiyle birlikte fotoğraflanması | +10 dk | A |
 | 13 | Katman provalarının fotoğraflanması | +10 dk | C |
 | 14 | **Teşhis çizimi (son test)** + kısa refleksiyon | — | B |
 | Sergi | Ziyaretçi kartları + dış değerlendirici rubrikleri | — | A, B, C |
