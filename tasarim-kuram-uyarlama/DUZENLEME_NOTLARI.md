@@ -9,7 +9,7 @@ Hedef: Tasarım+Kuram yazım kuralları (https://dergipark.org.tr/tr/pub/tasarim
 | Dosya | Açıklama |
 |---|---|
 | `Rethinking_Flexible_Housing_TasarimKuram_ANONIM.docx` | Kör hakem sürecine yüklenecek anonim makale dosyası |
-| `Genisletilmis_Ozet_TR_ANONIM.docx` | Türkçe genişletilmiş özet (799 kelime), sisteme ayrı yüklenecek |
+| `Genisletilmis_Ozet_TR_ANONIM.docx` | Türkçe genişletilmiş özet (801 kelime), sisteme ayrı yüklenecek |
 | `gorseller_ayri_yukleme/` | Sisteme tek tek yüklenecek görseller + çözünürlük listesi |
 
 ## Kelime sayısı
@@ -17,8 +17,8 @@ Hedef: Tasarım+Kuram yazım kuralları (https://dergipark.org.tr/tr/pub/tasarim
 | | Kelime |
 |---|---|
 | Metin + İngilizce öz (sınıra dâhil) | 5.890 |
-| Türkçe genişletilmiş özet (sınıra dâhil) | 799 |
-| **Toplam (sınıra dâhil)** | **6.689 / 7.000** |
+| Türkçe genişletilmiş özet (sınıra dâhil) | 801 |
+| **Toplam (sınıra dâhil)** | **6.691 / 7.000** |
 | Başlıklar, şekil/tablo başlıkları, kaynakça (sınır dışı) | 864 |
 | Tablo içi metin (kural gereği sınır dışı) | 1.085 |
 
@@ -29,8 +29,10 @@ sınır dışında tutuyor.)
 ## Kurallara uyum
 
 - **Öz:** İngilizce öz 256 kelime (~250 kuralı), makale dili İngilizce olduğu için
-  diğer dildeki özet Türkçe genişletilmiş özet olarak ayrı dosyada (799 kelime);
-  araştırma sorusu, hedefler, yöntem, bulgular ve sonuçlar ayrı ayrı ele alındı.
+  diğer dildeki özet Türkçe genişletilmiş özet olarak ayrı dosyada (801 kelime);
+  kuralın istediği beş öğe sırayla ele alındı: araştırma sorusunun tanımı, hedefler,
+  yöntemin kısa tanımı, elde edilen verilerin ve sonuçların tartışılması (makaleye
+  eklenen Discussion bölümünü de yansıtan bir paragraf) ve çalışmanın sonuçları.
 - **Anahtar sözcükler:** özün altında beşer adet İngilizce ve Türkçe.
 - **Biçim:** Times New Roman 12 punto, tek satır aralığı, iki yana yaslı, A4,
   2,5 cm kenar boşlukları. Altı çizili kullanım yok; vurgular italik.
