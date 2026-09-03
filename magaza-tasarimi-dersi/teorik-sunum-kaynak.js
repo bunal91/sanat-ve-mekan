@@ -244,8 +244,39 @@ opener("I", "Mağaza tasarımı nedir?", "Bir mekân tipi olarak mağaza ne yapa
 }
 
 {
+  const s = slide("I · MAĞAZA TASARIMI NEDİR", "Perakende tasarımının beş öğesi");
+  text(s, "Bir mağaza tasarımı beş ayrı katmandan oluşur. Bunlar birbirinden bağımsız kararlar değildir; biri değiştiğinde diğerleri de değişir. Yine de tasarımı ele alırken bu beş başlığı ayrı ayrı sormak, hiçbirinin atlanmamasını sağlar.",
+       { one: true, y: 1.74, h: 1.0, size: 15 });
+
+  const ly = 4.25, x0 = 2.05, x1 = 11.3;
+  dline(s, x0 - 0.5, ly, x1 + 0.5, ly, { col: HAIR, w: 1.25 });
+  const els = [
+    ["Cephe", "Tabela, cephe düzeni ve vitrin — mağazanın sokağa söylediği"],
+    ["İç mekân öğeleri", "Mekânsal planlama, bölgeler, genel tasarım dili"],
+    ["Teşhir", "Ürün teşhiri ve görsel düzenleme stratejisi"],
+    ["Aydınlatma", "Genel, vurgu, dekoratif ve vitrin aydınlatması"],
+    ["Mağaza içi iletişim", "İşaretler, ekranlar, marka anlatısı"]
+  ];
+  const sp = (x1 - x0) / (els.length - 1);
+  els.forEach((e, i) => {
+    const x = x0 + i * sp, up = i % 2 === 0;
+    dot(s, x, ly, { d: 0.17, col: ACC });
+    dline(s, x, up ? ly - 0.09 : ly + 0.09, x, up ? ly - 0.34 : ly + 0.34, { col: HAIR, w: 1 });
+    s.addText(e[0], { x: x - 1.1, y: up ? ly - 1.4 : ly + 0.38, w: 2.2, h: 0.4,
+      isTextBox: true, margin: 0, fontFace: H, fontSize: 14, bold: true, color: INK,
+      align: "center", valign: up ? "bottom" : "top", lineSpacing: 17 });
+    s.addText(e[1], { x: x - 1.1, y: up ? ly - 1.02 : ly + 0.78, w: 2.2, h: 0.66,
+      isTextBox: true, margin: 0, fontFace: S, fontSize: 10, color: MUTED,
+      align: "center", valign: up ? "top" : "top", lineSpacing: 12.5 });
+  });
+  cap(s, M, 6.0, 11.4, "Beşi de bu sunumun ilerleyen bölümlerinde ayrı ayrı ele alınacak.",
+      { size: 12.5, face: H, col: ACC, italic: true, h: 0.4, align: "center" });
+  s.addNotes("Bu slayt bir içindekiler görevi de görüyor: öğrenci hangi başlığın nerede açılacağını biliyor.");
+}
+
+{
   const s = slide("I · MAĞAZA TASARIMI NEDİR", "Alışveriş mekânı, satın alma biçimi değiştikçe değişti");
-  const ty = 3.15, x0 = 1.15, x1 = 12.1;
+  const ty = 3.15, x0 = 2.0, x1 = 11.35;
   dline(s, x0, ty, x1, ty, { col: HAIR, w: 1 });
   const steps = [
     ["Dükkân", "Üretim ve satış\naynı mekânda"],
@@ -278,7 +309,7 @@ opener("II", "Atmosfer", "Mekânın, üründen bağımsız olarak davranışı e
 {
   const s = slide("II · ATMOSFER", "Fiziksel çevre üç kanaldan etki eder");
   text(s, "Bir mekânın atmosferinin, ürünün kendisinden bağımsız olarak satın alma kararını etkilediği fikri elli yıllıktır (Kotler, 1973). Bitner (1992) bu etkiyi üç boyuta ayırır — ve bu üç boyut yalnızca müşteriyi değil, çalışanı da etkiler.",
-       { one: true, y: 1.78, h: 0.85, size: 15 });
+       { one: true, y: 1.74, h: 1.0, size: 15 });
 
   const cy = 4.25, r = 1.02;
   const cols = [
@@ -309,8 +340,8 @@ opener("II", "Atmosfer", "Mekânın, üründen bağımsız olarak davranışı e
   arrow(s, 3.72, y0 + bh / 2, 4.9, y0 + bh / 2, { col: MUTED, w: 1.25 });
   arrow(s, 7.37, y0 + bh / 2, 8.55, y0 + bh / 2, { col: MUTED, w: 1.25 });
 
-  cap(s, 1.35, y0 + bh + 0.16, 2.3, "ışık · ses · koku\nyoğunluk · malzeme", { align: "center", ls: 13 });
-  cap(s, 5.0, y0 + bh + 0.16, 2.3, "haz\nuyarılma\nkontrol duygusu", { align: "center", ls: 13 });
+  cap(s, 1.35, y0 + bh + 0.16, 2.3, "ışık · ses · koku\nyoğunluk · malzeme", { align: "center", ls: 13, h: 0.45 });
+  cap(s, 5.0, y0 + bh + 0.16, 2.3, "haz\nuyarılma\nkontrol duygusu", { align: "center", ls: 13, h: 0.6 });
 
   zone(s, 8.65, y0 + 1.25, bw, 0.62, "YAKLAŞMA", 1, 10.5);
   cap(s, 8.65, y0 + 1.93, 2.3, "girer · kalır · dolaşır\netkileşime geçer", { align: "center", ls: 12.5 });
@@ -324,46 +355,223 @@ opener("II", "Atmosfer", "Mekânın, üründen bağımsız olarak davranışı e
   s.addNotes("'Nötr mekân yoktur' cümlesi bu bölümün özeti.");
 }
 
+{
+  const s = slide("II · ATMOSFER", "Deneyim neyden oluşur?");
+  text(s, "Perakende deneyimini oluşturan bileşenler, duyusal markalama literatüründe dört başlık altında toplanır (Lindström, 2005). Bunların üçü tasarımcının doğrudan kurduğu şeylerdir; dördüncüsü işletmenin kararıdır ama mekân onu barındırmak zorundadır.",
+       { one: true, y: 1.74, h: 1.0, size: 15 });
+
+  const cy = 3.85, r = 0.86;
+  const items = [
+    ["Mağaza\ntasarımı", "Estetik olarak çekici bir mekân, hikâye anlatımı, gündelikten kopuş"],
+    ["Duyular", "Görme, işitme, dokunma, koklama ve tat duyusunun birlikte kurulması"],
+    ["Zirve–son\netkisi", "İnsan bir deneyimi en yoğun anı ve bitişiyle hatırlar; arası silinir"],
+    ["Perakende\neğlence", "Gündelik alışverişi kıran, planlı bir sürpriz ya da etkinlik"]
+  ];
+  const xs = [2.35, 5.4, 8.45, 11.5];
+  items.forEach((it, i) => {
+    const x = xs[i], hi = i === 1;
+    s.addShape(p.ShapeType.ellipse, { x: x - r, y: cy - r, w: r * 2, h: r * 2,
+      fill: { color: hi ? ACCT : PAPER }, line: { color: hi ? ACC : HAIR, width: hi ? 1.5 : 1 } });
+    s.addText(it[0], { x: x - r, y: cy - 0.45, w: r * 2, h: 0.9, isTextBox: true, margin: 0,
+      fontFace: S, fontSize: 11, bold: true, color: hi ? ACC : INK,
+      align: "center", valign: "middle", lineSpacing: 14 });
+    s.addText(it[1], { x: x - 1.42, y: cy + r + 0.22, w: 2.84, h: 1.05, isTextBox: true,
+      margin: 0, fontFace: S, fontSize: 10.5, color: MUTED, align: "center", lineSpacing: 13.5 });
+    if (i < 3) dline(s, x + r, cy, xs[i + 1] - r, cy, { col: HAIR, w: 1 });
+  });
+  cap(s, M, 6.1, 11.4, "Zirve–son etkisi psikolojiden gelir (Kahneman & Fredrickson): bir mağazadan çıkarken yaşanan an, içeride geçen kırk dakikadan daha fazla hatırlanır.",
+      { size: 12.5, face: H, col: BODY, h: 0.6, ls: 18 });
+  s.addNotes("İkinci daire vurgulu; sunumun en uzun bölümü olan duyular oradan geliyor. Zirve–son etkisi çıkış tasarımını önemli kılıyor.");
+}
+
+{
+  const s = slide("II · ATMOSFER", "Mağazanın sunabileceği dört deneyim türü");
+  text(s, "Mağaza deneyimi tek bir biçimde kurulmaz. Aşağıdaki dört tür farklı mekânsal talepler üretir ve bir mağaza bunlardan yalnızca birini ya da birkaçını seçer.",
+       { one: true, y: 1.78, h: 0.65, size: 15 });
+
+  const y0 = 2.75, w = 2.72, h = 2.45, gap = 0.25;
+  const kinds = [
+    ["Öğrenme", "Müşterinin etkin katıldığı, yeni bir şey öğrendiği deneyim.",
+     "atölye masası · demo alanı · oturma"],
+    ["Kişisel satış", "Satış görevlisinin rolü ürün gösterenden deneyim kuranına dönüşür.",
+     "danışma noktası · ölçü alma · birebir tezgâh"],
+    ["Çok kanallılık", "Müşteri birden çok kanaldan geliyor; mağaza bunları buluşturmalı.",
+     "stok sorgu · online sipariş teslim · iade"],
+    ["Hazine avı", "Sınırlı sürede bulunan ürünlerin yarattığı heyecan; hızlı ürün değişimi.",
+     "esnek teşhir · kampanya alanı · değişebilir düzen"]
+  ];
+  kinds.forEach((k, i) => {
+    const x = 0.85 + i * (w + gap);
+    zone(s, x, y0, w, h, "", i === 3 ? 1 : 0);
+    s.addText(k[0], { x: x + 0.24, y: y0 + 0.26, w: w - 0.48, h: 0.4, isTextBox: true,
+      margin: 0, fontFace: H, fontSize: 17, bold: true, color: i === 3 ? ACC : INK });
+    s.addText(k[1], { x: x + 0.24, y: y0 + 0.72, w: w - 0.48, h: 1.05, isTextBox: true,
+      margin: 0, fontFace: S, fontSize: 11, color: BODY, lineSpacing: 14 });
+    s.addText("MEKÂNSAL TALEP", { x: x + 0.24, y: y0 + 1.78, w: w - 0.48, h: 0.24,
+      isTextBox: true, margin: 0, fontFace: S, fontSize: 8, bold: true, color: FAINT, charSpacing: 1.4 });
+    s.addText(k[2], { x: x + 0.24, y: y0 + 2.0, w: w - 0.48, h: 0.4, isTextBox: true,
+      margin: 0, fontFace: S, fontSize: 10, color: i === 3 ? ACC : MUTED, lineSpacing: 12.5 });
+  });
+  cap(s, M, 5.5, 11.4, "Her deneyim türü mekânda yer kaplar. Bir mağaza dördünü birden iyi yapamaz; hangisini seçtiği bir tasarım kararıdır.",
+      { size: 13, face: H, col: ACC, italic: true, h: 0.45 });
+  text(s, "Bu türler çok kanallı perakende üzerine yapılan çalışmalarda, özellikle genç kuşak müşterinin beklentileri üzerinden tanımlanıyor (Xi & Idris, 2026; Lindström, 2005).",
+       { one: true, y: 6.1, w: 11.4, h: 0.6, size: 12 });
+  s.addNotes("Öğrencilerin markasına hangi deneyim türünün uyduğunu düşündürün — bu, konsept kararını doğrudan besler.");
+}
+
 /* =========================================================
    III — MARKA VE MEKÂN
    ========================================================= */
 opener("III", "Marka ve mekân", "Bir markanın ne olduğu, mekânda nasıl görünür hâle gelir.");
 
 {
-  const s = slide("III · MARKA VE MEKÂN", "Marka bir logo değil, bir vaattir");
-  text(s, "Marka, bir vaadin tutarlı biçimde tekrarlanmasıyla oluşur; logo bu vaadin işaretidir, kendisi değil (Wheeler, 2017). Reklam bir şey söyler, mekân o şeyi kanıtlamak zorundadır. Marka analizinin işe yaraması için soyut değerin somut bir mekânsal karara dönüşmesi gerekir.",
-       { one: true, y: 1.78, h: 0.85, size: 15 });
+  const s = slide("III · MARKA VE MEKÂN", "Marka DNA'sı: bir markayı ne oluşturur?");
+  text(s, "Marka bir logo değil, bir vaadin tutarlı biçimde tekrarlanmasıdır (Wheeler, 2017). Bu vaat beş bileşenden oluşur ve bunlar iki gruba ayrılır: markanın kendi içinde bildiği şeyler ve dışarıya gösterdiği şeyler.",
+       { one: true, y: 1.78, h: 0.72, size: 15 });
 
-  const rows = [
-    ["“Şeffaf üretim”", "Açık atölye, cam bölme, mekânın ortasında duran tezgâh"],
-    ["“El yapımı, her biri tek”", "Tek tek sergileme, düşük yoğunluk, her parçaya kendi ışığı"],
-    ["“Herkes için erişilebilir”", "Açık raf, elin ulaşabileceği yükseklik, serbest dolaşım, hızlı kasa"],
-    ["“Yavaş ve sakin”", "Geniş koridor, düşük ışık kontrastı, oturma, az ürün"]
+  const oy = 2.72, oh = 2.35;
+  const iw = 2.0, gapi = 0.22;
+  const inner = [
+    ["NEDEN VARIZ", "Markanın özü ve\nvar oluş nedeni"],
+    ["İDEAL", "Neye dönüşmek\nistiyor"],
+    ["DEĞERLER", "İnanç sistemi;\nçalışma ve\niletişim biçimi"]
   ];
-  let y = 3.0;
-  rows.forEach(r => {
-    s.addText(r[0], { x: M, y: y, w: 3.55, h: 0.45, isTextBox: true, margin: 0,
-      fontFace: H, fontSize: 15, color: INK, valign: "middle" });
-    arrow(s, 4.55, y + 0.22, 5.35, y + 0.22, { col: ACC, w: 1.25 });
-    s.addText(r[1], { x: 5.6, y: y, w: 6.85, h: 0.45, isTextBox: true, margin: 0,
-      fontFace: S, fontSize: 12.5, color: BODY, valign: "middle" });
-    y += 0.72;
+  inner.forEach((it, i) => {
+    const x = 1.15 + i * (iw + gapi);
+    zone(s, x, oy + 0.25, iw, oh - 0.5, "", 0);
+    s.addText(it[0], { x: x + 0.14, y: oy + 0.5, w: iw - 0.28, h: 0.32, isTextBox: true,
+      margin: 0, fontFace: S, fontSize: 10, bold: true, color: INK, align: "center", charSpacing: 1 });
+    s.addText(it[1], { x: x + 0.14, y: oy + 0.9, w: iw - 0.28, h: 1.0, isTextBox: true,
+      margin: 0, fontFace: S, fontSize: 10.5, color: MUTED, align: "center", lineSpacing: 13.5 });
   });
-  cap(s, M, 6.15, 11.4, "Marka kişiliğini beş arketip üzerinden okumak bu çeviriyi kolaylaştırır: samimiyet, heyecan, yetkinlik, sofistikelik, sağlamlık (Xi & Idris, 2026).",
-      { size: 11.5, h: 0.4 });
-  s.addNotes("Bu tabloyu tahtada sınıfla birlikte üretin, sonra slaytı açın.");
+  dline(s, 7.62, oy - 0.05, 7.62, oy + oh + 0.55, { col: MUTED, w: 1, dash: "dash" });
+  const outer = [
+    [7.9, "KİŞİLİK", "Markanın pazara\nkonuşma biçimi,\nses tonu"],
+    [10.25, "PAZAR KONUMU", "Rekabette kendini\nnasıl konumlandırdığı"]
+  ];
+  outer.forEach(o => {
+    zone(s, o[0], oy + 0.25, 2.15, oh - 0.5, "", 1);
+    s.addText(o[1], { x: o[0] + 0.14, y: oy + 0.5, w: 2.15 - 0.28, h: 0.32, isTextBox: true,
+      margin: 0, fontFace: S, fontSize: 10, bold: true, color: ACC, align: "center", charSpacing: 1 });
+    s.addText(o[2], { x: o[0] + 0.14, y: oy + 0.9, w: 2.15 - 0.28, h: 1.0, isTextBox: true,
+      margin: 0, fontFace: S, fontSize: 10.5, color: BODY, align: "center", lineSpacing: 13.5 });
+  });
+  cap(s, 1.15, oy + oh + 0.18, 6.3, "İŞLETMENİN İÇİ", { bold: true, size: 10, col: INK, align: "center", charSpacing: 1.4 });
+  cap(s, 1.15, oy + oh + 0.44, 6.3, "Kim olduğumuz, ne olmak istediğimiz — kendi kodumuz", { size: 10, align: "center" });
+  cap(s, 7.9, oy + oh + 0.18, 4.5, "İŞLETMENİN DIŞI", { bold: true, size: 10, col: ACC, align: "center", charSpacing: 1.4 });
+  cap(s, 7.9, oy + oh + 0.44, 4.5, "Dışarıya ne söylediğimiz, pazarda nasıl durduğumuz", { size: 10, align: "center" });
+
+  cap(s, M, 6.05, 11.4, "Mekân bu beşini birden taşımak zorundadır. Reklam bir şey söyler; mekân o şeyi kanıtlamak zorundadır.",
+      { size: 13.5, face: H, col: ACC, italic: true, h: 0.45 });
+  s.addNotes("Sağdaki iki kutu vurgulu, çünkü mekân tasarımı en doğrudan onlarla ilgilidir. Ama solu bilmeden sağı kurulamaz.");
+}
+
+{
+  const s = slide("III · MARKA VE MEKÂN", "Markadan mekâna: dört adım");
+  text(s, "Marka analizi bir ön hazırlık değil, tasarımın ilk aşamasıdır. Aradaki yol dört adımda kurulur ve her adım bir sonrakinin girdisini üretir.",
+       { one: true, y: 1.78, h: 0.6, size: 15 });
+
+  const y0 = 2.6, w = 2.72, gap = 0.25;
+  const steps = [
+    ["Araştırma", "Marka hakkında bilgi toplama.", "web sitesi · ürün ve ambalaj · sosyal medya · basın · marka sahibiyle görüşme"],
+    ["Analiz", "Toplananın anlamlandırılması.", "marka DNA'sı · hedef kitle · ürün · vizyon ve misyon · ihtiyaçlar"],
+    ["Konsept geliştirme", "Analizin mekânsal fikre dönüşmesi.", "anahtar kelimeler · trend araştırması · atmosfer çalışması · mekânsal planlama"],
+    ["Sunum", "Fikrin anlatılabilir hâle gelmesi.", "konsept görselleştirmesi · kavramsal ve mekânsal planlar · anlatı"]
+  ];
+  steps.forEach((st, i) => {
+    const x = 0.85 + i * (w + gap);
+    s.addText(String(i + 1), { x: x, y: y0, w: w, h: 0.75, isTextBox: true, margin: 0,
+      fontFace: H, fontSize: 46, bold: true, color: i === 2 ? ACC : FAINT });
+    dline(s, x, y0 + 0.86, x + w - 0.3, y0 + 0.86, { col: i === 2 ? ACC : MUTED, w: 2 });
+    arrow(s, x + w - 0.34, y0 + 0.86, x + w - 0.04, y0 + 0.86, { col: i === 2 ? ACC : MUTED, w: 2 });
+    s.addText(st[0], { x: x, y: y0 + 1.0, w: w, h: 0.38, isTextBox: true, margin: 0,
+      fontFace: H, fontSize: 16, bold: true, color: i === 2 ? ACC : INK });
+    s.addText(st[1], { x: x, y: y0 + 1.42, w: w, h: 0.55, isTextBox: true, margin: 0,
+      fontFace: S, fontSize: 11.5, color: BODY, lineSpacing: 14.5 });
+    s.addText(st[2], { x: x, y: y0 + 2.0, w: w, h: 1.35, isTextBox: true, margin: 0,
+      fontFace: S, fontSize: 10, color: MUTED, lineSpacing: 13.5 });
+  });
+  cap(s, M, 6.15, 11.4, "Üçüncü adım vurgulu: analizle tasarım arasındaki köprü burada kurulur, ve genellikle burada kopar.",
+      { size: 13, face: H, col: ACC, italic: true, h: 0.45 });
+  s.addNotes("Öğrenciler 1 ve 2'yi yapıp doğrudan çizime geçiyor. Üçüncü adım atlanınca analiz ile tasarım arasında ilişki kurulamıyor.");
+}
+
+{
+  const s = slide("III · MARKA VE MEKÂN", "Anahtar kelimeler nasıl çıkarılır?");
+  text(s, "Anahtar kelime, marka analizini tasarım kararına bağlayan ara durakdır. Analizden doğrudan plana geçilemez; arada kelimeye dönüşmesi gerekir.",
+       { one: true, y: 1.76, h: 0.6, size: 15 });
+
+  const y0 = 2.5, w = 2.72, gap = 0.25, h = 2.6;
+  const stages = [
+    ["KAYNAKLAR", "Markanın kendi ürettiği her şey", "web sitesi metinleri\nürün ve ambalaj\nsosyal medya dili\nmüşteri yorumları\nmarka sahibiyle görüşme\nrakiplerin dili"],
+    ["HAM KELİME HAVUZU", "Otuz–elli kelime", "sıfat, fiil ve nesne adı\nhepsini yaz, hiçbirini eleme\ntekrar edenleri işaretle"],
+    ["GRUPLAMA", "Kümeleme ve eleme", "eş anlamlıları birleştir\ntekrar edenleri kümele\nmarkaya özgü olmayanları at\n(“kaliteli”, “modern”, “özel”)"],
+    ["ANAHTAR KELİMELER", "Üç–beş kelime", "her biri mekânsal olarak\nsınanabilir olmalı\nbirbirinin eş anlamlısı olmamalı"]
+  ];
+  stages.forEach((st, i) => {
+    const x = 0.85 + i * (w + gap);
+    zone(s, x, y0, w, h, "", i === 3 ? 1 : 0);
+    s.addText(st[0], { x: x + 0.2, y: y0 + 0.22, w: w - 0.4, h: 0.5, isTextBox: true, margin: 0,
+      fontFace: S, fontSize: 9.5, bold: true, color: i === 3 ? ACC : INK, charSpacing: 1.2, lineSpacing: 12 });
+    s.addText(st[1], { x: x + 0.2, y: y0 + 0.72, w: w - 0.4, h: 0.46, isTextBox: true, margin: 0,
+      fontFace: H, fontSize: 12.5, italic: true, color: i === 3 ? ACC : MUTED, lineSpacing: 16 });
+    s.addText(st[2], { x: x + 0.2, y: y0 + 1.2, w: w - 0.4, h: 1.28, isTextBox: true, margin: 0,
+      fontFace: S, fontSize: 10, color: BODY, lineSpacing: 13.5 });
+    if (i < 3) arrow(s, x + w + 0.03, y0 + h / 2, x + w + 0.22, y0 + h / 2, { col: ACC, w: 1.5 });
+  });
+  cap(s, M, 5.4, 11.4, "SINAMA", { size: 9, bold: true, col: FAINT, h: 0.24, charSpacing: 1.6 });
+  cap(s, M, 5.66, 11.4, "Bir anahtar kelime bir mekânsal karara dönüşemiyorsa, o bir anahtar kelime değildir.",
+      { size: 17, face: H, col: ACC, italic: true, h: 0.45 });
+  text(s, "“Kaliteli” bir anahtar kelime değildir, çünkü hangi markayı seçerseniz seçin doğrudur ve hiçbir mekânsal karar üretmez. “Elden ele geçen” bir anahtar kelimedir: teşhir yüksekliğini, tezgâh konumunu ve dokunma iznini belirler.",
+       { one: true, y: 6.15, w: 11.4, h: 0.6, size: 12.5 });
+  s.addNotes("“Kaliteli / modern / özel” tuzağını mutlaka vurgulayın; öğrencilerin çıkardığı kelimelerin yarısı böyle oluyor.");
+}
+
+{
+  const s = slide("III · MARKA VE MEKÂN", "Çeviri zinciri: özellikten tasarım öğesine");
+  const cw = 2.645, gapc = 0.35;
+  const xs = [0.85, 0.85 + cw + gapc, 0.85 + 2 * (cw + gapc), 0.85 + 3 * (cw + gapc)];
+  const heads = ["MARKA ÖZELLİĞİ", "ANAHTAR KELİME", "MEKÂNSAL İLKE", "TASARIM ÖĞESİ"];
+  heads.forEach((hd, i) => {
+    s.addText(hd, { x: xs[i], y: 1.8, w: cw, h: 0.3, isTextBox: true, margin: 0,
+      fontFace: S, fontSize: 9, bold: true, color: i === 1 ? ACC : FAINT, charSpacing: 1.6 });
+  });
+  const rows = [
+    ["Her ürün tek tek, elde üretiliyor", "TEKİLLİK", "Düşük yoğunluk; her ürüne kendi alanı ve kendi ışığı",
+     "Tekil kaideler · nokta aydınlatma · ürünler arası geniş aralık"],
+    ["Üretim süreci gizlenmiyor", "GÖRÜNÜRLÜK", "Üretimin satış alanına açılması; arka alanın sahne olması",
+     "Cam bölme · mekânın ortasında tezgâh · açık raflı depo"],
+    ["Ürün denizle ve dış mekânla ilişkili", "DAYANIKLILIK", "Yıpranmayı gizlemeyen, zamanla güzelleşen yüzeyler",
+     "Masif ahşap · ham metal · dokusu belirgin sıva · yıkanabilir zemin"]
+  ];
+  let y = 2.32;
+  rows.forEach((r, ri) => {
+    s.addText(r[0], { x: xs[0], y: y, w: cw, h: 1.0, isTextBox: true, margin: 0,
+      fontFace: H, fontSize: 13, color: BODY, lineSpacing: 18 });
+    s.addText(r[1], { x: xs[1], y: y, w: cw, h: 0.44, isTextBox: true, margin: 0,
+      fontFace: H, fontSize: 17, bold: true, color: ACC });
+    s.addText(r[2], { x: xs[2], y: y, w: cw, h: 1.0, isTextBox: true, margin: 0,
+      fontFace: H, fontSize: 13, color: BODY, lineSpacing: 18 });
+    s.addText(r[3], { x: xs[3], y: y, w: cw, h: 1.0, isTextBox: true, margin: 0,
+      fontFace: S, fontSize: 11.5, color: MUTED, lineSpacing: 15 });
+    for (let c = 0; c < 3; c++)
+      arrow(s, xs[c] + cw + 0.04, y + 0.22, xs[c + 1] - 0.05, y + 0.22, { col: HAIR, w: 1.25 });
+    y += 1.28;
+  });
+  cap(s, M, 6.2, 11.4, "Zincirin her halkası bir öncekinden türetilebilmelidir. Bir tasarım öğesini gerekçelendiremiyorsanız, zincirde bir halka eksiktir.",
+      { size: 13.5, face: H, col: ACC, italic: true, h: 0.45 });
+  s.addNotes("Bu, sunumun en pratik slaydı. Öğrenciden kendi markası için bu zinciri üç satır hâlinde kurmasını isteyin.");
 }
 
 {
   const s = slide("III · MARKA VE MEKÂN", "Yoğunluk bir mesajdır");
   text(s, "Aynı metrekareye kaç ürün konacağı estetik değil, stratejik bir karardır. Az ürün ve çok boşluk değer ve seçicilik duygusu üretir; yoğun teşhir bolluk ve erişilebilirlik duygusu üretir. İkisi de doğrudur — yanlış olan, markanın iddiasıyla çelişen bir yoğunluk seçmektir.",
-       { one: true, y: 1.78, h: 0.85, size: 15 });
+       { one: true, y: 1.74, h: 1.0, size: 15 });
 
   const ax = 2.0, ay = 4.55, aw = 9.3;
   dline(s, ax, ay, ax + aw, ay, { col: HAIR, w: 1 });
   cap(s, ax - 0.9, ay - 0.2, 1.6, "AZ ÜRÜN", { align: "right", bold: true, size: 10, col: INK });
   cap(s, ax + aw - 0.7, ay - 0.2, 1.7, "ÇOK ÜRÜN", { align: "left", bold: true, size: 10, col: INK });
-
   const pts = [
     [0.10, "Mücevher\nSanat", "birim değer yüksek\nboşluk = değer"],
     [0.34, "Sofistike moda\nParfüm", "seçilmiş az sayıda\nürün, geniş boşluk"],
@@ -479,90 +687,107 @@ opener("IV", "Dışarıdan içeriye", "Cephe, vitrin ve eşik: insanı sokaktan 
   ], 8.55, 2.2, 3.9, 10);
 
   text(s, "Girişten sonraki ilk 2–4 metre geçiş bölgesidir. Duyular hâlâ dışarıya ayarlıdır; buraya konan ürün ya da bilgi genellikle görülmez (Underhill, 2008). Eşiği sınamanın en basit yolu tek bir sorudur: bu kapıdan geçerken ne değişiyor?",
-       { one: true, y: 5.9, h: 0.9, size: 13.5, w: 6.9 });
+       { one: true, y: 5.66, h: 1.3, size: 13, w: 6.9 });
   s.addNotes("Eşik, beş duyunun aynı anda değiştiği tek andır. Duyular bölümüne buradan köprü kurun.");
 }
 
 /* =========================================================
    V — MAĞAZANIN İÇİ: İŞLEVLER
    ========================================================= */
-opener("V", "Mağazanın içi", "Hangi bölümler var, nerede olmaları gerekir?");
+opener("V", "Mağazanın içi", "Hangi işlevler var ve birbirleriyle nasıl ilişkilenirler?");
 
 {
-  const s = slide("V · MAĞAZANIN İÇİ", "Bir mağazada bulunması gereken bölümler");
-  const px = 0.85, py = 1.85, pw = 7.5, ph = 4.35;
-  plan(s, px, py, pw, ph);
-  dline(s, px - 0.15, py + ph + 0.12, px + pw + 0.15, py + ph + 0.12, { col: HAIR, w: 1.5, dash: "dash" });
-  cap(s, px, py + ph + 0.24, pw, "sokak / ortak alan", { align: "center", size: 9, col: FAINT });
+  const s = slide("V · MAĞAZANIN İÇİ", "Bir mağazada bulunması gereken işlevler");
+  text(s, "Bu şema bir yerleşim önerisi değildir; işlevlerin listesini ve aralarındaki ilişkiyi gösterir. Hangi işlevin nereye konacağı markaya, ürüne ve mekâna göre değişir.",
+       { one: true, y: 1.64, h: 0.6, size: 14.5 });
 
-  // back of house strip (top)
-  zone(s, px + 0.02, py + 0.02, 2.1, 0.95, "DEPO", 2, 9.5);
-  zone(s, px + 2.14, py + 0.02, 1.5, 0.95, "personel", 2, 9);
-  zone(s, px + 3.66, py + 0.02, 1.15, 0.95, "WC", 2, 9);
-  zone(s, px + 4.83, py + 0.02, 1.5, 0.95, "mal kabul", 2, 9);
-  // service door on the right wall (gap only; the legend explains it)
-  s.addShape(p.ShapeType.rect, { x: px + pw - 0.03, y: py + 0.28, w: 0.06, h: 0.45,
-    fill: { color: PAPER }, line: { color: PAPER } });
+  // FRONT OF HOUSE — six functions in a row (order = journey, not position)
+  const fw = 1.73, fg = 0.25, fy = 2.66, fh = 0.78;
+  const front = ["Vitrin", "Giriş ve\ngeçiş", "Teşhir", "Etkileşim ve\ndeneme", "Deneme\nkabini", "Oturma ve\nbekleme"];
+  front.forEach((t, i) => {
+    const x = 0.85 + i * (fw + fg);
+    zone(s, x, fy, fw, fh, t, 0, 9.5);
+    if (i < 5) dline(s, x + fw, fy + fh / 2, x + fw + fg, fy + fh / 2, { col: HAIR, w: 1 });
+  });
+  cap(s, M, fy - 0.32, 6.0, "ÖN ALAN — müşterinin gördüğü", { bold: true, size: 9.5, col: INK, charSpacing: 1.4 });
 
-  // sales floor elements
-  zone(s, px + 0.15, py + 1.25, 1.35, 1.35, "deneme\nkabini", 0);
-  zone(s, px + 1.75, py + 1.3, 1.5, 0.62, "teşhir\n(ada)", 0);
-  zone(s, px + 1.75, py + 2.2, 1.5, 0.62, "teşhir\n(masa)", 0);
-  zone(s, px + 3.55, py + 1.3, 1.35, 1.5, "etkileşim /\ndeneme\nalanı", 1, 9);
-  zone(s, px + pw - 1.0, py + 1.25, 0.87, 2.1, "güç\nduvarı", 0);
-  zone(s, px + 5.1, py + 2.55, 1.6, 0.8, "KASA", 1, 10);
-  zone(s, px + 0.15, py + 3.0, 1.35, 0.55, "oturma", 0);
-  zone(s, px + 0.15, py + 3.72, 2.6, 0.5, "vitrin", 0);
-  zone(s, px + 4.9, py + 3.72, 2.45, 0.5, "vitrin", 0);
-  // entrance
-  s.addShape(p.ShapeType.rect, { x: px + 3.0, y: py + ph - 0.03, w: 1.6, h: 0.06,
-    fill: { color: PAPER }, line: { color: PAPER } });
-  arrow(s, px + 3.8, py + ph + 0.5, px + 3.8, py + ph - 0.15, { col: ACC, w: 2 });
-  cap(s, px + 2.95, py + 3.28, 1.75, "geçiş bölgesi", { size: 8.5, col: MUTED, align: "center" });
+  // boundary
+  dline(s, M, 4.28, 12.48, 4.28, { col: MUTED, w: 1, dash: "dash" });
 
-  legend(s, [
-    ["Ön alan — müşterinin gördüğü", "Vitrin, giriş ve geçiş bölgesi, teşhir, etkileşim ve deneme, oturma, kasa"],
-    ["Arka alan — işletmenin çalıştığı", "Depo (satış alanının %15–25'i), personel odası, WC, mal kabul"],
-    ["Kasa iki alanın kesiştiği yer", "Hem satışı bitirir hem arka alana açılır; personel buradan mağazanın tamamını görebilmeli"],
-    ["Servis rotası müşteri rotasıyla kesişmez", "Mal kabulden depoya giden yol, satış alanından geçmemeli"]
-  ], 8.75, 2.0, 3.85, 10);
-  s.addNotes("Bu plan şematiktir, bir tasarım önerisi değil. Amaç bölümlerin tam listesini ve birbirleriyle ilişkisini göstermek.");
+  // CASH DESK straddling the boundary
+  zone(s, 5.47, 3.98, 2.4, 0.6, "KASA", 1, 11);
+  cap(s, 7.95, 4.02, 4.5, "iki alanın kesiştiği tek nokta", { size: 9.5, col: ACC, italic: true });
+
+  // BACK OF HOUSE
+  const bw = 2.3, bg = 0.6, by = 4.85, bh = 0.78;
+  const back = ["Mal kabul", "Depo", "Personel ve WC"];
+  back.forEach((t, i) => {
+    const x = 2.6 + i * (bw + bg);
+    zone(s, x, by, bw, bh, t, 2, 10);
+    if (i < 2) dline(s, x + bw, by + bh / 2, x + bw + bg, by + bh / 2, { col: MUTED, w: 1 });
+  });
+  cap(s, M, by - 0.3, 6.0, "ARKA ALAN — işletmenin çalıştığı", { bold: true, size: 9.5, col: INK, charSpacing: 1.4 });
+
+  // vertical relations across the boundary
+  dline(s, 6.67, fy + fh, 6.67, 3.98, { col: HAIR, w: 1 });
+  dline(s, 6.67, 4.58, 6.67, by, { col: MUTED, w: 1, dash: "dash" });
+  dline(s, 4.4, fy + fh, 4.4, 4.28, { col: ACC, w: 1.25 });
+  dline(s, 4.4, 4.28, 4.4, by, { col: ACC, w: 1.25 });
+  cap(s, 3.05, 3.55, 1.3, "stok\ntazeleme", { size: 8.5, col: ACC, align: "right", ls: 10.5 });
+
+  const rules = [
+    "Vitrin ve giriş birbirinin devamıdır; ayrı tasarlanamaz.",
+    "Depo satış alanına doğrudan açılmalı; stok tazeleme müşteri rotasını kesmemeli.",
+    "Kasadan mağazanın tamamı görülebilmeli, aynı anda arka alana ulaşılabilmeli.",
+    "Deneme kabini teşhire yakın, ama giriş görüş hattının dışında olmalı."
+  ];
+  let ry = 5.95;
+  cap(s, M, ry - 0.28, 11.4, "KOMŞULUK KURALLARI", { size: 9, bold: true, col: FAINT, charSpacing: 1.6 });
+  rules.forEach((r, i) => {
+    const x = i % 2 === 0 ? M : C2;
+    const yy = ry + Math.floor(i / 2) * 0.46;
+    dot(s, x + 0.09, yy + 0.11, { d: 0.1, col: ACC });
+    cap(s, x + 0.32, yy - 0.03, CW - 0.32, r, { size: 11, col: BODY, ls: 13.5, h: 0.42 });
+  });
+  s.addNotes("Bu şema bilinçli olarak plan değildir. Öğrenci işlevleri kendi mekânına göre yerleştirmeli; buradaki tek bağlayıcı şey komşuluk kurallarıdır.");
 }
 
 {
   const s = slide("V · MAĞAZANIN İÇİ", "İki rota birbirine karışmamalı");
-  const px = 1.35, py = 2.05, pw = 6.5, ph = 3.6;
-  plan(s, px, py, pw, ph);
-  zone(s, px + 0.02, py + 0.02, 2.6, 0.85, "DEPO", 2, 9.5);
-  zone(s, px + 2.66, py + 0.02, 1.6, 0.85, "personel", 2, 9);
-  zone(s, px + 4.9, py + 0.02, 1.56, 0.85, "mal kabul", 2, 9);
-  zone(s, px + 4.6, py + 2.4, 1.5, 0.72, "KASA", 1, 10);
-  s.addShape(p.ShapeType.rect, { x: px + 2.6, y: py + ph - 0.03, w: 1.4, h: 0.06,
-    fill: { color: PAPER }, line: { color: PAPER } });
-  s.addShape(p.ShapeType.rect, { x: px + 5.35, y: py - 0.03, w: 0.6, h: 0.06,
-    fill: { color: PAPER }, line: { color: PAPER } });
+  text(s, "Mağazanın çalışması, çalışanın gününün de tasarlanmış olmasına bağlıdır. İki rota yalnızca kasada buluşur; başka bir yerde kesişirlerse mağaza her teslimatta durur.",
+       { one: true, y: 1.72, h: 0.6, size: 14.5 });
 
-  // customer route (accent, solid)
-  arrow(s, px + 3.3, py + ph + 0.45, px + 3.3, py + 2.95, { col: ACC, w: 1.75 });
-  arrow(s, px + 3.3, py + 2.95, px + 1.5, py + 2.1, { col: ACC, w: 1.75 });
-  arrow(s, px + 1.5, py + 2.1, px + 3.5, py + 1.35, { col: ACC, w: 1.75 });
-  arrow(s, px + 3.5, py + 1.35, px + 5.3, py + 2.35, { col: ACC, w: 1.75 });
-  // staff route (muted, dashed)
-  arrow(s, px + 5.65, py - 0.45, px + 5.65, py + 0.45, { col: MUTED, w: 1.5, dash: "dash" });
-  arrow(s, px + 5.65, py + 0.45, px + 1.4, py + 0.45, { col: MUTED, w: 1.5, dash: "dash" });
-  arrow(s, px + 1.4, py + 0.9, px + 1.4, py + 1.7, { col: MUTED, w: 1.5, dash: "dash" });
-  arrow(s, px + 3.6, py + 0.95, px + 5.2, py + 2.35, { col: MUTED, w: 1.5, dash: "dash" });
+  const cy1 = 2.85, cy2 = 5.15, bw = 1.62, bh = 0.62;
+  const cust = ["Giriş", "Geçiş", "Teşhir", "Deneme", "Kasa", "Çıkış"];
+  const staff = ["Mal kabul", "Depo", "Stok\ntazeleme", "Danışma", "Kasa", "Kapanış"];
+  const x0 = 0.85, gapx = 0.29;
+  cust.forEach((t, i) => {
+    const x = x0 + i * (bw + gapx), hi = i === 4;
+    zone(s, x, cy1, bw, bh, t, hi ? 1 : 0, 10);
+    if (i < 5) arrow(s, x + bw + 0.03, cy1 + bh / 2, x + bw + gapx - 0.03, cy1 + bh / 2, { col: ACC, w: 1.5 });
+  });
+  staff.forEach((t, i) => {
+    const x = x0 + i * (bw + gapx), hi = i === 4;
+    zone(s, x, cy2, bw, bh, t, hi ? 1 : 2, 9.5);
+    if (i < 5) arrow(s, x + bw + 0.03, cy2 + bh / 2, x + bw + gapx - 0.03, cy2 + bh / 2, { col: MUTED, w: 1.25, dash: "dash" });
+  });
+  cap(s, M, cy1 - 0.3, 6.0, "MÜŞTERİ ROTASI", { bold: true, size: 9.5, col: ACC, charSpacing: 1.4 });
+  cap(s, M, cy2 - 0.3, 6.0, "PERSONEL ROTASI", { bold: true, size: 9.5, col: MUTED, charSpacing: 1.4 });
 
-  dline(s, 8.55, 2.25, 9.05, 2.25, { col: ACC, w: 1.75 });
-  cap(s, 9.2, 2.11, 3.2, "Müşteri rotası", { bold: true, size: 11, col: INK });
-  cap(s, 8.55, 2.42, 3.85, "Giriş → geçiş → teşhir → deneme → kasa → çıkış. Serbest, keşfe açık.", { size: 10, ls: 13 });
-  dline(s, 8.55, 3.35, 9.05, 3.35, { col: MUTED, w: 1.5, dash: "dash" });
-  cap(s, 9.2, 3.21, 3.2, "Personel rotası", { bold: true, size: 11, col: INK });
-  cap(s, 8.55, 3.52, 3.85, "Mal kabul → depo → stok tazeleme → kasa. Kısa, verimli, mümkünse görünmez.", { size: 10, ls: 13 });
+  // the only permitted meeting point
+  const mx = x0 + 4 * (bw + gapx) + bw / 2;
+  dline(s, mx, cy1 + bh, mx, cy2, { col: ACC, w: 1.5 });
+  cap(s, mx + 0.25, 3.78, 2.85, "Buluşmaları gereken\ntek nokta", { size: 11, bold: true, col: ACC, ls: 14, h: 0.5 });
+  cap(s, mx + 0.25, 4.32, 2.9, "Kasa hem satışı bitirir hem arka alana açılır.", { size: 10.5, ls: 13.5, h: 0.5 });
 
-  text(s, "Mağazanın çalışması, çalışanın gününün de tasarlanmış olmasına bağlıdır. Mal kabulden depoya giden yol satış alanından geçiyorsa, mağaza her teslimatta durur.\n\nKasa bu iki rotanın kesiştiği tek noktadır. Konumu, personelin mağazanın tamamını görebilmesine ve arka alana kolay ulaşmasına göre belirlenir.",
-       { one: true, y: 4.6, w: 3.85, x: 8.55, h: 2.2, size: 12.5, ls: 19 });
-  cap(s, M, 6.35, 7.5, "Şematik plan. Kesikli ok, müşterinin görmediği hareketi gösterir.", { size: 9.5, italic: true });
+  // the crossing that must not happen
+  s.addText("✕", { x: 1.15, y: 3.98, w: 0.42, h: 0.42, isTextBox: true, margin: 0,
+    fontFace: S, fontSize: 20, bold: true, color: ACC, align: "center", valign: "middle" });
+  cap(s, 1.68, 3.95, 7.2, "Başka hiçbir noktada kesişmemeli: mal kabulden depoya giden yol satış alanından geçerse, mağaza her teslimatta durur.",
+      { size: 11.5, col: ACC, ls: 15, h: 0.5 });
+
+  cap(s, M, 6.15, 11.4, "Şema rota sırasını gösterir, mekândaki yerlerini değil. Sıra sabittir; yerleşim her mağazada farklıdır.",
+      { size: 12.5, face: H, col: BODY, italic: true, h: 0.4 });
   s.addNotes("Öğrencilere 'personelin gününü çiz' egzersizini önerin: açılış, mal kabul, stok tazeleme, mola, kapanış.");
 }
 
@@ -744,36 +969,43 @@ opener("VII", "Duyular", "Mekânı yalnızca gözle değil, bütün bedenle dene
 }
 
 {
-  const s = slide("VII · DUYULAR", "Hangi duyu mağazanın neresinde çalışır?");
-  const px = 0.85, py = 1.85, pw = 7.2, ph = 4.15;
-  plan(s, px, py, pw, ph);
-  dline(s, px - 0.15, py + ph + 0.12, px + pw + 0.15, py + ph + 0.12, { col: HAIR, w: 1.5, dash: "dash" });
-  zone(s, px + 0.02, py + 0.02, 2.0, 0.8, "depo", 2, 9);
-  zone(s, px + 2.06, py + 0.02, 1.4, 0.8, "personel", 2, 9);
-  s.addShape(p.ShapeType.rect, { x: px + 2.9, y: py + ph - 0.03, w: 1.5, h: 0.06,
-    fill: { color: PAPER }, line: { color: PAPER } });
-  zone(s, px + 0.2, py + 1.5, 1.3, 1.3, "deneme\nkabini", 0);
-  zone(s, px + 4.9, py + 2.4, 1.5, 0.75, "kasa", 0);
-  zone(s, px + 1.85, py + 1.4, 1.5, 0.6, "teşhir", 0);
-  zone(s, px + 3.7, py + 1.4, 1.5, 0.6, "tadım /\ndeneme", 0);
-  zone(s, px + 0.2, py + 3.4, 2.5, 0.45, "vitrin", 0);
-  zone(s, px + 4.7, py + 3.4, 2.3, 0.45, "vitrin", 0);
+  const s = slide("VII · DUYULAR", "Hangi duyu, yolculuğun hangi anında çalışır?");
+  text(s, "Duyular mağazanın her yerinde aynı yoğunlukta çalışmaz. Her duyunun baskın olduğu bir an vardır; tasarımcının işi o anı bilerek kurmaktır.",
+       { one: true, y: 1.66, h: 0.68, size: 14.5 });
 
-  const pins = [
-    [px + 0.45, py + 3.62], [px + 3.65, py + ph - 0.35], [px + 2.02, py + 1.58],
-    [px + 3.87, py + 1.58], [px + 5.42, py + 1.72], [px + 0.38, py + 1.66]
+  const moments = ["Çekim", "Eşik", "Yönelme", "Gezinme", "Etkileşim", "Satın alma", "Ayrılma"];
+  const ax0 = 3.05, ax1 = 12.15;
+  const sp = (ax1 - ax0) / (moments.length - 1);
+  moments.forEach((m, i) => {
+    const x = ax0 + i * sp;
+    s.addText(m, { x: x - 0.62, y: 2.38, w: 1.24, h: 0.28, isTextBox: true, margin: 0,
+      fontFace: S, fontSize: 8.5, bold: true, color: MUTED, align: "center" });
+    dline(s, x, 2.72, x, 6.15, { col: "EDEDF0", w: 0.75 });
+  });
+  dline(s, ax0 - 0.3, 2.72, ax1 + 0.3, 2.72, { col: HAIR, w: 1 });
+
+  const rows = [
+    ["Görme", [0, 3], "vitrin silüeti ve ışık lekesi · teşhir kontrastı"],
+    ["Beden", [1, 2], "eşikte ısı ve zemin değişimi · koridor genişliği, yoğunluk"],
+    ["Koklama", [1, 4], "ilk izlenim · ürünün ve malzemenin kendi kokusu"],
+    ["İşitme", [3, 4], "genel akustik · kabinde ve danışmada sessizlik"],
+    ["Dokunma", [3, 4], "açık raf ve ürüne erişim · deneme, tezgâh, kumaş"],
+    ["Tat", [4], "tadım noktası · ikram"]
   ];
-  pins.forEach((pt, i) => dot(s, pt[0], pt[1], { t: String(i + 1), d: 0.26 }));
-
-  legend(s, [
-    ["Görme — vitrin ve teşhir", "Işık düzeyi, kontrast, renk sıcaklığı, görüş hattı"],
-    ["Beden — eşik ve sirkülasyon", "Sıcaklık farkı, hava akımı, kot, koridor genişliği, yoğunluk"],
-    ["Dokunma — teşhir ve ürün", "Açık raf mı cam dolap mı; raf, tezgâh ve zemin malzemesi"],
-    ["Koklama — ürün ve hazırlık alanı", "Kaynağı görünen koku: ürünün kendisi, ahşap, kahve, deri"],
-    ["Tat — tadım noktası", "Tezgâh, hijyen, lavabo, atık ve durulacak boşluk"],
-    ["İşitme — genel ve sessiz bölge", "Yansıma yüzeyleri; kabin ve danışma noktasında ses düşmeli"]
-  ], 8.4, 1.95, 4.25, 9.5);
-  s.addNotes("Bu diyagram duyusal tasarımı mood board olmaktan çıkarıp plana bağlar. Her duyunun bir yeri var.");
+  let ry = 3.0;
+  rows.forEach(r => {
+    s.addText(r[0], { x: M, y: ry - 0.02, w: 1.9, h: 0.3, isTextBox: true, margin: 0,
+      fontFace: H, fontSize: 14, bold: true, color: ACC });
+    const dx = r[1].map(i => ax0 + i * sp);
+    if (dx.length > 1) dline(s, dx[0], ry + 0.13, dx[dx.length - 1], ry + 0.13, { col: ACC, w: 1.5 });
+    dx.forEach(x => dot(s, x, ry + 0.13, { d: 0.16, col: ACC }));
+    s.addText(r[2], { x: dx[dx.length - 1] + 0.22, y: ry - 0.02, w: 12.4 - dx[dx.length - 1] - 0.22,
+      h: 0.34, isTextBox: true, margin: 0, fontFace: S, fontSize: 9.5, color: MUTED });
+    ry += 0.55;
+  });
+  cap(s, M, 6.32, 11.4, "Bir duyunun baskın olduğu an, o duyu için ayrılacak bütçenin ve dikkatin de nerede olması gerektiğini söyler.",
+      { size: 12.5, face: H, col: ACC, italic: true, h: 0.4 });
+  s.addNotes("Bu diyagram duyusal tasarımı mood board olmaktan çıkarıp yolculuğa bağlar; plana değil, ana bağlar.");
 }
 
 /* ---- individual senses ---- */
