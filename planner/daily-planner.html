@@ -1,0 +1,373 @@
+<meta charset="utf-8">
+<title>Dusk Ladder Daily Planner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+
+<style>
+  /* ---------- tokens ---------- */
+  :root{
+    --sheet:#ffffff;
+    --ink:#23181f;
+    --ink-soft:#6e6068;
+    --ink-faint:#9a8f94;
+    --rule:#e3dcde;
+    --rule-strong:#c7bcc1;
+    --dusk-1:#f2a65a;   /* early hours  */
+    --dusk-2:#ee6c4d;   /* midday       */
+    --dusk-3:#c43e7a;   /* late day     */
+    --dusk-4:#4b2e83;   /* night        */
+    --backdrop:#efeaee;
+    --backdrop-ink:#6e6068;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){ --backdrop:#17141a; --backdrop-ink:#8b8189; }
+  }
+  :root[data-theme="dark"]{ --backdrop:#17141a; --backdrop-ink:#8b8189; }
+
+  /* ---------- page ---------- */
+  @page{ size: 8.5in 11in; margin: 0; }
+  html, body{ margin: 0; }
+
+  body{
+    background: var(--backdrop);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 28px 16px 56px;
+  }
+
+  .sheet{
+    width: 8.5in; height: 11in;
+    box-sizing: border-box;
+    padding: .5in .55in .45in;
+    background: var(--sheet);
+    display: flex; flex-direction: column;
+    box-shadow: 0 18px 44px rgba(35,24,31,.18);
+    overflow: hidden;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+
+  /* ---------- shared type ---------- */
+  .eyebrow{
+    font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+    font-weight: 700; text-transform: uppercase;
+    letter-spacing: .18em; font-size: 7.6pt; line-height: 1;
+    color: var(--ink-soft);
+  }
+  .hint{
+    font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+    font-weight: 500; text-transform: uppercase;
+    letter-spacing: .11em; font-size: 6.9pt; color: var(--ink-faint);
+    white-space: nowrap;
+  }
+
+  /* ---------- masthead ---------- */
+  .masthead{
+    display: flex; align-items: flex-end; justify-content: space-between;
+    gap: .4in; padding-bottom: 9px; border-bottom: 1.4px solid var(--ink);
+  }
+  .wordmark{ display: flex; flex-direction: column; gap: 7px; }
+  .wordmark h1{
+    font-family: "Bodoni Moda", "Didot", Georgia, serif;
+    font-weight: 500; font-size: 41pt; line-height: .84; margin: 0;
+    letter-spacing: -.005em;
+  }
+  .wordmark h1 em{ font-style: italic; font-weight: 400; }
+  .wordmark .rule{
+    width: 1.55in; height: 3px; border-radius: 2px;
+    background: linear-gradient(90deg, var(--dusk-1), var(--dusk-2) 38%, var(--dusk-3) 72%, var(--dusk-4));
+  }
+
+  .datestack{ display: flex; flex-direction: column; align-items: flex-end; gap: 9px; padding-bottom: 3px; }
+  .fieldrow{ display: flex; align-items: flex-end; gap: 8px; }
+  .fieldrow .eyebrow{ padding-bottom: 2px; }
+  .blank{ border-bottom: 1px solid var(--rule-strong); height: 15px; }
+  .blank.date{ width: 1.5in; }
+  .blank.week{ width: .62in; }
+  .daychips{ display: flex; gap: 5px; }
+  .daychips span{
+    width: 19px; height: 19px; border: 1px solid var(--rule-strong); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+    font-weight: 600; font-size: 8.4pt; color: var(--ink-soft); line-height: 1;
+  }
+
+  /* ---------- body grid ---------- */
+  .body{
+    flex: 1; min-height: 0; display: grid;
+    grid-template-columns: 3.05in 1fr; gap: 0 .3in; padding-top: 14px;
+  }
+  .col{ display: flex; flex-direction: column; min-height: 0; }
+
+  /* ---------- section headers ---------- */
+  .sechead{ display: flex; align-items: center; gap: 8px; padding-bottom: 6px; }
+  .sechead .line{ flex: 1; height: 1px; background: var(--rule); }
+
+  /* ---------- schedule ---------- */
+  .schedule{ flex: 1; min-height: 0; display: flex; gap: 9px; }
+  .rail{ width: 5px; flex: none; border-radius: 3px; overflow: hidden; }
+  .hours{ flex: 1; display: flex; flex-direction: column; }
+
+  .band{
+    display: flex; align-items: center; gap: 7px;
+    font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+    font-weight: 700; text-transform: uppercase; letter-spacing: .15em;
+    font-size: 6.9pt; color: var(--ink-faint); padding: 5px 0 3px;
+  }
+  .band .dot{ width: 5px; height: 5px; border-radius: 50%; flex: none; }
+  .band.morning .dot{ background: var(--dusk-1); }
+  .band.afternoon .dot{ background: var(--dusk-2); }
+  .band.evening .dot{ background: var(--dusk-4); }
+  .band .line{ flex: 1; height: 1px; background: var(--rule); }
+
+  .hour{ flex: 1; display: flex; align-items: stretch; min-height: 0; }
+  .hour .t{
+    width: .42in; flex: none; padding-top: 2px;
+    font-size: 7.6pt; font-weight: 500; font-variant-numeric: tabular-nums;
+    color: var(--ink-soft); text-align: right; letter-spacing: .01em;
+  }
+  .hour .slot{
+    flex: 1; margin-left: 8px; border-bottom: 1px solid var(--rule); position: relative;
+  }
+  .hour .slot::after{
+    content: ""; position: absolute; left: 0; top: 50%; width: 11px;
+    border-top: 1px dotted var(--rule-strong);
+  }
+
+  /* ---------- priorities ---------- */
+  .priority{ display: flex; align-items: flex-end; gap: 9px; flex: 1; min-height: .34in; }
+  .priority .n{
+    font-family: "Bodoni Moda", "Didot", Georgia, serif;
+    font-size: 15pt; line-height: 1; color: var(--dusk-3); width: 15px; flex: none;
+  }
+  .priority:nth-child(3) .n{ color: var(--dusk-2); }
+  .priority:nth-child(4) .n{ color: var(--dusk-1); }
+  .priority .slot{ flex: 1; border-bottom: 1px solid var(--rule-strong); height: 100%; }
+
+  /* ---------- tasks ---------- */
+  .tasks{ flex: 1; display: flex; flex-direction: column; min-height: 0; }
+  .task{ flex: 1; display: flex; align-items: flex-end; gap: 8px; min-height: .26in; }
+  .task .box{ width: 9px; height: 9px; border: 1px solid var(--rule-strong); flex: none; margin-bottom: 4px; }
+  .task .slot{ flex: 1; border-bottom: 1px solid var(--rule); height: 100%; }
+  .key{ display: flex; gap: 12px; padding: 5px 0 2px; }
+  .key span{ display: flex; align-items: center; gap: 4px; }
+  .key i{ width: 8px; height: 8px; border: 1px solid var(--rule-strong); display: inline-block; font-style: normal; }
+  .key i.doing{ background: linear-gradient(135deg, var(--dusk-1), var(--dusk-2)); border-color: var(--dusk-2); }
+  .key i.done{ background: var(--ink); border-color: var(--ink); }
+
+  /* ---------- meals + mood pair ---------- */
+  .pair{ display: grid; grid-template-columns: 1.42fr 1fr; gap: 0 .26in; }
+  .meal{ display: flex; align-items: flex-end; gap: 8px; height: .32in; }
+  .meal .lbl{
+    width: .58in; flex: none;
+    font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+    font-weight: 600; text-transform: uppercase; letter-spacing: .09em;
+    font-size: 7.2pt; color: var(--ink-soft); padding-bottom: 3px;
+  }
+  .meal .slot{ flex: 1; border-bottom: 1px solid var(--rule); height: 100%; }
+
+  .scale{ display: flex; align-items: center; gap: 7px; padding: 7px 0 4px; }
+  .scale .pip{ width: 15px; height: 15px; border-radius: 50%; border: 1px solid var(--rule-strong); }
+  .scale .pip.hi{ border-color: var(--dusk-3); }
+  .scale-ends{ display: flex; justify-content: space-between; padding-bottom: 9px; }
+  .words{ display: flex; gap: 7px; }
+  .words .slot{ flex: 1; border-bottom: 1px solid var(--rule); height: 17px; }
+
+  /* ---------- gratitude ---------- */
+  .grat{ display: flex; align-items: flex-end; gap: 8px; flex: 1; min-height: .3in; }
+  .grat .mk{ width: 5px; height: 5px; flex: none; margin-bottom: 4px; transform: rotate(45deg); border: 1px solid var(--dusk-4); }
+  .grat .slot{ flex: 1; border-bottom: 1px solid var(--rule); height: 100%; }
+
+  /* ---------- footer ---------- */
+  .footer{
+    display: flex; align-items: flex-end; gap: 10px;
+    border-top: 1.4px solid var(--ink); margin-top: 13px; padding-top: 9px;
+  }
+  .footer .slot{ flex: 1; border-bottom: 1px solid var(--rule); height: 15px; }
+  .footer .mark{
+    font-family: "Bodoni Moda", "Didot", Georgia, serif; font-style: italic;
+    font-size: 8.5pt; color: var(--ink-faint); white-space: nowrap;
+  }
+
+  /* ---------- screen-only chrome ---------- */
+  .print-btn{
+    position: fixed; top: 18px; right: 18px; z-index: 5;
+    font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+    font-weight: 700; text-transform: uppercase; letter-spacing: .14em; font-size: 9pt;
+    color: var(--sheet); background: var(--ink); border: 0; border-radius: 999px;
+    padding: 9px 18px; cursor: pointer;
+  }
+  .print-btn:focus-visible{ outline: 2px solid var(--dusk-3); outline-offset: 3px; }
+  .caption{
+    color: var(--backdrop-ink); font-size: 8.5pt; letter-spacing: .04em;
+    text-align: center; padding-top: 14px;
+  }
+  .stage{ display: flex; flex-direction: column; align-items: center; }
+
+  @media print{
+    body{ background: #fff; padding: 0; display: block; }
+    .sheet{ box-shadow: none; }
+    .print-btn, .caption{ display: none; }
+  }
+</style>
+
+<button class="print-btn" type="button" onclick="window.print()">Print sheet</button>
+
+<div class="stage">
+<div class="sheet">
+
+  <header class="masthead">
+    <div class="wordmark">
+      <span class="eyebrow">Daily Planner &nbsp;&middot;&nbsp; 6 AM &ndash; 10 PM</span>
+      <h1>Today,<br><em>in order.</em></h1>
+      <span class="rule"></span>
+    </div>
+    <div class="datestack">
+      <div class="fieldrow">
+        <span class="eyebrow">Date</span><span class="blank date"></span>
+        <span class="eyebrow">Wk</span><span class="blank week"></span>
+      </div>
+      <div class="daychips" aria-label="Day of week">
+        <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="body">
+
+    <!-- ================= LEFT: schedule ================= -->
+    <section class="col">
+      <div class="sechead">
+        <span class="eyebrow">Schedule</span>
+        <span class="line"></span>
+        <span class="hint">Dotted tick = half hour</span>
+      </div>
+
+      <div class="schedule">
+        <svg class="rail" viewBox="0 0 6 600" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="dusk" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%"   stop-color="#f2a65a"></stop>
+              <stop offset="34%"  stop-color="#ee6c4d"></stop>
+              <stop offset="68%"  stop-color="#c43e7a"></stop>
+              <stop offset="100%" stop-color="#4b2e83"></stop>
+            </linearGradient>
+            <filter id="grain" x="0" y="0" width="100%" height="100%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" result="n"></feTurbulence>
+              <feColorMatrix in="n" type="saturate" values="0"></feColorMatrix>
+            </filter>
+          </defs>
+          <rect x="0" y="0" width="6" height="600" fill="url(#dusk)"></rect>
+          <rect x="0" y="0" width="6" height="600" fill="#ffffff" filter="url(#grain)" opacity="0.22"></rect>
+        </svg>
+
+        <div class="hours">
+          <div class="band morning"><span class="dot"></span>Morning<span class="line"></span></div>
+          <div class="hour"><span class="t">6 AM</span><span class="slot"></span></div>
+          <div class="hour"><span class="t">7</span><span class="slot"></span></div>
+          <div class="hour"><span class="t">8</span><span class="slot"></span></div>
+          <div class="hour"><span class="t">9</span><span class="slot"></span></div>
+          <div class="hour"><span class="t">10</span><span class="slot"></span></div>
+          <div class="hour"><span class="t">11</span><span class="slot"></span></div>
+
+          <div class="band afternoon"><span class="dot"></span>Afternoon<span class="line"></span></div>
+          <div class="hour"><span class="t">12 PM</span><span class="slot"></span></div>
+          <div class="hour"><span class="t">1</span><span class="slot"></span></div>
+          <div class="hour"><span class="t">2</span><span class="slot"></span></div>
+          <div class="hour"><span class="t">3</span><span class="slot"></span></div>
+          <div class="hour"><span class="t">4</span><span class="slot"></span></div>
+
+          <div class="band evening"><span class="dot"></span>Evening<span class="line"></span></div>
+          <div class="hour"><span class="t">5 PM</span><span class="slot"></span></div>
+          <div class="hour"><span class="t">6</span><span class="slot"></span></div>
+          <div class="hour"><span class="t">7</span><span class="slot"></span></div>
+          <div class="hour"><span class="t">8</span><span class="slot"></span></div>
+          <div class="hour"><span class="t">9</span><span class="slot"></span></div>
+          <div class="hour"><span class="t">10</span><span class="slot"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= RIGHT: the rest ================= -->
+    <div class="col">
+
+      <section class="col" style="flex:0 0 auto">
+        <div class="sechead">
+          <span class="eyebrow">Today's Priorities</span>
+          <span class="line"></span>
+          <span class="hint">Ranked &mdash; one is the one</span>
+        </div>
+        <div class="priority"><span class="n">1</span><span class="slot"></span></div>
+        <div class="priority"><span class="n">2</span><span class="slot"></span></div>
+        <div class="priority"><span class="n">3</span><span class="slot"></span></div>
+      </section>
+
+      <section class="col tasks" style="padding-top:16px">
+        <div class="sechead">
+          <span class="eyebrow">Tasks</span>
+          <span class="line"></span>
+        </div>
+        <div class="key">
+          <span class="hint"><i></i> To do</span>
+          <span class="hint"><i class="doing"></i> Started</span>
+          <span class="hint"><i class="done"></i> Done</span>
+          <span class="hint"><i style="border:0">&rarr;</i> Moved</span>
+        </div>
+        <div class="task"><span class="box"></span><span class="slot"></span></div>
+        <div class="task"><span class="box"></span><span class="slot"></span></div>
+        <div class="task"><span class="box"></span><span class="slot"></span></div>
+        <div class="task"><span class="box"></span><span class="slot"></span></div>
+        <div class="task"><span class="box"></span><span class="slot"></span></div>
+        <div class="task"><span class="box"></span><span class="slot"></span></div>
+        <div class="task"><span class="box"></span><span class="slot"></span></div>
+        <div class="task"><span class="box"></span><span class="slot"></span></div>
+      </section>
+
+      <div class="pair" style="padding-top:13px">
+        <section>
+          <div class="sechead"><span class="eyebrow">Meals</span><span class="line"></span></div>
+          <div class="meal"><span class="lbl">Morning</span><span class="slot"></span></div>
+          <div class="meal"><span class="lbl">Midday</span><span class="slot"></span></div>
+          <div class="meal"><span class="lbl">Evening</span><span class="slot"></span></div>
+          <div class="meal"><span class="lbl">Between</span><span class="slot"></span></div>
+        </section>
+
+        <section>
+          <div class="sechead"><span class="eyebrow">Mood</span><span class="line"></span></div>
+          <div class="scale">
+            <span class="pip"></span><span class="pip"></span><span class="pip"></span>
+            <span class="pip"></span><span class="pip hi"></span>
+          </div>
+          <div class="scale-ends"><span class="hint">Flat</span><span class="hint">Lit up</span></div>
+          <div class="hint" style="padding-bottom:5px">The day in three words</div>
+          <div class="words">
+            <span class="slot"></span><span class="slot"></span><span class="slot"></span>
+          </div>
+        </section>
+      </div>
+
+      <section class="col" style="padding-top:13px; flex:0 0 auto">
+        <div class="sechead">
+          <span class="eyebrow">Gratitude</span>
+          <span class="line"></span>
+          <span class="hint">Small counts</span>
+        </div>
+        <div class="grat"><span class="mk"></span><span class="slot"></span></div>
+        <div class="grat"><span class="mk"></span><span class="slot"></span></div>
+        <div class="grat"><span class="mk"></span><span class="slot"></span></div>
+      </section>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <span class="eyebrow">Tomorrow's first move</span>
+    <span class="slot"></span>
+    <span class="mark">One sheet, one day.</span>
+  </footer>
+
+</div>
+<p class="caption">US Letter, 8.5 &times; 11 in &nbsp;&middot;&nbsp; print at 100% scale, no margins</p>
+</div>
