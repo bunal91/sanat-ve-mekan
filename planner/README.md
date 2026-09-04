@@ -1,9 +1,9 @@
 # Printable planner shop — product packs
 
-Four digital-download products, all generated from HTML templates: **Dusk Ladder**, a one-page
+Five digital-download products, all generated from HTML templates: **Dusk Ladder**, a one-page
 daily planner; **Party Line**, a nine-page birthday planning kit; **Confetti Club**, a nine-page
-kids' party kit; and **Golden Hour**, an eleven-page milestone birthday kit. Each has its own
-design language rather than a recoloured shell. Every variant a listing
+kids' party kit; **Golden Hour**, an eleven-page milestone birthday kit; and **First Move**, an eight-page
+ADHD-friendly planning set. Each has its own design language rather than a recoloured shell. Every variant a listing
 needs — page sizes, colourways, languages, print and fillable — comes out of one build.
 
 No Canva templates: the products are sold as fillable PDFs, so the listing promises typing into
@@ -15,6 +15,7 @@ planner/
 ├── birthday.py                   # birthday kit: nine pages, multi-page fillable, same plumbing
 ├── kids.py                       # kids' party kit: same plumbing, its own design language
 ├── milestone.py                  # milestone kit (50th/60th/90th): eleven pages
+├── adhd.py                       # ADHD-friendly set: eight pages, fewer slots on purpose
 ├── src/
 │   ├── planner.template.html    # the daily planner (single source of truth)
 │   ├── readme.template.html     # the "start here" sheet the buyer opens first (both products)
@@ -23,11 +24,13 @@ planner/
 ├── birthday-planner.html        # browser/preview copy (Letter · party · 9 pages)
 ├── kids-party-planner.html      # browser/preview copy (Letter · confetti · 9 pages)
 ├── milestone-planner.html       # browser/preview copy (Letter · gold · 11 pages)
+├── adhd-planner.html            # browser/preview copy (Letter · signal · 8 pages)
 ├── etsy-rehberi.html            # Turkish guide: shop setup, listing copy, pricing, niche
 ├── dist/                        # daily planner — 16 PDFs, 2 start-here sheets, 3 images, ZIPs
 ├── dist-birthday/               # birthday kit — 8 PDFs, start-here sheet, 3 images, ZIPs
 ├── dist-kids/                   # kids' kit — same shape
-└── dist-milestone/              # milestone kit — same shape
+├── dist-milestone/              # milestone kit — same shape
+└── dist-adhd/                   # ADHD set — same shape
 ```
 
 ## Build
@@ -42,6 +45,7 @@ python3 birthday.py --only letter-party
 python3 birthday.py --extras         # start-here sheet + listing images + ZIPs
 python3 kids.py                      # the kids' party kit
 python3 milestone.py                 # the milestone kit
+python3 adhd.py                      # the ADHD-friendly set
 ```
 
 Chromium (headless) does the rendering and prints the PDFs at exact page size; `PLANNER_WORK`
@@ -93,6 +97,19 @@ and thank-yous. 839 form fields, four variants.
 
 Its identity is the quiet one: Cormorant Garamond and Jost, gold and garnet on white, roman
 numeral page numbers, a hairline-and-gold rule under each masthead.
+
+## The ADHD-friendly set
+
+Eight pages, and the constraints are the product: one real task a day (two more only if that one
+is done), a first-move box for the single physical action that starts it, a brain dump with a
+five-column triage that includes *let it go*, a task-breakdown page, a guess-versus-actual time
+page that teaches you your own multiplier, a light week, morning and evening anchors, a weekly
+maintenance grid, and a wins page that records what actually happened.
+
+Type is deliberately larger than the other kits and set in Atkinson Hyperlegible, a face designed
+for legibility, with Bricolage Grotesque for display. Colour is used only as a signal: teal for
+what to do now, amber for what is parked on purpose, plum for how the day felt, green for done.
+The delivery sheet states plainly that this is a planning tool and not medical advice.
 
 ## How the fillable PDFs are made
 
