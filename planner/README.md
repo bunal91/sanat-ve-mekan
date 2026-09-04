@@ -1,7 +1,8 @@
 # Printable planner shop — product packs
 
-Two digital-download products, both generated from HTML templates: **Dusk Ladder**, a one-page
-daily planner, and **Party Line**, a nine-page birthday planning kit. Every variant a listing
+Three digital-download products, all generated from HTML templates: **Dusk Ladder**, a one-page
+daily planner; **Party Line**, a nine-page birthday planning kit; and **Confetti Club**, a
+nine-page kids' party kit with its own, louder design language. Every variant a listing
 needs — page sizes, colourways, languages, print and fillable — comes out of one build.
 
 No Canva templates: the products are sold as fillable PDFs, so the listing promises typing into
@@ -11,15 +12,18 @@ fields, not editing the design.
 planner/
 ├── build.py                     # daily planner: HTML -> PDFs, form fields, listing images, ZIPs
 ├── birthday.py                   # birthday kit: nine pages, multi-page fillable, same plumbing
+├── kids.py                       # kids' party kit: same plumbing, its own design language
 ├── src/
 │   ├── planner.template.html    # the daily planner (single source of truth)
 │   ├── readme.template.html     # the "start here" sheet the buyer opens first (both products)
 │   └── mockup.template.html     # 2000x2000 Etsy listing images
 ├── daily-planner.html           # browser/preview copy (Letter · dusk · EN)
 ├── birthday-planner.html        # browser/preview copy (Letter · party · 9 pages)
+├── kids-party-planner.html      # browser/preview copy (Letter · confetti · 9 pages)
 ├── etsy-rehberi.html            # Turkish guide: shop setup, listing copy, pricing, niche
 ├── dist/                        # daily planner — 16 PDFs, 2 start-here sheets, 3 images, ZIPs
-└── dist-birthday/               # birthday kit — 8 PDFs, start-here sheet, 3 images, ZIPs
+├── dist-birthday/               # birthday kit — 8 PDFs, start-here sheet, 3 images, ZIPs
+└── dist-kids/                   # kids' kit — same shape
 ```
 
 ## Build
@@ -32,6 +36,7 @@ python3 build.py --extras            # start-here sheets + listing images + ZIPs
 python3 birthday.py                  # the birthday kit, every size and colourway
 python3 birthday.py --only letter-party
 python3 birthday.py --extras         # start-here sheet + listing images + ZIPs
+python3 kids.py                      # the kids' party kit
 ```
 
 Chromium (headless) does the rendering and prints the PDFs at exact page size; `PLANNER_WORK`
@@ -59,6 +64,18 @@ Its identity is deliberately a sibling, not a copy, of the daily planner: Fraunc
 display line, Archivo for labels, IBM Plex Sans for data. Blue carries structure, citrus the
 celebration, coral what is running out of time, mint what is settled — the countdown bands run
 blue → mint → citrus → coral → ink as the party gets closer.
+
+## The kids' party kit
+
+Nine pages aimed at the parent, not the party: guest list with the grown-up's phone number and a
+pick-up time per child, a framed allergy page with a "every helper has read this" tick, games with
+minutes and an energy meter, goodie bags costed per bag, and a party day built as six beats inside
+two hours. 721 form fields, four variants.
+
+Its design is deliberately louder: Fredoka and Nunito, a seeded confetti scatter in each masthead
+(deterministic, so reprints match), balloon countdown markers, dotted rules, pill section labels.
+Five colours with jobs — pink the birthday kid, sun food, sky people, lime done, grape time.
+`kids.py` reuses `birthday.py`'s measurement, AcroForm and packaging helpers.
 
 ## How the fillable PDFs are made
 

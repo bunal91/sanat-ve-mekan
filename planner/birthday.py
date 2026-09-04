@@ -520,8 +520,9 @@ MEASURE_JS = """
 """
 
 def measure(src, size, work, name):
-    S = SIZES[size]
-    path = os.path.join(work, f"measure-bd-{name}.html")
+    """size may be a key of this kit's SIZES, or a size dict from another kit."""
+    S = SIZES[size] if isinstance(size, str) else size
+    path = os.path.join(work, f"measure-{name}.html")
     open(path, "w", encoding="utf-8").write(src + MEASURE_JS)
     for _ in range(4):
         dom = B.chrome("--dump-dom", f"--window-size={S['wpx']},{S['hpx']}", "file://" + path).stdout
@@ -530,12 +531,15 @@ def measure(src, size, work, name):
             return json.loads(html.unescape(m.group(1)))
     raise SystemExit(f"could not measure fields for {name}")
 
-def make_fillable(design_pdf, fields, size, out_pdf, colorway):
+def make_fillable(design_pdf, fields, size, out_pdf, colorway, pages=None):
+    """Draw the AcroForm widgets page by page, then merge the design over them."""
     from reportlab.pdfgen import canvas
     from reportlab.lib.colors import HexColor
     from pypdf import PdfReader, PdfWriter
 
-    S, C = SIZES[size], COLORWAYS[colorway]
+    S = SIZES[size] if isinstance(size, str) else size
+    C = COLORWAYS[colorway] if isinstance(colorway, str) else colorway
+    pages = pages or len(PAGE_FNS)
     px2pt = 0.75
     overlay = out_pdf + ".overlay"
     c = canvas.Canvas(overlay, pagesize=(S["wpt"], S["hpt"]))
@@ -545,7 +549,7 @@ def make_fillable(design_pdf, fields, size, out_pdf, colorway):
     for page, name, ftype, x, y, w, h, fs in fields:
         by_page.setdefault(page, []).append((name, ftype, x, y, w, h, fs))
 
-    for page in range(len(PAGE_FNS)):
+    for page in range(pages):
         for name, ftype, x, y, w, h, fs in by_page.get(page, []):
             x, y, w, h = x * px2pt, y * px2pt, w * px2pt, h * px2pt
             if ftype == "check":
@@ -734,20 +738,22 @@ def build_mockups(work):
         print(f"  listing image {name}")
 
 
-def package():
+def package(dist=None, stem="Party-Line-Birthday-Kit"):
+    """Zip a kit the way an Etsy listing takes it: complete, Letter, A4."""
     import zipfile
-    out = os.path.join(DIST, "etsy")
+    dist = dist or DIST
+    out = os.path.join(dist, "etsy")
     os.makedirs(out, exist_ok=True)
-    pdfs = sorted(f for f in os.listdir(DIST) if f.endswith(".pdf"))
+    pdfs = sorted(f for f in os.listdir(dist) if f.endswith(".pdf"))
     for zname, members in {
-        "Party-Line-Birthday-Kit-COMPLETE.zip": pdfs,
-        "Party-Line-Birthday-Kit-Letter.zip": [f for f in pdfs if "letter" in f or f.startswith("00-")],
-        "Party-Line-Birthday-Kit-A4.zip": [f for f in pdfs if "a4" in f or f.startswith("00-")],
+        f"{stem}-COMPLETE.zip": pdfs,
+        f"{stem}-Letter.zip": [f for f in pdfs if "letter" in f or f.startswith("00-")],
+        f"{stem}-A4.zip": [f for f in pdfs if "a4" in f or f.startswith("00-")],
     }.items():
         zpath = os.path.join(out, zname)
         with zipfile.ZipFile(zpath, "w", zipfile.ZIP_DEFLATED) as z:
             for f in members:
-                z.write(os.path.join(DIST, f), f)
+                z.write(os.path.join(dist, f), f)
         print(f"  {zname}  ({os.path.getsize(zpath)/1e6:.1f} MB, {len(members)} files)")
 
 def main():
