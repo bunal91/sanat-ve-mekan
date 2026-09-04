@@ -1,9 +1,10 @@
 # Printable planner shop — product packs
 
-Five digital-download products, all generated from HTML templates: **Dusk Ladder**, a one-page
+Six digital-download products, all generated from HTML templates: **Dusk Ladder**, a one-page
 daily planner; **Party Line**, a nine-page birthday planning kit; **Confetti Club**, a nine-page
-kids' party kit; **Golden Hour**, an eleven-page milestone birthday kit; and **First Move**, an eight-page
-ADHD-friendly planning set. Each has its own design language rather than a recoloured shell. Every variant a listing
+kids' party kit; **Golden Hour**, an eleven-page milestone birthday kit; **First Move**, an eight-page
+ADHD-friendly planning set; and **Same Shape**, a nine-page autism-friendly set. Each has its own
+design language rather than a recoloured shell. Every variant a listing
 needs — page sizes, colourways, languages, print and fillable — comes out of one build.
 
 No Canva templates: the products are sold as fillable PDFs, so the listing promises typing into
@@ -16,6 +17,7 @@ planner/
 ├── kids.py                       # kids' party kit: same plumbing, its own design language
 ├── milestone.py                  # milestone kit (50th/60th/90th): eleven pages
 ├── adhd.py                       # ADHD-friendly set: eight pages, fewer slots on purpose
+├── autism.py                     # autism-friendly set: nine pages, same shape every page
 ├── src/
 │   ├── planner.template.html    # the daily planner (single source of truth)
 │   ├── readme.template.html     # the "start here" sheet the buyer opens first (both products)
@@ -25,12 +27,14 @@ planner/
 ├── kids-party-planner.html      # browser/preview copy (Letter · confetti · 9 pages)
 ├── milestone-planner.html       # browser/preview copy (Letter · gold · 11 pages)
 ├── adhd-planner.html            # browser/preview copy (Letter · signal · 8 pages)
+├── autism-planner.html          # browser/preview copy (Letter · calm · 9 pages)
 ├── etsy-rehberi.html            # Turkish guide: shop setup, listing copy, pricing, niche
 ├── dist/                        # daily planner — 16 PDFs, 2 start-here sheets, 3 images, ZIPs
 ├── dist-birthday/               # birthday kit — 8 PDFs, start-here sheet, 3 images, ZIPs
 ├── dist-kids/                   # kids' kit — same shape
 ├── dist-milestone/              # milestone kit — same shape
-└── dist-adhd/                   # ADHD set — same shape
+├── dist-adhd/                   # ADHD set — same shape
+└── dist-autism/                 # autism-friendly set — same shape
 ```
 
 ## Build
@@ -46,6 +50,7 @@ python3 birthday.py --extras         # start-here sheet + listing images + ZIPs
 python3 kids.py                      # the kids' party kit
 python3 milestone.py                 # the milestone kit
 python3 adhd.py                      # the ADHD-friendly set
+python3 autism.py                    # the autism-friendly set
 ```
 
 Chromium (headless) does the rendering and prints the PDFs at exact page size; `PLANNER_WORK`
@@ -110,6 +115,20 @@ Type is deliberately larger than the other kits and set in Atkinson Hyperlegible
 for legibility, with Bricolage Grotesque for display. Colour is used only as a signal: teal for
 what to do now, amber for what is parked on purpose, plum for how the day felt, green for done.
 The delivery sheet states plainly that this is a planning tool and not medical advice.
+
+## The autism-friendly set
+
+Nine pages built on predictability rather than motivation, and deliberately not a recolour of the
+ADHD set: the day as a sequence with a first/then box, a week where every day has the same three
+parts, a page for when the plan changes (what changed, what it affects, and in its own frame what
+stays exactly the same), a sensory page naming the two ends of each sense, a hard-moment plan
+written on a calm day including what does *not* help, prepared sentences with worked examples,
+appointment preparation, decisions made once, and a weekly energy budget.
+
+Every page carries the identical layout rhythm, the same three muted colours (sage = as expected,
+clay = something changed, lavender = how it felt) and a key in the footer. Type is Lexend with IBM
+Plex Mono for times and labels; language is literal, with no idioms. The delivery sheet states
+that it is a planning tool and not medical advice, and that any page can be ignored or rewritten.
 
 ## How the fillable PDFs are made
 
