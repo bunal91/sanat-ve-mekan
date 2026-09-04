@@ -1,0 +1,102 @@
+<meta charset="utf-8">
+<title>{{DOC_TITLE}}</title>
+{{FONTS}}
+<style>
+  :root{ --ink:#23181f; --soft:#6e6068; --faint:#9a8f94; --rule:#e3dcde;
+         --s1:#f2a65a; --s2:#ee6c4d; --s3:#c43e7a; --s4:#4b2e83; }
+  @page{ size: {{PAGE_W}} {{PAGE_H}}; margin: 0; }
+  html, body{ margin:0; }
+  body{ background:#efeaee; color:var(--ink);
+        font-family:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+        display:flex; justify-content:center; padding:24px 16px; }
+  .sheet{ width:{{PAGE_W}}; height:{{PAGE_H}}; box-sizing:border-box; padding:{{PAD}};
+          background:#fff; display:flex; flex-direction:column;
+          -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .eyebrow{ font-family:"Barlow Condensed","Arial Narrow",sans-serif; font-weight:700;
+            text-transform:uppercase; letter-spacing:.18em; font-size:8pt; color:var(--soft); }
+  h1{ font-family:"Bodoni Moda","Didot",Georgia,serif; font-weight:500; font-size:34pt;
+      line-height:.9; margin:8px 0 0; }
+  h1 em{ font-style:italic; font-weight:400; }
+  .rule{ width:1.55in; height:3px; border-radius:2px; margin-top:20px;
+         background:linear-gradient(90deg,var(--s1),var(--s2) 38%,var(--s3) 72%,var(--s4)); }
+  .lede{ font-size:10pt; line-height:1.5; color:var(--soft); max-width:5.2in; margin-top:12px; }
+  .steps{ display:flex; flex-direction:column; gap:16px; margin-top:24px; flex:1;
+          justify-content:space-between; }
+  .step{ display:grid; grid-template-columns:.34in 1fr; gap:0 12px; align-items:start; }
+  .step .n{ font-family:"Bodoni Moda","Didot",Georgia,serif; font-size:17pt; line-height:.9;
+            color:var(--s3); }
+  .step h2{ font-family:"Barlow Condensed","Arial Narrow",sans-serif; font-weight:700;
+            text-transform:uppercase; letter-spacing:.14em; font-size:9.5pt; margin:2px 0 5px; }
+  .step p{ margin:0; font-size:9.6pt; line-height:1.5; }
+  .step p + p{ margin-top:5px; }
+  .step ul{ margin:5px 0 0; padding-left:15px; font-size:9.6pt; line-height:1.5; }
+  .step li{ margin-bottom:3px; }
+  .link{ display:inline-block; margin-top:7px; padding:8px 15px; border-radius:999px;
+         background:var(--ink); color:#fff; text-decoration:none; font-size:9.5pt;
+         font-family:"Barlow Condensed","Arial Narrow",sans-serif; font-weight:700;
+         text-transform:uppercase; letter-spacing:.12em; }
+  .files{ border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);
+          padding:9px 0; margin-top:4px; }
+  .files div{ display:flex; justify-content:space-between; gap:14px; font-size:9pt;
+              padding:3px 0; color:var(--soft); }
+  .files div b{ color:var(--ink); font-weight:500; }
+  .footer{ border-top:1.4px solid var(--ink); padding-top:10px; margin-top:14px;
+           display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
+  .footer .fine{ font-size:8pt; color:var(--faint); line-height:1.45; max-width:5in; }
+  .footer .mark{ font-family:"Bodoni Moda","Didot",Georgia,serif; font-style:italic;
+                 font-size:9pt; color:var(--faint); white-space:nowrap; }
+  @media print{ body{ background:#fff; padding:0; display:block; } }
+</style>
+<div class="sheet">
+  <span class="eyebrow">{{L_BRAND}}</span>
+  <h1>{{L_TITLE}}</h1>
+  <span class="rule"></span>
+  <p class="lede">{{L_LEDE}}</p>
+
+  <div class="steps">
+    <div class="step">
+      <span class="n">1</span>
+      <div>
+        <h2>{{L_S1_H}}</h2>
+        <div class="files">{{FILE_LIST}}</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="n">2</span>
+      <div>
+        <h2>{{L_S2_H}}</h2>
+        <p>{{L_S2_P}}</p>
+        <a class="link" href="{{CANVA_LINK}}">{{L_S2_BTN}}</a>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="n">3</span>
+      <div>
+        <h2>{{L_S3_H}}</h2>
+        <p>{{L_S3_P}}</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="n">4</span>
+      <div>
+        <h2>{{L_S4_H}}</h2>
+        <ul>{{PRINT_TIPS}}</ul>
+      </div>
+    </div>
+    <div class="step">
+      <span class="n">5</span>
+      <div>
+        <h2>{{L_S5_H}}</h2>
+        <p>{{L_S5_P}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p class="fine">{{L_LICENSE}}</p>
+    <span class="mark">{{L_MARK}}</span>
+  </div>
+</div>

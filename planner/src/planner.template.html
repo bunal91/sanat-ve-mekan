@@ -1,20 +1,18 @@
 <meta charset="utf-8">
-<title>Dusk Ladder Daily Planner</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<title>{{DOC_TITLE}}</title>
+{{FONTS}}
 <style>
   :root{
     --sheet:#ffffff;
-    --ink:#23181f;
-    --ink-soft:#6e6068;
-    --ink-faint:#9a8f94;
-    --rule:#e3dcde;
-    --rule-strong:#c7bcc1;
-    --dusk-1:#f2a65a;
-    --dusk-2:#ee6c4d;
-    --dusk-3:#c43e7a;
-    --dusk-4:#4b2e83;
+    --ink:{{INK}};
+    --ink-soft:{{INK_SOFT}};
+    --ink-faint:{{INK_FAINT}};
+    --rule:{{RULE}};
+    --rule-strong:{{RULE_STRONG}};
+    --dusk-1:{{S1}};
+    --dusk-2:{{S2}};
+    --dusk-3:{{S3}};
+    --dusk-4:{{S4}};
     --backdrop:#efeaee;
     --backdrop-ink:#6e6068;
   }
@@ -23,7 +21,7 @@
   }
   :root[data-theme="dark"]{ --backdrop:#17141a; --backdrop-ink:#8b8189; }
 
-  @page{ size: 8.5in 11in; margin: 0; }
+  @page{ size: {{PAGE_W}} {{PAGE_H}}; margin: 0; }
   html, body{ margin: 0; }
 
   body{
@@ -35,9 +33,9 @@
   }
 
   .sheet{
-    width: 8.5in; height: 11in;
+    width: {{PAGE_W}}; height: {{PAGE_H}};
     box-sizing: border-box;
-    padding: .5in .55in .45in;
+    padding: {{PAD}};
     background: var(--sheet);
     display: flex; flex-direction: column;
     box-shadow: 0 18px 44px rgba(35,24,31,.18);
@@ -63,7 +61,7 @@
   .wordmark{ display: flex; flex-direction: column; gap: 7px; }
   .wordmark h1{
     font-family: "Bodoni Moda", "Didot", Georgia, serif;
-    font-weight: 500; font-size: 41pt; line-height: .84; margin: 0; letter-spacing: -.005em;
+    font-weight: 500; font-size: {{DISPLAY_SIZE}}; line-height: .84; margin: 0; letter-spacing: -.005em;
   }
   .wordmark h1 em{ font-style: italic; font-weight: 400; }
   .wordmark .rule{
@@ -112,7 +110,7 @@
 
   .hour{ flex: 1; display: flex; align-items: stretch; min-height: 0; }
   .hour .t{
-    width: .42in; flex: none; padding-top: 2px;
+    width: {{HOUR_W}}; flex: none; padding-top: 2px;
     font-size: 7.6pt; font-weight: 500; font-variant-numeric: tabular-nums;
     color: var(--ink-soft); text-align: right; letter-spacing: .01em;
   }
@@ -145,7 +143,7 @@
   .pair{ display: grid; grid-template-columns: 1.42fr 1fr; gap: 0 .26in; }
   .meal{ display: flex; align-items: flex-end; gap: 8px; height: .32in; }
   .meal .lbl{
-    width: .58in; flex: none;
+    width: {{MEAL_W}}; flex: none;
     font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
     font-weight: 600; text-transform: uppercase; letter-spacing: .09em;
     font-size: 7.2pt; color: var(--ink-soft); padding-bottom: 3px;
@@ -189,26 +187,26 @@
     .sheet{ box-shadow: none; }
     .print-btn, .caption{ display: none; }
   }
-  
+  {{EXTRA_CSS}}
 </style>
 
-<button class="print-btn" type="button" onclick="window.print()">Print sheet</button>
+<button class="print-btn" type="button" onclick="window.print()">{{L_PRINT}}</button>
 
 <div class="stage">
 <div class="sheet">
 
   <header class="masthead">
     <div class="wordmark">
-      <span class="eyebrow">Daily Planner &nbsp;&middot;&nbsp; 6 AM &ndash; 10 PM</span>
-      <h1>Today,<br><em>in order.</em></h1>
+      <span class="eyebrow">{{L_EYEBROW}}</span>
+      <h1>{{L_TITLE}}</h1>
       <span class="rule"></span>
     </div>
     <div class="datestack">
       <div class="fieldrow">
-        <span class="eyebrow">Date</span><span class="blank date" data-field="date"></span>
-        <span class="eyebrow">Wk</span><span class="blank week" data-field="week"></span>
+        <span class="eyebrow">{{L_DATE}}</span><span class="blank date" data-field="date"></span>
+        <span class="eyebrow">{{L_WEEK}}</span><span class="blank week" data-field="week"></span>
       </div>
-      <div class="daychips" aria-label="Day of week"><span data-field="day_1" data-ftype="check">M</span><span data-field="day_2" data-ftype="check">T</span><span data-field="day_3" data-ftype="check">W</span><span data-field="day_4" data-ftype="check">T</span><span data-field="day_5" data-ftype="check">F</span><span data-field="day_6" data-ftype="check">S</span><span data-field="day_7" data-ftype="check">S</span></div>
+      <div class="daychips" aria-label="{{L_DAYS}}">{{DAY_CHIPS}}</div>
     </div>
   </header>
 
@@ -216,19 +214,19 @@
 
     <section class="col">
       <div class="sechead">
-        <span class="eyebrow">Schedule</span>
+        <span class="eyebrow">{{L_SCHEDULE}}</span>
         <span class="line"></span>
-        <span class="hint">Dotted tick = half hour</span>
+        <span class="hint">{{L_TICK}}</span>
       </div>
 
       <div class="schedule">
         <svg class="rail" viewBox="0 0 6 600" preserveAspectRatio="none" aria-hidden="true">
           <defs>
             <linearGradient id="dusk" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%"   stop-color="#f2a65a"></stop>
-              <stop offset="34%"  stop-color="#ee6c4d"></stop>
-              <stop offset="68%"  stop-color="#c43e7a"></stop>
-              <stop offset="100%" stop-color="#4b2e83"></stop>
+              <stop offset="0%"   stop-color="{{S1}}"></stop>
+              <stop offset="34%"  stop-color="{{S2}}"></stop>
+              <stop offset="68%"  stop-color="{{S3}}"></stop>
+              <stop offset="100%" stop-color="{{S4}}"></stop>
             </linearGradient>
             <filter id="grain" x="0" y="0" width="100%" height="100%">
               <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" result="n"></feTurbulence>
@@ -236,28 +234,9 @@
             </filter>
           </defs>
           <rect x="0" y="0" width="6" height="600" fill="url(#dusk)"></rect>
-          <rect x="0" y="0" width="6" height="600" fill="#ffffff" filter="url(#grain)" opacity="0.22"></rect>
+          <rect x="0" y="0" width="6" height="600" fill="#ffffff" filter="url(#grain)" opacity="{{GRAIN}}"></rect>
         </svg>
-        <div class="hours"><div class="band morning"><span class="dot"></span>Morning<span class="line"></span></div>
-<div class="hour"><span class="t">6 AM</span><span class="slot" data-field="hour_01"></span></div>
-<div class="hour"><span class="t">7</span><span class="slot" data-field="hour_02"></span></div>
-<div class="hour"><span class="t">8</span><span class="slot" data-field="hour_03"></span></div>
-<div class="hour"><span class="t">9</span><span class="slot" data-field="hour_04"></span></div>
-<div class="hour"><span class="t">10</span><span class="slot" data-field="hour_05"></span></div>
-<div class="hour"><span class="t">11</span><span class="slot" data-field="hour_06"></span></div>
-<div class="band afternoon"><span class="dot"></span>Afternoon<span class="line"></span></div>
-<div class="hour"><span class="t">12 PM</span><span class="slot" data-field="hour_07"></span></div>
-<div class="hour"><span class="t">1</span><span class="slot" data-field="hour_08"></span></div>
-<div class="hour"><span class="t">2</span><span class="slot" data-field="hour_09"></span></div>
-<div class="hour"><span class="t">3</span><span class="slot" data-field="hour_10"></span></div>
-<div class="hour"><span class="t">4</span><span class="slot" data-field="hour_11"></span></div>
-<div class="band evening"><span class="dot"></span>Evening<span class="line"></span></div>
-<div class="hour"><span class="t">5 PM</span><span class="slot" data-field="hour_12"></span></div>
-<div class="hour"><span class="t">6</span><span class="slot" data-field="hour_13"></span></div>
-<div class="hour"><span class="t">7</span><span class="slot" data-field="hour_14"></span></div>
-<div class="hour"><span class="t">8</span><span class="slot" data-field="hour_15"></span></div>
-<div class="hour"><span class="t">9</span><span class="slot" data-field="hour_16"></span></div>
-<div class="hour"><span class="t">10</span><span class="slot" data-field="hour_17"></span></div></div>
+        <div class="hours">{{HOUR_ROWS}}</div>
       </div>
     </section>
 
@@ -265,9 +244,9 @@
 
       <section class="col" style="flex:0 0 auto">
         <div class="sechead">
-          <span class="eyebrow">Today&#8217;s Priorities</span>
+          <span class="eyebrow">{{L_PRIORITIES}}</span>
           <span class="line"></span>
-          <span class="hint">Ranked &mdash; one is the one</span>
+          <span class="hint">{{L_PRIORITIES_HINT}}</span>
         </div>
         <div class="priority p1"><span class="n">1</span><span class="slot" data-field="priority_1"></span></div>
         <div class="priority p2"><span class="n">2</span><span class="slot" data-field="priority_2"></span></div>
@@ -275,24 +254,24 @@
       </section>
 
       <section class="col tasks" style="padding-top:16px">
-        <div class="sechead"><span class="eyebrow">Tasks</span><span class="line"></span></div>
+        <div class="sechead"><span class="eyebrow">{{L_TASKS}}</span><span class="line"></span></div>
         <div class="key">
-          <span class="hint"><i></i> To do</span>
-          <span class="hint"><i class="doing"></i> Started</span>
-          <span class="hint"><i class="done"></i> Done</span>
-          <span class="hint"><i style="border:0">&rarr;</i> Moved</span>
+          <span class="hint"><i></i> {{L_TODO}}</span>
+          <span class="hint"><i class="doing"></i> {{L_STARTED}}</span>
+          <span class="hint"><i class="done"></i> {{L_DONE}}</span>
+          <span class="hint"><i style="border:0">&rarr;</i> {{L_MOVED}}</span>
         </div>
-        <div class="task"><span class="box" data-field="task_1_box" data-ftype="check"></span><span class="slot" data-field="task_1"></span></div><div class="task"><span class="box" data-field="task_2_box" data-ftype="check"></span><span class="slot" data-field="task_2"></span></div><div class="task"><span class="box" data-field="task_3_box" data-ftype="check"></span><span class="slot" data-field="task_3"></span></div><div class="task"><span class="box" data-field="task_4_box" data-ftype="check"></span><span class="slot" data-field="task_4"></span></div><div class="task"><span class="box" data-field="task_5_box" data-ftype="check"></span><span class="slot" data-field="task_5"></span></div><div class="task"><span class="box" data-field="task_6_box" data-ftype="check"></span><span class="slot" data-field="task_6"></span></div><div class="task"><span class="box" data-field="task_7_box" data-ftype="check"></span><span class="slot" data-field="task_7"></span></div><div class="task"><span class="box" data-field="task_8_box" data-ftype="check"></span><span class="slot" data-field="task_8"></span></div>
+        {{TASK_ROWS}}
       </section>
 
       <div class="pair" style="padding-top:16px">
         <section>
-          <div class="sechead"><span class="eyebrow">Meals</span><span class="line"></span></div>
-          <div class="meal"><span class="lbl">Morning</span><span class="slot" data-field="meal_1"></span></div><div class="meal"><span class="lbl">Midday</span><span class="slot" data-field="meal_2"></span></div><div class="meal"><span class="lbl">Evening</span><span class="slot" data-field="meal_3"></span></div><div class="meal"><span class="lbl">Between</span><span class="slot" data-field="meal_4"></span></div>
+          <div class="sechead"><span class="eyebrow">{{L_MEALS}}</span><span class="line"></span></div>
+          {{MEAL_ROWS}}
         </section>
 
         <section>
-          <div class="sechead"><span class="eyebrow">Mood</span><span class="line"></span></div>
+          <div class="sechead"><span class="eyebrow">{{L_MOOD}}</span><span class="line"></span></div>
           <div class="scale">
             <span class="pip" data-field="mood_1" data-ftype="check"></span>
             <span class="pip" data-field="mood_2" data-ftype="check"></span>
@@ -300,8 +279,8 @@
             <span class="pip" data-field="mood_4" data-ftype="check"></span>
             <span class="pip hi" data-field="mood_5" data-ftype="check"></span>
           </div>
-          <div class="scale-ends"><span class="hint">Flat</span><span class="hint">Lit up</span></div>
-          <div class="hint" style="padding-bottom:5px">The day in three words</div>
+          <div class="scale-ends"><span class="hint">{{L_MOOD_LOW}}</span><span class="hint">{{L_MOOD_HIGH}}</span></div>
+          <div class="hint" style="padding-bottom:5px">{{L_THREE_WORDS}}</div>
           <div class="words">
             <span class="slot" data-field="word_1"></span>
             <span class="slot" data-field="word_2"></span>
@@ -312,9 +291,9 @@
 
       <section class="col" style="padding-top:16px; flex:0 0 auto">
         <div class="sechead">
-          <span class="eyebrow">Gratitude</span>
+          <span class="eyebrow">{{L_GRATITUDE}}</span>
           <span class="line"></span>
-          <span class="hint">Small counts</span>
+          <span class="hint">{{L_GRATITUDE_HINT}}</span>
         </div>
         <div class="grat"><span class="mk"></span><span class="slot" data-field="gratitude_1"></span></div>
         <div class="grat"><span class="mk"></span><span class="slot" data-field="gratitude_2"></span></div>
@@ -325,11 +304,11 @@
   </div>
 
   <footer class="footer">
-    <span class="eyebrow">Tomorrow&#8217;s first move</span>
+    <span class="eyebrow">{{L_TOMORROW}}</span>
     <span class="slot" data-field="tomorrow"></span>
-    <span class="mark">One sheet, one day.</span>
+    <span class="mark">{{L_MARK}}</span>
   </footer>
 
 </div>
-<p class="caption">US Letter, 8.5 &times; 11 in &nbsp;&middot;&nbsp; print at 100% scale, no margins</p>
+<p class="caption">{{L_CAPTION}}</p>
 </div>

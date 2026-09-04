@@ -1,25 +1,65 @@
-# Dusk Ladder — Daily Planner
+# Dusk Ladder — Daily Planner (Etsy product pack)
 
-A printable one-page daily planner, US Letter (8.5 × 11 in).
+A printable one-page daily planner, built once and generated into every variant a digital
+download listing needs: two page sizes, two colourways, two languages, print and fillable.
 
-| File | What it is |
-| --- | --- |
-| `daily-planner.html` | Source. Open in a browser and print at **100% scale, margins: none**. Fonts load from Google Fonts. |
-| `daily-planner.pdf` | Print-ready export with fonts embedded — works offline, no browser setup. |
+```
+planner/
+├── build.py                     # generator: HTML -> PDFs, form fields, listing images, ZIPs
+├── src/
+│   ├── planner.template.html    # the planner itself (single source of truth)
+│   ├── readme.template.html     # the "start here" sheet the buyer opens first
+│   └── mockup.template.html     # 2000x2000 Etsy listing images
+├── daily-planner.html           # browser/preview copy (Letter · dusk · EN)
+├── etsy-rehberi.html            # Turkish guide: turning this into an Etsy shop
+└── dist/                        # generated — 16 planner PDFs, 2 start-here sheets,
+    └── etsy/                    #   3 listing images, and the 5-file Etsy upload set
+```
 
-## Sections
+## Build
 
-Date + day-of-week chips · Schedule 6 AM–10 PM (hour rows, dotted half-hour ticks, banded
-morning / afternoon / evening) · Today's Priorities (ranked 1–3) · Tasks (8 rows with a
-to do / started / done / moved key) · Meals · Mood (5-point scale + three words) ·
-Gratitude · Tomorrow's first move.
+```bash
+pip install pypdf reportlab          # only needed for the fillable PDFs
+python3 build.py                     # everything
+python3 build.py --only a4-mono-tr   # one variant
+python3 build.py --extras            # start-here sheets + listing images + ZIPs
+python3 build.py --canva-link "https://www.canva.com/design/..."   # bake the template link in
+```
+
+Chromium (headless) does the rendering and prints the PDFs at exact page size; `PLANNER_WORK`
+sets the scratch directory. Fonts are pulled once from Google Fonts and cached, then inlined as
+data URIs so every PDF is self-contained.
+
+## What gets generated
+
+| Output | Count | Notes |
+| --- | --- | --- |
+| `daily-planner-{size}-{colourway}-{lang}-print.pdf` | 8 | Letter + A4 · dusk + mono · EN + TR |
+| `daily-planner-…-fillable.pdf` | 8 | same pages, 61 AcroForm fields (lines, task boxes, day chips, mood scale) |
+| `00-START-HERE-{lang}.pdf` | 2 | file list, Canva link button, print settings, licence |
+| `listing-0{1,2,3}.png` | 3 | 2000×2000 listing images |
+| `etsy/*.zip` | 3 | complete / Letter / A4 — with the two sheets, exactly Etsy's 5-file limit |
+
+## How the fillable PDFs are made
+
+The template marks every writable slot with `data-field`. `build.py` lays the page out in
+headless Chromium at print geometry, reads back each rectangle with `getBoundingClientRect`,
+converts CSS px to PDF points, and draws the AcroForm widgets there with ReportLab; the
+Chromium-rendered design is then merged on top (annotations always paint above page content).
+Add a section to the template and its form fields follow automatically.
 
 ## Design notes
 
-- **Type:** Bodoni Moda for the display line and the priority numerals; Barlow Condensed for
-  tracked uppercase labels; IBM Plex Sans with tabular numerals for the hour ladder.
-- **Color:** black ink on white paper, with one accent — a dusk ramp (amber → coral → rose →
-  violet) running top to bottom of the schedule rail, so the gradient reports time of day
-  rather than decorating. Band dots reuse the ramp's stops.
-- **Print:** `@page { size: 8.5in 11in; margin: 0 }` with `print-color-adjust: exact`, so the
-  rail and swatches survive the printer. Everything else is hairline rules — light on ink.
+- **Type:** Bodoni Moda for the display line and priority numerals; Barlow Condensed for tracked
+  uppercase labels; IBM Plex Sans with tabular numerals for the hour ladder. All three are SIL OFL.
+- **Colour:** black on white, with one accent — a dusk ramp (amber → coral → rose → violet) down
+  the schedule rail, so the gradient reports time of day rather than decorating. The `mono`
+  colourway swaps it for graphite to save ink; the layout is identical.
+- **Print:** `@page` at exact size with zero margins and `print-color-adjust: exact`. Every
+  PDF is verified as a single page at 612×792 pt (Letter) or 595×842 pt (A4).
+
+## Licence
+
+The design is original. Fonts are SIL OFL — embedding and commercial use are permitted, selling
+the font files themselves is not. The buyer-facing licence (personal use, no resale) is stated on
+the START-HERE sheet.

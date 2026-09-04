@@ -1,0 +1,417 @@
+<meta charset="utf-8">
+<title>Planlayıcıdan Etsy Dükkanına</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+
+<style>
+  :root{
+    --paper:#fbf9fa;
+    --card:#ffffff;
+    --ink:#23181f;
+    --soft:#6e6068;
+    --faint:#9a8f94;
+    --rule:#e6dfe2;
+    --rule-soft:#efe9ec;
+    --s1:#f2a65a;
+    --s2:#ee6c4d;
+    --s3:#c43e7a;
+    --s4:#4b2e83;
+    --ok:#2f7d5d;
+    --warn:#b4571f;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#151118; --card:#1d1821; --ink:#f3edf0; --soft:#b5a9b0; --faint:#8a7f87;
+      --rule:#332b36; --rule-soft:#272130;
+      --s1:#f6b56f; --s2:#f2805f; --s3:#df5f95; --s4:#8f6fd6;
+      --ok:#63b892; --warn:#e39257;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#151118; --card:#1d1821; --ink:#f3edf0; --soft:#b5a9b0; --faint:#8a7f87;
+    --rule:#332b36; --rule-soft:#272130;
+    --s1:#f6b56f; --s2:#f2805f; --s3:#df5f95; --s4:#8f6fd6;
+    --ok:#63b892; --warn:#e39257;
+  }
+
+  body{
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 15.5px;
+    line-height: 1.62;
+  }
+  .wrap{ max-width: 940px; margin: 0 auto; padding: 54px 24px 96px; }
+
+  .eyebrow{
+    font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+    font-weight: 700; text-transform: uppercase; letter-spacing: .2em;
+    font-size: 12px; color: var(--soft);
+  }
+  h1{
+    font-family: "Bodoni Moda", "Didot", Georgia, serif;
+    font-weight: 500; font-size: clamp(40px, 7vw, 62px); line-height: .96;
+    margin: 14px 0 0; text-wrap: balance; letter-spacing: -.01em;
+  }
+  h1 em{ font-style: italic; font-weight: 400; }
+  .ramp{
+    width: 210px; height: 5px; border-radius: 3px; margin: 26px 0 0;
+    background: linear-gradient(90deg, var(--s1), var(--s2) 38%, var(--s3) 72%, var(--s4));
+  }
+  .lede{ color: var(--soft); max-width: 62ch; margin: 22px 0 0; font-size: 17px; }
+
+  h2{
+    font-family: "Bodoni Moda", "Didot", Georgia, serif;
+    font-weight: 500; font-size: 30px; line-height: 1.12; margin: 0;
+    text-wrap: balance;
+  }
+  h3{
+    font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+    font-weight: 700; text-transform: uppercase; letter-spacing: .14em;
+    font-size: 13.5px; margin: 0 0 8px; color: var(--ink);
+  }
+  p{ margin: 10px 0 0; }
+  a{ color: var(--s3); text-underline-offset: 3px; }
+  a:focus-visible{ outline: 2px solid var(--s3); outline-offset: 3px; border-radius: 3px; }
+  code{
+    font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: .88em;
+    background: var(--rule-soft); padding: 1px 5px; border-radius: 4px;
+  }
+  b, strong{ font-weight: 600; }
+
+  section{ margin-top: 58px; }
+  .sec-head{ display: flex; align-items: baseline; gap: 14px; border-top: 1.5px solid var(--ink); padding-top: 14px; }
+  .sec-head .num{
+    font-family: "Bodoni Moda", "Didot", Georgia, serif; font-size: 22px;
+    color: var(--s3); line-height: 1; flex: none; width: 30px;
+  }
+
+  ul, ol{ margin: 12px 0 0; padding-left: 20px; }
+  li{ margin-bottom: 7px; }
+  li::marker{ color: var(--faint); }
+
+  .grid{ display: grid; gap: 16px; margin-top: 20px; }
+  .g3{ grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .g2{ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+
+  .card{
+    background: var(--card); border: 1px solid var(--rule); border-radius: 3px;
+    padding: 18px 18px 20px;
+  }
+  .card .tag{
+    font-family: "Barlow Condensed", "Arial Narrow", sans-serif; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .14em; font-size: 11.5px; color: var(--faint);
+  }
+  .card h4{
+    font-family: "Barlow Condensed", "Arial Narrow", sans-serif; font-weight: 700;
+    font-size: 19px; letter-spacing: .02em; margin: 6px 0 6px;
+  }
+  .card p{ margin: 0; font-size: 14.5px; color: var(--soft); }
+  .card .rail{ height: 4px; width: 40px; border-radius: 3px; margin-bottom: 12px; }
+
+  .tablewrap{ overflow-x: auto; margin-top: 20px; }
+  table{ border-collapse: collapse; width: 100%; min-width: 520px; font-size: 14.5px; }
+  th, td{ text-align: left; padding: 9px 12px 9px 0; border-bottom: 1px solid var(--rule-soft); vertical-align: top; }
+  th{
+    font-family: "Barlow Condensed", "Arial Narrow", sans-serif; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .12em; font-size: 11.5px; color: var(--soft);
+    border-bottom: 1px solid var(--rule);
+  }
+  td.num{ font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  .steps{ counter-reset: step; margin-top: 22px; display: flex; flex-direction: column; gap: 20px; }
+  .step{ display: grid; grid-template-columns: 34px 1fr; gap: 0 16px; }
+  .step .dot{
+    counter-increment: step; width: 26px; height: 26px; border-radius: 50%;
+    border: 1.5px solid var(--rule); display: flex; align-items: center; justify-content: center;
+    font-family: "Barlow Condensed", "Arial Narrow", sans-serif; font-weight: 700; font-size: 14px;
+    color: var(--soft); margin-top: 2px;
+  }
+  .step .dot::before{ content: counter(step); }
+  .step p{ margin-top: 4px; color: var(--soft); }
+
+  .copyblock{
+    background: var(--card); border: 1px solid var(--rule); border-left: 4px solid var(--s3);
+    border-radius: 3px; padding: 16px 18px; margin-top: 16px;
+    font-size: 14.5px; line-height: 1.6;
+  }
+  .copyblock .tag{
+    font-family: "Barlow Condensed", "Arial Narrow", sans-serif; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .14em; font-size: 11.5px; color: var(--faint);
+    display: block; margin-bottom: 8px;
+  }
+  .tags{ display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; }
+  .tags span{
+    border: 1px solid var(--rule); border-radius: 999px; padding: 5px 11px;
+    font-size: 13px; color: var(--soft); background: var(--card);
+  }
+  .note{
+    margin-top: 18px; padding: 14px 16px; border-radius: 3px;
+    background: var(--rule-soft); font-size: 14.5px; color: var(--soft);
+  }
+  .note b{ color: var(--ink); }
+
+  footer{
+    margin-top: 70px; border-top: 1.5px solid var(--ink); padding-top: 16px;
+    display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    color: var(--faint); font-size: 13.5px;
+  }
+  footer .mark{ font-family: "Bodoni Moda", "Didot", Georgia, serif; font-style: italic; font-size: 15px; }
+</style>
+
+<div class="wrap">
+
+  <header>
+    <span class="eyebrow">Etsy yol haritası · Dusk Ladder</span>
+    <h1>Planlayıcıyı<br><em>dükkâna çevirmek.</em></h1>
+    <div class="ramp"></div>
+    <p class="lede">Tasarım ve dosyalar hazır: 16 PDF, iki boyut, iki dil, iki renk yolu, artı
+    alıcıya gidecek karşılama sayfası ve üç ilan görseli. Bundan sonrası dükkânı kurmak,
+    Canva şablonunu bağlamak ve ilanı yazmak. Sırasıyla aşağıda.</p>
+  </header>
+
+  <section>
+    <div class="sec-head"><span class="num">1</span><h2>Etsy'de "editable" tam olarak ne demek</h2></div>
+    <p>Alıcıların "editable planner" derken kastettiği tek bir şey değil — üç ayrı katman var ve
+    ilanında hangisini verdiğini net yazmazsan iade/mesaj trafiği oradan çıkar.</p>
+
+    <div class="grid g3">
+      <div class="card">
+        <div class="rail" style="background:var(--s1)"></div>
+        <span class="tag">Katman 1</span>
+        <h4>Basılabilir PDF</h4>
+        <p>Yazdır, elle doldur. En kolay ürün, en düşük beklenti. Paketteki
+        <code>-print.pdf</code> dosyaları.</p>
+      </div>
+      <div class="card">
+        <div class="rail" style="background:var(--s2)"></div>
+        <span class="tag">Katman 2</span>
+        <h4>Doldurulabilir PDF</h4>
+        <p>Satırlara bilgisayardan yazılır (form alanları). Tasarım değişmez, sadece içerik girilir.
+        <code>-fillable.pdf</code> dosyaları — 61 alan hazır.</p>
+      </div>
+      <div class="card">
+        <div class="rail" style="background:var(--s3)"></div>
+        <span class="tag">Katman 3</span>
+        <h4>Canva şablonu</h4>
+        <p><b>Etsy'de "editable"ın asıl karşılığı bu.</b> Alıcı başlıkları, renkleri, bölümleri
+        değiştirir. Bir şablon linkiyle teslim edilir.</p>
+      </div>
+    </div>
+
+    <div class="note"><b>Neden Canva?</b> Alıcının bilgisayarına program kurmasını gerektirmez,
+    ücretsiz hesapla çalışır, telefonda bile açılır. Corjl ve Templett daha korumalı alternatifler
+    ama aylık ücretli; ilk dükkân için Canva doğru başlangıç.</div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="num">2</span><h2>Elindeki paket</h2></div>
+    <p>Depoda <code>planner/dist/</code> klasöründe; Etsy'ye yüklenecek hâli
+    <code>planner/dist/etsy/</code> içinde paketli.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Dosya</th><th>Ne işe yarar</th><th>Nereye</th></tr></thead>
+        <tbody>
+          <tr><td>8 × <code>-print.pdf</code></td><td>Letter + A4, renkli + mono, EN + TR</td><td>ZIP içinde alıcıya</td></tr>
+          <tr><td>8 × <code>-fillable.pdf</code></td><td>Aynı sayfalar, 61 doldurulabilir alanla</td><td>ZIP içinde alıcıya</td></tr>
+          <tr><td><code>00-START-HERE-en/tr.pdf</code></td><td>Karşılama sayfası: Canva linki, baskı ayarları, lisans</td><td>ZIP + ayrıca tek dosya</td></tr>
+          <tr><td><code>listing-01…03.png</code></td><td>2000×2000 ilan görselleri</td><td>İlan görsel alanı</td></tr>
+          <tr><td>3 × <code>.zip</code></td><td>Komple / Letter / A4 paketleri</td><td>İlanın dijital dosyaları</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note"><b>Etsy sınırı:</b> ilan başına en fazla <b>5 dosya</b>, her biri en fazla
+    <b>20 MB</b>. <code>dist/etsy/</code> tam olarak 5 dosya: üç ZIP + iki karşılama sayfası.
+    Toplam 3 MB, sınırın çok altında.</div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="num">3</span><h2>Canva şablonunu kurmak</h2></div>
+    <p>Şablon linki Canva'da bir tasarım kurup <b>Paylaş → Şablon linki</b> almakla oluşur.
+    Tasarımı oraya iki yoldan taşıyabilirsin.</p>
+
+    <div class="grid g2">
+      <div class="card">
+        <span class="tag">A yolu — hızlı</span>
+        <h4>PDF'i içe aktar</h4>
+        <p>Canva → Oluştur → Dosya yükle → <code>daily-planner-letter-dusk-en-print.pdf</code>.
+        Metinler çoğunlukla düzenlenebilir metin kutusu olarak gelir. <b>Kontrol et:</b> başlığa
+        çift tıkla, yazı değişiyor mu; yazı tipleri doğru mu; degrade şerit yerinde mi.
+        Geliyorsa 10 dakikada bitti.</p>
+      </div>
+      <div class="card">
+        <span class="tag">B yolu — garantili</span>
+        <h4>Canva'da yeniden kur</h4>
+        <p>PDF içe aktarma metinleri eğrilere çevirirse (olabiliyor), sayfayı sıfırdan kurmak
+        45 dakika sürer. Aşağıdaki spesifikasyon tam olarak bunun için: ölçüler, renkler,
+        yazı tipleri birebir.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:26px">Canva spesifikasyonu</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Öğe</th><th>Yazı tipi</th><th>Boyut</th><th>Renk</th></tr></thead>
+        <tbody>
+          <tr><td>Sayfa</td><td>—</td><td class="num">21,6 × 27,9 cm (Letter) / 21 × 29,7 (A4)</td><td>#FFFFFF</td></tr>
+          <tr><td>Kenar boşluğu</td><td>—</td><td class="num">üst/yan 1,3 cm · alt 1,1 cm</td><td>—</td></tr>
+          <tr><td>Başlık ("Today, in order.")</td><td>Bodoni Moda 500 / italik</td><td class="num">41 pt · satır aralığı 0,84</td><td>#23181F</td></tr>
+          <tr><td>Bölüm etiketleri</td><td>Barlow Condensed 700, BÜYÜK HARF</td><td class="num">7,6 pt · harf aralığı 0,18em</td><td>#6E6068</td></tr>
+          <tr><td>İpucu metinleri</td><td>Barlow Condensed 500, BÜYÜK HARF</td><td class="num">6,9 pt · 0,11em</td><td>#9A8F94</td></tr>
+          <tr><td>Saat rakamları</td><td>IBM Plex Sans 500</td><td class="num">7,6 pt</td><td>#6E6068</td></tr>
+          <tr><td>Çizgiler</td><td>—</td><td class="num">1 px</td><td>#E3DCDE (öncelik satırları #C7BCC1)</td></tr>
+          <tr><td>Degrade şerit (sol ray)</td><td>—</td><td class="num">genişlik 5 px, dikey</td><td>#F2A65A → #EE6C4D (%34) → #C43E7A (%68) → #4B2E83</td></tr>
+          <tr><td>Mono sürüm rampası</td><td>—</td><td class="num">aynı</td><td>#B9B9C0 → #8E8E97 → #5A5A63 → #22222A</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:14px">Üç yazı tipi de Canva'nın kütüphanesinde var ve üçü de
+    <b>SIL Open Font License</b> — ticari kullanım ve PDF'e gömme serbest.</p>
+
+    <div class="note"><b>Şablon linkini alırken:</b> Paylaş → Daha fazla → <b>Şablon linki</b>
+    (Template link). Düz "düzenleme linki" verme — o, herkesi <i>senin</i> dosyanın üstünde
+    çalıştırır. Şablon linki her alıcıya kendi kopyasını açar. Linki aldıktan sonra
+    <code>build.py --canva-link "https://..."</code> ile karşılama sayfalarını yeniden üret;
+    link PDF'in içindeki butona gömülür.</div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="num">4</span><h2>Dükkânı açmak</h2></div>
+    <div class="steps">
+      <div class="step"><span class="dot"></span><div><h3>Hesap ve dükkân adı</h3>
+        <p>etsy.com/sell → dükkân dili İngilizce, para birimi <b>USD</b>, konum Türkiye.
+        Ad 4–20 karakter, boşluksuz; alan adı ve Instagram kullanıcı adı da boşta olsun.</p></div></div>
+      <div class="step"><span class="dot"></span><div><h3>Ödeme kurulumu</h3>
+        <p>Etsy Payments Türkiye'de aktif; ödemeler TL banka hesabına geliyor. Kimlik ve
+        banka bilgisi doğrulaması ilk satıştan önce bitsin.</p></div></div>
+      <div class="step"><span class="dot"></span><div><h3>İlan tipi: dijital</h3>
+        <p>Yeni ilan → "Digital" işaretle → <b>Instant download</b>. Kargo bölümü tamamen kapanır.
+        <code>dist/etsy/</code> içindeki 5 dosyayı yükle.</p></div></div>
+      <div class="step"><span class="dot"></span><div><h3>Görseller</h3>
+        <p>İlk görsel <code>listing-01-hero.png</code>. Etsy 10 görsel + 1 video alıyor; boş
+        bırakma, aşağıdaki plan var.</p></div></div>
+      <div class="step"><span class="dot"></span><div><h3>Yayınla ve test et</h3>
+        <p>Kendi ilanını başka bir hesapla satın al (0,20 $ + komisyon). İndirme akışını,
+        dosya adlarını, karşılama sayfasındaki linki alıcının gördüğü gibi gör.</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="num">5</span><h2>İlan metni — kopyala, yapıştır</h2></div>
+
+    <div class="copyblock">
+      <span class="tag">Başlık (140 karakter sınırı)</span>
+      Daily Planner Printable, Editable Canva Template, Hourly Schedule 6AM–10PM, Undated Daily
+      Organizer, Letter + A4, Fillable PDF, Instant Download
+    </div>
+
+    <div class="copyblock">
+      <span class="tag">Açıklamanın ilk üç satırı — arama sonuçlarında görünen kısım</span>
+      One page for the whole day: an hourly schedule from 6 AM to 10 PM, three ranked priorities,
+      a task list with a status key, meals, a mood scale and gratitude lines.<br>
+      Editable in Canva (free account) — change any word, heading or colour.<br>
+      Also included: fillable PDFs you can type straight onto, in US Letter and A4, colour and ink-saving mono.
+    </div>
+
+    <h3 style="margin-top:28px">13 etiket — her biri 20 karakterin altında</h3>
+    <div class="tags">
+      <span>daily planner</span><span>printable planner</span><span>editable planner</span>
+      <span>canva template</span><span>hourly planner</span><span>undated planner</span>
+      <span>daily schedule</span><span>adhd planner</span><span>productivity page</span>
+      <span>letter a4 planner</span><span>gratitude planner</span><span>minimalist planner</span>
+      <span>digital download</span>
+    </div>
+
+    <div class="note">Açıklamanın sonuna mutlaka üç blok koy: <b>Ne alıyorsun</b> (dosya listesi),
+    <b>Nasıl düzenlenir</b> (Canva adımları), <b>Lisans</b> (kişisel kullanım, yeniden satış yok).
+    İade politikası: dijital ürünlerde iade kabul edilmiyor — bunu açıkça yaz, Etsy destek
+    tarafında seni koruyan şey bu.</div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="num">6</span><h2>Fiyat ve gerçek kazanç</h2></div>
+    <p>Bu kategoride tek sayfa planlayıcılar 3–6 $, çok dosyalı paketler 8–15 $ bandında.
+    Senin paketin 16 PDF + Canva şablonu — <b>9,50 $</b> makul bir açılış; ilk hafta
+    %30 kuponla 6,65 $'a çekip ilk yorumları toplamak işe yarıyor.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Kalem</th><th>Oran</th><th class="num">9,50 $ satışta</th></tr></thead>
+        <tbody>
+          <tr><td>İlan ücreti (4 ay / satış başına yenilenir)</td><td>0,20 $</td><td class="num">0,20 $</td></tr>
+          <tr><td>İşlem komisyonu</td><td>%6,5</td><td class="num">0,62 $</td></tr>
+          <tr><td>Ödeme işlem ücreti</td><td>ülkeye göre değişir</td><td class="num">~0,50 $</td></tr>
+          <tr><td>Kur dönüşümü (USD → TL)</td><td>%2,5</td><td class="num">0,24 $</td></tr>
+          <tr><td>Dijital hizmet vergisi payı (TR)</td><td>~%1,1</td><td class="num">0,10 $</td></tr>
+          <tr><td><b>Cebe kalan (yaklaşık)</b></td><td>—</td><td class="num"><b>~7,80 $</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note"><b>Bu oranları doğrula.</b> Etsy ücretleri ülkeye göre değişiyor ve sık
+    güncelleniyor; buradakiler 2026 başı için dolaşan değerler. Kesin rakam Etsy'nin güncel
+    ücretler sayfasında ve dükkân panelinde. Vergi tarafı (şahıs şirketi, e-ihracat istisnası,
+    beyan) bir mali müşavire sorulacak konu — burada tavsiye vermiyorum.</div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="num">7</span><h2>On görsel planı</h2></div>
+    <p>Etsy'de dönüşümü belirleyen tek şey ilk görsel. Sıra önemli:</p>
+    <ol>
+      <li><b>Hero</b> — ürün + "Printable · Editable" (hazır: <code>listing-01-hero.png</code>)</li>
+      <li><b>Neler var</b> — paket içeriği listesi (hazır: <code>listing-02-included.png</code>)</li>
+      <li><b>Renk yolları</b> — renkli ve mono yan yana (hazır: <code>listing-03-colourways.png</code>)</li>
+      <li>Doldurulmuş örnek — gerçek bir günün yazılmış hâli, en ikna edici görsel</li>
+      <li>Canva ekran görüntüsü — "başlıkları böyle değiştiriyorsun"</li>
+      <li>Yakın çekim — saat merdiveni ve degrade ray</li>
+      <li>Ortam fotoğrafı — masada, kalem ve kahveyle (telefonla çekilebilir)</li>
+      <li>Boyut karşılaştırması — Letter ve A4</li>
+      <li>Türkçe sürüm — ayrı pazara sinyal</li>
+      <li>Nasıl çalışır — 3 adımlık indirme/düzenleme/yazdırma şeması</li>
+    </ol>
+    <div class="note">4 ve 7 numaralı görseller için elinde ürün var: doldurulabilir PDF'i
+    kendi gününle doldurup ekran görüntüsü al, bir kopyasını da yazdırıp masada fotoğrafla.
+    Stok mockup'lardan çok daha iyi dönüyor.</div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="num">8</span><h2>Lisans ve haklar</h2></div>
+    <div class="grid g3">
+      <div class="card"><span class="tag">Yazı tipleri</span><h4>Serbest</h4>
+        <p>Bodoni Moda, Barlow Condensed, IBM Plex Sans — hepsi SIL OFL. Ürüne gömmek ve
+        ürünü satmak serbest; yazı tipi dosyalarını tek başına satmak değil.</p></div>
+      <div class="card"><span class="tag">Tasarım</span><h4>Senin</h4>
+        <p>Sayfa sıfırdan kuruldu; hazır şablon, stok grafik ya da başka bir dükkânın öğesi
+        kullanılmadı. Telif sana ait.</p></div>
+      <div class="card"><span class="tag">Alıcı lisansı</span><h4>Kişisel kullanım</h4>
+        <p>Karşılama sayfasında yazılı: sınırsız kendi çıktısı, yeniden satış ve paylaşım yok.
+        Ticari lisansı ayrı ürün olarak satabilirsin.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="num">9</span><h2>İlk 30 gün</h2></div>
+    <p>Tek ilanla dükkân görünmez. Etsy araması çeşitliliği ödüllendiriyor — hedef 10 ilan,
+    hepsi aynı tasarım dilinden türesin. Aynı <code>build.py</code> ile üretilebilecekler:</p>
+    <ul>
+      <li><b>Haftalık planlayıcı</b> — 7 sütun, aynı degrade ray hafta boyunca ilerler</li>
+      <li><b>Saatsiz günlük</b> — saat merdiveni yerine serbest not alanı</li>
+      <li><b>Yemek planlayıcı + market listesi</b> — öğün bölümü ana sayfa olur</li>
+      <li><b>Alışkanlık takibi</b> — 31 gün × 8 alışkanlık, aynı pip ölçeği</li>
+      <li><b>Ruh hali / şükran günlüğü</b> — mevcut iki bölümün genişlemişi</li>
+      <li><b>Proje sayfası</b> — öncelik + görev bölümlerinden</li>
+      <li><b>Aylık takvim</b> — bant mantığı haftalara döner</li>
+      <li><b>Komple paket</b> — hepsi tek ilanda, en yüksek sepet tutarı</li>
+    </ul>
+    <p>Ritim: haftada 2–3 yeni ilan, her biri kendi görselleriyle. Dördüncü haftada
+    hangi anahtar kelimenin trafik getirdiği görünür; Etsy panelindeki arama terimlerine göre
+    başlıkları güncelle.</p>
+  </section>
+
+  <footer>
+    <span>Dosyalar: <code>planner/dist/</code> · Üretim: <code>python3 planner/build.py</code></span>
+    <span class="mark">Bir gün, bir sayfa.</span>
+  </footer>
+</div>
