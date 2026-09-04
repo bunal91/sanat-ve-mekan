@@ -102,15 +102,18 @@ TASK_ROWS = 8
 
 # --------------------------------------------------------------------------- fonts
 
-def google_fonts_css(embed: bool) -> str:
+def google_fonts_css(embed: bool, url: str = None, cache_name: str = "faces.css") -> str:
     """Return the <link> tag, or a <style> block with the latin faces inlined."""
+    GF_URL_ = url or GF_URL
     if not embed:
-        return GF_LINK
+        return ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
+                '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
+                f'<link rel="stylesheet" href="{GF_URL_}">')
     os.makedirs(CACHE, exist_ok=True)
-    cached = os.path.join(CACHE, "faces.css")
+    cached = os.path.join(CACHE, cache_name)
     if os.path.exists(cached):
         return open(cached, encoding="utf-8").read()
-    css = subprocess.run(["curl", "-sS", "-A", UA, GF_URL],
+    css = subprocess.run(["curl", "-sS", "-A", UA, GF_URL_],
                          capture_output=True, text=True, check=True).stdout
     blocks = re.findall(r"/\*\s*([\w\-\[\]]+)\s*\*/\s*(@font-face\s*\{.*?\})", css, re.S)
     out = "\n".join(b for name, b in blocks if name in ("latin", "latin-ext"))
@@ -289,15 +292,15 @@ README = {
         s1="What is in your download",
         files=[("8 print PDFs", "Letter + A4 &middot; Dusk + Mono &middot; EN + TR"),
                ("8 fillable PDFs", "type straight onto every line, then print or keep it on file"),
-               ("1 Canva template link", "change any word, heading, colour or section"),
-               ("This guide", "printing and editing in one page")],
-        s2="Edit it in Canva", s2p="Open the link below in a browser where you are signed in to "
-           "Canva (free account is enough). Canva makes a copy in your own account &mdash; edit "
-           "the headings, swap the wording, change the colours, then Share &rarr; Download &rarr; PDF Print.",
-        s2btn="Open the template",
-        s3="Type on it instead", s3p="Prefer to keep it digital? Open any file ending in "
-           "<b>-fillable.pdf</b> in Adobe Acrobat Reader (free) or a tablet annotation app, click a "
-           "line and type. Tick the task boxes, the day of the week and the mood scale with a click.",
+               ("61 form fields per page", "lines, task boxes, the day of the week, the mood scale"),
+               ("This guide", "printing and typing in one page")],
+        s2="Type on it", s2p="Open any file ending in <b>-fillable.pdf</b> in Adobe Acrobat Reader "
+           "(free, Mac and Windows) or a tablet app like GoodNotes or Xodo. Click any line and type; "
+           "tick the task boxes, the day of the week and the mood scale with a click. "
+           "<b>Save a copy</b> before you start, then keep one file per day.",
+        s3="Or print and write", s3p="Prefer pen and paper? The files ending in <b>-print.pdf</b> are "
+           "the same page without the form fields &mdash; cleaner for printing in a batch. Print a "
+           "week at a time and keep them on a clipboard.",
         s4="Print it well",
         tips=["Paper: plain A4 or US Letter, 90&ndash;120 gsm holds ink best",
               "Scale: <b>100% / Actual size</b> &mdash; never &ldquo;Fit to page&rdquo;",
@@ -319,15 +322,15 @@ README = {
         s1="Paketin i&ccedil;inde ne var",
         files=[("8 bask&#305; PDF&#8217;i", "Letter + A4 &middot; Renkli + Mono &middot; EN + TR"),
                ("8 doldurulabilir PDF", "her sat&#305;ra do&#287;rudan yaz&#305;n, sonra yazd&#305;r&#305;n ya da dijital saklay&#305;n"),
-               ("1 Canva &#351;ablon linki", "her kelimeyi, ba&#351;l&#305;&#287;&#305;, rengi ve b&ouml;l&uuml;m&uuml; de&#287;i&#351;tirin"),
-               ("Bu k&#305;lavuz", "yazd&#305;rma ve d&uuml;zenleme tek sayfada")],
-        s2="Canva&#8217;da d&uuml;zenleyin", s2p="A&#351;a&#287;&#305;daki linki Canva hesab&#305;n&#305;zda a&ccedil;&#305;k oldu&#287;unuz bir "
-           "taray&#305;c&#305;da a&ccedil;&#305;n (&uuml;cretsiz hesap yeterli). Canva &#351;ablonun bir kopyas&#305;n&#305; sizin hesab&#305;n&#305;za "
-           "kurar &mdash; ba&#351;l&#305;klar&#305; de&#287;i&#351;tirin, renkleri se&ccedil;in, sonra Payla&#351; &rarr; &#304;ndir &rarr; PDF Print.",
-        s2btn="&#350;ablonu a&ccedil;",
-        s3="Ya da &uuml;zerine yaz&#305;n", s3p="Dijital kalmay&#305; tercih ederseniz: sonu <b>-fillable.pdf</b> ile "
-           "biten dosyalar&#305; Adobe Acrobat Reader&#8217;da (&uuml;cretsiz) ya da bir tablet uygulamas&#305;nda a&ccedil;&#305;n, "
-           "sat&#305;ra t&#305;klay&#305;p yaz&#305;n. G&ouml;rev kutular&#305;n&#305;, g&uuml;n&uuml; ve ruh hali &ouml;l&ccedil;e&#287;ini t&#305;klayarak i&#351;aretleyin.",
+               ("Sayfa ba&#351;&#305;na 61 form alan&#305;", "sat&#305;rlar, g&ouml;rev kutular&#305;, g&uuml;n ve ruh hali &ouml;l&ccedil;e&#287;i"),
+               ("Bu k&#305;lavuz", "yazd&#305;rma ve doldurma tek sayfada")],
+        s2="&Uuml;zerine yaz&#305;n", s2p="Sonu <b>-fillable.pdf</b> ile biten dosyalar&#305; Adobe Acrobat Reader&#8217;da "
+           "(&uuml;cretsiz, Mac ve Windows) ya da GoodNotes/Xodo gibi bir tablet uygulamas&#305;nda a&ccedil;&#305;n. Sat&#305;ra "
+           "t&#305;klay&#305;p yaz&#305;n; g&ouml;rev kutular&#305;n&#305;, g&uuml;n&uuml; ve ruh hali &ouml;l&ccedil;e&#287;ini t&#305;klayarak i&#351;aretleyin. "
+           "Ba&#351;lamadan &ouml;nce <b>bir kopyas&#305;n&#305; kaydedin</b>, sonra her g&uuml;n i&ccedil;in ayr&#305; dosya tutun.",
+        s3="Ya da yazd&#305;r&#305;p elle doldurun", s3p="Kalem ka&#287;&#305;t tercihiyse: sonu <b>-print.pdf</b> ile biten "
+           "dosyalar ayn&#305; sayfan&#305;n form alan&#305; olmayan hali &mdash; toplu bask&#305; i&ccedil;in daha temiz. Haftal&#305;k "
+           "yazd&#305;r&#305;p bir panoya tak&#305;n.",
         s4="&#304;yi bir bask&#305; i&ccedil;in",
         tips=["Ka&#287;&#305;t: d&uuml;z A4 veya Letter, 90&ndash;120 gr en iyi sonucu verir",
               "&Ouml;l&ccedil;ek: <b>%100 / Ger&ccedil;ek boyut</b> &mdash; &ldquo;Sayfaya s&#305;&#287;d&#305;r&rdquo; se&ccedil;meyin",
@@ -343,10 +346,8 @@ README = {
         mark="Bir g&uuml;n, bir sayfa."),
 }
 
-CANVA_LINK_PLACEHOLDER = "https://www.canva.com/design/REPLACE-WITH-YOUR-TEMPLATE-LINK"
-
-def build_readme(lang: str, work: str, canva_link: str = CANVA_LINK_PLACEHOLDER):
-    """One-page delivery sheet: what is in the pack, the Canva link, how to print."""
+def build_readme(lang: str, work: str):
+    """One-page delivery sheet: what is in the pack, how to type on it, how to print."""
     R, S = README[lang], SIZES["letter"]
     tpl = open(os.path.join(ROOT, "src", "readme.template.html"), encoding="utf-8").read()
     values = {
@@ -355,8 +356,7 @@ def build_readme(lang: str, work: str, canva_link: str = CANVA_LINK_PLACEHOLDER)
         "L_BRAND": R["brand"], "L_TITLE": R["title"], "L_LEDE": R["lede"],
         "L_S1_H": R["s1"],
         "FILE_LIST": "".join(f"<div><b>{n}</b><span>{d}</span></div>" for n, d in R["files"]),
-        "L_S2_H": R["s2"], "L_S2_P": R["s2p"], "L_S2_BTN": R["s2btn"],
-        "CANVA_LINK": canva_link,
+        "L_S2_H": R["s2"], "L_S2_P": R["s2p"],
         "L_S3_H": R["s3"], "L_S3_P": R["s3p"],
         "L_S4_H": R["s4"], "PRINT_TIPS": "".join(f"<li>{t}</li>" for t in R["tips"]),
         "L_S5_H": R["s5"], "L_S5_P": R["s5p"],
@@ -394,13 +394,13 @@ def build_mockups(work: str):
     scenes.append(("01-hero", "#f5f0f3", "100px", "86px", "0", f'''
       <div class="split">
         <div class="txt">
-          <span class="eyebrow">Printable &middot; Editable</span>
+          <span class="eyebrow">Printable &middot; Fillable PDF</span>
           <h1>Today,<br><em>in order.</em></h1>
           <span class="rule"></span>
           <p class="sub">One page for the whole day &mdash; schedule 6 AM to 10 PM,
           priorities, tasks, meals, mood, gratitude.</p>
           <div class="badges" style="margin-top:40px"><span class="badge">US Letter + A4</span>
-          <span class="badge">Editable in Canva</span>
+          <span class="badge">Type or print</span>
           <span class="badge">Fillable PDF</span></div>
         </div>
         <img src="{dusk}">
@@ -410,7 +410,7 @@ def build_mockups(work: str):
              ("Top three priorities", "ranked, so the day has one real headline"),
              ("Tasks with a status key", "to do &middot; started &middot; done &middot; moved"),
              ("Meals, mood, gratitude", "a mood scale, three words for the day, three lines of thanks"),
-             ("Two colourways", "Dusk gradient, or Mono for saving ink"),
+             ("Fillable, not flat", "61 form fields a page &mdash; type into it in any free PDF reader"),
              ("Two languages", "English and Turkish, both included")]
     scenes.append(("02-included", "#ffffff", "120px", "88px", "0", '''
       <span class="eyebrow">What you get</span>
@@ -419,7 +419,7 @@ def build_mockups(work: str):
       <div class="cols" style="margin-top:70px">''' +
       "".join(f'<div class="item"><b>{a}</b><span>{b}</span></div>' for a, b in items) +
       '''</div>
-      <p class="caption" style="margin-top:auto">16 PDF files &middot; Canva template link &middot; instant download</p>'''))
+      <p class="caption" style="margin-top:auto">16 PDF files &middot; print + fillable &middot; instant download</p>'''))
 
     scenes.append(("03-colourways", "#efe9ee", "110px", "64px", "90px", f'''
       <span class="eyebrow">Two colourways, two sizes</span>
@@ -484,7 +484,6 @@ def main():
     ap.add_argument("--only", help="single variant, e.g. letter-dusk-en")
     ap.add_argument("--no-fillable", action="store_true")
     ap.add_argument("--extras", action="store_true", help="only the start-here sheets + listing images")
-    ap.add_argument("--canva-link", default=CANVA_LINK_PLACEHOLDER)
     args = ap.parse_args()
 
     os.makedirs(DIST, exist_ok=True)
@@ -492,7 +491,7 @@ def main():
 
     if args.extras:
         for lang in README:
-            build_readme(lang, WORK, args.canva_link)
+            build_readme(lang, WORK)
         build_mockups(WORK)
         package()
         return
@@ -512,7 +511,7 @@ def main():
     print("Wrote daily-planner.html (browser / preview copy)")
 
     for lang in README:
-        build_readme(lang, WORK, args.canva_link)
+        build_readme(lang, WORK)
     build_mockups(WORK)
     package()
 

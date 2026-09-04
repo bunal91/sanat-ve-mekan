@@ -166,15 +166,16 @@
     <span class="eyebrow">Etsy yol haritası · Dusk Ladder</span>
     <h1>Planlayıcıyı<br><em>dükkâna çevirmek.</em></h1>
     <div class="ramp"></div>
-    <p class="lede">Tasarım ve dosyalar hazır: 16 PDF, iki boyut, iki dil, iki renk yolu, artı
-    alıcıya gidecek karşılama sayfası ve üç ilan görseli. Bundan sonrası dükkânı kurmak,
-    Canva şablonunu bağlamak ve ilanı yazmak. Sırasıyla aşağıda.</p>
+    <p class="lede">İki ürün hazır: tek sayfalık günlük planlayıcı paketi ve dokuz sayfalık
+    doğum günü kiti. İkisi de doldurulabilir PDF — Canva şablonu yok, olmayacak. Bundan sonrası
+    dükkânı kurmak, ilanı doğru kelimelerle yazmak ve ikinci üründen sonrasını planlamak.</p>
   </header>
 
   <section>
     <div class="sec-head"><span class="num">1</span><h2>Etsy'de "editable" tam olarak ne demek</h2></div>
-    <p>Alıcıların "editable planner" derken kastettiği tek bir şey değil — üç ayrı katman var ve
-    ilanında hangisini verdiğini net yazmazsan iade/mesaj trafiği oradan çıkar.</p>
+    <p>Alıcıların "editable planner" derken kastettiği tek bir şey değil — üç ayrı katman var.
+    Biz ikincisini satıyoruz. Üçüncüsünü satmıyoruz, ve bunu ilanda açıkça yazmak
+    kötü yorumdan koruyan tek şey.</p>
 
     <div class="grid g3">
       <div class="card">
@@ -192,24 +193,60 @@
         <code>-fillable.pdf</code> dosyaları — 61 alan hazır.</p>
       </div>
       <div class="card">
-        <div class="rail" style="background:var(--s3)"></div>
-        <span class="tag">Katman 3</span>
+        <div class="rail" style="background:var(--rule)"></div>
+        <span class="tag">Katman 3 &mdash; atlıyoruz</span>
         <h4>Canva şablonu</h4>
-        <p><b>Etsy'de "editable"ın asıl karşılığı bu.</b> Alıcı başlıkları, renkleri, bölümleri
-        değiştirir. Bir şablon linkiyle teslim edilir.</p>
+        <p>Alıcı tasarımın kendisini değiştirir. Şablon linki gerektirir; link üretimi sende
+        çalışmadı, üstelik her müşteri sorusu Canva desteğine dönüşüyor. Şimdilik yok.</p>
       </div>
     </div>
 
-    <div class="note"><b>Neden Canva?</b> Alıcının bilgisayarına program kurmasını gerektirmez,
-    ücretsiz hesapla çalışır, telefonda bile açılır. Corjl ve Templett daha korumalı alternatifler
-    ama aylık ücretli; ilk dükkân için Canva doğru başlangıç.</div>
+    <div class="note"><b>İlan metnindeki tek kritik cümle.</b> Başlıkta "editable" kelimesini
+    kullanacaksan hemen yanına ne demek olduğunu koy: <i>"Fillable PDF &mdash; type into the
+    ready-made fields. The layout, fonts and colours are fixed."</i> Türkçesi: alıcı satırlara
+    yazar, tasarımı değiştiremez. Bu cümle ilanın ilk üç satırında geçsin. Canva bekleyip
+    bulamayan müşteri, tek yıldızın en yaygın sebebi.<br><br>
+    <b>Canva sonra da eklenebilir.</b> Talep gelirse (mesajlardan görürsün) aynı sayfayı Canva'da
+    kurar, ayrı ve daha pahalı bir ilan açarsın. Ürünü bölmek, tek üründe iki söz vermekten iyidir.</div>
   </section>
 
   <section>
     <div class="sec-head"><span class="num">2</span><h2>Elindeki paket</h2></div>
-    <p>Depoda <code>planner/dist/</code> klasöründe; Etsy'ye yüklenecek hâli
-    <code>planner/dist/etsy/</code> içinde paketli.</p>
+    <p>İki ayrı ürün, iki ayrı klasör. Etsy'ye yüklenecek hâlleri
+    <code>dist/etsy/</code> ve <code>dist-birthday/etsy/</code> içinde paketli.</p>
+    <h3 style="margin-top:24px">Ürün 2 &mdash; Doğum günü kiti (yeni, dükkânın vitrini)</h3>
 
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Dosya</th><th>Ne işe yarar</th><th>Nereye</th></tr></thead>
+        <tbody>
+          <tr><td>4 × <code>-fillable.pdf</code></td><td>9 sayfa &middot; 746 form alanı &middot; Letter + A4 &middot; renkli + mono</td><td>ZIP içinde alıcıya</td></tr>
+          <tr><td>4 × <code>-print.pdf</code></td><td>Aynı 9 sayfa, form alanı olmadan</td><td>ZIP içinde alıcıya</td></tr>
+          <tr><td><code>00-START-HERE.pdf</code></td><td>Karşılama sayfası: nasıl doldurulur, nasıl yazdırılır, lisans</td><td>ZIP + tek dosya</td></tr>
+          <tr><td>3 × <code>listing-*.png</code></td><td>Hero, dokuz sayfa ızgarası, yakın çekim</td><td>İlan görselleri</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="margin-top:26px">Kitin dokuz sayfası</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Sayfa</th><th>Ne yapar</th></tr></thead>
+        <tbody>
+          <tr><td>01 &middot; At a glance</td><td>Kimin, kaç yaşına, nerede, kaç kişi, bütçe, tema panosu</td></tr>
+          <tr><td>02 &middot; The countdown</td><td>6 haftadan güne kadar 5 bant, hazır görev listeleriyle</td></tr>
+          <tr><td>03 &middot; Guest list &amp; RSVP</td><td>22 satır: davet gitti / geliyor / gelmiyor / +kişi / alerji</td></tr>
+          <tr><td>04 &middot; Budget</td><td>Planlanan-gerçekleşen-ödendi, kapora takibi, kim ne ödüyor</td></tr>
+          <tr><td>05 &middot; Vendors &amp; helpers</td><td>Tedarikçi ve gönüllü listesi, rezervasyon ve teyit kutuları</td></tr>
+          <tr><td>06 &middot; Cake, food and drink</td><td>Pasta detayı, menü, kim ne getiriyor, fırın zamanlaması</td></tr>
+          <tr><td>07 &middot; Shopping</td><td>Üç sütun hazır alışveriş listesi</td></tr>
+          <tr><td>08 &middot; Run of show</td><td>Saat saat gün akışı, altı kritik an, unutma listesi</td></tr>
+          <tr><td>09 &middot; Gifts &amp; thanks</td><td>Hediye ve teşekkür takibi, fotoğraf listesi, ders çıkarma</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="margin-top:26px">Ürün 1 &mdash; Günlük planlayıcı paketi</h3>
     <div class="tablewrap">
       <table>
         <thead><tr><th>Dosya</th><th>Ne işe yarar</th><th>Nereye</th></tr></thead>
@@ -229,54 +266,42 @@
   </section>
 
   <section>
-    <div class="sec-head"><span class="num">3</span><h2>Canva şablonunu kurmak</h2></div>
-    <p>Şablon linki Canva'da bir tasarım kurup <b>Paylaş → Şablon linki</b> almakla oluşur.
-    Tasarımı oraya iki yoldan taşıyabilirsin.</p>
+    <div class="sec-head"><span class="num">3</span><h2>Doldurulabilir PDF gerçekte nasıl çalışır</h2></div>
+    <p>Satmadan önce kendin dene: dosyayı aç, doldur, kaydet, kapat, yeniden aç. Alıcının yaşayacağı
+    tek sorun bu adımlardan birinde çıkar ve cevabını önceden bilmen gerekir.</p>
 
-    <div class="grid g2">
+    <div class="grid g3">
       <div class="card">
-        <span class="tag">A yolu — hızlı</span>
-        <h4>PDF'i içe aktar</h4>
-        <p>Canva → Oluştur → Dosya yükle → <code>daily-planner-letter-dusk-en-print.pdf</code>.
-        Metinler çoğunlukla düzenlenebilir metin kutusu olarak gelir. <b>Kontrol et:</b> başlığa
-        çift tıkla, yazı değişiyor mu; yazı tipleri doğru mu; degrade şerit yerinde mi.
-        Geliyorsa 10 dakikada bitti.</p>
+        <div class="rail" style="background:var(--s1)"></div>
+        <span class="tag">Çalışır</span>
+        <h4>Adobe Acrobat Reader</h4>
+        <p>Ücretsiz, Mac ve Windows. Doldurur, kaydeder, yazdırır. İlan metninde <b>önerdiğin
+        program bu olsun</b> — desteğin yarısını buradan keser.</p>
       </div>
       <div class="card">
-        <span class="tag">B yolu — garantili</span>
-        <h4>Canva'da yeniden kur</h4>
-        <p>PDF içe aktarma metinleri eğrilere çevirirse (olabiliyor), sayfayı sıfırdan kurmak
-        45 dakika sürer. Aşağıdaki spesifikasyon tam olarak bunun için: ölçüler, renkler,
-        yazı tipleri birebir.</p>
+        <div class="rail" style="background:var(--s2)"></div>
+        <span class="tag">Çalışır</span>
+        <h4>Tablet uygulamaları</h4>
+        <p>GoodNotes, Xodo, Notability. iPad + kalem kitlesi bu ürünün en iyi müşterisi;
+        görsellerden birinde tablet üzerinde göstermek dönüşümü artırır.</p>
+      </div>
+      <div class="card">
+        <div class="rail" style="background:var(--s3)"></div>
+        <span class="tag">Dikkat</span>
+        <h4>Mac Preview ve tarayıcılar</h4>
+        <p>Apple Preview form alanlarını bozabiliyor, tarayıcıda "kaydet" davranışı değişken.
+        Karşılama sayfasında yazıyor ama ilan açıklamasına da bir satır koy.</p>
       </div>
     </div>
 
-    <h3 style="margin-top:26px">Canva spesifikasyonu</h3>
-    <div class="tablewrap">
-      <table>
-        <thead><tr><th>Öğe</th><th>Yazı tipi</th><th>Boyut</th><th>Renk</th></tr></thead>
-        <tbody>
-          <tr><td>Sayfa</td><td>—</td><td class="num">21,6 × 27,9 cm (Letter) / 21 × 29,7 (A4)</td><td>#FFFFFF</td></tr>
-          <tr><td>Kenar boşluğu</td><td>—</td><td class="num">üst/yan 1,3 cm · alt 1,1 cm</td><td>—</td></tr>
-          <tr><td>Başlık ("Today, in order.")</td><td>Bodoni Moda 500 / italik</td><td class="num">41 pt · satır aralığı 0,84</td><td>#23181F</td></tr>
-          <tr><td>Bölüm etiketleri</td><td>Barlow Condensed 700, BÜYÜK HARF</td><td class="num">7,6 pt · harf aralığı 0,18em</td><td>#6E6068</td></tr>
-          <tr><td>İpucu metinleri</td><td>Barlow Condensed 500, BÜYÜK HARF</td><td class="num">6,9 pt · 0,11em</td><td>#9A8F94</td></tr>
-          <tr><td>Saat rakamları</td><td>IBM Plex Sans 500</td><td class="num">7,6 pt</td><td>#6E6068</td></tr>
-          <tr><td>Çizgiler</td><td>—</td><td class="num">1 px</td><td>#E3DCDE (öncelik satırları #C7BCC1)</td></tr>
-          <tr><td>Degrade şerit (sol ray)</td><td>—</td><td class="num">genişlik 5 px, dikey</td><td>#F2A65A → #EE6C4D (%34) → #C43E7A (%68) → #4B2E83</td></tr>
-          <tr><td>Mono sürüm rampası</td><td>—</td><td class="num">aynı</td><td>#B9B9C0 → #8E8E97 → #5A5A63 → #22222A</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p style="margin-top:14px">Üç yazı tipi de Canva'nın kütüphanesinde var ve üçü de
-    <b>SIL Open Font License</b> — ticari kullanım ve PDF'e gömme serbest.</p>
+    <div class="note"><b>Alıcıya söylenmesi gereken üç şey:</b> (1) önce bir kopya kaydet, orijinali
+    bozma; (2) her etkinlik için ayrı dosya tut; (3) yazdırırken ölçek %100, kenar boşluğu yok.
+    Üçü de karşılama sayfasında var — o sayfa hem ürünün parçası hem müşteri desteğin.</div>
 
-    <div class="note"><b>Şablon linkini alırken:</b> Paylaş → Daha fazla → <b>Şablon linki</b>
-    (Template link). Düz "düzenleme linki" verme — o, herkesi <i>senin</i> dosyanın üstünde
-    çalıştırır. Şablon linki her alıcıya kendi kopyasını açar. Linki aldıktan sonra
-    <code>build.py --canva-link "https://..."</code> ile karşılama sayfalarını yeniden üret;
-    link PDF'in içindeki butona gömülür.</div>
-  </section>
+    <div class="note"><b>Neden bu daha savunulabilir bir ürün:</b> tek sayfalık günlük planlayıcıdan
+    Etsy'de binlerce var. Dokuz sayfalık, hazır görev listeli, 746 alanlı bir etkinlik kiti çok daha
+    az. Rekabet ettiğin şey artık "güzel bir sayfa" değil, "işi bitiren bir sistem" — ve bunu
+    kopyalamak birinin bir öğleden sonrasını değil, bir haftasını alır.</div>
 
   <section>
     <div class="sec-head"><span class="num">4</span><h2>Dükkânı açmak</h2></div>
@@ -303,26 +328,33 @@
     <div class="sec-head"><span class="num">5</span><h2>İlan metni — kopyala, yapıştır</h2></div>
 
     <div class="copyblock">
-      <span class="tag">Başlık (140 karakter sınırı)</span>
-      Daily Planner Printable, Editable Canva Template, Hourly Schedule 6AM–10PM, Undated Daily
-      Organizer, Letter + A4, Fillable PDF, Instant Download
+      <span class="tag">Başlık &mdash; doğum günü kiti (140 karakter sınırı)</span>
+      Birthday Party Planner Printable, Fillable PDF, 9 Page Party Planning Kit, Guest List RSVP
+      Budget Checklist, Letter + A4, Instant Download
     </div>
 
     <div class="copyblock">
-      <span class="tag">Açıklamanın ilk üç satırı — arama sonuçlarında görünen kısım</span>
-      One page for the whole day: an hourly schedule from 6 AM to 10 PM, three ranked priorities,
-      a task list with a status key, meals, a mood scale and gratitude lines.<br>
-      Editable in Canva (free account) — change any word, heading or colour.<br>
-      Also included: fillable PDFs you can type straight onto, in US Letter and A4, colour and ink-saving mono.
+      <span class="tag">Açıklamanın ilk üç satırı &mdash; arama sonucunda görünen kısım</span>
+      Nine pages that carry a birthday from the first idea to the thank-you notes: a six-week
+      countdown, guest list with RSVP tracking, budget, vendors, menu, shopping, run of show, gifts.<br>
+      <b>Fillable PDF</b> — type into the ready-made fields in free Adobe Acrobat Reader or on a
+      tablet. The layout, fonts and colours are fixed.<br>
+      US Letter and A4, in colour and in ink-saving mono. Instant download, print as often as you like.
     </div>
 
-    <h3 style="margin-top:28px">13 etiket — her biri 20 karakterin altında</h3>
+    <h3 style="margin-top:28px">13 etiket &mdash; her biri 20 karakterin altında</h3>
     <div class="tags">
-      <span>daily planner</span><span>printable planner</span><span>editable planner</span>
-      <span>canva template</span><span>hourly planner</span><span>undated planner</span>
-      <span>daily schedule</span><span>adhd planner</span><span>productivity page</span>
-      <span>letter a4 planner</span><span>gratitude planner</span><span>minimalist planner</span>
+      <span>birthday planner</span><span>party planner</span><span>party planning kit</span>
+      <span>fillable pdf</span><span>guest list printable</span><span>party checklist</span>
+      <span>rsvp tracker</span><span>birthday checklist</span><span>event planner</span>
+      <span>party budget</span><span>kids party planner</span><span>printable planner</span>
       <span>digital download</span>
+    </div>
+
+    <div class="copyblock" style="border-left-color:var(--s1)">
+      <span class="tag">Günlük planlayıcı için başlık</span>
+      Daily Planner Printable, Fillable PDF, Hourly Schedule 6AM&ndash;10PM, Undated Daily Organizer,
+      Letter + A4, English + Turkish, Instant Download
     </div>
 
     <div class="note">Açıklamanın sonuna mutlaka üç blok koy: <b>Ne alıyorsun</b> (dosya listesi),
@@ -333,20 +365,21 @@
 
   <section>
     <div class="sec-head"><span class="num">6</span><h2>Fiyat ve gerçek kazanç</h2></div>
-    <p>Bu kategoride tek sayfa planlayıcılar 3–6 $, çok dosyalı paketler 8–15 $ bandında.
-    Senin paketin 16 PDF + Canva şablonu — <b>9,50 $</b> makul bir açılış; ilk hafta
-    %30 kuponla 6,65 $'a çekip ilk yorumları toplamak işe yarıyor.</p>
+    <p>Tek sayfa planlayıcılar 3–6 $, çok sayfalı etkinlik kitleri 10–20 $ bandında.
+    Doğum günü kiti için <b>12,50 $</b>, günlük planlayıcı için <b>6,50 $</b> makul açılış.
+    İlk hafta %30 kuponla kiti 8,75 $'a çekip ilk yorumları toplamak işe yarıyor —
+    dükkânın ilk 5 yorumu, sonraki 100 satışın önkoşulu.</p>
 
     <div class="tablewrap">
       <table>
         <thead><tr><th>Kalem</th><th>Oran</th><th class="num">9,50 $ satışta</th></tr></thead>
         <tbody>
           <tr><td>İlan ücreti (4 ay / satış başına yenilenir)</td><td>0,20 $</td><td class="num">0,20 $</td></tr>
-          <tr><td>İşlem komisyonu</td><td>%6,5</td><td class="num">0,62 $</td></tr>
-          <tr><td>Ödeme işlem ücreti</td><td>ülkeye göre değişir</td><td class="num">~0,50 $</td></tr>
-          <tr><td>Kur dönüşümü (USD → TL)</td><td>%2,5</td><td class="num">0,24 $</td></tr>
-          <tr><td>Dijital hizmet vergisi payı (TR)</td><td>~%1,1</td><td class="num">0,10 $</td></tr>
-          <tr><td><b>Cebe kalan (yaklaşık)</b></td><td>—</td><td class="num"><b>~7,80 $</b></td></tr>
+          <tr><td>İşlem komisyonu</td><td>%6,5</td><td class="num">0,81 $</td></tr>
+          <tr><td>Ödeme işlem ücreti</td><td>ülkeye göre değişir</td><td class="num">~0,60 $</td></tr>
+          <tr><td>Kur dönüşümü (USD → TL)</td><td>%2,5</td><td class="num">0,31 $</td></tr>
+          <tr><td>Dijital hizmet vergisi payı (TR)</td><td>~%1,1</td><td class="num">0,14 $</td></tr>
+          <tr><td><b>Cebe kalan (yaklaşık)</b></td><td>—</td><td class="num"><b>~10,45 $</b></td></tr>
         </tbody>
       </table>
     </div>
@@ -358,18 +391,18 @@
 
   <section>
     <div class="sec-head"><span class="num">7</span><h2>On görsel planı</h2></div>
-    <p>Etsy'de dönüşümü belirleyen tek şey ilk görsel. Sıra önemli:</p>
+    <p>Etsy'de dönüşümü belirleyen tek şey ilk görsel. Doğum günü kiti için sıra:</p>
     <ol>
-      <li><b>Hero</b> — ürün + "Printable · Editable" (hazır: <code>listing-01-hero.png</code>)</li>
-      <li><b>Neler var</b> — paket içeriği listesi (hazır: <code>listing-02-included.png</code>)</li>
-      <li><b>Renk yolları</b> — renkli ve mono yan yana (hazır: <code>listing-03-colourways.png</code>)</li>
-      <li>Doldurulmuş örnek — gerçek bir günün yazılmış hâli, en ikna edici görsel</li>
-      <li>Canva ekran görüntüsü — "başlıkları böyle değiştiriyorsun"</li>
-      <li>Yakın çekim — saat merdiveni ve degrade ray</li>
-      <li>Ortam fotoğrafı — masada, kalem ve kahveyle (telefonla çekilebilir)</li>
-      <li>Boyut karşılaştırması — Letter ve A4</li>
-      <li>Türkçe sürüm — ayrı pazara sinyal</li>
-      <li>Nasıl çalışır — 3 adımlık indirme/düzenleme/yazdırma şeması</li>
+      <li><b>Hero</b> &mdash; ilk sayfa + "9 pages · Fillable PDF" (hazır: <code>listing-01-hero.png</code>)</li>
+      <li><b>Dokuz sayfa ızgarası</b> &mdash; alıcı ne aldığını tek bakışta görür (hazır: <code>listing-02-pages.png</code>)</li>
+      <li><b>Yakın çekim</b> &mdash; misafir listesi ve gün akışı (hazır: <code>listing-03-detail.png</code>)</li>
+      <li>Doldurulmuş örnek &mdash; gerçek bir parti bilgisiyle doldurulmuş misafir listesi ekran görüntüsü</li>
+      <li>Tablet üzerinde &mdash; iPad + kalem; bu kitlenin kendini gördüğü kare</li>
+      <li>Acrobat ekran görüntüsü &mdash; "tıkla ve yaz" akışını gösteren üç adım</li>
+      <li>Basılı hali &mdash; masada, klasörde, kalemle (telefonla çekilebilir)</li>
+      <li>Renkli / mono karşılaştırması</li>
+      <li>Boyut karşılaştırması &mdash; Letter ve A4</li>
+      <li>Ne dahil değil &mdash; "fonts and layout are fixed" uyarısını görselleştir; iade talebini düşürür</li>
     </ol>
     <div class="note">4 ve 7 numaralı görseller için elinde ürün var: doldurulabilir PDF'i
     kendi gününle doldurup ekran görüntüsü al, bir kopyasını da yazdırıp masada fotoğrafla.
@@ -392,26 +425,71 @@
   </section>
 
   <section>
-    <div class="sec-head"><span class="num">9</span><h2>İlk 30 gün</h2></div>
-    <p>Tek ilanla dükkân görünmez. Etsy araması çeşitliliği ödüllendiriyor — hedef 10 ilan,
-    hepsi aynı tasarım dilinden türesin. Aynı <code>build.py</code> ile üretilebilecekler:</p>
-    <ul>
-      <li><b>Haftalık planlayıcı</b> — 7 sütun, aynı degrade ray hafta boyunca ilerler</li>
-      <li><b>Saatsiz günlük</b> — saat merdiveni yerine serbest not alanı</li>
-      <li><b>Yemek planlayıcı + market listesi</b> — öğün bölümü ana sayfa olur</li>
-      <li><b>Alışkanlık takibi</b> — 31 gün × 8 alışkanlık, aynı pip ölçeği</li>
-      <li><b>Ruh hali / şükran günlüğü</b> — mevcut iki bölümün genişlemişi</li>
-      <li><b>Proje sayfası</b> — öncelik + görev bölümlerinden</li>
-      <li><b>Aylık takvim</b> — bant mantığı haftalara döner</li>
-      <li><b>Komple paket</b> — hepsi tek ilanda, en yüksek sepet tutarı</li>
-    </ul>
-    <p>Ritim: haftada 2–3 yeni ilan, her biri kendi görselleriyle. Dördüncü haftada
-    hangi anahtar kelimenin trafik getirdiği görünür; Etsy panelindeki arama terimlerine göre
-    başlıkları güncelle.</p>
+    <div class="sec-head"><span class="num">9</span><h2>Hangi nişe gitmeli</h2></div>
+    <p>Sorduğun soruya net cevap: <b>"daily planner" bırakılacak bir alan, "etkinlik planlama"
+    doğru yön — ama jenerik doğum günü de kalabalık.</b> Ayrım şurada: günlük planlayıcı alan kişi
+    güzel bir sayfa arıyor; parti planlayan kişi <i>bir şeyi unutmaktan korkuyor</i>. Korku, estetikten
+    daha iyi satar ve fiyatı da taşır. Dört yön, benim sıralamamla:</p>
+
+    <div class="grid g2">
+      <div class="card">
+        <div class="rail" style="background:var(--s3)"></div>
+        <span class="tag">1 &mdash; şimdi yap</span>
+        <h4>Çocuk doğum günü</h4>
+        <p>En büyük hacim. Alıcı yorgun bir ebeveyn; geri sayım, misafir listesi ve gün akışı tam
+        onun derdi. Kite oyun/aktivite planı ve parti çantası takibi eklenince ayrı ürün olur.</p>
+      </div>
+      <div class="card">
+        <div class="rail" style="background:var(--s2)"></div>
+        <span class="tag">2 &mdash; en yüksek kâr</span>
+        <h4>Yuvarlak yaşlar: 40 / 50 / 60</h4>
+        <p>Bütçe büyük, aranan kelime spesifik, rekabet jenerik doğum gününün çok altında.
+        Konuşma sırası, slayt gösterisi listesi, anı defteri sayfaları ekle; 18&ndash;25 $ bandı.</p>
+      </div>
+      <div class="card">
+        <div class="rail" style="background:var(--s1)"></div>
+        <span class="tag">3 &mdash; asıl fırsat</span>
+        <h4>Profesyonel etkinlik planlayıcılar</h4>
+        <p>Alıcı partiyi kendi için değil <b>müşterisi için</b> planlıyor. Müşteri brief formu,
+        teklif, sözleşme kontrol listesi, tedarikçi dosyası + <b>ticari kullanım lisansı</b>.
+        25&ndash;40 $, çok daha az rakip, tekrar eden müşteri. Kit tuttuğunda buraya geç.</p>
+      </div>
+      <div class="card">
+        <div class="rail" style="background:var(--s4)"></div>
+        <span class="tag">4 &mdash; sonra</span>
+        <h4>Türkiye'ye özel etkinlikler</h4>
+        <p>Kına gecesi, nişan, sünnet, mevlit. Etsy'de küresel arama hacmi düşük ama rakip neredeyse
+        sıfır ve Instagram'dan doğrudan trafik çekilebilir. Dükkân oturduktan sonra deneme alanı.</p>
+      </div>
+    </div>
+
+    <div class="note"><b>Kaçınılacak şey:</b> tek üründen sekiz varyant çıkarıp aynı anahtar
+    kelimede kendi ilanlarınla yarışmak. Her yeni ilan <i>farklı bir arama</i> hedeflesin.</div>
+
+    <h3 style="margin-top:30px">İlk 30 gün</h3>
+    <div class="steps">
+      <div class="step"><span class="dot"></span><div><h3>1. hafta</h3>
+        <p>Dükkânı aç, doğum günü kitini yayınla (12,50 $, açılış kuponu). Günlük planlayıcıyı
+        ikinci ilan olarak koy. Kendi kitini bir kez satın al, indirme akışını gör.</p></div></div>
+      <div class="step"><span class="dot"></span><div><h3>2. hafta</h3>
+        <p>Çocuk doğum günü sürümü: oyunlar, parti çantası, aktivite zamanlaması. Aynı üretim
+        dosyasından çıkar &mdash; yeni sayfa yazmak yarım gün.</p></div></div>
+      <div class="step"><span class="dot"></span><div><h3>3. hafta</h3>
+        <p>Yuvarlak yaş sürümü + doldurulmuş gerçek örnek görselleri. İlk yorumları iste
+        (Etsy'nin otomatik hatırlatması yeterli, mesaj atma).</p></div></div>
+      <div class="step"><span class="dot"></span><div><h3>4. hafta</h3>
+        <p>Etsy panelindeki arama terimlerine bak: hangi kelime tık getiriyor, hangisi satış.
+        Başlıkları ona göre yeniden yaz. Üç ilan + doğru başlık, on zayıf ilandan iyidir.</p></div></div>
+    </div>
+
+    <div class="note"><b>Üretim tarafı hazır:</b> yeni bir etkinlik kiti çıkarmak
+    <code>birthday.py</code> içindeki sayfa fonksiyonlarını kopyalayıp metinleri değiştirmek demek;
+    form alanları, boyutlar, renkli/mono sürümler ve ZIP paketleri kendiliğinden geliyor.</div>
   </section>
 
   <footer>
-    <span>Dosyalar: <code>planner/dist/</code> · Üretim: <code>python3 planner/build.py</code></span>
-    <span class="mark">Bir gün, bir sayfa.</span>
+    <span>Dosyalar: <code>planner/dist/</code> ve <code>planner/dist-birthday/</code> ·
+    Üretim: <code>python3 build.py</code> · <code>python3 birthday.py</code></span>
+    <span class="mark">Dokuz sayfa, bir parti.</span>
   </footer>
 </div>
