@@ -721,8 +721,8 @@ def build_mockups(work):
                                        ("02-pages", "#ffffff", "76px", "58px", pages),
                                        ("03-detail", "#f2f7ff", "100px", "76px", detail)]:
         page = tpl
-        for k, v in {"FONTS": fonts + over, "BG": bg, "PAD": pad, "H1": h1,
-                     "GAP": "0", "CONTENT": content}.items():
+        for k, v in {"FONTS": fonts, "BG": bg, "PAD": pad, "H1": h1,
+                     "GAP": "0", "CONTENT": over + content}.items():
             page = page.replace("{{" + k + "}}", v)
         hp = os.path.join(work, f"mockup-kids-{name}.html")
         open(hp, "w", encoding="utf-8").write(page)

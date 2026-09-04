@@ -1,8 +1,9 @@
 # Printable planner shop — product packs
 
-Three digital-download products, all generated from HTML templates: **Dusk Ladder**, a one-page
-daily planner; **Party Line**, a nine-page birthday planning kit; and **Confetti Club**, a
-nine-page kids' party kit with its own, louder design language. Every variant a listing
+Four digital-download products, all generated from HTML templates: **Dusk Ladder**, a one-page
+daily planner; **Party Line**, a nine-page birthday planning kit; **Confetti Club**, a nine-page
+kids' party kit; and **Golden Hour**, an eleven-page milestone birthday kit. Each has its own
+design language rather than a recoloured shell. Every variant a listing
 needs — page sizes, colourways, languages, print and fillable — comes out of one build.
 
 No Canva templates: the products are sold as fillable PDFs, so the listing promises typing into
@@ -13,6 +14,7 @@ planner/
 ├── build.py                     # daily planner: HTML -> PDFs, form fields, listing images, ZIPs
 ├── birthday.py                   # birthday kit: nine pages, multi-page fillable, same plumbing
 ├── kids.py                       # kids' party kit: same plumbing, its own design language
+├── milestone.py                  # milestone kit (50th/60th/90th): eleven pages
 ├── src/
 │   ├── planner.template.html    # the daily planner (single source of truth)
 │   ├── readme.template.html     # the "start here" sheet the buyer opens first (both products)
@@ -20,10 +22,12 @@ planner/
 ├── daily-planner.html           # browser/preview copy (Letter · dusk · EN)
 ├── birthday-planner.html        # browser/preview copy (Letter · party · 9 pages)
 ├── kids-party-planner.html      # browser/preview copy (Letter · confetti · 9 pages)
+├── milestone-planner.html       # browser/preview copy (Letter · gold · 11 pages)
 ├── etsy-rehberi.html            # Turkish guide: shop setup, listing copy, pricing, niche
 ├── dist/                        # daily planner — 16 PDFs, 2 start-here sheets, 3 images, ZIPs
 ├── dist-birthday/               # birthday kit — 8 PDFs, start-here sheet, 3 images, ZIPs
-└── dist-kids/                   # kids' kit — same shape
+├── dist-kids/                   # kids' kit — same shape
+└── dist-milestone/              # milestone kit — same shape
 ```
 
 ## Build
@@ -37,6 +41,7 @@ python3 birthday.py                  # the birthday kit, every size and colourwa
 python3 birthday.py --only letter-party
 python3 birthday.py --extras         # start-here sheet + listing images + ZIPs
 python3 kids.py                      # the kids' party kit
+python3 milestone.py                 # the milestone kit
 ```
 
 Chromium (headless) does the rendering and prints the PDFs at exact page size; `PLANNER_WORK`
@@ -76,6 +81,18 @@ Its design is deliberately louder: Fredoka and Nunito, a seeded confetti scatter
 (deterministic, so reprints match), balloon countdown markers, dotted rules, pill section labels.
 Five colours with jobs — pink the birthday kid, sun food, sky people, lime done, grape time.
 `kids.py` reuses `birthday.py`'s measurement, AcroForm and packaging helpers.
+
+## The milestone kit
+
+Eleven pages for a 50th, 60th or 90th: a three-month countdown, a guest list with a "how they know
+them" column because the room spans five decades, a surprise page written as instructions (cover
+story, who is in on it, the reveal step by step, and what to do if they find out), vendors and
+budget, menu and bar, speeches with minutes against each speaker, a slideshow page that tracks
+photographs by decade and messages from those who cannot come, a seating plan, the run of show,
+and thank-yous. 839 form fields, four variants.
+
+Its identity is the quiet one: Cormorant Garamond and Jost, gold and garnet on white, roman
+numeral page numbers, a hairline-and-gold rule under each masthead.
 
 ## How the fillable PDFs are made
 
