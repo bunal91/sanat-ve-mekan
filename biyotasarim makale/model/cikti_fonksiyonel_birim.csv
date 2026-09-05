@@ -1,0 +1,109 @@
+bolge,bolge_adi,malzeme,biyo_esasli,kalinlik_cm,kutle_kgm2,gomulu_karbon_m2,biyojenik_karbon_m2,net_karbon_m2
+1,Aşırı Sıcak,Ahşap lifi levha,1,8.0,12.8,8.96,-19.2,-10.24
+1,Aşırı Sıcak,Kenevir lifi levha,1,8.0,3.2,3.2,-4.8,-1.6
+1,Aşırı Sıcak,Keten lifi levha,1,7.0,2.5,2.45,-3.68,-1.23
+1,Aşırı Sıcak,Koyun yünü,1,7.0,1.8,1.05,-2.1,-1.05
+1,Aşırı Sıcak,Geri dönüşüm tekstil,1,7.0,2.5,1.23,-2.21,-0.98
+1,Aşırı Sıcak,Selüloz (püskürtme),1,8.0,4.0,1.0,-6.0,-5.0
+1,Aşırı Sıcak,Kenevir-kireç (hempcrete),1,13.0,42.9,8.58,-25.74,-17.16
+1,Aşırı Sıcak,Saman balya,1,12.0,12.0,0.6,-18.0,-17.4
+1,Aşırı Sıcak,Genleştirilmiş mantar (ICB),1,8.0,9.6,3.84,-14.4,-10.56
+1,Aşırı Sıcak,Pirinç kavuzu paneli,1,10.0,15.0,4.5,-22.5,-18.0
+1,Aşırı Sıcak,Ayçiçeği sapı özü paneli,1,8.0,4.8,1.44,-7.2,-5.76
+1,Aşırı Sıcak,Şeker kamışı küspesi paneli,1,9.0,16.2,4.86,-24.3,-19.44
+1,Aşırı Sıcak,Fındık kabuğu esaslı panel,1,11.0,27.5,8.25,-41.25,-33.0
+1,Aşırı Sıcak,Miselyum esaslı kompozit,1,8.0,9.6,2.88,-14.4,-11.52
+1,Aşırı Sıcak,EPS,0,7.0,1.4,4.62,0.0,4.62
+1,Aşırı Sıcak,XPS,0,6.0,1.9,6.53,0.0,6.53
+1,Aşırı Sıcak,Taşyünü,0,7.0,7.0,8.4,0.0,8.4
+1,Aşırı Sıcak,Camyünü,0,7.0,1.4,1.82,0.0,1.82
+2,Sıcak,Ahşap lifi levha,1,9.0,14.4,10.08,-21.6,-11.52
+2,Sıcak,Kenevir lifi levha,1,9.0,3.6,3.6,-5.4,-1.8
+2,Sıcak,Keten lifi levha,1,8.0,2.8,2.8,-4.2,-1.4
+2,Sıcak,Koyun yünü,1,8.0,2.0,1.2,-2.4,-1.2
+2,Sıcak,Geri dönüşüm tekstil,1,9.0,3.1,1.57,-2.83,-1.26
+2,Sıcak,Selüloz (püskürtme),1,9.0,4.5,1.12,-6.75,-5.62
+2,Sıcak,Kenevir-kireç (hempcrete),1,15.0,49.5,9.9,-29.7,-19.8
+2,Sıcak,Saman balya,1,13.0,13.0,0.65,-19.5,-18.85
+2,Sıcak,Genleştirilmiş mantar (ICB),1,9.0,10.8,4.32,-16.2,-11.88
+2,Sıcak,Pirinç kavuzu paneli,1,11.0,16.5,4.95,-24.75,-19.8
+2,Sıcak,Ayçiçeği sapı özü paneli,1,9.0,5.4,1.62,-8.1,-6.48
+2,Sıcak,Şeker kamışı küspesi paneli,1,11.0,19.8,5.94,-29.7,-23.76
+2,Sıcak,Fındık kabuğu esaslı panel,1,12.0,30.0,9.0,-45.0,-36.0
+2,Sıcak,Miselyum esaslı kompozit,1,9.0,10.8,3.24,-16.2,-12.96
+2,Sıcak,EPS,0,8.0,1.6,5.28,0.0,5.28
+2,Sıcak,XPS,0,7.0,2.2,7.62,0.0,7.62
+2,Sıcak,Taşyünü,0,8.0,8.0,9.6,0.0,9.6
+2,Sıcak,Camyünü,0,8.0,1.6,2.08,0.0,2.08
+3,Ilıman,Ahşap lifi levha,1,9.0,14.4,10.08,-21.6,-11.52
+3,Ilıman,Kenevir lifi levha,1,9.0,3.6,3.6,-5.4,-1.8
+3,Ilıman,Keten lifi levha,1,8.0,2.8,2.8,-4.2,-1.4
+3,Ilıman,Koyun yünü,1,8.0,2.0,1.2,-2.4,-1.2
+3,Ilıman,Geri dönüşüm tekstil,1,9.0,3.1,1.57,-2.83,-1.26
+3,Ilıman,Selüloz (püskürtme),1,9.0,4.5,1.12,-6.75,-5.62
+3,Ilıman,Kenevir-kireç (hempcrete),1,15.0,49.5,9.9,-29.7,-19.8
+3,Ilıman,Saman balya,1,13.0,13.0,0.65,-19.5,-18.85
+3,Ilıman,Genleştirilmiş mantar (ICB),1,9.0,10.8,4.32,-16.2,-11.88
+3,Ilıman,Pirinç kavuzu paneli,1,11.0,16.5,4.95,-24.75,-19.8
+3,Ilıman,Ayçiçeği sapı özü paneli,1,9.0,5.4,1.62,-8.1,-6.48
+3,Ilıman,Şeker kamışı küspesi paneli,1,11.0,19.8,5.94,-29.7,-23.76
+3,Ilıman,Fındık kabuğu esaslı panel,1,12.0,30.0,9.0,-45.0,-36.0
+3,Ilıman,Miselyum esaslı kompozit,1,9.0,10.8,3.24,-16.2,-12.96
+3,Ilıman,EPS,0,8.0,1.6,5.28,0.0,5.28
+3,Ilıman,XPS,0,7.0,2.2,7.62,0.0,7.62
+3,Ilıman,Taşyünü,0,8.0,8.0,9.6,0.0,9.6
+3,Ilıman,Camyünü,0,8.0,1.6,2.08,0.0,2.08
+4,Soğuk,Ahşap lifi levha,1,10.0,16.0,11.2,-24.0,-12.8
+4,Soğuk,Kenevir lifi levha,1,10.0,4.0,4.0,-6.0,-2.0
+4,Soğuk,Keten lifi levha,1,10.0,3.5,3.5,-5.25,-1.75
+4,Soğuk,Koyun yünü,1,10.0,2.5,1.5,-3.0,-1.5
+4,Soğuk,Geri dönüşüm tekstil,1,10.0,3.5,1.75,-3.15,-1.4
+4,Soğuk,Selüloz (püskürtme),1,10.0,5.0,1.25,-7.5,-6.25
+4,Soğuk,Kenevir-kireç (hempcrete),1,18.0,59.4,11.88,-35.64,-23.76
+4,Soğuk,Saman balya,1,15.0,15.0,0.75,-22.5,-21.75
+4,Soğuk,Genleştirilmiş mantar (ICB),1,10.0,12.0,4.8,-18.0,-13.2
+4,Soğuk,Pirinç kavuzu paneli,1,13.0,19.5,5.85,-29.25,-23.4
+4,Soğuk,Ayçiçeği sapı özü paneli,1,10.0,6.0,1.8,-9.0,-7.2
+4,Soğuk,Şeker kamışı küspesi paneli,1,12.0,21.6,6.48,-32.4,-25.92
+4,Soğuk,Fındık kabuğu esaslı panel,1,14.0,35.0,10.5,-52.5,-42.0
+4,Soğuk,Miselyum esaslı kompozit,1,11.0,13.2,3.96,-19.8,-15.84
+4,Soğuk,EPS,0,9.0,1.8,5.94,0.0,5.94
+4,Soğuk,XPS,0,8.0,2.6,8.7,0.0,8.7
+4,Soğuk,Taşyünü,0,9.0,9.0,10.8,0.0,10.8
+4,Soğuk,Camyünü,0,9.0,1.8,2.34,0.0,2.34
+5,Çok Soğuk,Ahşap lifi levha,1,15.0,24.0,16.8,-36.0,-19.2
+5,Çok Soğuk,Kenevir lifi levha,1,15.0,6.0,6.0,-9.0,-3.0
+5,Çok Soğuk,Keten lifi levha,1,14.0,4.9,4.9,-7.35,-2.45
+5,Çok Soğuk,Koyun yünü,1,14.0,3.5,2.1,-4.2,-2.1
+5,Çok Soğuk,Geri dönüşüm tekstil,1,14.0,4.9,2.45,-4.41,-1.96
+5,Çok Soğuk,Selüloz (püskürtme),1,15.0,7.5,1.88,-11.25,-9.38
+5,Çok Soğuk,Kenevir-kireç (hempcrete),1,26.0,85.8,17.16,-51.48,-34.32
+5,Çok Soğuk,Saman balya,1,22.0,22.0,1.1,-33.0,-31.9
+5,Çok Soğuk,Genleştirilmiş mantar (ICB),1,15.0,18.0,7.2,-27.0,-19.8
+5,Çok Soğuk,Pirinç kavuzu paneli,1,19.0,28.5,8.55,-42.75,-34.2
+5,Çok Soğuk,Ayçiçeği sapı özü paneli,1,15.0,9.0,2.7,-13.5,-10.8
+5,Çok Soğuk,Şeker kamışı küspesi paneli,1,18.0,32.4,9.72,-48.6,-38.88
+5,Çok Soğuk,Fındık kabuğu esaslı panel,1,20.0,50.0,15.0,-75.0,-60.0
+5,Çok Soğuk,Miselyum esaslı kompozit,1,16.0,19.2,5.76,-28.8,-23.04
+5,Çok Soğuk,EPS,0,13.0,2.6,8.58,0.0,8.58
+5,Çok Soğuk,XPS,0,12.0,3.8,13.06,0.0,13.06
+5,Çok Soğuk,Taşyünü,0,13.0,13.0,15.6,0.0,15.6
+5,Çok Soğuk,Camyünü,0,13.0,2.6,3.38,0.0,3.38
+6,Aşırı Soğuk,Ahşap lifi levha,1,15.0,24.0,16.8,-36.0,-19.2
+6,Aşırı Soğuk,Kenevir lifi levha,1,15.0,6.0,6.0,-9.0,-3.0
+6,Aşırı Soğuk,Keten lifi levha,1,14.0,4.9,4.9,-7.35,-2.45
+6,Aşırı Soğuk,Koyun yünü,1,14.0,3.5,2.1,-4.2,-2.1
+6,Aşırı Soğuk,Geri dönüşüm tekstil,1,14.0,4.9,2.45,-4.41,-1.96
+6,Aşırı Soğuk,Selüloz (püskürtme),1,15.0,7.5,1.88,-11.25,-9.38
+6,Aşırı Soğuk,Kenevir-kireç (hempcrete),1,26.0,85.8,17.16,-51.48,-34.32
+6,Aşırı Soğuk,Saman balya,1,22.0,22.0,1.1,-33.0,-31.9
+6,Aşırı Soğuk,Genleştirilmiş mantar (ICB),1,15.0,18.0,7.2,-27.0,-19.8
+6,Aşırı Soğuk,Pirinç kavuzu paneli,1,19.0,28.5,8.55,-42.75,-34.2
+6,Aşırı Soğuk,Ayçiçeği sapı özü paneli,1,15.0,9.0,2.7,-13.5,-10.8
+6,Aşırı Soğuk,Şeker kamışı küspesi paneli,1,18.0,32.4,9.72,-48.6,-38.88
+6,Aşırı Soğuk,Fındık kabuğu esaslı panel,1,20.0,50.0,15.0,-75.0,-60.0
+6,Aşırı Soğuk,Miselyum esaslı kompozit,1,16.0,19.2,5.76,-28.8,-23.04
+6,Aşırı Soğuk,EPS,0,13.0,2.6,8.58,0.0,8.58
+6,Aşırı Soğuk,XPS,0,12.0,3.8,13.06,0.0,13.06
+6,Aşırı Soğuk,Taşyünü,0,13.0,13.0,15.6,0.0,15.6
+6,Aşırı Soğuk,Camyünü,0,13.0,2.6,3.38,0.0,3.38

@@ -1,0 +1,19 @@
+kod,ad,grup,biyo_esasli,lambda,yogunluk,ozgul_isi,mu,gomulu_karbon_kg,biyojenik_karbon_kg,yangin_puan,maliyet_min_TLm3,maliyet_max_TLm3,yasam_sonu_puan,nem_kuf_puan,kaynak,veri_kalitesi
+M01,Ahşap lifi levha,Lifli levha,1,0.040,160,2100,5,0.70,-1.50,2,DOLDUR,DOLDUR,4,4,INDIKATIF,DOLDUR
+M02,Kenevir lifi levha,Lifli levha,1,0.040,40,1700,2,1.00,-1.50,2,DOLDUR,DOLDUR,4,4,INDIKATIF,DOLDUR
+M03,Keten lifi levha,Lifli levha,1,0.038,35,1600,2,1.00,-1.50,2,DOLDUR,DOLDUR,4,4,INDIKATIF,DOLDUR
+M04,Koyun yünü,Lifli levha,1,0.038,25,1720,2,0.60,-1.20,2,DOLDUR,DOLDUR,4,3,INDIKATIF,DOLDUR
+M05,Geri dönüşüm tekstil,Lifli levha,1,0.039,35,1600,3,0.50,-0.90,2,DOLDUR,DOLDUR,3,4,INDIKATIF,DOLDUR
+M06,Selüloz (püskürtme),Dökme/dolgu,1,0.040,50,1600,2,0.25,-1.50,5,DOLDUR,DOLDUR,4,4,INDIKATIF,DOLDUR
+M07,Kenevir-kireç (hempcrete),Dökme/dolgu,1,0.070,330,1500,5,0.20,-0.60,5,DOLDUR,DOLDUR,2,3,INDIKATIF,DOLDUR
+M08,Saman balya,Dökme/dolgu,1,0.060,100,1500,2,0.05,-1.50,2,DOLDUR,DOLDUR,4,5,INDIKATIF,DOLDUR
+M09,Genleştirilmiş mantar (ICB),Kabuk/atık esaslı,1,0.040,120,1800,10,0.40,-1.50,2,DOLDUR,DOLDUR,4,2,INDIKATIF,DOLDUR
+M10,Pirinç kavuzu paneli,Kabuk/atık esaslı,1,0.050,150,1700,5,0.30,-1.50,2,DOLDUR,DOLDUR,4,4,INDIKATIF,DOLDUR
+M11,Ayçiçeği sapı özü paneli,Kabuk/atık esaslı,1,0.040,60,1700,3,0.30,-1.50,2,DOLDUR,DOLDUR,4,4,INDIKATIF,DOLDUR
+M12,Şeker kamışı küspesi paneli,Kabuk/atık esaslı,1,0.048,180,1700,4,0.30,-1.50,2,DOLDUR,DOLDUR,4,4,INDIKATIF,DOLDUR
+M13,Fındık kabuğu esaslı panel,Kabuk/atık esaslı,1,0.055,250,1700,5,0.30,-1.50,2,DOLDUR,DOLDUR,4,4,INDIKATIF,DOLDUR
+M14,Miselyum esaslı kompozit,Büyütülmüş,1,0.042,120,1800,4,0.30,-1.50,2,DOLDUR,DOLDUR,4,4,INDIKATIF,DOLDUR
+R01,EPS,Kıyas,0,0.035,20,1450,50,3.30,0.00,2,DOLDUR,DOLDUR,2,2,INDIKATIF,DOLDUR
+R02,XPS,Kıyas,0,0.032,32,1450,150,3.40,0.00,2,DOLDUR,DOLDUR,2,1,INDIKATIF,DOLDUR
+R03,Taşyünü,Kıyas,0,0.035,100,1030,1,1.20,0.00,7,DOLDUR,DOLDUR,2,2,INDIKATIF,DOLDUR
+R04,Camyünü,Kıyas,0,0.035,20,1030,1,1.30,0.00,7,DOLDUR,DOLDUR,2,2,INDIKATIF,DOLDUR
