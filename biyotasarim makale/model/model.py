@@ -30,6 +30,13 @@ ALFA = 1.0                # iklim ağırlık ayarının duyarlılık katsayısı
 #   S3 = A1-A3 + C3 + C4 + D (modül D dahil)
 SINIR = 'S2'
 
+# Yaşam sonu salım oranı φ: C3 modülünde beyan edilen salımın ne kadarının
+# gerçekleştiği. φ=1 beyan edilen senaryo (enerji geri kazanımlı yakma);
+# φ=0 salımın hiç gerçekleşmediği sınır durum (depolanan karbonun sistemde
+# kalması). Aradaki değerler senaryo belirsizliğini tarar. Bu bir senaryo
+# verisi değil, bir duyarlılık parametresidir.
+C3_ORANI = 1.0
+
 GUN = {'Ocak': 31, 'Şubat': 28, 'Mart': 31, 'Nisan': 30, 'Mayıs': 31, 'Haziran': 30,
        'Temmuz': 31, 'Ağustos': 31, 'Eylül': 30, 'Ekim': 31, 'Kasım': 30, 'Aralık': 31}
 
@@ -75,9 +82,9 @@ def fonksiyonel_birim(malzeme, bolge):
     elif SINIR == 'S1':
         ydk = kutle * a13
     elif SINIR == 'S2':
-        ydk = kutle * (a13 + c3 + c4)
+        ydk = kutle * (a13 + C3_ORANI * c3 + c4)
     else:
-        ydk = kutle * (a13 + c3 + c4 + dmod)
+        ydk = kutle * (a13 + C3_ORANI * c3 + c4 + dmod)
     return {
         'yasam_dongusu_karbon_m2': ydk,
         'kalinlik_cm': d * 100,

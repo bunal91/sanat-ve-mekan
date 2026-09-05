@@ -92,6 +92,16 @@ kullanım ya da uzun ömürlü ürüne dönüştürme senaryolarında depolanan 
 bir bölümü sistemde kalır. Bulgunun söylediği şey, **yaşam sonu senaryosunun
 sonucu belirlediği** ve dolayısıyla varsayım olarak bırakılamayacağıdır.
 
+Senaryo duyarlılığı bu tespiti niceliksel hâle getirmektedir (4.6.1).
+Depolanan biyojenik karbonun yarısından fazlası yaşam sonunda salınmadıkça
+biyo-esaslı bir malzeme birinci sırada kalmaktadır; eşik, CRITIC
+ağırlıklandırmasında bölgeye göre 0,51 ile 0,82 arasındadır. Dolayısıyla
+4.6'daki sıralama değişimi biyo-esaslı malzemelerin aleyhine genel bir
+sonuç değil, **belirli bir yaşam sonu senaryosunun sonucudur.** Bu da
+tartışmayı malzeme seçiminden atık yönetimi politikasına taşımaktadır:
+biyo-esaslı yapı malzemelerinin iklim faydası, büyük ölçüde binanın
+yıkımından sonra ne olacağına bağlıdır.
+
 ## 5.4. Uygulamaya dönük çıkarımlar
 
 **Malzeme seçimi çalışmaları için.** Bir sıralama yayımlanırken fonksiyonel
@@ -135,15 +145,19 @@ göstermektedir.
 6. **Alternatif kapsamı.** Tarımsal atık esaslı paneller ve miselyum kompozit
    için doğrulanmış ürün beyanı bulunmadığından, sistem sınırı analizi on
    alternatifle sınırlıdır.
-7. **Yaşam sonu senaryosu.** Tek bir senaryo (enerji geri kazanımlı yakma)
-   üzerinden çalışılmıştır.
+7. **Yaşam sonu senaryosu.** Ürün beyanlarında ilan edilen senaryo (enerji
+   geri kazanımlı yakma) esas alınmış, senaryo belirsizliği salım oranı
+   parametresiyle taranmıştır (4.6.1). Ancak gerçek senaryoların — özellikle
+   düzenli depolamada oluşan metanın — iklim etkisi modellenmemiştir; düşük
+   salım oranı doğrudan daha iyi iklim performansı anlamına gelmez.
 
 ## 5.6. Gelecek çalışmalar
 
 Öncelikli üç yön belirlenmiştir. Birincisi, soğutma ihtiyacı hesabının
 eklenmesi ve ısıl kütle etkisinin sıcak bölgelerde yeniden ölçülmesidir.
-İkincisi, yaşam sonu senaryosunun (yakma, düzenli depolama, yeniden kullanım)
-duyarlılık ekseni hâline getirilmesi; böylece 4.6'daki bulgunun senaryoya
-bağımlılığı doğrudan gösterilebilir. Üçüncüsü, Türkiye'ye özgü tarımsal atık
+İkincisi, yaşam sonu senaryolarının kendi iklim etkileriyle — özellikle
+düzenli depolamada oluşan metanın küresel ısınma potansiyeliyle —
+modellenmesidir; bu çalışmadaki salım oranı taraması senaryo belirsizliğini
+göstermekte, ancak senaryoların gerçek etkilerini karşılaştırmamaktadır. Üçüncüsü, Türkiye'ye özgü tarımsal atık
 esaslı yalıtım ürünleri için ürün beyanı üretilmesidir; bu grubun karşılaştırmalı
 değerlendirmeye girebilmesi, hâlihazırda veri yokluğuyla engellenmektedir.

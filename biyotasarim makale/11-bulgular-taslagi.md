@@ -182,6 +182,59 @@ S2–S3 = 0,939.
 inmektedir. Bulgu ağırlıklandırma yönteminden de bağımsızdır; CRITIC ve eşit
 ağırlık, S1'de biyo-esaslı bir malzemeden S2'de camyününe geçmektedir.
 
+### 4.6.1. Yaşam sonu senaryosunun duyarlılığı
+
+4.6'daki karşılaştırma, ürün beyanlarında ilan edilen yaşam sonu senaryosunu
+(enerji geri kazanımlı yakma) esas almaktadır. Senaryonun sonucu ne ölçüde
+belirlediğini ölçmek için, C3 modülünde beyan edilen salımın gerçekleşen
+oranı bir duyarlılık parametresi olarak tanımlanmıştır:
+
+    φ = gerçekleşen salım / C3'te beyan edilen salım                  (12)
+
+φ = 1 beyan edilen senaryoyu, φ = 0 ise depolanan biyojenik karbonun yaşam
+sonunda hiç salınmadığı sınır durumu temsil eder. φ bir senaryo verisi değil,
+senaryo belirsizliğini tarayan bir parametredir.
+
+**Çizelge 12.** Camyününün birinci sıraya geçtiği salım oranı eşiği (φ\*)
+
+| Bölge | CRITIC | Eşit ağırlık | Entropi |
+|---|---|---|---|
+| 1 · Aşırı Sıcak | 0,82 | 0,99 | 0,00 |
+| 2 · Sıcak | 0,79 | 0,82 | 0,00 |
+| 3 · Ilıman | 0,75 | 0,66 | 0,00 |
+| 4 · Soğuk | 0,71 | 0,60 | 0,00 |
+| 5 · Çok Soğuk | 0,51 | 0,58 | 0,00 |
+| 6 · Aşırı Soğuk | 0,51 | 0,58 | 0,00 |
+
+**Şekil 6.** Salım oranına göre birinci sıradaki alternatif *(çizilecek)*
+
+Üç sonuç çıkmaktadır.
+
+**Birincisi**, biyo-esaslı üstünlük yalnızca yüksek salım oranlarında
+kaybolmaktadır. CRITIC ağırlıklandırmasında eşik 0,51 ile 0,82 arasındadır;
+yani depolanan biyojenik karbonun **yarısından fazlası** yaşam sonunda
+salınmadıkça biyo-esaslı bir malzeme birinci sırada kalmaktadır. 4.6'daki
+sıralama değişimi, bu nedenle "biyo-esaslı malzemeler geride kalır"
+biçiminde değil, "beyan edilen yakma senaryosu altında geride kalır"
+biçiminde okunmalıdır.
+
+**İkincisi**, eşik sıcak bölgelerde daha yüksektir (1. Bölge 0,82; 6. Bölge
+0,51). Sıcak bölgelerde biyo-esaslı malzemeler ısıl kütle üzerinden ek bir
+üstünlük taşıdığı için, birinci sırayı kaybetmeden daha büyük bir karbon
+yükünü soğurabilmektedirler.
+
+**Üçüncüsü**, entropi ağırlıklandırmasında eşik her bölgede 0,00'dır: camyünü,
+salım oranından tamamen bağımsız olarak birinci sıradadır. Bu, 4.4'teki
+bulgunun bir başka görünümüdür — entropi altında sıralamayı yangına tepki
+ölçütü belirlemekte, karbon muhasebesi sonucu hiç etkilememektedir.
+
+**Önemli sınırlılık.** Düşük φ değerleri, biyo-esaslı malzemenin düzenli
+depolamaya gönderilmesi durumuna karşılık gelebilir; ancak depolamada
+biyobozunma sonucu oluşan metanın küresel ısınma potansiyeli karbondioksitten
+yüksektir. Bu nedenle düşük φ, doğrudan "daha iyi iklim performansı" anlamına
+gelmez. Çizelge 12, senaryonun sonucu ne kadar belirlediğini gösterir;
+hangi senaryonun tercih edilmesi gerektiğini söylemez.
+
 ## 4.7. Aylık enerji hesabı ve ısıl kütlenin rolü
 
 Referans konut üzerinde yapılan aylık hesap, kazanç kullanım faktörünün
