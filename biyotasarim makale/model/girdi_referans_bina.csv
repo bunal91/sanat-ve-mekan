@@ -1,0 +1,23 @@
+parametre,deger,birim,aciklama
+plan_uzunluk,24.0,m,uzun aks doğu-batı
+plan_genislik,12.0,m,
+kat_sayisi,5,adet,
+kat_yuksekligi,2.80,m,Denizli referans yapısıyla uyumlu
+brut_hacim,4032.0,m3,24*12*14
+kat_alani_toplam,1440.0,m2,şartlandırılmış brüt döşeme alanı Af
+An_kullanim_alani,1290.2,m2,0.32*Vbrüt (TS 825 tanımı)
+duvar_brut_guney,336.0,m2,24*14
+duvar_brut_kuzey,336.0,m2,24*14
+duvar_brut_dogu,168.0,m2,12*14
+duvar_brut_bati,168.0,m2,12*14
+pencere_orani_guney,0.25,-,duvar alanına oran
+pencere_orani_kuzey,0.15,-,
+pencere_orani_dogu,0.15,-,
+pencere_orani_bati,0.15,-,
+cati_alani,288.0,m2,
+taban_alani,288.0,m2,
+hava_degisim_sayisi,0.7,m3/(h.m2),TS 825:2024 konut ve apartman
+ic_kazanc_katsayisi,5.0,W/m2,konut - 5*An
+golgelenme_faktoru,0.6,-,10 kata kadar binalar - TS 825
+gunes_gecirme_faktoru,0.6,-,çift camlı low-E - DOĞRULANACAK
+diger_bilesen_isil_kapasite,150.0,kJ/m2K,döşeme ve iç duvarların katkısı - VARSAYIM
