@@ -683,7 +683,7 @@ def build_mockups(work):
         "align-content:center;justify-items:center}"
         ".tiles > div{min-width:0;display:flex;flex-direction:column;align-items:center}"
         ".tile{background:#fff;box-shadow:0 14px 34px rgba(42,33,64,.16);border-radius:6px}"
-        ".tile img{height:548px;width:auto;display:block;border-radius:6px}"
+        ".tile img{height:472px;width:auto;display:block;border-radius:6px}"
         f".tilecap{{font-family:'Nunito',Arial,sans-serif;font-weight:800;text-transform:uppercase;"
         f"letter-spacing:.09em;font-size:20px;color:{C['soft']};padding:11px 2px 0}}"
         "</style>")
