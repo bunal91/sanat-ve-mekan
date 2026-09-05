@@ -1,5 +1,8 @@
 # Malzeme Verisi — tarama sonucu ve modelin gerçek veriyle çıktısı
 
+> **Not:** Buradaki mekanizma sayıları eski iklim tabanına aittir
+> (0,534). Güncel değer 0,567; bkz. `16-iklim-verisi-duzeltmesi.md`.
+
 **Dosyalar:** `model/girdi_malzemeler.csv`, `model/kaynaklar.md`
 Önceki yer tutucu dosya `model/girdi_malzemeler_INDIKATIF_yedek.csv` olarak saklandı.
 

@@ -1,5 +1,10 @@
 # Pilot Çalıştırma Bulgu Notu — makalenin ana iddiası çalışmıyor, kurgu değişmeli
 
+> **Not:** Bu belgedeki iklim sayıları, sonradan hatalı olduğu saptanan
+> TS 825 sıcaklık tablosuna dayanır. Güncel iklim tabanı için
+> `16-iklim-verisi-duzeltmesi.md` dosyasına bakınız. Belgenin yapısal
+> bulguları (orantılılık, ağırlıklandırma) etkilenmemiştir.
+
 **Tarih:** Eylül 2026 · **Dayanak:** `model/model.py` pilot çalıştırması
 
 ---

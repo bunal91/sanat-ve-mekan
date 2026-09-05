@@ -1,5 +1,9 @@
 # Referans Konut ve TS 825 Aylık Hesabı — kurulum ve kritik bulgu
 
+> **Not:** Bu belgedeki enerji sayıları eski iklim tabanına aittir ve
+> yalnızca ısıtmayı kapsar. Güncel sonuçlar için `11-bulgular-taslagi.md`
+> bölüm 4.7, iklim tabanı değişikliği için `16-iklim-verisi-duzeltmesi.md`.
+
 **Dosyalar:** `model/girdi_referans_bina.csv`, `model/ts825_aylik.py`
 
 ---

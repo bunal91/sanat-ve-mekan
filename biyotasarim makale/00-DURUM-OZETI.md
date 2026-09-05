@@ -88,17 +88,29 @@ Antalya, İstanbul, Ankara, Erzurum).
 
 **Üç ana bulgunun üçü de etkilenmedi.**
 
-## 6. Sıradaki iş — erişim gerektirmeyen (ben yapabilirim)
+## 6. Erişim gerektirmeyen işler — **tamamlandı**
 
-| # | İş | Not |
+| # | İş | Durum |
 |---|---|---|
-| 1 | Modeli PVGIS iklimine geçirmek | `girdi_iklim_pvgis.csv` hazır; `model.py` ve `ts825_aylik.py` bu dosyayı okuyacak biçimde güncellenecek |
-| 2 | İklim ağırlıklı mekanizmayı ve enerji sonuçlarını yeniden hesaplamak | Bulgular 4.3, 4.7, 4.7.1 ve Çizelge 6, 11, 13 güncellenecek |
-| 3 | Şekil 5'i yeniden üretmek | Betikten |
-| 4 | Kaynak sayısını 16'dan 50–65'e çıkarmak | Crossref üzerinden konu taraması; dört başlıkta derinleştirme (`15-kaynakca-taslagi.md` madde 4) |
-| 5 | Türkçe literatür taraması | TR Dizin / DergiPark üzerinden TS 825 ve yalıtım malzemesi seçimi |
-| 6 | Tarımsal atık panelleri için hakemli LCA verisi aramak | EPD yok; tekil çalışmalardan, düşük veri kalitesi puanıyla |
-| 7 | Bölüm metinlerini güncel sayılarla uyumlamak | 4 ve 5. bölümler |
+| 1 | Modeli PVGIS iklimine geçirmek | **tamam** — `model.py` ve `ts825_aylik.py` `girdi_iklim_pvgis.csv` okuyor; yer tutucu ışınım tablosu kaldırıldı |
+| 2 | İklim ağırlıklı mekanizmayı ve enerji sonuçlarını yeniden hesaplamak | **tamam** — Çizelge 6, 11, 12 ve bölüm 4.3, 4.7, 4.7.1 güncellendi |
+| 3 | Şekiller | **tamam** — Şekil 3, 5, 6 yenilendi; Şekil 5 iki panelli hâle getirildi |
+| 4 | Kaynak sayısını artırmak | **tamam** — 16 → **60 hakemli kaynak** (143 aday tarandı, 44 seçildi) |
+| 5 | Türkçe literatür | **tamam** — 6 Türkçe kaynak, biri hedef derginin kendisinde |
+| 6 | Tarımsal atık panelleri için hakemli kaynak | **kısmen** — 8 kaynak bulundu ve kaynakçaya alındı; sayısal veri çıkarımı yapılmadı |
+| 7 | Metinleri güncel sayılarla uyumlamak | **tamam** — eski sayılar tarandı ve düzeltildi; tarihsel notlara yönlendirme eklendi |
+
+### Bu turda doğrulanan önemli sonuç
+İklim tabanı hatalı tablodan PVGIS'e taşındığında **yapısal bulgular
+değişmedi**: mekanizma etkisi 0,534 → 0,567, salım oranı eşikleri en çok 0,02
+kaydı, kurgu A'da 18 alternatifin yayılımı gerçek iklimle de tam olarak
+0,0000 kWh çıktı. Bulgular veri tabanına duyarsızdır.
+
+### Kalan tek özerk iş
+Tarımsal atık esaslı paneller için bulunan 8 kaynaktan λ, yoğunluk ve
+mümkünse gömülü karbon değerlerinin çıkarılması. Bu, `girdi_malzemeler.csv`
+içindeki 7 eksik gömülü karbon hücresinin bir kısmını kapatabilir; veri
+kalitesi puanı düşük kalacaktır.
 
 ## 7. Sıradaki iş — erişim gerektiren (sizin tarafınızda)
 

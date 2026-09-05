@@ -21,7 +21,7 @@ dışı bırakıldığında üç ağırlıklandırma ve iki sıralama yöntemi i
 arasındaki Spearman korelasyonu 1,000000, entropi ağırlıklarının azami farkı
 0,00 × 10⁰'dır. Bölge etkisi, ancak bu orantılılığı kıran yapılar modele
 eklendiğinde doğar: uygulanabilirlik kısıtı (5. ve 6. bölgelerde dört
-alternatifi eler), iklim dengesine bağlı ağırlıklandırma (Spearman 0,998 → 0,534)
+alternatifi eler), iklim dengesine bağlı ağırlıklandırma (Spearman 0,998 → 0,567)
 ve zaman sabitine bağlı dinamik ısıl kütle.
 
 **2. Ağırlıklandırma yönteminin seçimi, biyo-esaslı alternatiflerin

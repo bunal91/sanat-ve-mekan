@@ -240,7 +240,7 @@ biçimine göre iki farklı sonuç vermektedir.
 
 **Kurgu A (τ'dan bağımsız kullanım faktörü):** on sekiz alternatifin tamamı
 birebir aynı yıllık ısıtma enerjisi ihtiyacını vermektedir (4. Bölge için
-55 992 kWh/yıl; 43,4 kWh/m²). Malzemeler arası yayılım **0 kWh, %0,00**'dır.
+30 563 kWh/yıl; 23.7 kWh/m²). Malzemeler arası yayılım **0 kWh, %0,00**'dır.
 Bu beklenen sonuçtur: sabit U hedefi altında özgül ısı kaybı H malzemeden
 bağımsızdır ve τ'dan bağımsız bir kullanım faktörü ısıl kütleyi görmez.
 

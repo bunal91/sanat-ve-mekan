@@ -23,10 +23,10 @@ güncellenmelidir.
 |---|---|---|---|
 | **1** | `Sekil-1-model-akis-semasi` | 3.1 | Model akışı: iklim verisi ve U hedeflerinden fonksiyonel birime, karar matrisine, ağırlıklandırma ve kısıt üzerinden sıralamaya |
 | **2** | `Sekil-2-orantililik` | 4.2 | 18 alternatifin bölgeler arası kalınlık oranı ile teorik oranın çakışması. Önermenin görsel kanıtı; yayılımın yalnızca yuvarlamadan geldiğini gösterir |
-| **3** | `Sekil-3-mekanizma-katkisi` | 4.3 | Dört kurgunun Spearman(B1,B6) değeri. Ham modelde 0,998; iklim ayarıyla 0,534 |
+| **3** | `Sekil-3-mekanizma-katkisi` | 4.3 | Dört kurgunun Spearman(B1,B6) değeri. Ham modelde 0,998; iklim ayarıyla 0,567. Dört bölge (PVGIS iklimi) |
 | **4** | `Sekil-4-sistem-siniri-siralama` | 4.6 | S1 → S2 → S3 arasında sıralamanın değişimi. Beş öne çıkan alternatif koyu, diğerleri açık gri |
-| **5** | `Sekil-5-isil-kutle-enerji` | 4.7.1 | Isıtma, soğutma ve toplam için malzemeler arası enerji farkı. Isıtmada azalan, soğutmada artan, toplamda düz gradyan |
-| **6** | `Sekil-6-salim-orani-esigi` | 4.6.1 | Camyününün birinci sıraya geçtiği salım oranı eşiği φ\*, üç ağırlıklandırma yöntemi için |
+| **5** | `Sekil-5-isil-kutle-enerji` | 4.7.1 | İki panel: (a) ısıl kütlenin mutlak katkısı (kWh/m²·yıl), (b) karşılaştırma tabanı olan toplam ihtiyaç. Dört bölge |
+| **6** | `Sekil-6-salim-orani-esigi` | 4.6.1 | Camyününün birinci sıraya geçtiği salım oranı eşiği φ\*, üç ağırlıklandırma yöntemi için. Dört bölge |
 
 ## Notlar
 
