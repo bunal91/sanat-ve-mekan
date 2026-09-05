@@ -1,0 +1,39 @@
+kod,ad,uuid,refYear,geo,ref_birim,kg_carpani,GWP_fossil_A1A3_kg,GWP_biogenic_A1A3_kg,GWP_total_A1A3_kg,C3_kg,C4_kg,D_kg,durum
+M01,Baufritz GaBi HOIZ wood chip insulation - reissue,bcf5c14e-f6c1-4a53-bfd0-32dd6b493028,2025,DE,Volumen,,,,,,,,"KULLANILAMAZ: şüpheli çevrim: kütle=1,0 ama referans birim Volumen"
+M01,GUTEX Thermofibre - wood fiber insulation,ba97c206-2714-4bae-a449-abe5cdf5d975,2025,RER,Masse,1.0,0.526666609587129,-1.6081907277333765,-1.0815241181462487,1.61183638314677,0.0,-0.683280333506524,kg başına normalize
+M01,Wood fibre board (wet process); wood fibre,c91aa879-2826-4078-8bfa-baae349549cb,2023,DE,Volume,0.00625,0.7210771012003188,-1.73855118922055,-1.0167827735311188,1.7764942667056876,,-0.5203960973673943,kg başına normalize
+M01,best wood wood fibre insulation boards,1c22a17e-aca4-4126-9fde-f02c33aa741e,2023,DE,Volumen,,,,,,,,KULLANILAMAZ: kütleye çevrim yok (referans birim: Volumen)
+M02,HemKor Jute Blend - Hemp and jute insulation,4089074f-a1b7-411b-a888-5839b1b053e6,2025,DE,Area,0.5813953488372093,1.133742716031913,-1.4945839529375,-0.35830819183587614,1.6004954388539014,0.0,-0.3779096961341867,kg başına normalize
+M02,Hemp fibre fleece; density 38 kg/m3,9a9f76b6-54f0-421e-9f8a-6a5db3a22e1d,2023,DE,Volume,0.02631578947368421,1.6767867550724027,-0.1446875979838371,1.5331065899418053,1.986267407335363,,-0.5025172665524262,kg başına normalize
+M02,Hempflax Thermo Hemp Combi Jute,1018517a-1fb0-40c9-aa82-d7d3c2687b49,2022,RER,Masse,1.0,32.05543285966216,-53.45605842744445,-20.25563848278819,55.80024893525917,0.0,-24.427986545447105,ŞÜPHELİ: fosil 32.06 bandın dışında; biyojenik -53.46 bandın dışında
+M02,Hemp fibre fleece; density 38 kg/m3,6505a4d0-df9a-4f7f-8a10-fa4ef36629ad,2022,DE,Volume,0.02631578947368421,1.8813435183758656,-1.509283204195505,0.37289410780707105,2.1629761708576605,,-0.4704353575068868,kg başına normalize
+M03,Flax fibre fleece; 38 kg/m3,b7b7c6be-122f-48d9-b1c2-9b81a6b7e95c,2023,DE,Volume,0.02631578947368421,1.6771140902809551,0.008689287209538472,1.6859412732389263,2.001856702335363,,-0.5025172665524262,kg başına normalize
+M03,Flax fibre fleece; 38 kg/m3,1edb805d-08dc-461e-8195-05a9865470d0,2022,DE,Volume,0.02631578947368421,1.8708944830213525,-1.5189651310135104,0.8900490359673843,2.1629761708576605,,-0.4704353575068868,kg başına normalize
+M03,Flax fibre fleece; 38 kg/m3,af13e5a8-0961-454a-ad3a-7093a37fc802,2018,DE,Volume,0.02631578947368421,,,,,,,kg başına normalize
+M04,ISOLENA Sheep's wool insulation bulk density 23.26 kg/m³; 1 m3 sheep's wool product with 23.26 kg per m3,4f0df91e-dbc6-457b-bdd9-bf6ca0b518d3,2025,RER,Volumen,0.04299226139294927,0.72646479,-1.5655355252547207,-0.8314868616547207,1.606173768632567,0.0,-0.2994038924199,kg başına normalize
+M05,HemKor Jute Blend - Hemp and jute insulation,4089074f-a1b7-411b-a888-5839b1b053e6,2025,DE,Area,0.5813953488372093,1.133742716031913,-1.4945839529375,-0.35830819183587614,1.6004954388539014,0.0,-0.3779096961341867,kg başına normalize
+M05,Hempflax Thermo Hemp Combi Jute,1018517a-1fb0-40c9-aa82-d7d3c2687b49,2022,RER,Masse,1.0,32.05543285966216,-53.45605842744445,-20.25563848278819,55.80024893525917,0.0,-24.427986545447105,ŞÜPHELİ: fosil 32.06 bandın dışında; biyojenik -53.46 bandın dışında
+M06,ISOCELL Zellulose Einblasdämmung,8173b6c4-48ce-4ada-b92c-d273a2a4acd3,2025,DE,Weight,,,,,,,,KULLANILAMAZ: kütleye çevrim yok (referans birim: Weight)
+M06,Cellulose fibre blowing insulation material; 45 kg/m3,e08642c5-4c81-4170-9130-d7fa8fb6509f,2022,DE,Volume,0.022222222222222223,0.23251073823636223,-1.8320497634886244,-1.5994045940963244,1.872824096399342,,-0.5128221338421334,kg başına normalize
+M06,Cellulose air injected insulation STEICOfloc and STEICOfloc NB,a1e19031-7d7f-4eb6-b415-a9b82958fcef,2021,RER,Gewicht,1.0,,,,,,,kg başına normalize
+M06,Cellulose fibre blowing insulation material; 45 kg/m3,c355d75b-9026-4899-a41c-e5d221c424f2,2018,DE,Volume,0.022222222222222223,,,,,,,kg başına normalize
+M08,DPM ISO-Stroh - Straw blown-in insulation; 1 m³ of straw blow-in insulation in installed condition with a density of 105 kg/m³,15ec902a-44f0-4d3e-9d5a-e3ccb09397ba,2025,AT,Volumen,,,,,,,,"KULLANILAMAZ: şüpheli çevrim: kütle=1,0 ama referans birim Volumen"
+M08,FASBA e.V. Baustroh 100 kg/m³ GaBi - 2024; 100 kg/m³,00fe2655-02ad-4ded-925a-af9b8f1a27c8,2024,DE,Volumen,0.01,0.184935067097017,-1.48242555829259,-1.29384758474953,1.5042148814026632,0.0,-0.0750468047419584,kg başına normalize
+M08,FASBA e.V. Baustroh 100 kg/m³; 100 kg/m³,d2d1b29f-8dd7-4373-ab2a-de57acd51e72,2019,DE,Volumen,0.01,,,,,,,kg başına normalize
+M08,FASBA e.V. Baustroh 100 kg/m³; 100 kg/m³,6526338f-aa7b-4585-9d92-7ec6d18030aa,2014,DE,Volumen,0.01,,,,,,,kg başına normalize
+M09,Expanded cork; 80 kg/m3,fdbe82c6-7073-4f8c-a540-c37a6bf16cd6,2023,DE,Volume,0.0125,0.5122901071055238,-1.5809411794197752,-1.0635206814039113,1.6040156708269624,,-0.31223765842043627,kg başına normalize
+M09,Expanded cork; 80 kg/m3,c1d62b9b-d4bb-4220-b5b5-d078d527f457,2022,DE,Volume,0.0125,0.49452131884336503,-1.5776051659035375,-1.0803592911830602,1.7268827114910625,,-0.48433201529534753,kg başına normalize
+M09,Expanded cork; 80 kg/m3,b50fa992-e435-455a-8dfe-82254e9f4f48,2018,DE,Volume,0.0125,,,,,,,kg başına normalize
+R01,SAGEX expanded polystyrene,29396128-5d81-454b-8e78-64e30345257b,2023,CH,Volumen,,,,,,,,KULLANILAMAZ: kütleye çevrim yok (referans birim: Volumen)
+R02,Extruded polystyrene (XPS); 32 kg/m3,c4ddfdbc-ee2b-4dd5-a754-b317cf06470a,2023,DE,Volume,0.03125,3.1737557134439376,0.013440127172172125,3.1881084395355,3.6914458433393436,,-1.3828672774998563,kg başına normalize
+R02,Extruded polystyrene (XPS); 32 kg/m3,37f50a3e-5445-4bce-8eda-98f01dba441f,2022,DE,Volume,0.03125,2.9206195244514377,0.01729246371544603,2.938384263495122,3.6920995383126565,,-1.2943397190736157,kg başına normalize
+R02,Extruded Polystyrene (XPS) Foam Insulation with halogen free blowing agent,dbde6a17-26eb-4312-ac6d-8accbe6a10ab,2019,RER,Area,,,,,,,,KULLANILAMAZ: kütleye çevrim yok (referans birim: Area)
+R02,Extruded polystyrene (XPS); 32 kg/m3,43e99b8c-90d8-4fcd-90ce-342fb0b7366e,2018,DE,Volume,0.03125,,,,,,,kg başına normalize
+R03,Rockpanel A2 8 mm Protect Plus - Stone wool cladding panel,fa3a5739-b26b-4f0d-9ad3-ae400c01f3f2,2025,RER,Area,0.10683760683760685,1.3423076923076924,-0.02625319685336389,1.3164107988731304,0.0,0.01585897435897436,-0.0685897435897436,kg başına normalize
+R03,Rockpanel A2 9 mm Protect Plus - Stone wool facade panels,425d7952-d1de-4f67-bdc8-e06611f99765,2025,RER,Area,,,,,,,,KULLANILAMAZ: kütleye çevrim yok (referans birim: Area)
+R03,Rockpanel Durable 6 mm finish Uni - stone wool cladding panel,764c4ff5-33ec-45e9-b6ee-c7b0dec8b2fe,2025,RER,Area,,,,,,,,KULLANILAMAZ: kütleye çevrim yok (referans birim: Area)
+R03,Rockpanel Natural Durable - 10 and 8 mm - Stone wool cladding panels,6682245a-a67c-45bd-a56d-b6bffa95fc75,2025,RER,Area,0.09523809523809523,1.2233333333333334,-0.026253196853363903,1.197401660289495,0.0,0.016141523809523807,-0.06533333333333334,kg başına normalize
+R04,PIPELANE pipe sections +A1,5a0fb7c7-90a4-45ef-984c-d429d412b77f,2021,CH,Gewicht,1.0,,,,,,,kg başına normalize
+R04,PIPELANE pipe sections +A2,9e1a22fd-86f4-4497-a4db-8332cfdbcf62,2021,CH,Gewicht,1.0,2.34296988561246,-0.223337123165245,2.12213148175305,0.0,0.00727657303219126,-0.0315393819084683,kg başına normalize
+R04,"SAGLAN glass wool, bonded with bio-based adhesive +A1",797ad7c5-bf5b-4332-8a3f-13cb09d1beb0,2021,CH,Gewicht,1.0,,,,,,,kg başına normalize
+R04,"SAGLAN glass wool, bonded with bio-based adhesive +A2",006c17a5-bfbd-4786-8c96-7546e5317f9c,2021,CH,Gewicht,1.0,1.24358785917103,-0.165623089348367,1.0786573466396,0.0,0.00727657303219126,-0.0533412613712809,kg başına normalize

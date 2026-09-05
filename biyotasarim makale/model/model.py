@@ -272,9 +272,27 @@ def malzeme_adi(m):
     return m['ad']
 
 
-def karar_matrisi(bolge, olcutler=OLCUTLER, kisit=True):
-    """Bölge için karar matrisi; kisit=True ise uygulanamayan alternatifler elenir."""
+def tam_veri_kodlari(olcutler=OLCUTLER):
+    """Verilen ölçüt setinde hiçbir eksiği olmayan alternatiflerin kodları."""
     mals = oku('girdi_malzemeler.csv')
+    kodlar = []
+    for m in mals:
+        eksik = False
+        for anahtar, _, _ in olcutler:
+            for sut in KAYNAK_SUTUN.get(anahtar, [anahtar]):
+                if sayi(m.get(sut)) is None:
+                    eksik = True
+        if not eksik:
+            kodlar.append(m['kod'])
+    return kodlar
+
+
+def karar_matrisi(bolge, olcutler=OLCUTLER, kisit=True, kodlar=None):
+    """Bölge için karar matrisi; kisit=True ise uygulanamayan alternatifler elenir.
+    kodlar verilirse yalnızca o alternatifler kullanılır."""
+    mals = oku('girdi_malzemeler.csv')
+    if kodlar is not None:
+        mals = [m for m in mals if m['kod'] in kodlar]
     if kisit:
         mals = [m for m in mals if uygulanabilir(m, bolge)]
     matris, adlar = [], []
@@ -295,8 +313,9 @@ def karar_matrisi(bolge, olcutler=OLCUTLER, kisit=True):
     return matris, adlar
 
 
-def calistir(bolge, yontem='Entropi', iklim=True, kisit=True, olcutler=OLCUTLER):
-    matris, adlar = karar_matrisi(bolge, olcutler, kisit)
+def calistir(bolge, yontem='Entropi', iklim=True, kisit=True, olcutler=OLCUTLER,
+             kodlar=None):
+    matris, adlar = karar_matrisi(bolge, olcutler, kisit, kodlar)
     w = AGIRLIK_YONTEMLERI[yontem](matris)
     if iklim:
         w = iklim_ayari(w, olcutler, int(bolge['bolge']))

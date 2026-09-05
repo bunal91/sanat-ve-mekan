@@ -60,3 +60,61 @@ Circular Ecology'den indirilerek doğrudan okunmalıdır.
 | Yangına tepki sınıfı | tamamı üretici beyanı gerektirir | EN 13501-1 sınıflandırma belgeleri |
 | Su buharı difüzyon direnci μ | çoğu eksik | EPD / üretici föyü |
 | Maliyet | tamamı eksik | Türkiye piyasası; aralık tahminiyle |
+
+---
+
+## K15 — Ökobaudat (eklendi)
+
+**Kaynak:** ÖKOBAUDAT, Bundesministerium für Wohnen, Stadtentwicklung und
+Bauwesen (BMWSB), açık veri servisi
+`https://www.oekobaudat.de/OEKOBAU.DAT/resource` (soda4LCA REST API).
+Çekim betiği: `model/oekobaudat_cek.py` · Ham kayıtlar: `model/oekobaudat/ham/`
+· Özet: `model/oekobaudat_ozet.csv`
+
+**Çekilen büyüklükler:** GWP-fossil, GWP-biogenic ve GWP-total göstergelerinin
+A1, A2, A3 modülleri (gömülü karbon) ile C3, C4 ve D modülleri (yaşam sonu).
+
+**Uygulanan üç veri kalitesi filtresi:**
+1. *Birim normalizasyonu.* Kayıtlar kg, m², m³ ve adet başına beyan edilmektedir.
+   Yalnızca beyan edilen birimi kütleye güvenle çevrilebilen kayıtlar kabul
+   edilmiştir; çevrim çarpanı bağlı akış kaydındaki kütle özelliğinden alınır.
+   Bu filtre olmadan kg başına ve m³ başına değerler karışır ve iki büyüklük
+   mertebesi hata oluşur.
+2. *Sahte çevrim reddi.* Referans birimi hacim veya alan olan bir kayıtta kütle
+   özelliği tam olarak 1,0 ise bu gerçek bir çevrim değil yer tutucudur; kayıt
+   reddedilir.
+3. *Makullik bandı.* Kg başına GWP-fossil değeri −1 ile 20 kgCO₂e/kg, biyojenik
+   değer −3 ile 1 kgCO₂e/kg bandının dışındaysa kayıt şüpheli işaretlenir.
+4. *Alaka filtresi.* Yalnızca "Dämmstoffe / Insulation" sınıflandırmasındaki
+   kayıtlar alınmış; duvar kaplaması, linolyum, boru kabuğu gibi ürünler elenmiştir.
+
+**Kabul edilen kayıtlar (kgCO₂e/kg, A1–A3):**
+
+| Kod | Malzeme | Ürün kaydı | Yıl | Fosil | Biyojenik | Kalite |
+|---|---|---|---|---|---|---|
+| M01 | Ahşap lifi | Wood fibre board (wet process) | 2023 | 0,721 | −1,739 | 5 |
+| M02 | Kenevir lifi | Hemp fibre fleece 38 kg/m³ | 2022 | 1,881 | −1,509 | 4 |
+| M03 | Keten lifi | Flax fibre fleece 38 kg/m³ | 2022 | 1,871 | −1,519 | 4 |
+| M04 | Koyun yünü | ISOLENA Schafwolle | 2025 | 0,726 | −1,566 | 5 |
+| M05 | Geri dönüşüm tekstil | HemKor Jute Blend | 2025 | 1,134 | −1,495 | 2 |
+| M06 | Selüloz | Cellulose fibre blowing insulation | 2022 | 0,233 | −1,832 | 5 |
+| M08 | Saman balya | FASBA Baustroh 100 kg/m³ | 2024 | 0,185 | −1,482 | 5 |
+| M09 | Genleştirilmiş mantar | Expanded cork 80 kg/m³ | 2023 | 0,512 | −1,581 | 5 |
+| R02 | XPS | Extruded polystyrene 32 kg/m³ | 2023 | 3,174 | 0,013 | 5 |
+| R03 | Taşyünü | Mineral wool (floor insulation) 85 kg/m³ | 2022 | 1,515 | 0,016 | 3 |
+| R04 | Camyünü | SAGLAN glass wool | 2021 | 1,244 | −0,166 | 4 |
+
+**Kayıt bulunamayan malzemeler (7):** kenevir-kireç (M07), pirinç kavuzu (M10),
+ayçiçeği sapı özü (M11), şeker kamışı küspesi (M12), fındık kabuğu (M13),
+miselyum kompozit (M14) ve **EPS (R01)**. İlk altısı için Ökobaudat'ta EPD
+bulunmamaktadır; EPS için kayıt vardır ancak tamamı hacim başına beyan edilmiş
+ve kütleye çevrim çarpanı içermemektedir.
+
+**Tespit edilen veri anomalisi.** Kenevir ve keten liflerinin 2023 tarihli
+kayıtlarında GWP-biogenic A1–A3 değeri sıfıra yakın (−0,145 ve +0,009) iken
+2022 tarihli kayıtlarında yaklaşık −1,5 kgCO₂e/kg'dır. Fosil değerler ise
+birbirine yakındır. Bu, biyojenik karbonun muhasebeleştirilme biçiminde
+sürüm bazlı bir değişikliğe işaret etmektedir; iki sürüm karıştırılmamalı ve
+makalede sınırlılık olarak belirtilmelidir. Bu çalışmada 2022 sürümleri
+kullanılmıştır çünkü lignoselülozik malzemenin kuru kütle karbon içeriğinden
+beklenen büyüklükle (≈ −1,5 kgCO₂e/kg) tutarlıdır.
