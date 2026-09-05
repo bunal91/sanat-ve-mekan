@@ -24,6 +24,12 @@ AZAMI_KALINLIK_CM = 20.0  # uygulanabilirlik sınırı
 TI_ISITMA, TI_SOGUTMA = 20.0, 26.0   # TS 825:2024 konut tasarım sıcaklıkları
 ALFA = 1.0                # iklim ağırlık ayarının duyarlılık katsayısı
 
+# Yaşam döngüsü sistem sınırı:
+#   S1 = A1-A3 (beşikten kapıya, biyojenik alım dahil)
+#   S2 = A1-A3 + C3 + C4 (beşikten mezara)
+#   S3 = A1-A3 + C3 + C4 + D (modül D dahil)
+SINIR = 'S2'
+
 GUN = {'Ocak': 31, 'Şubat': 28, 'Mart': 31, 'Nisan': 30, 'Mayıs': 31, 'Haziran': 30,
        'Temmuz': 31, 'Ağustos': 31, 'Eylül': 30, 'Ekim': 31, 'Kasım': 30, 'Aralık': 31}
 
@@ -60,7 +66,20 @@ def fonksiyonel_birim(malzeme, bolge):
     bk = sayi(malzeme.get('biyojenik_karbon_kg'))
     mmin, mmaks = (sayi(malzeme.get('maliyet_min_TLm3')),
                    sayi(malzeme.get('maliyet_max_TLm3')))
+    a13 = sayi(malzeme.get('gwp_A1A3_kg'))
+    c3 = sayi(malzeme.get('gwp_C3_kg'))
+    c4 = sayi(malzeme.get('gwp_C4_kg'))
+    dmod = sayi(malzeme.get('gwp_D_kg'))
+    if None in (a13, c3, c4, dmod) or kutle is None:
+        ydk = None
+    elif SINIR == 'S1':
+        ydk = kutle * a13
+    elif SINIR == 'S2':
+        ydk = kutle * (a13 + c3 + c4)
+    else:
+        ydk = kutle * (a13 + c3 + c4 + dmod)
     return {
+        'yasam_dongusu_karbon_m2': ydk,
         'kalinlik_cm': d * 100,
         'kutle_kgm2': kutle,
         'kappa_kJm2K': d * rho * c / 1000.0 if None not in (rho, c) else None,
@@ -242,6 +261,8 @@ KAYNAK_SUTUN = {
     'biyojenik_karbon_m2': ['biyojenik_karbon_kg'],
     'kalinlik_cm':         ['lambda'],
     'maliyet_TLm2':        ['maliyet_min_TLm3', 'maliyet_max_TLm3'],
+    'yasam_dongusu_karbon_m2': ['yogunluk', 'gwp_A1A3_kg', 'gwp_C3_kg',
+                                'gwp_C4_kg', 'gwp_D_kg'],
 }
 
 
@@ -285,6 +306,20 @@ def tam_veri_kodlari(olcutler=OLCUTLER):
         if not eksik:
             kodlar.append(m['kod'])
     return kodlar
+
+
+# Sistem sınırı analizi için ölçüt seti: gömülü ve biyojenik karbon yerine
+# tek bir yaşam döngüsü karbonu ölçütü kullanılır (çifte sayımı önler).
+OLCUTLER_SINIR = [
+    ('lambda',                   'Ö1 Isı iletkenliği',        'min'),
+    ('kutle_kgm2',               'Ö2 Birim kütle',            'min'),
+    ('kappa_kJm2K',              'Ö3 Alansal ısıl kapasite',  'max'),
+    ('yasam_dongusu_karbon_m2',  'Ö5* Yaşam döngüsü karbonu', 'min'),
+    ('yangin_puan',              'Ö7 Yangına tepki',          'max'),
+    ('yasam_sonu_puan',          'Ö9 Yaşam sonu senaryosu',   'max'),
+    ('nem_kuf_puan',             'Ö10 Nem/küf duyarlılığı',   'min'),
+    ('kalinlik_cm',              'Ö11 Duvar kalınlığı kaybı', 'min'),
+]
 
 
 def karar_matrisi(bolge, olcutler=OLCUTLER, kisit=True, kodlar=None):
