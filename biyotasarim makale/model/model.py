@@ -51,17 +51,21 @@ def kalinlik(lmbda, u_hedef, r_diger=R_DIGER):
 
 
 def fonksiyonel_birim(malzeme, bolge):
+    """Eksik veri sıfıra çevrilmez; None olarak taşınır."""
     lmbda, rho, c = (sayi(malzeme['lambda']), sayi(malzeme['yogunluk']),
                      sayi(malzeme['ozgul_isi']))
     d = kalinlik(lmbda, sayi(bolge['U_duvar_hedef']))
-    kutle = d * rho
-    mmin, mmaks = sayi(malzeme['maliyet_min_TLm3']), sayi(malzeme['maliyet_max_TLm3'])
+    kutle = d * rho if rho is not None else None
+    gk = sayi(malzeme.get('gomulu_karbon_kg'))
+    bk = sayi(malzeme.get('biyojenik_karbon_kg'))
+    mmin, mmaks = (sayi(malzeme.get('maliyet_min_TLm3')),
+                   sayi(malzeme.get('maliyet_max_TLm3')))
     return {
         'kalinlik_cm': d * 100,
         'kutle_kgm2': kutle,
-        'kappa_kJm2K': d * rho * c / 1000.0,          # alansal ısıl kapasite
-        'gomulu_karbon_m2': kutle * sayi(malzeme['gomulu_karbon_kg']),
-        'biyojenik_karbon_m2': kutle * sayi(malzeme['biyojenik_karbon_kg']),
+        'kappa_kJm2K': d * rho * c / 1000.0 if None not in (rho, c) else None,
+        'gomulu_karbon_m2': kutle * gk if None not in (kutle, gk) else None,
+        'biyojenik_karbon_m2': kutle * bk if None not in (kutle, bk) else None,
         'maliyet_TLm2': d * ((mmin + mmaks) / 2) if None not in (mmin, mmaks) else None,
     }
 
@@ -230,6 +234,44 @@ OLCUTLER = [
 ]
 
 
+# Hesaplanan ölçütlerin dayandığı ham veri sütunları
+KAYNAK_SUTUN = {
+    'kutle_kgm2':          ['yogunluk'],
+    'kappa_kJm2K':         ['yogunluk', 'ozgul_isi'],
+    'gomulu_karbon_m2':    ['gomulu_karbon_kg'],
+    'biyojenik_karbon_m2': ['biyojenik_karbon_kg'],
+    'kalinlik_cm':         ['lambda'],
+    'maliyet_TLm2':        ['maliyet_min_TLm3', 'maliyet_max_TLm3'],
+}
+
+
+def veri_eksigi(olcutler=OLCUTLER):
+    """Her ölçüt için eksik (DOLDUR) hücre sayısı. Eksik veri sessizce sıfır
+    sayılmamalıdır; %50'yi aşan ölçüt modelden çıkarılır."""
+    mals = oku('girdi_malzemeler.csv')
+    rapor = {}
+    for anahtar, etiket, _ in olcutler:
+        sutunlar = KAYNAK_SUTUN.get(anahtar, [anahtar])
+        eksik = sum(1 for m in mals
+                    if any(sayi(m.get(s)) is None for s in sutunlar))
+        rapor[anahtar] = (etiket, eksik, len(mals))
+    return rapor
+
+
+def kullanilabilir_olcutler(olcutler=OLCUTLER, esik=0.5):
+    """Eksik veri oranı esiği aşan ölçütleri eleyip kalanları döndürür."""
+    rapor = veri_eksigi(olcutler)
+    tutulan, elenen = [], []
+    for o in olcutler:
+        _, eksik, n = rapor[o[0]]
+        (elenen if eksik / n > esik else tutulan).append((o, eksik, n))
+    return [t[0] for t in tutulan], elenen
+
+
+def malzeme_adi(m):
+    return m['ad']
+
+
 def karar_matrisi(bolge, olcutler=OLCUTLER, kisit=True):
     """Bölge için karar matrisi; kisit=True ise uygulanamayan alternatifler elenir."""
     mals = oku('girdi_malzemeler.csv')
@@ -238,7 +280,17 @@ def karar_matrisi(bolge, olcutler=OLCUTLER, kisit=True):
     matris, adlar = [], []
     for m in mals:
         kaynak = dict(m); kaynak.update(fonksiyonel_birim(m, bolge))
-        matris.append([sayi(kaynak.get(a)) or 0.0 for a, _, _ in olcutler])
+        satir = []
+        for a, etiket, _ in olcutler:
+            v = sayi(kaynak.get(a)) if not isinstance(kaynak.get(a), float) \
+                else kaynak.get(a)
+            if v is None:
+                raise ValueError(
+                    f"'{malzeme_adi(m)}' için '{etiket}' verisi eksik. "
+                    f'Eksik veri sıfır sayılamaz; ölçütü modelden çıkarın '
+                    f'(kullanilabilir_olcutler) veya veriyi tamamlayın.')
+            satir.append(v)
+        matris.append(satir)
         adlar.append(m['ad'])
     return matris, adlar
 
@@ -291,6 +343,20 @@ def dogrula_kalinlik():
 
 
 # --- 7. Rapor -----------------------------------------------------------------
+def veri_raporu():
+    print('=' * 78)
+    print('VERİ BÜTÜNLÜĞÜ')
+    print('=' * 78)
+    tutulan, elenen = kullanilabilir_olcutler()
+    for o, eksik, n in [(x, *veri_eksigi()[x[0]][1:]) for x in tutulan]:
+        print(f'  TUTULDU  {o[1]:<32} eksik {eksik}/{n}')
+    for o, eksik, n in elenen:
+        print(f'  ELENDİ   {o[1]:<32} eksik {eksik}/{n}  '
+              f'-> veri tamamlanana kadar modelden çıkarıldı')
+    print()
+    return tutulan
+
+
 def rapor():
     dogrula_kalinlik()
     orantilik_testi()
