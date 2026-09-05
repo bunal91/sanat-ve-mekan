@@ -166,9 +166,10 @@
     <span class="eyebrow">Etsy yol haritası · Dusk Ladder</span>
     <h1>Planlayıcıyı<br><em>dükkâna çevirmek.</em></h1>
     <div class="ramp"></div>
-    <p class="lede">Dokuz ürün hazır (biri paket): günlük planlayıcı, doğum günü kiti, çocuk partisi kiti,
-    milestone kiti, ADHD-dostu set, otizm-dostu set, anksiyete günlüğü, zor günler günlüğü ve
-    dört setlik paket. Hepsi doldurulabilir PDF. İki koldan büyüyorsun: <b>etkinlik</b> (mevsimlik, yüksek fiyat) ve
+    <p class="lede">On ürün hazır (biri paket): günlük planlayıcı, doğum günü kiti, çocuk partisi kiti,
+    milestone kiti, ADHD-dostu set, otizm-dostu set, anksiyete günlüğü, zor günler günlüğü,
+    dört setlik paket ve <b>Cadılar Bayramı kiti</b>. Hepsi doldurulabilir PDF. İki koldan büyüyorsun:
+    <b>etkinlik</b> (mevsimlik, yüksek fiyat) ve
     <b>zihinsel sağlık / nörofarklılık</b> (yıl boyu, tekrar eden kullanım, sadık alıcı).</p>
   </header>
 
@@ -213,9 +214,34 @@
 
   <section>
     <div class="sec-head"><span class="num">2</span><h2>Elindeki paket</h2></div>
-    <p>Üç ayrı ürün, üç ayrı klasör. Etsy'ye yüklenecek hâlleri <code>dist/etsy/</code>,
-    <code>dist-birthday/etsy/</code> ve <code>dist-kids/etsy/</code> içinde paketli — her biri
-    tam olarak beş dosya.</p>
+    <p>Her ürün kendi klasöründe. Etsy'ye yüklenecek hâlleri <code>dist-*/etsy/</code> içinde
+    paketli — her ilan tam olarak beş dosya (Etsy'nin sınırı), her dosya 20 MB'ın altında.</p>
+
+    <h3 style="margin-top:24px">Ürün 10 &mdash; Cadılar Bayramı kiti (Thirty-First)</h3>
+    <div class="note" style="border-left-color:var(--warn)"><b>Zamanlama:</b> bugün 5 Eylül.
+    Etsy'de Cadılar Bayramı trafiği eylül sonunda kalkar, 10&ndash;25 Ekim arası tepe yapar.
+    İlanı <b>şimdi</b> aç: Etsy yeni ilanı sıralamaya oturtmak için birkaç hafta istiyor,
+    ve arama geçmişi olmayan bir ilan 15 Ekim'de açılırsa sezonu kaçırır. Sezon bitince ilanı
+    <b>kapatma</b> &mdash; öylece bırak, gelecek eylülde kendi geçmişiyle uyanır.</div>
+    <p>Dokuz sayfa, 562 alan. Diğer kitlerden ayrılan yanı: bu bir <i>tema</i> değil, bir
+    <b>gece</b> &mdash; tek bir tarihe kilitli, ve o tarihin kendi tuzakları var.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Sayfa</th><th>Neden bu sayfa var</th></tr></thead>
+        <tbody>
+          <tr><td><b>Korku seviyesi kadranı</b> (s. 1)</td><td>Beş kutu: &#8220;gülüşme ve simli&#8221; ile &#8220;gerçekten korkutucu&#8221; arasında. Bunu ilk sayfada seçtirmek diğer bütün kararları (menü, ışık, müzik, davetli listesi) kendiliğinden çözer.</td></tr>
+          <tr><td><b>&#8220;Ne olarak geliyor&#8221; sütunu</b> (s. 3)</td><td>Misafir listesinde kostüm sütunu &mdash; iki kişinin aynı kostümle gelmesini önleyen tek şey. Bu sütun jenerik parti planlayıcılarda yok.</td></tr>
+          <tr><td><b>Balkabakları</b> (s. 7)</td><td>Ürünün en çok işe yarayan sayfası: oyulmuş balkabağı içeride ~3, soğukta ~5 gün dayanır. <b>28'inde oymak erken, 30'unda oymak doğru.</b> Bunu bilmeyen herkes bir kere öğreniyor &mdash; bu sayfa onu bir kere öğretiyor.</td></tr>
+          <tr><td><b>İki güvenlik kutusu</b> (s. 5 ve s. 6)</td><td>Kuru buz <b>kâsenin içine değil, kâsenin etrafına</b> ve asla kapalı şişeye. Gerçek mum sadece hiçbir şeyin sarkmadığı ve kimsenin yürümediği yere; balkabağının içine LED. Bunlar süs değil, ilanın güven kazandığı yer.</td></tr>
+          <tr><td><b>1 Kasım sayfası</b> (s. 9)</td><td>Ürünü tek gecelik olmaktan çıkarır: bugün indirimde ne alındı, kutu nerede duruyor, gelecek yıl için tek satır. Alıcı dosyayı saklar &mdash; ve gelecek yıl dükkânı hatırlar.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:14px">Tasarım dili de ayrı: başlıklar <b>Anton</b> (afiş tipografisi),
+    gövde <b>Rubik</b>; turuncu / zehir yeşili / mor üçlüsü <b>beyaz kâğıt</b> üzerinde. Siyah zemin
+    kullanmadım bilerek &mdash; ekranda güzel görünür, yazıcıda bir toner kartuşu yer ve alıcı
+    bunu yorumda yazar. Köşedeki örümcek ağı stok klipart değil, altı ışın üzerine üç yay olarak
+    <b>çizdirildi</b>. <code>python3 halloween.py</code></p>
 
     <h3 style="margin-top:24px">Ürün 9 &mdash; Dört set paketi (Mental Health Bundle)</h3>
     <p>Dört zihinsel sağlık setini tek ilanda satar. Ama paketi değerli yapan şey indirim değil,
@@ -485,6 +511,32 @@
   <section>
     <div class="sec-head"><span class="num">5</span><h2>İlan metni — kopyala, yapıştır</h2></div>
 
+    <div class="copyblock" style="border-left-color:var(--warn)">
+      <span class="tag">Başlık &mdash; Cadılar Bayramı kiti (önce bunu aç)</span>
+      Halloween Party Planner Printable, Fillable PDF, 9 Page Party Planning Kit, Guest List
+      Costume Contest Pumpkin Plan, Letter + A4, Instant Download
+    </div>
+
+    <div class="copyblock" style="border-left-color:var(--warn)">
+      <span class="tag">Cadılar Bayramı &mdash; açıklamanın ilk üç satırı</span>
+      Nine pages for the thirty-first: a four-week countdown, a guest list with a
+      <b>&#8220;coming as&#8221;</b> column, costumes and prize categories, a menu, decor room by
+      room, a pumpkin plan with the right carving date, and an hour-by-hour run of show.<br>
+      <b>Fillable PDF</b> &mdash; type into the ready-made fields in free Adobe Acrobat Reader or
+      on a tablet. The layout, fonts and colours are fixed.<br>
+      Printed on white, not black &mdash; it will not eat your ink. US Letter and A4, colour and
+      ink-saving mono. Instant download, undated, reusable every year.
+    </div>
+
+    <h3 style="margin-top:22px">Cadılar Bayramı için 13 etiket</h3>
+    <div class="tags">
+      <span>halloween planner</span><span>halloween party</span><span>party planner</span>
+      <span>halloween printable</span><span>costume contest</span><span>pumpkin carving</span>
+      <span>fillable pdf</span><span>party checklist</span><span>guest list printable</span>
+      <span>halloween party kit</span><span>trick or treat</span><span>event planner</span>
+      <span>digital download</span>
+    </div>
+
     <div class="copyblock">
       <span class="tag">Başlık &mdash; doğum günü kiti (140 karakter sınırı)</span>
       Birthday Party Planner Printable, Fillable PDF, 9 Page Party Planning Kit, Guest List RSVP
@@ -630,11 +682,13 @@
     <div class="sec-head"><span class="num">6</span><h2>Fiyat ve gerçek kazanç</h2></div>
     <p>Tek sayfa planlayıcılar 3–6 $, çok sayfalı etkinlik kitleri 10–20 $ bandında.
     Milestone kiti için <b>16,50 $</b> (11 sayfa, en spesifik arama, en yüksek bütçeli alıcı),
-    çocuk ve doğum günü kitleri için <b>12,50 $</b>, ADHD seti için <b>9,50 $</b>
+    çocuk, doğum günü ve <b>Cadılar Bayramı</b> kitleri için <b>12,50 $</b>, ADHD seti için <b>9,50 $</b>
     (8 sayfa, ama tekrar eden kullanım &mdash; günlük sayfayı sürekli yazdırırlar),
     günlük planlayıcı için <b>6,50 $</b>.
     İlk hafta %30 kuponla kiti 8,75 $'a çekip ilk yorumları toplamak işe yarıyor —
-    dükkânın ilk 5 yorumu, sonraki 100 satışın önkoşulu.</p>
+    dükkânın ilk 5 yorumu, sonraki 100 satışın önkoşulu.
+    <b>Cadılar Bayramı'nda kupon zamanlaması farklı:</b> indirimi eylülde ver, ekimde kaldır.
+    Sezonun tepesinde fiyat kırmak para bırakmaktır; sen o hafta zaten satarsın.</p>
 
     <div class="tablewrap">
       <table>
@@ -679,8 +733,10 @@
     <div class="sec-head"><span class="num">8</span><h2>Lisans ve haklar</h2></div>
     <div class="grid g3">
       <div class="card"><span class="tag">Yazı tipleri</span><h4>Serbest</h4>
-        <p>Bodoni Moda, Barlow Condensed, IBM Plex Sans — hepsi SIL OFL. Ürüne gömmek ve
-        ürünü satmak serbest; yazı tipi dosyalarını tek başına satmak değil.</p></div>
+        <p>Her ürün kendi yazı tipi çiftini kullanıyor (Bodoni Moda, Fraunces, Fredoka,
+        Cormorant, Atkinson Hyperlegible, Lexend, Newsreader, Literata, Instrument Serif,
+        Anton, Rubik&hellip;) &mdash; <b>hepsi SIL Open Font License</b>. Ürüne gömmek ve ürünü
+        satmak serbest; yazı tipi dosyalarını tek başına satmak değil.</p></div>
       <div class="card"><span class="tag">Tasarım</span><h4>Senin</h4>
         <p>Sayfa sıfırdan kuruldu; hazır şablon, stok grafik ya da başka bir dükkânın öğesi
         kullanılmadı. Telif sana ait.</p></div>
@@ -698,6 +754,15 @@
     daha iyi satar ve fiyatı da taşır. Dört yön, benim sıralamamla:</p>
 
     <div class="grid g2">
+      <div class="card">
+        <div class="rail" style="background:var(--warn)"></div>
+        <span class="tag">0 &mdash; bu ay</span>
+        <h4>Mevsimlik etkinlikler &mdash; Cadılar Bayramı hazır</h4>
+        <p>Mevsimlik ürünün mantığı diğerlerinin tersi: hacim yıl boyunca sıfır, altı hafta boyunca
+        çok yüksek. Riski de düşük &mdash; bir kere yazılır, her yıl aynı dosya satar. Cadılar
+        Bayramı yazıldı; sıradakiler <b>Şükran Günü / yılbaşı yemeği</b> (ekim sonunda hazır olmalı)
+        ve <b>Paskalya</b>. Aynı iskelet, farklı gece.</p>
+      </div>
       <div class="card">
         <div class="rail" style="background:var(--s3)"></div>
         <span class="tag">1 &mdash; şimdi yap</span>

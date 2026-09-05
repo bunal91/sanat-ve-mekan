@@ -1,10 +1,11 @@
 # Printable planner shop — product packs
 
-Nine digital-download products (one of them a bundle), all generated from HTML templates: **Dusk Ladder**, a one-page
+Ten digital-download products (one of them a bundle), all generated from HTML templates: **Dusk Ladder**, a one-page
 daily planner; **Party Line**, a nine-page birthday planning kit; **Confetti Club**, a nine-page
 kids' party kit; **Golden Hour**, an eleven-page milestone birthday kit; **First Move**, an eight-page
 ADHD-friendly planning set; **Same Shape**, a nine-page autism-friendly set; **Steady**, a nine-page anxiety journal;
-and **Small Light**, a nine-page journal for low days. Each has its own design language rather
+**Small Light**, a nine-page journal for low days; and **Thirty-First**, a nine-page Halloween
+party kit. Each has its own design language rather
 than a recoloured shell. Every variant a listing
 needs — page sizes, colourways, languages, print and fillable — comes out of one build.
 
@@ -22,6 +23,7 @@ planner/
 ├── anxiety.py                    # anxiety journal: nine pages, worry window to calm plan
 ├── depression.py                 # low-days journal: nine pages, safety plan at the centre
 ├── bundle.py                     # the four mental-health sets as one product, plus its index sheet
+├── halloween.py                  # Halloween party kit: nine pages, one night
 ├── src/
 │   ├── planner.template.html    # the daily planner (single source of truth)
 │   ├── readme.template.html     # the "start here" sheet the buyer opens first (both products)
@@ -35,6 +37,7 @@ planner/
 ├── anxiety-journal.html         # browser/preview copy (Letter · steady · 9 pages)
 ├── low-days-journal.html        # browser/preview copy (Letter · warm · 9 pages)
 ├── bundle-sheets.html           # browser/preview copy of the two bundle-only pages
+├── halloween-planner.html       # browser/preview copy (Letter · spooky · 9 pages)
 ├── etsy-rehberi.html            # Turkish guide: shop setup, listing copy, pricing, niche
 ├── dist/                        # daily planner — 16 PDFs, 2 start-here sheets, 3 images, ZIPs
 ├── dist-birthday/               # birthday kit — 8 PDFs, start-here sheet, 3 images, ZIPs
@@ -44,7 +47,8 @@ planner/
 ├── dist-autism/                 # autism-friendly set — same shape
 ├── dist-anxiety/                # anxiety journal — same shape
 ├── dist-depression/             # low-days journal — same shape
-└── dist-bundle/                 # bundle sheets, listing images, foldered zips
+├── dist-bundle/                 # bundle sheets, listing images, foldered zips
+└── dist-halloween/              # Halloween kit — same shape
 ```
 
 ## Build
@@ -64,6 +68,7 @@ python3 autism.py                    # the autism-friendly set
 python3 anxiety.py                   # the anxiety journal
 python3 depression.py                # the low-days journal
 python3 bundle.py                    # bundle sheets + foldered zips (build the four sets first)
+python3 halloween.py                 # the Halloween kit
 ```
 
 Chromium (headless) does the rendering and prints the PDFs at exact page size; `PLANNER_WORK`
@@ -187,6 +192,25 @@ worth buying — two pages that exist only here are:
 
 Files are zipped foldered by set, in complete / Letter / A4 splits, which with the two loose
 sheets is exactly the five files an Etsy listing accepts.
+
+## The Halloween kit
+
+Nine pages locked to one date: at a glance with a five-box **scare-level dial** that settles every
+later decision, a four-week countdown, a guest list with a *coming as* column so two people do not
+arrive as the same thing, costumes and prize categories with a repair kit by the mirror, a menu,
+decor room by room, a pumpkin page, an hour-by-hour run of show with seven beats and a
+trick-or-treating checklist, and a page for the first of November. 562 form fields, four variants.
+
+Two things are load-bearing rather than decorative. The pumpkin page says **carve on the 30th, not
+the 28th** and explains why (about three days indoors, about five outside in the cold) — the one
+fact most people learn by ruining a pumpkin. And two framed safety boxes: dry ice goes in the bowl
+*around* the punch, never in the drink and never in a sealed bottle; real candles only where
+nothing hangs and nobody walks, LED tea lights inside pumpkins and near costumes.
+
+Anton for poster headlines with Rubik for everything else; pumpkin orange, poison green and violet
+on **white** — a black page looks good on screen and eats a toner cartridge in a printer, which
+buyers write about in reviews. The cobweb in each masthead is drawn from three arcs on six radials
+rather than dropped in as clip-art.
 
 ## How the fillable PDFs are made
 
