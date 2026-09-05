@@ -22,8 +22,11 @@ Bu betik iki kullanım faktörü kurgusunu karşılaştırır:
 A kurgusunda malzemeler arasında hiçbir fark oluşamaz. B kurgusunda oluşur.
 TS 825:2024'ün hangisini kullandığı standardın metninden DOĞRULANMALIDIR.
 
-UYARI: güneş ışınımı şiddeti I (TS 825:2024 Ek-C) elimizde yok. Aşağıdaki
-tablo YER TUTUCUDUR ve duyarlılık analiziyle ölçeklenir.
+İKLİM VERİSİ: PVGIS (AB Ortak Araştırma Merkezi) — aylık ortalama dış hava
+sıcaklığı (ERA5) ve düşey yüzeylere gelen yön bazlı aylık ortalama ışınım
+şiddeti (PVGIS-SARAH2). TS 825:2024 Ek-C'ye erişilemediği için kullanılan
+yer tutucu tablo kaldırılmıştır. Hesap, il-bölge eşleşmesi doğrulanabilen
+dört bölge için tanımlıdır (bkz. 16-iklim-verisi-duzeltmesi.md).
 """
 
 import csv, math, os
@@ -32,14 +35,7 @@ import model as M
 BURADA = os.path.dirname(os.path.abspath(__file__))
 AYLAR = list(M.GUN.keys())
 
-# YER TUTUCU — TS 825:2024 Ek-C ile değiştirilecek. Düşey yüzeye gelen aylık
-# ortalama güneş ışınımı şiddeti (W/m2), yöne göre.
-I_YER_TUTUCU = {
-    'Güney': [72, 90, 96, 89, 84, 82, 86, 96, 103, 95, 76, 65],
-    'Kuzey': [23, 32, 45, 58, 71, 78, 74, 62, 47, 34, 24, 20],
-    'Doğu':  [38, 52, 71, 85, 97, 103, 100, 92, 76, 57, 40, 33],
-    'Batı':  [38, 52, 71, 85, 97, 103, 100, 92, 76, 57, 40, 33],
-}
+
 
 
 def bina():
@@ -65,13 +61,28 @@ def ozgul_isi_kaybi(b, bolge):
     return h_t + h_v, pencere, opak
 
 
-def gunes_kazanci(b, ay_i, olcek=1.0):
-    """phi_s (W) — YER TUTUCU ışınım tablosuyla."""
+YONLER = {'Güney': 'guney', 'Kuzey': 'kuzey', 'Doğu': 'dogu', 'Batı': 'bati'}
+_ISINIM = {}
+
+
+def isinim(bolge_no, yon):
+    """PVGIS düşey yüzey ışınımı (W/m²); bölge başına önbelleklenir."""
+    anahtar = (str(bolge_no), yon)
+    if anahtar not in _ISINIM:
+        _ISINIM[anahtar] = M.pvgis_isinim(bolge_no, yon)
+    return _ISINIM[anahtar]
+
+
+def gunes_kazanci(b, ay_i, bolge_no, olcek=1.0):
+    """phi_s (W) — PVGIS yön bazlı ışınım verisiyle."""
     r, g = b['golgelenme_faktoru'], b['gunes_gecirme_faktoru']
-    yonler = {'Güney': 'guney', 'Kuzey': 'kuzey', 'Doğu': 'dogu', 'Batı': 'bati'}
-    return sum(r * g * (I_YER_TUTUCU[ad][ay_i] * olcek)
-               * b[f'duvar_brut_{k}'] * b[f'pencere_orani_{k}']
-               for ad, k in yonler.items())
+    toplam = 0.0
+    for ad, k in YONLER.items():
+        I = isinim(bolge_no, ad)
+        if I is None:
+            return None
+        toplam += r * g * I[ay_i] * olcek * b[f'duvar_brut_{k}'] * b[f'pencere_orani_{k}']
+    return toplam
 
 
 def eta_2008(kko):
@@ -112,8 +123,10 @@ def isil_kapasite(b, malzeme, bolge):
 def yillik_ihtiyac(b, malzeme, bolge, kurgu='A', gunes_olcek=1.0):
     """Yıllık net ısıtma enerjisi ihtiyacı (kWh/yıl) ve ayrıntılar."""
     H, _, _ = ozgul_isi_kaybi(b, bolge)
-    sic = M.oku('girdi_bolge_sicakliklari.csv')
     bno = int(bolge['bolge'])
+    sic = M.pvgis_sicaklik(bno)
+    if sic is None:
+        return None
     phi_i = b['ic_kazanc_katsayisi'] * b['An_kullanim_alani']
     C = isil_kapasite(b, malzeme, bolge)
     tau_saat = C / H / 3600.0
@@ -121,12 +134,12 @@ def yillik_ihtiyac(b, malzeme, bolge, kurgu='A', gunes_olcek=1.0):
     toplam = 0.0
     aylik = []
     for i, ay in enumerate(AYLAR):
-        te = float(sic[i][f'bolge{bno}'])
+        te = sic[i]
         dt = M.GUN[ay] * 24.0                                    # saat
         kayip = H * (M.TI_ISITMA - te) * dt / 1000.0             # kWh
         if kayip <= 0:
             aylik.append((ay, 0.0)); continue
-        kazanc = (phi_i + gunes_kazanci(b, i, gunes_olcek)) * dt / 1000.0
+        kazanc = (phi_i + gunes_kazanci(b, i, bno, gunes_olcek)) * dt / 1000.0
         gama = kazanc / kayip
         eta = eta_2008(gama) if kurgu == 'A' else eta_13790(gama, tau_saat)
         q = max(0.0, kayip - eta * kazanc)
@@ -139,17 +152,19 @@ def yillik_ihtiyac(b, malzeme, bolge, kurgu='A', gunes_olcek=1.0):
 def yillik_sogutma(b, malzeme, bolge, kurgu='B', gunes_olcek=1.0):
     """Yıllık net soğutma enerjisi ihtiyacı (kWh/yıl)."""
     H, _, _ = ozgul_isi_kaybi(b, bolge)
-    sic = M.oku('girdi_bolge_sicakliklari.csv')
     bno = int(bolge['bolge'])
+    sic = M.pvgis_sicaklik(bno)
+    if sic is None:
+        return None
     phi_i = b['ic_kazanc_katsayisi'] * b['An_kullanim_alani']
     C = isil_kapasite(b, malzeme, bolge)
     tau_saat = C / H / 3600.0
 
     toplam = 0.0
     for i, ay in enumerate(AYLAR):
-        te = float(sic[i][f'bolge{bno}'])
+        te = sic[i]
         dt = M.GUN[ay] * 24.0
-        ic_kazanc = (phi_i + gunes_kazanci(b, i, gunes_olcek)) * dt / 1000.0
+        ic_kazanc = (phi_i + gunes_kazanci(b, i, bno, gunes_olcek)) * dt / 1000.0
         kayip = H * (M.TI_SOGUTMA - te) * dt / 1000.0        # + ise ısı atılabiliyor
         if kayip <= 0:
             # Dış ortam iç tasarım sıcaklığından sıcak: iletim de kazanç

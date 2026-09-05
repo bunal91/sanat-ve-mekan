@@ -114,7 +114,9 @@ def sekil2():
 
 # --- Şekil 3: mekanizmaların katkısı ----------------------------------------
 def sekil3():
-    bolg = M.oku('girdi_bolgeler.csv'); b1, b6 = bolg[0], bolg[5]
+    bolg = [x for x in M.oku('girdi_bolgeler.csv')
+            if x['bolge'] in M.IKLIM_BOLGELERI]
+    b1, b6 = bolg[0], bolg[-1]
     ana, _ = M.tam_olcutler(M.OLCUTLER)
     kurgular = [('Ham model', 0, 0), ('+ uygulanabilirlik\nkısıtı', 1, 0),
                 ('+ iklim ayarlı\nağırlık', 0, 1), ('+ her ikisi\n(tam model)', 1, 1)]
@@ -177,42 +179,57 @@ def sekil4():
     kaydet(fig, 'Sekil-4-sistem-siniri-siralama')
 
 
-# --- Şekil 5: ısıl kütlenin enerji farkı ------------------------------------
+# --- Şekil 5: ısıl kütlenin enerji farkı (mutlak) -------------------------
 def sekil5():
-    b = T.bina(); bolg = M.oku('girdi_bolgeler.csv')
+    b = T.bina()
+    bolg = [x for x in M.oku('girdi_bolgeler.csv') if x['bolge'] in M.IKLIM_BOLGELERI]
     mals = M.oku('girdi_malzemeler.csv')
+    An = b['An_kullanim_alani']
     hafif = min(mals, key=lambda m: M.sayi(m['yogunluk']) * M.sayi(m['ozgul_isi']))
     agir = max(mals, key=lambda m: M.sayi(m['yogunluk']) * M.sayi(m['ozgul_isi']))
-    isit, sog, top = [], [], []
+    isit, sog, ihtiyac = [], [], []
     for bo in bolg:
         h1 = T.yillik_ihtiyac(b, hafif, bo, 'B')['QH_kWh']
         h2 = T.yillik_ihtiyac(b, agir, bo, 'B')['QH_kWh']
         c1 = T.yillik_sogutma(b, hafif, bo, 'B')['QC_kWh']
         c2 = T.yillik_sogutma(b, agir, bo, 'B')['QC_kWh']
-        isit.append((h1 - h2) / h1 * 100)
-        sog.append((c1 - c2) / c1 * 100 if c1 else 0)
-        top.append(((h1 + c1) - (h2 + c2)) / (h1 + c1) * 100)
-    x = range(len(bolg)); g = 0.26
-    fig, ax = plt.subplots(figsize=(GENISLIK * 1.55, 2.4))
-    ax.bar([i - g for i in x], isit, g, label='Isıtma', color='#ffffff',
+        isit.append((h1 - h2) / An); sog.append((c1 - c2) / An)
+        ihtiyac.append((h1 + c1) / An)
+    x = range(len(bolg)); g = 0.36
+    fig, (ax, ax2) = plt.subplots(1, 2, figsize=(GENISLIK * 2.05, 2.4),
+                                  gridspec_kw={'width_ratios': [1.25, 1]})
+    ax.bar([i - g / 2 for i in x], isit, g, label='Isıtma', color='#ffffff',
            edgecolor='#111111', linewidth=0.7, hatch='///', zorder=2)
-    ax.bar(list(x), sog, g, label='Soğutma', color='#a6a6a6',
-           edgecolor='#111111', linewidth=0.7, zorder=2)
-    ax.bar([i + g for i in x], top, g, label='Toplam', color='#111111',
+    ax.bar([i + g / 2 for i in x], sog, g, label='Soğutma', color='#a6a6a6',
            edgecolor='#111111', linewidth=0.7, zorder=2)
     ax.set_xticks(list(x))
     ax.set_xticklabels([f"{bo['bolge']}\n{bo['ad']}" for bo in bolg], fontsize=6.4)
-    ax.set_ylabel('Malzemeler arası enerji farkı (%)')
-    ax.set_ylim(0, max(isit + sog + top) * 1.32)
+    ax.set_ylabel('Enerji farkı (kWh/m²·yıl)')
+    ax.set_ylim(0, max(isit + sog) * 1.35)
     ax.grid(axis='y', zorder=0)
-    ax.legend(ncol=3, loc='upper center', bbox_to_anchor=(0.5, 1.02))
-    ax.set_title('Şekil 5. Isıl kütlenin enerji ihtiyacına etkisi', loc='left')
+    ax.legend(ncol=2, loc='upper left')
+    ax.set_title('(a) Isıl kütlenin mutlak katkısı', loc='left')
+
+    ax2.bar(list(x), ihtiyac, 0.55, color='#d9d9d9', edgecolor='#111111',
+            linewidth=0.7, zorder=2)
+    for i, v in enumerate(ihtiyac):
+        ax2.text(i, v + 1.2, f'{v:.0f}', ha='center', fontsize=6.6)
+    ax2.set_xticks(list(x))
+    ax2.set_xticklabels([bo['bolge'] for bo in bolg], fontsize=6.6)
+    ax2.set_xlabel('Bölge')
+    ax2.set_ylabel('Toplam ihtiyaç (kWh/m²·yıl)')
+    ax2.set_ylim(0, max(ihtiyac) * 1.22)
+    ax2.grid(axis='y', zorder=0)
+    ax2.set_title('(b) Karşılaştırma tabanı', loc='left')
+    fig.suptitle('Şekil 5. Isıl kütlenin enerji ihtiyacına etkisi (PVGIS iklimi)',
+                 x=0.02, ha='left', fontsize=8.5, fontweight='bold', y=1.04)
     kaydet(fig, 'Sekil-5-isil-kutle-enerji')
 
 
 # --- Şekil 6: yaşam sonu salım oranı eşiği ----------------------------------
 def sekil6():
-    bolg = M.oku('girdi_bolgeler.csv')
+    bolg = [x for x in M.oku('girdi_bolgeler.csv')
+            if x['bolge'] in M.IKLIM_BOLGELERI]
     kod = M.tam_veri_kodlari(M.OLCUTLER_SINIR); M.SINIR = 'S2'
 
     def birinci(bo, phi, yontem):
@@ -242,7 +259,7 @@ def sekil6():
                 markersize=4.2, markerfacecolor='white', markeredgewidth=1.0,
                 label=y, zorder=3)
     M.C3_ORANI = 1.0
-    ax.fill_between([0.6, 6.4], 0, 1.02, color='#f5f5f5', zorder=0)
+    ax.fill_between([0.6, 6.4], 0, 1.02, color='#f5f5f5', zorder=0)  # zemin
     ax.axhline(0, color='#cccccc', linewidth=0.5, zorder=1)
     ax.set_xlim(0.6, 6.4); ax.set_ylim(-0.16, 1.06)
     ax.set_xticks(x)

@@ -59,19 +59,20 @@ değil, kurgunun analitik bir sonucudur.
 ## 4.3. Mekanizmaların etkisi (AS2)
 
 ### İklim dengesi
-TS 825:2024 aylık dış sıcaklıklarından türetilen derece gün değerleri, bölgeler
-arasında tek yönlü ve düzgün bir gradyan göstermektedir.
+Derece gün değerleri PVGIS (ERA5) aylık ortalamalarından, 20 °C ısıtma ve
+22 °C soğutma tabanıyla türetilmiştir (gerekçe: `16-iklim-verisi-duzeltmesi.md`).
+Hesap, il–bölge eşleşmesi doğrulanabilen dört bölge için tanımlıdır.
 
 **Çizelge 6.** Bölgelerin ısıtma/soğutma dengesi
 
-| Bölge | IDG | SDG | Soğutma payı σ |
-|---|---|---|---|
-| 1 · Aşırı Sıcak | 1908 | 1187 | %38,4 |
-| 2 · Sıcak | 2482 | 1054 | %29,8 |
-| 3 · Ilıman | 3356 | 475 | %12,4 |
-| 4 · Soğuk | 4174 | 102 | %2,4 |
-| 5 · Çok Soğuk | 6333 | 0 | %0,0 |
-| 6 · Aşırı Soğuk | 7304 | 0 | %0,0 |
+| Bölge | Temsilci il | IDG | SDG | Soğutma payı σ |
+|---|---|---|---|---|
+| 1 · Aşırı Sıcak | Antalya | 1253 | 717 | %36,4 |
+| 3 · Ilıman | İstanbul | 2001 | 164 | %7,6 |
+| 4 · Soğuk | Ankara | 2933 | 81 | %2,7 |
+| 6 · Aşırı Soğuk | Erzurum | 4985 | 0 | %0,0 |
+
+Gradyan tek yönlü ve düzgündür.
 
 ### Uygulanabilirlik kısıtı
 Azami 20 cm yalıtım kalınlığı kısıtı, uygun alternatif kümesini bölgeye göre
@@ -88,14 +89,14 @@ yüksek ısı iletkenlikli, hacimli biyo-esaslı ürünlerdir.
 |---|---|---|
 | Ham model | **0,998** | 18 |
 | + uygulanabilirlik kısıtı | 0,982 | 14 |
-| + iklim ayarlı ağırlık | **0,534** | 18 |
+| + iklim ayarlı ağırlık | **0,567** | 18 |
 | + her ikisi (tam model) | 0,824 | 14 |
 
 **Şekil 3.** Mekanizmaların bölge etkisine katkısı *(çizilecek)*
 
 **AS2'nin cevabı:** bölge etkisi, K_b ile orantılı olmayan bir yapı modele
 girdiğinde ortaya çıkar. En güçlü etkiyi iklim ayarlı ağırlıklandırma
-üretmektedir (0,998 → 0,534). Tam modelin ara değerde kalmasının nedeni,
+üretmektedir (0,998 → 0,567). Tam modelin ara değerde kalmasının nedeni,
 uygulanabilirlik kısıtının ortak alternatif kümesini 18'den 14'e daraltması ve
 karşılaştırmanın bu daraltılmış küme üzerinden yapılmasıdır.
 
@@ -199,11 +200,9 @@ senaryo belirsizliğini tarayan bir parametredir.
 
 | Bölge | CRITIC | Eşit ağırlık | Entropi |
 |---|---|---|---|
-| 1 · Aşırı Sıcak | 0,82 | 0,99 | 0,00 |
-| 2 · Sıcak | 0,79 | 0,82 | 0,00 |
-| 3 · Ilıman | 0,75 | 0,66 | 0,00 |
+| 1 · Aşırı Sıcak | 0,82 | 0,93 | 0,00 |
+| 3 · Ilıman | 0,73 | 0,63 | 0,00 |
 | 4 · Soğuk | 0,71 | 0,60 | 0,00 |
-| 5 · Çok Soğuk | 0,51 | 0,58 | 0,00 |
 | 6 · Aşırı Soğuk | 0,51 | 0,58 | 0,00 |
 
 **Şekil 6.** Salım oranına göre birinci sıradaki alternatif *(çizilecek)*
@@ -218,8 +217,7 @@ sıralama değişimi, bu nedenle "biyo-esaslı malzemeler geride kalır"
 biçiminde değil, "beyan edilen yakma senaryosu altında geride kalır"
 biçiminde okunmalıdır.
 
-**İkincisi**, eşik sıcak bölgelerde daha yüksektir (1. Bölge 0,82; 6. Bölge
-0,51). Sıcak bölgelerde biyo-esaslı malzemeler ısıl kütle üzerinden ek bir
+**İkincisi**, eşik sıcak bölgelerde daha yüksektir (1. Bölge 0,82; 6. Bölge 0,51). Sıcak bölgelerde biyo-esaslı malzemeler ısıl kütle üzerinden ek bir
 üstünlük taşıdığı için, birinci sırayı kaybetmeden daha büyük bir karbon
 yükünü soğurabilmektedirler.
 
@@ -249,69 +247,41 @@ bağımsızdır ve τ'dan bağımsız bir kullanım faktörü ısıl kütleyi g�
 **Kurgu B (τ'ya bağlı kullanım faktörü):** malzemeler arasında fark
 oluşmaktadır ve bu fark bölgeye göre belirgin biçimde değişmektedir.
 
-**Çizelge 11.** En hafif (camyünü) ve en ağır (pirinç kavuzu paneli)
-alternatif arasındaki yıllık **ısıtma** enerjisi farkı
+**Çizelge 11.** Referans konutun bölgelere göre enerji ihtiyacı ve ısıl
+kütlenin katkısı (PVGIS iklimi, kurgu B)
 
-| Bölge | QH hafif (kWh) | QH ağır (kWh) | Fark | Fark % |
-|---|---|---|---|---|
-| 1 · Aşırı Sıcak | 14 929 | 14 030 | 900 | **%6,03** |
-| 2 · Sıcak | 22 911 | 22 003 | 908 | %3,96 |
-| 3 · Ilıman | 36 639 | 35 794 | 846 | %2,31 |
-| 4 · Soğuk | 48 534 | 47 796 | 739 | %1,52 |
-| 5 · Çok Soğuk | 75 513 | 74 731 | 783 | %1,04 |
-| 6 · Aşırı Soğuk | 94 939 | 94 117 | 822 | **%0,87** |
+| Bölge | Temsilci il | QH (kWh/m²) | QC (kWh/m²) | Toplam | Isıl kütle katkısı (kWh/m²) |
+|---|---|---|---|---|---|
+| 1 · Aşırı Sıcak | Antalya | 2,4 | 54,8 | 57,2 | 1,94 |
+| 3 · Ilıman | İstanbul | 7,9 | 33,1 | 41,0 | 2,35 |
+| 4 · Soğuk | Ankara | 16,8 | 28,9 | 45,6 | 2,56 |
+| 6 · Aşırı Soğuk | Erzurum | 33,8 | 14,3 | 48,1 | 2,89 |
 
-Isıl kütlenin sağladığı avantaj, soğutma payının yüksek olduğu bölgede en
-büyük (%6,03), ısıtma yükünün baskın olduğu bölgede en küçüktür (%0,87).
-Bu gradyan, 4.3'teki iklim ayarlı ağırlıklandırmadan **bağımsız** olarak elde
-edilmiştir ve onunla **aynı yöndedir**; iki farklı yoldan aynı fiziksel
-sonuca ulaşılması modelin iç tutarlılığını desteklemektedir.
+### 4.7.1. Isıl kütlenin katkısı mutlak olarak küçüktür ve bölgeden az etkilenir
 
-### 4.7.1. Soğutma eklendiğinde ne değişiyor
+Isıl kütlenin en hafif (camyünü) ile en ağır (pirinç kavuzu paneli) alternatif
+arasında yarattığı yıllık enerji farkı **1,94 ile 2,89 kWh/m²·yıl** arasındadır.
+Bölgeler arası değişim yaklaşık 1,5 kattır; toplam ihtiyacın kendisi
+41–57 kWh/m²·yıl aralığındadır.
 
-TS 825:2024'ün temel yeniliği soğutma ihtiyacının hesaba katılmasıdır. Soğutma
-hesabı EN ISO 13790'ın aylık yarı-kararlı yöntemine göre eklenmiş ve toplam
-(ısıtma + soğutma) ihtiyacı üzerinden malzeme farkı yeniden ölçülmüştür.
+**Yüzdesel ifade yanıltıcıdır.** Isıtma tarafında fark 1. Bölgede %26,8'e
+ulaşmakta, 6. Bölgede %3,7'ye inmektedir; ancak bu, ısıtma ihtiyacının 1.
+Bölgede yalnızca 2,4 kWh/m²·yıl olmasından kaynaklanır. Aynı %26,8, mutlak
+olarak **0,64 kWh/m²·yıl** demektir. Soğutma tarafında oran ters yönde işler
+(%2,4 → %11,5), fakat mutlak fark 1,29–1,65 kWh/m²·yıl bandında kalır.
+**Karşılaştırmalarda mutlak değer kullanılmalıdır.**
 
-**Çizelge 13.** Isıtma, soğutma ve toplam ihtiyaç ile malzemeler arası fark
-
-| Bölge | QH (kWh/m²) | QC (kWh/m²) | Toplam | Isıtma farkı | Soğutma farkı | **Toplam fark** |
-|---|---|---|---|---|---|---|
-| 1 · Aşırı Sıcak | 11,6 | 63,8 | 75,4 | %7,85 | %1,19 | **%2,22** |
-| 2 · Sıcak | 17,8 | 54,7 | 72,4 | %5,08 | %1,44 | **%2,33** |
-| 3 · Ilıman | 28,4 | 35,5 | 63,9 | %2,92 | %2,56 | **%2,72** |
-| 4 · Soğuk | 37,6 | 22,6 | 60,2 | %1,88 | %4,62 | **%2,91** |
-| 5 · Çok Soğuk | 58,5 | 9,0 | 67,5 | %1,23 | %15,79 | **%3,17** |
-| 6 · Aşırı Soğuk | 73,6 | 8,6 | 82,2 | %1,03 | %13,18 | **%2,30** |
-
-Toplam ihtiyaç 60,2–82,2 kWh/m²·yıl aralığındadır; TS 825:2024 ile getirilen
-70–90 kWh/m²·yıl enerji limiti bandıyla aynı büyüklük mertebesindedir. Bu,
-hesap kurgusunun makul olduğuna dair bağımsız bir gösterge sayılabilir.
-
-**Beklenenin tersi bir sonuç.** Isıl kütlenin ısıtmadaki avantajı sıcak
-bölgede en yüksek, soğuk bölgede en düşüktür (%7,85 → %1,03). Soğutmada ise
-**gradyan terstir**: fark sıcak bölgede %1,19, çok soğuk bölgede %15,79'dur.
-İkisi toplandığında bölgeler arası gradyan büyük ölçüde kaybolmakta ve toplam
-fark %2,2–3,2 bandına oturmaktadır.
-
-**Nedeni yöntemseldir.** Aylık yarı-kararlı yöntemde, dış ortam sıcaklığının
-iç tasarım sıcaklığını (26 °C) aştığı aylarda iletim de kazanç tarafına geçer
-ve kayıp kullanım faktörü uygulanamaz. 1. Bölgede Mayıs–Ekim arasındaki altı
-ay bu durumdadır; bu aylarda ısıl kütle hesaba **hiç girmez**. Soğuk
-bölgelerde ise yaz ayları 26 °C'nin altında kaldığından kullanım faktörü
-işlemekte ve ısıl kütle etkisini göstermektedir.
-
+**Aylık yöntemin ısıl kütle körlüğü.** Dış ortam sıcaklığının iç tasarım
+sıcaklığını (26 °C) aştığı aylarda iletim de kazanç tarafına geçer ve kayıp
+kullanım faktörü uygulanamaz; bu aylarda ısıl kütle hesaba **hiç girmez**.
 Bu, çalışmanın genel savının dördüncü örneğidir: **hesap yönteminin yapısı,
 sonucun ne gösterebileceğini belirlemektedir.** Aylık yarı-kararlı yöntem,
-ısıl kütleyi tam olarak fiziksel katkısının en yüksek olduğu koşullarda —
-yüksek günlük sıcaklık salınımlı sıcak iklimlerde — görememektedir. Isıl
-kütlenin sıcak iklimlerdeki katkısının doğru değerlendirilmesi, saatlik
-dinamik simülasyon gerektirir.
+ısıl kütleyi fiziksel katkısının en yüksek olduğu koşullarda görememektedir;
+doğru değerlendirme saatlik dinamik simülasyon gerektirir.
 
 **Sınırlılık.** Soğutma sonuçları mutlak değer olarak ihtiyatla okunmalıdır.
-Hesapta gece havalandırması, gölgeleme kontrolü ve iç kazançların mevsimsel
-değişimi modellenmemiş; iç kazanç yıl boyunca sabit 5 W/m² alınmıştır. Bu
-varsayımlar soğutma ihtiyacını yukarı yönlü etkilemektedir.
+Gece havalandırması, gölgeleme kontrolü ve iç kazançların mevsimsel değişimi
+modellenmemiş; iç kazanç yıl boyunca sabit 5 W/m² alınmıştır.
 
 ## 4.8. Duyarlılık analizi
 

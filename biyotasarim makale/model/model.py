@@ -22,6 +22,17 @@ R_DIGER = 0.30            # m2K/W — yalıtım dışı katmanlar + yüzeysel di
 KALINLIK_ADIMI = 0.01     # m (1 cm)
 AZAMI_KALINLIK_CM = 20.0  # uygulanabilirlik sınırı
 TI_ISITMA, TI_SOGUTMA = 20.0, 26.0   # TS 825:2024 konut tasarım sıcaklıkları
+
+# Derece gün hesabında soğutma tabanı. 26 °C tasarım sıcaklığı, aylık ORTALAMA
+# sıcaklıklarla birlikte kullanıldığında Türkiye'de Antalya dışında hiç
+# aşılmadığından soğutma payını işlevsiz bırakır. 22 °C, soğutma derece günü
+# hesaplarında yaygın bir tabandır ve anlamlı bir gradyan üretir.
+# Duyarlılık analizine dahil edilmelidir (bkz. 16-iklim-verisi-duzeltmesi.md).
+TABAN_SOGUTMA_DG = 22.0
+
+# İklim verisi kaynağı. PVGIS (ERA5) gerçek aylık normalleri; il-bölge
+# eşleşmesi doğrulanabilen dört bölge için mevcuttur.
+IKLIM_BOLGELERI = ('1', '3', '4', '6')
 ALFA = 1.0                # iklim ağırlık ayarının duyarlılık katsayısı
 
 # Yaşam döngüsü sistem sınırı:
@@ -102,13 +113,40 @@ def uygulanabilir(malzeme, bolge, sinir_cm=AZAMI_KALINLIK_CM):
 
 
 # --- 2. İklim: derece gün ve soğutma payı -------------------------------------
-def derece_gun(bolge_no):
-    rows = oku('girdi_bolge_sicakliklari.csv')
-    idg = sdg = 0.0
-    for r in rows:
-        t, d = float(r[f'bolge{bolge_no}']), GUN[r['ay']]
-        idg += max(0.0, TI_ISITMA - t) * d
-        sdg += max(0.0, t - TI_SOGUTMA) * d
+def pvgis_sicaklik(bolge_no):
+    """PVGIS aylık ortalama dış hava sıcaklıkları (°C), ay sırasıyla."""
+    aylar = list(GUN.keys())
+    for r in oku('girdi_iklim_pvgis.csv'):
+        if r['bolge'] == str(bolge_no) and r['buyukluk'] == 'sicaklik_C':
+            return [sayi(r[a]) for a in aylar]
+    return None
+
+
+def pvgis_isinim(bolge_no, yon):
+    """PVGIS düşey yüzey aylık ortalama ışınım şiddeti (W/m²)."""
+    aylar = list(GUN.keys())
+    for r in oku('girdi_iklim_pvgis.csv'):
+        if (r['bolge'] == str(bolge_no) and r['buyukluk'] == 'isinim_Wm2'
+                and r['yon'] == yon):
+            return [sayi(r[a]) for a in aylar]
+    return None
+
+
+def derece_gun(bolge_no, taban_sogutma=None):
+    """
+    Isıtma ve soğutma derece günü ile soğutma payı.
+    Kaynak: PVGIS (ERA5) aylık ortalamaları. Yalnızca il-bölge eşleşmesi
+    doğrulanan bölgeler için tanımlıdır; diğerleri için None döner.
+    """
+    if str(bolge_no) not in IKLIM_BOLGELERI:
+        return None
+    taban = TABAN_SOGUTMA_DG if taban_sogutma is None else taban_sogutma
+    sic = pvgis_sicaklik(bolge_no)
+    if sic is None:
+        return None
+    aylar = list(GUN.keys())
+    idg = sum(max(0.0, TI_ISITMA - t) * GUN[aylar[i]] for i, t in enumerate(sic))
+    sdg = sum(max(0.0, t - taban) * GUN[aylar[i]] for i, t in enumerate(sic))
     toplam = idg + sdg
     return {'IDG': idg, 'SDG': sdg,
             'sogutma_payi': sdg / toplam if toplam else 0.0,
@@ -176,6 +214,8 @@ def iklim_ayari(agirliklar, olcutler, bolge_no, alfa=ALFA):
     baskın bölgede ağırlaşır.  w' = w * (1 + alfa * ilgili_pay)
     """
     dg = derece_gun(bolge_no)
+    if dg is None:
+        return list(agirliklar)      # iklim verisi yoksa ayar uygulanmaz
     carpan = []
     for (anahtar, _, _), w in zip(olcutler, agirliklar):
         if anahtar == 'kappa_kJm2K':

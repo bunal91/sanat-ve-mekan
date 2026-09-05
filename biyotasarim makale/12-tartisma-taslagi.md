@@ -145,10 +145,12 @@ göstermektedir.
    modellenmemiş, iç kazanç yıl boyunca sabit alınmıştır; bu varsayımlar
    soğutma ihtiyacını yukarı yönlü etkilemektedir. Mutlak soğutma değerleri
    ihtiyatla okunmalıdır.
-3. **Güneş ışınımı verisi.** TS 825:2024 Ek-C değerleri kullanılamamış, yer
-   tutucu bir tablo kullanılmıştır. Duyarlılık analizi bulgunun bu veriye
-   karşı sağlam olduğunu göstermektedir (4.8), ancak mutlak enerji değerleri
-   Ek-C ile güncellenmelidir.
+3. **İklim verisi ve kapsam.** Enerji hesabı, il–bölge eşleşmesi
+   doğrulanabilen dört bölgeyle sınırlıdır (1, 3, 4, 6). İklim verisi PVGIS
+   (ERA5 sıcaklık, SARAH2 ışınım) kaynaklıdır; TS 825:2024'ün kendi iklim
+   ekleri kullanılamamıştır. Yapısal bulguların iklim tabanına duyarsız olduğu
+   gösterilmiştir: iklim tabanı değiştirildiğinde mekanizma etkisi 0,534'ten
+   0,567'ye, eşik değerleri en çok 0,02 kaymıştır.
 4. **Tek referans bina.** Geometri, yönlenme ve A/V oranı duyarlılığı
    incelenmemiştir.
 5. **Sıralama yöntemi uyumu.** TOPSIS ve VIKOR arasındaki düşük korelasyon
