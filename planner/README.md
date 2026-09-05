@@ -1,11 +1,12 @@
 # Printable planner shop — product packs
 
-Eleven digital-download products (one of them a bundle), all generated from HTML templates: **Dusk Ladder**, a one-page
+Twelve digital-download products (one of them a bundle), all generated from HTML templates: **Dusk Ladder**, a one-page
 daily planner; **Party Line**, a nine-page birthday planning kit; **Confetti Club**, a nine-page
 kids' party kit; **Golden Hour**, an eleven-page milestone birthday kit; **First Move**, an eight-page
 ADHD-friendly planning set; **Same Shape**, a nine-page autism-friendly set; **Steady**, a nine-page anxiety journal;
 **Small Light**, a nine-page journal for low days; **Thirty-First**, a nine-page Halloween
-party kit; and **Long December**, a nine-page Christmas planning kit. Each has its own design language rather
+party kit; **Long December**, a nine-page Christmas planning kit; and **One Table**, a nine-page
+Thanksgiving kit. Each has its own design language rather
 than a recoloured shell. Every variant a listing
 needs — page sizes, colourways, languages, print and fillable — comes out of one build.
 
@@ -25,6 +26,7 @@ planner/
 ├── bundle.py                     # the four mental-health sets as one product, plus its index sheet
 ├── halloween.py                  # Halloween party kit: nine pages, one night
 ├── christmas.py                  # Christmas kit: nine pages, the whole of December
+├── thanksgiving.py               # Thanksgiving kit: nine pages, one meal, one oven
 ├── src/
 │   ├── planner.template.html    # the daily planner (single source of truth)
 │   ├── readme.template.html     # the "start here" sheet the buyer opens first (both products)
@@ -40,6 +42,7 @@ planner/
 ├── bundle-sheets.html           # browser/preview copy of the two bundle-only pages
 ├── halloween-planner.html       # browser/preview copy (Letter · spooky · 9 pages)
 ├── christmas-planner.html       # browser/preview copy (Letter · spruce · 9 pages)
+├── thanksgiving-planner.html    # browser/preview copy (Letter · harvest · 9 pages)
 ├── etsy-rehberi.html            # Turkish guide: shop setup, listing copy, pricing, niche
 ├── dist/                        # daily planner — 16 PDFs, 2 start-here sheets, 3 images, ZIPs
 ├── dist-birthday/               # birthday kit — 8 PDFs, start-here sheet, 3 images, ZIPs
@@ -51,7 +54,8 @@ planner/
 ├── dist-depression/             # low-days journal — same shape
 ├── dist-bundle/                 # bundle sheets, listing images, foldered zips
 ├── dist-halloween/              # Halloween kit — same shape
-└── dist-christmas/              # Christmas kit — same shape
+├── dist-christmas/              # Christmas kit — same shape
+└── dist-thanksgiving/           # Thanksgiving kit — same shape
 ```
 
 ## Build
@@ -73,6 +77,7 @@ python3 depression.py                # the low-days journal
 python3 bundle.py                    # bundle sheets + foldered zips (build the four sets first)
 python3 halloween.py                 # the Halloween kit
 python3 christmas.py                 # the Christmas kit
+python3 thanksgiving.py              # the Thanksgiving kit
 ```
 
 Chromium (headless) does the rendering and prints the PDFs at exact page size; `PLANNER_WORK`
@@ -235,6 +240,28 @@ Gilda Display over Manrope; spruce, berry and brass on white — no red-and-gree
 clip-art. The masthead sprig is drawn: needle pairs stepped along a quadratic Bézier, the stem
 angle shifting one page to the next. Colour has a job — green is the day and the house, berry is
 money and deadlines, brass is people.
+
+## The Thanksgiving kit
+
+Nine pages for one meal and the people around it: at a glance with a headcount that sizes the
+bird, the bird worked out from its weight, who is bringing what, one oven and everything else,
+the shopping, the table, the three days before, the day, and Friday. 617 form fields, four
+variants.
+
+Three things carry it. **Page 2** is a weight table — tick your band and read the fridge thaw
+time and the roasting time — with the dates then written backwards from the meal, plus a framed
+box giving the only number that decides whether a turkey is cooked (165°F / 74°C in the thigh and
+the breast, clear of the bone) and a cold-water rescue for a bird still frozen on the morning.
+**Page 3** is the potluck list, and its point is the *oven* column: a guest arriving with a
+casserole that wants forty minutes at 375°F while the turkey rests is the commonest way the meal
+runs late, so the kit makes you ask and moves the answer onto page 4. **Page 4** is that oven,
+counted back from the hour you sit down, next to a column for every dish moved off it.
+
+DM Serif Display over DM Sans; maple, sage and cranberry on white. The masthead mark is a place
+setting — plate, fork, knife and the fold of a napkin — drawn in strokes, the napkin angle shifting
+page to page. Colour has a job: maple is the food and the oven, sage the people and the table,
+cranberry anything with a clock on it. Weights and temperatures lead in lb and °F with kg and °C
+alongside, because the buyers are overwhelmingly American.
 
 ## How the fillable PDFs are made
 
