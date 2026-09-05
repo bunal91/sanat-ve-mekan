@@ -279,6 +279,20 @@ def veri_eksigi(olcutler=OLCUTLER):
     return rapor
 
 
+def tam_olcutler(olcutler=OLCUTLER, kodlar=None):
+    """Verilen alternatif kümesinde HİÇ eksiği olmayan ölçütler."""
+    mals = oku('girdi_malzemeler.csv')
+    if kodlar is not None:
+        mals = [m for m in mals if m['kod'] in kodlar]
+    tutulan, elenen = [], []
+    for o in olcutler:
+        sutunlar = KAYNAK_SUTUN.get(o[0], [o[0]])
+        eksik = sum(1 for m in mals
+                    if any(sayi(m.get(s)) is None for s in sutunlar))
+        (elenen if eksik else tutulan).append((o, eksik, len(mals)))
+    return [t[0] for t in tutulan], elenen
+
+
 def kullanilabilir_olcutler(olcutler=OLCUTLER, esik=0.5):
     """Eksik veri oranı esiği aşan ölçütleri eleyip kalanları döndürür."""
     rapor = veri_eksigi(olcutler)
