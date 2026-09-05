@@ -1,11 +1,11 @@
 # Printable planner shop — product packs
 
-Ten digital-download products (one of them a bundle), all generated from HTML templates: **Dusk Ladder**, a one-page
+Eleven digital-download products (one of them a bundle), all generated from HTML templates: **Dusk Ladder**, a one-page
 daily planner; **Party Line**, a nine-page birthday planning kit; **Confetti Club**, a nine-page
 kids' party kit; **Golden Hour**, an eleven-page milestone birthday kit; **First Move**, an eight-page
 ADHD-friendly planning set; **Same Shape**, a nine-page autism-friendly set; **Steady**, a nine-page anxiety journal;
-**Small Light**, a nine-page journal for low days; and **Thirty-First**, a nine-page Halloween
-party kit. Each has its own design language rather
+**Small Light**, a nine-page journal for low days; **Thirty-First**, a nine-page Halloween
+party kit; and **Long December**, a nine-page Christmas planning kit. Each has its own design language rather
 than a recoloured shell. Every variant a listing
 needs — page sizes, colourways, languages, print and fillable — comes out of one build.
 
@@ -24,6 +24,7 @@ planner/
 ├── depression.py                 # low-days journal: nine pages, safety plan at the centre
 ├── bundle.py                     # the four mental-health sets as one product, plus its index sheet
 ├── halloween.py                  # Halloween party kit: nine pages, one night
+├── christmas.py                  # Christmas kit: nine pages, the whole of December
 ├── src/
 │   ├── planner.template.html    # the daily planner (single source of truth)
 │   ├── readme.template.html     # the "start here" sheet the buyer opens first (both products)
@@ -38,6 +39,7 @@ planner/
 ├── low-days-journal.html        # browser/preview copy (Letter · warm · 9 pages)
 ├── bundle-sheets.html           # browser/preview copy of the two bundle-only pages
 ├── halloween-planner.html       # browser/preview copy (Letter · spooky · 9 pages)
+├── christmas-planner.html       # browser/preview copy (Letter · spruce · 9 pages)
 ├── etsy-rehberi.html            # Turkish guide: shop setup, listing copy, pricing, niche
 ├── dist/                        # daily planner — 16 PDFs, 2 start-here sheets, 3 images, ZIPs
 ├── dist-birthday/               # birthday kit — 8 PDFs, start-here sheet, 3 images, ZIPs
@@ -48,7 +50,8 @@ planner/
 ├── dist-anxiety/                # anxiety journal — same shape
 ├── dist-depression/             # low-days journal — same shape
 ├── dist-bundle/                 # bundle sheets, listing images, foldered zips
-└── dist-halloween/              # Halloween kit — same shape
+├── dist-halloween/              # Halloween kit — same shape
+└── dist-christmas/              # Christmas kit — same shape
 ```
 
 ## Build
@@ -69,6 +72,7 @@ python3 anxiety.py                   # the anxiety journal
 python3 depression.py                # the low-days journal
 python3 bundle.py                    # bundle sheets + foldered zips (build the four sets first)
 python3 halloween.py                 # the Halloween kit
+python3 christmas.py                 # the Christmas kit
 ```
 
 Chromium (headless) does the rendering and prints the PDFs at exact page size; `PLANNER_WORK`
@@ -211,6 +215,26 @@ Anton for poster headlines with Rubik for everything else; pumpkin orange, poiso
 on **white** — a black page looks good on screen and eats a toner cartridge in a printer, which
 buyers write about in reviews. The cobweb in each masthead is drawn from three arcs on six radials
 rather than dropped in as clip-art.
+
+## The Christmas kit
+
+Nine pages for the month rather than the day, because what makes Christmas hard is the thirty days
+before it: at a glance (with a spending cap and a *what we are not doing this year* box), December
+day by day with the dates that are not yours to move, gifts, cards and post, the food plan, lunch
+timed backwards, the house and the beds, the day itself, and the week after. 762 form fields — the
+largest kit in the shop — in four variants.
+
+Two pages carry the product. **Page 3** is the gift list with a budget column, a spent column and a
+budgeted/spent/left total, so December is not a surprise in January. **Page 6** is the oven clock:
+one box at the top for the hour you sit down, then every dish with its temperature, minutes, *in
+at* and *out at* — Christmas lunch written backwards, which is the only way it works. Page 2 leaves
+the last posting dates deliberately blank: they move every year and differ by country, so the kit
+asks the buyer to look them up rather than printing a date that would be wrong.
+
+Gilda Display over Manrope; spruce, berry and brass on white — no red-and-green cliché, and no
+clip-art. The masthead sprig is drawn: needle pairs stepped along a quadratic Bézier, the stem
+angle shifting one page to the next. Colour has a job — green is the day and the house, berry is
+money and deadlines, brass is people.
 
 ## How the fillable PDFs are made
 
