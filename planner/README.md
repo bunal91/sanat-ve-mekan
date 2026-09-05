@@ -1,6 +1,6 @@
 # Printable planner shop — product packs
 
-Eight digital-download products, all generated from HTML templates: **Dusk Ladder**, a one-page
+Nine digital-download products (one of them a bundle), all generated from HTML templates: **Dusk Ladder**, a one-page
 daily planner; **Party Line**, a nine-page birthday planning kit; **Confetti Club**, a nine-page
 kids' party kit; **Golden Hour**, an eleven-page milestone birthday kit; **First Move**, an eight-page
 ADHD-friendly planning set; **Same Shape**, a nine-page autism-friendly set; **Steady**, a nine-page anxiety journal;
@@ -21,6 +21,7 @@ planner/
 ├── autism.py                     # autism-friendly set: nine pages, same shape every page
 ├── anxiety.py                    # anxiety journal: nine pages, worry window to calm plan
 ├── depression.py                 # low-days journal: nine pages, safety plan at the centre
+├── bundle.py                     # the four mental-health sets as one product, plus its index sheet
 ├── src/
 │   ├── planner.template.html    # the daily planner (single source of truth)
 │   ├── readme.template.html     # the "start here" sheet the buyer opens first (both products)
@@ -33,6 +34,7 @@ planner/
 ├── autism-planner.html          # browser/preview copy (Letter · calm · 9 pages)
 ├── anxiety-journal.html         # browser/preview copy (Letter · steady · 9 pages)
 ├── low-days-journal.html        # browser/preview copy (Letter · warm · 9 pages)
+├── bundle-sheets.html           # browser/preview copy of the two bundle-only pages
 ├── etsy-rehberi.html            # Turkish guide: shop setup, listing copy, pricing, niche
 ├── dist/                        # daily planner — 16 PDFs, 2 start-here sheets, 3 images, ZIPs
 ├── dist-birthday/               # birthday kit — 8 PDFs, start-here sheet, 3 images, ZIPs
@@ -41,7 +43,8 @@ planner/
 ├── dist-adhd/                   # ADHD set — same shape
 ├── dist-autism/                 # autism-friendly set — same shape
 ├── dist-anxiety/                # anxiety journal — same shape
-└── dist-depression/             # low-days journal — same shape
+├── dist-depression/             # low-days journal — same shape
+└── dist-bundle/                 # bundle sheets, listing images, foldered zips
 ```
 
 ## Build
@@ -60,6 +63,7 @@ python3 adhd.py                      # the ADHD-friendly set
 python3 autism.py                    # the autism-friendly set
 python3 anxiety.py                   # the anxiety journal
 python3 depression.py                # the low-days journal
+python3 bundle.py                    # bundle sheets + foldered zips (build the four sets first)
 ```
 
 Chromium (headless) does the rendering and prints the PDFs at exact page size; `PLANNER_WORK`
@@ -168,6 +172,21 @@ emergency number; it has fields for the reader's own crisis and emergency number
 to photograph the page. Every page footer reads *"A journal, not medical care · page 8 has the
 numbers"*, and the delivery sheet says plainly that depression is treatable, that this is not
 treatment, and that speaking to a doctor is the most useful thing on the list.
+
+## The bundle
+
+`bundle.py` packages the four mental-health sets as one product. The discount is not what makes it
+worth buying — two pages that exist only here are:
+
+- **Which page today?** — a seventeen-line decision table. What is happening on the left ("I cannot
+  make myself start", "something changed and I am thrown", "I cannot stop turning it over", "it is
+  very dark today"), which set, which page, and what that page does on the right. A bad morning
+  becomes a lookup instead of a decision.
+- **Four sets, one shelf** — what each set is for, which to open first, the safety note, and a
+  list of the pages meant to be filled in on a good day and used on a bad one.
+
+Files are zipped foldered by set, in complete / Letter / A4 splits, which with the two loose
+sheets is exactly the five files an Etsy listing accepts.
 
 ## How the fillable PDFs are made
 

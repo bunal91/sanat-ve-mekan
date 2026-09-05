@@ -1,0 +1,122 @@
+<meta charset="utf-8">
+<title>Four Set Bundle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Public+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{ --ink:#22242b; --soft:#5f6572; --faint:#9aa0ac; --rule:#e4e7ec; --strong:#c5cad3;
+  --adhd:#0f7c86; --autism:#6e8f7d;
+  --anxiety:#3f7f8c; --depression:#4f8a7d;
+  --backdrop:#eceef1; }
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --backdrop:#15161a; } }
+:root[data-theme="dark"]{ --backdrop:#15161a; }
+
+@page{ size: 8.5in 11in; margin: 0; }
+html, body{ margin:0; }
+body{ background:var(--backdrop); color:var(--ink);
+  font-family:"Public Sans","Helvetica Neue",Arial,sans-serif;
+  display:flex; flex-direction:column; align-items:center; gap:22px; padding:24px 14px 60px; }
+
+.sheet{ width:8.5in; height:11in; box-sizing:border-box; padding:.5in .55in .45in;
+  background:#fff; display:flex; flex-direction:column; overflow:hidden;
+  box-shadow:0 16px 40px rgba(34,36,43,.14);
+  -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+
+.kicker{ font-weight:600; text-transform:uppercase; letter-spacing:.14em; font-size:8pt;
+  color:var(--soft); }
+.mast{ display:flex; justify-content:space-between; align-items:flex-end; gap:.3in;
+  border-bottom:1.6px solid var(--ink); padding-bottom:10px; }
+.mast h1{ font-family:"Instrument Serif",Georgia,serif; font-weight:400; font-size:34pt;
+  line-height:1.02; margin:7px 0 0; }
+.mast h1 em{ font-style:italic; }
+.stripe{ display:flex; gap:0; height:5px; margin-top:12px; flex:none; }
+.stripe i{ flex:1; }
+.stripe i.a{ background:var(--adhd); } .stripe i.b{ background:var(--autism); }
+.stripe i.c{ background:var(--anxiety); } .stripe i.d{ background:var(--depression); }
+
+.page{ flex:1; min-height:0; display:flex; flex-direction:column; padding-top:16px; }
+.lede{ font-size:10.2pt; line-height:1.5; color:var(--soft); max-width:5.6in; margin:0 0 12px; }
+.sec{ display:flex; align-items:center; gap:10px; padding:2px 0 8px; overflow:hidden; }
+.sec .line{ flex:1; height:1px; background:var(--rule); }
+.lbl{ font-weight:700; text-transform:uppercase; letter-spacing:.1em; font-size:8.4pt;
+  color:var(--ink); white-space:nowrap; }
+.hint{ font-size:8.4pt; color:var(--faint); white-space:nowrap; min-width:0;
+  overflow:hidden; text-overflow:ellipsis; }
+
+/* the four sets ----------------------------------------------------------- */
+.sets{ display:flex; flex-direction:column; gap:8px; flex:0 1 auto; }
+.set{ display:grid; grid-template-columns:.32in 1fr; gap:0 12px; border-top:2.5px solid var(--rule);
+  padding-top:8px; }
+.set.a{ border-top-color:var(--adhd); } .set.b{ border-top-color:var(--autism); }
+.set.c{ border-top-color:var(--anxiety); } .set.d{ border-top-color:var(--depression); }
+.setno{ font-family:"Instrument Serif",Georgia,serif; font-size:20pt; line-height:.9;
+  color:var(--faint); }
+.set.a .setno{ color:var(--adhd); } .set.b .setno{ color:var(--autism); }
+.set.c .setno{ color:var(--anxiety); } .set.d .setno{ color:var(--depression); }
+.setbody b{ font-family:"Instrument Serif",Georgia,serif; font-weight:400; font-size:14pt;
+  display:block; line-height:1.1; }
+.setbody .who{ font-size:8.6pt; text-transform:uppercase; letter-spacing:.1em;
+  color:var(--soft); display:block; padding:3px 0 5px; }
+.setbody p{ margin:0; font-size:9.2pt; line-height:1.45; color:var(--soft); }
+
+/* the routing table ------------------------------------------------------- */
+.routes{ flex:1; display:flex; flex-direction:column; min-height:0; }
+.rt{ display:grid; grid-template-columns:minmax(0,1.55fr) .28in minmax(0,.95fr) .34in minmax(0,1.35fr);
+  gap:0 12px; align-items:center; flex:1 1 auto; min-height:.3in; max-height:.42in;
+  border-bottom:1px solid var(--rule); }
+.rt.head{ flex:none; min-height:0; height:auto; padding-bottom:7px;
+  border-bottom:1.6px solid var(--ink); margin-bottom:5px;
+  font-weight:700; text-transform:uppercase; letter-spacing:.09em; font-size:7.4pt;
+  color:var(--soft); }
+.rt .what{ font-size:10pt; }
+.rt .dot{ width:10px; height:10px; border-radius:50%; }
+.rt .dot.adhd{ background:var(--adhd); } .rt .dot.autism{ background:var(--autism); }
+.rt .dot.anxiety{ background:var(--anxiety); } .rt .dot.depression{ background:var(--depression); }
+.rt .set-name{ font-size:9.4pt; color:var(--ink); }
+.rt .pg{ font-family:"Instrument Serif",Georgia,serif; font-size:14pt; text-align:center; }
+.rt .why{ font-size:8.8pt; color:var(--soft); }
+
+.mine{ display:grid; grid-template-columns:repeat(3,1fr); gap:0 .3in; flex:none;
+  padding-top:6px; }
+.mine .fr{ display:flex; align-items:flex-end; gap:10px; height:.4in; }
+.blank{ flex:1; border-bottom:1.3px solid var(--strong); height:100%; min-width:0; }
+.flbl{ font-size:9pt; color:var(--soft); padding-bottom:4px; white-space:nowrap; }
+
+.note{ border:1.5px solid var(--ink); border-radius:2px; padding:10px 13px; margin-top:11px;
+  font-size:9.2pt; line-height:1.45; flex:none; }
+.note b{ font-weight:700; }
+.steps{ display:flex; flex-direction:column; gap:7px; flex:1 1 auto; padding-top:11px; }
+.step{ display:grid; grid-template-columns:.3in 1fr; gap:0 12px; }
+.step .n{ font-family:"Instrument Serif",Georgia,serif; font-size:15pt; color:var(--faint);
+  line-height:1; }
+.step h3{ font-size:9.8pt; margin:0 0 2px; font-weight:600; }
+.step p{ margin:0; font-size:9.2pt; line-height:1.45; color:var(--soft); }
+
+.foot{ display:flex; align-items:center; justify-content:space-between; gap:12px;
+  border-top:1.6px solid var(--ink); margin-top:12px; padding-top:9px; }
+.foot .mark{ font-family:"Instrument Serif",Georgia,serif; font-style:italic; font-size:10pt;
+  color:var(--faint); }
+.foot .small{ font-size:8.4pt; color:var(--faint); }
+
+@media print{ body{ background:#fff; padding:0; display:block; gap:0; }
+  .sheet{ box-shadow:none; } }
+</style>
+
+<div class="sheet">
+  <header class="mast">
+    <div><span class="kicker">Start here &middot; read this page first</span><h1>Four sets,<br><em>one shelf.</em></h1></div>
+  </header>
+  <div class="stripe"><i class="a"></i><i class="b"></i><i class="c"></i><i class="d"></i></div>
+  <div class="page"><p class="lede">Four separate planning sets, each designed on its own terms rather than recoloured from one template. You do not need all four. Most people use one, and borrow a page or two from another.</p><div class="sets"><div class="set a"><span class="setno">1</span><div class="setbody"><b>First Move</b><span class="who">Starting, and time &middot; 8 pages</span><p>One real task a day, a first move small enough to do, a brain dump with a column for letting things go, and a page that teaches you how long things really take.</p></div></div><div class="set b"><span class="setno">2</span><div class="setbody"><b>Same Shape</b><span class="who">Order, and change &middot; 9 pages</span><p>The day as a sequence, a page for when the plan changes, sensory needs written down once, and sentences prepared before you need them.</p></div></div><div class="set c"><span class="setno">3</span><div class="setbody"><b>Steady</b><span class="who">Worry, and evidence &middot; 9 pages</span><p>A worry window with a closing time, a thought record, grounding, and a log of what you feared against what happened.</p></div></div><div class="set d"><span class="setno">4</span><div class="setbody"><b>Small Light</b><span class="who">Low days, and safety &middot; 9 pages</span><p>A daily page that takes two minutes, three versions of a day written in advance, an activity log, and a safety plan.</p></div></div></div><div class="note"><b>Please read this part.</b> These are journals and planners. They are not therapy, treatment, diagnosis or medical care, and they do not replace them. If any of this is making daily life hard, talking to a doctor is worth more than any planner. <b>If you are in danger or thinking about harming yourself, contact your local emergency number or a crisis line now.</b> Small Light page 8 is where you write those numbers down &mdash; do that today, while you can.</div><div class="steps"><div class="step"><span class="n">1</span><div><h3>Open the second sheet first</h3><p>&ldquo;Which page today&rdquo; is a table: what is happening on the left, which set and page on the right. Print it and keep it at the front of the folder.</p></div></div><div class="step"><span class="n">2</span><div><h3>Print one daily page, not four</h3><p>Pick the set that matches this month and print ten copies of its first page. Four daily pages is four decisions before breakfast.</p></div></div><div class="step"><span class="n">3</span><div><h3>Fill the written-when-calm pages early</h3><p>Same Shape 4 and 5, Steady 9, Small Light 2 and 8 are written on a good day and used on a bad one. That is the whole point of them.</p></div></div></div></div>
+  <footer class="foot"><span class="mark">Four sets, one shelf.</span>
+    <span class="small">Journals and planners &middot; not medical care</span></footer>
+</div>
+<div class="sheet">
+  <header class="mast">
+    <div><span class="kicker">Index sheet &middot; keep this at the front</span><h1>Which page<br><em>today?</em></h1></div>
+  </header>
+  <div class="stripe"><i class="a"></i><i class="b"></i><i class="c"></i><i class="d"></i></div>
+  <div class="page"><div class="sec"><span class="lbl">Find the line that is closest</span><span class="line"></span><span class="hint">Nothing here has to be used in order</span></div><div class="rt head"><span>What is happening</span><span></span><span>Set</span><span>Page</span><span>What that page does</span></div><div class="routes"><div class="rt"><span class="what">I cannot make myself start</span><span class="dot adhd"></span><span class="set-name">First Move</span><span class="pg">3</span><span class="why">Task breakdown, then the first move</span></div><div class="rt"><span class="what">My head is too full to choose</span><span class="dot adhd"></span><span class="set-name">First Move</span><span class="pg">2</span><span class="why">Brain dump, then triage</span></div><div class="rt"><span class="what">I keep running out of time</span><span class="dot adhd"></span><span class="set-name">First Move</span><span class="pg">4</span><span class="why">Guess, then time it</span></div><div class="rt"><span class="what">Something changed and I am thrown</span><span class="dot autism"></span><span class="set-name">Same Shape</span><span class="pg">3</span><span class="why">What changed, what stays the same</span></div><div class="rt"><span class="what">Too loud, too bright, too much</span><span class="dot autism"></span><span class="set-name">Same Shape</span><span class="pg">4</span><span class="why">Sensory page, then the after plan</span></div><div class="rt"><span class="what">I have to make a phone call</span><span class="dot autism"></span><span class="set-name">Same Shape</span><span class="pg">6</span><span class="why">Sentences you can read out</span></div><div class="rt"><span class="what">An appointment is coming</span><span class="dot autism"></span><span class="set-name">Same Shape</span><span class="pg">7</span><span class="why">Prepared before, recovery after</span></div><div class="rt"><span class="what">I cannot stop turning it over</span><span class="dot anxiety"></span><span class="set-name">Steady</span><span class="pg">2</span><span class="why">Worry time, with a closing time</span></div><div class="rt"><span class="what">One thought will not let go</span><span class="dot anxiety"></span><span class="set-name">Steady</span><span class="pg">3</span><span class="why">Thought record</span></div><div class="rt"><span class="what">I am sure something bad will happen</span><span class="dot anxiety"></span><span class="set-name">Steady</span><span class="pg">4</span><span class="why">Write the prediction, check it later</span></div><div class="rt"><span class="what">My body will not settle</span><span class="dot anxiety"></span><span class="set-name">Steady</span><span class="pg">6</span><span class="why">Grounding and breathing</span></div><div class="rt"><span class="what">Everything feels out of my hands</span><span class="dot anxiety"></span><span class="set-name">Steady</span><span class="pg">5</span><span class="why">Mine, and not mine</span></div><div class="rt"><span class="what">Getting up is the whole day</span><span class="dot depression"></span><span class="set-name">Small Light</span><span class="pg">1</span><span class="why">The things that count</span></div><div class="rt"><span class="what">I do not know what I can manage</span><span class="dot depression"></span><span class="set-name">Small Light</span><span class="pg">2</span><span class="why">Three versions of a day</span></div><div class="rt"><span class="what">Nothing seems worth doing</span><span class="dot depression"></span><span class="set-name">Small Light</span><span class="pg">3</span><span class="why">Do it, then rate it</span></div><div class="rt"><span class="what">I have gone quiet on everyone</span><span class="dot depression"></span><span class="set-name">Small Light</span><span class="pg">6</span><span class="why">Messages you can copy</span></div><div class="rt"><span class="what">It is very dark today</span><span class="dot depression"></span><span class="set-name">Small Light</span><span class="pg">8</span><span class="why">Safety plan, and the numbers</span></div></div><div class="sec" style="padding-top:14px"><span class="lbl">The three I actually use</span><span class="line"></span><span class="hint">Write them here after a fortnight</span></div><div class="mine"><div class="fr"><span class="flbl">1</span><span class="blank" data-field="b_mine_1" data-ftype="text" data-fsize="11"></span></div><div class="fr"><span class="flbl">2</span><span class="blank" data-field="b_mine_2" data-ftype="text" data-fsize="11"></span></div><div class="fr"><span class="flbl">3</span><span class="blank" data-field="b_mine_3" data-ftype="text" data-fsize="11"></span></div></div></div>
+  <footer class="foot"><span class="mark">Four sets, one shelf.</span>
+    <span class="small">Journals and planners &middot; not medical care</span></footer>
+</div>
