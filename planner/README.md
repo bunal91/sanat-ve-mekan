@@ -1,10 +1,11 @@
 # Printable planner shop — product packs
 
-Seven digital-download products, all generated from HTML templates: **Dusk Ladder**, a one-page
+Eight digital-download products, all generated from HTML templates: **Dusk Ladder**, a one-page
 daily planner; **Party Line**, a nine-page birthday planning kit; **Confetti Club**, a nine-page
 kids' party kit; **Golden Hour**, an eleven-page milestone birthday kit; **First Move**, an eight-page
-ADHD-friendly planning set; **Same Shape**, a nine-page autism-friendly set; and **Steady**, a nine-page
-anxiety journal. Each has its own design language rather than a recoloured shell. Every variant a listing
+ADHD-friendly planning set; **Same Shape**, a nine-page autism-friendly set; **Steady**, a nine-page anxiety journal;
+and **Small Light**, a nine-page journal for low days. Each has its own design language rather
+than a recoloured shell. Every variant a listing
 needs — page sizes, colourways, languages, print and fillable — comes out of one build.
 
 No Canva templates: the products are sold as fillable PDFs, so the listing promises typing into
@@ -19,6 +20,7 @@ planner/
 ├── adhd.py                       # ADHD-friendly set: eight pages, fewer slots on purpose
 ├── autism.py                     # autism-friendly set: nine pages, same shape every page
 ├── anxiety.py                    # anxiety journal: nine pages, worry window to calm plan
+├── depression.py                 # low-days journal: nine pages, safety plan at the centre
 ├── src/
 │   ├── planner.template.html    # the daily planner (single source of truth)
 │   ├── readme.template.html     # the "start here" sheet the buyer opens first (both products)
@@ -30,6 +32,7 @@ planner/
 ├── adhd-planner.html            # browser/preview copy (Letter · signal · 8 pages)
 ├── autism-planner.html          # browser/preview copy (Letter · calm · 9 pages)
 ├── anxiety-journal.html         # browser/preview copy (Letter · steady · 9 pages)
+├── low-days-journal.html        # browser/preview copy (Letter · warm · 9 pages)
 ├── etsy-rehberi.html            # Turkish guide: shop setup, listing copy, pricing, niche
 ├── dist/                        # daily planner — 16 PDFs, 2 start-here sheets, 3 images, ZIPs
 ├── dist-birthday/               # birthday kit — 8 PDFs, start-here sheet, 3 images, ZIPs
@@ -37,7 +40,8 @@ planner/
 ├── dist-milestone/              # milestone kit — same shape
 ├── dist-adhd/                   # ADHD set — same shape
 ├── dist-autism/                 # autism-friendly set — same shape
-└── dist-anxiety/                # anxiety journal — same shape
+├── dist-anxiety/                # anxiety journal — same shape
+└── dist-depression/             # low-days journal — same shape
 ```
 
 ## Build
@@ -55,6 +59,7 @@ python3 milestone.py                 # the milestone kit
 python3 adhd.py                      # the ADHD-friendly set
 python3 autism.py                    # the autism-friendly set
 python3 anxiety.py                   # the anxiety journal
+python3 depression.py                # the low-days journal
 ```
 
 Chromium (headless) does the rendering and prints the PDFs at exact page size; `PLANNER_WORK`
@@ -146,6 +151,23 @@ the morning" box; and a calm plan with contacts and a blank for the reader's loc
 Newsreader and Karla, sea/sand/moss on white, no red anywhere. Every page footer reads *"A journal,
 not medical advice"*, and the delivery sheet says the same at length, including a line asking the
 reader to fill in their crisis line while calm.
+
+## The low-days journal
+
+Nine pages written for very low capacity. The daily page is finishable in two minutes and treats
+getting out of bed, drinking water and taking medication as entries. Page 2 is a capacity ladder
+written on a steadier day — what a 1 looks like, what a 5 looks like, what an 8 looks like — so a
+flat morning means reading a plan rather than making one. Page 3 logs activity with mood before
+and after, which is where the evidence comes from. Then a gentle page for the harshest thought,
+an anhedonia-aware list of small good things, contact prompts with ready-made messages, a weekly
+basics grid, a safety plan, and a look back.
+
+**Safety is structural here, not a footnote.** Page 8 opens with a framed block saying that if
+someone is thinking about ending their life this page is not enough, and pointing to the local
+emergency number; it has fields for the reader's own crisis and emergency numbers and asks them
+to photograph the page. Every page footer reads *"A journal, not medical care · page 8 has the
+numbers"*, and the delivery sheet says plainly that depression is treatable, that this is not
+treatment, and that speaking to a doctor is the most useful thing on the list.
 
 ## How the fillable PDFs are made
 
