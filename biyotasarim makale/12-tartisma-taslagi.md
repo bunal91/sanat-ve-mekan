@@ -51,6 +51,15 @@ alternatifi elemesi (4.3), bunun somut bir örneğidir: soğuk bölgelerde yüks
 ısı iletkenlikli biyo-esaslı ürünler, gereken duvar kalınlığı nedeniyle
 pratikte kullanılamaz hâle gelmektedir.
 
+**Aylık yöntemin ısıl kütle körlüğü.** 4.7.1'deki sonuç, aylık yarı-kararlı
+yöntemin ısıl kütleyi tam olarak fiziksel katkısının en yüksek olduğu
+koşullarda göremediğini ortaya koymaktadır: dış sıcaklığın iç tasarım
+sıcaklığını aştığı aylarda kayıp kullanım faktörü uygulanamamakta ve ısıl
+kütle hesaptan tamamen çıkmaktadır. 1. Bölgede yılın altı ayı bu durumdadır.
+Soğutmayı hesaba katan bir standardın, soğutmanın en kritik olduğu bölgede
+ısıl kütleyi değerlendirme dışı bırakması, mevzuat açısından üzerinde
+durulması gereken bir noktadır.
+
 **Kazanç kullanım faktörü ve ısıl kütle.** 4.7'deki A kurgusu, zaman sabitine
 bağlı olmayan bir kullanım faktörü kullanıldığında on sekiz alternatifin
 tamamının birebir aynı yıllık enerji sonucunu verdiğini göstermektedir. Bu,
@@ -129,10 +138,13 @@ göstermektedir.
    verisinin ortalama kalite puanı 2,44/5'tir. Bu nedenle çalışmada üretilen
    **malzeme sıralamaları göstergedir; yapısal bulgular ise veri kalitesinden
    bağımsızdır.**
-2. **Soğutma hesabı uygulanmamıştır.** Aylık enerji hesabı yalnızca ısıtma
-   ihtiyacını vermektedir. TS 825:2024'ün temel yeniliği soğutmanın hesaba
-   katılması olduğundan bu önemli bir eksiktir; soğutma eklendiğinde ısıl
-   kütlenin sıcak bölgelerdeki avantajının büyümesi beklenir.
+2. **Soğutma hesabı sadeleştirilmiştir.** Soğutma ihtiyacı EN ISO 13790'ın
+   aylık yarı-kararlı yöntemiyle eklenmiştir (4.7.1); TS 825:2024'ün soğutma
+   hesabının tam biçimi standart metninden doğrulanmalıdır. Ayrıca gece
+   havalandırması, gölgeleme kontrolü ve iç kazançların mevsimsel değişimi
+   modellenmemiş, iç kazanç yıl boyunca sabit alınmıştır; bu varsayımlar
+   soğutma ihtiyacını yukarı yönlü etkilemektedir. Mutlak soğutma değerleri
+   ihtiyatla okunmalıdır.
 3. **Güneş ışınımı verisi.** TS 825:2024 Ek-C değerleri kullanılamamış, yer
    tutucu bir tablo kullanılmıştır. Duyarlılık analizi bulgunun bu veriye
    karşı sağlam olduğunu göstermektedir (4.8), ancak mutlak enerji değerleri
@@ -153,8 +165,11 @@ göstermektedir.
 
 ## 5.6. Gelecek çalışmalar
 
-Öncelikli üç yön belirlenmiştir. Birincisi, soğutma ihtiyacı hesabının
-eklenmesi ve ısıl kütle etkisinin sıcak bölgelerde yeniden ölçülmesidir.
+Öncelikli üç yön belirlenmiştir. Birincisi, ısıl kütle etkisinin saatlik
+dinamik simülasyonla ölçülmesidir; 4.7.1'de gösterildiği üzere aylık
+yarı-kararlı yöntem, dış sıcaklığın iç tasarım sıcaklığını aştığı aylarda
+ısıl kütleyi hesaba katmamakta ve bu nedenle sıcak iklimlerdeki katkısını
+yapısal olarak görememektedir.
 İkincisi, yaşam sonu senaryolarının kendi iklim etkileriyle — özellikle
 düzenli depolamada oluşan metanın küresel ısınma potansiyeliyle —
 modellenmesidir; bu çalışmadaki salım oranı taraması senaryo belirsizliğini

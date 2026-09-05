@@ -249,8 +249,8 @@ bağımsızdır ve τ'dan bağımsız bir kullanım faktörü ısıl kütleyi g�
 **Kurgu B (τ'ya bağlı kullanım faktörü):** malzemeler arasında fark
 oluşmaktadır ve bu fark bölgeye göre belirgin biçimde değişmektedir.
 
-**Çizelge 11.** En hafif (camyünü) ve en ağır (kenevir-kireç) alternatif
-arasındaki yıllık enerji farkı
+**Çizelge 11.** En hafif (camyünü) ve en ağır (pirinç kavuzu paneli)
+alternatif arasındaki yıllık **ısıtma** enerjisi farkı
 
 | Bölge | QH hafif (kWh) | QH ağır (kWh) | Fark | Fark % |
 |---|---|---|---|---|
@@ -266,6 +266,52 @@ büyük (%6,03), ısıtma yükünün baskın olduğu bölgede en küçüktür (%
 Bu gradyan, 4.3'teki iklim ayarlı ağırlıklandırmadan **bağımsız** olarak elde
 edilmiştir ve onunla **aynı yöndedir**; iki farklı yoldan aynı fiziksel
 sonuca ulaşılması modelin iç tutarlılığını desteklemektedir.
+
+### 4.7.1. Soğutma eklendiğinde ne değişiyor
+
+TS 825:2024'ün temel yeniliği soğutma ihtiyacının hesaba katılmasıdır. Soğutma
+hesabı EN ISO 13790'ın aylık yarı-kararlı yöntemine göre eklenmiş ve toplam
+(ısıtma + soğutma) ihtiyacı üzerinden malzeme farkı yeniden ölçülmüştür.
+
+**Çizelge 13.** Isıtma, soğutma ve toplam ihtiyaç ile malzemeler arası fark
+
+| Bölge | QH (kWh/m²) | QC (kWh/m²) | Toplam | Isıtma farkı | Soğutma farkı | **Toplam fark** |
+|---|---|---|---|---|---|---|
+| 1 · Aşırı Sıcak | 11,6 | 63,8 | 75,4 | %7,85 | %1,19 | **%2,22** |
+| 2 · Sıcak | 17,8 | 54,7 | 72,4 | %5,08 | %1,44 | **%2,33** |
+| 3 · Ilıman | 28,4 | 35,5 | 63,9 | %2,92 | %2,56 | **%2,72** |
+| 4 · Soğuk | 37,6 | 22,6 | 60,2 | %1,88 | %4,62 | **%2,91** |
+| 5 · Çok Soğuk | 58,5 | 9,0 | 67,5 | %1,23 | %15,79 | **%3,17** |
+| 6 · Aşırı Soğuk | 73,6 | 8,6 | 82,2 | %1,03 | %13,18 | **%2,30** |
+
+Toplam ihtiyaç 60,2–82,2 kWh/m²·yıl aralığındadır; TS 825:2024 ile getirilen
+70–90 kWh/m²·yıl enerji limiti bandıyla aynı büyüklük mertebesindedir. Bu,
+hesap kurgusunun makul olduğuna dair bağımsız bir gösterge sayılabilir.
+
+**Beklenenin tersi bir sonuç.** Isıl kütlenin ısıtmadaki avantajı sıcak
+bölgede en yüksek, soğuk bölgede en düşüktür (%7,85 → %1,03). Soğutmada ise
+**gradyan terstir**: fark sıcak bölgede %1,19, çok soğuk bölgede %15,79'dur.
+İkisi toplandığında bölgeler arası gradyan büyük ölçüde kaybolmakta ve toplam
+fark %2,2–3,2 bandına oturmaktadır.
+
+**Nedeni yöntemseldir.** Aylık yarı-kararlı yöntemde, dış ortam sıcaklığının
+iç tasarım sıcaklığını (26 °C) aştığı aylarda iletim de kazanç tarafına geçer
+ve kayıp kullanım faktörü uygulanamaz. 1. Bölgede Mayıs–Ekim arasındaki altı
+ay bu durumdadır; bu aylarda ısıl kütle hesaba **hiç girmez**. Soğuk
+bölgelerde ise yaz ayları 26 °C'nin altında kaldığından kullanım faktörü
+işlemekte ve ısıl kütle etkisini göstermektedir.
+
+Bu, çalışmanın genel savının dördüncü örneğidir: **hesap yönteminin yapısı,
+sonucun ne gösterebileceğini belirlemektedir.** Aylık yarı-kararlı yöntem,
+ısıl kütleyi tam olarak fiziksel katkısının en yüksek olduğu koşullarda —
+yüksek günlük sıcaklık salınımlı sıcak iklimlerde — görememektedir. Isıl
+kütlenin sıcak iklimlerdeki katkısının doğru değerlendirilmesi, saatlik
+dinamik simülasyon gerektirir.
+
+**Sınırlılık.** Soğutma sonuçları mutlak değer olarak ihtiyatla okunmalıdır.
+Hesapta gece havalandırması, gölgeleme kontrolü ve iç kazançların mevsimsel
+değişimi modellenmemiş; iç kazanç yıl boyunca sabit 5 W/m² alınmıştır. Bu
+varsayımlar soğutma ihtiyacını yukarı yönlü etkilemektedir.
 
 ## 4.8. Duyarlılık analizi
 

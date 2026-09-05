@@ -2,11 +2,13 @@
 """
 TS 825 aylık yöntemine göre net ISITMA enerjisi ihtiyacı.
 
-EKSİK: Soğutma ihtiyacı hesabı HENÜZ UYGULANMAMIŞTIR. TS 825:2024'ün temel
-yeniliği soğutmayı da hesaba katmasıdır; bu betik şimdilik yalnızca ısıtma
-tarafını verir. Soğutma eklendiğinde ısıl kütlenin sıcak bölgelerdeki
-avantajının büyümesi beklenir, çünkü kazanç kullanım faktörü soğutma
-tarafında ısıl kütleye daha duyarlıdır.
+Isıtma ve soğutma ihtiyacı birlikte hesaplanır.
+
+SADELEŞTİRME: Soğutma tarafı, EN ISO 13790'ın aylık yarı-kararlı yöntemine
+göre kurulmuştur (kayıp kullanım faktörü eta_C,ls). Dış sıcaklığın iç tasarım
+sıcaklığını aştığı aylarda iletim de kazanç tarafına geçer ve kullanım faktörü
+uygulanmaz. TS 825:2024'ün soğutma hesabının tam biçimi standart metninden
+doğrulanmalıdır.
 
 AMAÇ: fonksiyonel birim sabit U hedefine dayandığı için, yalıtım malzemesi
 değiştiğinde binanın özgül ısı kaybı H DEĞİŞMEZ. Malzemenin yıllık enerjiye
@@ -81,11 +83,21 @@ def eta_2008(kko):
 
 
 def eta_13790(gama, tau_saat, a0=1.0, tau0=15.0):
-    """EN ISO 13790 ısıtma kullanım faktörü; tau'ya bağlıdır."""
+    """EN ISO 13790 ısıtma kazanç kullanım faktörü; tau'ya bağlıdır."""
     a = a0 + tau_saat / tau0
     if abs(gama - 1.0) < 1e-9:
         return a / (a + 1.0)
     return (1 - gama ** a) / (1 - gama ** (a + 1))
+
+
+def eta_soguma(gama, tau_saat, a0=1.0, tau0=15.0):
+    """EN ISO 13790 soğutma KAYIP kullanım faktörü; tau'ya bağlıdır."""
+    a = a0 + tau_saat / tau0
+    if gama <= 0:
+        return 1.0
+    if abs(gama - 1.0) < 1e-9:
+        return a / (a + 1.0)
+    return (1 - gama ** (-a)) / (1 - gama ** (-(a + 1)))
 
 
 def isil_kapasite(b, malzeme, bolge):
@@ -122,6 +134,34 @@ def yillik_ihtiyac(b, malzeme, bolge, kurgu='A', gunes_olcek=1.0):
         aylik.append((ay, q))
     return {'QH_kWh': toplam, 'QH_ozgul': toplam / b['An_kullanim_alani'],
             'H': H, 'C_MJ': C / 1e6, 'tau_saat': tau_saat, 'aylik': aylik}
+
+
+def yillik_sogutma(b, malzeme, bolge, kurgu='B', gunes_olcek=1.0):
+    """Yıllık net soğutma enerjisi ihtiyacı (kWh/yıl)."""
+    H, _, _ = ozgul_isi_kaybi(b, bolge)
+    sic = M.oku('girdi_bolge_sicakliklari.csv')
+    bno = int(bolge['bolge'])
+    phi_i = b['ic_kazanc_katsayisi'] * b['An_kullanim_alani']
+    C = isil_kapasite(b, malzeme, bolge)
+    tau_saat = C / H / 3600.0
+
+    toplam = 0.0
+    for i, ay in enumerate(AYLAR):
+        te = float(sic[i][f'bolge{bno}'])
+        dt = M.GUN[ay] * 24.0
+        ic_kazanc = (phi_i + gunes_kazanci(b, i, gunes_olcek)) * dt / 1000.0
+        kayip = H * (M.TI_SOGUTMA - te) * dt / 1000.0        # + ise ısı atılabiliyor
+        if kayip <= 0:
+            # Dış ortam iç tasarım sıcaklığından sıcak: iletim de kazanç
+            toplam += ic_kazanc + abs(kayip)
+            continue
+        if ic_kazanc <= 0:
+            continue
+        gama = ic_kazanc / kayip
+        eta = 1.0 if kurgu == 'A' else eta_soguma(gama, tau_saat)
+        toplam += max(0.0, ic_kazanc - eta * kayip)
+    return {'QC_kWh': toplam, 'QC_ozgul': toplam / b['An_kullanim_alani'],
+            'tau_saat': tau_saat}
 
 
 def rapor():
