@@ -1,6 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-TS 825 aylık yöntemine göre net ısıtma ve soğutma enerjisi ihtiyacı.
+TS 825 aylık yöntemine göre net ISITMA enerjisi ihtiyacı.
+
+EKSİK: Soğutma ihtiyacı hesabı HENÜZ UYGULANMAMIŞTIR. TS 825:2024'ün temel
+yeniliği soğutmayı da hesaba katmasıdır; bu betik şimdilik yalnızca ısıtma
+tarafını verir. Soğutma eklendiğinde ısıl kütlenin sıcak bölgelerdeki
+avantajının büyümesi beklenir, çünkü kazanç kullanım faktörü soğutma
+tarafında ısıl kütleye daha duyarlıdır.
 
 AMAÇ: fonksiyonel birim sabit U hedefine dayandığı için, yalıtım malzemesi
 değiştiğinde binanın özgül ısı kaybı H DEĞİŞMEZ. Malzemenin yıllık enerjiye
