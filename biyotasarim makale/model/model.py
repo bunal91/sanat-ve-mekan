@@ -1,22 +1,31 @@
 # -*- coding: utf-8 -*-
 """
-TS 825:2024 iklim bölgelerine göre biyo-esaslı yapı kabuğu malzemeleri için
-çok ölçütlü karar modeli.
+Biyo-esaslı yapı kabuğu malzemeleri için çok ölçütlü karar modeli.
 
-Fonksiyonel birim: ilgili derece gün bölgesi için TS 825:2024'ün tavsiye ettiği
-U_duvar değerini sağlayan 1 m2 dış duvar bileşeni.
+Makalenin kurgusu (bkz. ../04-pilot-bulgu-notu.md):
+  Sabit U hedefine dayalı eşdeğer performans yaklaşımı, tanımı gereği iklim
+  bölgesine göre sıralama farkı üretemez. Bölge etkisi ancak modele
+  (i) uygulanabilirlik kısıtı, (ii) ısıtma/soğutma dengesi ve (iii) dinamik
+  ısıl kütle eklendiğinde ortaya çıkar. Bu betik (i) ve (ii)'yi uygular ve
+  farkı ölçer; (iii) referans bina geometrisi ile eklenecektir.
 
-Yalnızca Python standart kütüphanesi kullanır. Çalıştırma:  python3 model.py
+Fonksiyonel birim: ilgili bölge için TS 825:2024'ün tavsiye ettiği U_duvar
+değerini sağlayan 1 m2 dış duvar bileşeni.
+
+Yalnızca Python standart kütüphanesi kullanır.  Çalıştırma: python3 model.py
 """
 
 import csv, math, os
 
-# --- Sabitler / varsayımlar ---------------------------------------------------
-# Yalıtım dışındaki katmanların ve yüzeysel ısı geçiş dirençlerinin toplamı.
-# 0,30 değeri, İZODER'in TS 825:2024 için yayımladığı kalınlık tablosunu
-# birebir yeniden ürettiği için seçilmiştir (bkz. dogrula_kalinlik()).
-R_DIGER = 0.30          # m2K/W
-KALINLIK_ADIMI = 0.01   # 1 cm; en yakın cm'ye yuvarlanır
+# --- Sabitler -----------------------------------------------------------------
+R_DIGER = 0.30            # m2K/W — yalıtım dışı katmanlar + yüzeysel dirençler
+KALINLIK_ADIMI = 0.01     # m (1 cm)
+AZAMI_KALINLIK_CM = 20.0  # uygulanabilirlik sınırı
+TI_ISITMA, TI_SOGUTMA = 20.0, 26.0   # TS 825:2024 konut tasarım sıcaklıkları
+ALFA = 1.0                # iklim ağırlık ayarının duyarlılık katsayısı
+
+GUN = {'Ocak': 31, 'Şubat': 28, 'Mart': 31, 'Nisan': 30, 'Mayıs': 31, 'Haziran': 30,
+       'Temmuz': 31, 'Ağustos': 31, 'Eylül': 30, 'Ekim': 31, 'Kasım': 30, 'Aralık': 31}
 
 BURADA = os.path.dirname(os.path.abspath(__file__))
 
@@ -33,90 +42,166 @@ def sayi(x):
         return None
 
 
-# --- 1. Fonksiyonel birim hesabı ---------------------------------------------
+# --- 1. Fonksiyonel birim -----------------------------------------------------
 def kalinlik(lmbda, u_hedef, r_diger=R_DIGER):
-    """Hedef U değerini sağlayan yalıtım kalınlığı (m), en yakın cm'ye yuvarlanmış."""
-    r_gerekli = 1.0 / u_hedef - r_diger
-    if r_gerekli <= 0:
+    r = 1.0 / u_hedef - r_diger
+    if r <= 0:
         return 0.0
-    d = lmbda * r_gerekli
-    return round(d / KALINLIK_ADIMI) * KALINLIK_ADIMI
+    return round(lmbda * r / KALINLIK_ADIMI) * KALINLIK_ADIMI
 
 
 def fonksiyonel_birim(malzeme, bolge):
-    """1 m2 duvar için kalınlık, kütle, gömülü/biyojenik karbon ve maliyet."""
-    lmbda = sayi(malzeme['lambda'])
-    rho = sayi(malzeme['yogunluk'])
-    u = sayi(bolge['U_duvar_hedef'])
-    d = kalinlik(lmbda, u)
-    kutle = d * rho                                   # kg/m2
-    gomulu = kutle * sayi(malzeme['gomulu_karbon_kg'])        # kgCO2e/m2
-    biyojenik = kutle * sayi(malzeme['biyojenik_karbon_kg'])  # kgCO2e/m2 (negatif)
+    lmbda, rho, c = (sayi(malzeme['lambda']), sayi(malzeme['yogunluk']),
+                     sayi(malzeme['ozgul_isi']))
+    d = kalinlik(lmbda, sayi(bolge['U_duvar_hedef']))
+    kutle = d * rho
     mmin, mmaks = sayi(malzeme['maliyet_min_TLm3']), sayi(malzeme['maliyet_max_TLm3'])
-    maliyet = d * ((mmin + mmaks) / 2) if (mmin is not None and mmaks is not None) else None
     return {
-        'kalinlik_m': d,
         'kalinlik_cm': d * 100,
         'kutle_kgm2': kutle,
-        'gomulu_karbon_m2': gomulu,
-        'biyojenik_karbon_m2': biyojenik,
-        'net_karbon_m2': gomulu + biyojenik,
-        'maliyet_TLm2': maliyet,
+        'kappa_kJm2K': d * rho * c / 1000.0,          # alansal ısıl kapasite
+        'gomulu_karbon_m2': kutle * sayi(malzeme['gomulu_karbon_kg']),
+        'biyojenik_karbon_m2': kutle * sayi(malzeme['biyojenik_karbon_kg']),
+        'maliyet_TLm2': d * ((mmin + mmaks) / 2) if None not in (mmin, mmaks) else None,
     }
 
 
-# --- 2. Entropi ağırlıklandırma ----------------------------------------------
-def entropi_agirliklari(matris):
-    """Sütunları ölçüt olan karar matrisinden objektif ağırlıklar üretir."""
+def uygulanabilir(malzeme, bolge, sinir_cm=AZAMI_KALINLIK_CM):
+    return kalinlik(sayi(malzeme['lambda']),
+                    sayi(bolge['U_duvar_hedef'])) * 100 <= sinir_cm + 1e-9
+
+
+# --- 2. İklim: derece gün ve soğutma payı -------------------------------------
+def derece_gun(bolge_no):
+    rows = oku('girdi_bolge_sicakliklari.csv')
+    idg = sdg = 0.0
+    for r in rows:
+        t, d = float(r[f'bolge{bolge_no}']), GUN[r['ay']]
+        idg += max(0.0, TI_ISITMA - t) * d
+        sdg += max(0.0, t - TI_SOGUTMA) * d
+    toplam = idg + sdg
+    return {'IDG': idg, 'SDG': sdg,
+            'sogutma_payi': sdg / toplam if toplam else 0.0,
+            'isitma_payi': idg / toplam if toplam else 1.0}
+
+
+# --- 3. Ağırlıklandırma -------------------------------------------------------
+def _normalize_sutunlar(matris):
+    """Sütunları [0,1]'e taşır (entropi ve CRITIC negatif değer kabul etmez)."""
     n, m = len(matris), len(matris[0])
-    k = 1.0 / math.log(n)
-    agirliklar = []
+    N = [[0.0] * m for _ in range(n)]
     for j in range(m):
-        sutun = [satir[j] for satir in matris]
-        toplam = sum(sutun)
-        if toplam == 0:
-            agirliklar.append(0.0)
-            continue
-        p = [v / toplam for v in sutun]
+        sut = [s[j] for s in matris]
+        lo, hi = min(sut), max(sut)
+        for i in range(n):
+            N[i][j] = 0.5 if hi == lo else (matris[i][j] - lo) / (hi - lo) + 1e-6
+    return N
+
+
+def entropi_agirliklari(matris):
+    N = _normalize_sutunlar(matris)
+    n, m = len(N), len(N[0])
+    k = 1.0 / math.log(n)
+    d = []
+    for j in range(m):
+        toplam = sum(s[j] for s in N)
+        p = [s[j] / toplam for s in N] if toplam else [0.0] * n
         e = -k * sum(pi * math.log(pi) for pi in p if pi > 0)
-        agirliklar.append(1.0 - e)
-    tp = sum(agirliklar)
-    return [a / tp for a in agirliklar] if tp else [1.0 / m] * m
+        d.append(1.0 - e)
+    tp = sum(d)
+    return [x / tp for x in d] if tp else [1.0 / m] * m
 
 
-# --- 3. TOPSIS ----------------------------------------------------------------
-def topsis(matris, agirliklar, yonler):
-    """yonler: her ölçüt için 'max' (fayda) veya 'min' (maliyet)."""
+def critic_agirliklari(matris):
+    """CRITIC: standart sapma (kontrast) x ölçütler arası çatışma (1 - korelasyon)."""
+    N = _normalize_sutunlar(matris)
+    n, m = len(N), len(N[0])
+    ort = [sum(s[j] for s in N) / n for j in range(m)]
+    std = [math.sqrt(sum((s[j] - ort[j]) ** 2 for s in N) / (n - 1)) for j in range(m)]
+
+    def kor(a, b):
+        pay = sum((N[i][a] - ort[a]) * (N[i][b] - ort[b]) for i in range(n))
+        payda = (n - 1) * std[a] * std[b]
+        return pay / payda if payda else 0.0
+
+    c = [std[j] * sum(1 - kor(j, k) for k in range(m)) for j in range(m)]
+    tp = sum(c)
+    return [x / tp for x in c] if tp else [1.0 / m] * m
+
+
+def esit_agirliklar(matris):
     m = len(matris[0])
-    normlar = [math.sqrt(sum(satir[j] ** 2 for satir in matris)) for j in range(m)]
-    N = [[(satir[j] / normlar[j] if normlar[j] else 0.0) * agirliklar[j]
-          for j in range(m)] for satir in matris]
+    return [1.0 / m] * m
+
+
+AGIRLIK_YONTEMLERI = {'Entropi': entropi_agirliklari,
+                      'CRITIC': critic_agirliklari,
+                      'Eşit': esit_agirliklar}
+
+
+def iklim_ayari(agirliklar, olcutler, bolge_no, alfa=ALFA):
+    """
+    Bölgeye bağlı ağırlık ayarı — makalenin mekanizma (ii)'si.
+    Isıl kütle (kappa) soğutma baskın bölgede, nem/küf duyarlılığı ısıtma
+    baskın bölgede ağırlaşır.  w' = w * (1 + alfa * ilgili_pay)
+    """
+    dg = derece_gun(bolge_no)
+    carpan = []
+    for (anahtar, _, _), w in zip(olcutler, agirliklar):
+        if anahtar == 'kappa_kJm2K':
+            carpan.append(w * (1 + alfa * dg['sogutma_payi']))
+        elif anahtar == 'nem_kuf_puan':
+            carpan.append(w * (1 + alfa * dg['isitma_payi']))
+        else:
+            carpan.append(w)
+    tp = sum(carpan)
+    return [x / tp for x in carpan]
+
+
+# --- 4. Sıralama yöntemleri ---------------------------------------------------
+def topsis(matris, agirliklar, yonler):
+    m = len(matris[0])
+    nrm = [math.sqrt(sum(s[j] ** 2 for s in matris)) for j in range(m)]
+    N = [[(s[j] / nrm[j] if nrm[j] else 0.0) * agirliklar[j] for j in range(m)]
+         for s in matris]
     ideal, anti = [], []
     for j in range(m):
-        sutun = [satir[j] for satir in N]
-        if yonler[j] == 'max':
-            ideal.append(max(sutun)); anti.append(min(sutun))
-        else:
-            ideal.append(min(sutun)); anti.append(max(sutun))
-    skorlar = []
-    for satir in N:
-        d_art = math.sqrt(sum((satir[j] - ideal[j]) ** 2 for j in range(m)))
-        d_eksi = math.sqrt(sum((satir[j] - anti[j]) ** 2 for j in range(m)))
-        skorlar.append(d_eksi / (d_art + d_eksi) if (d_art + d_eksi) else 0.0)
-    return skorlar
+        sut = [s[j] for s in N]
+        (ideal.append(max(sut)), anti.append(min(sut))) if yonler[j] == 'max' \
+            else (ideal.append(min(sut)), anti.append(max(sut)))
+    out = []
+    for s in N:
+        dp = math.sqrt(sum((s[j] - ideal[j]) ** 2 for j in range(m)))
+        dn = math.sqrt(sum((s[j] - anti[j]) ** 2 for j in range(m)))
+        out.append(dn / (dp + dn) if (dp + dn) else 0.0)
+    return out
 
 
-def spearman(a, b):
-    """İki sıralama arasında Spearman sıra korelasyonu."""
-    n = len(a)
-    if n < 2:
-        return None
-    d2 = sum((a[i] - b[i]) ** 2 for i in range(n))
-    return 1 - (6 * d2) / (n * (n ** 2 - 1))
+def vikor(matris, agirliklar, yonler, v=0.5):
+    """VIKOR — düşük Q iyidir; karşılaştırma için (1 - Q) döndürülür."""
+    m = len(matris[0])
+    en_iyi, en_kotu = [], []
+    for j in range(m):
+        sut = [s[j] for s in matris]
+        (en_iyi.append(max(sut)), en_kotu.append(min(sut))) if yonler[j] == 'max' \
+            else (en_iyi.append(min(sut)), en_kotu.append(max(sut)))
+    S, R = [], []
+    for s in matris:
+        pay = []
+        for j in range(m):
+            araluk = en_iyi[j] - en_kotu[j]
+            pay.append(agirliklar[j] * (en_iyi[j] - s[j]) / araluk if araluk else 0.0)
+        S.append(sum(pay)); R.append(max(pay))
+    Smin, Smaks, Rmin, Rmaks = min(S), max(S), min(R), max(R)
+    Q = []
+    for i in range(len(matris)):
+        a = (S[i] - Smin) / (Smaks - Smin) if Smaks != Smin else 0.0
+        b = (R[i] - Rmin) / (Rmaks - Rmin) if Rmaks != Rmin else 0.0
+        Q.append(v * a + (1 - v) * b)
+    return [1 - q for q in Q]
 
 
 def siralar(skorlar):
-    """Skorlardan 1..n sıra numaraları (yüksek skor = 1. sıra)."""
     sirali = sorted(range(len(skorlar)), key=lambda i: -skorlar[i])
     r = [0] * len(skorlar)
     for yer, i in enumerate(sirali):
@@ -124,211 +209,161 @@ def siralar(skorlar):
     return r
 
 
-# --- 4. Doğrulama: İZODER'in yayımlanmış kalınlık tablosu ---------------------
-def dogrula_kalinlik():
-    """
-    İZODER'in TS 825:2024 için yayımladığı asgari yalıtım kalınlıkları ile
-    hesabın uyumunu sınar. (il, U_hedef, lambda, beklenen_cm)
-    """
-    testler = [
-        ('Antalya  (1. Bölge)', 0.45, 0.035, 7),
-        ('Antalya  (1. Bölge)', 0.45, 0.040, 8),
-        ('İstanbul (3. Bölge)', 0.40, 0.035, 8),
-        ('İstanbul (3. Bölge)', 0.40, 0.040, 9),
-        ('Ankara   (4. Bölge)', 0.35, 0.035, 9),
-        ('Ankara   (4. Bölge)', 0.35, 0.040, 10),
-        ('Erzurum  (6. Bölge)', 0.25, 0.035, 13),
-        ('Erzurum  (6. Bölge)', 0.25, 0.040, 15),
-    ]
-    print('=' * 74)
-    print('DOĞRULAMA — hesaplanan kalınlık ile İZODER tablosunun karşılaştırması')
-    print(f'(R_diğer = {R_DIGER} m2K/W)')
-    print('=' * 74)
-    print(f"{'İl / Bölge':<22}{'U':>6}{'lambda':>9}{'hesap':>9}{'İZODER':>9}   sonuç")
-    hepsi = True
-    for il, u, lmb, beklenen in testler:
-        h = kalinlik(lmb, u) * 100
-        ok = abs(h - beklenen) < 0.5
-        hepsi = hepsi and ok
-        print(f'{il:<22}{u:>6.2f}{lmb:>9.3f}{h:>8.0f}cm{beklenen:>8}cm   {"UYUMLU" if ok else "SAPMA"}')
-    print(f"\nGenel sonuç: {'8/8 uyumlu — hesap temeli doğrulandı.' if hepsi else 'Sapma var, R_diğer gözden geçirilmeli.'}\n")
-    return hepsi
+def spearman(a, b):
+    n = len(a)
+    if n < 2:
+        return None
+    return 1 - 6 * sum((a[i] - b[i]) ** 2 for i in range(n)) / (n * (n ** 2 - 1))
 
 
-# --- 5. Ana akış --------------------------------------------------------------
+# --- 5. Ölçüt seti ------------------------------------------------------------
 OLCUTLER = [
-    # (anahtar, etiket, yön)
-    ('lambda',              'Ö1 Isı iletkenliği',        'min'),
-    ('kutle_kgm2',          'Ö2 Fonksiyonel birim kütlesi', 'min'),
-    ('ozgul_isi',           'Ö3 Özgül ısı kapasitesi',   'max'),
-    ('gomulu_karbon_m2',    'Ö5 Gömülü karbon',          'min'),
-    ('biyojenik_karbon_m2', 'Ö6 Biyojenik karbon',       'min'),
-    ('yangin_puan',         'Ö7 Yangına tepki',          'max'),
-    ('yasam_sonu_puan',     'Ö9 Yaşam sonu senaryosu',   'max'),
-    ('nem_kuf_puan',        'Ö10 Nem/küf duyarlılığı',   'min'),
-    ('kalinlik_cm',         'Ö11 Duvar kalınlığı kaybı', 'min'),
+    ('lambda',              'Ö1 Isı iletkenliği',           'min'),
+    ('kutle_kgm2',          'Ö2 Birim kütle',               'min'),
+    ('kappa_kJm2K',         'Ö3 Alansal ısıl kapasite',     'max'),
+    ('gomulu_karbon_m2',    'Ö5 Gömülü karbon',             'min'),
+    ('biyojenik_karbon_m2', 'Ö6 Biyojenik karbon',          'min'),
+    ('yangin_puan',         'Ö7 Yangına tepki',             'max'),
+    ('yasam_sonu_puan',     'Ö9 Yaşam sonu senaryosu',      'max'),
+    ('nem_kuf_puan',        'Ö10 Nem/küf duyarlılığı',      'min'),
+    ('kalinlik_cm',         'Ö11 Duvar kalınlığı kaybı',    'min'),
 ]
-# Not: Ö4 (mu) hedef aralık ölçütü ve Ö8 (maliyet) veri beklediği için
-# şimdilik devre dışı; maliyet verisi girildiğinde OLCUTLER'e eklenecek.
 
 
-def calistir(olcutler=OLCUTLER, etiket='TAM MODEL'):
-    malzemeler, bolgeler = oku('girdi_malzemeler.csv'), oku('girdi_bolgeler.csv')
-    tum_siralamalar = {}
-    satirlar_csv = []
-
-    for bolge in bolgeler:
-        matris, adlar = [], []
-        for mal in malzemeler:
-            fb = fonksiyonel_birim(mal, bolge)
-            kaynak = dict(mal); kaynak.update(fb)
-            satir = []
-            for anahtar, _, _ in olcutler:
-                v = sayi(kaynak.get(anahtar))
-                satir.append(v if v is not None else 0.0)
-            matris.append(satir); adlar.append(mal['ad'])
-            satirlar_csv.append({
-                'bolge': bolge['bolge'], 'bolge_adi': bolge['ad'],
-                'malzeme': mal['ad'], 'biyo_esasli': mal['biyo_esasli'],
-                'kalinlik_cm': round(fb['kalinlik_cm'], 1),
-                'kutle_kgm2': round(fb['kutle_kgm2'], 1),
-                'gomulu_karbon_m2': round(fb['gomulu_karbon_m2'], 2),
-                'biyojenik_karbon_m2': round(fb['biyojenik_karbon_m2'], 2),
-                'net_karbon_m2': round(fb['net_karbon_m2'], 2),
-            })
-
-        # Entropi negatif değer kabul etmediği için sütunları [0,1]'e taşı
-        m = len(matris[0])
-        pozitif = []
-        for satir in matris:
-            pozitif.append(list(satir))
-        for j in range(m):
-            sut = [s[j] for s in matris]
-            lo, hi = min(sut), max(sut)
-            for i, s in enumerate(pozitif):
-                s[j] = 0.5 if hi == lo else (matris[i][j] - lo) / (hi - lo) + 1e-6
-
-        agirliklar = entropi_agirliklari(pozitif)
-        yonler = [y for _, _, y in olcutler]
-        skorlar = topsis(matris, agirliklar, yonler)
-        tum_siralamalar[bolge['bolge']] = (adlar, skorlar, siralar(skorlar), agirliklar)
-
-    return tum_siralamalar, satirlar_csv, [e[1] for e in olcutler]
+def karar_matrisi(bolge, olcutler=OLCUTLER, kisit=True):
+    """Bölge için karar matrisi; kisit=True ise uygulanamayan alternatifler elenir."""
+    mals = oku('girdi_malzemeler.csv')
+    if kisit:
+        mals = [m for m in mals if uygulanabilir(m, bolge)]
+    matris, adlar = [], []
+    for m in mals:
+        kaynak = dict(m); kaynak.update(fonksiyonel_birim(m, bolge))
+        matris.append([sayi(kaynak.get(a)) or 0.0 for a, _, _ in olcutler])
+        adlar.append(m['ad'])
+    return matris, adlar
 
 
-def rapor():
-    dogrula_kalinlik()
-
-    sonuc, satirlar, etiketler = calistir()
-    _, _, _, agirliklar = sonuc['1']
-    print('=' * 74)
-    print('ENTROPİ AĞIRLIKLARI (1. Bölge)')
-    print('=' * 74)
-    for e, a in sorted(zip(etiketler, agirliklar), key=lambda x: -x[1]):
-        print(f'  {e:<32}{a:>7.3f}  {"#" * int(a * 90)}')
-
-    print()
-    print('=' * 74)
-    print('BÖLGELERE GÖRE TOPSIS SIRALAMASI (ilk 6)')
-    print('=' * 74)
-    bolge_adlari = {b['bolge']: b['ad'] for b in oku('girdi_bolgeler.csv')}
-    for b in sorted(sonuc, key=int):
-        adlar, skorlar, sira, _ = sonuc[b]
-        ilk = sorted(range(len(adlar)), key=lambda i: -skorlar[i])[:6]
-        print(f"\n{b}. Bölge — {bolge_adlari[b]}")
-        for yer, i in enumerate(ilk, 1):
-            print(f'   {yer}. {adlar[i]:<32}{skorlar[i]:.4f}')
-
-    # Sıralama kayması: ölçüt olan asıl bulgu
-    print()
-    print('=' * 74)
-    print('SIRALAMA KAYMASI — bölgeler arası Spearman korelasyonu')
-    print('=' * 74)
-    bolgeler = sorted(sonuc, key=int)
-    print('      ' + ''.join(f'{b:>8}' for b in bolgeler))
-    for b1 in bolgeler:
-        satir = f'{b1:>4}  '
-        for b2 in bolgeler:
-            satir += f'{spearman(sonuc[b1][2], sonuc[b2][2]):>8.3f}'
-        print(satir)
-
-    # AS2: biyojenik karbon ve yaşam sonu çıkarılınca ne değişiyor?
-    kisitli = [o for o in OLCUTLER if o[0] not in ('biyojenik_karbon_m2', 'yasam_sonu_puan')]
-    sonuc2, _, _ = calistir(kisitli)
-    print()
-    print('=' * 74)
-    print('AS2 — Ö6 (biyojenik karbon) ve Ö9 (yaşam sonu) modelden çıkarılınca')
-    print('=' * 74)
-    for b in bolgeler:
-        rho = spearman(sonuc[b][2], sonuc2[b][2])
-        adlar = sonuc[b][0]
-        eski = adlar[sonuc[b][2].index(1)]
-        yeni = adlar[sonuc2[b][2].index(1)]
-        degisim = '→ 1. sıra DEĞİŞTİ' if eski != yeni else '  1. sıra aynı'
-        print(f'  {b}. Bölge  Spearman={rho:>6.3f}   {eski:<26} vs {yeni:<26}{degisim}')
-
-    with open(os.path.join(BURADA, 'cikti_fonksiyonel_birim.csv'), 'w',
-              newline='', encoding='utf-8') as f:
-        w = csv.DictWriter(f, fieldnames=list(satirlar[0].keys()))
-        w.writeheader(); w.writerows(satirlar)
-    print('\nÇıktı yazıldı: cikti_fonksiyonel_birim.csv')
+def calistir(bolge, yontem='Entropi', iklim=True, kisit=True, olcutler=OLCUTLER):
+    matris, adlar = karar_matrisi(bolge, olcutler, kisit)
+    w = AGIRLIK_YONTEMLERI[yontem](matris)
+    if iklim:
+        w = iklim_ayari(w, olcutler, int(bolge['bolge']))
+    yonler = [y for _, _, y in olcutler]
+    return adlar, topsis(matris, w, yonler), vikor(matris, w, yonler), w
 
 
-
-# --- 6. Tanı: orantılılık testi ------------------------------------------------
+# --- 6. Tanı: orantılılık -----------------------------------------------------
 def orantilik_testi():
-    """
-    Sabit U hedefine dayalı fonksiyonel birimde, gerekli kalınlık
-        d = lambda * (1/U - R_diger)
-    olduğundan, bölgeler arası oran (1/U_b - R_diger)/(1/U_1 - R_diger) TÜM
-    malzemeler için AYNIDIR. Kalınlıktan türeyen bütün ölçütler (kütle, gömülü
-    karbon, maliyet, kalınlık kaybı, ısıl kütle) bu ortak çarpanla ölçeklenir;
-    dolayısıyla TOPSIS sıralaması bölgeden bağımsız hale gelir. Aşağıdaki test
-    bunu sayısal olarak gösterir: yayılım yalnızca 1 cm'ye yuvarlamadan doğar.
-    """
     mals, bolg = oku('girdi_malzemeler.csv'), oku('girdi_bolgeler.csv')
     u1 = sayi(bolg[0]['U_duvar_hedef'])
-    print('=' * 74)
-    print('TANI — ORANTILILIK TESTİ')
-    print('=' * 74)
+    print('=' * 78)
+    print('TANI — ORANTILILIK TESTİ  (d = lambda * (1/U - R_diğer))')
+    print('=' * 78)
     print(f"{'Bölge':<8}{'teorik oran':>14}{'gerçekleşen min':>18}{'maks':>10}{'yayılım':>10}")
     for b in bolg:
         u = sayi(b['U_duvar_hedef'])
         teorik = (1 / u - R_DIGER) / (1 / u1 - R_DIGER)
-        oranlar = []
-        for m in mals:
-            lam = sayi(m['lambda'])
-            d1 = kalinlik(lam, u1)
-            oranlar.append(kalinlik(lam, u) / d1 if d1 else 0)
-        print(f"{b['bolge']:<8}{teorik:>14.3f}{min(oranlar):>18.3f}"
-              f"{max(oranlar):>10.3f}{max(oranlar) - min(oranlar):>10.3f}")
-    print('\nYayılımın tek kaynağı 1 cm yuvarlamadır. Sabit U hedefi tek başına')
-    print('bölgeye göre sıralama farkı üretemez — bkz. 04-pilot-bulgu-notu.md\n')
+        o = [kalinlik(sayi(m['lambda']), u) / kalinlik(sayi(m['lambda']), u1)
+             for m in mals]
+        print(f"{b['bolge']:<8}{teorik:>14.3f}{min(o):>18.3f}{max(o):>10.3f}"
+              f"{max(o) - min(o):>10.3f}")
+    print('\nTeorik oran malzemeden bağımsız; yayılımın tek kaynağı 1 cm yuvarlama.')
+    print('Sabit U hedefi TEK BAŞINA bölgeye göre sıralama farkı üretemez.\n')
 
 
-# --- 7. Uygulanabilirlik kısıtı ------------------------------------------------
-AZAMI_KALINLIK_CM = 20.0  # duvar bileşeninde uygulanabilir kabul edilen üst sınır
+def dogrula_kalinlik():
+    testler = [('Antalya  (1. Bölge)', 0.45, 0.035, 7), ('Antalya  (1. Bölge)', 0.45, 0.040, 8),
+               ('İstanbul (3. Bölge)', 0.40, 0.035, 8), ('İstanbul (3. Bölge)', 0.40, 0.040, 9),
+               ('Ankara   (4. Bölge)', 0.35, 0.035, 9), ('Ankara   (4. Bölge)', 0.35, 0.040, 10),
+               ('Erzurum  (6. Bölge)', 0.25, 0.035, 13), ('Erzurum  (6. Bölge)', 0.25, 0.040, 15)]
+    print('=' * 78)
+    print(f'DOĞRULAMA — hesaplanan kalınlık ve İZODER tablosu  (R_diğer = {R_DIGER})')
+    print('=' * 78)
+    uyum = 0
+    for il, u, lmb, bek in testler:
+        h = kalinlik(lmb, u) * 100
+        ok = abs(h - bek) < 0.5
+        uyum += ok
+        print(f'{il:<22}U={u:.2f}  λ={lmb:.3f}  hesap={h:>3.0f}cm  '
+              f'İZODER={bek:>3}cm  {"UYUMLU" if ok else "SAPMA"}')
+    print(f'\nSonuç: {uyum}/8 uyumlu.\n')
+    return uyum == 8
 
 
-def uygulanabilir(malzeme, bolge, sinir_cm=AZAMI_KALINLIK_CM):
-    """Bölgenin U hedefi için gereken kalınlık uygulanabilirlik sınırında mı?"""
-    return kalinlik(sayi(malzeme['lambda']), sayi(bolge['U_duvar_hedef'])) * 100 <= sinir_cm + 1e-9
+# --- 7. Rapor -----------------------------------------------------------------
+def rapor():
+    dogrula_kalinlik()
+    orantilik_testi()
 
+    bolg = oku('girdi_bolgeler.csv')
 
-def uygulanabilirlik_raporu(sinir_cm=AZAMI_KALINLIK_CM):
-    mals, bolg = oku('girdi_malzemeler.csv'), oku('girdi_bolgeler.csv')
-    print('=' * 74)
-    print(f'UYGULANABİLİRLİK KISITI — azami {sinir_cm:.0f} cm yalıtım kalınlığı')
-    print('=' * 74)
+    print('=' * 78)
+    print('İKLİM DENGESİ — TS 825:2024 aylık dış sıcaklıklarından türetilmiştir')
+    print('=' * 78)
+    print(f"{'Bölge':<28}{'IDG':>9}{'SDG':>9}{'soğutma payı':>16}")
     for b in bolg:
-        elenen = [m['ad'] for m in mals if not uygulanabilir(m, b, sinir_cm)]
-        durum = ', '.join(elenen) if elenen else '— eleme yok'
-        print(f"  {b['bolge']}. Bölge ({b['ad']:<12}) : {durum}")
-    print('\nEleme kümesi bölgeye göre DEĞİŞTİĞİ için, uygun alternatif kümesi')
-    print('bölgeye bağımlıdır. Gerçek bölge etkisi buradan doğar.\n')
+        dg = derece_gun(int(b['bolge']))
+        print(f"{b['bolge'] + '. ' + b['ad']:<28}{dg['IDG']:>9.0f}{dg['SDG']:>9.0f}"
+              f"{dg['sogutma_payi']:>15.1%}")
+
+    print()
+    print('=' * 78)
+    print(f'UYGULANABİLİRLİK KISITI — azami {AZAMI_KALINLIK_CM:.0f} cm')
+    print('=' * 78)
+    mals = oku('girdi_malzemeler.csv')
+    for b in bolg:
+        elenen = [m['ad'] for m in mals if not uygulanabilir(m, b)]
+        print(f"  {b['bolge']}. Bölge ({b['ad']:<12}) : "
+              f"{', '.join(elenen) if elenen else '— eleme yok'}")
+
+    # Mekanizmaların sıralamaya etkisi
+    print()
+    print('=' * 78)
+    print('MEKANİZMALARIN ETKİSİ — 1. Bölge ile 6. Bölge sıralamasının karşılaştırması')
+    print('=' * 78)
+    print(f"{'Kurgu':<46}{'Spearman(B1,B6)':>18}")
+    b1, b6 = bolg[0], bolg[5]
+    senaryolar = [
+        ('Ham model (kısıt yok, iklim ayarı yok)', False, False),
+        ('+ uygulanabilirlik kısıtı',              True,  False),
+        ('+ iklim ayarlı ağırlık',                 False, True),
+        ('+ her ikisi (tam model)',                True,  True),
+    ]
+    for etiket, kisit, iklim in senaryolar:
+        a1, t1, _, _ = calistir(b1, 'Entropi', iklim, kisit)
+        a6, t6, _, _ = calistir(b6, 'Entropi', iklim, kisit)
+        ortak = [ad for ad in a1 if ad in a6]
+        r1 = siralar([t1[a1.index(x)] for x in ortak])
+        r6 = siralar([t6[a6.index(x)] for x in ortak])
+        print(f'{etiket:<46}{spearman(r1, r6):>18.3f}')
+
+    # Ağırlıklandırma yönteminin etkisi
+    print()
+    print('=' * 78)
+    print('AĞIRLIKLANDIRMA YÖNTEMİNİN ETKİSİ — 1. Bölge, tam model')
+    print('=' * 78)
+    for yontem in AGIRLIK_YONTEMLERI:
+        adlar, t, v, w = calistir(b1, yontem)
+        ilk3 = sorted(range(len(adlar)), key=lambda i: -t[i])[:3]
+        en_buyuk = max(range(len(w)), key=lambda j: w[j])
+        print(f'\n  {yontem:<8} en ağır ölçüt: {OLCUTLER[en_buyuk][1]} ({w[en_buyuk]:.1%})')
+        for yer, i in enumerate(ilk3, 1):
+            print(f'      {yer}. {adlar[i]:<32}{t[i]:.4f}')
+        print(f'      TOPSIS-VIKOR Spearman: {spearman(siralar(t), siralar(v)):.3f}')
+
+    # Bölgelere göre tam model sıralaması
+    print()
+    print('=' * 78)
+    print('TAM MODEL — bölgelere göre ilk 5 (CRITIC ağırlıklı)')
+    print('=' * 78)
+    for b in bolg:
+        adlar, t, _, _ = calistir(b, 'CRITIC')
+        ilk = sorted(range(len(adlar)), key=lambda i: -t[i])[:5]
+        print(f"\n{b['bolge']}. Bölge — {b['ad']}  "
+              f"(soğutma payı %{derece_gun(int(b['bolge']))['sogutma_payi'] * 100:.1f})")
+        for yer, i in enumerate(ilk, 1):
+            print(f'   {yer}. {adlar[i]:<32}{t[i]:.4f}')
 
 
 if __name__ == '__main__':
-    orantilik_testi()
-    uygulanabilirlik_raporu()
     rapor()

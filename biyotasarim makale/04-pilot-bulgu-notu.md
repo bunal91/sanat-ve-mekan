@@ -160,3 +160,99 @@ olarak girilmiştir, **doğrulanmış veri değildir**. Pilot çalıştırmanın
 birinci" sonucu makalede kullanılmamalıdır; yalnızca modelin çalıştığını ve
 yukarıdaki yapısal sorunu gösterir. Her hücre EPD/Ökobaudat/ICE kaynağıyla
 değiştirilmeli ve veri kalitesi puanı verilmelidir.
+
+---
+
+# EK — Düzeltmelerin sonucu (ikinci pilot çalıştırma)
+
+Düzeltme listesindeki 3, 4 ve 5 numaralı maddeler uygulandı. Sonuçlar aşağıdadır.
+
+## 1. Bölgeye bağlı iklim dengesi — veriden türetildi
+
+TS 825:2024'ün aylık dış sıcaklıklarından, konut için θi = 20 °C (ısıtma) ve
+26 °C (soğutma) tasarım sıcaklıkları kullanılarak hesaplandı:
+
+| Bölge | IDG | SDG | Soğutma payı |
+|---|---|---|---|
+| 1 · Aşırı Sıcak | 1908 | 1187 | **%38,4** |
+| 2 · Sıcak | 2482 | 1054 | %29,8 |
+| 3 · Ilıman | 3356 | 475 | %12,4 |
+| 4 · Soğuk | 4174 | 102 | %2,4 |
+| 5 · Çok Soğuk | 6333 | 0 | %0,0 |
+| 6 · Aşırı Soğuk | 7304 | 0 | %0,0 |
+
+Tek yönlü ve düzgün bir gradyan. Ağırlık ayarı bu paylardan türetiliyor:
+alansal ısıl kapasite (Ö3) soğutma payıyla, nem/küf duyarlılığı (Ö10) ısıtma
+payıyla ağırlaşıyor: `w' = w · (1 + α · ilgili_pay)`, α duyarlılık parametresi.
+
+## 2. Mekanizmalar sıralamayı gerçekten kaydırıyor
+
+1. ve 6. bölge sıralamalarının Spearman korelasyonu (ortak alternatifler üzerinden):
+
+| Kurgu | Spearman(B1, B6) |
+|---|---|
+| Ham model (kısıt yok, iklim ayarı yok) | **0,998** — bölge etkisi yok |
+| + uygulanabilirlik kısıtı | 0,956 |
+| + iklim ayarlı ağırlık | **0,769** |
+| + her ikisi (tam model) | 0,888 |
+
+Teşhis doğrulandı: ham modelde bölge etkisi yok (0,998). Mekanizmalar
+eklendikçe etki ortaya çıkıyor; en güçlü etkiyi iklim ayarlı ağırlıklandırma
+üretiyor. Tam modelin ara değerde kalması, kısıtın ortak alternatif kümesini
+daraltmasından kaynaklanıyor — makalede açıklanması gereken bir ayrıntı.
+
+## 3. En çarpıcı bulgu: ağırlıklandırma yöntemi sonucu belirliyor
+
+1. Bölge, tam model:
+
+| Yöntem | En ağır ölçüt | 1. sıra |
+|---|---|---|
+| Entropi | Ö7 Yangına tepki (%33,3) | Camyünü |
+| CRITIC | Ö9 Yaşam sonu senaryosu (%17,1) | **Fındık kabuğu esaslı panel** |
+
+Entropi, yayılımı yüksek tek bir sıralı ölçüte (yangın sınıfı) ağırlığın
+üçte birini vererek biyo-esaslı alternatiflerin tamamını geriye itiyor.
+CRITIC, ölçütler arası çatışmayı da hesaba kattığı için ağırlığı dağıtıyor ve
+sıralamanın başına biyo-esaslı malzemeler geçiyor.
+
+**Bu, makalenin en güçlü bulgusu olabilir:** biyo-esaslı malzemelerin
+"kazanıp kazanmadığı", malzemelerin kendisinden çok ağırlıklandırma
+yönteminin seçimine bağlı. Literatürde bu yöntem seçimi çoğunlukla
+gerekçelendirilmeden yapılıyor. AS3 doğrudan bunu ölçüyor.
+
+## 4. Tam modelin bölgelere göre çıktısı (CRITIC ağırlıklı)
+
+| Bölge | 1 | 2 | 3 |
+|---|---|---|---|
+| 1 · Aşırı Sıcak | Fındık kabuğu paneli | Kenevir-kireç | Şeker kamışı küspesi |
+| 2 · Sıcak | Fındık kabuğu paneli | Kenevir-kireç | Şeker kamışı küspesi |
+| 3 · Ilıman | Fındık kabuğu paneli | Kenevir-kireç | Şeker kamışı küspesi |
+| 4 · Soğuk | Fındık kabuğu paneli | Kenevir-kireç | Şeker kamışı küspesi |
+| 5 · Çok Soğuk | Fındık kabuğu paneli | Şeker kamışı küspesi | Pirinç kavuzu |
+| 6 · Aşırı Soğuk | Fındık kabuğu paneli | Şeker kamışı küspesi | Pirinç kavuzu |
+
+Örüntü fiziksel olarak açıklanabilir: kenevir-kireç, yüksek ısıl kütlesi
+sayesinde soğutma payının yüksek olduğu 1–4. bölgelerde ikinci sırada; 5. ve
+6. bölgede ise gereken 26 cm kalınlık uygulanabilirlik sınırını aştığı için
+tamamen eleniyor ve yerini daha ince kesitli alternatifler alıyor. Ayrıca
+5–6. bölgede camyünü ilk beşe giriyor: soğuk bölgede ısıl kütlenin ağırlığı
+düştüğü için biyo-esaslı malzemelerin göreli üstünlüğü zayıflıyor.
+
+## 5. Bu sayılar hâlâ makalede kullanılamaz
+
+Malzeme verisi `INDIKATIF` işaretli olduğu sürece yukarıdaki sıralamalar
+yalnızca **mekanizmanın çalıştığını** gösterir. "Fındık kabuğu paneli birinci"
+sonucu, gerçek EPD verisi girilene kadar bir bulgu değildir. Değişmeyecek olan
+ve makalenin omurgasını kuran şey, 2. ve 3. maddedeki **yapısal** sonuçlardır.
+
+## 6. Güncellenmiş düzeltme durumu
+
+| # | Düzeltme | Durum |
+|---|---|---|
+| 1 | Orantılılık tanısı | tamam |
+| 2 | Uygulanabilirlik kısıtı | tamam |
+| 3 | Entropi / CRITIC / eşit ağırlık karşılaştırması | tamam |
+| 4 | Sıralı ölçüt ölçeklemesi + VIKOR ile yöntem tutarlılığı | tamam |
+| 5 | Bölgeye göre ağırlık ayarı (ısıtma/soğutma dengesi) | tamam |
+| 6 | TS 825:2024 aylık hesabı, τ = C/H dinamik ısıl kütle | referans bina bekliyor |
+| 7 | Gerçek malzeme verisi (EPD / Ökobaudat / ICE) | tarama bekliyor |
