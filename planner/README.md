@@ -1,10 +1,10 @@
 # Printable planner shop — product packs
 
-Six digital-download products, all generated from HTML templates: **Dusk Ladder**, a one-page
+Seven digital-download products, all generated from HTML templates: **Dusk Ladder**, a one-page
 daily planner; **Party Line**, a nine-page birthday planning kit; **Confetti Club**, a nine-page
 kids' party kit; **Golden Hour**, an eleven-page milestone birthday kit; **First Move**, an eight-page
-ADHD-friendly planning set; and **Same Shape**, a nine-page autism-friendly set. Each has its own
-design language rather than a recoloured shell. Every variant a listing
+ADHD-friendly planning set; **Same Shape**, a nine-page autism-friendly set; and **Steady**, a nine-page
+anxiety journal. Each has its own design language rather than a recoloured shell. Every variant a listing
 needs — page sizes, colourways, languages, print and fillable — comes out of one build.
 
 No Canva templates: the products are sold as fillable PDFs, so the listing promises typing into
@@ -18,6 +18,7 @@ planner/
 ├── milestone.py                  # milestone kit (50th/60th/90th): eleven pages
 ├── adhd.py                       # ADHD-friendly set: eight pages, fewer slots on purpose
 ├── autism.py                     # autism-friendly set: nine pages, same shape every page
+├── anxiety.py                    # anxiety journal: nine pages, worry window to calm plan
 ├── src/
 │   ├── planner.template.html    # the daily planner (single source of truth)
 │   ├── readme.template.html     # the "start here" sheet the buyer opens first (both products)
@@ -28,13 +29,15 @@ planner/
 ├── milestone-planner.html       # browser/preview copy (Letter · gold · 11 pages)
 ├── adhd-planner.html            # browser/preview copy (Letter · signal · 8 pages)
 ├── autism-planner.html          # browser/preview copy (Letter · calm · 9 pages)
+├── anxiety-journal.html         # browser/preview copy (Letter · steady · 9 pages)
 ├── etsy-rehberi.html            # Turkish guide: shop setup, listing copy, pricing, niche
 ├── dist/                        # daily planner — 16 PDFs, 2 start-here sheets, 3 images, ZIPs
 ├── dist-birthday/               # birthday kit — 8 PDFs, start-here sheet, 3 images, ZIPs
 ├── dist-kids/                   # kids' kit — same shape
 ├── dist-milestone/              # milestone kit — same shape
 ├── dist-adhd/                   # ADHD set — same shape
-└── dist-autism/                 # autism-friendly set — same shape
+├── dist-autism/                 # autism-friendly set — same shape
+└── dist-anxiety/                # anxiety journal — same shape
 ```
 
 ## Build
@@ -51,6 +54,7 @@ python3 kids.py                      # the kids' party kit
 python3 milestone.py                 # the milestone kit
 python3 adhd.py                      # the ADHD-friendly set
 python3 autism.py                    # the autism-friendly set
+python3 anxiety.py                   # the anxiety journal
 ```
 
 Chromium (headless) does the rendering and prints the PDFs at exact page size; `PLANNER_WORK`
@@ -129,6 +133,19 @@ Every page carries the identical layout rhythm, the same three muted colours (sa
 clay = something changed, lavender = how it felt) and a key in the footer. Type is Lexend with IBM
 Plex Mono for times and labels; language is literal, with no idioms. The delivery sheet states
 that it is a planning tool and not medical advice, and that any page can be ignored or rewritten.
+
+## The anxiety journal
+
+Nine pages using tools that have been published as self-help for decades: a daily page that starts
+by asking how much is in the tank and ends by comparing what was feared with what happened; a worry
+window with a closing time and a solve/park split; a thought record; an evidence log of predictions
+against outcomes; control sorting; a body page with a drawn figure, 5-4-3-2-1 grounding and a
+printed breathing pattern; small steps rated before and after; a nights page including a "three in
+the morning" box; and a calm plan with contacts and a blank for the reader's local crisis line.
+
+Newsreader and Karla, sea/sand/moss on white, no red anywhere. Every page footer reads *"A journal,
+not medical advice"*, and the delivery sheet says the same at length, including a line asking the
+reader to fill in their crisis line while calm.
 
 ## How the fillable PDFs are made
 
