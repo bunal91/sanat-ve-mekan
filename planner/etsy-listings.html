@@ -1,0 +1,1687 @@
+<title>Twelve Etsy Listings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#f7f5f2; --surface:#ffffff; --sunk:#f2efea;
+  --ink:#1b1917; --muted:#6b645d; --faint:#9c948b;
+  --line:#e5dfd7; --line-2:#d6cec3;
+  --ui:#2c5f57; --ui-soft:#e4efec;
+  --warn:#a8501c;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#131211; --surface:#1c1a18; --sunk:#232120;
+    --ink:#f2ede6; --muted:#a79e94; --faint:#7d756c;
+    --line:#2f2b28; --line-2:#3d3833;
+    --ui:#7cbcae; --ui-soft:#1e2f2c;
+    --warn:#d9905d;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#131211; --surface:#1c1a18; --sunk:#232120;
+  --ink:#f2ede6; --muted:#a79e94; --faint:#7d756c;
+  --line:#2f2b28; --line-2:#3d3833;
+  --ui:#7cbcae; --ui-soft:#1e2f2c;
+  --warn:#d9905d;
+}
+
+*{ box-sizing:border-box; }
+body{ background:var(--paper); color:var(--ink);
+  font-family:"Archivo","Helvetica Neue",Arial,sans-serif; font-size:15px; line-height:1.55;
+  -webkit-font-smoothing:antialiased; }
+a{ color:inherit; }
+:focus-visible{ outline:2px solid var(--ui); outline-offset:2px; border-radius:3px; }
+
+.wrap{ max-width:1240px; margin:0 auto; padding:0 22px 100px;
+  display:grid; grid-template-columns:236px minmax(0,1fr); gap:0 44px; align-items:start; }
+
+/* ---------- masthead ---------- */
+header.top{ grid-column:1 / -1; padding:56px 0 30px; border-bottom:1px solid var(--line-2); }
+.eyebrow{ font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--ui); margin:0 0 14px; }
+h1{ font-family:"Fraunces","Georgia",serif; font-variation-settings:"opsz" 120,"SOFT" 20;
+  font-weight:600; font-size:clamp(34px,5vw,52px); line-height:1.03; letter-spacing:-.02em;
+  margin:0; text-wrap:balance; max-width:16ch; }
+.lede{ color:var(--muted); max-width:62ch; margin:16px 0 0; font-size:16px; }
+.lede b{ color:var(--ink); font-weight:600; }
+
+.cheats{ grid-column:1 / -1; display:grid;
+  grid-template-columns:repeat(3,1fr); gap:0;
+  border-bottom:1px solid var(--line-2); }
+.cheat{ padding:18px 20px 20px; border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line); }
+.cheat:nth-child(3n){ border-right:0; }
+.cheat:nth-last-child(-n+3){ border-bottom:0; }
+@media (max-width:760px){
+  .cheats{ grid-template-columns:repeat(2,1fr); }
+  .cheat:nth-child(3n){ border-right:1px solid var(--line); }
+  .cheat:nth-child(2n){ border-right:0; }
+  .cheat:nth-last-child(-n+3){ border-bottom:1px solid var(--line); }
+  .cheat:nth-last-child(-n+2){ border-bottom:0; }
+}
+.cf{ display:block; font-weight:700; font-size:13px; letter-spacing:.02em; }
+.cl{ display:block; font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--ui);
+  margin:3px 0 7px; }
+.cheat p{ margin:0; font-size:12.5px; line-height:1.5; color:var(--muted); }
+
+/* ---------- rail ---------- */
+nav.rail{ position:sticky; top:20px; padding:34px 0 0; }
+.railsec{ font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--faint); margin:22px 0 8px; }
+.raillist{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; }
+.raillist a{ display:grid; grid-template-columns:9px 1fr; gap:0 10px; align-items:baseline;
+  text-decoration:none; padding:6px 8px 6px 0; border-radius:4px; }
+.raillist a:hover{ background:var(--sunk); }
+.dot{ width:8px; height:8px; border-radius:50%; align-self:center; }
+.rn{ font-weight:600; font-size:13.5px; }
+.rk{ grid-column:2; font-size:11.5px; color:var(--faint); }
+
+/* ---------- product ---------- */
+main{ padding-top:34px; min-width:0; }
+.product{ padding:0 0 58px; margin-bottom:44px; border-bottom:1px solid var(--line-2); }
+.product:last-child{ border-bottom:0; }
+.phead{ display:grid; grid-template-columns:4px 1fr; gap:0 18px; align-items:start;
+  padding-bottom:22px; }
+.pstripe{ background:var(--accent); border-radius:2px; align-self:stretch; min-height:64px; }
+.pmeta{ grid-column:2; }
+.pnum{ font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--accent); }
+.phead h2{ font-family:"Fraunces",Georgia,serif; font-variation-settings:"opsz" 60;
+  font-weight:600; font-size:29px; line-height:1.08; margin:5px 0 2px; letter-spacing:-.015em; }
+.pkind{ margin:0; color:var(--muted); font-size:13.5px; }
+.pfacts{ grid-column:2; margin:16px 0 0; display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(148px,1fr)); gap:12px 22px;
+  border-top:1px solid var(--line); padding-top:14px; }
+.pfacts div{ min-width:0; }
+.pfacts dt{ font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--faint); }
+.pfacts dd{ margin:3px 0 0; font-size:13.5px; font-weight:500; }
+.pfacts .cur{ color:var(--faint); font-weight:400; font-size:11px; }
+.pfacts .sm{ font-size:12px; font-weight:400; word-break:break-all; }
+
+/* ---------- fields ---------- */
+.field{ margin-top:20px; }
+.fhead{ display:flex; align-items:center; gap:12px; flex-wrap:wrap;
+  padding-bottom:7px; border-bottom:1px solid var(--line); }
+.flabel{ font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--ink); font-weight:500; flex:1; min-width:0; }
+.count{ font-family:"IBM Plex Mono",monospace; font-size:11.5px; color:var(--muted);
+  font-variant-numeric:tabular-nums; }
+.count i{ font-style:normal; color:var(--faint); }
+.count.ok{ color:var(--ui); }
+.count.over{ color:var(--warn); font-weight:500; }
+button.copy{ font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--ui); background:var(--ui-soft);
+  border:1px solid transparent; border-radius:4px; padding:4px 11px; cursor:pointer; }
+button.copy:hover{ border-color:var(--ui); }
+button.copy.done{ background:var(--ui); color:var(--surface); }
+.fbody{ background:var(--surface); border:1px solid var(--line); border-top:0;
+  border-radius:0 0 5px 5px; padding:14px 16px; max-height:none; overflow-x:auto; }
+.fbody.hidden{ display:none; }
+pre.body, div.body{ margin:0; white-space:pre-wrap; word-wrap:break-word; font-size:13.5px;
+  line-height:1.62; font-family:"Archivo",Arial,sans-serif; }
+pre.body.mono{ font-family:"IBM Plex Mono",monospace; font-size:13px; line-height:1.5; }
+.tip{ margin:8px 0 0; font-size:12.5px; color:var(--muted); }
+
+.chips{ display:flex; flex-wrap:wrap; gap:7px; padding:14px 0 2px; }
+.chip{ font-family:"IBM Plex Mono",monospace; font-size:12.5px; color:var(--ink);
+  background:var(--surface); border:1px solid var(--line-2); border-radius:100px;
+  padding:5px 8px 5px 12px; cursor:pointer; display:inline-flex; align-items:center; gap:8px; }
+.chip:hover{ border-color:var(--accent); }
+.chip.done{ border-color:var(--ui); background:var(--ui-soft); }
+.chip i{ font-style:normal; font-size:10.5px; color:var(--faint);
+  font-variant-numeric:tabular-nums; }
+
+.mats{ list-style:none; margin:12px 0 0; padding:0;
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:0 26px; }
+.mats li{ display:flex; justify-content:space-between; gap:14px; align-items:baseline;
+  padding:5px 0; border-bottom:1px dotted var(--line); font-size:13px; }
+.mats i{ font-style:normal; font-family:"IBM Plex Mono",monospace; font-size:10.5px;
+  color:var(--faint); font-variant-numeric:tabular-nums; }
+
+.split{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:0 34px; }
+.field.flat .fhead{ border-bottom-color:var(--line-2); }
+.cat{ margin:12px 0 0; font-size:13.5px; font-weight:500; }
+.attrs{ list-style:none; margin:8px 0 0; padding:0; font-size:12.5px; color:var(--muted); }
+.attrs li{ padding:2px 0; }
+.altlist{ list-style:none; margin:12px 0 0; padding:0; font-size:12.5px; color:var(--muted); }
+.altlist li{ padding:5px 0; border-bottom:1px dotted var(--line); }
+.an{ display:block; font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--faint); }
+
+.pin{ margin-top:28px; padding:0 0 4px; }
+.pin .field{ margin-top:14px; }
+
+.note{ margin-top:26px; border-left:3px solid var(--accent); padding:2px 0 2px 16px; }
+.notelabel{ font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--accent); }
+.note p{ margin:5px 0 0; font-size:13.5px; color:var(--muted); max-width:70ch; }
+
+footer.end{ grid-column:1 / -1; border-top:1px solid var(--line-2); margin-top:20px;
+  padding-top:22px; font-size:12.5px; color:var(--faint); }
+
+@media (max-width:900px){
+  .wrap{ grid-template-columns:minmax(0,1fr); }
+  nav.rail{ position:static; padding-top:24px; }
+  .raillist{ display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); }
+}
+@media (prefers-reduced-motion:reduce){ *{ transition:none !important; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <p class="eyebrow">Copy &amp; paste &middot; twelve products</p>
+    <h1>Every listing, written for its own product.</h1>
+    <p class="lede">Title, description, all thirteen tags, materials, category, photo alt text and
+    the Pinterest copy &mdash; for each of the twelve kits, written from what that kit actually
+    does. Character counts are against Etsy&rsquo;s real limits, so nothing gets truncated on paste.
+    <b>Nothing here is boilerplate except the block marked as such at the bottom.</b></p>
+  </header>
+
+  <div class="cheats"><div class="cheat"><span class="cf">Title</span><span class="cl">140 characters</span><p>The first 3&ndash;5 words carry most of the search weight. Etsy reads the whole thing, shoppers read the first line.</p></div><div class="cheat"><span class="cf">Tags</span><span class="cl">13 tags, 20 characters each</span><p>Use all thirteen. Multi-word phrases beat single words, because that is how people actually search.</p></div><div class="cheat"><span class="cf">Materials</span><span class="cl">13 entries, 45 characters each</span><p>Lightly indexed and almost always left blank. Free keywords.</p></div><div class="cheat"><span class="cf">Description</span><span class="cl">no practical limit</span><p>The first ~160 characters become the Google snippet. Plain text only &mdash; Etsy strips HTML.</p></div><div class="cheat"><span class="cf">Photos</span><span class="cl">10 photos, 1 video</span><p>Listings with a video convert measurably better. A 5&ndash;10 second scroll through the pages is enough.</p></div><div class="cheat"><span class="cf">Digital files</span><span class="cl">5 files, 20&nbsp;MB each</span><p>Which is exactly why every kit ships as three zips plus two loose sheets.</p></div></div>
+
+  <nav class="rail"><p class="railsec">Daily &amp; weekly</p><ul class="raillist"><li><a href="#daily"><span class="dot" style="background:#c9553f"></span><span class="rn">Dusk Ladder</span><span class="rk">Daily planner</span></a></li></ul><p class="railsec">Party &amp; event kits</p><ul class="raillist"><li><a href="#birthday"><span class="dot" style="background:#2f5db0"></span><span class="rn">Party Line</span><span class="rk">Birthday party kit</span></a></li><li><a href="#kids"><span class="dot" style="background:#e0407f"></span><span class="rn">Confetti Club</span><span class="rk">Kids’ party kit</span></a></li><li><a href="#milestone"><span class="dot" style="background:#a8842c"></span><span class="rn">Golden Hour</span><span class="rk">Milestone birthday kit</span></a></li></ul><p class="railsec">Mental health &amp; neurodivergent</p><ul class="raillist"><li><a href="#adhd"><span class="dot" style="background:#1d7a72"></span><span class="rn">First Move</span><span class="rk">ADHD-friendly set</span></a></li><li><a href="#autism"><span class="dot" style="background:#6c8f6a"></span><span class="rn">Same Shape</span><span class="rk">Autism-friendly set</span></a></li><li><a href="#anxiety"><span class="dot" style="background:#3f6f86"></span><span class="rn">Steady</span><span class="rk">Anxiety journal</span></a></li><li><a href="#depression"><span class="dot" style="background:#b0703a"></span><span class="rn">Small Light</span><span class="rk">Low days journal</span></a></li><li><a href="#bundle"><span class="dot" style="background:#4b4f7a"></span><span class="rn">Four sets, one shelf</span><span class="rk">Mental health bundle</span></a></li></ul><p class="railsec">Seasonal kits</p><ul class="raillist"><li><a href="#halloween"><span class="dot" style="background:#e4622a"></span><span class="rn">Thirty-First</span><span class="rk">Halloween party kit</span></a></li><li><a href="#christmas"><span class="dot" style="background:#1f4d3d"></span><span class="rn">Long December</span><span class="rk">Christmas kit</span></a></li><li><a href="#thanksgiving"><span class="dot" style="background:#b4531f"></span><span class="rn">One Table</span><span class="rk">Thanksgiving kit</span></a></li></ul>
+    <p class="railsec">Shop level</p>
+    <ul class="raillist"><li><a href="#shared">
+      <span class="dot" style="background:#6b645d"></span>
+      <span class="rn">Set once</span><span class="rk">Sections, FAQ, policies</span></a></li></ul>
+  </nav>
+
+  <main>
+<section class="product" id="daily" style="--accent:#c9553f">
+  <div class="phead">
+    <div class="pstripe"></div>
+    <div class="pmeta">
+      <span class="pnum">Listing 01</span>
+      <h2>Dusk Ladder</h2>
+      <p class="pkind">Daily planner &middot; 1 page</p>
+    </div>
+    <dl class="pfacts">
+      <div><dt>Price</dt><dd>6.50 <span class="cur">USD</span></dd></div>
+      <div><dt>Launch offer</dt><dd>30% for the first week (4,55 $)</dd></div>
+      <div><dt>Files to upload</dt><dd class="mono sm">dist/etsy/</dd></div>
+      <div><dt>Shop section</dt><dd>Daily &amp; weekly</dd></div>
+    </dl>
+  </div>
+
+  <div class="field">
+  <div class="fhead"><span class="flabel">Listing title</span><span class="count ok">134<i>/140</i></span>
+    <button class="copy" type="button" data-target="c1">Copy</button></div>
+  <div class="fbody" id="c1"><pre class="body mono">Daily Planner Printable, Fillable PDF Daily Schedule, Undated To Do List, Hourly Planner 6AM to 10PM, Meal Mood Gratitude, Letter + A4</pre></div>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Description</span><span class="count">2867 char</span>
+    <button class="copy" type="button" data-target="c2">Copy</button></div>
+  <div class="fbody" id="c2"><pre class="body">An undated daily page you can type straight into: three priorities, an hour-by-hour schedule from 6 AM to 10 PM, tasks, meals, a mood scale and one line of gratitude. One sheet, the whole day, no app and no subscription.
+
+▸ WHY THIS ONE AND NOT THE OTHER TEN THOUSAND
+Most daily planners hand you a grid and leave you to it. This one is built around a ladder: the day runs down a single rail in one-hour steps, and the colour ramp beside it reports the time of day rather than decorating — amber in the morning, violet by the evening. There are three priority slots, not ten, because a page with ten priorities has none.
+
+▸ WHAT IS ON THE PAGE
+• Today’s priorities — three numbered slots, and only three
+• Schedule — every hour from 6 AM to 10 PM
+• Tasks — a tick list sized so it cannot run off the page
+• Meals — breakfast, lunch, dinner, and what you actually drank
+• Mood — a five-point scale you tick in one click
+• Gratitude — one line, at the foot of the page, where it belongs
+• Day chips — Mon to Sun, circle the one you are on
+
+▸ HOW IT WORKS — PLEASE READ THIS BIT
+These are FILLABLE PDFs. You click into ready-made boxes and type, and you tick the checkboxes with a click. The layout, the fonts and the colours are fixed — they cannot be moved, restyled or rearranged. This is not a Canva template and there is no Canva link. If what you want is to redesign the pages themselves, this is not the right file for you, and I would rather you knew that before you bought it than after.
+
+▸ WHAT YOU GET, INSTANTLY
+• 8 fillable PDFs — US Letter + A4, in colour + ink-saving mono, in English + Turkish
+• 8 print PDFs — the same page with no form fields, for a pen
+• 2 START-HERE sheets (English and Turkish) — printing settings, on one page
+• Zipped and ready to open on a phone, a tablet or a computer
+
+▸ PRINTING
+Plain A4 or US Letter, 90–120 gsm. Print at 100% / Actual size — never “Fit to page”, which shrinks the margins and throws the rail out. The mono version is the identical layout in graphite if you are watching the ink.
+
+▸ TO TYPE ON IT
+Open the file ending -fillable.pdf in the free Adobe Acrobat Reader on a computer, or in a PDF app on a tablet or phone. Save a copy first, so you always have a blank one to go back to.
+
+▸ PLEASE NOTE
+This is a digital download. Nothing is posted to you — no physical planner, no binder, no frame. Because the files are delivered the moment you pay, this listing cannot be refunded. Please read the section above first, and message me before buying if anything is unclear. Colours can look slightly different from one screen or printer to another.
+
+▸ LICENCE
+For your own personal use. Print as many copies as you like for yourself. Please do not resell, share, redistribute or teach from the files, and please do not sell anything printed from them. The fonts used are licensed under the SIL Open Font License.</pre></div>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Tags &mdash; 13 of 13, each under 20 characters</span>
+    <span class="count ok">13<i>/13</i></span>
+    <button class="copy" type="button" data-target="c3">Copy all</button></div>
+  <div class="chips"><button class="chip" type="button" data-copy="daily planner">daily planner<i>13</i></button><button class="chip" type="button" data-copy="printable planner">printable planner<i>17</i></button><button class="chip" type="button" data-copy="fillable pdf">fillable pdf<i>12</i></button><button class="chip" type="button" data-copy="undated planner">undated planner<i>15</i></button><button class="chip" type="button" data-copy="hourly planner">hourly planner<i>14</i></button><button class="chip" type="button" data-copy="to do list printable">to do list printable<i>20</i></button><button class="chip" type="button" data-copy="daily schedule">daily schedule<i>14</i></button><button class="chip" type="button" data-copy="productivity planner">productivity planner<i>20</i></button><button class="chip" type="button" data-copy="gratitude journal">gratitude journal<i>17</i></button><button class="chip" type="button" data-copy="mood tracker">mood tracker<i>12</i></button><button class="chip" type="button" data-copy="digital download">digital download<i>16</i></button><button class="chip" type="button" data-copy="planner insert">planner insert<i>14</i></button><button class="chip" type="button" data-copy="daily page printable">daily page printable<i>20</i></button></div>
+  <div class="fbody hidden" id="c3"><pre class="body mono">daily planner, printable planner, fillable pdf, undated planner, hourly planner, to do list printable, daily schedule, productivity planner, gratitude journal, mood tracker, digital download, planner insert, daily page printable</pre></div>
+  <p class="tip">Click any single tag to copy just that one. Etsy wants them one at a time.</p>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Materials &mdash; 13 of 13, each under 45 characters</span>
+    <span class="count ok">13<i>/13</i></span>
+    <button class="copy" type="button" data-target="c4">Copy all</button></div>
+  <ul class="mats"><li><span>Fillable PDF</span><i>12</i></li><li><span>US Letter 8.5 x 11 in</span><i>21</i></li><li><span>A4</span><i>2</i></li><li><span>Instant digital download</span><i>24</i></li><li><span>Undated, reusable every day</span><i>27</i></li><li><span>Colour and ink-saving mono</span><i>26</i></li><li><span>English and Turkish</span><i>19</i></li><li><span>Opens in free Adobe Acrobat Reader</span><i>34</i></li><li><span>Print at home</span><i>13</i></li><li><span>Hourly rail, 6 AM to 10 PM</span><i>26</i></li><li><span>Three priorities, not ten</span><i>25</i></li><li><span>No Canva template, no Canva link</span><i>32</i></li><li><span>Personal use licence</span><i>20</i></li></ul>
+  <div class="fbody hidden" id="c4"><pre class="body mono">Fillable PDF, US Letter 8.5 x 11 in, A4, Instant digital download, Undated, reusable every day, Colour and ink-saving mono, English and Turkish, Opens in free Adobe Acrobat Reader, Print at home, Hourly rail, 6 AM to 10 PM, Three priorities, not ten, No Canva template, no Canva link, Personal use licence</pre></div>
+  <p class="tip">Etsy indexes this field lightly and almost nobody fills it in. Free keywords.</p>
+</div>
+
+  <div class="split">
+    <div class="field flat">
+      <div class="fhead"><span class="flabel">Category &amp; attributes</span></div>
+      <p class="cat">Paper &amp; Party Supplies › Paper › Calendars &amp; Planners</p>
+      <ul class="attrs"><li>Type: Planner</li><li>Style: Minimalist</li><li>Occasion: Everyday</li><li>Digital download: Yes</li></ul>
+    </div>
+    <div class="field flat">
+      <div class="fhead"><span class="flabel">Photo alt text</span></div>
+      <ul class="altlist"><li><span class="an">Image 1</span>Printable daily planner page with an hourly schedule from 6 AM to 10 PM, three priority slots, tasks, meals and a mood scale</li><li><span class="an">Image 2</span>The same daily planner shown filled in, with typed text in the form fields and ticked checkboxes</li><li><span class="an">Image 3</span>Close-up of the hourly rail, showing the amber-to-violet colour ramp running down the day</li></ul>
+    </div>
+  </div>
+
+  <div class="field flat pin">
+    <div class="fhead"><span class="flabel">Pinterest &amp; Instagram</span></div>
+    <p class="tip">Etsy has no hashtags &mdash; it has the 13 tags above. Hashtags belong on the
+    social side, and for printables Pinterest is usually the largest source of outside traffic.</p>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Pin title</span><span class="count ok">51<i>/100</i></span>
+    <button class="copy" type="button" data-target="c5">Copy</button></div>
+  <div class="fbody" id="c5"><pre class="body mono">An undated daily planner you can actually type into</pre></div>
+</div>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Pin description</span><span class="count ok">163<i>/500</i></span>
+    <button class="copy" type="button" data-target="c6">Copy</button></div>
+  <div class="fbody" id="c6"><pre class="body mono">One page for the whole day: three priorities, 6 AM to 10 PM by the hour, tasks, meals, mood and gratitude. Fillable PDF — type on it or print it. US Letter and A4.</pre></div>
+</div>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Instagram hashtags</span><span class="count">156 char</span>
+    <button class="copy" type="button" data-target="c7">Copy</button></div>
+  <div class="fbody" id="c7"><pre class="body mono">#printableplanner #dailyplanner #fillablepdf #undatedplanner #plannerprintable #todolist #productivity #plannercommunity #digitaldownload #printablesforsale</pre></div>
+</div>
+  </div>
+
+  <aside class="note">
+    <span class="notelabel">Worth knowing</span>
+    <p>The one product in the shop with a Turkish edition. If Turkish buyers do not materialise in the first two months, drop the TR files from the zip — four fewer files is a simpler listing.</p>
+  </aside>
+</section>
+<section class="product" id="birthday" style="--accent:#2f5db0">
+  <div class="phead">
+    <div class="pstripe"></div>
+    <div class="pmeta">
+      <span class="pnum">Listing 02</span>
+      <h2>Party Line</h2>
+      <p class="pkind">Birthday party kit &middot; 9 pages</p>
+    </div>
+    <dl class="pfacts">
+      <div><dt>Price</dt><dd>12.50 <span class="cur">USD</span></dd></div>
+      <div><dt>Launch offer</dt><dd>30% for the first week (8,75 $)</dd></div>
+      <div><dt>Files to upload</dt><dd class="mono sm">dist-birthday/etsy/</dd></div>
+      <div><dt>Shop section</dt><dd>Party &amp; event kits</dd></div>
+    </dl>
+  </div>
+
+  <div class="field">
+  <div class="fhead"><span class="flabel">Listing title</span><span class="count ok">136<i>/140</i></span>
+    <button class="copy" type="button" data-target="c8">Copy</button></div>
+  <div class="fbody" id="c8"><pre class="body mono">Birthday Party Planner Printable, Fillable PDF Party Planning Kit, Guest List RSVP Tracker, Budget Checklist, Menu, 9 Pages, Letter + A4</pre></div>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Description</span><span class="count">2926 char</span>
+    <button class="copy" type="button" data-target="c9">Copy</button></div>
+  <div class="fbody" id="c9"><pre class="body">Nine pages that carry a birthday from the first idea to the thank-you notes: a six-week countdown, a guest list with RSVP tracking, a budget that adds up, vendors, the cake and the food, the shopping, an hour-by-hour run of show, and a gift log.
+
+▸ THE PROBLEM THIS SOLVES
+Nobody forgets the cake. What people forget is who said yes three weeks ago, what the deposit was, and what time the person with the bouncy castle said they were arriving. This kit is nine pages of the things that fall through the gaps, in the order you need them.
+
+▸ THE NINE PAGES
+1. At a glance — date, time, place, theme, headcount, the budget cap
+2. The countdown — six weeks, banded by how close you are
+3. Guest list &amp; RSVP — invited, yes, no, waiting, plus ones, dietary notes, running totals
+4. Budget — line by line, planned against spent, with what is left
+5. Vendors &amp; helpers — who, what, how much, deposit paid, phone number
+6. Cake, food and drink — including who is making what
+7. The shopping — split so you are not in the same shop twice
+8. Run of show — hour by hour, with a name against each job
+9. Gifts &amp; thanks — who gave what, and whether you have written back
+
+▸ HOW IT WORKS — PLEASE READ THIS BIT
+These are FILLABLE PDFs. You click into ready-made boxes and type, and you tick the checkboxes with a click. The layout, the fonts and the colours are fixed — they cannot be moved, restyled or rearranged. This is not a Canva template and there is no Canva link. If what you want is to redesign the pages themselves, this is not the right file for you, and I would rather you knew that before you bought it than after.
+
+▸ WHAT YOU GET, INSTANTLY
+• 4 fillable kits — US Letter + A4, in colour + ink-saving mono, 9 pages each, 746 typing fields
+• 4 print kits — the same nine pages with no form fields
+• A START-HERE sheet — printing and filling in, on one page
+• Three zips: complete, Letter only, A4 only
+
+▸ THE PAGES TO PRINT EVEN IF YOU TYPE THE REST
+Page 3 and page 8. The guest list wants a pen next to the phone, and the run of show wants to be on the fridge where everyone helping can read it.
+
+▸ PRINTING
+Plain A4 or US Letter, 90–120 gsm, at 100% / Actual size. Every page carries its own header with the name and the date, so a single sheet still makes sense on its own in a folder.
+
+▸ PLEASE NOTE
+This is a digital download. Nothing is posted to you — no physical planner, no binder, no frame. Because the files are delivered the moment you pay, this listing cannot be refunded. Please read the section above first, and message me before buying if anything is unclear. Colours can look slightly different from one screen or printer to another.
+
+▸ LICENCE
+For your own personal use. Print as many copies as you like for one party of your own. Please do not resell, share, redistribute or teach from the files, and please do not sell anything printed from them. The fonts used are licensed under the SIL Open Font License.</pre></div>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Tags &mdash; 13 of 13, each under 20 characters</span>
+    <span class="count ok">13<i>/13</i></span>
+    <button class="copy" type="button" data-target="c10">Copy all</button></div>
+  <div class="chips"><button class="chip" type="button" data-copy="birthday planner">birthday planner<i>16</i></button><button class="chip" type="button" data-copy="party planner">party planner<i>13</i></button><button class="chip" type="button" data-copy="party planning kit">party planning kit<i>18</i></button><button class="chip" type="button" data-copy="fillable pdf">fillable pdf<i>12</i></button><button class="chip" type="button" data-copy="guest list printable">guest list printable<i>20</i></button><button class="chip" type="button" data-copy="party checklist">party checklist<i>15</i></button><button class="chip" type="button" data-copy="rsvp tracker">rsvp tracker<i>12</i></button><button class="chip" type="button" data-copy="birthday checklist">birthday checklist<i>18</i></button><button class="chip" type="button" data-copy="event planner">event planner<i>13</i></button><button class="chip" type="button" data-copy="party budget">party budget<i>12</i></button><button class="chip" type="button" data-copy="printable planner">printable planner<i>17</i></button><button class="chip" type="button" data-copy="party organizer">party organizer<i>15</i></button><button class="chip" type="button" data-copy="digital download">digital download<i>16</i></button></div>
+  <div class="fbody hidden" id="c10"><pre class="body mono">birthday planner, party planner, party planning kit, fillable pdf, guest list printable, party checklist, rsvp tracker, birthday checklist, event planner, party budget, printable planner, party organizer, digital download</pre></div>
+  <p class="tip">Click any single tag to copy just that one. Etsy wants them one at a time.</p>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Materials &mdash; 13 of 13, each under 45 characters</span>
+    <span class="count ok">13<i>/13</i></span>
+    <button class="copy" type="button" data-target="c11">Copy all</button></div>
+  <ul class="mats"><li><span>Fillable PDF, 746 typing fields</span><i>31</i></li><li><span>9 pages</span><i>7</i></li><li><span>US Letter 8.5 x 11 in</span><i>21</i></li><li><span>A4</span><i>2</i></li><li><span>Instant digital download</span><i>24</i></li><li><span>Undated, use for any birthday</span><i>29</i></li><li><span>Colour and ink-saving mono</span><i>26</i></li><li><span>Guest list with RSVP totals</span><i>27</i></li><li><span>Budget planned against spent</span><i>28</i></li><li><span>Hour-by-hour run of show</span><i>24</i></li><li><span>Opens in free Adobe Acrobat Reader</span><i>34</i></li><li><span>No Canva template, no Canva link</span><i>32</i></li><li><span>Personal use licence</span><i>20</i></li></ul>
+  <div class="fbody hidden" id="c11"><pre class="body mono">Fillable PDF, 746 typing fields, 9 pages, US Letter 8.5 x 11 in, A4, Instant digital download, Undated, use for any birthday, Colour and ink-saving mono, Guest list with RSVP totals, Budget planned against spent, Hour-by-hour run of show, Opens in free Adobe Acrobat Reader, No Canva template, no Canva link, Personal use licence</pre></div>
+  <p class="tip">Etsy indexes this field lightly and almost nobody fills it in. Free keywords.</p>
+</div>
+
+  <div class="split">
+    <div class="field flat">
+      <div class="fhead"><span class="flabel">Category &amp; attributes</span></div>
+      <p class="cat">Paper &amp; Party Supplies › Paper › Calendars &amp; Planners</p>
+      <ul class="attrs"><li>Type: Planner</li><li>Occasion: Birthday</li><li>Digital download: Yes</li></ul>
+    </div>
+    <div class="field flat">
+      <div class="fhead"><span class="flabel">Photo alt text</span></div>
+      <ul class="altlist"><li><span class="an">Image 1</span>Printable birthday party planner cover page showing the date, theme, headcount and budget fields</li><li><span class="an">Image 2</span>All nine pages of the birthday party planning kit laid out in a grid, from countdown to thank-yous</li><li><span class="an">Image 3</span>Close-up of the guest list page with RSVP columns for invited, yes, no and waiting, and a running total row</li></ul>
+    </div>
+  </div>
+
+  <div class="field flat pin">
+    <div class="fhead"><span class="flabel">Pinterest &amp; Instagram</span></div>
+    <p class="tip">Etsy has no hashtags &mdash; it has the 13 tags above. Hashtags belong on the
+    social side, and for printables Pinterest is usually the largest source of outside traffic.</p>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Pin title</span><span class="count ok">67<i>/100</i></span>
+    <button class="copy" type="button" data-target="c12">Copy</button></div>
+  <div class="fbody" id="c12"><pre class="body mono">A 9-page birthday party planner you type into, not a blank notebook</pre></div>
+</div>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Pin description</span><span class="count ok">149<i>/500</i></span>
+    <button class="copy" type="button" data-target="c13">Copy</button></div>
+  <div class="fbody" id="c13"><pre class="body mono">Countdown, guest list with RSVP totals, a budget that adds up, vendors, run of show and a gift log. Fillable PDF, US Letter and A4, instant download.</pre></div>
+</div>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Instagram hashtags</span><span class="count">150 char</span>
+    <button class="copy" type="button" data-target="c14">Copy</button></div>
+  <div class="fbody" id="c14"><pre class="body mono">#partyplanner #birthdayplanner #partyplanning #printableplanner #guestlist #partychecklist #eventplanning #fillablepdf #digitaldownload #birthdayparty</pre></div>
+</div>
+  </div>
+
+  <aside class="note">
+    <span class="notelabel">Worth knowing</span>
+    <p>This is the most crowded search of the twelve. Do not lead the shop with it — let the milestone and seasonal kits pull traffic in, and let this one convert the people who arrive on “party planner printable”.</p>
+  </aside>
+</section>
+<section class="product" id="kids" style="--accent:#e0407f">
+  <div class="phead">
+    <div class="pstripe"></div>
+    <div class="pmeta">
+      <span class="pnum">Listing 03</span>
+      <h2>Confetti Club</h2>
+      <p class="pkind">Kids’ party kit &middot; 9 pages</p>
+    </div>
+    <dl class="pfacts">
+      <div><dt>Price</dt><dd>12.50 <span class="cur">USD</span></dd></div>
+      <div><dt>Launch offer</dt><dd>30% for the first week (8,75 $)</dd></div>
+      <div><dt>Files to upload</dt><dd class="mono sm">dist-kids/etsy/</dd></div>
+      <div><dt>Shop section</dt><dd>Party &amp; event kits</dd></div>
+    </dl>
+  </div>
+
+  <div class="field">
+  <div class="fhead"><span class="flabel">Listing title</span><span class="count ok">132<i>/140</i></span>
+    <button class="copy" type="button" data-target="c15">Copy</button></div>
+  <div class="fbody" id="c15"><pre class="body mono">Kids Birthday Party Planner Printable, Fillable PDF, Guest List with Pick Up Times, Allergy Sheet, Goodie Bag Budget, Games, 9 Pages</pre></div>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Description</span><span class="count">3042 char</span>
+    <button class="copy" type="button" data-target="c16">Copy</button></div>
+  <div class="fbody" id="c16"><pre class="body">Nine pages aimed at the parent, not the party. A guest list that has a grown-up’s phone number and a pick-up time against every child, a framed allergy page, games costed in minutes, goodie bags costed per bag, and the whole afternoon built as six beats inside two hours.
+
+▸ WRITTEN FOR THE PERSON DOING THE WORK
+A children’s party is not a small wedding. The things that go wrong are specific: nobody knows whose child that is, one parent said “no nuts” in a message three weeks ago, the games ran out after twenty minutes, and the goodie bags cost more than the cake. Every page here is aimed at one of those.
+
+▸ THE NINE PAGES
+1. Whose party is it — age, theme, headcount, the budget cap, the two-hour window
+2. Four weeks to go — the countdown, in bands
+3. Who is coming — child, grown-up, phone number, RSVP, and a PICK-UP TIME column
+4. Cake, snacks and allergies — a framed allergy page with a “every helper has read this” tick
+5. Games and chaos — each game with the minutes it takes and an energy meter, high to calm
+6. Goodie bags and the bill — costed per bag, then multiplied, so you see it before you buy it
+7. The shopping
+8. How the day runs — six beats inside two hours, because two hours is the right length
+9. Thank yous and the good bits — who gave what, and what to do again next year
+
+▸ HOW IT WORKS — PLEASE READ THIS BIT
+These are FILLABLE PDFs. You click into ready-made boxes and type, and you tick the checkboxes with a click. The layout, the fonts and the colours are fixed — they cannot be moved, restyled or rearranged. This is not a Canva template and there is no Canva link. If what you want is to redesign the pages themselves, this is not the right file for you, and I would rather you knew that before you bought it than after.
+
+▸ WHAT YOU GET, INSTANTLY
+• 4 fillable kits — US Letter + A4, in colour + ink-saving mono, 9 pages each, 721 typing fields
+• 4 print kits — the same nine pages with no form fields
+• A START-HERE sheet
+• Three zips: complete, Letter only, A4 only
+
+▸ THE PAGE TO PRINT AND PIN UP
+Page 3. Print it, put it by the door, and the question “whose child is this and when are they going home” never comes up again.
+
+▸ PRINTING
+Plain A4 or US Letter at 100% / Actual size. The colour version is deliberately loud — confetti, balloons, five colours with jobs. The mono version is the identical layout in graphite if you would rather not spend the ink.
+
+▸ PLEASE NOTE
+This is a digital download. Nothing is posted to you — no physical planner, no binder, no frame. Because the files are delivered the moment you pay, this listing cannot be refunded. Please read the section above first, and message me before buying if anything is unclear. Colours can look slightly different from one screen or printer to another.
+
+▸ LICENCE
+For your own personal use. Print as many copies as you like for one party of your own. Please do not resell, share, redistribute or teach from the files, and please do not sell anything printed from them. The fonts used are licensed under the SIL Open Font License.</pre></div>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Tags &mdash; 13 of 13, each under 20 characters</span>
+    <span class="count ok">13<i>/13</i></span>
+    <button class="copy" type="button" data-target="c17">Copy all</button></div>
+  <div class="chips"><button class="chip" type="button" data-copy="kids party planner">kids party planner<i>18</i></button><button class="chip" type="button" data-copy="birthday planner">birthday planner<i>16</i></button><button class="chip" type="button" data-copy="party planning kit">party planning kit<i>18</i></button><button class="chip" type="button" data-copy="childrens party">childrens party<i>15</i></button><button class="chip" type="button" data-copy="party checklist">party checklist<i>15</i></button><button class="chip" type="button" data-copy="guest list printable">guest list printable<i>20</i></button><button class="chip" type="button" data-copy="fillable pdf">fillable pdf<i>12</i></button><button class="chip" type="button" data-copy="kids birthday">kids birthday<i>13</i></button><button class="chip" type="button" data-copy="party games list">party games list<i>16</i></button><button class="chip" type="button" data-copy="goodie bag planner">goodie bag planner<i>18</i></button><button class="chip" type="button" data-copy="party budget">party budget<i>12</i></button><button class="chip" type="button" data-copy="printable planner">printable planner<i>17</i></button><button class="chip" type="button" data-copy="digital download">digital download<i>16</i></button></div>
+  <div class="fbody hidden" id="c17"><pre class="body mono">kids party planner, birthday planner, party planning kit, childrens party, party checklist, guest list printable, fillable pdf, kids birthday, party games list, goodie bag planner, party budget, printable planner, digital download</pre></div>
+  <p class="tip">Click any single tag to copy just that one. Etsy wants them one at a time.</p>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Materials &mdash; 13 of 13, each under 45 characters</span>
+    <span class="count ok">13<i>/13</i></span>
+    <button class="copy" type="button" data-target="c18">Copy all</button></div>
+  <ul class="mats"><li><span>Fillable PDF, 721 typing fields</span><i>31</i></li><li><span>9 pages</span><i>7</i></li><li><span>US Letter 8.5 x 11 in</span><i>21</i></li><li><span>A4</span><i>2</i></li><li><span>Instant digital download</span><i>24</i></li><li><span>Pick-up time column on the guest list</span><i>37</i></li><li><span>Framed allergy page with a helper sign-off</span><i>42</i></li><li><span>Games costed in minutes</span><i>23</i></li><li><span>Goodie bags costed per bag</span><i>26</i></li><li><span>Six beats inside two hours</span><i>26</i></li><li><span>Colour and ink-saving mono</span><i>26</i></li><li><span>Opens in free Adobe Acrobat Reader</span><i>34</i></li><li><span>Personal use licence</span><i>20</i></li></ul>
+  <div class="fbody hidden" id="c18"><pre class="body mono">Fillable PDF, 721 typing fields, 9 pages, US Letter 8.5 x 11 in, A4, Instant digital download, Pick-up time column on the guest list, Framed allergy page with a helper sign-off, Games costed in minutes, Goodie bags costed per bag, Six beats inside two hours, Colour and ink-saving mono, Opens in free Adobe Acrobat Reader, Personal use licence</pre></div>
+  <p class="tip">Etsy indexes this field lightly and almost nobody fills it in. Free keywords.</p>
+</div>
+
+  <div class="split">
+    <div class="field flat">
+      <div class="fhead"><span class="flabel">Category &amp; attributes</span></div>
+      <p class="cat">Paper &amp; Party Supplies › Paper › Calendars &amp; Planners</p>
+      <ul class="attrs"><li>Type: Planner</li><li>Occasion: Birthday</li><li>Digital download: Yes</li></ul>
+    </div>
+    <div class="field flat">
+      <div class="fhead"><span class="flabel">Photo alt text</span></div>
+      <ul class="altlist"><li><span class="an">Image 1</span>Printable kids birthday party planner cover with confetti, showing age, theme and budget fields</li><li><span class="an">Image 2</span>All nine pages of the children’s party planning kit, including the allergy page and the games list</li><li><span class="an">Image 3</span>Close-up of the guest list page showing a pick-up time and a grown-up’s phone number against each child</li></ul>
+    </div>
+  </div>
+
+  <div class="field flat pin">
+    <div class="fhead"><span class="flabel">Pinterest &amp; Instagram</span></div>
+    <p class="tip">Etsy has no hashtags &mdash; it has the 13 tags above. Hashtags belong on the
+    social side, and for printables Pinterest is usually the largest source of outside traffic.</p>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Pin title</span><span class="count ok">63<i>/100</i></span>
+    <button class="copy" type="button" data-target="c19">Copy</button></div>
+  <div class="fbody" id="c19"><pre class="body mono">The kids’ party planner with a pick-up time next to every child</pre></div>
+</div>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Pin description</span><span class="count ok">167<i>/500</i></span>
+    <button class="copy" type="button" data-target="c20">Copy</button></div>
+  <div class="fbody" id="c20"><pre class="body mono">Guest list with grown-ups’ phone numbers, a framed allergy page, games costed in minutes, goodie bags costed per bag, and two hours planned as six beats. Fillable PDF.</pre></div>
+</div>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Instagram hashtags</span><span class="count">141 char</span>
+    <button class="copy" type="button" data-target="c21">Copy</button></div>
+  <div class="fbody" id="c21"><pre class="body mono">#kidsparty #partyplanner #birthdayparty #kidsbirthday #partyplanning #printableplanner #partychecklist #momlife #fillablepdf #digitaldownload</pre></div>
+</div>
+  </div>
+
+  <aside class="note">
+    <span class="notelabel">Worth knowing</span>
+    <p>Photograph a printed page 3 on a real kitchen table for image 7. Parents buy from the photo that looks like their own kitchen, not from a mockup.</p>
+  </aside>
+</section>
+<section class="product" id="milestone" style="--accent:#a8842c">
+  <div class="phead">
+    <div class="pstripe"></div>
+    <div class="pmeta">
+      <span class="pnum">Listing 04</span>
+      <h2>Golden Hour</h2>
+      <p class="pkind">Milestone birthday kit &middot; 11 pages</p>
+    </div>
+    <dl class="pfacts">
+      <div><dt>Price</dt><dd>16.50 <span class="cur">USD</span></dd></div>
+      <div><dt>Launch offer</dt><dd>25% for the first week (12,38 $)</dd></div>
+      <div><dt>Files to upload</dt><dd class="mono sm">dist-milestone/etsy/</dd></div>
+      <div><dt>Shop section</dt><dd>Party &amp; event kits</dd></div>
+    </dl>
+  </div>
+
+  <div class="field">
+  <div class="fhead"><span class="flabel">Listing title</span><span class="count ok">138<i>/140</i></span>
+    <button class="copy" type="button" data-target="c22">Copy</button></div>
+  <div class="fbody" id="c22"><pre class="body mono">50th Birthday Party Planner Printable, Milestone Party Planning Kit, 60th 70th 80th 90th, Surprise Party, Speeches, Seating, 11 Pages, PDF</pre></div>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Description</span><span class="count">2937 char</span>
+    <button class="copy" type="button" data-target="c23">Copy</button></div>
+  <div class="fbody" id="c23"><pre class="body">Eleven pages for a 50th, 60th, 70th, 80th or 90th: a three-month countdown, a guest list with a “how they know them” column, a surprise page written as instructions, speeches with minutes against each speaker, a slideshow page, a seating plan, and the run of show.
+
+▸ WHY A MILESTONE NEEDS ITS OWN KIT
+A milestone party is not a bigger birthday party. The room spans five decades and most of the people in it have never met. Somebody is giving a speech and it will run long. There are photographs to gather from people who do not use email. And if it is a surprise, the whole thing has to be organised twice — once truthfully and once as a cover story.
+
+▸ THE ELEVEN PAGES
+1. At a glance — the age, the date, the tone, the headcount, the cap
+2. Three months out — the countdown
+3. Guest list — with a HOW THEY KNOW THEM column, because the seating plan needs it
+4. The surprise — the cover story, who is in on it, the reveal step by step, and what to do if they find out
+5. Vendors &amp; budget
+6. Menu, bar and cake
+7. Speeches — who, in what order, and how many minutes each
+8. The slideshow — photographs tracked by decade, and messages from those who cannot come
+9. Seating — table by table
+10. Run of show
+11. Thank yous
+
+▸ HOW IT WORKS — PLEASE READ THIS BIT
+These are FILLABLE PDFs. You click into ready-made boxes and type, and you tick the checkboxes with a click. The layout, the fonts and the colours are fixed — they cannot be moved, restyled or rearranged. This is not a Canva template and there is no Canva link. If what you want is to redesign the pages themselves, this is not the right file for you, and I would rather you knew that before you bought it than after.
+
+▸ WHAT YOU GET, INSTANTLY
+• 4 fillable kits — US Letter + A4, in colour + ink-saving mono, 11 pages each, 839 typing fields
+• 4 print kits — the same eleven pages with no form fields
+• A START-HERE sheet
+• Three zips: complete, Letter only, A4 only
+
+▸ THE PAGE THAT EARNS ITS KEEP
+Page 7. Give every speaker a number of minutes in writing, in advance, and the speeches stop being the part of the evening people dread.
+
+▸ PRINTING
+Plain A4 or US Letter at 100% / Actual size. Gold and garnet on white, with roman numeral page numbers — it is meant to look like something you would leave out on a table, not a worksheet.
+
+▸ PLEASE NOTE
+This is a digital download. Nothing is posted to you — no physical planner, no binder, no frame. Because the files are delivered the moment you pay, this listing cannot be refunded. Please read the section above first, and message me before buying if anything is unclear. Colours can look slightly different from one screen or printer to another.
+
+▸ LICENCE
+For your own personal use. Print as many copies as you like for one party of your own. Please do not resell, share, redistribute or teach from the files, and please do not sell anything printed from them. The fonts used are licensed under the SIL Open Font License.</pre></div>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Tags &mdash; 13 of 13, each under 20 characters</span>
+    <span class="count ok">13<i>/13</i></span>
+    <button class="copy" type="button" data-target="c24">Copy all</button></div>
+  <div class="chips"><button class="chip" type="button" data-copy="50th birthday">50th birthday<i>13</i></button><button class="chip" type="button" data-copy="milestone birthday">milestone birthday<i>18</i></button><button class="chip" type="button" data-copy="party planner">party planner<i>13</i></button><button class="chip" type="button" data-copy="60th birthday">60th birthday<i>13</i></button><button class="chip" type="button" data-copy="surprise party">surprise party<i>14</i></button><button class="chip" type="button" data-copy="party planning kit">party planning kit<i>18</i></button><button class="chip" type="button" data-copy="fillable pdf">fillable pdf<i>12</i></button><button class="chip" type="button" data-copy="guest list printable">guest list printable<i>20</i></button><button class="chip" type="button" data-copy="seating chart">seating chart<i>13</i></button><button class="chip" type="button" data-copy="birthday checklist">birthday checklist<i>18</i></button><button class="chip" type="button" data-copy="event planner">event planner<i>13</i></button><button class="chip" type="button" data-copy="90th birthday">90th birthday<i>13</i></button><button class="chip" type="button" data-copy="digital download">digital download<i>16</i></button></div>
+  <div class="fbody hidden" id="c24"><pre class="body mono">50th birthday, milestone birthday, party planner, 60th birthday, surprise party, party planning kit, fillable pdf, guest list printable, seating chart, birthday checklist, event planner, 90th birthday, digital download</pre></div>
+  <p class="tip">Click any single tag to copy just that one. Etsy wants them one at a time.</p>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Materials &mdash; 13 of 13, each under 45 characters</span>
+    <span class="count ok">13<i>/13</i></span>
+    <button class="copy" type="button" data-target="c25">Copy all</button></div>
+  <ul class="mats"><li><span>Fillable PDF, 839 typing fields</span><i>31</i></li><li><span>11 pages</span><i>8</i></li><li><span>US Letter 8.5 x 11 in</span><i>21</i></li><li><span>A4</span><i>2</i></li><li><span>Instant digital download</span><i>24</i></li><li><span>Works for 50th, 60th, 70th, 80th, 90th</span><i>38</i></li><li><span>Surprise party page written as instructions</span><i>43</i></li><li><span>Speeches with minutes per speaker</span><i>33</i></li><li><span>Slideshow photographs tracked by decade</span><i>39</i></li><li><span>Table-by-table seating plan</span><i>27</i></li><li><span>Gold and garnet, or ink-saving mono</span><i>35</i></li><li><span>Opens in free Adobe Acrobat Reader</span><i>34</i></li><li><span>Personal use licence</span><i>20</i></li></ul>
+  <div class="fbody hidden" id="c25"><pre class="body mono">Fillable PDF, 839 typing fields, 11 pages, US Letter 8.5 x 11 in, A4, Instant digital download, Works for 50th, 60th, 70th, 80th, 90th, Surprise party page written as instructions, Speeches with minutes per speaker, Slideshow photographs tracked by decade, Table-by-table seating plan, Gold and garnet, or ink-saving mono, Opens in free Adobe Acrobat Reader, Personal use licence</pre></div>
+  <p class="tip">Etsy indexes this field lightly and almost nobody fills it in. Free keywords.</p>
+</div>
+
+  <div class="split">
+    <div class="field flat">
+      <div class="fhead"><span class="flabel">Category &amp; attributes</span></div>
+      <p class="cat">Paper &amp; Party Supplies › Paper › Calendars &amp; Planners</p>
+      <ul class="attrs"><li>Type: Planner</li><li>Occasion: Birthday</li><li>Digital download: Yes</li></ul>
+    </div>
+    <div class="field flat">
+      <div class="fhead"><span class="flabel">Photo alt text</span></div>
+      <ul class="altlist"><li><span class="an">Image 1</span>Printable 50th birthday party planner cover in gold and garnet, with roman numeral page numbering</li><li><span class="an">Image 2</span>All eleven pages of the milestone birthday planning kit, including the surprise page and the seating plan</li><li><span class="an">Image 3</span>Close-up of the speeches page with a running order and a minutes column against each speaker</li></ul>
+    </div>
+  </div>
+
+  <div class="field flat pin">
+    <div class="fhead"><span class="flabel">Pinterest &amp; Instagram</span></div>
+    <p class="tip">Etsy has no hashtags &mdash; it has the 13 tags above. Hashtags belong on the
+    social side, and for printables Pinterest is usually the largest source of outside traffic.</p>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Pin title</span><span class="count ok">56<i>/100</i></span>
+    <button class="copy" type="button" data-target="c26">Copy</button></div>
+  <div class="fbody" id="c26"><pre class="body mono">An 11-page milestone birthday planner — 50th, 60th, 90th</pre></div>
+</div>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Pin description</span><span class="count ok">175<i>/500</i></span>
+    <button class="copy" type="button" data-target="c27">Copy</button></div>
+  <div class="fbody" id="c27"><pre class="body mono">A guest list that records how each person knows them, a surprise page written as instructions, speeches timed in minutes, a slideshow tracker and a seating plan. Fillable PDF.</pre></div>
+</div>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Instagram hashtags</span><span class="count">153 char</span>
+    <button class="copy" type="button" data-target="c28">Copy</button></div>
+  <div class="fbody" id="c28"><pre class="body mono">#50thbirthday #milestonebirthday #surpriseparty #partyplanner #60thbirthday #partyplanning #printableplanner #eventplanning #fillablepdf #digitaldownload</pre></div>
+</div>
+  </div>
+
+  <aside class="note">
+    <span class="notelabel">Worth knowing</span>
+    <p>Highest price and lowest competition of the party kits. Make a second listing later with the title led by 60th, and a third led by 90th — same files, different first three words. Etsy treats them as different searches.</p>
+  </aside>
+</section>
+<section class="product" id="adhd" style="--accent:#1d7a72">
+  <div class="phead">
+    <div class="pstripe"></div>
+    <div class="pmeta">
+      <span class="pnum">Listing 05</span>
+      <h2>First Move</h2>
+      <p class="pkind">ADHD-friendly set &middot; 8 pages</p>
+    </div>
+    <dl class="pfacts">
+      <div><dt>Price</dt><dd>9.50 <span class="cur">USD</span></dd></div>
+      <div><dt>Launch offer</dt><dd>30% for the first week (6,65 $)</dd></div>
+      <div><dt>Files to upload</dt><dd class="mono sm">dist-adhd/etsy/</dd></div>
+      <div><dt>Shop section</dt><dd>Mental health &amp; neurodivergent</dd></div>
+    </dl>
+  </div>
+
+  <div class="field">
+  <div class="fhead"><span class="flabel">Listing title</span><span class="count ok">132<i>/140</i></span>
+    <button class="copy" type="button" data-target="c29">Copy</button></div>
+  <div class="fbody" id="c29"><pre class="body mono">ADHD Planner Printable for Neurodivergent Adults, Fillable PDF, Brain Dump, One Task a Day, Time Blindness Tracker, Undated, 8 Pages</pre></div>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Description</span><span class="count">3222 char</span>
+    <button class="copy" type="button" data-target="c30">Copy</button></div>
+  <div class="fbody" id="c30"><pre class="body">Eight pages built around one idea: fewer slots. One real task a day, and a box for the single physical action that starts it. A brain dump with a triage that includes LET IT GO. And a page that teaches you your own multiplier for how long things actually take.
+
+▸ WHAT MAKES THIS DIFFERENT FROM A PRETTY GRID
+Most planners fail an ADHD brain by offering too much room. Twenty-four blank hour slots is not a plan, it is a demand. So this set is deliberately constrained: one task a day, two more only if the first one is finished. The constraint is the product.
+
+▸ THE EIGHT PAGES
+1. Today — one task, and a FIRST MOVE box for the physical thing that starts it
+2. Get it out of your head — a brain dump, with a five-column triage: do, plan, delegate, park, LET IT GO
+3. One task, in pieces — for the job that is too big to start
+4. How long it really takes — guess versus actual, so you learn your own multiplier
+5. The week, lightly — seven days, no hours
+6. Anchors — the two or three things that hold a morning and an evening together
+7. Boring, necessary — the weekly maintenance nobody reminds you about
+8. What actually happened — a wins page, because the day gets remembered as worse than it was
+
+▸ HOW IT IS SET
+Type is deliberately larger than in most planners and set in Atkinson Hyperlegible, a typeface designed for legibility. Colour is used only as a signal: teal for what to do now, amber for what is parked on purpose, plum for how the day felt, green for done. There is nothing decorative on the page competing for your attention.
+
+▸ HOW IT WORKS — PLEASE READ THIS BIT
+These are FILLABLE PDFs. You click into ready-made boxes and type, and you tick the checkboxes with a click. The layout, the fonts and the colours are fixed — they cannot be moved, restyled or rearranged. This is not a Canva template and there is no Canva link. If what you want is to redesign the pages themselves, this is not the right file for you, and I would rather you knew that before you bought it than after.
+
+▸ WHAT YOU GET, INSTANTLY
+• 4 fillable sets — US Letter + A4, in colour + ink-saving mono, 8 pages each, 527 typing fields
+• 4 print sets — the same eight pages with no form fields
+• A START-HERE sheet
+• Three zips: complete, Letter only, A4 only
+
+▸ THE PAGE PEOPLE REPRINT
+Page 1. Print a stack of them. It is one page a day and it is meant to be used up.
+
+▸ IMPORTANT
+This is a planning tool made by a designer, not a clinician. It is not medical advice, not a diagnosis, and not a substitute for talking to a doctor or a therapist. Use the pages that help and ignore the ones that do not.
+
+▸ PLEASE NOTE
+This is a digital download. Nothing is posted to you — no physical planner, no binder, no frame. Because the files are delivered the moment you pay, this listing cannot be refunded. Please read the section above first, and message me before buying if anything is unclear. Colours can look slightly different from one screen or printer to another.
+
+▸ LICENCE
+For your own personal use. Print as many copies as you like for yourself. Please do not resell, share, redistribute or teach from the files, and please do not sell anything printed from them. The fonts used are licensed under the SIL Open Font License.</pre></div>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Tags &mdash; 13 of 13, each under 20 characters</span>
+    <span class="count ok">13<i>/13</i></span>
+    <button class="copy" type="button" data-target="c31">Copy all</button></div>
+  <div class="chips"><button class="chip" type="button" data-copy="adhd planner">adhd planner<i>12</i></button><button class="chip" type="button" data-copy="adhd printable">adhd printable<i>14</i></button><button class="chip" type="button" data-copy="neurodivergent">neurodivergent<i>14</i></button><button class="chip" type="button" data-copy="brain dump printable">brain dump printable<i>20</i></button><button class="chip" type="button" data-copy="adhd journal">adhd journal<i>12</i></button><button class="chip" type="button" data-copy="undated planner">undated planner<i>15</i></button><button class="chip" type="button" data-copy="fillable pdf">fillable pdf<i>12</i></button><button class="chip" type="button" data-copy="executive function">executive function<i>18</i></button><button class="chip" type="button" data-copy="daily planner adhd">daily planner adhd<i>18</i></button><button class="chip" type="button" data-copy="task planner">task planner<i>12</i></button><button class="chip" type="button" data-copy="focus planner">focus planner<i>13</i></button><button class="chip" type="button" data-copy="adhd tools">adhd tools<i>10</i></button><button class="chip" type="button" data-copy="digital download">digital download<i>16</i></button></div>
+  <div class="fbody hidden" id="c31"><pre class="body mono">adhd planner, adhd printable, neurodivergent, brain dump printable, adhd journal, undated planner, fillable pdf, executive function, daily planner adhd, task planner, focus planner, adhd tools, digital download</pre></div>
+  <p class="tip">Click any single tag to copy just that one. Etsy wants them one at a time.</p>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Materials &mdash; 13 of 13, each under 45 characters</span>
+    <span class="count ok">13<i>/13</i></span>
+    <button class="copy" type="button" data-target="c32">Copy all</button></div>
+  <ul class="mats"><li><span>Fillable PDF, 527 typing fields</span><i>31</i></li><li><span>8 pages</span><i>7</i></li><li><span>US Letter 8.5 x 11 in</span><i>21</i></li><li><span>A4</span><i>2</i></li><li><span>Instant digital download</span><i>24</i></li><li><span>Undated — reprint the daily page</span><i>32</i></li><li><span>One task a day, by design</span><i>25</i></li><li><span>Brain dump with a let-it-go column</span><i>34</i></li><li><span>Guess versus actual time page</span><i>29</i></li><li><span>Set in Atkinson Hyperlegible</span><i>28</i></li><li><span>Colour used only as a signal</span><i>28</i></li><li><span>Not medical advice — a planning tool</span><i>36</i></li><li><span>Personal use licence</span><i>20</i></li></ul>
+  <div class="fbody hidden" id="c32"><pre class="body mono">Fillable PDF, 527 typing fields, 8 pages, US Letter 8.5 x 11 in, A4, Instant digital download, Undated — reprint the daily page, One task a day, by design, Brain dump with a let-it-go column, Guess versus actual time page, Set in Atkinson Hyperlegible, Colour used only as a signal, Not medical advice — a planning tool, Personal use licence</pre></div>
+  <p class="tip">Etsy indexes this field lightly and almost nobody fills it in. Free keywords.</p>
+</div>
+
+  <div class="split">
+    <div class="field flat">
+      <div class="fhead"><span class="flabel">Category &amp; attributes</span></div>
+      <p class="cat">Paper &amp; Party Supplies › Paper › Calendars &amp; Planners</p>
+      <ul class="attrs"><li>Type: Planner</li><li>Style: Minimalist</li><li>Digital download: Yes</li></ul>
+    </div>
+    <div class="field flat">
+      <div class="fhead"><span class="flabel">Photo alt text</span></div>
+      <ul class="altlist"><li><span class="an">Image 1</span>Printable ADHD daily planner page with a single task slot and a first move box</li><li><span class="an">Image 2</span>All eight pages of the ADHD-friendly planning set, including the brain dump and the time tracker</li><li><span class="an">Image 3</span>Close-up of the brain dump page showing the five-column triage, including the let-it-go column</li></ul>
+    </div>
+  </div>
+
+  <div class="field flat pin">
+    <div class="fhead"><span class="flabel">Pinterest &amp; Instagram</span></div>
+    <p class="tip">Etsy has no hashtags &mdash; it has the 13 tags above. Hashtags belong on the
+    social side, and for printables Pinterest is usually the largest source of outside traffic.</p>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Pin title</span><span class="count ok">50<i>/100</i></span>
+    <button class="copy" type="button" data-target="c33">Copy</button></div>
+  <div class="fbody" id="c33"><pre class="body mono">An ADHD planner with room for one task, on purpose</pre></div>
+</div>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Pin description</span><span class="count ok">178<i>/500</i></span>
+    <button class="copy" type="button" data-target="c34">Copy</button></div>
+  <div class="fbody" id="c34"><pre class="body mono">One real task a day and a box for the physical move that starts it. Brain dump with a let-it-go column. Guess-versus-actual time page. Set in Atkinson Hyperlegible. Fillable PDF.</pre></div>
+</div>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Instagram hashtags</span><span class="count">135 char</span>
+    <button class="copy" type="button" data-target="c35">Copy</button></div>
+  <div class="fbody" id="c35"><pre class="body mono">#adhd #adhdplanner #neurodivergent #adhdadults #executivefunction #braindump #adhdtools #printableplanner #fillablepdf #digitaldownload</pre></div>
+</div>
+  </div>
+
+  <aside class="note">
+    <span class="notelabel">Worth knowing</span>
+    <p>Never write “treats”, “fixes”, “manages your ADHD” or “therapist approved” anywhere in this listing. Etsy removes health claims and the review that calls you out is worse than the lost sale.</p>
+  </aside>
+</section>
+<section class="product" id="autism" style="--accent:#6c8f6a">
+  <div class="phead">
+    <div class="pstripe"></div>
+    <div class="pmeta">
+      <span class="pnum">Listing 06</span>
+      <h2>Same Shape</h2>
+      <p class="pkind">Autism-friendly set &middot; 9 pages</p>
+    </div>
+    <dl class="pfacts">
+      <div><dt>Price</dt><dd>9.50 <span class="cur">USD</span></dd></div>
+      <div><dt>Launch offer</dt><dd>30% for the first week (6,65 $)</dd></div>
+      <div><dt>Files to upload</dt><dd class="mono sm">dist-autism/etsy/</dd></div>
+      <div><dt>Shop section</dt><dd>Mental health &amp; neurodivergent</dd></div>
+    </dl>
+  </div>
+
+  <div class="field">
+  <div class="fhead"><span class="flabel">Listing title</span><span class="count ok">135<i>/140</i></span>
+    <button class="copy" type="button" data-target="c36">Copy</button></div>
+  <div class="fbody" id="c36"><pre class="body mono">Autistic Adult Planner Printable, Fillable PDF, Same Layout Every Day, When Plans Change Page, Sensory Sheet, Scripts, Undated, 9 Pages</pre></div>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Description</span><span class="count">3146 char</span>
+    <button class="copy" type="button" data-target="c37">Copy</button></div>
+  <div class="fbody" id="c37"><pre class="body">Nine pages built on predictability rather than motivation. Every page has the identical layout rhythm, the same three muted colours doing the same three jobs, and a key in the footer. Deliberately not a recoloured ADHD planner — a different need, a different set.
+
+▸ WHAT IT IS FOR
+Not being told to try harder. Knowing what happens next, having a written plan for when it stops happening, and having the sentences ready before you need them.
+
+▸ THE NINE PAGES
+1. Today, in order — the day as a sequence, with a first/then box
+2. The week, the same shape — every day has the same three parts
+3. When the plan changes — what changed, what it affects, and in its own frame, WHAT STAYS EXACTLY THE SAME
+4. Sensory — each sense with both ends named: too much, and not enough
+5. My plan for a hard moment — written on a calm day, including what does NOT help
+6. Sentences I can use — prepared scripts, with worked examples
+7. Getting ready for an appointment
+8. Decided once, so I do not decide again — the choices you have already made
+9. How much the week asks of me — a weekly energy budget
+
+▸ HOW IT IS WRITTEN AND SET
+Identity-first language throughout. Literal wording with no idioms and no metaphors. Lexend for the text with IBM Plex Mono for times and labels. Sage means as expected, clay means something changed, lavender means how it felt — the same three, on every page, with the key repeated in the footer so you never have to remember it.
+
+▸ HOW IT WORKS — PLEASE READ THIS BIT
+These are FILLABLE PDFs. You click into ready-made boxes and type, and you tick the checkboxes with a click. The layout, the fonts and the colours are fixed — they cannot be moved, restyled or rearranged. This is not a Canva template and there is no Canva link. If what you want is to redesign the pages themselves, this is not the right file for you, and I would rather you knew that before you bought it than after.
+
+▸ WHAT YOU GET, INSTANTLY
+• 4 fillable sets — US Letter + A4, in colour + ink-saving mono, 9 pages each, 434 typing fields
+• 4 print sets — the same nine pages with no form fields
+• A START-HERE sheet
+• Three zips: complete, Letter only, A4 only
+
+▸ THE PAGES TO FILL IN ON A GOOD DAY
+Page 5 and page 6. They are meant to be written when things are calm and read when they are not.
+
+▸ IMPORTANT
+This is a planning tool made by a designer, not a clinician. It is not medical advice, not a diagnosis, and not a substitute for professional support. Any page can be ignored, crossed out or rewritten — it is your paper.
+
+▸ PLEASE NOTE
+This is a digital download. Nothing is posted to you — no physical planner, no binder, no frame. Because the files are delivered the moment you pay, this listing cannot be refunded. Please read the section above first, and message me before buying if anything is unclear. Colours can look slightly different from one screen or printer to another.
+
+▸ LICENCE
+For your own personal use. Print as many copies as you like for yourself. Please do not resell, share, redistribute or teach from the files, and please do not sell anything printed from them. The fonts used are licensed under the SIL Open Font License.</pre></div>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Tags &mdash; 13 of 13, each under 20 characters</span>
+    <span class="count ok">13<i>/13</i></span>
+    <button class="copy" type="button" data-target="c38">Copy all</button></div>
+  <div class="chips"><button class="chip" type="button" data-copy="autism planner">autism planner<i>14</i></button><button class="chip" type="button" data-copy="autistic adults">autistic adults<i>15</i></button><button class="chip" type="button" data-copy="neurodivergent">neurodivergent<i>14</i></button><button class="chip" type="button" data-copy="visual schedule">visual schedule<i>15</i></button><button class="chip" type="button" data-copy="autism printable">autism printable<i>16</i></button><button class="chip" type="button" data-copy="sensory checklist">sensory checklist<i>17</i></button><button class="chip" type="button" data-copy="undated planner">undated planner<i>15</i></button><button class="chip" type="button" data-copy="fillable pdf">fillable pdf<i>12</i></button><button class="chip" type="button" data-copy="routine planner">routine planner<i>15</i></button><button class="chip" type="button" data-copy="daily schedule">daily schedule<i>14</i></button><button class="chip" type="button" data-copy="autism support">autism support<i>14</i></button><button class="chip" type="button" data-copy="autism resources">autism resources<i>16</i></button><button class="chip" type="button" data-copy="digital download">digital download<i>16</i></button></div>
+  <div class="fbody hidden" id="c38"><pre class="body mono">autism planner, autistic adults, neurodivergent, visual schedule, autism printable, sensory checklist, undated planner, fillable pdf, routine planner, daily schedule, autism support, autism resources, digital download</pre></div>
+  <p class="tip">Click any single tag to copy just that one. Etsy wants them one at a time.</p>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Materials &mdash; 13 of 13, each under 45 characters</span>
+    <span class="count ok">13<i>/13</i></span>
+    <button class="copy" type="button" data-target="c39">Copy all</button></div>
+  <ul class="mats"><li><span>Fillable PDF, 434 typing fields</span><i>31</i></li><li><span>9 pages</span><i>7</i></li><li><span>US Letter 8.5 x 11 in</span><i>21</i></li><li><span>A4</span><i>2</i></li><li><span>Instant digital download</span><i>24</i></li><li><span>The identical layout rhythm on every page</span><i>41</i></li><li><span>A page for when the plan changes</span><i>32</i></li><li><span>Sensory page naming both ends of each sense</span><i>43</i></li><li><span>Prepared scripts with worked examples</span><i>37</i></li><li><span>Identity-first, literal language, no idioms</span><i>43</i></li><li><span>Set in Lexend and IBM Plex Mono</span><i>31</i></li><li><span>Not medical advice — a planning tool</span><i>36</i></li><li><span>Personal use licence</span><i>20</i></li></ul>
+  <div class="fbody hidden" id="c39"><pre class="body mono">Fillable PDF, 434 typing fields, 9 pages, US Letter 8.5 x 11 in, A4, Instant digital download, The identical layout rhythm on every page, A page for when the plan changes, Sensory page naming both ends of each sense, Prepared scripts with worked examples, Identity-first, literal language, no idioms, Set in Lexend and IBM Plex Mono, Not medical advice — a planning tool, Personal use licence</pre></div>
+  <p class="tip">Etsy indexes this field lightly and almost nobody fills it in. Free keywords.</p>
+</div>
+
+  <div class="split">
+    <div class="field flat">
+      <div class="fhead"><span class="flabel">Category &amp; attributes</span></div>
+      <p class="cat">Paper &amp; Party Supplies › Paper › Calendars &amp; Planners</p>
+      <ul class="attrs"><li>Type: Planner</li><li>Style: Minimalist</li><li>Digital download: Yes</li></ul>
+    </div>
+    <div class="field flat">
+      <div class="fhead"><span class="flabel">Photo alt text</span></div>
+      <ul class="altlist"><li><span class="an">Image 1</span>Printable planner page for autistic adults showing the day as a numbered sequence with a first and then box</li><li><span class="an">Image 2</span>All nine pages of the autism-friendly planning set, every page sharing the same layout rhythm</li><li><span class="an">Image 3</span>Close-up of the when-the-plan-changes page, with a framed box listing what stays exactly the same</li></ul>
+    </div>
+  </div>
+
+  <div class="field flat pin">
+    <div class="fhead"><span class="flabel">Pinterest &amp; Instagram</span></div>
+    <p class="tip">Etsy has no hashtags &mdash; it has the 13 tags above. Hashtags belong on the
+    social side, and for printables Pinterest is usually the largest source of outside traffic.</p>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Pin title</span><span class="count ok">65<i>/100</i></span>
+    <button class="copy" type="button" data-target="c40">Copy</button></div>
+  <div class="fbody" id="c40"><pre class="body mono">A planner for autistic adults built on the same shape, every page</pre></div>
+</div>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Pin description</span><span class="count ok">177<i>/500</i></span>
+    <button class="copy" type="button" data-target="c41">Copy</button></div>
+  <div class="fbody" id="c41"><pre class="body mono">The day as a sequence, a page for when the plan changes with a frame for what stays the same, a sensory sheet naming both ends of each sense, and prepared scripts. Fillable PDF.</pre></div>
+</div>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Instagram hashtags</span><span class="count">147 char</span>
+    <button class="copy" type="button" data-target="c42">Copy</button></div>
+  <div class="fbody" id="c42"><pre class="body mono">#autism #autisticadults #actuallyautistic #neurodivergent #autismresources #visualschedule #sensory #printableplanner #fillablepdf #digitaldownload</pre></div>
+</div>
+  </div>
+
+  <aside class="note">
+    <span class="notelabel">Worth knowing</span>
+    <p>Identity-first (“autistic adults”), never “person with autism”, and never puzzle-piece imagery — both will lose you the audience that would otherwise buy this. No “high-functioning”, no “severe”.</p>
+  </aside>
+</section>
+<section class="product" id="anxiety" style="--accent:#3f6f86">
+  <div class="phead">
+    <div class="pstripe"></div>
+    <div class="pmeta">
+      <span class="pnum">Listing 07</span>
+      <h2>Steady</h2>
+      <p class="pkind">Anxiety journal &middot; 9 pages</p>
+    </div>
+    <dl class="pfacts">
+      <div><dt>Price</dt><dd>9.50 <span class="cur">USD</span></dd></div>
+      <div><dt>Launch offer</dt><dd>30% for the first week (6,65 $)</dd></div>
+      <div><dt>Files to upload</dt><dd class="mono sm">dist-anxiety/etsy/</dd></div>
+      <div><dt>Shop section</dt><dd>Mental health &amp; neurodivergent</dd></div>
+    </dl>
+  </div>
+
+  <div class="field">
+  <div class="fhead"><span class="flabel">Listing title</span><span class="count ok">138<i>/140</i></span>
+    <button class="copy" type="button" data-target="c43">Copy</button></div>
+  <div class="fbody" id="c43"><pre class="body mono">Anxiety Journal Printable, Fillable PDF Worry Workbook, Thought Record, Worry Window, Grounding and Calm Plan, Undated, 9 Pages, Letter A4</pre></div>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Description</span><span class="count">3137 char</span>
+    <button class="copy" type="button" data-target="c44">Copy</button></div>
+  <div class="fbody" id="c44"><pre class="body">Nine pages using tools that have been published as self-help for decades, laid out so you can actually fill them in on a bad evening. A worry window with a closing time, a thought record, and a log that compares what you feared with what actually happened.
+
+▸ THE PAGE THAT CHANGES THINGS
+Page 4. Every time you are certain something will go badly, write the prediction down. Later, write what happened. After a few weeks you are not arguing with your anxiety, you are reading your own handwriting — and the record is almost never as bad as the prediction was.
+
+▸ THE NINE PAGES
+1. Today — starts by asking how much is in the tank, ends by comparing what you feared with what happened
+2. Worry time — a worry window with a closing time, split into solve and park
+3. The thought record — the situation, the thought, the evidence, and a fairer version
+4. Feared versus happened — predictions against outcomes, dated
+5. Mine, and not mine — sorting what you can control from what you cannot
+6. Body and grounding — a drawn figure to mark where you feel it, 5-4-3-2-1, and a printed breathing pattern
+7. Small steps — rated before and after, so the rating itself becomes evidence
+8. Nights — including a THREE IN THE MORNING box
+9. My calm plan — what helps, who to call, and a blank for your own local crisis line
+
+▸ HOW IT IS SET
+Newsreader and Karla, sea and sand and moss on white, and no red anywhere on any page. Every footer reads “A journal, not medical advice”.
+
+▸ HOW IT WORKS — PLEASE READ THIS BIT
+These are FILLABLE PDFs. You click into ready-made boxes and type, and you tick the checkboxes with a click. The layout, the fonts and the colours are fixed — they cannot be moved, restyled or rearranged. This is not a Canva template and there is no Canva link. If what you want is to redesign the pages themselves, this is not the right file for you, and I would rather you knew that before you bought it than after.
+
+▸ WHAT YOU GET, INSTANTLY
+• 4 fillable journals — US Letter + A4, in colour + ink-saving mono, 9 pages each, 395 typing fields
+• 4 print journals — the same nine pages with no form fields
+• A START-HERE sheet
+• Three zips: complete, Letter only, A4 only
+
+▸ IMPORTANT — PLEASE READ
+This is a journal made by a designer. It is not therapy, not medical advice, and not a substitute for talking to a doctor. If you are struggling, please speak to someone — anxiety responds well to treatment. Page 9 has a blank for your own local crisis line: fill it in now, while you are calm, not later.
+
+▸ PLEASE NOTE
+This is a digital download. Nothing is posted to you — no physical planner, no binder, no frame. Because the files are delivered the moment you pay, this listing cannot be refunded. Please read the section above first, and message me before buying if anything is unclear. Colours can look slightly different from one screen or printer to another.
+
+▸ LICENCE
+For your own personal use. Print as many copies as you like for yourself. Please do not resell, share, redistribute or teach from the files, and please do not sell anything printed from them. The fonts used are licensed under the SIL Open Font License.</pre></div>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Tags &mdash; 13 of 13, each under 20 characters</span>
+    <span class="count ok">13<i>/13</i></span>
+    <button class="copy" type="button" data-target="c45">Copy all</button></div>
+  <div class="chips"><button class="chip" type="button" data-copy="anxiety journal">anxiety journal<i>15</i></button><button class="chip" type="button" data-copy="anxiety printable">anxiety printable<i>17</i></button><button class="chip" type="button" data-copy="mental health">mental health<i>13</i></button><button class="chip" type="button" data-copy="thought record">thought record<i>14</i></button><button class="chip" type="button" data-copy="cbt worksheets">cbt worksheets<i>14</i></button><button class="chip" type="button" data-copy="worry journal">worry journal<i>13</i></button><button class="chip" type="button" data-copy="self care journal">self care journal<i>17</i></button><button class="chip" type="button" data-copy="undated planner">undated planner<i>15</i></button><button class="chip" type="button" data-copy="fillable pdf">fillable pdf<i>12</i></button><button class="chip" type="button" data-copy="grounding exercises">grounding exercises<i>19</i></button><button class="chip" type="button" data-copy="wellbeing journal">wellbeing journal<i>17</i></button><button class="chip" type="button" data-copy="daily check in">daily check in<i>14</i></button><button class="chip" type="button" data-copy="digital download">digital download<i>16</i></button></div>
+  <div class="fbody hidden" id="c45"><pre class="body mono">anxiety journal, anxiety printable, mental health, thought record, cbt worksheets, worry journal, self care journal, undated planner, fillable pdf, grounding exercises, wellbeing journal, daily check in, digital download</pre></div>
+  <p class="tip">Click any single tag to copy just that one. Etsy wants them one at a time.</p>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Materials &mdash; 13 of 13, each under 45 characters</span>
+    <span class="count ok">13<i>/13</i></span>
+    <button class="copy" type="button" data-target="c46">Copy all</button></div>
+  <ul class="mats"><li><span>Fillable PDF, 395 typing fields</span><i>31</i></li><li><span>9 pages</span><i>7</i></li><li><span>US Letter 8.5 x 11 in</span><i>21</i></li><li><span>A4</span><i>2</i></li><li><span>Instant digital download</span><i>24</i></li><li><span>Worry window with a closing time</span><i>32</i></li><li><span>Thought record</span><i>14</i></li><li><span>Feared versus what happened log</span><i>31</i></li><li><span>Body map, 5-4-3-2-1 and a breathing pattern</span><i>43</i></li><li><span>A blank for your own local crisis line</span><i>38</i></li><li><span>No red anywhere on the pages</span><i>28</i></li><li><span>A journal, not medical advice</span><i>29</i></li><li><span>Personal use licence</span><i>20</i></li></ul>
+  <div class="fbody hidden" id="c46"><pre class="body mono">Fillable PDF, 395 typing fields, 9 pages, US Letter 8.5 x 11 in, A4, Instant digital download, Worry window with a closing time, Thought record, Feared versus what happened log, Body map, 5-4-3-2-1 and a breathing pattern, A blank for your own local crisis line, No red anywhere on the pages, A journal, not medical advice, Personal use licence</pre></div>
+  <p class="tip">Etsy indexes this field lightly and almost nobody fills it in. Free keywords.</p>
+</div>
+
+  <div class="split">
+    <div class="field flat">
+      <div class="fhead"><span class="flabel">Category &amp; attributes</span></div>
+      <p class="cat">Paper &amp; Party Supplies › Paper › Calendars &amp; Planners</p>
+      <ul class="attrs"><li>Type: Journal</li><li>Style: Minimalist</li><li>Digital download: Yes</li></ul>
+    </div>
+    <div class="field flat">
+      <div class="fhead"><span class="flabel">Photo alt text</span></div>
+      <ul class="altlist"><li><span class="an">Image 1</span>Printable anxiety journal daily page asking how much is in the tank and comparing feared with happened</li><li><span class="an">Image 2</span>All nine pages of the anxiety journal, including the worry window, the thought record and the calm plan</li><li><span class="an">Image 3</span>Close-up of the feared-versus-happened log, with dated predictions beside what actually occurred</li></ul>
+    </div>
+  </div>
+
+  <div class="field flat pin">
+    <div class="fhead"><span class="flabel">Pinterest &amp; Instagram</span></div>
+    <p class="tip">Etsy has no hashtags &mdash; it has the 13 tags above. Hashtags belong on the
+    social side, and for printables Pinterest is usually the largest source of outside traffic.</p>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Pin title</span><span class="count ok">50<i>/100</i></span>
+    <button class="copy" type="button" data-target="c47">Copy</button></div>
+  <div class="fbody" id="c47"><pre class="body mono">An anxiety journal with a worry window that closes</pre></div>
+</div>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Pin description</span><span class="count ok">179<i>/500</i></span>
+    <button class="copy" type="button" data-target="c48">Copy</button></div>
+  <div class="fbody" id="c48"><pre class="body mono">A worry time with a closing hour, a thought record, a log of what you feared against what happened, grounding, and a calm plan with a blank for your own crisis line. Fillable PDF.</pre></div>
+</div>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Instagram hashtags</span><span class="count">126 char</span>
+    <button class="copy" type="button" data-target="c49">Copy</button></div>
+  <div class="fbody" id="c49"><pre class="body mono">#anxiety #anxietyjournal #mentalhealth #selfcare #thoughtrecord #cbt #grounding #journaling #printableplanner #digitaldownload</pre></div>
+</div>
+  </div>
+
+  <aside class="note">
+    <span class="notelabel">Worth knowing</span>
+    <p>Do not use the words therapy, treatment, CBT workbook, clinically proven or therapist approved in the TITLE. “cbt worksheets” is fine as a tag because it describes a format, not a claim. Keep the disclaimer high in the description, not buried at the bottom.</p>
+  </aside>
+</section>
+<section class="product" id="depression" style="--accent:#b0703a">
+  <div class="phead">
+    <div class="pstripe"></div>
+    <div class="pmeta">
+      <span class="pnum">Listing 08</span>
+      <h2>Small Light</h2>
+      <p class="pkind">Low days journal &middot; 9 pages</p>
+    </div>
+    <dl class="pfacts">
+      <div><dt>Price</dt><dd>9.50 <span class="cur">USD</span></dd></div>
+      <div><dt>Launch offer</dt><dd>30% for the first week (6,65 $)</dd></div>
+      <div><dt>Files to upload</dt><dd class="mono sm">dist-depression/etsy/</dd></div>
+      <div><dt>Shop section</dt><dd>Mental health &amp; neurodivergent</dd></div>
+    </dl>
+  </div>
+
+  <div class="field">
+  <div class="fhead"><span class="flabel">Listing title</span><span class="count ok">132<i>/140</i></span>
+    <button class="copy" type="button" data-target="c50">Copy</button></div>
+  <div class="fbody" id="c50"><pre class="body mono">Depression Journal Printable, Low Energy Day Planner, Fillable PDF, Mood and Activity Tracker, Capacity Ladder, Safety Plan, 9 Pages</pre></div>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Description</span><span class="count">3236 char</span>
+    <button class="copy" type="button" data-target="c51">Copy</button></div>
+  <div class="fbody" id="c51"><pre class="body">Nine pages written for very low capacity. The daily page is finishable in two minutes and counts getting out of bed, drinking water and taking medication as entries — because on the days this is for, those are the entries.
+
+▸ WHY THE DAILY PAGE IS SO SHORT
+Most journals are written by people having a reasonable week. A page that asks for a gratitude list, three goals and a reflection is unusable on the morning it is most needed. This one asks for almost nothing, on purpose, and page 2 is written on a steadier day so that a flat morning means reading a plan rather than making one.
+
+▸ THE NINE PAGES
+1. Today — two minutes, and out of bed counts
+2. Three versions of a day — a capacity ladder: what a 1 looks like, what a 5 looks like, what an 8 looks like
+3. Did it anyway — activity logged with mood before and after, which is where the evidence comes from
+4. What it says, what is also true — for the harshest thought of the day
+5. Small good things — an anhedonia-aware list, written flat, not cheerful
+6. People — contact prompts with ready-made messages you can copy
+7. The basics, across a week — sleep, food, water, medication, outside, washed
+8. If it gets very dark — a safety plan
+9. The week, looked back at
+
+▸ SAFETY IS BUILT IN, NOT APPENDED
+Page 8 opens with a framed block saying plainly that if you are thinking about ending your life this page is not enough, and pointing to your local emergency number. It has fields for your own crisis and emergency numbers and asks you to photograph the page. Every footer reads “A journal, not medical care — page 8 has the numbers”.
+
+▸ HOW IT WORKS — PLEASE READ THIS BIT
+These are FILLABLE PDFs. You click into ready-made boxes and type, and you tick the checkboxes with a click. The layout, the fonts and the colours are fixed — they cannot be moved, restyled or rearranged. This is not a Canva template and there is no Canva link. If what you want is to redesign the pages themselves, this is not the right file for you, and I would rather you knew that before you bought it than after.
+
+▸ WHAT YOU GET, INSTANTLY
+• 4 fillable journals — US Letter + A4, in colour + ink-saving mono, 9 pages each, 411 typing fields
+• 4 print journals — the same nine pages with no form fields
+• A START-HERE sheet
+• Three zips: complete, Letter only, A4 only
+
+▸ IMPORTANT — PLEASE READ
+This is a journal made by a designer. It is not treatment and it is not a substitute for care. Depression is treatable, and talking to a doctor is the most useful thing on any of these lists. If you are in crisis, please contact your local emergency number or crisis line now.
+
+▸ PLEASE NOTE
+This is a digital download. Nothing is posted to you — no physical planner, no binder, no frame. Because the files are delivered the moment you pay, this listing cannot be refunded. Please read the section above first, and message me before buying if anything is unclear. Colours can look slightly different from one screen or printer to another.
+
+▸ LICENCE
+For your own personal use. Print as many copies as you like for yourself. Please do not resell, share, redistribute or teach from the files, and please do not sell anything printed from them. The fonts used are licensed under the SIL Open Font License.</pre></div>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Tags &mdash; 13 of 13, each under 20 characters</span>
+    <span class="count ok">13<i>/13</i></span>
+    <button class="copy" type="button" data-target="c52">Copy all</button></div>
+  <div class="chips"><button class="chip" type="button" data-copy="depression journal">depression journal<i>18</i></button><button class="chip" type="button" data-copy="mood tracker">mood tracker<i>12</i></button><button class="chip" type="button" data-copy="mental health">mental health<i>13</i></button><button class="chip" type="button" data-copy="low energy planner">low energy planner<i>18</i></button><button class="chip" type="button" data-copy="self care journal">self care journal<i>17</i></button><button class="chip" type="button" data-copy="daily check in">daily check in<i>14</i></button><button class="chip" type="button" data-copy="fillable pdf">fillable pdf<i>12</i></button><button class="chip" type="button" data-copy="undated planner">undated planner<i>15</i></button><button class="chip" type="button" data-copy="wellbeing journal">wellbeing journal<i>17</i></button><button class="chip" type="button" data-copy="habit tracker">habit tracker<i>13</i></button><button class="chip" type="button" data-copy="safety plan">safety plan<i>11</i></button><button class="chip" type="button" data-copy="mood journal">mood journal<i>12</i></button><button class="chip" type="button" data-copy="digital download">digital download<i>16</i></button></div>
+  <div class="fbody hidden" id="c52"><pre class="body mono">depression journal, mood tracker, mental health, low energy planner, self care journal, daily check in, fillable pdf, undated planner, wellbeing journal, habit tracker, safety plan, mood journal, digital download</pre></div>
+  <p class="tip">Click any single tag to copy just that one. Etsy wants them one at a time.</p>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Materials &mdash; 13 of 13, each under 45 characters</span>
+    <span class="count ok">13<i>/13</i></span>
+    <button class="copy" type="button" data-target="c53">Copy all</button></div>
+  <ul class="mats"><li><span>Fillable PDF, 411 typing fields</span><i>31</i></li><li><span>9 pages</span><i>7</i></li><li><span>US Letter 8.5 x 11 in</span><i>21</i></li><li><span>A4</span><i>2</i></li><li><span>Instant digital download</span><i>24</i></li><li><span>A daily page finishable in two minutes</span><i>38</i></li><li><span>Capacity ladder written on a steadier day</span><i>41</i></li><li><span>Activity log with mood before and after</span><i>39</i></li><li><span>Contact prompts with ready-made messages</span><i>40</i></li><li><span>Safety plan with your own numbers</span><i>33</i></li><li><span>Colour and ink-saving mono</span><i>26</i></li><li><span>A journal, not medical care</span><i>27</i></li><li><span>Personal use licence</span><i>20</i></li></ul>
+  <div class="fbody hidden" id="c53"><pre class="body mono">Fillable PDF, 411 typing fields, 9 pages, US Letter 8.5 x 11 in, A4, Instant digital download, A daily page finishable in two minutes, Capacity ladder written on a steadier day, Activity log with mood before and after, Contact prompts with ready-made messages, Safety plan with your own numbers, Colour and ink-saving mono, A journal, not medical care, Personal use licence</pre></div>
+  <p class="tip">Etsy indexes this field lightly and almost nobody fills it in. Free keywords.</p>
+</div>
+
+  <div class="split">
+    <div class="field flat">
+      <div class="fhead"><span class="flabel">Category &amp; attributes</span></div>
+      <p class="cat">Paper &amp; Party Supplies › Paper › Calendars &amp; Planners</p>
+      <ul class="attrs"><li>Type: Journal</li><li>Style: Minimalist</li><li>Digital download: Yes</li></ul>
+    </div>
+    <div class="field flat">
+      <div class="fhead"><span class="flabel">Photo alt text</span></div>
+      <ul class="altlist"><li><span class="an">Image 1</span>Printable low-energy daily journal page that counts getting out of bed and drinking water as entries</li><li><span class="an">Image 2</span>All nine pages of the low days journal, including the capacity ladder and the safety plan</li><li><span class="an">Image 3</span>Close-up of the capacity ladder page describing what a 1, a 5 and an 8 look like</li></ul>
+    </div>
+  </div>
+
+  <div class="field flat pin">
+    <div class="fhead"><span class="flabel">Pinterest &amp; Instagram</span></div>
+    <p class="tip">Etsy has no hashtags &mdash; it has the 13 tags above. Hashtags belong on the
+    social side, and for printables Pinterest is usually the largest source of outside traffic.</p>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Pin title</span><span class="count ok">67<i>/100</i></span>
+    <button class="copy" type="button" data-target="c54">Copy</button></div>
+  <div class="fbody" id="c54"><pre class="body mono">A depression journal written for the days you can do almost nothing</pre></div>
+</div>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Pin description</span><span class="count ok">193<i>/500</i></span>
+    <button class="copy" type="button" data-target="c55">Copy</button></div>
+  <div class="fbody" id="c55"><pre class="body mono">A daily page finishable in two minutes where getting out of bed counts, a capacity ladder written on a steadier day, an activity log with mood before and after, and a safety plan. Fillable PDF.</pre></div>
+</div>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Instagram hashtags</span><span class="count">143 char</span>
+    <button class="copy" type="button" data-target="c56">Copy</button></div>
+  <div class="fbody" id="c56"><pre class="body mono">#depression #mentalhealth #moodtracker #selfcare #lowenergyday #journaling #mentalhealthjournal #printableplanner #fillablepdf #digitaldownload</pre></div>
+</div>
+  </div>
+
+  <aside class="note">
+    <span class="notelabel">Worth knowing</span>
+    <p>The most sensitive listing in the shop. Never promise improvement, never use before/after language, never use the word cure. Mention page 8 in the description AND in an image — buyers and Etsy reviewers both want to see that it is handled.</p>
+  </aside>
+</section>
+<section class="product" id="bundle" style="--accent:#4b4f7a">
+  <div class="phead">
+    <div class="pstripe"></div>
+    <div class="pmeta">
+      <span class="pnum">Listing 09</span>
+      <h2>Four sets, one shelf</h2>
+      <p class="pkind">Mental health bundle &middot; 4 sets · 37 pages</p>
+    </div>
+    <dl class="pfacts">
+      <div><dt>Price</dt><dd>24.50 <span class="cur">USD</span></dd></div>
+      <div><dt>Launch offer</dt><dd>20% for the first two weeks (19,60 $)</dd></div>
+      <div><dt>Files to upload</dt><dd class="mono sm">dist-bundle/etsy/</dd></div>
+      <div><dt>Shop section</dt><dd>Mental health &amp; neurodivergent</dd></div>
+    </dl>
+  </div>
+
+  <div class="field">
+  <div class="fhead"><span class="flabel">Listing title</span><span class="count ok">133<i>/140</i></span>
+    <button class="copy" type="button" data-target="c57">Copy</button></div>
+  <div class="fbody" id="c57"><pre class="body mono">Mental Health Planner Bundle, ADHD Autism Anxiety Depression, 4 Fillable PDF Journals, Neurodivergent, Undated, 37 Pages, Letter + A4</pre></div>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Description</span><span class="count">3407 char</span>
+    <button class="copy" type="button" data-target="c58">Copy</button></div>
+  <div class="fbody" id="c58"><pre class="body">All four sets in one download, plus two pages that exist only in the bundle — including a decision table that tells you which page to open on a bad morning.
+
+▸ THE PAGE THAT MAKES IT A BUNDLE AND NOT A DISCOUNT
+WHICH PAGE TODAY? is a seventeen-line table. On the left, what is actually happening: “I cannot make myself start”, “something changed and I am thrown”, “I cannot stop turning it over”, “it is very dark today”. On the right: which set, which page, and what that page does. A bad morning becomes a lookup instead of a decision — which is the whole point, because deciding is the thing you cannot do on that morning.
+
+▸ WHAT IS IN IT
+1. ATTENTION — First Move, 8 pages. One task a day, a first-move box, a brain dump with a let-it-go column, and a guess-versus-actual time page.
+2. PREDICTABILITY — Same Shape, 9 pages. The same layout every page, a page for when the plan changes, a sensory sheet, a hard-moment plan and prepared scripts.
+3. WORRY — Steady, 9 pages. A worry window that closes, a thought record, a feared-versus-happened log, grounding, and a calm plan.
+4. LOW DAYS — Small Light, 9 pages. A two-minute daily page, a capacity ladder, an activity log with mood before and after, and a safety plan.
+Plus: WHICH PAGE TODAY? and FOUR SETS, ONE SHELF — what each set is for, which to open first, and which pages to fill in on a good day.
+
+▸ WHY FOUR AND NOT ONE
+Because most people are not only one of these. Attention and worry travel together; a flat week and a thrown routine are not the same problem and do not want the same page. Four sets on one shelf, and an index that points at the right one.
+
+▸ HOW IT WORKS — PLEASE READ THIS BIT
+These are FILLABLE PDFs. You click into ready-made boxes and type, and you tick the checkboxes with a click. The layout, the fonts and the colours are fixed — they cannot be moved, restyled or rearranged. This is not a Canva template and there is no Canva link. If what you want is to redesign the pages themselves, this is not the right file for you, and I would rather you knew that before you bought it than after.
+
+▸ WHAT YOU GET, INSTANTLY
+• All four sets, fillable and print, in US Letter + A4 and colour + ink-saving mono
+• Zipped in folders by set: 1 - Attention, 2 - Predictability, 3 - Worry, 4 - Low days
+• The two bundle-only sheets, loose, so you can print them first
+• Three zips: complete, Letter only, A4 only
+
+▸ VALUE
+Bought separately the four sets are 38,00 $. Together they are 24,50 $.
+
+▸ IMPORTANT — PLEASE READ
+These are planning tools and journals made by a designer, not a clinician. They are not therapy, not treatment and not a substitute for talking to a doctor. The low days set has a safety plan page with space for your own crisis and emergency numbers — fill it in while you are steady.
+
+▸ PLEASE NOTE
+This is a digital download. Nothing is posted to you — no physical planner, no binder, no frame. Because the files are delivered the moment you pay, this listing cannot be refunded. Please read the section above first, and message me before buying if anything is unclear. Colours can look slightly different from one screen or printer to another.
+
+▸ LICENCE
+For your own personal use. Print as many copies as you like for yourself. Please do not resell, share, redistribute or teach from the files, and please do not sell anything printed from them. The fonts used are licensed under the SIL Open Font License.</pre></div>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Tags &mdash; 13 of 13, each under 20 characters</span>
+    <span class="count ok">13<i>/13</i></span>
+    <button class="copy" type="button" data-target="c59">Copy all</button></div>
+  <div class="chips"><button class="chip" type="button" data-copy="planner bundle">planner bundle<i>14</i></button><button class="chip" type="button" data-copy="mental health">mental health<i>13</i></button><button class="chip" type="button" data-copy="adhd planner">adhd planner<i>12</i></button><button class="chip" type="button" data-copy="autism planner">autism planner<i>14</i></button><button class="chip" type="button" data-copy="anxiety journal">anxiety journal<i>15</i></button><button class="chip" type="button" data-copy="depression journal">depression journal<i>18</i></button><button class="chip" type="button" data-copy="self care bundle">self care bundle<i>16</i></button><button class="chip" type="button" data-copy="neurodivergent">neurodivergent<i>14</i></button><button class="chip" type="button" data-copy="fillable pdf">fillable pdf<i>12</i></button><button class="chip" type="button" data-copy="undated planner">undated planner<i>15</i></button><button class="chip" type="button" data-copy="wellbeing bundle">wellbeing bundle<i>16</i></button><button class="chip" type="button" data-copy="journal bundle">journal bundle<i>14</i></button><button class="chip" type="button" data-copy="digital download">digital download<i>16</i></button></div>
+  <div class="fbody hidden" id="c59"><pre class="body mono">planner bundle, mental health, adhd planner, autism planner, anxiety journal, depression journal, self care bundle, neurodivergent, fillable pdf, undated planner, wellbeing bundle, journal bundle, digital download</pre></div>
+  <p class="tip">Click any single tag to copy just that one. Etsy wants them one at a time.</p>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Materials &mdash; 13 of 13, each under 45 characters</span>
+    <span class="count ok">13<i>/13</i></span>
+    <button class="copy" type="button" data-target="c60">Copy all</button></div>
+  <ul class="mats"><li><span>4 complete sets, 37 pages</span><i>25</i></li><li><span>Fillable PDF and print PDF</span><i>26</i></li><li><span>US Letter 8.5 x 11 in</span><i>21</i></li><li><span>A4</span><i>2</i></li><li><span>Instant digital download</span><i>24</i></li><li><span>A 17-line which-page-today index</span><i>32</i></li><li><span>Zipped in folders by set</span><i>24</i></li><li><span>Colour and ink-saving mono</span><i>26</i></li><li><span>Undated, use any year</span><i>21</i></li><li><span>Opens in free Adobe Acrobat Reader</span><i>34</i></li><li><span>Bought separately: 38.00 USD</span><i>28</i></li><li><span>Journals, not medical care</span><i>26</i></li><li><span>Personal use licence</span><i>20</i></li></ul>
+  <div class="fbody hidden" id="c60"><pre class="body mono">4 complete sets, 37 pages, Fillable PDF and print PDF, US Letter 8.5 x 11 in, A4, Instant digital download, A 17-line which-page-today index, Zipped in folders by set, Colour and ink-saving mono, Undated, use any year, Opens in free Adobe Acrobat Reader, Bought separately: 38.00 USD, Journals, not medical care, Personal use licence</pre></div>
+  <p class="tip">Etsy indexes this field lightly and almost nobody fills it in. Free keywords.</p>
+</div>
+
+  <div class="split">
+    <div class="field flat">
+      <div class="fhead"><span class="flabel">Category &amp; attributes</span></div>
+      <p class="cat">Paper &amp; Party Supplies › Paper › Calendars &amp; Planners</p>
+      <ul class="attrs"><li>Type: Planner</li><li>Style: Minimalist</li><li>Digital download: Yes</li></ul>
+    </div>
+    <div class="field flat">
+      <div class="fhead"><span class="flabel">Photo alt text</span></div>
+      <ul class="altlist"><li><span class="an">Image 1</span>The which-page-today index sheet, a decision table pointing from what is happening to which page to open</li><li><span class="an">Image 2</span>All four mental health sets shown together, with their covers side by side</li><li><span class="an">Image 3</span>Close-up of the index rows, matching ‘I cannot make myself start’ to a specific page in the attention set</li></ul>
+    </div>
+  </div>
+
+  <div class="field flat pin">
+    <div class="fhead"><span class="flabel">Pinterest &amp; Instagram</span></div>
+    <p class="tip">Etsy has no hashtags &mdash; it has the 13 tags above. Hashtags belong on the
+    social side, and for printables Pinterest is usually the largest source of outside traffic.</p>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Pin title</span><span class="count ok">71<i>/100</i></span>
+    <button class="copy" type="button" data-target="c61">Copy</button></div>
+  <div class="fbody" id="c61"><pre class="body mono">Four planners for four different bad days — and an index that picks one</pre></div>
+</div>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Pin description</span><span class="count ok">174<i>/500</i></span>
+    <button class="copy" type="button" data-target="c62">Copy</button></div>
+  <div class="fbody" id="c62"><pre class="body mono">ADHD, autistic, anxious and low-capacity sets in one download, with a 17-line table that turns a bad morning into a lookup instead of a decision. Fillable PDF, Letter and A4.</pre></div>
+</div>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Instagram hashtags</span><span class="count">137 char</span>
+    <button class="copy" type="button" data-target="c63">Copy</button></div>
+  <div class="fbody" id="c63"><pre class="body mono">#mentalhealth #neurodivergent #adhd #anxiety #depression #selfcare #plannerbundle #mentalhealthjournal #printableplanner #digitaldownload</pre></div>
+</div>
+  </div>
+
+  <aside class="note">
+    <span class="notelabel">Worth knowing</span>
+    <p>Keep all four single listings live. Four separate searches bring four separate buyers; the bundle is a fifth listing and usually outsells any single one. Make the FIRST image the index sheet — it is the only thing here you cannot get by buying the four separately.</p>
+  </aside>
+</section>
+<section class="product" id="halloween" style="--accent:#e4622a">
+  <div class="phead">
+    <div class="pstripe"></div>
+    <div class="pmeta">
+      <span class="pnum">Listing 10</span>
+      <h2>Thirty-First</h2>
+      <p class="pkind">Halloween party kit &middot; 9 pages</p>
+    </div>
+    <dl class="pfacts">
+      <div><dt>Price</dt><dd>12.50 <span class="cur">USD</span></dd></div>
+      <div><dt>Launch offer</dt><dd>20% in September only — no discount in October</dd></div>
+      <div><dt>Files to upload</dt><dd class="mono sm">dist-halloween/etsy/</dd></div>
+      <div><dt>Shop section</dt><dd>Seasonal kits</dd></div>
+    </dl>
+  </div>
+
+  <div class="field">
+  <div class="fhead"><span class="flabel">Listing title</span><span class="count ok">131<i>/140</i></span>
+    <button class="copy" type="button" data-target="c64">Copy</button></div>
+  <div class="fbody" id="c64"><pre class="body mono">Halloween Party Planner Printable, Fillable PDF Party Planning Kit, Guest List, Costume Contest, Pumpkin Plan, Run of Show, 9 Pages</pre></div>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Description</span><span class="count">3274 char</span>
+    <button class="copy" type="button" data-target="c65">Copy</button></div>
+  <div class="fbody" id="c65"><pre class="body">Nine pages for the thirty-first: a four-week countdown, a guest list with a COMING AS column, costumes and prize categories, a menu, decor room by room, a pumpkin page that gives you the right carving date, and an hour-by-hour run of show.
+
+▸ THE PAGE PEOPLE MESSAGE ME ABOUT
+The pumpkin page. A carved pumpkin lasts about three days indoors and about five outside in the cold. Carving on the 28th is early; carving on the 30th is right. Most people learn that once, by ruining a pumpkin. This page teaches it instead.
+
+▸ THE NINE PAGES
+1. At a glance — with a five-box SCARE LEVEL dial, from giggles-and-glitter to genuinely frightening. Set it first and it decides the menu, the lighting, the music and the invitation list for you.
+2. Four weeks to the night — the countdown, ending on 1 November
+3. Who is coming as what — the guest list, with a costume column so two people do not arrive as the same thing
+4. Costumes and prizes — the household, prize categories, judging, and a repair kit by the mirror
+5. Food that looks wrong — the menu, drinks, sweets for the door
+6. Dark, but you can see — decor room by room, lighting, sound
+7. Pumpkins — who carves what, what you need, and when to buy and cut
+8. How the night runs — hour by hour, seven beats, plus a trick-or-treating checklist
+9. The first of November — what worked, and what to buy in the half-price sales today
+
+▸ TWO SAFETY LINES THAT ARE PRINTED ON THE PAGES
+Dry ice goes in the bowl AROUND the punch, never in the drink and never in a sealed bottle. And real candles only where nothing hangs and nobody walks — LED tea lights inside pumpkins and anywhere near costumes.
+
+▸ PRINTED ON WHITE, ON PURPOSE
+A black Halloween page looks wonderful on a screen and eats a toner cartridge in a printer. This kit is orange, poison green and violet on white paper.
+
+▸ HOW IT WORKS — PLEASE READ THIS BIT
+These are FILLABLE PDFs. You click into ready-made boxes and type, and you tick the checkboxes with a click. The layout, the fonts and the colours are fixed — they cannot be moved, restyled or rearranged. This is not a Canva template and there is no Canva link. If what you want is to redesign the pages themselves, this is not the right file for you, and I would rather you knew that before you bought it than after.
+
+▸ WHAT YOU GET, INSTANTLY
+• 4 fillable kits — US Letter + A4, in colour + ink-saving mono, 9 pages each, 562 typing fields
+• 4 print kits — the same nine pages with no form fields
+• A START-HERE sheet
+• Three zips: complete, Letter only, A4 only
+
+▸ UNDATED
+No year is printed anywhere. Save your filled-in copy and next October it opens as a head start.
+
+▸ PLEASE NOTE
+This is a digital download. Nothing is posted to you — no physical planner, no binder, no frame. Because the files are delivered the moment you pay, this listing cannot be refunded. Please read the section above first, and message me before buying if anything is unclear. Colours can look slightly different from one screen or printer to another.
+
+▸ LICENCE
+For your own personal use. Print as many copies as you like for one party of your own. Please do not resell, share, redistribute or teach from the files, and please do not sell anything printed from them. The fonts used are licensed under the SIL Open Font License.</pre></div>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Tags &mdash; 13 of 13, each under 20 characters</span>
+    <span class="count ok">13<i>/13</i></span>
+    <button class="copy" type="button" data-target="c66">Copy all</button></div>
+  <div class="chips"><button class="chip" type="button" data-copy="halloween planner">halloween planner<i>17</i></button><button class="chip" type="button" data-copy="halloween party">halloween party<i>15</i></button><button class="chip" type="button" data-copy="party planner">party planner<i>13</i></button><button class="chip" type="button" data-copy="halloween printable">halloween printable<i>19</i></button><button class="chip" type="button" data-copy="costume contest">costume contest<i>15</i></button><button class="chip" type="button" data-copy="pumpkin carving">pumpkin carving<i>15</i></button><button class="chip" type="button" data-copy="fillable pdf">fillable pdf<i>12</i></button><button class="chip" type="button" data-copy="party checklist">party checklist<i>15</i></button><button class="chip" type="button" data-copy="guest list printable">guest list printable<i>20</i></button><button class="chip" type="button" data-copy="halloween party kit">halloween party kit<i>19</i></button><button class="chip" type="button" data-copy="trick or treat">trick or treat<i>14</i></button><button class="chip" type="button" data-copy="spooky season">spooky season<i>13</i></button><button class="chip" type="button" data-copy="digital download">digital download<i>16</i></button></div>
+  <div class="fbody hidden" id="c66"><pre class="body mono">halloween planner, halloween party, party planner, halloween printable, costume contest, pumpkin carving, fillable pdf, party checklist, guest list printable, halloween party kit, trick or treat, spooky season, digital download</pre></div>
+  <p class="tip">Click any single tag to copy just that one. Etsy wants them one at a time.</p>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Materials &mdash; 13 of 13, each under 45 characters</span>
+    <span class="count ok">13<i>/13</i></span>
+    <button class="copy" type="button" data-target="c67">Copy all</button></div>
+  <ul class="mats"><li><span>Fillable PDF, 562 typing fields</span><i>31</i></li><li><span>9 pages</span><i>7</i></li><li><span>US Letter 8.5 x 11 in</span><i>21</i></li><li><span>A4</span><i>2</i></li><li><span>Instant digital download</span><i>24</i></li><li><span>Undated — use it every October</span><i>30</i></li><li><span>Five-box scare level dial</span><i>25</i></li><li><span>Guest list with a coming-as column</span><i>34</i></li><li><span>Pumpkin page with the right carving date</span><i>40</i></li><li><span>Dry ice and candle safety notes on the pages</span><i>44</i></li><li><span>Printed on white, not black — ink friendly</span><i>42</i></li><li><span>Colour and ink-saving mono</span><i>26</i></li><li><span>Personal use licence</span><i>20</i></li></ul>
+  <div class="fbody hidden" id="c67"><pre class="body mono">Fillable PDF, 562 typing fields, 9 pages, US Letter 8.5 x 11 in, A4, Instant digital download, Undated — use it every October, Five-box scare level dial, Guest list with a coming-as column, Pumpkin page with the right carving date, Dry ice and candle safety notes on the pages, Printed on white, not black — ink friendly, Colour and ink-saving mono, Personal use licence</pre></div>
+  <p class="tip">Etsy indexes this field lightly and almost nobody fills it in. Free keywords.</p>
+</div>
+
+  <div class="split">
+    <div class="field flat">
+      <div class="fhead"><span class="flabel">Category &amp; attributes</span></div>
+      <p class="cat">Paper &amp; Party Supplies › Paper › Calendars &amp; Planners</p>
+      <ul class="attrs"><li>Type: Planner</li><li>Holiday: Halloween</li><li>Occasion: Party</li><li>Digital download: Yes</li></ul>
+    </div>
+    <div class="field flat">
+      <div class="fhead"><span class="flabel">Photo alt text</span></div>
+      <ul class="altlist"><li><span class="an">Image 1</span>Printable Halloween party planner cover with a five-box scare level dial and a drawn cobweb</li><li><span class="an">Image 2</span>All nine pages of the Halloween party kit, from the countdown to the first of November</li><li><span class="an">Image 3</span>Close-up of the pumpkin page explaining that carving on the 30th is right and the 28th is too early</li></ul>
+    </div>
+  </div>
+
+  <div class="field flat pin">
+    <div class="fhead"><span class="flabel">Pinterest &amp; Instagram</span></div>
+    <p class="tip">Etsy has no hashtags &mdash; it has the 13 tags above. Hashtags belong on the
+    social side, and for printables Pinterest is usually the largest source of outside traffic.</p>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Pin title</span><span class="count ok">66<i>/100</i></span>
+    <button class="copy" type="button" data-target="c68">Copy</button></div>
+  <div class="fbody" id="c68"><pre class="body mono">A Halloween party planner that tells you when to carve the pumpkin</pre></div>
+</div>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Pin description</span><span class="count ok">175<i>/500</i></span>
+    <button class="copy" type="button" data-target="c69">Copy</button></div>
+  <div class="fbody" id="c69"><pre class="body mono">Scare-level dial, a guest list with a coming-as column, costume prize categories, a pumpkin page with the right carving date, and the night planned hour by hour. Fillable PDF.</pre></div>
+</div>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Instagram hashtags</span><span class="count">152 char</span>
+    <button class="copy" type="button" data-target="c70">Copy</button></div>
+  <div class="fbody" id="c70"><pre class="body mono">#halloween #halloweenparty #spookyseason #halloweenplanner #partyplanner #costumeparty #pumpkincarving #partyplanning #printableplanner #digitaldownload</pre></div>
+</div>
+  </div>
+
+  <aside class="note">
+    <span class="notelabel">Worth knowing</span>
+    <p>List it NOW, in September. Etsy needs weeks to place a new listing, and traffic peaks 10–25 October. Discount in September, never in October. When the season ends do not deactivate it — leave it up and it wakes next autumn with its own history.</p>
+  </aside>
+</section>
+<section class="product" id="christmas" style="--accent:#1f4d3d">
+  <div class="phead">
+    <div class="pstripe"></div>
+    <div class="pmeta">
+      <span class="pnum">Listing 11</span>
+      <h2>Long December</h2>
+      <p class="pkind">Christmas kit &middot; 9 pages</p>
+    </div>
+    <dl class="pfacts">
+      <div><dt>Price</dt><dd>14.50 <span class="cur">USD</span></dd></div>
+      <div><dt>Launch offer</dt><dd>20% in September and October — no discount in November</dd></div>
+      <div><dt>Files to upload</dt><dd class="mono sm">dist-christmas/etsy/</dd></div>
+      <div><dt>Shop section</dt><dd>Seasonal kits</dd></div>
+    </dl>
+  </div>
+
+  <div class="field">
+  <div class="fhead"><span class="flabel">Listing title</span><span class="count ok">136<i>/140</i></span>
+    <button class="copy" type="button" data-target="c71">Copy</button></div>
+  <div class="fbody" id="c71"><pre class="body mono">Christmas Planner Printable, Holiday Planner Fillable PDF, Gift List Budget Tracker, Christmas Dinner Timeline, Xmas To Do List, 9 Pages</pre></div>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Description</span><span class="count">3375 char</span>
+    <button class="copy" type="button" data-target="c72">Copy</button></div>
+  <div class="fbody" id="c72"><pre class="body">Nine pages for the whole of December, not just the twenty-fifth: a gift list with a budget column and a running total, a card list with room for this year’s posting deadlines, the food, and Christmas lunch timed backwards from the hour you want to eat.
+
+▸ THE TWO PAGES PEOPLE COME BACK FOR
+PAGE 3 is the gift list: twenty-four rows, and beside every name a budgeted column, a spent column, and got / wrapped / sent ticks. At the foot: budgeted, spent, left. The thing people regret about Christmas in January is always the money, and this is the page that makes it visible in December instead.
+
+PAGE 6 is the oven clock. One box at the top for the hour you sit down, then every dish with its temperature, its minutes, and the time it goes IN and comes OUT. Everyone plans Christmas lunch forwards and everyone is surprised. The only way it works is backwards.
+
+▸ THE NINE PAGES
+1. This Christmas — the shape of it, a spending cap, a who-does-what table, and a framed box for the three things you are NOT doing this year
+2. December, day by day — the twenty-five, and the dates that are not yours to move
+3. Gifts, and what they cost
+4. Cards and post — the list, parcels going out, and what you need before you start
+5. What we are eating
+6. Lunch, timed backwards
+7. The house, and the beds — room by room, who sleeps where, what guests always need
+8. The day itself — hour by hour, eight beats
+9. The week after — returns and their deadlines, thank-yous, and next year’s box bought in the sales
+
+▸ WHY THE POSTING DATES ARE BLANK
+Because they move every year and they are different in every country. Printing a date would make the kit wrong for most of the people buying it. Page 2 asks you to look yours up in the first week of December and write them in — and then everything works backwards from them, not from the 25th.
+
+▸ HOW IT WORKS — PLEASE READ THIS BIT
+These are FILLABLE PDFs. You click into ready-made boxes and type, and you tick the checkboxes with a click. The layout, the fonts and the colours are fixed — they cannot be moved, restyled or rearranged. This is not a Canva template and there is no Canva link. If what you want is to redesign the pages themselves, this is not the right file for you, and I would rather you knew that before you bought it than after.
+
+▸ WHAT YOU GET, INSTANTLY
+• 4 fillable kits — US Letter + A4, in colour + ink-saving mono, 9 pages each, 762 typing fields
+• 4 print kits — the same nine pages with no form fields
+• A START-HERE sheet
+• Three zips: complete, Letter only, A4 only
+
+▸ UNDATED, SO IT IS NOT A ONE-YEAR PURCHASE
+No year is printed anywhere. Save your filled-in copy and next December it opens with last year’s gift list and addresses already in it — which is the whole point.
+
+▸ PLEASE NOTE
+This is a digital download. Nothing is posted to you — no physical planner, no binder, no frame. Because the files are delivered the moment you pay, this listing cannot be refunded. Please read the section above first, and message me before buying if anything is unclear. Colours can look slightly different from one screen or printer to another.
+
+▸ LICENCE
+For your own personal use. Print as many copies as you like for your own Christmas. Please do not resell, share, redistribute or teach from the files, and please do not sell anything printed from them. The fonts used are licensed under the SIL Open Font License.</pre></div>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Tags &mdash; 13 of 13, each under 20 characters</span>
+    <span class="count ok">13<i>/13</i></span>
+    <button class="copy" type="button" data-target="c73">Copy all</button></div>
+  <div class="chips"><button class="chip" type="button" data-copy="christmas planner">christmas planner<i>17</i></button><button class="chip" type="button" data-copy="holiday planner">holiday planner<i>15</i></button><button class="chip" type="button" data-copy="gift list printable">gift list printable<i>19</i></button><button class="chip" type="button" data-copy="christmas budget">christmas budget<i>16</i></button><button class="chip" type="button" data-copy="gift tracker">gift tracker<i>12</i></button><button class="chip" type="button" data-copy="christmas printable">christmas printable<i>19</i></button><button class="chip" type="button" data-copy="fillable pdf">fillable pdf<i>12</i></button><button class="chip" type="button" data-copy="dinner timeline">dinner timeline<i>15</i></button><button class="chip" type="button" data-copy="holiday checklist">holiday checklist<i>17</i></button><button class="chip" type="button" data-copy="christmas planning">christmas planning<i>18</i></button><button class="chip" type="button" data-copy="card list printable">card list printable<i>19</i></button><button class="chip" type="button" data-copy="december planner">december planner<i>16</i></button><button class="chip" type="button" data-copy="digital download">digital download<i>16</i></button></div>
+  <div class="fbody hidden" id="c73"><pre class="body mono">christmas planner, holiday planner, gift list printable, christmas budget, gift tracker, christmas printable, fillable pdf, dinner timeline, holiday checklist, christmas planning, card list printable, december planner, digital download</pre></div>
+  <p class="tip">Click any single tag to copy just that one. Etsy wants them one at a time.</p>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Materials &mdash; 13 of 13, each under 45 characters</span>
+    <span class="count ok">13<i>/13</i></span>
+    <button class="copy" type="button" data-target="c74">Copy all</button></div>
+  <ul class="mats"><li><span>Fillable PDF, 762 typing fields</span><i>31</i></li><li><span>9 pages</span><i>7</i></li><li><span>US Letter 8.5 x 11 in</span><i>21</i></li><li><span>A4</span><i>2</i></li><li><span>Instant digital download</span><i>24</i></li><li><span>Undated — use it every December</span><i>31</i></li><li><span>Gift list with budgeted, spent and left</span><i>39</i></li><li><span>Christmas lunch timed backwards</span><i>31</i></li><li><span>Space for this year’s posting deadlines</span><i>39</i></li><li><span>A what-we-are-not-doing box</span><i>27</i></li><li><span>Who-does-what table</span><i>19</i></li><li><span>Colour and ink-saving mono</span><i>26</i></li><li><span>Personal use licence</span><i>20</i></li></ul>
+  <div class="fbody hidden" id="c74"><pre class="body mono">Fillable PDF, 762 typing fields, 9 pages, US Letter 8.5 x 11 in, A4, Instant digital download, Undated — use it every December, Gift list with budgeted, spent and left, Christmas lunch timed backwards, Space for this year’s posting deadlines, A what-we-are-not-doing box, Who-does-what table, Colour and ink-saving mono, Personal use licence</pre></div>
+  <p class="tip">Etsy indexes this field lightly and almost nobody fills it in. Free keywords.</p>
+</div>
+
+  <div class="split">
+    <div class="field flat">
+      <div class="fhead"><span class="flabel">Category &amp; attributes</span></div>
+      <p class="cat">Paper &amp; Party Supplies › Paper › Calendars &amp; Planners</p>
+      <ul class="attrs"><li>Type: Planner</li><li>Holiday: Christmas</li><li>Digital download: Yes</li></ul>
+    </div>
+    <div class="field flat">
+      <div class="fhead"><span class="flabel">Photo alt text</span></div>
+      <ul class="altlist"><li><span class="an">Image 1</span>Printable Christmas planner cover with a spending cap box and a what-we-are-not-doing-this-year note</li><li><span class="an">Image 2</span>All nine pages of the Christmas planning kit, including the gift budget list and the lunch timing page</li><li><span class="an">Image 3</span>Close-up of the gift list showing a budgeted and a spent column beside each name, with a running total</li></ul>
+    </div>
+  </div>
+
+  <div class="field flat pin">
+    <div class="fhead"><span class="flabel">Pinterest &amp; Instagram</span></div>
+    <p class="tip">Etsy has no hashtags &mdash; it has the 13 tags above. Hashtags belong on the
+    social side, and for printables Pinterest is usually the largest source of outside traffic.</p>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Pin title</span><span class="count ok">51<i>/100</i></span>
+    <button class="copy" type="button" data-target="c75">Copy</button></div>
+  <div class="fbody" id="c75"><pre class="body mono">A Christmas planner with a gift budget that adds up</pre></div>
+</div>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Pin description</span><span class="count ok">193<i>/500</i></span>
+    <button class="copy" type="button" data-target="c76">Copy</button></div>
+  <div class="fbody" id="c76"><pre class="body mono">Twenty-four gift rows with budgeted and spent columns and a running total, a card list with room for the posting dates, and Christmas lunch timed backwards from when you sit down. Fillable PDF.</pre></div>
+</div>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Instagram hashtags</span><span class="count">160 char</span>
+    <button class="copy" type="button" data-target="c77">Copy</button></div>
+  <div class="fbody" id="c77"><pre class="body mono">#christmasplanner #holidayplanner #christmasplanning #giftlist #christmasbudget #holidayprep #christmasprintable #printableplanner #fillablepdf #digitaldownload</pre></div>
+</div>
+  </div>
+
+  <aside class="note">
+    <span class="notelabel">Worth knowing</span>
+    <p>Christmas is the biggest search of the year on Etsy and it starts in MID-OCTOBER, before Halloween. List it now. Highest price of the seasonal three — nine pages but the largest kit, and buyers know they will reuse it.</p>
+  </aside>
+</section>
+<section class="product" id="thanksgiving" style="--accent:#b4531f">
+  <div class="phead">
+    <div class="pstripe"></div>
+    <div class="pmeta">
+      <span class="pnum">Listing 12</span>
+      <h2>One Table</h2>
+      <p class="pkind">Thanksgiving kit &middot; 9 pages</p>
+    </div>
+    <dl class="pfacts">
+      <div><dt>Price</dt><dd>12.50 <span class="cur">USD</span></dd></div>
+      <div><dt>Launch offer</dt><dd>20% in September — no discount in November</dd></div>
+      <div><dt>Files to upload</dt><dd class="mono sm">dist-thanksgiving/etsy/</dd></div>
+      <div><dt>Shop section</dt><dd>Seasonal kits</dd></div>
+    </dl>
+  </div>
+
+  <div class="field">
+  <div class="fhead"><span class="flabel">Listing title</span><span class="count ok">132<i>/140</i></span>
+    <button class="copy" type="button" data-target="c78">Copy</button></div>
+  <div class="fbody" id="c78"><pre class="body mono">Thanksgiving Planner Printable, Fillable PDF Hosting Kit, Turkey Thaw and Timing Chart, Potluck Sign Up List, Menu, Seating, 9 Pages</pre></div>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Description</span><span class="count">3686 char</span>
+    <button class="copy" type="button" data-target="c79">Copy</button></div>
+  <div class="fbody" id="c79"><pre class="body">Nine pages for one meal and everyone around it: a turkey chart that turns the weight into thaw days and roasting time, a who-is-bringing-what list with a DOES IT NEED THE OVEN column, and an oven plan counted backwards from the hour you sit down.
+
+▸ THE TWO MISTAKES THIS KIT EXISTS TO PREVENT
+A FROZEN TURKEY. Page 2 is a weight table: tick your band and read how many days it needs in the fridge (roughly 24 hours for every 4–5 lb) and how long it roasts unstuffed at 325°F / 165°C. Then you write the dates backwards. There is also a framed box for the morning it is still frozen: cold water, still wrapped, 30 minutes per pound, changing the water every 30 minutes.
+
+A GUEST WITH A CASSEROLE. Page 3 is the potluck list, and the column that matters is OVEN. Somebody arriving with a dish that wants forty minutes at 375°F, at the hour the turkey is resting and the potatoes are in, is the single most common way the meal runs late. Ask on the invitation, and the answer goes onto page 4.
+
+▸ THE NINE PAGES
+1. One table, one afternoon — the count, how much bird that means, allergies, arrival times
+2. The bird, worked out — the weight table, the dates, and 165°F / 74°C
+3. Who is bringing what — twenty rows, with oven / cold / arrived columns
+4. One oven, everything else — the oven counted backwards, beside a column for every dish moved off it
+5. The shopping — order ahead, cupboard, fresh, drink, and the not-food nobody remembers
+6. The table, and who is at it — eighteen seats, the children’s table, and the round of thanks
+7. The three days before — two days, one day, and the morning
+8. How the day runs — hour by hour, eight beats, with a name against each job
+9. Friday — containers filled before people leave, stock from the carcass, and the two-hour rule
+
+▸ THE NUMBER THE KIT WILL NOT LET YOU GUESS
+165°F / 74°C in the thickest part of the thigh and of the breast, clear of the bone. Colour, timing and the little plastic pop-up are all worse than a thermometer. And do not rinse the raw bird — it does nothing except spray the sink.
+
+▸ HOW IT WORKS — PLEASE READ THIS BIT
+These are FILLABLE PDFs. You click into ready-made boxes and type, and you tick the checkboxes with a click. The layout, the fonts and the colours are fixed — they cannot be moved, restyled or rearranged. This is not a Canva template and there is no Canva link. If what you want is to redesign the pages themselves, this is not the right file for you, and I would rather you knew that before you bought it than after.
+
+▸ WHAT YOU GET, INSTANTLY
+• 4 fillable kits — US Letter + A4, in colour + ink-saving mono, 9 pages each, 617 typing fields
+• 4 print kits — the same nine pages with no form fields
+• A START-HERE sheet
+• Three zips: complete, Letter only, A4 only
+
+▸ POUNDS AND FAHRENHEIT, WITH KILOS AND CELSIUS BESIDE THEM
+Weights and temperatures lead in lb and °F, with kg and °C alongside, so the chart works wherever you are hosting.
+
+▸ UNDATED
+No year printed anywhere. Works for Thanksgiving, Friendsgiving, or any large meal you are hosting alone.
+
+▸ PLEASE NOTE
+This is a digital download. Nothing is posted to you — no physical planner, no binder, no frame. Because the files are delivered the moment you pay, this listing cannot be refunded. Please read the section above first, and message me before buying if anything is unclear. Colours can look slightly different from one screen or printer to another.
+
+▸ LICENCE
+For your own personal use. Print as many copies as you like for one meal of your own. Please do not resell, share, redistribute or teach from the files, and please do not sell anything printed from them. The fonts used are licensed under the SIL Open Font License.</pre></div>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Tags &mdash; 13 of 13, each under 20 characters</span>
+    <span class="count ok">13<i>/13</i></span>
+    <button class="copy" type="button" data-target="c80">Copy all</button></div>
+  <div class="chips"><button class="chip" type="button" data-copy="thanksgiving planner">thanksgiving planner<i>20</i></button><button class="chip" type="button" data-copy="hosting planner">hosting planner<i>15</i></button><button class="chip" type="button" data-copy="potluck sign up">potluck sign up<i>15</i></button><button class="chip" type="button" data-copy="turkey timing">turkey timing<i>13</i></button><button class="chip" type="button" data-copy="dinner party plan">dinner party plan<i>17</i></button><button class="chip" type="button" data-copy="thanksgiving menu">thanksgiving menu<i>17</i></button><button class="chip" type="button" data-copy="fillable pdf">fillable pdf<i>12</i></button><button class="chip" type="button" data-copy="holiday planner">holiday planner<i>15</i></button><button class="chip" type="button" data-copy="seating chart">seating chart<i>13</i></button><button class="chip" type="button" data-copy="friendsgiving">friendsgiving<i>13</i></button><button class="chip" type="button" data-copy="host checklist">host checklist<i>14</i></button><button class="chip" type="button" data-copy="meal planner">meal planner<i>12</i></button><button class="chip" type="button" data-copy="digital download">digital download<i>16</i></button></div>
+  <div class="fbody hidden" id="c80"><pre class="body mono">thanksgiving planner, hosting planner, potluck sign up, turkey timing, dinner party plan, thanksgiving menu, fillable pdf, holiday planner, seating chart, friendsgiving, host checklist, meal planner, digital download</pre></div>
+  <p class="tip">Click any single tag to copy just that one. Etsy wants them one at a time.</p>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Materials &mdash; 13 of 13, each under 45 characters</span>
+    <span class="count ok">13<i>/13</i></span>
+    <button class="copy" type="button" data-target="c81">Copy all</button></div>
+  <ul class="mats"><li><span>Fillable PDF, 617 typing fields</span><i>31</i></li><li><span>9 pages</span><i>7</i></li><li><span>US Letter 8.5 x 11 in</span><i>21</i></li><li><span>A4</span><i>2</i></li><li><span>Instant digital download</span><i>24</i></li><li><span>Turkey weight, thaw and roasting chart</span><i>38</i></li><li><span>165 F / 74 C printed on the page</span><i>32</i></li><li><span>Cold-water rescue for a frozen bird</span><i>35</i></li><li><span>Potluck list with a needs-the-oven column</span><i>41</i></li><li><span>Oven plan counted backwards</span><i>27</i></li><li><span>lb and F, with kg and C alongside</span><i>33</i></li><li><span>Undated — use it every November</span><i>31</i></li><li><span>Personal use licence</span><i>20</i></li></ul>
+  <div class="fbody hidden" id="c81"><pre class="body mono">Fillable PDF, 617 typing fields, 9 pages, US Letter 8.5 x 11 in, A4, Instant digital download, Turkey weight, thaw and roasting chart, 165 F / 74 C printed on the page, Cold-water rescue for a frozen bird, Potluck list with a needs-the-oven column, Oven plan counted backwards, lb and F, with kg and C alongside, Undated — use it every November, Personal use licence</pre></div>
+  <p class="tip">Etsy indexes this field lightly and almost nobody fills it in. Free keywords.</p>
+</div>
+
+  <div class="split">
+    <div class="field flat">
+      <div class="fhead"><span class="flabel">Category &amp; attributes</span></div>
+      <p class="cat">Paper &amp; Party Supplies › Paper › Calendars &amp; Planners</p>
+      <ul class="attrs"><li>Type: Planner</li><li>Holiday: Thanksgiving</li><li>Occasion: Dinner party</li><li>Digital download: Yes</li></ul>
+    </div>
+    <div class="field flat">
+      <div class="fhead"><span class="flabel">Photo alt text</span></div>
+      <ul class="altlist"><li><span class="an">Image 1</span>Printable Thanksgiving planner cover showing the headcount fields and how much turkey that means</li><li><span class="an">Image 2</span>All nine pages of the Thanksgiving hosting kit, including the turkey chart and the one-oven plan</li><li><span class="an">Image 3</span>Close-up of the turkey weight table, with thaw days and roasting times against each weight band</li></ul>
+    </div>
+  </div>
+
+  <div class="field flat pin">
+    <div class="fhead"><span class="flabel">Pinterest &amp; Instagram</span></div>
+    <p class="tip">Etsy has no hashtags &mdash; it has the 13 tags above. Hashtags belong on the
+    social side, and for printables Pinterest is usually the largest source of outside traffic.</p>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Pin title</span><span class="count ok">64<i>/100</i></span>
+    <button class="copy" type="button" data-target="c82">Copy</button></div>
+  <div class="fbody" id="c82"><pre class="body mono">A Thanksgiving planner that works the turkey out from its weight</pre></div>
+</div>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Pin description</span><span class="count ok">191<i>/500</i></span>
+    <button class="copy" type="button" data-target="c83">Copy</button></div>
+  <div class="fbody" id="c83"><pre class="body mono">Tick your weight band and read the thaw days and the roasting time. A potluck list that asks whether the dish needs the oven. One oven, counted backwards from when you sit down. Fillable PDF.</pre></div>
+</div>
+    <div class="field">
+  <div class="fhead"><span class="flabel">Instagram hashtags</span><span class="count">144 char</span>
+    <button class="copy" type="button" data-target="c84">Copy</button></div>
+  <div class="fbody" id="c84"><pre class="body mono">#thanksgiving #thanksgivingdinner #friendsgiving #hosting #thanksgivingplanner #potluck #turkey #mealplanning #printableplanner #digitaldownload</pre></div>
+</div>
+  </div>
+
+  <aside class="note">
+    <span class="notelabel">Worth knowing</span>
+    <p>Almost entirely a US market, so lb and °F lead. Thanksgiving 2026 is 26 November; searches start mid-October and peak 10–20 November. This listing sells between the Halloween one and the Christmas one — all three need to be live in September.</p>
+  </aside>
+</section>
+<section class="product" id="shared" style="--accent:#6b645d">
+  <div class="phead">
+    <div class="pstripe"></div>
+    <div class="pmeta">
+      <span class="pnum">Shop level</span>
+      <h2>Set once, not per listing</h2>
+      <p class="pkind">The only text on this page that is deliberately the same everywhere</p>
+    </div>
+  </div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Shop sections</span><span class="count">78 char</span>
+    <button class="copy" type="button" data-target="c85">Copy</button></div>
+  <div class="fbody" id="c85"><pre class="body">Daily &amp; weekly
+Party &amp; event kits
+Seasonal kits
+Mental health &amp; neurodivergent</pre></div>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Shop announcement</span><span class="count">250 char</span>
+    <button class="copy" type="button" data-target="c86">Copy</button></div>
+  <div class="fbody" id="c86"><pre class="body">Fillable PDF planners and event kits — you type into ready-made fields, print as often as you like, and use them again next year. Every kit comes in US Letter and A4, in colour and in an ink-saving version. Instant download; nothing is posted to you.</pre></div>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">Digital download settings</span><span class="count">211 char</span>
+    <button class="copy" type="button" data-target="c87">Copy</button></div>
+  <div class="fbody" id="c87"><pre class="body">Delivery: instant download
+Files per listing: 3 zips + 2 loose PDFs = 5 (Etsy&#x27;s limit)
+Renewal: automatic
+Personalisation: off
+Returns: not accepted (digital, delivered instantly) — say so in the description too</pre></div>
+</div>
+  <div class="field">
+  <div class="fhead"><span class="flabel">FAQ — add these three to every listing</span><span class="count">547 char</span>
+    <button class="copy" type="button" data-target="c88">Copy</button></div>
+  <div class="fbody" id="c88"><pre class="body">Q: Can I change the layout, the fonts or the colours?
+A: No. These are fillable PDFs: you type into the fields that are already there. The design itself is fixed, and there is no Canva link. If you need to redesign the pages, please don&#x27;t buy this one.
+
+Q: What do I open it with?
+A: The free Adobe Acrobat Reader on a computer, or any PDF app on a tablet or phone. Save a copy before you start typing, so you keep a blank one.
+
+Q: Is a year printed on it?
+A: No, everything is undated. Fill it in, save it, and it opens next year as a head start.</pre></div>
+</div>
+  <aside class="note">
+    <span class="notelabel">Worth knowing</span>
+    <p>These field limits are what Etsy enforced when this page was written. Etsy changes them, so check the current seller handbook before you paste twelve listings in one sitting.</p>
+  </aside>
+</section></main>
+
+  <footer class="end">
+    <p>Prices in USD, before Etsy&rsquo;s fees. Launch offers are suggestions &mdash; the seasonal
+    three deliberately discount early and stop discounting once the season starts.</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  function flash(btn, label) {
+    var old = btn.textContent;
+    btn.textContent = label; btn.classList.add("done");
+    setTimeout(function () { btn.textContent = old; btn.classList.remove("done"); }, 1100);
+  }
+  function put(text, btn, label) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { flash(btn, label); }, fallback);
+    } else { fallback(); }
+    function fallback() {
+      var ta = document.createElement("textarea");
+      ta.value = text; ta.setAttribute("readonly", "");
+      ta.style.position = "fixed"; ta.style.top = "-1000px";
+      document.body.appendChild(ta); ta.select();
+      var ok = false;
+      try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+      document.body.removeChild(ta);
+      flash(btn, ok ? label : "Select it");
+    }
+  }
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest("button.copy");
+    if (b) {
+      var el = document.getElementById(b.getAttribute("data-target"));
+      if (el) put(el.innerText.trim(), b, "Copied");
+      return;
+    }
+    var c = e.target.closest("button.chip");
+    if (c) put(c.getAttribute("data-copy"), c, c.getAttribute("data-copy"));
+  });
+})();
+</script>

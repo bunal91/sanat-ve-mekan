@@ -44,6 +44,8 @@ planner/
 ├── christmas-planner.html       # browser/preview copy (Letter · spruce · 9 pages)
 ├── thanksgiving-planner.html    # browser/preview copy (Letter · harvest · 9 pages)
 ├── etsy-rehberi.html            # Turkish guide: shop setup, listing copy, pricing, niche
+├── etsy-listings.html           # the twelve listings, ready to paste (generated)
+│   └── src/listing-copy.py       # the copy itself; src/build-listings.py renders the page
 ├── dist/                        # daily planner — 16 PDFs, 2 start-here sheets, 3 images, ZIPs
 ├── dist-birthday/               # birthday kit — 8 PDFs, start-here sheet, 3 images, ZIPs
 ├── dist-kids/                   # kids' kit — same shape
@@ -282,6 +284,22 @@ page by page before the design is merged on top.
   colourway swaps it for graphite to save ink; the layout is identical.
 - **Print:** `@page` at exact size with zero margins and `print-color-adjust: exact`. Every
   PDF is verified as a single page at 612×792 pt (Letter) or 595×842 pt (A4).
+
+## The listing copy
+
+`src/listing-copy.py` holds one entry per product: title, full description, thirteen tags,
+thirteen materials, category, attributes, photo alt text, Pinterest copy and a per-product note
+about what not to claim. `src/build-listings.py` validates it against Etsy's real field limits
+(title 140 characters, tags 13 × 20, materials 13 × 45) and renders `etsy-listings.html`, a
+copy-and-paste page with a button on every field.
+
+```bash
+python3 src/build-listings.py    # rebuild etsy-listings.html from src/listing-copy.py
+```
+
+Nothing in it is shared between products except one block at the end that is marked as such:
+shop sections, the announcement, delivery settings and the three FAQs that belong on every
+listing.
 
 ## Licence
 
