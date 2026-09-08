@@ -11,7 +11,7 @@ Kaynak: https://dergipark.org.tr/tr/pub/gazimmfd/page/1851
 |---|---|---|
 | 1 | Kapak Sayfası | **`02-kapak-sayfasi.docx`** |
 | 2 | Makale Kontrol Listesi Formu + Makale Metni | **`01-makale-metni.docx`** (kontrol formu DergiPark'tan indirilip önüne eklenecek) |
-| 3 | Genişletilmiş İngilizce Özet | **`03-genisletilmis-ingilizce-ozet.docx`** (grafik özet gömülü) |
+| 3 | Genişletilmiş İngilizce Özet | **`03-genisletilmis-ingilizce-ozet.docx`** — derginin resmî şablonu üzerine kurulmuştur; Figure A gömülü |
 | 4 | Telif Hakkı Devir Formu | DergiPark'tan indirilecek, imzalanacak, taranıp PDF olarak yüklenecek |
 
 Editöre Not için: **`04-editore-not.docx`**.
@@ -77,10 +77,35 @@ yapılması gerekmez.
    gönderimde teyit edilmelidir.
 7. **iThenticate:** Benzerlik raporu alınacak.
 
+## Genişletilmiş İngilizce özet — şablon uyumu
+
+Bu dosya sıfırdan yazılmamış, **derginin kendi şablon dosyası** üzerine
+kurulmuştur; şablonun tablo düzeni, yazı tipi ve punto ayarları olduğu gibi
+korunmuştur. Doldurulan alanlar: başlık, üç Highlights maddesi, Figure A
+açıklaması, Figure A görseli ve başlığı, Purpose, Theory and Methods, Results,
+Conclusion ve beş Keywords.
+
+**Dokunulmayan alanlar** (şablonun açık talimatı gereği): yazar adları,
+kurum adresleri, Article Info (Received/Accepted/DOI), Acknowledgement,
+Correspondence. Şablon bu sarı dolgulu alanların bu dosyada
+doldurulmamasını, kapak sayfasında verilmesini istemektedir.
+
+**Figure A**, şablonun beş maddelik kuralına göre yeniden üretilmiştir:
+üzerindeki yazılar İngilizce, Times 9 punto, kalın değil, kenarlık çizgisi
+yok, çalışmayı özetleyen tek bir görsel. Açıklaması, şablonun istediği gibi
+görselden önce ve Figure A'ya atıf verilerek yazılmıştır.
+Kaynak: `../sekiller/Figure-A.png` (`sekiller_uret.py` içindeki `figure_a()`).
+
+Şablonun yazara yönelik açıklama metinleri (doldurulacak alanların içindeki
+yönergeler) boşaltılmıştır; şablonun kendi üst ve alt notları korunmuştur.
+Word'de bunları silmek isterseniz serbestsiniz.
+
 ## Doğrulama durumu
 
 Dört `.docx` dosyasının tamamı XSD şema doğrulamasından geçmiştir
-(`All validations PASSED`). İçerik pandoc ile geri okunarak teyit edilmiştir:
+(`All validations PASSED`). Genişletilmiş özet ayrıca şablonla
+karşılaştırmalı olarak doğrulanmıştır: paragraf sayısı 90 → 90, yani
+şablonun yapısı bozulmamıştır. İçerik pandoc ile geri okunarak teyit edilmiştir:
 7 çizelge, 6 şekil, 29 kaynak, doğru kenar boşluğu, yazı tipi, punto ve satır
 aralığı. **Görsel sayfa önizlemesi yapılamamıştır**; bu ortamdaki LibreOffice
 hiçbir docx dosyasını açamamaktadır (asgari bir test belgesiyle doğrulandı).

@@ -344,3 +344,73 @@ def grafik_ozet():
 
     fig.tight_layout(pad=0.4)
     kaydet(fig, 'Grafik-ozet')
+
+
+# --- Figure A: genişletilmiş İngilizce özet için (dergi şablonu) -------------
+def figure_a():
+    """
+    GAZİ MMFD genişletilmiş özet şablonu kuralları:
+      - üzerindeki yazılar İNGİLİZCE, Times 9 punto, kalın değil
+      - kenarlık çizgisi yok, %100 görünümde net ve okunur, 96 dpi'de okunabilir
+      - çalışmayı en iyi özetleyen TEK BİR resim
+    """
+    onceki = plt.rcParams['font.size']
+    plt.rcParams.update({'font.size': 9, 'axes.labelsize': 9,
+                         'xtick.labelsize': 9, 'ytick.labelsize': 9,
+                         'legend.fontsize': 9, 'axes.titlesize': 9})
+    fig, (a1, a2, a3) = plt.subplots(1, 3, figsize=(14 / 2.54, 6 / 2.54))
+    for ax in (a1, a2, a3):
+        for s in ('top', 'right'):
+            ax.spines[s].set_visible(False)
+
+    mals, bolg = M.oku('girdi_malzemeler.csv'), M.oku('girdi_bolgeler.csv')
+    x = [int(b['bolge']) for b in bolg]
+    u1 = M.sayi(bolg[0]['U_duvar_hedef'])
+    for m in mals:
+        lam = M.sayi(m['lambda']); d1 = M.kalinlik(lam, u1)
+        a1.plot(x, [M.kalinlik(lam, M.sayi(b['U_duvar_hedef'])) / d1 for b in bolg],
+                color='#999999', linewidth=0.5)
+    a1.plot(x, [(1 / M.sayi(b['U_duvar_hedef']) - M.R_DIGER) / (1 / u1 - M.R_DIGER)
+                for b in bolg], color='black', linewidth=1.6)
+    a1.set_xticks(x); a1.set_xlabel('climate zone')
+    a1.set_ylabel('thickness ratio')
+    a1.set_title('(a) no zone effect', pad=3)
+
+    ana, _ = M.tam_olcutler(M.OLCUTLER)
+    iklim = [b for b in bolg if b['bolge'] in M.IKLIM_BOLGELERI]
+    paylar = []
+    for y in ('Entropi', 'CRITIC', 'Eşit'):
+        _, _, _, w = M.calistir(iklim[0], y, True, True, ana)
+        paylar.append(max(w) * 100)
+    a2.bar(range(3), paylar, 0.55, color=['#111111', '#a6a6a6', '#ffffff'],
+           edgecolor='black', linewidth=0.7)
+    a2.set_xticks(range(3))
+    a2.set_xticklabels(['entropy', 'CRITIC', 'equal'])
+    a2.set_ylabel('share of heaviest criterion (%)')
+    a2.set_title('(b) weighting method', pad=3)
+
+    kod = M.tam_veri_kodlari(M.OLCUTLER_SINIR)
+    esikler = []
+    for b in iklim:
+        M.SINIR = 'S2'; lo, hi = 0.0, 1.0
+        for _ in range(18):
+            m = (lo + hi) / 2
+            M.C3_ORANI = m
+            adlar, t, _, _ = M.calistir(b, 'CRITIC', True, True,
+                                        M.OLCUTLER_SINIR, kod)
+            if 'ünü' in adlar[M.siralar(t).index(1)]:
+                hi = m
+            else:
+                lo = m
+        esikler.append(hi)
+    M.C3_ORANI = 1.0
+    a3.plot([int(b['bolge']) for b in iklim], esikler, color='black',
+            linewidth=1.4, marker='o', markersize=4, markerfacecolor='white')
+    a3.set_xticks([int(b['bolge']) for b in iklim])
+    a3.set_ylim(0, 1.05); a3.set_xlabel('climate zone')
+    a3.set_ylabel('threshold release fraction')
+    a3.set_title('(c) system boundary', pad=3)
+
+    fig.tight_layout(pad=0.4)
+    kaydet(fig, 'Figure-A')
+    plt.rcParams['font.size'] = onceki
