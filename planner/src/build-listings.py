@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 import sys, html, os
-sys.path.insert(0, "/tmp/gen")
-from data import PRODUCTS
+import importlib.util as _ilu
+_spec = _ilu.spec_from_file_location("listing_copy",
+    os.path.join(os.path.dirname(os.path.abspath(__file__)), "listing-copy.py"))
+_lc = _ilu.module_from_spec(_spec); _spec.loader.exec_module(_lc)
+PRODUCTS = _lc.PRODUCTS
 
 E = lambda s: html.escape(s, quote=True)
 uid = 0
@@ -406,6 +409,6 @@ footer.end{{ grid-column:1 / -1; border-top:1px solid var(--line-2); margin-top:
 }})();
 </script>
 '''
-out = "/home/user/sanat-ve-mekan/planner/etsy-listings.html"
+out = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "etsy-listings.html")
 open(out, "w", encoding="utf-8").write(HTML)
 print("wrote", out, len(HTML), "bytes")

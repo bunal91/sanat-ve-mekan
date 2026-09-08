@@ -1,12 +1,13 @@
 # Printable planner shop — product packs
 
-Twelve digital-download products (one of them a bundle), all generated from HTML templates: **Dusk Ladder**, a one-page
+Fourteen digital-download products (one of them a bundle), all generated from HTML templates: **Dusk Ladder**, a one-page
 daily planner; **Party Line**, a nine-page birthday planning kit; **Confetti Club**, a nine-page
 kids' party kit; **Golden Hour**, an eleven-page milestone birthday kit; **First Move**, an eight-page
 ADHD-friendly planning set; **Same Shape**, a nine-page autism-friendly set; **Steady**, a nine-page anxiety journal;
 **Small Light**, a nine-page journal for low days; **Thirty-First**, a nine-page Halloween
-party kit; **Long December**, a nine-page Christmas planning kit; and **One Table**, a nine-page
-Thanksgiving kit. Each has its own design language rather
+party kit; **Long December**, a nine-page Christmas planning kit; **One Table**, a nine-page
+Thanksgiving kit; **Five to Midnight**, a nine-page New Year kit; and **Four Days**, a nine-page
+Easter kit. Each has its own design language rather
 than a recoloured shell. Every variant a listing
 needs — page sizes, colourways, languages, print and fillable — comes out of one build.
 
@@ -27,6 +28,8 @@ planner/
 ├── halloween.py                  # Halloween party kit: nine pages, one night
 ├── christmas.py                  # Christmas kit: nine pages, the whole of December
 ├── thanksgiving.py               # Thanksgiving kit: nine pages, one meal, one oven
+├── newyear.py                    # New Year kit: nine pages, the night and the turn
+├── easter.py                     # Easter kit: nine pages, a four-day weekend
 ├── src/
 │   ├── planner.template.html    # the daily planner (single source of truth)
 │   ├── readme.template.html     # the "start here" sheet the buyer opens first (both products)
@@ -43,6 +46,8 @@ planner/
 ├── halloween-planner.html       # browser/preview copy (Letter · spooky · 9 pages)
 ├── christmas-planner.html       # browser/preview copy (Letter · spruce · 9 pages)
 ├── thanksgiving-planner.html    # browser/preview copy (Letter · harvest · 9 pages)
+├── newyear-planner.html         # browser/preview copy (Letter · midnight · 9 pages)
+├── easter-planner.html          # browser/preview copy (Letter · dye · 9 pages)
 ├── etsy-rehberi.html            # Turkish guide: shop setup, listing copy, pricing, niche
 ├── etsy-listings.html           # the twelve listings, ready to paste (generated)
 │   └── src/listing-copy.py       # the copy itself; src/build-listings.py renders the page
@@ -57,7 +62,9 @@ planner/
 ├── dist-bundle/                 # bundle sheets, listing images, foldered zips
 ├── dist-halloween/              # Halloween kit — same shape
 ├── dist-christmas/              # Christmas kit — same shape
-└── dist-thanksgiving/           # Thanksgiving kit — same shape
+├── dist-thanksgiving/           # Thanksgiving kit — same shape
+├── dist-newyear/                # New Year kit — same shape
+└── dist-easter/                 # Easter kit — same shape
 ```
 
 ## Build
@@ -80,6 +87,8 @@ python3 bundle.py                    # bundle sheets + foldered zips (build the 
 python3 halloween.py                 # the Halloween kit
 python3 christmas.py                 # the Christmas kit
 python3 thanksgiving.py              # the Thanksgiving kit
+python3 newyear.py                   # the New Year kit
+python3 easter.py                    # the Easter kit
 ```
 
 Chromium (headless) does the rendering and prints the PDFs at exact page size; `PLANNER_WORK`
@@ -264,6 +273,41 @@ setting — plate, fork, knife and the fold of a napkin — drawn in strokes, th
 page to page. Colour has a job: maple is the food and the oven, sage the people and the table,
 cranberry anything with a clock on it. Weights and temperatures lead in lb and °F with kg and °C
 alongside, because the buyers are overwhelmingly American.
+
+## The New Year kit
+
+Nine pages in two halves. Pages 1–4 run the night backwards from 00:00: what kind of night it is,
+a guest list with a *getting home how* column and a bed count, the run of show with MIDNIGHT
+framed in the middle of nine beats, and food twice — grazing before eleven and something hot after
+it — beside a table of how many bottles 6, 12, 20 or 30 people need. Pages 5–9 turn the year over:
+twelve lines looking back, a page of things to put down, next year on one page, the first week of
+January, and the first of January itself. 488 form fields, four variants.
+
+Page 6 is the one that is deliberately not a goals page. It lists obligations not being renewed,
+subscriptions costing money for nothing, a project you are allowed to abandon and a habit named
+plainly — because new intentions stacked on a year that is already full are how January
+resolutions die in February. Page 7 then allows three: one to start, one to stop, one to finish.
+
+Syne over Hanken Grotesk; midnight blue, gold and plum on white. The masthead mark is a drawn
+clock face and it actually advances — 11:55 on page 1, one minute later on each page, 11:59 by
+the last.
+
+## The Easter kit
+
+Nine pages for a four-day weekend rather than one lunch: the four days at a glance, the hunt
+worked out, the hiding map, baskets and the bill, Sunday lunch, the other three days, four days of
+children, beds and the driving, and Tuesday. 496 form fields, four variants.
+
+Page 3 is the reason the kit exists: sketch the garden or the room, number every hiding place as
+you hide it, tick it off as it is found — and whatever is unticked at the end of the morning is
+the egg that turns up behind a radiator in July. Page 2 does the arithmetic nobody does in the
+shop (8–10 eggs each under three, rising to 20–25 for the oldest, times the number of children),
+and page 4 costs each basket with a *not chocolate* column and a running total, because baskets
+grow every year when several adults buy separately and nobody adds it up.
+
+Marcellus over Mulish, in egg-dye colours — rhubarb, duck-egg and daffodil on white, rather than
+the usual pastel wash. The masthead egg is drawn with a dip-dye band computed from the ellipse,
+and the dye line rises one page to the next.
 
 ## How the fillable PDFs are made
 

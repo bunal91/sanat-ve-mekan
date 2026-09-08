@@ -705,4 +705,121 @@ No year printed anywhere. Works for Thanksgiving, Friendsgiving, or any large me
  hashtags="#thanksgiving #thanksgivingdinner #friendsgiving #hosting #thanksgivingplanner #potluck #turkey #mealplanning #printableplanner #digitaldownload",
  note="Almost entirely a US market, so lb and °F lead. Thanksgiving 2026 is 26 November; searches start mid-October and peak 10–20 November. This listing sells between the Halloween one and the Christmas one — all three need to be live in September.",
 ),
+# ---------------------------------------------------------------- 13
+dict(
+ key="newyear", name="Five to Midnight", kind="New Year kit", accent="#2b2d6b", pages="9 pages",
+ price="12.50", coupon="20% through November — no discount after 20 December",
+ folder="dist-newyear/etsy/",
+ section="Seasonal kits",
+ title="New Year Planner Printable, Fillable PDF, New Years Eve Party Kit, Year in Review, Goal Setting, Undated 9 Pages, Letter + A4",
+ desc="""Nine pages in two halves. The first four run New Year’s Eve backwards from 00:00 — the food, the pour, the glasses, the guest list. The last five turn the year over: twelve lines looking back, a page of things to put down, next year on one page, and the first week of January nobody plans.
+
+▸ THE TWO THINGS THAT RUIN NEW YEAR’S EVE
+Not enough to eat after eleven, and no way home. Everything else is decoration. So page 4 puts food on the table twice — grazing before eleven, and something hot and salty after midnight that nobody has to cook at half past twelve. And the guest list on page 2 has a GETTING HOME HOW column, asked on the invitation in December, because at one in the morning on the first of January there are no taxis and there is no talking anyone out of driving.
+
+▸ THE PAGE THAT IS NOT A GOALS PAGE
+Page 6 is a list of things to STOP. Obligations not being renewed, subscriptions costing money for nothing, a project you are allowed to abandon, a habit named plainly. New intentions stacked on a year that is already full are exactly how January resolutions die in February — so this kit asks you to subtract before it lets you add. Then page 7 gives you three lines, not thirty: one to start, one to stop, one to finish.
+
+▸ THE NINE PAGES
+1. The last night — what kind of night it is, and what happens at midnight
+2. Who is here, and how they leave — 20 rows, with beds and driving counted
+3. Backwards from midnight — hour by hour, and nine beats with MIDNIGHT in the middle
+4. Food twice, drink counted — including how many bottles for 6, 12, 20 or 30 people
+5. The year, in twelve lines — one line for each month, using a calendar and not your memory
+6. Not carrying this over
+7. Next year, on one page — three things, four quarters, money, and what is already in the diary
+8. The first week of January — renewals, what they cost now, and an hour of admin
+9. The first of January — how the night went, and today, and nothing more
+
+""" + COMMON_HOWITWORKS + """
+▸ WHAT YOU GET, INSTANTLY
+• 4 fillable kits — US Letter + A4, in colour + ink-saving mono, 9 pages each, 488 typing fields
+• 4 print kits — the same nine pages with no form fields
+• A START-HERE sheet
+• Three zips: complete, Letter only, A4 only
+
+▸ UNDATED, WHICH MATTERS MOST ON THIS ONE
+No year is printed anywhere, so it is not a diary you throw away. Save your filled-in copy and next December page 5 opens with this year’s twelve lines already in it — and the year stops vanishing.
+
+""" + COMMON_NOTE + "\n" + lic("for your own new year"),
+ tags=["new year planner","new years eve","year in review","goal planner","nye party",
+       "party planner","fillable pdf","undated planner","reflection journal","new year goals",
+       "year end review","party checklist","digital download"],
+ materials=["Fillable PDF, 488 typing fields","9 pages","US Letter 8.5 x 11 in","A4",
+            "Instant digital download","Undated — works every year",
+            "The night counted back from 00:00","A getting-home-how column on the guest list",
+            "Bottle arithmetic for 6 to 30 people","The year in twelve lines",
+            "A stop list, not a goals list","Colour and ink-saving mono",
+            "Personal use licence"],
+ category="Paper & Party Supplies › Paper › Calendars & Planners",
+ attrs=["Type: Planner","Holiday: New Year","Occasion: Party","Digital download: Yes"],
+ alts=["Printable New Year planner cover page with a drawn clock at five to midnight and a what-kind-of-night list",
+       "All nine pages of the New Year kit, from the party pages to the year in twelve lines",
+       "Close-up of the year in twelve lines page, one ruled line against each month"],
+ pin_title="A New Year planner that asks you to subtract before you add",
+ pin_desc="New Year’s Eve counted back from midnight, a guest list that asks how everyone is getting home, then the year in twelve lines and a page of things to stop. Fillable PDF, undated.",
+ hashtags="#newyear #newyearseve #yearinreview #newyearplanner #nye #goalsetting #newyearnewgoals #printableplanner #fillablepdf #digitaldownload",
+ note="Two audiences in one listing, and that is deliberate: party searches peak 20–31 December, reflection and goal searches peak 27 December to 6 January. Because the second wave lands after Christmas, this is the one seasonal listing still worth money in the first week of January — do not discount it then.",
+),
+# ---------------------------------------------------------------- 14
+dict(
+ key="easter", name="Four Days", kind="Easter kit", accent="#c2456a", pages="9 pages",
+ price="12.50", coupon="25% until mid-February — no discount in the last three weeks",
+ folder="dist-easter/etsy/",
+ section="Seasonal kits",
+ title="Easter Planner Printable, Fillable PDF, Egg Hunt Planner with Hiding Map, Easter Basket List, Sunday Lunch, 9 Pages, Letter + A4",
+ desc="""Nine pages for a four-day weekend rather than one lunch: the egg hunt worked out from the number of children, a map to write every hiding place on, baskets costed per child before you buy them, Sunday lunch, and something to do on the other three days.
+
+▸ THE PAGE NOBODY ELSE SELLS
+Page 3 is the hiding map. You sketch the garden or the room, number every hiding place as you hide it, and tick it off as it is found. Whatever is still unticked at the end of the morning is the chocolate that turns up behind a radiator in July, or under a hedge in a state nobody wants to describe. Two minutes with a pen, and the hunt actually finishes.
+
+▸ TWO NUMBERS SO YOU DO NOT GUESS
+HOW MANY EGGS. Page 2 has a table by age — roughly 8–10 each under three, 12–15 for three to fives, 18–20 for six to nines, 20–25 above that — and then does the multiplication for you: children hunting × eggs each = eggs to buy. No more standing in the shop guessing.
+
+WHAT IT COSTS. Page 4 gives every child a row with a chocolate column, a NOT CHOCOLATE column and a cost, with a budgeted / spent / left total underneath. Easter baskets grow every year for one reason: several adults buy separately and nobody adds it up.
+
+▸ THE NINE PAGES
+1. Four days, not one lunch — Friday, Saturday, Sunday, Monday, and who is here for which
+2. The hunt, worked out — eggs by age, zones so the little ones stand a chance, and the rules
+3. Where they are hidden — the map, and 24 numbered places, hidden then found
+4. Baskets, and the bill
+5. Sunday lunch — the table, and the meat with its resting time
+6. The other three days — Good Friday, Saturday, Easter Monday
+7. Four days of children — including how to dye eggs without the disaster
+8. Beds and the driving — who sleeps where on which of the three nights
+9. Tuesday — the chocolate, honestly, and what is still not found
+
+""" + COMMON_HOWITWORKS + """
+▸ WHAT YOU GET, INSTANTLY
+• 4 fillable kits — US Letter + A4, in colour + ink-saving mono, 9 pages each, 496 typing fields
+• 4 print kits — the same nine pages with no form fields
+• A START-HERE sheet
+• Three zips: complete, Letter only, A4 only
+
+▸ THE PAGE TO PRINT
+Page 3. It is the one you will be holding while standing in a garden, and a phone is the wrong thing to be holding then.
+
+▸ UNDATED
+Easter moves every year, so no dates are printed anywhere. Save your filled-in copy and next spring it opens with the baskets, the beds and last year’s hiding places already in it.
+
+""" + COMMON_NOTE + "\n" + lic("for your own Easter"),
+ tags=["easter planner","easter egg hunt","egg hunt printable","easter basket","easter printable",
+       "easter checklist","fillable pdf","holiday planner","easter weekend","easter sunday",
+       "kids activity","party planner","digital download"],
+ materials=["Fillable PDF, 496 typing fields","9 pages","US Letter 8.5 x 11 in","A4",
+            "Instant digital download","Undated — Easter moves every year",
+            "Egg hunt hiding map, 24 numbered places","Eggs-per-child table by age",
+            "Baskets costed, with a running total","A non-chocolate column on every basket",
+            "Four days planned, not one lunch","Colour and ink-saving mono",
+            "Personal use licence"],
+ category="Paper & Party Supplies › Paper › Calendars & Planners",
+ attrs=["Type: Planner","Holiday: Easter","Occasion: Party","Digital download: Yes"],
+ alts=["Printable Easter planner cover with a drawn dip-dyed egg and the four days of the weekend",
+       "All nine pages of the Easter kit, including the hiding map and the basket costing page",
+       "Close-up of the hiding map page, with numbered hiding places ticked as hidden and as found"],
+ pin_title="The Easter planner with a hiding map, so the last egg is found in April",
+ pin_desc="How many eggs per child by age, a map to write every hiding place on and tick off as it is found, baskets costed before you buy, and four days planned instead of one lunch. Fillable PDF.",
+ hashtags="#easter #easteregghunt #easterplanner #easterbasket #egghunt #easterweekend #kidsactivities #holidayplanner #printableplanner #digitaldownload",
+ note="Easter moves: 2027 is 28 March, 2028 is 16 April. List in JANUARY — searches start about six weeks out and peak in the ten days before. The hunt and basket pages are the reason people buy, so make image 1 the hiding map, not the cover.",
+),
 ]
