@@ -22,11 +22,12 @@ Her kaynağa bir anahtar verilmiştir; `girdi_malzemeler.csv` içindeki
 | **K03** | Miselyum kompozit ölçümü (2025) | λ = 0,047 ± 0,002 W/mK · c = 1714 ± 105 J/kgK |
 | **K04** | *Analysis of Sheep Wool-Based Composites for Building Insulation*, PMC9143407 | 24 numune; ρ = 30–138,7 kg/m³ · λ = 0,0324–0,0436 W/mK |
 | **K05** | *Hygrothermal Properties and Performance of Bio-Based Insulation Materials Locally Sourced in Sweden*, PMC11084737 | Ahşap lifi ρ50 λ0,038 c2100 · çim ρ40 λ0,041 c1500 · deniz otu ρ120 λ0,05 · taşyünü ρ29 λ0,037 c1030 |
-| **K06** | Ayçiçeği özü bağlayıcısız yonga levha çalışmaları | ρ = 50–100 kg/m³ · λ = 0,038–0,042 W/mK |
+| **K06** | Mati-Baouche N., De Baynast H., Lebert A., Sun S., Lopez-Mingo C.J.S., Leclaire P., Michaud P. (2014), *Mechanical, thermal and acoustical characterizations of an insulating bio-based composite made from sunflower stalks particles and chitosan*, Industrial Crops and Products, 58, 244–250. Tam metin okundu (HAL hal-01323684). | λ = 0,056–0,058 W/mK · ρ = 150–200 kg/m³ (kitosan bağlayıcılı ayçiçeği sapı kompoziti) |
 | **K07** | Pirinç kavuzu esaslı yalıtım levhaları (çoklu çalışma) | ρ = 300–520 kg/m³ ile λ = 0,064–0,076 W/mK; ρ = 378–488 kg/m³ ile λ = 0,08–0,14 W/mK |
 | **K08** | Biyo-bazlı yalıtım derlemesi (2025), ScienceDirect S1364032125005453 | Koyun yünü, kenevir, keten, jüt lifleri: λ = 0,031–0,046 W/mK |
 | **K09** | Kenevir esaslı yalıtım ölçümleri | λ = 0,055–0,065 W/mK (kenevir kırığı / hempcrete; lif keçesinden farklıdır) |
 | **K10** | Genleştirilmiş mantar levha (ICB) çalışmaları | ρ ≈ 110 kg/m³ · λ = 0,040–0,050 W/mK |
+| **K21** | Mohammed W., Osman Z., Elarabi S., Mehats J., Charrier B. (2024), *Mechanical and physical properties of biocomposites for furniture and thermal insulation*, Cellulose Chemistry and Technology, 58, 3–4, 331–338. Tam metin okundu (açık erişim). | Şeker kamışı küspesi levhası λ = 0,082 W/mK · ρ = 614 kg/m³ (kazein bağlayıcı) / 634 (tanen) |
 
 ## Mevzuat ve iklim verisi
 

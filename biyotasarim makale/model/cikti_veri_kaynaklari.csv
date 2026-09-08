@@ -1,0 +1,109 @@
+kod,ad,buyukluk,deger,kaynak,kalite_1_5
+M01,Ahşap lifi levha,lambda,0.038,K05,4
+M01,Ahşap lifi levha,yogunluk,50,K05,4
+M01,Ahşap lifi levha,ozgul_isi,2100,K05,4
+M01,Ahşap lifi levha,gomulu_karbon_kg,0.721,K15:Wood fibre board wet process 2023,5
+M01,Ahşap lifi levha,biyojenik_karbon_kg,-1.739,K15:Wood fibre board wet process 2023,5
+M01,Ahşap lifi levha,yangin_sinif,E,EN 13501-1 sınıflandırma belgesi / üretici beyanı,
+M02,Kenevir lifi levha,lambda,0.040,K08,3
+M02,Kenevir lifi levha,yogunluk,40,K08,3
+M02,Kenevir lifi levha,ozgul_isi,1700,DOLDUR,1
+M02,Kenevir lifi levha,gomulu_karbon_kg,1.881,K15:Hemp fibre fleece 38kg/m3 2022,4
+M02,Kenevir lifi levha,biyojenik_karbon_kg,-1.509,K15:Hemp fibre fleece 38kg/m3 2022,4
+M02,Kenevir lifi levha,yangin_sinif,E,EN 13501-1 sınıflandırma belgesi / üretici beyanı,
+M03,Keten lifi levha,lambda,0.038,K08,3
+M03,Keten lifi levha,yogunluk,35,K08,3
+M03,Keten lifi levha,ozgul_isi,1600,DOLDUR,1
+M03,Keten lifi levha,gomulu_karbon_kg,1.871,K15:Flax fibre fleece 38kg/m3 2022,4
+M03,Keten lifi levha,biyojenik_karbon_kg,-1.519,K15:Flax fibre fleece 38kg/m3 2022,4
+M03,Keten lifi levha,yangin_sinif,E,EN 13501-1 sınıflandırma belgesi / üretici beyanı,
+M04,Koyun yünü,lambda,0.038,K04,4
+M04,Koyun yünü,yogunluk,60,K04,4
+M04,Koyun yünü,ozgul_isi,1720,DOLDUR,1
+M04,Koyun yünü,gomulu_karbon_kg,0.726,K15:ISOLENA Schafwolle 2025,5
+M04,Koyun yünü,biyojenik_karbon_kg,-1.566,K15:ISOLENA Schafwolle 2025,5
+M04,Koyun yünü,yangin_sinif,E,EN 13501-1 sınıflandırma belgesi / üretici beyanı,
+M05,Geri dönüşüm tekstil,lambda,0.039,K08,3
+M05,Geri dönüşüm tekstil,yogunluk,35,K08,3
+M05,Geri dönüşüm tekstil,ozgul_isi,1600,DOLDUR,1
+M05,Geri dönüşüm tekstil,gomulu_karbon_kg,1.134,K15:HemKor Jute Blend 2025,2
+M05,Geri dönüşüm tekstil,biyojenik_karbon_kg,-1.495,K15:HemKor Jute Blend 2025,2
+M05,Geri dönüşüm tekstil,yangin_sinif,E,EN 13501-1 sınıflandırma belgesi / üretici beyanı,
+M06,Selüloz (püskürtme),lambda,0.040,DOLDUR,1
+M06,Selüloz (püskürtme),yogunluk,50,DOLDUR,1
+M06,Selüloz (püskürtme),ozgul_isi,1600,DOLDUR,1
+M06,Selüloz (püskürtme),gomulu_karbon_kg,0.233,K15:Cellulose fibre blowing 2022,5
+M06,Selüloz (püskürtme),biyojenik_karbon_kg,-1.832,K15:Cellulose fibre blowing 2022,5
+M06,Selüloz (püskürtme),yangin_sinif,B,EN 13501-1 sınıflandırma belgesi / üretici beyanı,
+M07,Kenevir-kireç (hempcrete),lambda,0.060,K09,3
+M07,Kenevir-kireç (hempcrete),yogunluk,330,DOLDUR,1
+M07,Kenevir-kireç (hempcrete),ozgul_isi,1500,DOLDUR,1
+M07,Kenevir-kireç (hempcrete),gomulu_karbon_kg,DOLDUR,DOLDUR,0
+M07,Kenevir-kireç (hempcrete),biyojenik_karbon_kg,-0.60,hesap_C_icerigi,1
+M07,Kenevir-kireç (hempcrete),yangin_sinif,B,EN 13501-1 sınıflandırma belgesi / üretici beyanı,
+M08,Saman balya,lambda,0.060,DOLDUR,1
+M08,Saman balya,yogunluk,100,DOLDUR,1
+M08,Saman balya,ozgul_isi,1500,DOLDUR,1
+M08,Saman balya,gomulu_karbon_kg,0.185,K15:FASBA Baustroh 100kg/m3 2024,5
+M08,Saman balya,biyojenik_karbon_kg,-1.482,K15:FASBA Baustroh 100kg/m3 2024,5
+M08,Saman balya,yangin_sinif,E,EN 13501-1 sınıflandırma belgesi / üretici beyanı,
+M09,Genleştirilmiş mantar (ICB),lambda,0.045,K10,3
+M09,Genleştirilmiş mantar (ICB),yogunluk,110,K10,3
+M09,Genleştirilmiş mantar (ICB),ozgul_isi,1800,DOLDUR,1
+M09,Genleştirilmiş mantar (ICB),gomulu_karbon_kg,0.512,K15:Expanded cork 80kg/m3 2023,5
+M09,Genleştirilmiş mantar (ICB),biyojenik_karbon_kg,-1.581,K15:Expanded cork 80kg/m3 2023,5
+M09,Genleştirilmiş mantar (ICB),yangin_sinif,E,EN 13501-1 sınıflandırma belgesi / üretici beyanı,
+M10,Pirinç kavuzu paneli,lambda,0.070,K07,3
+M10,Pirinç kavuzu paneli,yogunluk,400,K07,3
+M10,Pirinç kavuzu paneli,ozgul_isi,1700,DOLDUR,1
+M10,Pirinç kavuzu paneli,gomulu_karbon_kg,DOLDUR,DOLDUR,0
+M10,Pirinç kavuzu paneli,biyojenik_karbon_kg,-1.50,hesap_C_icerigi,2
+M10,Pirinç kavuzu paneli,yangin_sinif,E,EN 13501-1 sınıflandırma belgesi / üretici beyanı,
+M11,Ayçiçeği sapı-kitosan kompozit,lambda,0.056,K06,5
+M11,Ayçiçeği sapı-kitosan kompozit,yogunluk,150,K06,5
+M11,Ayçiçeği sapı-kitosan kompozit,ozgul_isi,1700,DOLDUR,1
+M11,Ayçiçeği sapı-kitosan kompozit,gomulu_karbon_kg,DOLDUR,DOLDUR,0
+M11,Ayçiçeği sapı-kitosan kompozit,biyojenik_karbon_kg,-1.50,hesap_C_icerigi,2
+M11,Ayçiçeği sapı-kitosan kompozit,yangin_sinif,E,EN 13501-1 sınıflandırma belgesi / üretici beyanı,
+M12,Şeker kamışı küspesi levhası,lambda,0.082,K21,5
+M12,Şeker kamışı küspesi levhası,yogunluk,614,K21,5
+M12,Şeker kamışı küspesi levhası,ozgul_isi,1700,DOLDUR,1
+M12,Şeker kamışı küspesi levhası,gomulu_karbon_kg,DOLDUR,DOLDUR,0
+M12,Şeker kamışı küspesi levhası,biyojenik_karbon_kg,-1.50,hesap_C_icerigi,2
+M12,Şeker kamışı küspesi levhası,yangin_sinif,E,EN 13501-1 sınıflandırma belgesi / üretici beyanı,
+M13,Fındık kabuğu esaslı panel,lambda,0.060,DOLDUR,1
+M13,Fındık kabuğu esaslı panel,yogunluk,300,DOLDUR,1
+M13,Fındık kabuğu esaslı panel,ozgul_isi,1700,DOLDUR,1
+M13,Fındık kabuğu esaslı panel,gomulu_karbon_kg,DOLDUR,DOLDUR,0
+M13,Fındık kabuğu esaslı panel,biyojenik_karbon_kg,-1.50,hesap_C_icerigi,2
+M13,Fındık kabuğu esaslı panel,yangin_sinif,E,EN 13501-1 sınıflandırma belgesi / üretici beyanı,
+M14,Miselyum esaslı kompozit,lambda,0.047,K01;K03,3
+M14,Miselyum esaslı kompozit,yogunluk,120,DOLDUR,1
+M14,Miselyum esaslı kompozit,ozgul_isi,1714,K03,4
+M14,Miselyum esaslı kompozit,gomulu_karbon_kg,DOLDUR,DOLDUR,0
+M14,Miselyum esaslı kompozit,biyojenik_karbon_kg,-1.50,hesap_C_icerigi,2
+M14,Miselyum esaslı kompozit,yangin_sinif,E,EN 13501-1 sınıflandırma belgesi / üretici beyanı,
+R01,EPS,lambda,0.035,DOLDUR,1
+R01,EPS,yogunluk,20,DOLDUR,1
+R01,EPS,ozgul_isi,1450,DOLDUR,1
+R01,EPS,gomulu_karbon_kg,DOLDUR,DOLDUR,0
+R01,EPS,biyojenik_karbon_kg,0.00,tanim,5
+R01,EPS,yangin_sinif,E,EN 13501-1 sınıflandırma belgesi / üretici beyanı,
+R02,XPS,lambda,0.032,DOLDUR,1
+R02,XPS,yogunluk,32,DOLDUR,1
+R02,XPS,ozgul_isi,1450,DOLDUR,1
+R02,XPS,gomulu_karbon_kg,3.174,K15:XPS 32kg/m3 2023,5
+R02,XPS,biyojenik_karbon_kg,0.013,K15:XPS 32kg/m3 2023,5
+R02,XPS,yangin_sinif,E,EN 13501-1 sınıflandırma belgesi / üretici beyanı,
+R03,Taşyünü,lambda,0.037,K05,4
+R03,Taşyünü,yogunluk,29,K05,4
+R03,Taşyünü,ozgul_isi,1030,K05,4
+R03,Taşyünü,gomulu_karbon_kg,1.515,K15:Mineral wool floor ins. 85kg/m3 2022,3
+R03,Taşyünü,biyojenik_karbon_kg,0.016,K15:Mineral wool floor ins. 85kg/m3 2022,3
+R03,Taşyünü,yangin_sinif,A1,EN 13501-1 sınıflandırma belgesi / üretici beyanı,
+R04,Camyünü,lambda,0.035,DOLDUR,1
+R04,Camyünü,yogunluk,20,DOLDUR,1
+R04,Camyünü,ozgul_isi,1030,DOLDUR,1
+R04,Camyünü,gomulu_karbon_kg,1.244,K15:SAGLAN glass wool 2021,4
+R04,Camyünü,biyojenik_karbon_kg,-0.166,K15:SAGLAN glass wool 2021,4
+R04,Camyünü,yangin_sinif,A1,EN 13501-1 sınıflandırma belgesi / üretici beyanı,

@@ -1,0 +1,12 @@
+kod,ad,oekobaudat_veri_kumesi,uuid,surum_yili,referans_birim,GWP_A1A3_kgCO2e_kg,C3,C4,D
+M01,Ahşap lifi levha,Wood fibre board wet process 2023,c91aa879-2826-4078-8bfa-baae349549cb,2023,Volume,-1.0168,1.7765,0.0000,-0.5204
+M02,Kenevir lifi levha,Hemp fibre fleece 38kg/m3 2022,1018517a-1fb0-40c9-aa82-d7d3c2687b49,2022,Masse,0.3729,2.1630,0.0000,-0.4704
+M03,Keten lifi levha,Flax fibre fleece 38kg/m3 2022,1edb805d-08dc-461e-8195-05a9865470d0,2022,Volume,0.8900,2.1630,0.0000,-0.4704
+M04,Koyun yünü,ISOLENA Schafwolle 2025,4f0df91e-dbc6-457b-bdd9-bf6ca0b518d3,2025,Volumen,-0.8315,1.6062,0.0000,-0.2994
+M05,Geri dönüşüm tekstil,HemKor Jute Blend 2025,4089074f-a1b7-411b-a888-5839b1b053e6,2025,Area,-0.3583,1.6005,0.0000,-0.3779
+M06,Selüloz (püskürtme),Cellulose fibre blowing 2022,e08642c5-4c81-4170-9130-d7fa8fb6509f,2022,Volume,-1.5994,1.8728,0.0000,-0.5128
+M08,Saman balya,FASBA Baustroh 100kg/m3 2024,00fe2655-02ad-4ded-925a-af9b8f1a27c8,2024,Volumen,-1.2938,1.5042,0.0000,-0.0750
+M09,Genleştirilmiş mantar (ICB),Expanded cork 80kg/m3 2023,fdbe82c6-7073-4f8c-a540-c37a6bf16cd6,2023,Volume,-1.0635,1.6040,0.0000,-0.3122
+R02,XPS,XPS 32kg/m3 2023,c4ddfdbc-ee2b-4dd5-a754-b317cf06470a,2023,Volume,3.1881,3.6914,0.0000,-1.3829
+R03,Taşyünü,Mineral wool floor ins. 85kg/m3 2022,,,,DOLDUR,DOLDUR,DOLDUR,DOLDUR
+R04,Camyünü,SAGLAN glass wool 2021,797ad7c5-bf5b-4332-8a3f-13cb09d1beb0,2021,Gewicht,1.0787,0.0000,0.0073,-0.0533

@@ -16,7 +16,7 @@ pencere_orani_dogu,0.15,-,
 pencere_orani_bati,0.15,-,
 cati_alani,288.0,m2,
 taban_alani,288.0,m2,
-hava_degisim_sayisi,0.7,m3/(h.m2),TS 825:2024 konut ve apartman
+hava_degisim_sayisi,0.7,1/h,TS 825 konut ve apartman icin hava degisim sayisi n_h
 ic_kazanc_katsayisi,5.0,W/m2,konut - 5*An
 golgelenme_faktoru,0.6,-,10 kata kadar binalar - TS 825
 gunes_gecirme_faktoru,0.6,-,çift camlı low-E - DOĞRULANACAK

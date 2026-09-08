@@ -215,7 +215,10 @@ def iklim_ayari(agirliklar, olcutler, bolge_no, alfa=ALFA):
     """
     dg = derece_gun(bolge_no)
     if dg is None:
-        return list(agirliklar)      # iklim verisi yoksa ayar uygulanmaz
+        raise ValueError(
+            f'{bolge_no}. bölge için iklim verisi yok; iklim ayarlı ağırlık '
+            f'hesaplanamaz. İklim ayarı yalnızca {", ".join(IKLIM_BOLGELERI)}. '
+            f'bölgeler için tanımlıdır (bkz. IKLIM_BOLGELERI).')
     carpan = []
     for (anahtar, _, _), w in zip(olcutler, agirliklar):
         if anahtar == 'kappa_kJm2K':
@@ -296,7 +299,7 @@ OLCUTLER = [
     ('yangin_puan',         'Ö7 Yangına tepki',             'max'),
     ('yasam_sonu_puan',     'Ö9 Yaşam sonu senaryosu',      'max'),
     ('nem_kuf_puan',        'Ö10 Nem/küf duyarlılığı',      'min'),
-    ('kalinlik_cm',         'Ö11 Duvar kalınlığı kaybı',    'min'),
+    ('kalinlik_cm',         'Ö11 Gerekli yalıtım kalınlığı',    'min'),
 ]
 
 
@@ -379,14 +382,15 @@ OLCUTLER_SINIR = [
     ('yangin_puan',              'Ö7 Yangına tepki',          'max'),
     ('yasam_sonu_puan',          'Ö9 Yaşam sonu senaryosu',   'max'),
     ('nem_kuf_puan',             'Ö10 Nem/küf duyarlılığı',   'min'),
-    ('kalinlik_cm',              'Ö11 Duvar kalınlığı kaybı', 'min'),
+    ('kalinlik_cm',              'Ö11 Gerekli yalıtım kalınlığı', 'min'),
 ]
 
 
-def karar_matrisi(bolge, olcutler=OLCUTLER, kisit=True, kodlar=None):
+def karar_matrisi(bolge, olcutler=OLCUTLER, kisit=True, kodlar=None, mals=None):
     """Bölge için karar matrisi; kisit=True ise uygulanamayan alternatifler elenir.
-    kodlar verilirse yalnızca o alternatifler kullanılır."""
-    mals = oku('girdi_malzemeler.csv')
+    kodlar verilirse yalnızca o alternatifler kullanılır. mals verilirse dosya
+    yerine o alternatif listesi kullanılır (duyarlılık çözümlemeleri için)."""
+    mals = oku('girdi_malzemeler.csv') if mals is None else mals
     if kodlar is not None:
         mals = [m for m in mals if m['kod'] in kodlar]
     if kisit:
@@ -410,8 +414,8 @@ def karar_matrisi(bolge, olcutler=OLCUTLER, kisit=True, kodlar=None):
 
 
 def calistir(bolge, yontem='Entropi', iklim=True, kisit=True, olcutler=OLCUTLER,
-             kodlar=None):
-    matris, adlar = karar_matrisi(bolge, olcutler, kisit, kodlar)
+             kodlar=None, mals=None):
+    matris, adlar = karar_matrisi(bolge, olcutler, kisit, kodlar, mals)
     w = AGIRLIK_YONTEMLERI[yontem](matris)
     if iklim:
         w = iklim_ayari(w, olcutler, int(bolge['bolge']))
@@ -459,15 +463,44 @@ def dogrula_kalinlik():
 
 # --- 7. Rapor -----------------------------------------------------------------
 def veri_raporu():
+    """Ana çalıştırmanın ölçüt seti: eksiksiz veriye sahip ölçütler (eşik 0).
+
+    Eksik değer sıfıra çevrilmez; sıfıra çevirme bir ölçütü görünmez biçimde
+    etkisizleştirir. Eşik seçiminin sonuca etkisi ayrıca raporlanır.
+    """
     print('=' * 78)
-    print('VERİ BÜTÜNLÜĞÜ')
+    print('VERİ BÜTÜNLÜĞÜ — ana çalıştırma ölçüt seti (eşik: eksiksiz veri)')
     print('=' * 78)
-    tutulan, elenen = kullanilabilir_olcutler()
-    for o, eksik, n in [(x, *veri_eksigi()[x[0]][1:]) for x in tutulan]:
+    rapor = veri_eksigi()
+    tutulan, elenen = tam_olcutler()
+    for o in tutulan:
+        _, eksik, n = rapor[o[0]]
         print(f'  TUTULDU  {o[1]:<32} eksik {eksik}/{n}')
     for o, eksik, n in elenen:
         print(f'  ELENDİ   {o[1]:<32} eksik {eksik}/{n}  '
               f'-> veri tamamlanana kadar modelden çıkarıldı')
+
+    print('\n  Eksik veri eşiği duyarlılığı (1. Bölge, CRITIC):')
+    bolg = oku('girdi_bolgeler.csv')
+    taban = None
+    for esik in (0.0, 0.25, 0.50, 0.75):
+        tut, _ = (tam_olcutler() if esik == 0.0
+                  else kullanilabilir_olcutler(esik=esik))
+        try:
+            adlar, t, _, _ = calistir(bolg[0], 'CRITIC', olcutler=tut)
+        except ValueError:
+            print(f'    eşik %{esik * 100:>3.0f}  ölçüt {len(tut)}  '
+                  f'-> eksik veri nedeniyle çalıştırılamaz')
+            continue
+        sira = siralar(t)
+        if taban is None:
+            taban, taban_ad = sira, adlar
+        ortak = [a for a in adlar if a in taban_ad]
+        r = spearman([sira[adlar.index(a)] for a in ortak],
+                     [taban[taban_ad.index(a)] for a in ortak])
+        print(f'    eşik %{esik * 100:>3.0f}  ölçüt {len(tut)}  '
+              f'1. sıra: {adlar[max(range(len(t)), key=lambda i: t[i])]:<30}'
+              f'eşik-0 ile Spearman {r:.3f}')
     print()
     return tutulan
 
@@ -475,6 +508,7 @@ def veri_raporu():
 def rapor():
     dogrula_kalinlik()
     orantilik_testi()
+    OLC = veri_raporu()
 
     bolg = oku('girdi_bolgeler.csv')
 
@@ -482,7 +516,7 @@ def rapor():
     print('İKLİM DENGESİ — TS 825:2024 aylık dış sıcaklıklarından türetilmiştir')
     print('=' * 78)
     print(f"{'Bölge':<28}{'IDG':>9}{'SDG':>9}{'soğutma payı':>16}")
-    for b in bolg:
+    for b in [x for x in bolg if x['bolge'] in IKLIM_BOLGELERI]:
         dg = derece_gun(int(b['bolge']))
         print(f"{b['bolge'] + '. ' + b['ad']:<28}{dg['IDG']:>9.0f}{dg['SDG']:>9.0f}"
               f"{dg['sogutma_payi']:>15.1%}")
@@ -511,8 +545,8 @@ def rapor():
         ('+ her ikisi (tam model)',                True,  True),
     ]
     for etiket, kisit, iklim in senaryolar:
-        a1, t1, _, _ = calistir(b1, 'Entropi', iklim, kisit)
-        a6, t6, _, _ = calistir(b6, 'Entropi', iklim, kisit)
+        a1, t1, _, _ = calistir(b1, 'Entropi', iklim, kisit, OLC)
+        a6, t6, _, _ = calistir(b6, 'Entropi', iklim, kisit, OLC)
         ortak = [ad for ad in a1 if ad in a6]
         r1 = siralar([t1[a1.index(x)] for x in ortak])
         r6 = siralar([t6[a6.index(x)] for x in ortak])
@@ -524,10 +558,10 @@ def rapor():
     print('AĞIRLIKLANDIRMA YÖNTEMİNİN ETKİSİ — 1. Bölge, tam model')
     print('=' * 78)
     for yontem in AGIRLIK_YONTEMLERI:
-        adlar, t, v, w = calistir(b1, yontem)
+        adlar, t, v, w = calistir(b1, yontem, olcutler=OLC)
         ilk3 = sorted(range(len(adlar)), key=lambda i: -t[i])[:3]
         en_buyuk = max(range(len(w)), key=lambda j: w[j])
-        print(f'\n  {yontem:<8} en ağır ölçüt: {OLCUTLER[en_buyuk][1]} ({w[en_buyuk]:.1%})')
+        print(f'\n  {yontem:<8} en ağır ölçüt: {OLC[en_buyuk][1]} ({w[en_buyuk]:.1%})')
         for yer, i in enumerate(ilk3, 1):
             print(f'      {yer}. {adlar[i]:<32}{t[i]:.4f}')
         print(f'      TOPSIS-VIKOR Spearman: {spearman(siralar(t), siralar(v)):.3f}')
@@ -535,13 +569,15 @@ def rapor():
     # Bölgelere göre tam model sıralaması
     print()
     print('=' * 78)
-    print('TAM MODEL — bölgelere göre ilk 5 (CRITIC ağırlıklı)')
+    print('TAM MODEL — bölgelere göre ilk 5 (CRITIC ağırlıklı, iklim ayarlı)')
+    print('İklim ayarı yalnızca il-bölge eşleşmesi doğrulanan bölgelerde tanımlı.')
     print('=' * 78)
-    for b in bolg:
-        adlar, t, _, _ = calistir(b, 'CRITIC')
+    for b in [x for x in bolg if x['bolge'] in IKLIM_BOLGELERI]:
+        adlar, t, _, _ = calistir(b, 'CRITIC', olcutler=OLC)
         ilk = sorted(range(len(adlar)), key=lambda i: -t[i])[:5]
-        print(f"\n{b['bolge']}. Bölge — {b['ad']}  "
-              f"(soğutma payı %{derece_gun(int(b['bolge']))['sogutma_payi'] * 100:.1f})")
+        dg = derece_gun(int(b['bolge']))
+        pay = f"%{dg['sogutma_payi'] * 100:.1f}" if dg else 'iklim verisi yok'
+        print(f"\n{b['bolge']}. Bölge — {b['ad']}  (soğutma payı {pay})")
         for yer, i in enumerate(ilk, 1):
             print(f'   {yer}. {adlar[i]:<32}{t[i]:.4f}')
 

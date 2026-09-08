@@ -15,6 +15,9 @@ Kaynak: https://dergipark.org.tr/tr/pub/gazimmfd/page/1851
 | 4 | Telif Hakkı Devir Formu | DergiPark'tan indirilecek, imzalanacak, taranıp PDF olarak yüklenecek |
 
 Editöre Not için: **`04-editore-not.docx`**.
+Ek tablolar için: **`05-ek-tablolar.docx`** (tam karar matrisi, hücre bazında
+veri kaynakları, kullanılan ÖKOBAUDAT veri kümeleri ve yangın kodlaması
+duyarlılığı). Makale metni bu dosyaya üç yerde atıf vermektedir.
 Markdown kaynakları aynı adla `.md` uzantısıyla korunmuştur. Yeniden üretim:
 
 | Dosya | Komut | Kaynak |
@@ -23,6 +26,7 @@ Markdown kaynakları aynı adla `.md` uzantısıyla korunmuştur. Yeniden üreti
 | `02-kapak-sayfasi.docx` | `python3 kapak_kur.py` | `sablon/kapak-sablonu.docx` |
 | `03-genisletilmis-ingilizce-ozet.docx` | (elle) | `sablon/genisletilmis-ozet-sablonu.docx` |
 | `04-editore-not.docx` | `node yan_dosyalar_word.js` | `04-editore-not.md` |
+| `05-ek-tablolar.docx` | `node yan_dosyalar_word.js` | `05-ek-tablolar.md` |
 
 Derginin yayımladığı iki şablon dosyası `sablon/` klasöründe değiştirilmeden
 saklanmaktadır. Kapak sayfası ve genişletilmiş özet bu şablonlar üzerine
@@ -178,6 +182,8 @@ python3 model.py              # karar modeli çıktıları
 python3 ts825_aylik.py        # enerji hesabı
 python3 sekiller_uret.py      # altı şekil + grafik özet
 python3 atif_coz.py           # atıf numaralandırma ve kaynakça
+python3 iklim_cek.py          # PVGIS 5.3 iklim girdisi
+python3 duyarlilik.py         # duyarlılık çözümlemeleri ve ek tablolar
 ```
 
 ## Açık kalan konular
@@ -195,6 +201,29 @@ etkilemektedir; başvuru öncesi tamamlanması önerilir.
    kaynak kaynakçaya eklenmemelidir.**
 3. **Karşılaştırma tablosu.** Giriş bölümünde literatürle karşılaştırma yapılan
    ifadeler, ilgili çalışmaların metinlerinden doğrulanmalıdır.
+
+## Hakem değerlendirmesine göre yapılan revizyon
+
+Metin, ayrıntılı bir hakem değerlendirmesi üzerine baştan sona denetlenmiş ve
+revize edilmiştir. Her maddenin doğruluğu, doğrulama yöntemi ve yapılan işlem
+`../17-hakem-yorumlarina-yanit.md` dosyasında madde madde kayıtlıdır.
+
+Revizyonun hesaba dokunan başlıkları:
+
+- Havalandırma ısı kaybı formülü TS 825 biçimine getirildi
+  (`H_V = 0,33 n_h V_h`); önceki biçim ısı kaybını yaklaşık 2,24 kat eksik
+  hesaplıyordu. Tüm enerji sonuçları yeniden üretildi.
+- İklim verisi PVGIS 5.3'e taşındı (SARAH3 + ERA5, 2005–2023); yeni betik
+  `model/iklim_cek.py`.
+- İki malzemenin ısı iletkenliği ve yoğunluğu, tam metni okunan hakemli
+  kaynaklarla değiştirildi (ayçiçeği sapı-kitosan kompozit; şeker kamışı
+  küspesi levhası).
+- Eksik veri kuralı, metinde yazılan biçimden kodun gerçekte uyguladığı biçime
+  düzeltildi ve eşik duyarlılığı eklendi.
+- İklim ayarı, iklim verisi olmayan bölgelerde sessizce atlanmak yerine hata
+  veriyor; iklime bağlı çözümlemeler dört bölgeyle sınırlı olarak raporlanıyor.
+- Yangına tepki sınıfının sayısallaştırılmasına duyarlılık çözümlemesi eklendi
+  (`model/duyarlilik.py`).
 
 ## Terim kararı
 

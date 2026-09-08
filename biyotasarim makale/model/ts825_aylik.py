@@ -57,7 +57,9 @@ def ozgul_isi_kaybi(b, bolge):
 
     h_t = (ud * opak + up * pencere
            + 0.8 * ut * b['cati_alani'] + 0.5 * utab * b['taban_alani'])
-    h_v = 0.33 * b['kat_alani_toplam'] * b['hava_degisim_sayisi']
+    # TS 825 biçimi: H_V = 0.33 n_h V_h, havalandırılan hacim V_h = 0.8 V_brüt
+    v_h = 0.8 * b['brut_hacim']
+    h_v = 0.33 * b['hava_degisim_sayisi'] * v_h
     return h_t + h_v, pencere, opak
 
 
@@ -224,7 +226,7 @@ def rapor():
     agir = max(mals, key=lambda m: M.sayi(m['yogunluk']) * M.sayi(m['ozgul_isi']))
     print(f"  hafif: {hafif['ad']}   ağır: {agir['ad']}\n")
     print(f"  {'Bölge':<22}{'QH hafif':>12}{'QH ağır':>12}{'fark':>10}{'fark %':>9}")
-    for bo in bolg:
+    for bo in [x for x in bolg if x['bolge'] in M.IKLIM_BOLGELERI]:
         r1 = yillik_ihtiyac(b, hafif, bo, 'B')
         r2 = yillik_ihtiyac(b, agir, bo, 'B')
         fark = r1['QH_kWh'] - r2['QH_kWh']

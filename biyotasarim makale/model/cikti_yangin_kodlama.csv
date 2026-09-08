@@ -1,0 +1,10 @@
+kodlama,agirlik_yontemi,w_yangin,birinci,spearman_dogrusal
+dogrusal,Entropi,0.3045,Şeker kamışı küspesi levhası,1.0000
+dogrusal,CRITIC,0.1839,Şeker kamışı küspesi levhası,1.0000
+dogrusal,Eşit,0.1111,Şeker kamışı küspesi levhası,1.0000
+grup,Entropi,0.3079,Şeker kamışı küspesi levhası,0.9794
+grup,CRITIC,0.1796,Şeker kamışı küspesi levhası,0.9938
+grup,Eşit,0.1111,Şeker kamışı küspesi levhası,0.9917
+ikili,Entropi,0.3851,Taşyünü,0.4530
+ikili,CRITIC,0.1741,Şeker kamışı küspesi levhası,0.7441
+ikili,Eşit,0.1111,Şeker kamışı küspesi levhası,0.9030

@@ -53,6 +53,7 @@ function belgeYap(bloklar, ekSekil) {
 // Yeniden üretimleri: kapak için `kapak_kur.py`, özet için şablon dosyası.
 const isler = [
   ['04-editore-not.md', '04-editore-not.docx', null],
+  ['05-ek-tablolar.md', '05-ek-tablolar.docx', null],
 ];
 (async () => {
   for (const [gir, cik, sek] of isler) {
