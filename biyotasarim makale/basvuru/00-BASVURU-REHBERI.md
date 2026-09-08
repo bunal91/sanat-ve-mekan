@@ -9,10 +9,15 @@ Kaynak: https://dergipark.org.tr/tr/pub/gazimmfd/page/1851
 
 | # | Dergi dosyası | Bu klasördeki karşılığı |
 |---|---|---|
-| 1 | Kapak Sayfası | `02-kapak-sayfasi.md` |
-| 2 | Makale Kontrol Listesi Formu + Makale Metni | `01-makale-metni.md` (kontrol formu DergiPark'tan indirilip önüne eklenecek) |
-| 3 | Genişletilmiş İngilizce Özet | `03-genisletilmis-ingilizce-ozet.md` + `../sekiller/Grafik-ozet.png` |
+| 1 | Kapak Sayfası | **`02-kapak-sayfasi.docx`** |
+| 2 | Makale Kontrol Listesi Formu + Makale Metni | **`01-makale-metni.docx`** (kontrol formu DergiPark'tan indirilip önüne eklenecek) |
+| 3 | Genişletilmiş İngilizce Özet | **`03-genisletilmis-ingilizce-ozet.docx`** (grafik özet gömülü) |
 | 4 | Telif Hakkı Devir Formu | DergiPark'tan indirilecek, imzalanacak, taranıp PDF olarak yüklenecek |
+
+Editöre Not için: **`04-editore-not.docx`**.
+Markdown kaynakları aynı adla `.md` uzantısıyla korunmuştur; metin değişirse
+`node makale_word.js` ve `node yan_dosyalar_word.js` ile Word dosyaları
+yeniden üretilir.
 
 Ayrıca başvuru formundaki **Editöre Not** alanına `04-editore-not.md` içeriği
 yapıştırılacaktır. Bu alan boş bırakılırsa makale değerlendirmeye alınmadan
@@ -41,29 +46,45 @@ iade edilmektedir.
 | Grafik özet 6 × 14 cm | ✔ (13,8 × 5,8 cm) |
 | SI birimleri | ✔ |
 
-## Word'e aktarırken yapılacaklar
+## Word dosyalarında uygulanmış biçimlendirme
 
-Bu dosyalar düz metin olarak hazırlanmıştır; biçimlendirme Word'de
-tamamlanacaktır.
+Aşağıdakiler `.docx` dosyalarına doğrudan uygulanmıştır; Word'de yeniden
+yapılması gerekmez.
 
-1. **Sayfa düzeni:** A4, tek sütun, kenar boşlukları 2,5 cm, bölüm sonu
-   kullanılmayacak.
-2. **Yazı tipi:** Gövde metni Times New Roman 9 punto, satır aralığı 1,5,
-   paragraflar arası bir satır boşluk, otomatik aralık sıfır.
-3. **Alt başlıkların İngilizce karşılıkları:** Times New Roman 8 punto, kalın.
-4. **Çizelgeler:** Times New Roman 9 punto (sığmazsa en az 8), kalın yazı
-   kullanılmayacak, vurgu gerekiyorsa italik; dolgu ve arka fon olmayacak;
-   genişlik 8,5 cm veya 12–16 cm; resim olarak değil, gerçek tablo olarak
+- A4, tek sütun, kenar boşlukları 2,5 cm (1417 twips), bölüm sonu yok
+- Gövde metni Times New Roman 9 punto, satır aralığı 1,5, otomatik paragraf
+  aralığı sıfır, paragraflar arası bir satır boşluk
+- Bölüm başlıkları kalın 9 punto; İngilizce karşılıkları kalın 8 punto
+- Çizelgeler gerçek tablo olarak, 9 punto, kalın yazı ve dolgu yok, sayfa
+  genişliğine oturtulmuş; başlıklar üstte Türkçe + İngilizce (8 punto italik)
+- Şekiller tek öge olarak gömülü, 300 dpi; başlıklar altta Türkçe + İngilizce
+- Şekiller ve çizelgeler metinde ilk anıldıkları yere yerleştirilmiş
+- Denklem numaraları (1)–(4) metin olarak
+
+## Word'de elle yapılacaklar
+
+1. **Kontrol listesi formu:** DergiPark'tan indirilip makale metninin önüne
    eklenecek.
-5. **Şekiller:** `../sekiller/` klasöründeki PNG dosyaları tek öge olarak
-   eklenecek; şekil altı yazıları Türkçe, ardından parantez içinde İngilizce
-   8 punto.
-6. **Denklemler:** Numaralar (1), (2) biçiminde formül dışında metin olarak;
-   denklem punto 9; 8,5 cm sütun genişliğine sığacak.
-7. **Yazar bilgisi:** `01-makale-metni.md` içinde yazar bilgisi yoktur ve
-   olmamalıdır; son gönderimde bu kontrol edilmelidir.
-8. **Teşekkür bölümü:** Varsa doldurulacak, yoksa çıkarılacak.
-9. **iThenticate:** Benzerlik raporu alınacak.
+2. **Kapak sayfası:** Yazar, kurum, ORCID, iletişim ve katkı oranı alanları
+   doldurulacak.
+3. **Teşekkür bölümü:** Varsa doldurulacak, yoksa çıkarılacak.
+4. **Sayfa sayısı:** Word'de açıldığında 20 sayfa sınırı doğrulanacak.
+5. **Yazı tipi kontrolü:** Belgeler Times New Roman olarak tanımlanmıştır;
+   şekiller Liberation Serif ile üretilmiştir (Times New Roman ile metrik
+   olarak uyumlu ikame). Dergi ısrar ederse şekiller gerçek Times New Roman
+   ile yeniden üretilebilir.
+6. **Yazar bilgisi:** Makale metni dosyasında yazar bilgisi yoktur; son
+   gönderimde teyit edilmelidir.
+7. **iThenticate:** Benzerlik raporu alınacak.
+
+## Doğrulama durumu
+
+Dört `.docx` dosyasının tamamı XSD şema doğrulamasından geçmiştir
+(`All validations PASSED`). İçerik pandoc ile geri okunarak teyit edilmiştir:
+7 çizelge, 6 şekil, 29 kaynak, doğru kenar boşluğu, yazı tipi, punto ve satır
+aralığı. **Görsel sayfa önizlemesi yapılamamıştır**; bu ortamdaki LibreOffice
+hiçbir docx dosyasını açamamaktadır (asgari bir test belgesiyle doğrulandı).
+Dosyalar Word'de ilk açılışta gözle kontrol edilmelidir.
 
 ## Metin içinde doldurulacak yerler
 

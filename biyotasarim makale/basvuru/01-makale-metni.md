@@ -44,6 +44,8 @@ Bu çerçevede üç araştırma sorusu tanımlanmıştır. Birincisi, sabit ıs�
 
 ## 2. TEORİK METOT (THEORETICAL METHOD)
 
+Çalışmanın genel akışı Şekil 1'de verilmiştir.
+
 ### 2.1. Fonksiyonel birim ve orantılılık önermesi
 
 Karşılaştırma birimi, TS 825:2024'ün ilgili derece gün bölgesi için tavsiye ettiği ısıl geçirgenlik değerini sağlayan 1 m² dış duvar bileşenidir. Malzemeleri doğrudan ısı iletkenlik katsayısına göre karşılaştırmak yanıltıcı olur; eşdeğer ısıl performans koşulu her malzemenin farklı kalınlıkta kullanılmasını gerektirir ve bu fark kütleye, gömülü karbona ve kaybedilen kullanım alanına yansır. Toplam ısıl direnç, yalıtım katmanı ile diğer katmanların ve yüzeysel dirençlerin toplamıdır:
@@ -140,7 +142,7 @@ Yaşam döngüsü modülleri incelendiğinde, biyo-esaslı malzemelerin A1–A3'
 
 S1 sınırında biyo-esaslı malzemelerin çoğu karbon-negatif görünmekte ve sıralamanın başında yer almaktadır. C modülleri eklendiğinde birinci sıra altı bölgenin altısında da camyününe geçmektedir. Sınırlar arası Spearman korelasyonu S1–S2 için 0,758, S1–S3 için 0,697, S2–S3 için 0,939'dur. Etki, veri sürümü tutarsızlığı taşıyan iki kayıt çıkarıldığında güçlenmekte (0,758 → 0,333) ve üç ağırlıklandırma yönteminde de korunmaktadır.
 
-Yaşam sonu senaryosunun duyarlılığı Şekil 6'da verilmiştir. CRITIC ağırlıklandırmasında camyününün birinci sıraya geçtiği salım oranı eşiği 0,51 ile 0,82 arasındadır; yani depolanan biyojenik karbonun yarısından fazlası yaşam sonunda salınmadıkça biyo-esaslı bir malzeme birinci sırada kalmaktadır. Eşik sıcak bölgelerde daha yüksektir, çünkü biyo-esaslı malzemeler orada ısıl kütle üzerinden ek bir üstünlük taşımakta ve daha büyük bir karbon yükünü soğurabilmektedir. Entropi ağırlıklandırmasında eşik her bölgede sıfırdır: camyünü salım oranından bağımsız olarak birinci sıradadır; bu, 3.3'teki bulgunun bir başka görünümüdür.
+Yaşam sonu senaryosunun duyarlılığı Şekil 5'te verilmiştir. CRITIC ağırlıklandırmasında camyününün birinci sıraya geçtiği salım oranı eşiği 0,51 ile 0,82 arasındadır; yani depolanan biyojenik karbonun yarısından fazlası yaşam sonunda salınmadıkça biyo-esaslı bir malzeme birinci sırada kalmaktadır. Eşik sıcak bölgelerde daha yüksektir, çünkü biyo-esaslı malzemeler orada ısıl kütle üzerinden ek bir üstünlük taşımakta ve daha büyük bir karbon yükünü soğurabilmektedir. Entropi ağırlıklandırmasında eşik her bölgede sıfırdır: camyünü salım oranından bağımsız olarak birinci sıradadır; bu, 3.3'teki bulgunun bir başka görünümüdür.
 
 Bu sonuç, biyo-esaslı malzemelerin çevresel açıdan tercih edilmemesi gerektiği anlamına gelmez. C3 modülü enerji geri kazanımlı yakma senaryosunu yansıtmaktadır; düzenli depolama veya yeniden kullanım senaryolarında depolanan karbonun bir bölümü sistemde kalır, ancak depolamada oluşan metanın küresel ısınma potansiyeli de dikkate alınmalıdır. Bulgunun söylediği şey, yaşam sonu senaryosunun sonucu belirlediği ve varsayım olarak bırakılamayacağıdır. Bu da tartışmayı malzeme seçiminden atık yönetimi politikasına taşımaktadır.
 
@@ -148,7 +150,7 @@ Bu sonuç, biyo-esaslı malzemelerin çevresel açıdan tercih edilmemesi gerekt
 
 Kurgu A'da, yani kullanım faktörünün zaman sabitinden bağımsız olduğu durumda, on sekiz alternatifin tamamı birebir aynı yıllık ısıtma enerjisi ihtiyacını vermektedir; malzemeler arası yayılım tam olarak sıfırdır. Bu beklenen sonuçtur: sabit U hedefi altında özgül ısı kaybı malzemeden bağımsızdır ve zaman sabitinden bağımsız bir kullanım faktörü ısıl kütleyi görmez.
 
-Kurgu B'de fark oluşmaktadır. Referans konutun bölgelere göre enerji ihtiyacı ve ısıl kütlenin katkısı Çizelge 7'de, karşılaştırma Şekil 5'te verilmiştir. Isıl kütlenin en hafif ile en ağır alternatif arasında yarattığı yıllık enerji farkı 1,94 ile 2,89 kWh/m²·yıl arasındadır; bölgeler arası değişim yaklaşık 1,5 kattır.
+Kurgu B'de fark oluşmaktadır. Referans konutun bölgelere göre enerji ihtiyacı ve ısıl kütlenin katkısı Çizelge 7'de, karşılaştırma Şekil 6'da verilmiştir. Isıl kütlenin en hafif ile en ağır alternatif arasında yarattığı yıllık enerji farkı 1,94 ile 2,89 kWh/m²·yıl arasındadır; bölgeler arası değişim yaklaşık 1,5 kattır.
 
 Yüzdesel ifade yanıltıcıdır. Isıtma tarafında fark 1. bölgede %26,8'e ulaşmakta, 6. bölgede %3,7'ye inmektedir; ancak bu, ısıtma ihtiyacının 1. bölgede yalnızca 2,4 kWh/m²·yıl olmasından kaynaklanır. Aynı oran mutlak olarak 0,64 kWh/m²·yıl demektir. Karşılaştırmalarda mutlak değer kullanılmalıdır.
 
@@ -327,11 +329,11 @@ Bulguların mevzuata dönük karşılığı, tavsiye edilen ısıl geçirgenlik 
 **Şekil 4.** Sistem sınırının sıralamaya etkisi (1. bölge, CRITIC ağırlıklandırma)
 *(Figure 4. Effect of the system boundary on the ranking (zone 1, CRITIC weighting))*
 
-**Şekil 5.** Isıl kütlenin enerji ihtiyacına etkisi: (a) mutlak katkı, (b) karşılaştırma tabanı olan toplam ihtiyaç
-*(Figure 5. Effect of thermal mass on energy demand: (a) absolute contribution, (b) total demand as the basis of comparison)*
+**Şekil 6.** Isıl kütlenin enerji ihtiyacına etkisi: (a) mutlak katkı, (b) karşılaştırma tabanı olan toplam ihtiyaç
+*(Figure 6. Effect of thermal mass on energy demand: (a) absolute contribution, (b) total demand as the basis of comparison)*
 
-**Şekil 6.** Biyo-esaslı üstünlüğün kaybolduğu yaşam sonu salım oranı eşiği; eşiğin üzerinde camyünü birinci sıradadır
-*(Figure 6. Threshold end-of-life release fraction at which the bio-based advantage disappears; above the threshold glass wool ranks first)*
+**Şekil 5.** Biyo-esaslı üstünlüğün kaybolduğu yaşam sonu salım oranı eşiği; eşiğin üzerinde camyünü birinci sıradadır
+*(Figure 5. Threshold end-of-life release fraction at which the bio-based advantage disappears; above the threshold glass wool ranks first)*
 
 ## 7. KAYNAKLAR (REFERENCES)
 

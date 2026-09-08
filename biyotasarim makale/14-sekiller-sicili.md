@@ -25,8 +25,14 @@ güncellenmelidir.
 | **2** | `Sekil-2-orantililik` | 4.2 | 18 alternatifin bölgeler arası kalınlık oranı ile teorik oranın çakışması. Önermenin görsel kanıtı; yayılımın yalnızca yuvarlamadan geldiğini gösterir |
 | **3** | `Sekil-3-mekanizma-katkisi` | 4.3 | Dört kurgunun Spearman(B1,B6) değeri. Ham modelde 0,998; iklim ayarıyla 0,567. Dört bölge (PVGIS iklimi) |
 | **4** | `Sekil-4-sistem-siniri-siralama` | 4.6 | S1 → S2 → S3 arasında sıralamanın değişimi. Beş öne çıkan alternatif koyu, diğerleri açık gri |
-| **5** | `Sekil-5-isil-kutle-enerji` | 4.7.1 | İki panel: (a) ısıl kütlenin mutlak katkısı (kWh/m²·yıl), (b) karşılaştırma tabanı olan toplam ihtiyaç. Dört bölge |
-| **6** | `Sekil-6-salim-orani-esigi` | 4.6.1 | Camyününün birinci sıraya geçtiği salım oranı eşiği φ\*, üç ağırlıklandırma yöntemi için. Dört bölge |
+| **6** | `Sekil-5-isil-kutle-enerji` | 3.5 | İki panel: (a) ısıl kütlenin mutlak katkısı (kWh/m²·yıl), (b) karşılaştırma tabanı olan toplam ihtiyaç. Dört bölge |
+| **5** | `Sekil-6-salim-orani-esigi` | 3.4 | Camyününün birinci sıraya geçtiği salım oranı eşiği φ\*, üç ağırlıklandırma yöntemi için. Dört bölge |
+
+> **Not:** Word belgesinde şekiller metinde anılma sırasına göre
+> numaralanmıştır; bu nedenle dosya adı ile şekil numarası birebir örtüşmez.
+> `Sekil-6-salim-orani-esigi` belgede **Şekil 5**, `Sekil-5-isil-kutle-enerji`
+> belgede **Şekil 6** olarak geçer. Eşleşme `basvuru/makale_word.js` içindeki
+> `SEKIL_DOSYA` tablosunda tanımlıdır.
 
 ## Notlar
 
