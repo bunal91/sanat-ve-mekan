@@ -23,6 +23,32 @@ Ayrıca başvuru formundaki **Editöre Not** alanına `04-editore-not.md` içeri
 yapıştırılacaktır. Bu alan boş bırakılırsa makale değerlendirmeye alınmadan
 iade edilmektedir.
 
+## Ayrıntılı yazım kurallarına göre yapılan güncellemeler
+
+Derginin ayrıntılı makale formatı rehberine göre metin yeniden düzenlenmiştir:
+
+| Kural | Uygulama |
+|---|---|
+| Ön sayfa sırası | Türkçe başlık (14 pt) → Öne Çıkanlar → Öz → Anahtar Kelimeler → İngilizce başlık (14 pt) → Highlights → Abstract → Key Words |
+| Ana başlıklar | 1. Giriş, 2. Teorik Metot, 3. Sonuçlar ve Tartışmalar, 4. Simgeler, 5. Sonuçlar; kalın, cümle düzeninde |
+| Teşekkür ve Kaynaklar | **numarasız** (kural gereği) |
+| İkincil başlıklar | 2.1., 2.2., … biçiminde; Kelimelerin İlk Harfleri Büyük |
+| İngilizce karşılıklar | **Her başlık, alt başlık, tablo ve şekil adının** yanında parantez içinde 8 punto |
+| Tablo adlandırması | "Çizelge" değil **"Tablo"**; başlık tablonun üstünde, Türkçe adı ve hemen ardından parantez içinde İngilizcesi |
+| Şekil adlandırması | Başlık şeklin altında, Türkçe adı ve parantez içinde İngilizcesi |
+| Kaynaklar | Yayımlanmış makalelerde **DOI verilmemiştir** (kural gereği); 23 DOI kaldırıldı |
+| Şekil üzerindeki yazılar | Türkçe, Times 10 punto, siyah, büyük harfsiz, kenarlıksız |
+| Toplu atıf | En fazla 4 kaynak; betikle denetleniyor |
+
+## Uygulanamayan / dikkat edilmesi gereken
+
+1. **Dergi adı kısaltmaları.** Kural, dergi başlıklarının UBC listesine göre
+   kısaltılmasını istiyor. Kaynakçadaki dergi adları şu an **açık hâlde**;
+   başvuru öncesi kısaltılmalıdır.
+2. **Dördüncü seviye başlık.** Kural altı çizili olmasını istiyor; bu makalede
+   dördüncü seviye başlık bulunmamaktadır.
+3. **Ekler.** Makalede ek bölümü yoktur.
+
 ## Kurallara uygunluk durumu
 
 | Kural | Durum |

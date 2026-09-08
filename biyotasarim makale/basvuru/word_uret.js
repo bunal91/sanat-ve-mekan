@@ -21,15 +21,17 @@ const par = (t, o = {}) => new Paragraph({
   children: Array.isArray(t) ? t : [run(t, o)] });
 const bos = () => new Paragraph({ spacing: SATIR, children: [run('')] });
 
-// **kalın** ve *italik* işaretlerini TextRun dizisine çevirir
+// **kalın**, *italik* ve §(İngilizce)§ işaretlerini TextRun dizisine çevirir.
+// §...§ içindeki İngilizce karşılıklar dergi kuralı gereği 8 punto kalın verilir.
 function satirParcala(s, size = P9) {
   const out = [];
-  const re = /(\*\*[^*]+\*\*|\*[^*]+\*)/g;
+  const re = /(\*\*[^*]+\*\*|\*[^*]+\*|§[^§]+§)/g;
   let son = 0, m;
   while ((m = re.exec(s)) !== null) {
     if (m.index > son) out.push(run(s.slice(son, m.index), { size }));
     const t = m[0];
     if (t.startsWith('**')) out.push(run(t.slice(2, -2), { size, bold: true }));
+    else if (t.startsWith('§')) out.push(run(t.slice(1, -1), { size: P8, bold: true }));
     else out.push(run(t.slice(1, -1), { size, italics: true }));
     son = m.index + t.length;
   }

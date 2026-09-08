@@ -43,23 +43,19 @@ const govde = [];
 let bolum = 'metin';
 for (let k = 0; k < bloklar.length; k++) {
   const b = bloklar[k];
-  if (b.tip === 'h2' && b.metin.startsWith('ÇİZELGELER')) { bolum = 'cizelge'; continue; }
+  if (b.tip === 'h2' && b.metin.startsWith('TABLOLAR')) { bolum = 'cizelge'; continue; }
   if (b.tip === 'h2' && b.metin.startsWith('ŞEKİL ALTI')) { bolum = 'sekil'; continue; }
-  if (b.tip === 'h2' && b.metin.startsWith('7. KAYNAKLAR')) { bolum = 'kaynak'; govde.push(b); continue; }
+  if (b.tip === 'h2' && b.metin.startsWith('Kaynaklar')) { bolum = 'kaynak'; govde.push(b); continue; }
 
   if (bolum === 'cizelge') {
-    const m = b.metin && b.metin.match(/^\*\*Çizelge (\d+)\.\*\* (.+)$/);
+    const m = b.metin && b.metin.match(/^\*\*Tablo (\d+)\.\*\* (.+)$/);
     if (m) { cizelgeler[m[1]] = { tr: m[2] }; var sonC = m[1]; continue; }
-    const e = b.metin && b.metin.match(/^\*\(Table \d+\. (.+)\)\*$/);
-    if (e && sonC) { cizelgeler[sonC].en = e[1]; continue; }
     if (b.tip === 'tablo' && sonC) { cizelgeler[sonC].tablo = b.satirlar; continue; }
     continue;
   }
   if (bolum === 'sekil') {
     const m = b.metin && b.metin.match(/^\*\*Şekil (\d+)\.\*\* (.+)$/);
     if (m) { sekiller[m[1]] = { tr: m[2] }; var sonS = m[1]; continue; }
-    const e = b.metin && b.metin.match(/^\*\(Figure \d+\. (.+)\)\*$/);
-    if (e && sonS) { sekiller[sonS].en = e[1]; continue; }
     continue;
   }
   govde.push(b);
@@ -73,9 +69,7 @@ function cizelgeEkle(no) {
   const c = cizelgeler[no]; if (!c || !c.tablo) return;
   ogeler.push(H.bos());
   ogeler.push(new Paragraph({ spacing: H.SATIR, alignment: AlignmentType.LEFT,
-    children: H.satirParcala(`**Çizelge ${no}.** ${c.tr}`, H.P9) }));
-  if (c.en) ogeler.push(new Paragraph({ spacing: H.SATIR, alignment: AlignmentType.LEFT,
-    children: [H.run(`(Table ${no}. ${c.en})`, { size: H.P8, italics: true })] }));
+    children: H.satirParcala(`**Tablo ${no}.** ${c.tr}`, H.P9) }));
   ogeler.push(H.tabloYap(c.tablo));
   ogeler.push(H.bos());
 }
@@ -87,31 +81,22 @@ function sekilEkle(no) {
   ogeler.push(H.sekilYap(dosya, cm));
   ogeler.push(new Paragraph({ spacing: H.SATIR, alignment: AlignmentType.CENTER,
     children: H.satirParcala(`**Şekil ${no}.** ${s.tr}`, H.P9) }));
-  if (s.en) ogeler.push(new Paragraph({ spacing: H.SATIR, alignment: AlignmentType.CENTER,
-    children: [H.run(`(Figure ${no}. ${s.en})`, { size: H.P8, italics: true })] }));
   ogeler.push(H.bos());
 }
 
 for (const b of govde) {
   if (b.tip === 'baslik') {
     ogeler.push(new Paragraph({ spacing: H.SATIR, alignment: AlignmentType.CENTER,
-      children: [H.run(b.metin, { bold: true, size: 24 })] }));
+      children: [H.run(b.metin, { bold: true, size: 28 })] }));
     ogeler.push(H.bos());
     continue;
   }
-  if (b.tip === 'h2') {
-    const m = b.metin.match(/^(.+?)\s*\((.+)\)$/);
+  if (b.tip === 'h2' || b.tip === 'h3') {
     ogeler.push(H.bos());
+    const parcalar = H.satirParcala(b.metin, H.P9).map((r, i) =>
+      i === 0 ? H.run(b.metin.split('§')[0], { bold: true }) : r);
     ogeler.push(new Paragraph({ spacing: H.SATIR, alignment: AlignmentType.LEFT,
-      children: [H.run(m ? m[1] : b.metin, { bold: true })] }));
-    if (m) ogeler.push(new Paragraph({ spacing: H.SATIR, alignment: AlignmentType.LEFT,
-      children: [H.run(`(${m[2]})`, { bold: true, size: H.P8 })] }));
-    continue;
-  }
-  if (b.tip === 'h3') {
-    ogeler.push(H.bos());
-    ogeler.push(new Paragraph({ spacing: H.SATIR, alignment: AlignmentType.LEFT,
-      children: [H.run(b.metin, { bold: true })] }));
+      children: parcalar }));
     continue;
   }
   if (b.tip === 'madde') {
@@ -126,7 +111,7 @@ for (const b of govde) {
 
   // ilk anılma yerinde çizelge/şekil yerleştir
   for (const no of Object.keys(cizelgeler).sort()) {
-    if (!eklendiC.has(no) && new RegExp(`Çizelge ${no}\\b`).test(b.metin)) {
+    if (!eklendiC.has(no) && new RegExp(`Tablo ${no}\\b`).test(b.metin)) {
       eklendiC.add(no); cizelgeEkle(no);
     }
   }
