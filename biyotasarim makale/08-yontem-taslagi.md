@@ -94,9 +94,9 @@ belirler: **K_b ile orantılı olmayan** bir yapı gereklidir.
 
 ## 3.3. Alternatifler
 
-On dört biyo-esaslı ve dört konvansiyonel olmak üzere on sekiz alternatif
+On dört biyo-bazlı ve dört konvansiyonel olmak üzere on sekiz alternatif
 değerlendirilmiştir. Konvansiyonel grup kıyas amacıyla dâhil edilmiştir;
-"biyo-esaslı olan üstündür" varsayımı sınanmaksızın kabul edilmemiştir.
+"biyo-bazlı olan üstündür" varsayımı sınanmaksızın kabul edilmemiştir.
 
 **Çizelge 2.** Alternatifler *(gruplar: lifli levha, dökme/dolgu, kabuk ve
 tarımsal atık esaslı, büyütülmüş, kıyas)* — `model/girdi_malzemeler.csv`

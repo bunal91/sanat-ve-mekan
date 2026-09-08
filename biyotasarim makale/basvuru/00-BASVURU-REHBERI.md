@@ -9,15 +9,25 @@ Kaynak: https://dergipark.org.tr/tr/pub/gazimmfd/page/1851
 
 | # | Dergi dosyası | Bu klasördeki karşılığı |
 |---|---|---|
-| 1 | Kapak Sayfası | **`02-kapak-sayfasi.docx`** |
+| 1 | Kapak Sayfası | **`02-kapak-sayfasi.docx`** — derginin resmî kapak şablonu üzerine kurulmuştur |
 | 2 | Makale Kontrol Listesi Formu + Makale Metni | **`01-makale-metni.docx`** (kontrol formu DergiPark'tan indirilip önüne eklenecek) |
 | 3 | Genişletilmiş İngilizce Özet | **`03-genisletilmis-ingilizce-ozet.docx`** — derginin resmî şablonu üzerine kurulmuştur; Figure A gömülü |
 | 4 | Telif Hakkı Devir Formu | DergiPark'tan indirilecek, imzalanacak, taranıp PDF olarak yüklenecek |
 
 Editöre Not için: **`04-editore-not.docx`**.
-Markdown kaynakları aynı adla `.md` uzantısıyla korunmuştur; metin değişirse
-`node makale_word.js` ve `node yan_dosyalar_word.js` ile Word dosyaları
-yeniden üretilir.
+Markdown kaynakları aynı adla `.md` uzantısıyla korunmuştur. Yeniden üretim:
+
+| Dosya | Komut | Kaynak |
+|---|---|---|
+| `01-makale-metni.docx` | `node makale_word.js` | `01-makale-metni.md` |
+| `02-kapak-sayfasi.docx` | `python3 kapak_kur.py` | `sablon/kapak-sablonu.docx` |
+| `03-genisletilmis-ingilizce-ozet.docx` | (elle) | `sablon/genisletilmis-ozet-sablonu.docx` |
+| `04-editore-not.docx` | `node yan_dosyalar_word.js` | `04-editore-not.md` |
+
+Derginin yayımladığı iki şablon dosyası `sablon/` klasöründe değiştirilmeden
+saklanmaktadır. Kapak sayfası ve genişletilmiş özet bu şablonlar üzerine
+kurulduğu için `yan_dosyalar_word.js` bu ikisini **üretmez**; üretseydi
+şablon yapısını bozardı.
 
 Ayrıca başvuru formundaki **Editöre Not** alanına `04-editore-not.md` içeriği
 yapıştırılacaktır. Bu alan boş bırakılırsa makale değerlendirmeye alınmadan
@@ -137,10 +147,24 @@ aralığı. **Görsel sayfa önizlemesi yapılamamıştır**; bu ortamdaki Libre
 hiçbir docx dosyasını açamamaktadır (asgari bir test belgesiyle doğrulandı).
 Dosyalar Word'de ilk açılışta gözle kontrol edilmelidir.
 
+## Kapak sayfası — şablon uyumu
+
+Bu dosya da sıfırdan yazılmamış, **derginin kendi kapak şablonu** üzerine
+kurulmuştur (`kapak_kur.py`). Şablonun alan sırası, etiket metinleri, yazı
+tipi, punto, hizalama ve satır aralığı ayarları olduğu gibi korunmuştur;
+İngilizce bölümdeki "Yazar adları ve adres bilgileri:" etiketi de şablonda
+Türkçe olduğu için Türkçe bırakılmıştır.
+
+Tek yazar varsayılmış, şablondaki beş yazarlı örneğin ikinci kurum satırları
+kaldırılmıştır. Yazar sayısı artarsa üst simge numaraları ve kurum satırları
+şablondaki gibi çoğaltılır.
+
 ## Metin içinde doldurulacak yerler
 
-- Kapak sayfasındaki yazar, kurum, ORCID ve iletişim bilgileri
-- Yazar katkı oranı beyanı
+- Kapak sayfasındaki ad soyad, kurum adresi (Türkçe ve İngilizce), ORCID ve
+  telefon; e-posta alanında `b.unal91@gmail.com` yazılıdır, kurumsal adres
+  varsa değiştirilecektir
+- Yazar katkı oranı beyanı (başvuru formunda; kapak şablonunda alan yoktur)
 - Finansman ve teşekkür bölümü
 - Veri erişimi bölümündeki depo adresi
 
@@ -171,3 +195,11 @@ etkilemektedir; başvuru öncesi tamamlanması önerilir.
    kaynak kaynakçaya eklenmemelidir.**
 3. **Karşılaştırma tablosu.** Giriş bölümünde literatürle karşılaştırma yapılan
    ifadeler, ilgili çalışmaların metinlerinden doğrulanmalıdır.
+
+## Terim kararı
+
+Metnin tamamında **"biyo-bazlı"** kullanılmaktadır ("biyo-esaslı" değil).
+Değişiklik makale metni, kapak sayfası, editöre not ve tüm çalışma
+notlarında uygulanmıştır. Farklı kökten türeyen bileşikler
+("atık esaslı", "mineral esaslı", "miselyum esaslı", "kabuğu esaslı")
+olduğu gibi bırakılmıştır. İngilizce karşılık değişmemiştir: *bio-based*.

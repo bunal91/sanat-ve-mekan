@@ -7,7 +7,7 @@ Bu dosya giriş noktasıdır. Diğer dosyalar numara sırasıyla okunabilir.
 
 ## 1. Makale nedir
 
-**Başlık (çalışma):** Eşdeğer ısıl performans varsayımı altında biyo-esaslı yapı
+**Başlık (çalışma):** Eşdeğer ısıl performans varsayımı altında biyo-bazlı yapı
 kabuğu malzemelerinin seçimi: kurgunun sonuç üzerindeki belirleyiciliği
 
 **Tek cümlelik katkı:** Bir malzeme sıralaması, ancak onu üreten kurgu —
@@ -23,7 +23,7 @@ Zorunlu ek dosya: genişletilmiş İngilizce özet (en fazla 1 sayfa).
 | # | Bulgu | Dayanağı | Veriye bağımlı mı |
 |---|---|---|---|
 | **1** | Sabit U hedefine dayalı kurgu, iklim bölgesine göre sıralama farkı **üretemez** | Analitik türetim + sayısal doğrulama: yuvarlama kapalıyken Spearman = 1,000000, entropi ağırlık farkı 0,00 | **Hayır** |
-| **2** | Ağırlıklandırma yöntemi, biyo-esaslı alternatiflerin yerini **yönlü** belirler | Entropi ağırlığın %32,8'ini yangın ölçütüne verir; CRITIC ve eşit ağırlık biyo-esaslıları öne alır | **Hayır** |
+| **2** | Ağırlıklandırma yöntemi, biyo-bazlı alternatiflerin yerini **yönlü** belirler | Entropi ağırlığın %32,8'ini yangın ölçütüne verir; CRITIC ve eşit ağırlık biyo-bazlıları öne alır | **Hayır** |
 | **3** | Sistem sınırı, birinci sırayı **altı bölgenin altısında da** değiştirir | EPD modülleri: biyojenik alım C3'te ±0,04 kgCO₂e/kg içinde geri salınır | **Hayır** |
 | **4** | Aylık hesap yöntemi, ısıl kütleyi **fiziksel katkısının en yüksek olduğu koşulda göremez** | Dış sıcaklık iç tasarım sıcaklığını aştığı aylarda kullanım faktörü uygulanamaz | Kısmen |
 

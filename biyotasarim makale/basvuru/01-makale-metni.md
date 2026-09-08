@@ -1,16 +1,16 @@
-# Eşdeğer ısıl performans varsayımı altında biyo-esaslı yapı kabuğu malzemelerinin seçimi: kurgunun sonuç üzerindeki belirleyiciliği
+# Eşdeğer ısıl performans varsayımı altında biyo-bazlı yapı kabuğu malzemelerinin seçimi: kurgunun sonuç üzerindeki belirleyiciliği
 
 ## Öne Çıkanlar
 
 - Sabit ısıl geçirgenlik hedefi iklim bölgesine göre sıralama farkı üretmez
-- Ağırlıklandırma yöntemi biyo-esaslı malzemeleri yönlü biçimde geriye iter
+- Ağırlıklandırma yöntemi biyo-bazlı malzemeleri yönlü biçimde geriye iter
 - Sistem sınırı birinci sırayı tüm bölgelerde değiştirir
 
 ## Öz
 
-Biyo-esaslı yapı kabuğu malzemelerinin karşılaştırılmasında yaygın olarak eşdeğer ısıl performans kurgusu kullanılmakta, sonuçların iklim koşullarına göre değişeceği ise örtük olarak varsayılmaktadır. Bu çalışmada söz konusu kurgunun kendisi, TS 825:2024'ün altı derece gün bölgesi çerçevesinde sınanmıştır. On dört biyo-esaslı ve dört konvansiyonel alternatif, ısı iletkenliği, birim kütle, alansal ısıl kapasite, yaşam döngüsü karbonu, yangına tepki, yaşam sonu senaryosu, nem duyarlılığı ve duvar kalınlığı ölçütleriyle değerlendirilmiştir. Ağırlıklar entropi, CRITIC ve eşit ağırlık yöntemleriyle, sıralama TOPSIS ve VIKOR ile üretilmiştir. Üç sonuç elde edilmiştir. Sabit ısıl geçirgenlik hedefine dayalı kurgu, gerekli kalınlığın malzemeden bağımsız bir çarpanla ölçeklenmesi nedeniyle iklim bölgesine göre sıralama farkı üretememektedir; yuvarlama devre dışı bırakıldığında bölgeler arası sıra korelasyonu tam olarak birdir. Ağırlıklandırma yönteminin seçimi biyo-esaslı alternatiflerin sıralamadaki yerini yönlü biçimde belirlemektedir. Yaşam döngüsü sistem sınırının seçimi ise birinci sıradaki malzemeyi tüm bölgelerde değiştirmektedir. Bulgular, bir malzeme sıralamasının ancak onu üreten kurgu eksiksiz beyan edildiğinde yorumlanabileceğini göstermektedir.
+Biyo-bazlı yapı kabuğu malzemelerinin karşılaştırılmasında yaygın olarak eşdeğer ısıl performans kurgusu kullanılmakta, sonuçların iklim koşullarına göre değişeceği ise örtük olarak varsayılmaktadır. Bu çalışmada söz konusu kurgunun kendisi, TS 825:2024'ün altı derece gün bölgesi çerçevesinde sınanmıştır. On dört biyo-bazlı ve dört konvansiyonel alternatif, ısı iletkenliği, birim kütle, alansal ısıl kapasite, yaşam döngüsü karbonu, yangına tepki, yaşam sonu senaryosu, nem duyarlılığı ve duvar kalınlığı ölçütleriyle değerlendirilmiştir. Ağırlıklar entropi, CRITIC ve eşit ağırlık yöntemleriyle, sıralama TOPSIS ve VIKOR ile üretilmiştir. Üç sonuç elde edilmiştir. Sabit ısıl geçirgenlik hedefine dayalı kurgu, gerekli kalınlığın malzemeden bağımsız bir çarpanla ölçeklenmesi nedeniyle iklim bölgesine göre sıralama farkı üretememektedir; yuvarlama devre dışı bırakıldığında bölgeler arası sıra korelasyonu tam olarak birdir. Ağırlıklandırma yönteminin seçimi biyo-bazlı alternatiflerin sıralamadaki yerini yönlü biçimde belirlemektedir. Yaşam döngüsü sistem sınırının seçimi ise birinci sıradaki malzemeyi tüm bölgelerde değiştirmektedir. Bulgular, bir malzeme sıralamasının ancak onu üreten kurgu eksiksiz beyan edildiğinde yorumlanabileceğini göstermektedir.
 
-**Anahtar Kelimeler:** Biyo-esaslı yalıtım, çok ölçütlü karar verme, yaşam döngüsü sistem sınırı, TS 825, ağırlıklandırma
+**Anahtar Kelimeler:** Biyo-bazlı yalıtım, çok ölçütlü karar verme, yaşam döngüsü sistem sınırı, TS 825, ağırlıklandırma
 
 # Selection of bio-based building envelope materials under the equivalent thermal performance assumption: how the framing determines the result
 
@@ -32,15 +32,15 @@ Binalar, Türkiye'nin nihai enerji tüketiminde en büyük paylardan birine sahi
 
 Bu düzenleyici değişim, yapı kabuğunda kullanılacak yalıtım malzemesinin seçimini yeniden gündeme getirmektedir. Gerekli yalıtım kalınlıklarının artması, malzeme başına düşen kütlenin ve dolayısıyla gömülü karbonun da artması anlamına gelir. İşletme enerjisi düştükçe bir yapı bileşeninin toplam yaşam döngüsü etkisi içinde gömülü karbonun payı görece büyümekte, bu da malzeme seçimini enerji verimliliği tartışmasının merkezine taşımaktadır [3].
 
-Biyo-esaslı yapı malzemeleri bu noktada iki nedenle öne çıkmaktadır. Birincisi, üretim aşaması emisyonları mineral ve petrokimya esaslı muadillerine kıyasla düşüktür. İkincisi ve daha belirleyicisi, lignoselülozik yapıları nedeniyle büyüme sürecinde atmosferden aldıkları karbonu bileşen ömrü boyunca depolarlar [4]. Ne var ki biyojenik karbonun muhasebeleştirilmesi tartışmalıdır; depolamanın geçici olup olmadığı ve hangi zaman ufkunda hesaba katılacağı üzerine yöntem tartışması sürmektedir [5-7].
+Biyo-bazlı yapı malzemeleri bu noktada iki nedenle öne çıkmaktadır. Birincisi, üretim aşaması emisyonları mineral ve petrokimya esaslı muadillerine kıyasla düşüktür. İkincisi ve daha belirleyicisi, lignoselülozik yapıları nedeniyle büyüme sürecinde atmosferden aldıkları karbonu bileşen ömrü boyunca depolarlar [4]. Ne var ki biyojenik karbonun muhasebeleştirilmesi tartışmalıdır; depolamanın geçici olup olmadığı ve hangi zaman ufkunda hesaba katılacağı üzerine yöntem tartışması sürmektedir [5-7].
 
-Literatürdeki ısı iletkenlik değerleri malzeme grubuna göre belirgin biçimde ayrışmaktadır. Lif keçelerinde λ = 0,031–0,046 W/mK aralığı raporlanmakta [8], koyun yünü kompozitlerinde ρ = 30–138,7 kg/m³ ve λ = 0,0324–0,0436 W/mK ölçülmüştür [9]. Ahşap lifi levhalarda λ = 0,038 W/mK ve c = 2100 J/kgK düzeyleri bildirilmektedir [10]. Tarımsal atık esaslı panellerde tablo belirgin biçimde değişir: ayçiçeği sapı özünden üretilen bağlayıcısız levhalarda λ = 0,038–0,042 W/mK gibi rekabetçi değerler elde edilirken [11], pirinç kavuzu esaslı levhalarda λ = 0,064–0,140 W/mK raporlanmaktadır [12, 13]. Miselyum kompozitleri bu grubun en oynak verili üyesidir; on dokuz çalışmayı derleyen bir inceleme λ değerlerinin 0,026–0,180 W/mK bandında dağıldığını göstermektedir [14, 15]. Bu tablo iki sonuca işaret eder: biyo-esaslı malzeme tek bir performans sınıfı değildir ve veri kalitesi malzemeye göre büyük ölçüde değişmektedir.
+Literatürdeki ısı iletkenlik değerleri malzeme grubuna göre belirgin biçimde ayrışmaktadır. Lif keçelerinde λ = 0,031–0,046 W/mK aralığı raporlanmakta [8], koyun yünü kompozitlerinde ρ = 30–138,7 kg/m³ ve λ = 0,0324–0,0436 W/mK ölçülmüştür [9]. Ahşap lifi levhalarda λ = 0,038 W/mK ve c = 2100 J/kgK düzeyleri bildirilmektedir [10]. Tarımsal atık esaslı panellerde tablo belirgin biçimde değişir: ayçiçeği sapı özünden üretilen bağlayıcısız levhalarda λ = 0,038–0,042 W/mK gibi rekabetçi değerler elde edilirken [11], pirinç kavuzu esaslı levhalarda λ = 0,064–0,140 W/mK raporlanmaktadır [12, 13]. Miselyum kompozitleri bu grubun en oynak verili üyesidir; on dokuz çalışmayı derleyen bir inceleme λ değerlerinin 0,026–0,180 W/mK bandında dağıldığını göstermektedir [14, 15]. Bu tablo iki sonuca işaret eder: biyo-bazlı malzeme tek bir performans sınıfı değildir ve veri kalitesi malzemeye göre büyük ölçüde değişmektedir.
 
-Yapı malzemesi seçimi, birbiriyle çatışan ölçütler içerdiği için çok ölçütlü karar verme yöntemlerinin yerleşik uygulama alanıdır. Yalıtım malzemelerinin sürdürülebilir seçimine odaklanan sistematik bir derleme, alanda ağırlıklı olarak AHP ile ağırlıklandırma ve TOPSIS ile sıralama yapıldığını ortaya koymaktadır [16]. Daha güncel çalışmalar bulanık gösterimler ve farklı yöntemleri de kullanmakta [17], dış duvar seçeneklerinin AHP, ANP ve TOPSIS ile karşılaştırıldığı örnekler bulunmaktadır [18]. Biyo-esaslı malzemelere odaklanan Avrupa ölçekli bir karar analizi, ahşap lifi ve mantarın farklı ağırlık senaryoları altında istikrarlı biçimde ilk sıralarda yer aldığını raporlamaktadır [19].
+Yapı malzemesi seçimi, birbiriyle çatışan ölçütler içerdiği için çok ölçütlü karar verme yöntemlerinin yerleşik uygulama alanıdır. Yalıtım malzemelerinin sürdürülebilir seçimine odaklanan sistematik bir derleme, alanda ağırlıklı olarak AHP ile ağırlıklandırma ve TOPSIS ile sıralama yapıldığını ortaya koymaktadır [16]. Daha güncel çalışmalar bulanık gösterimler ve farklı yöntemleri de kullanmakta [17], dış duvar seçeneklerinin AHP, ANP ve TOPSIS ile karşılaştırıldığı örnekler bulunmaktadır [18]. Biyo-bazlı malzemelere odaklanan Avrupa ölçekli bir karar analizi, ahşap lifi ve mantarın farklı ağırlık senaryoları altında istikrarlı biçimde ilk sıralarda yer aldığını raporlamaktadır [19].
 
 Ağırlıklandırma yönteminin sonuca etkisi bu literatürde bilinen bir konudur. Farklı ağırlıklandırma yöntemlerinin sıralamalar arasında kayda değer farklar ürettiği ve sonuçların güvenilirliğinin doğrudan ağırlıklandırmanın güvenilirliğine bağlı olduğu ifade edilmektedir [20, 21]. Objektif yöntemler içinde Shannon entropisi ve CRITIC en yaygın ikilidir; entropi karar matrisindeki yayılımı yüksek ölçütlere daha büyük ağırlık verirken, CRITIC standart sapmanın yanı sıra ölçütler arası korelasyonu da hesaba katar [22, 23]. Dolayısıyla bu çalışma, ağırlıklandırma yönteminin sonucu etkilediği biçiminde genel bir sav ileri sürmemektedir; ele alınan soru daha dar ve yönlüdür.
 
-Bu çerçevede üç araştırma sorusu tanımlanmıştır. Birincisi, sabit ısıl geçirgenlik hedefine dayalı bir seçim modelinde altı derece gün bölgesi arasında sıralama farkı oluşup oluşmadığıdır. İkincisi, uygulanabilirlik kısıtı ve iklim dengesi modele dâhil edildiğinde bölge etkisinin hangi koşulda ortaya çıktığıdır. Üçüncüsü, ağırlıklandırma ve sistem sınırı seçimlerinin biyo-esaslı alternatiflerin sıralamadaki yerini ne ölçüde belirlediğidir. Çalışmanın amacı belirli bir malzemeyi en iyi ilan etmek değil, karşılaştırmada kullanılan kurgunun kendisini sınamaktır.
+Bu çerçevede üç araştırma sorusu tanımlanmıştır. Birincisi, sabit ısıl geçirgenlik hedefine dayalı bir seçim modelinde altı derece gün bölgesi arasında sıralama farkı oluşup oluşmadığıdır. İkincisi, uygulanabilirlik kısıtı ve iklim dengesi modele dâhil edildiğinde bölge etkisinin hangi koşulda ortaya çıktığıdır. Üçüncüsü, ağırlıklandırma ve sistem sınırı seçimlerinin biyo-bazlı alternatiflerin sıralamadaki yerini ne ölçüde belirlediğidir. Çalışmanın amacı belirli bir malzemeyi en iyi ilan etmek değil, karşılaştırmada kullanılan kurgunun kendisini sınamaktır.
 
 ## 2. Teorik Metot §(Theoretical Method)§
 
@@ -68,7 +68,7 @@ K_b tam olarak sadeleşir ve normalize matris bölgeden bağımsız hâle gelir.
 
 ### 2.2. Alternatifler ve Ölçüt Seti §(Alternatives and Criteria Set)§
 
-On dört biyo-esaslı ve dört konvansiyonel olmak üzere on sekiz alternatif değerlendirilmiştir (Tablo 1). Konvansiyonel grup kıyas amacıyla dâhil edilmiş, biyo-esaslı olanın üstün olduğu varsayımı sınanmaksızın kabul edilmemiştir. Ölçüt seti Tablo 2'de verilmiştir.
+On dört biyo-bazlı ve dört konvansiyonel olmak üzere on sekiz alternatif değerlendirilmiştir (Tablo 1). Konvansiyonel grup kıyas amacıyla dâhil edilmiş, biyo-bazlı olanın üstün olduğu varsayımı sınanmaksızın kabul edilmemiştir. Ölçüt seti Tablo 2'de verilmiştir.
 
 Isıl ve fiziksel özellikler hakemli kaynaklardan, gömülü ve biyojenik karbon ile yaşam sonu modülleri ÖKOBAUDAT veri tabanından alınmıştır [24]. Her hücre için kaynak ve 1–5 arası veri kalitesi puanı kaydedilmiştir. Veri tabanı kayıtları kg, m² ve m³ başına beyan edildiğinden birim normalizasyonu uygulanmış; beyan edilen birimi kütleye güvenle çevrilemeyen kayıtlar, çevrim çarpanı yer tutucu olan kayıtlar ve yalıtım sınıflandırması dışındaki ürünler elenmiştir.
 
@@ -122,11 +122,11 @@ Bu sonuç, birinci araştırma sorusunun cevabıdır: sabit ısıl geçirgenlik 
 
 ### 3.2. Bölge Etkisini Üreten Mekanizmalar §(Mechanisms Producing the Zone Effect)§
 
-Derece gün değerleri bölgeler arasında tek yönlü ve düzgün bir gradyan göstermektedir (Tablo 4). Uygulanabilirlik kısıtı, 1–4. bölgelerde eleme yapmazken 5. ve 6. bölgelerde dört alternatifi elemektedir: kenevir-kireç, saman balya, pirinç kavuzu paneli ve fındık kabuğu paneli. Elenenlerin tamamı yüksek ısı iletkenlikli, hacimli biyo-esaslı ürünlerdir.
+Derece gün değerleri bölgeler arasında tek yönlü ve düzgün bir gradyan göstermektedir (Tablo 4). Uygulanabilirlik kısıtı, 1–4. bölgelerde eleme yapmazken 5. ve 6. bölgelerde dört alternatifi elemektedir: kenevir-kireç, saman balya, pirinç kavuzu paneli ve fındık kabuğu paneli. Elenenlerin tamamı yüksek ısı iletkenlikli, hacimli biyo-bazlı ürünlerdir.
 
 Mekanizmaların sıralamaya etkisi Şekil 3'te verilmiştir. Ham modelde 1. ve 6. bölge arasındaki korelasyon 0,998 iken, uygulanabilirlik kısıtıyla 0,982'ye, iklim ayarlı ağırlıklandırmayla 0,567'ye inmektedir. Tam modelde değer 0,824'tür; bunun nedeni kısıtın ortak alternatif kümesini 18'den 14'e daraltması ve karşılaştırmanın bu daraltılmış küme üzerinden yapılmasıdır.
 
-İkinci araştırma sorusunun cevabı buradadır: bölge etkisi, K_b ile orantılı olmayan bir yapı modele girdiğinde ortaya çıkar. Uygulamada bu, soğuk bölgelerde yüksek ısı iletkenlikli biyo-esaslı ürünlerin gereken duvar kalınlığı nedeniyle kullanılamaz hâle gelmesi biçiminde somutlaşmaktadır.
+İkinci araştırma sorusunun cevabı buradadır: bölge etkisi, K_b ile orantılı olmayan bir yapı modele girdiğinde ortaya çıkar. Uygulamada bu, soğuk bölgelerde yüksek ısı iletkenlikli biyo-bazlı ürünlerin gereken duvar kalınlığı nedeniyle kullanılamaz hâle gelmesi biçiminde somutlaşmaktadır.
 
 ### 3.3. Ağırlıklandırma Yönteminin Etkisi §(Effect of the Weighting Method)§
 
@@ -138,13 +138,13 @@ TOPSIS ve VIKOR sıralamaları arasındaki Spearman korelasyonu 0,350–0,509 d�
 
 ### 3.4. Sistem Sınırının Etkisi §(Effect of the System Boundary)§
 
-Yaşam döngüsü modülleri incelendiğinde, biyo-esaslı malzemelerin A1–A3'te aldığı biyojenik karbonun C3'te yeniden salındığı görülmektedir. Altı malzemede alım ve salım ±0,04 kgCO₂e/kg içinde birbirini götürmektedir. Sistem sınırına göre yaşam döngüsü karbonu Tablo 6'da, sıralama değişimi Şekil 4'te verilmiştir.
+Yaşam döngüsü modülleri incelendiğinde, biyo-bazlı malzemelerin A1–A3'te aldığı biyojenik karbonun C3'te yeniden salındığı görülmektedir. Altı malzemede alım ve salım ±0,04 kgCO₂e/kg içinde birbirini götürmektedir. Sistem sınırına göre yaşam döngüsü karbonu Tablo 6'da, sıralama değişimi Şekil 4'te verilmiştir.
 
-S1 sınırında biyo-esaslı malzemelerin çoğu karbon-negatif görünmekte ve sıralamanın başında yer almaktadır. C modülleri eklendiğinde birinci sıra altı bölgenin altısında da camyününe geçmektedir. Sınırlar arası Spearman korelasyonu S1–S2 için 0,758, S1–S3 için 0,697, S2–S3 için 0,939'dur. Etki, veri sürümü tutarsızlığı taşıyan iki kayıt çıkarıldığında güçlenmekte (0,758 → 0,333) ve üç ağırlıklandırma yönteminde de korunmaktadır.
+S1 sınırında biyo-bazlı malzemelerin çoğu karbon-negatif görünmekte ve sıralamanın başında yer almaktadır. C modülleri eklendiğinde birinci sıra altı bölgenin altısında da camyününe geçmektedir. Sınırlar arası Spearman korelasyonu S1–S2 için 0,758, S1–S3 için 0,697, S2–S3 için 0,939'dur. Etki, veri sürümü tutarsızlığı taşıyan iki kayıt çıkarıldığında güçlenmekte (0,758 → 0,333) ve üç ağırlıklandırma yönteminde de korunmaktadır.
 
-Yaşam sonu senaryosunun duyarlılığı Şekil 5'te verilmiştir. CRITIC ağırlıklandırmasında camyününün birinci sıraya geçtiği salım oranı eşiği 0,51 ile 0,82 arasındadır; yani depolanan biyojenik karbonun yarısından fazlası yaşam sonunda salınmadıkça biyo-esaslı bir malzeme birinci sırada kalmaktadır. Eşik sıcak bölgelerde daha yüksektir, çünkü biyo-esaslı malzemeler orada ısıl kütle üzerinden ek bir üstünlük taşımakta ve daha büyük bir karbon yükünü soğurabilmektedir. Entropi ağırlıklandırmasında eşik her bölgede sıfırdır: camyünü salım oranından bağımsız olarak birinci sıradadır; bu, 3.3'teki bulgunun bir başka görünümüdür.
+Yaşam sonu senaryosunun duyarlılığı Şekil 5'te verilmiştir. CRITIC ağırlıklandırmasında camyününün birinci sıraya geçtiği salım oranı eşiği 0,51 ile 0,82 arasındadır; yani depolanan biyojenik karbonun yarısından fazlası yaşam sonunda salınmadıkça biyo-bazlı bir malzeme birinci sırada kalmaktadır. Eşik sıcak bölgelerde daha yüksektir, çünkü biyo-bazlı malzemeler orada ısıl kütle üzerinden ek bir üstünlük taşımakta ve daha büyük bir karbon yükünü soğurabilmektedir. Entropi ağırlıklandırmasında eşik her bölgede sıfırdır: camyünü salım oranından bağımsız olarak birinci sıradadır; bu, 3.3'teki bulgunun bir başka görünümüdür.
 
-Bu sonuç, biyo-esaslı malzemelerin çevresel açıdan tercih edilmemesi gerektiği anlamına gelmez. C3 modülü enerji geri kazanımlı yakma senaryosunu yansıtmaktadır; düzenli depolama veya yeniden kullanım senaryolarında depolanan karbonun bir bölümü sistemde kalır, ancak depolamada oluşan metanın küresel ısınma potansiyeli de dikkate alınmalıdır. Bulgunun söylediği şey, yaşam sonu senaryosunun sonucu belirlediği ve varsayım olarak bırakılamayacağıdır. Bu da tartışmayı malzeme seçiminden atık yönetimi politikasına taşımaktadır.
+Bu sonuç, biyo-bazlı malzemelerin çevresel açıdan tercih edilmemesi gerektiği anlamına gelmez. C3 modülü enerji geri kazanımlı yakma senaryosunu yansıtmaktadır; düzenli depolama veya yeniden kullanım senaryolarında depolanan karbonun bir bölümü sistemde kalır, ancak depolamada oluşan metanın küresel ısınma potansiyeli de dikkate alınmalıdır. Bulgunun söylediği şey, yaşam sonu senaryosunun sonucu belirlediği ve varsayım olarak bırakılamayacağıdır. Bu da tartışmayı malzeme seçiminden atık yönetimi politikasına taşımaktadır.
 
 ### 3.5. Isıl Kütlenin Enerji İhtiyacına Etkisi §(Effect of Thermal Mass on Energy Demand)§
 
@@ -158,9 +158,9 @@ Dış ortam sıcaklığının iç tasarım sıcaklığını aştığı aylarda i
 
 ### 3.6. Bulguların Birlikte Değerlendirilmesi §(Joint Assessment of the Findings)§
 
-Dört tespit birbirinden bağımsız yollarla elde edilmiş ancak aynı noktaya çıkmıştır: fonksiyonel birim kurgusu bölge etkisini analitik olarak imkânsız kılmakta, ağırlıklandırma yöntemi biyo-esaslı alternatiflerin yerini yönlü biçimde belirlemekte, sistem sınırı birinci sırayı değiştirmekte ve hesap yönteminin yapısı sonucun ne gösterebileceğini sınırlamaktadır. Ortak sonuç şudur: bir malzeme sıralaması, ancak onu üreten kurgu — fonksiyonel birim tanımı, ağırlıklandırma yöntemi, sıralama yöntemi ve sistem sınırı — eksiksiz beyan edildiğinde yorumlanabilir.
+Dört tespit birbirinden bağımsız yollarla elde edilmiş ancak aynı noktaya çıkmıştır: fonksiyonel birim kurgusu bölge etkisini analitik olarak imkânsız kılmakta, ağırlıklandırma yöntemi biyo-bazlı alternatiflerin yerini yönlü biçimde belirlemekte, sistem sınırı birinci sırayı değiştirmekte ve hesap yönteminin yapısı sonucun ne gösterebileceğini sınırlamaktadır. Ortak sonuç şudur: bir malzeme sıralaması, ancak onu üreten kurgu — fonksiyonel birim tanımı, ağırlıklandırma yöntemi, sıralama yöntemi ve sistem sınırı — eksiksiz beyan edildiğinde yorumlanabilir.
 
-Bu, kararın zaman ufkuna ilişkin bir sonucu da beraberinde getirir. Yapı malzemesi seçim modellerinin ölçütleri geleneksel olarak insan konforu ve yatırımın geri dönüşü üzerinden, bina ömrüyle sınırlı bir ufukta tanımlanır. Hesabı A1–A3'te kesmek, malzemeyi bina kapısına kadar izleyip orada bırakmak demektir ve bu tercih biyo-esaslı malzemeleri karbon-negatif göstermektedir. Hesap malzemenin gerçek yaşam sonuna kadar uzatıldığında bu görüntü kaybolmaktadır. Ölçüt setini biyojenik karbon ve yaşam sonu senaryosuyla genişletmek kararı bina ömrünün ötesine taşımakta, ancak bu genişletme yalnızca sistem sınırı da buna uygun seçildiğinde anlamlı olmaktadır.
+Bu, kararın zaman ufkuna ilişkin bir sonucu da beraberinde getirir. Yapı malzemesi seçim modellerinin ölçütleri geleneksel olarak insan konforu ve yatırımın geri dönüşü üzerinden, bina ömrüyle sınırlı bir ufukta tanımlanır. Hesabı A1–A3'te kesmek, malzemeyi bina kapısına kadar izleyip orada bırakmak demektir ve bu tercih biyo-bazlı malzemeleri karbon-negatif göstermektedir. Hesap malzemenin gerçek yaşam sonuna kadar uzatıldığında bu görüntü kaybolmaktadır. Ölçüt setini biyojenik karbon ve yaşam sonu senaryosuyla genişletmek kararı bina ömrünün ötesine taşımakta, ancak bu genişletme yalnızca sistem sınırı da buna uygun seçildiğinde anlamlı olmaktadır.
 
 ### 3.7. Sınırlılıklar §(Limitations)§
 
@@ -193,13 +193,13 @@ w : ölçüt ağırlığı, –
 
 ## 5. Sonuçlar §(Conclusions)§
 
-Bu çalışmada, biyo-esaslı yapı kabuğu malzemelerinin seçiminde kullanılan çok ölçütlü karar kurgusunun kendisi TS 825:2024 çerçevesinde sınanmıştır. Hesap temeli, yayımlanmış asgari yalıtım kalınlığı tablosunun sekiz veri noktasının tamamında doğrulanmıştır.
+Bu çalışmada, biyo-bazlı yapı kabuğu malzemelerinin seçiminde kullanılan çok ölçütlü karar kurgusunun kendisi TS 825:2024 çerçevesinde sınanmıştır. Hesap temeli, yayımlanmış asgari yalıtım kalınlığı tablosunun sekiz veri noktasının tamamında doğrulanmıştır.
 
 Sabit ısıl geçirgenlik hedefine dayalı kurgu, iklim bölgesine göre sıralama farkı üretememektedir. Gerekli kalınlık malzemeden bağımsız bir çarpanla ölçeklendiğinden, sütun bazlı ölçek değişimine duyarsız her normalizasyonda bu çarpan sadeleşmektedir; yuvarlama devre dışı bırakıldığında bölgeler arası sıra korelasyonu 1,000000'dır. Bölge etkisi ancak orantılılığı kıran yapılar modele eklendiğinde doğmaktadır: uygulanabilirlik kısıtı soğuk bölgelerde dört alternatifi elemekte, iklim dengesine bağlı ağırlıklandırma korelasyonu 0,998'den 0,567'ye indirmektedir.
 
-Ağırlıklandırma yönteminin seçimi biyo-esaslı alternatiflerin sıralamadaki yerini yönlü biçimde belirlemektedir. Entropi, ağırlığın yaklaşık üçte birini tek bir sıralı ölçüte vererek mineral esaslı ürünleri öne çıkarmakta; CRITIC ve eşit ağırlık ise biyo-esaslı alternatifleri ilk sıralara koymaktadır.
+Ağırlıklandırma yönteminin seçimi biyo-bazlı alternatiflerin sıralamadaki yerini yönlü biçimde belirlemektedir. Entropi, ağırlığın yaklaşık üçte birini tek bir sıralı ölçüte vererek mineral esaslı ürünleri öne çıkarmakta; CRITIC ve eşit ağırlık ise biyo-bazlı alternatifleri ilk sıralara koymaktadır.
 
-Yaşam döngüsü sistem sınırının seçimi birinci sırayı tüm bölgelerde değiştirmektedir. Biyo-esaslı malzemelerin A1–A3'te depoladığı biyojenik karbon C3'te yeniden salınmakta, altı malzemede alım ile salım ±0,04 kgCO₂e/kg içinde birbirini götürmektedir. Biyo-esaslı üstünlük, depolanan karbonun yarısından fazlası salınmadıkça korunmaktadır.
+Yaşam döngüsü sistem sınırının seçimi birinci sırayı tüm bölgelerde değiştirmektedir. Biyo-bazlı malzemelerin A1–A3'te depoladığı biyojenik karbon C3'te yeniden salınmakta, altı malzemede alım ile salım ±0,04 kgCO₂e/kg içinde birbirini götürmektedir. Biyo-bazlı üstünlük, depolanan karbonun yarısından fazlası salınmadıkça korunmaktadır.
 
 Bulguların mevzuata dönük karşılığı, tavsiye edilen ısıl geçirgenlik değerleri koşulunda derece gün bölgesinin malzeme seçimini tek başına farklılaştırmadığı ve zaman sabitinden bağımsız bir kullanım faktörü kullanıldığında hesap yönteminin ısıl kütle farkını değerlendirme dışı bıraktığıdır.
 
@@ -320,7 +320,7 @@ Bulguların mevzuata dönük karşılığı, tavsiye edilen ısıl geçirgenlik 
 
 **Şekil 6.** Isıl kütlenin enerji ihtiyacına etkisi: (a) mutlak katkı, (b) karşılaştırma tabanı olan toplam ihtiyaç §(Effect of thermal mass on energy demand: (a) absolute contribution, (b) total demand as the basis of comparison)§
 
-**Şekil 5.** Biyo-esaslı üstünlüğün kaybolduğu yaşam sonu salım oranı eşiği; eşiğin üzerinde camyünü birinci sıradadır §(Threshold end-of-life release fraction at which the bio-based advantage disappears; above the threshold glass wool ranks first)§
+**Şekil 5.** Biyo-bazlı üstünlüğün kaybolduğu yaşam sonu salım oranı eşiği; eşiğin üzerinde camyünü birinci sıradadır §(Threshold end-of-life release fraction at which the bio-based advantage disappears; above the threshold glass wool ranks first)§
 
 ## Kaynaklar §(References)§
 

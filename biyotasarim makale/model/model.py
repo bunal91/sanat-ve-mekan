@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Biyo-esaslı yapı kabuğu malzemeleri için çok ölçütlü karar modeli.
+Biyo-bazlı yapı kabuğu malzemeleri için çok ölçütlü karar modeli.
 
 Makalenin kurgusu (bkz. ../04-pilot-bulgu-notu.md):
   Sabit U hedefine dayalı eşdeğer performans yaklaşımı, tanımı gereği iklim

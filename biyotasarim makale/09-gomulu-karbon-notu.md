@@ -47,7 +47,7 @@ zorunluydu:
 \* Kayıt kenevir-jüt karışımıdır, geri dönüşüm tekstil değil; kalite puanı bu
 nedenle 2'dir.
 
-Biyo-esaslı malzemelerin biyojenik değerleri −1,48 ile −1,83 arasında toplanıyor;
+Biyo-bazlı malzemelerin biyojenik değerleri −1,48 ile −1,83 arasında toplanıyor;
 bu, lignoselülozik kuru kütlenin karbon içeriğinden beklenen büyüklükle
 (%50 C × 44/12 ≈ 1,83) tutarlı. Bağımsız bir iç tutarlılık göstergesi.
 
@@ -87,7 +87,7 @@ yapıldı ve **karıştırılmamalı**:
 | Eşit | Ö10 Nem/küf (%16,2) | Mantar (ICB) · Saman · Selüloz |
 
 **Ağırlıklandırma bulgusu gerçek EPD verisiyle de doğrulandı.** Entropi
-mineral yünleri başa koyuyor; CRITIC ve eşit ağırlık aynı üç biyo-esaslı
+mineral yünleri başa koyuyor; CRITIC ve eşit ağırlık aynı üç biyo-bazlı
 malzemeyi veriyor. Entropi tek başına ayrışmayı sürdürüyor ve nedeni aynı:
 yangına tepki ölçütüne ağırlığın üçte birini vermesi. CRITIC'te de en ağır
 ölçüt yangın, ama payı %16,9 — yani CRITIC aynı ölçütü tanıyor, tek başına
@@ -103,7 +103,7 @@ Aynı 11 alternatif üzerinde Ö5 dahil ve hariç sıralamalar (CRITIC):
 
 Sıralama kenarlarda değişiyor, ancak **hiçbir bölgede birinci sıra
 değişmiyor**. Yani gömülü karbon bu ölçüt setinde belirleyici değil, ayırt
-edici. Bu da raporlanabilir bir bulgu: biyo-esaslı malzemelerin üstünlüğü
+edici. Bu da raporlanabilir bir bulgu: biyo-bazlı malzemelerin üstünlüğü
 tek başına gömülü karbondan gelmiyor.
 
 ## 5. Durum ve kalan iş

@@ -1,5 +1,5 @@
 # Revize Araştırma Planı
-## Eşdeğer ısıl performans varsayımı altında biyo-esaslı yapı kabuğu malzemelerinin seçimi: iklim bölgesi etkisinin sınırları ve koşulları
+## Eşdeğer ısıl performans varsayımı altında biyo-bazlı yapı kabuğu malzemelerinin seçimi: iklim bölgesi etkisinin sınırları ve koşulları
 
 **Hedef:** GAZİ MMFD · Türkçe · 15–20 sayfa · laboratuvar gerektirmez
 **Durum:** Kurgu, pilot çalıştırma bulgularına göre revize edildi
@@ -12,7 +12,7 @@
 > Sabit U hedefine dayalı eşdeğer performans yaklaşımı, tanımı gereği iklim
 > bölgesine göre malzeme sıralaması farkı üretemez; bölge etkisi ancak
 > uygulanabilirlik kısıtı, ısıtma/soğutma dengesi ve dinamik ısıl kütle modele
-> dâhil edildiğinde ortaya çıkar. Ayrıca biyo-esaslı alternatiflerin sıralamadaki
+> dâhil edildiğinde ortaya çıkar. Ayrıca biyo-bazlı alternatiflerin sıralamadaki
 > yeri, malzeme özelliklerinden çok ağırlıklandırma yönteminin seçimine bağlıdır.
 
 İki tespit de sınanabilir, analitik gerekçesi verilebilir ve literatürdeki örtük
@@ -28,7 +28,7 @@ bir varsayımı düzeltir. "Şu malzeme en iyisidir" iddiasından daha savunulab
 - **AS2.** Uygulanabilirlik kısıtı, ısıtma/soğutma dengesi ve dinamik ısıl kütle
   modele eklendiğinde bölge etkisi hangi koşulda ve ne büyüklükte ortaya çıkar?
 - **AS3.** Ağırlıklandırma yönteminin seçimi (entropi / CRITIC / eşit ağırlık),
-  biyo-esaslı alternatiflerin sıralamasını ne ölçüde belirler; biyojenik karbon
+  biyo-bazlı alternatiflerin sıralamasını ne ölçüde belirler; biyojenik karbon
   ve yaşam sonu ölçütlerinin etkisini maskeler mi?
 
 ---
@@ -80,7 +80,7 @@ değişimine duyarsız olduğundan sıralama sabit kalır. Ayrıca sabit U hedef
 
 ## 4. Yöntem — yedi adım
 
-1. **Malzeme veri tabanı.** 14 biyo-esaslı alternatif + 4 konvansiyonel kıyas.
+1. **Malzeme veri tabanı.** 14 biyo-bazlı alternatif + 4 konvansiyonel kıyas.
    Her hücre için kaynak künyesi ve 1–5 veri güvenilirlik puanı.
 2. **Fonksiyonel birim hesabı.** Bölge başına kalınlık, kütle, alansal ısıl
    kapasite, gömülü ve biyojenik karbon, maliyet.

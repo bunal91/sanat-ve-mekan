@@ -31,7 +31,7 @@ kurgu var.
 ### Cesaret verici emsal
 Dergi Cilt 40 Sayı 3 (2025) sayısında **"Mimari tasarım pratiklerinde biyomimesis ve
 biçimsel taklit arasındaki farklılıklar"** (Korkmaz & Gündem) yayımlandı. Yani
-biyo-esaslı, kavramsal-eleştirel bir mimarlık makalesi bu dergide yer bulabiliyor —
+biyo-bazlı, kavramsal-eleştirel bir mimarlık makalesi bu dergide yer bulabiliyor —
 ama net bir analitik yöntem ve ayırt edici bir çerçeve önerisiyle. Aynı sayıda
 "cephe teknolojilerinin değerlendirilmesi için model önerisi" ve "IFC ile ruhsat
 kontrolü: model önerisi" gibi **model/çerçeve öneren** makaleler de var. Bu, laboratuvar
@@ -95,15 +95,15 @@ Genellikle bir mühendislik fakültesiyle ortak yazarlık gerektirir.
 
 ---
 
-### SEÇENEK B — Laboratuvarsız: biyo-esaslı malzeme seçimi için karar modeli
+### SEÇENEK B — Laboratuvarsız: biyo-bazlı malzeme seçimi için karar modeli
 
 **Çalışma başlığı önerisi:**
-"Yapı kabuğunda biyo-esaslı malzeme seçimi için çok ölçütlü bir karar destek modeli:
+"Yapı kabuğunda biyo-bazlı malzeme seçimi için çok ölçütlü bir karar destek modeli:
 performans, gömülü karbon ve yaşam sonu senaryolarının bütünleşik değerlendirilmesi"
 
-**Kurgu:** Literatürden ve üretici teknik föylerinden derlenen bir biyo-esaslı malzeme
+**Kurgu:** Literatürden ve üretici teknik föylerinden derlenen bir biyo-bazlı malzeme
 veri tabanı (miselyum, kenevir-kireç, saman balya, selüloz, mantar/meşe, keten ve
-kenevir lifli kompozitler, biyo-esaslı köpükler) üzerine, AHP/entropi ağırlıklandırma
+kenevir lifli kompozitler, biyo-bazlı köpükler) üzerine, AHP/entropi ağırlıklandırma
 + TOPSIS/VIKOR ile bir seçim modeli kurulur. Model, gerçek bir referans bina üzerinde
 enerji simülasyonu (EnergyPlus/DesignBuilder) ile senaryo analiziyle **doğrulanır**.
 
@@ -167,7 +167,7 @@ olarak gönderin.
 
 | Bölüm | Sayfa | İçerik |
 |---|---|---|
-| 1. Giriş | 2,0–2,5 | Yapı sektörünün karbon yükü; biyo-esaslı malzemeye geçiş; antroposantrik üretim eleştirisi; Türkiye'nin tarımsal atık potansiyeli; **araştırma boşluğu ve amaç net cümlelerle** |
+| 1. Giriş | 2,0–2,5 | Yapı sektörünün karbon yükü; biyo-bazlı malzemeye geçiş; antroposantrik üretim eleştirisi; Türkiye'nin tarımsal atık potansiyeli; **araştırma boşluğu ve amaç net cümlelerle** |
 | 2. Literatür / kuramsal arka plan | 2,0–2,5 | Miselyum kompozit literatürü; ısıl-akustik-mekanik performans aralıkları; boşluğun sayısal gösterimi (tablo) |
 | 3. Materyal ve yöntem | 3,0–3,5 | Substratlar, türler, üretim protokolü, Taguchi tasarımı, numune sayısı, ölçüm standartları, çok ölçütlü değerlendirme yöntemi. Üretim akış şeması + numune fotoğrafları |
 | 4. Bulgular | 4,0–5,0 | Yoğunluk, λ, ses yutum eğrileri, basma/eğilme, su emme, SEM görüntüleri; ANOVA tabloları; TOPSIS sıralaması |

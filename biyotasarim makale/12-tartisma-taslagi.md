@@ -15,13 +15,13 @@ imkânsız olduğudur (4.2). Gerekli kalınlık `d = λ·K_b` biçiminde yazıld
 K_b malzemeden bağımsızdır ve sütun bazlı ölçek değişimine duyarsız her
 normalizasyonda sadeleşir.
 
-**İkincisi**, ağırlıklandırma yönteminin seçiminin biyo-esaslı alternatiflerin
+**İkincisi**, ağırlıklandırma yönteminin seçiminin biyo-bazlı alternatiflerin
 sıralamadaki yerini yönlü biçimde belirlediğidir (4.4). Entropi, ağırlığın
 üçte birini yangına tepki ölçütüne vererek mineral esaslı ürünleri
 sistematik olarak öne çıkarmaktadır.
 
 **Üçüncüsü**, sistem sınırının birinci sırayı altı bölgenin altısında da
-değiştirdiğidir (4.6). A1–A3'te kesilen bir hesapta biyo-esaslı malzemeler
+değiştirdiğidir (4.6). A1–A3'te kesilen bir hesapta biyo-bazlı malzemeler
 karbon-negatif görünmekte, C modülleri eklendiğinde birinci sıra camyününe
 geçmektedir.
 
@@ -46,9 +46,9 @@ de bu değerleri sağlama koşuluyla yapılmaktadır. 4.2'deki sonuç, bu koşul
 altında derece gün bölgesinin malzeme seçimini **tek başına farklılaştırmadığını**
 göstermektedir. Bölgenin karara girmesi, yalnızca uygulanabilirlik kısıtları
 ve dinamik ısıl davranış gibi ek yapılar modele dâhil edildiğinde mümkün
-olmaktadır. Uygulanabilirlik kısıtının 5. ve 6. bölgelerde dört biyo-esaslı
+olmaktadır. Uygulanabilirlik kısıtının 5. ve 6. bölgelerde dört biyo-bazlı
 alternatifi elemesi (4.3), bunun somut bir örneğidir: soğuk bölgelerde yüksek
-ısı iletkenlikli biyo-esaslı ürünler, gereken duvar kalınlığı nedeniyle
+ısı iletkenlikli biyo-bazlı ürünler, gereken duvar kalınlığı nedeniyle
 pratikte kullanılamaz hâle gelmektedir.
 
 **Aylık yöntemin ısıl kütle körlüğü.** 4.7.1'deki sonuç, aylık yarı-kararlı
@@ -79,10 +79,10 @@ yatırımın geri dönüşü üzerinden, binanın ayakta kalacağı süreyle sı
 zaman ufkunda tanımlandığı belirtilmişti. 4.6'daki bulgu bu saptamayı
 soyut olmaktan çıkarmakta ve ölçülebilir hâle getirmektedir.
 
-Biyo-esaslı bir malzemenin A1–A3'te depoladığı biyojenik karbon, C3'te
+Biyo-bazlı bir malzemenin A1–A3'te depoladığı biyojenik karbon, C3'te
 yeniden salınmaktadır; altı malzemede alım ve salım ±0,04 kgCO₂e/kg içinde
 birbirini götürmektedir. Hesabı A1–A3'te kesmek, malzemeyi bina kapısına kadar
-izleyip orada bırakmak demektir — ve bu tercih, biyo-esaslı malzemeleri
+izleyip orada bırakmak demektir — ve bu tercih, biyo-bazlı malzemeleri
 karbon-negatif göstermektedir. Hesap malzemenin gerçek yaşam sonuna kadar
 uzatıldığında bu görüntü kaybolmakta, birinci sıra altı bölgenin altısında da
 değişmektedir.
@@ -94,7 +94,7 @@ biyojenik karbon ve yaşam sonu senaryosuyla genişletmek, kararı bina ömrün�
 seçildiğinde anlamlı olmaktadır. Ölçüt eklemek, sınırı değiştirmeden tek
 başına yeterli değildir.
 
-Aynı zamanda burada bir uyarı gereklidir. Bulgu, biyo-esaslı malzemelerin
+Aynı zamanda burada bir uyarı gereklidir. Bulgu, biyo-bazlı malzemelerin
 çevresel açıdan tercih edilmemesi gerektiği anlamına gelmez. C3 modülü enerji
 geri kazanımlı yakma senaryosunu yansıtmaktadır; düzenli depolama, yeniden
 kullanım ya da uzun ömürlü ürüne dönüştürme senaryolarında depolanan karbonun
@@ -103,12 +103,12 @@ sonucu belirlediği** ve dolayısıyla varsayım olarak bırakılamayacağıdır
 
 Senaryo duyarlılığı bu tespiti niceliksel hâle getirmektedir (4.6.1).
 Depolanan biyojenik karbonun yarısından fazlası yaşam sonunda salınmadıkça
-biyo-esaslı bir malzeme birinci sırada kalmaktadır; eşik, CRITIC
+biyo-bazlı bir malzeme birinci sırada kalmaktadır; eşik, CRITIC
 ağırlıklandırmasında bölgeye göre 0,51 ile 0,82 arasındadır. Dolayısıyla
-4.6'daki sıralama değişimi biyo-esaslı malzemelerin aleyhine genel bir
+4.6'daki sıralama değişimi biyo-bazlı malzemelerin aleyhine genel bir
 sonuç değil, **belirli bir yaşam sonu senaryosunun sonucudur.** Bu da
 tartışmayı malzeme seçiminden atık yönetimi politikasına taşımaktadır:
-biyo-esaslı yapı malzemelerinin iklim faydası, büyük ölçüde binanın
+biyo-bazlı yapı malzemelerinin iklim faydası, büyük ölçüde binanın
 yıkımından sonra ne olacağına bağlıdır.
 
 ## 5.4. Uygulamaya dönük çıkarımlar

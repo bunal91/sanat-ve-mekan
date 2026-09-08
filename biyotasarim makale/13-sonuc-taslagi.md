@@ -4,9 +4,9 @@
 
 ---
 
-Bu çalışmada, biyo-esaslı yapı kabuğu malzemelerinin seçiminde kullanılan
+Bu çalışmada, biyo-bazlı yapı kabuğu malzemelerinin seçiminde kullanılan
 çok ölçütlü karar kurgusunun kendisi, TS 825:2024'ün altı derece gün bölgesi
-çerçevesinde sınanmıştır. On dört biyo-esaslı ve dört konvansiyonel alternatif,
+çerçevesinde sınanmıştır. On dört biyo-bazlı ve dört konvansiyonel alternatif,
 eşdeğer ısıl performans koşulunda karşılaştırılmış; hesap temeli, yayımlanmış
 asgari yalıtım kalınlığı tablosunun sekiz veri noktasının sekizinde de
 doğrulanmıştır (R_diğer = 0,30 m²K/W).
@@ -24,19 +24,19 @@ eklendiğinde doğar: uygulanabilirlik kısıtı (5. ve 6. bölgelerde dört
 alternatifi eler), iklim dengesine bağlı ağırlıklandırma (Spearman 0,998 → 0,567)
 ve zaman sabitine bağlı dinamik ısıl kütle.
 
-**2. Ağırlıklandırma yönteminin seçimi, biyo-esaslı alternatiflerin
+**2. Ağırlıklandırma yönteminin seçimi, biyo-bazlı alternatiflerin
 sıralamadaki yerini yönlü biçimde belirlemektedir.** Entropi, ağırlığın
 %32,8'ini tek bir sıralı ölçüte (yangına tepki) vererek mineral esaslı ürünleri
-öne çıkarmakta; CRITIC ve eşit ağırlık ise aynı biyo-esaslı alternatifleri ilk
+öne çıkarmakta; CRITIC ve eşit ağırlık ise aynı biyo-bazlı alternatifleri ilk
 sıralara koymaktadır. Bulgu, doğrulanmış ürün beyanlarıyla çalışılan tam veri
 alt kümesinde de korunmaktadır. TOPSIS ile VIKOR arasındaki uyum 0,350–0,509
 düzeyindedir; sıralama yönteminin seçimi de sonucu etkilemektedir.
 
 **3. Sistem sınırının seçimi, birinci sırayı altı bölgenin altısında da
-değiştirmektedir.** Ürün beyanı modülleri, biyo-esaslı malzemelerin A1–A3'te
+değiştirmektedir.** Ürün beyanı modülleri, biyo-bazlı malzemelerin A1–A3'te
 depoladığı biyojenik karbonun C3'te yeniden salındığını ve altı malzemede alım
 ile salımın ±0,04 kgCO₂e/kg içinde birbirini götürdüğünü göstermektedir.
-Hesap A1–A3'te kesildiğinde biyo-esaslı malzemeler karbon-negatif görünmekte
+Hesap A1–A3'te kesildiğinde biyo-bazlı malzemeler karbon-negatif görünmekte
 ve sıralamanın başında yer almakta; C modülleri eklendiğinde birinci sıra
 camyününe geçmektedir. Etki, veri anomalisi taşıyan kayıtlar çıkarıldığında
 güçlenmekte (Spearman 0,758 → 0,333) ve üç ağırlıklandırma yönteminde de

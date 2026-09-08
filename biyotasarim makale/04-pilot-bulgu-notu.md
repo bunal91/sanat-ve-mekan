@@ -63,7 +63,7 @@ Entropi ağırlığı yayılıma göre dağıtır. Yangın sınıfı ölçütü 
 için 7, diğerlerinin çoğu için 2 olduğundan aşırı yayılımlı bir sütun oluşuyor ve
 **tek başına ağırlığın %39,7'sini alıyor**. Sonuç: her bölgede ilk iki sıra
 camyünü ve taşyünü. Biyojenik karbon ölçütü ise yalnızca %2,6 ağırlık alıyor —
-yani model biyo-esaslı malzemenin ayırt edici üstünlüğünü göremiyor.
+yani model biyo-bazlı malzemenin ayırt edici üstünlüğünü göremiyor.
 
 Bu nedenle **AS2 de boş çıkıyor:** Ö6 ve Ö9 modelden çıkarıldığında Spearman
 0,992–0,998, hiçbir bölgede 1. sıra değişmiyor.
@@ -73,7 +73,7 @@ Bu nedenle **AS2 de boş çıkıyor:** Ö6 ve Ö9 modelden çıkarıldığında 
 ## Bu aslında iyi bir haber — ve daha iyi bir makale
 
 Yukarıdaki teşhis, atılacak bir sonuç değil; **makalenin asıl katkısı** olabilir.
-Literatürdeki biyo-esaslı malzeme MCDM çalışmaları eşdeğer ısıl performans
+Literatürdeki biyo-bazlı malzeme MCDM çalışmaları eşdeğer ısıl performans
 varsayımıyla çalışıyor ve iklim bağımlılığını örtük olarak varsayıyor. Bu çalışma
 şunu gösteriyor:
 
@@ -100,7 +100,7 @@ savunması kolaydır.
 | 6 (Aşırı Soğuk) | Kenevir-kireç (26 cm), Saman balya (22 cm) |
 
 Uygun alternatif kümesi bölgeye göre değişiyor. Bu **gerçek** ve fiziksel bir
-bölge etkisidir: yüksek λ değerli hacimli biyo-esaslı malzemeler soğuk bölgelerde
+bölge etkisidir: yüksek λ değerli hacimli biyo-bazlı malzemeler soğuk bölgelerde
 duvar kalınlığı nedeniyle uygulanamaz hale geliyor. Kısıt eşiği (20 cm) duyarlılık
 analizine konu edilmeli.
 
@@ -123,7 +123,7 @@ için referans binanın geometrisi ve aylık güneş ışınımı verisi gerekir
 ## Kurgu değişikliği önerisi
 
 ### Yeni başlık
-**"Eşdeğer ısıl performans varsayımı altında biyo-esaslı yapı kabuğu
+**"Eşdeğer ısıl performans varsayımı altında biyo-bazlı yapı kabuğu
 malzemelerinin seçimi: iklim bölgesi etkisinin sınırları ve koşulları"**
 
 ### Yeni araştırma soruları
@@ -137,7 +137,7 @@ malzemelerinin seçimi: iklim bölgesi etkisinin sınırları ve koşulları"**
   ne ölçüde maskeler?
 
 AS3 artık ayrıca bir **yöntem eleştirisi** taşıyor: entropi ağırlıklandırmasının
-yüksek yayılımlı sıralı ölçütlere aşırı ağırlık vermesi, biyo-esaslı malzemelerin
+yüksek yayılımlı sıralı ölçütlere aşırı ağırlık vermesi, biyo-bazlı malzemelerin
 çevresel üstünlüğünü görünmez kılıyor. Bu tespit tek başına yayımlanabilir
 değerde.
 
@@ -216,11 +216,11 @@ daraltmasından kaynaklanıyor — makalede açıklanması gereken bir ayrıntı
 | CRITIC | Ö9 Yaşam sonu senaryosu (%17,1) | **Fındık kabuğu esaslı panel** |
 
 Entropi, yayılımı yüksek tek bir sıralı ölçüte (yangın sınıfı) ağırlığın
-üçte birini vererek biyo-esaslı alternatiflerin tamamını geriye itiyor.
+üçte birini vererek biyo-bazlı alternatiflerin tamamını geriye itiyor.
 CRITIC, ölçütler arası çatışmayı da hesaba kattığı için ağırlığı dağıtıyor ve
-sıralamanın başına biyo-esaslı malzemeler geçiyor.
+sıralamanın başına biyo-bazlı malzemeler geçiyor.
 
-**Bu, makalenin en güçlü bulgusu olabilir:** biyo-esaslı malzemelerin
+**Bu, makalenin en güçlü bulgusu olabilir:** biyo-bazlı malzemelerin
 "kazanıp kazanmadığı", malzemelerin kendisinden çok ağırlıklandırma
 yönteminin seçimine bağlı. Literatürde bu yöntem seçimi çoğunlukla
 gerekçelendirilmeden yapılıyor. AS3 doğrudan bunu ölçüyor.
@@ -241,7 +241,7 @@ sayesinde soğutma payının yüksek olduğu 1–4. bölgelerde ikinci sırada; 
 6. bölgede ise gereken 26 cm kalınlık uygulanabilirlik sınırını aştığı için
 tamamen eleniyor ve yerini daha ince kesitli alternatifler alıyor. Ayrıca
 5–6. bölgede camyünü ilk beşe giriyor: soğuk bölgede ısıl kütlenin ağırlığı
-düştüğü için biyo-esaslı malzemelerin göreli üstünlüğü zayıflıyor.
+düştüğü için biyo-bazlı malzemelerin göreli üstünlüğü zayıflıyor.
 
 ## 5. Bu sayılar hâlâ makalede kullanılamaz
 

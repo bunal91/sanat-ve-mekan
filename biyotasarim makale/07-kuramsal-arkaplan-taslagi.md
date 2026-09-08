@@ -6,9 +6,9 @@
 
 ---
 
-## 2.1. Biyo-esaslı yalıtım malzemeleri: performans aralıkları ve veri durumu
+## 2.1. Biyo-bazlı yalıtım malzemeleri: performans aralıkları ve veri durumu
 
-Biyo-esaslı yalıtım malzemeleri, lignoselülozik ya da protein esaslı bir
+Biyo-bazlı yalıtım malzemeleri, lignoselülozik ya da protein esaslı bir
 hammaddeden üretilen ve yapı kabuğunda ısıl direnç sağlamak üzere kullanılan
 ürünler olarak tanımlanabilir. Bu grup, işlenmiş lif keçeleri (ahşap lifi,
 kenevir, keten, koyun yünü), dökme ve dolgu malzemeleri (selüloz, saman,
@@ -43,7 +43,7 @@ Alandaki yayın hacmi hızla büyümektedir [KAYNAK: miselyum kompozit sistemati
 derleme, 2026], ancak standartlaşma ve uzun dönem dayanıklılık verisi hâlâ
 eksiktir.
 
-Bu tablo iki sonuca işaret eder. Birincisi, "biyo-esaslı malzeme" tek bir
+Bu tablo iki sonuca işaret eder. Birincisi, "biyo-bazlı malzeme" tek bir
 performans sınıfı değildir; grup içi yayılım, grup ile konvansiyonel muadiller
 arasındaki farktan büyüktür. İkincisi ve bu çalışma açısından belirleyici olanı,
 **veri kalitesinin malzemeye göre çok değiştiğidir**: yerleşik ürünler için
@@ -60,7 +60,7 @@ ağırlıklandırma ve TOPSIS ile sıralama yapıldığını ortaya koymaktadır
 güncel çalışmalar bulanık gösterimler, BWM ve MACONT gibi yöntemleri de
 kullanmakta [KAYNAK: Environment Systems and Decisions, 2025], dış duvar
 seçeneklerinin AHP, ANP ve TOPSIS ile karşılaştırıldığı örnekler bulunmaktadır
-[KAYNAK: Building and Environment, 2025]. Biyo-esaslı malzemelere odaklanan
+[KAYNAK: Building and Environment, 2025]. Biyo-bazlı malzemelere odaklanan
 Avrupa ölçekli bir çok ölçütlü karar analizi, ahşap lifi ve mantarın farklı
 ağırlık senaryoları altında istikrarlı biçimde ilk sıralarda yer aldığını
 raporlamaktadır [KAYNAK: Sustainability 18(11):5508].
@@ -81,12 +81,12 @@ sonuç doğurabileceği ve subjektif-objektif yöntemlerin birleştirilmesinin
 
 Dolayısıyla bu çalışma, "ağırlıklandırma yöntemi sonucu etkiler" biçiminde
 genel bir sav ileri sürmemektedir; bu, alanda yerleşik bir bulgudur. Ele alınan
-soru daha dardır ve **yönlüdür**: biyo-esaslı yalıtım malzemeleri söz konusu
+soru daha dardır ve **yönlüdür**: biyo-bazlı yalıtım malzemeleri söz konusu
 olduğunda, yaygın kullanılan objektif ağırlıklandırma yöntemleri arasında
 sistematik ve tek yönlü bir sapma oluşup oluşmadığı. Yangına tepki sınıfı gibi
 sıralı ve yayılımı yüksek bir ölçüt, mineral esaslı ürünleri diğerlerinden
 belirgin biçimde ayırdığında, yayılıma duyarlı bir ağırlıklandırma yönteminin
-bu tek ölçüt üzerinden biyo-esaslı alternatiflerin tamamını geriye itmesi
+bu tek ölçüt üzerinden biyo-bazlı alternatiflerin tamamını geriye itmesi
 beklenir. Bu mekanizmanın gösterilmesi, genel duyarlılık tespitinden farklı ve
 uygulamaya dönük bir katkıdır.
 
@@ -95,10 +95,10 @@ uygulamaya dönük bir katkıdır.
 İşletme enerjisi düştükçe yapı bileşenlerinin toplam etkisinde gömülü karbonun
 payı görece büyümekte, bu da malzeme seçimini enerji verimliliği tartışmasının
 merkezine taşımaktadır [KAYNAK: A1–A5 gömülü karbon değerlendirmesi,
-Sustainability 16(3):1190]. Biyo-esaslı malzemelerde bu hesap iki nedenle
+Sustainability 16(3):1190]. Biyo-bazlı malzemelerde bu hesap iki nedenle
 farklılaşır. Birincisi üretim aşaması emisyonları görece düşüktür; ikincisi ve
 daha belirleyicisi, malzeme büyüme sürecinde atmosferden aldığı karbonu bileşen
-ömrü boyunca depolar. Biyo-esaslı bir dış cephe yalıtım paneli üzerine yapılan
+ömrü boyunca depolar. Biyo-bazlı bir dış cephe yalıtım paneli üzerine yapılan
 bir değerlendirme, karbon alımı ile gömülü emisyonların birlikte ele alınması
 gerektiğini vurgulamaktadır [KAYNAK: Energies 17(14):3406]. Selüloz yalıtımda
 900 kg kâğıttan üretilen ürün için bileşen ömrü boyunca yaklaşık 1370 kg CO₂
@@ -116,7 +116,7 @@ güncel çalışmalar, geri dönüştürülmüş pamuk ve kenevir lifi yalıtım
 etki kategorilerinde en düşük etkiye sahip olduğunu raporlamaktadır [KAYNAK:
 senaryo tabanlı ve dinamik LCA çalışması, 2025].
 
-Bu iki büyüklük — biyojenik karbon depolama ve yaşam sonu senaryosu — biyo-esaslı
+Bu iki büyüklük — biyojenik karbon depolama ve yaşam sonu senaryosu — biyo-bazlı
 malzemeyi konvansiyonel muadilinden ayıran asıl özelliklerdir. Ne var ki
 2.2'de özetlenen ÇÖKV literatüründe bu büyüklükler karar ölçütü olarak
 düzenli biçimde yer almamakta; yer aldıklarında da tek bir gömülü karbon
@@ -131,7 +131,7 @@ Yukarıdaki üç alt bölüm birlikte okunduğunda üç boşluk belirginleşir.
 Standart 21 Ekim 2024'te yayımlanmış, 20 Şubat 2025 tarihli tebliğle 1 Nisan
 2025 itibarıyla zorunlu hâle gelmiş; derece gün bölgesi sayısı dörtten altıya
 çıkarılmış ve ilk kez soğutma ihtiyacı hesaba dâhil edilmiştir [K11, K12].
-Biyo-esaslı yapı kabuğu malzemelerini bu çerçevede değerlendiren bir çalışmaya
+Biyo-bazlı yapı kabuğu malzemelerini bu çerçevede değerlendiren bir çalışmaya
 rastlanmamıştır.
 
 **İkincisi**, eşdeğer ısıl performans kurgusunun kendisinin sınanmamış
@@ -140,7 +140,7 @@ sağlayacak kalınlıkta kullanıldığı kabulüyle yapılmakta, sonuçların i
 koşullarına göre değişeceği ise örtük olarak varsayılmaktadır. Bu varsayımın
 analitik olarak sınandığı bir çalışmaya rastlanmamıştır.
 
-**Üçüncüsü**, ağırlıklandırma duyarlılığının biyo-esaslı malzemeler bağlamında
+**Üçüncüsü**, ağırlıklandırma duyarlılığının biyo-bazlı malzemeler bağlamında
 yönlü bir sapma olarak ele alınmamış olmasıdır. Duyarlılığın kendisi bilinmekte,
 ancak belirli bir ölçüt yapısının belirli bir malzeme grubunu sistematik olarak
 dezavantajlı kılıp kılmadığı incelenmemektedir.
@@ -151,7 +151,7 @@ dezavantajlı kılıp kılmadığı incelenmemektedir.
 | Çalışma | İklim çerçevesi | Eşdeğer performans kurgusu sınanıyor mu | Biyojenik karbon ölçüt mü | Yaşam sonu ölçüt mü | Ağırlıklandırma yönteminin yönlü etkisi |
 |---|---|---|---|---|---|
 | Yalıtım malzemesi ÇÖKV derlemesi | çeşitli | hayır | seyrek | seyrek | hayır |
-| Avrupa biyo-esaslı ÇÖKA | iklimden bağımsız tek sıralama | hayır | kısmen | hayır | hayır (genel duyarlılık var) |
+| Avrupa biyo-bazlı ÇÖKA | iklimden bağımsız tek sıralama | hayır | kısmen | hayır | hayır (genel duyarlılık var) |
 | Ağırlıklandırma yöntemleri derlemesi | — | — | — | — | genel, malzeme grubuna yönlü değil |
 | Dış duvar seçenekleri AHP/ANP/TOPSIS | tek iklim | hayır | hayır | hayır | hayır |
 | **Bu çalışma** | **TS 825:2024, altı bölge, ısıtma + soğutma** | **evet, analitik olarak** | **evet** | **evet** | **evet, yönlü** |

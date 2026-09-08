@@ -48,10 +48,10 @@ function belgeYap(bloklar, ekSekil) {
   });
 }
 
+// 02-kapak-sayfasi.docx ve 03-genisletilmis-ingilizce-ozet.docx bu betikle
+// ÜRETİLMEZ; ikisi de derginin resmî şablon dosyaları üzerine kurulmuştur.
+// Yeniden üretimleri: kapak için `kapak_kur.py`, özet için şablon dosyası.
 const isler = [
-  ['02-kapak-sayfasi.md', '02-kapak-sayfasi.docx', null],
-  ['03-genisletilmis-ingilizce-ozet.md', '03-genisletilmis-ingilizce-ozet.docx',
-   'Grafik-ozet.png'],
   ['04-editore-not.md', '04-editore-not.docx', null],
 ];
 (async () => {

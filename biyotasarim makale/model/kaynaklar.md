@@ -24,7 +24,7 @@ Her kaynağa bir anahtar verilmiştir; `girdi_malzemeler.csv` içindeki
 | **K05** | *Hygrothermal Properties and Performance of Bio-Based Insulation Materials Locally Sourced in Sweden*, PMC11084737 | Ahşap lifi ρ50 λ0,038 c2100 · çim ρ40 λ0,041 c1500 · deniz otu ρ120 λ0,05 · taşyünü ρ29 λ0,037 c1030 |
 | **K06** | Ayçiçeği özü bağlayıcısız yonga levha çalışmaları | ρ = 50–100 kg/m³ · λ = 0,038–0,042 W/mK |
 | **K07** | Pirinç kavuzu esaslı yalıtım levhaları (çoklu çalışma) | ρ = 300–520 kg/m³ ile λ = 0,064–0,076 W/mK; ρ = 378–488 kg/m³ ile λ = 0,08–0,14 W/mK |
-| **K08** | Biyo-esaslı yalıtım derlemesi (2025), ScienceDirect S1364032125005453 | Koyun yünü, kenevir, keten, jüt lifleri: λ = 0,031–0,046 W/mK |
+| **K08** | Biyo-bazlı yalıtım derlemesi (2025), ScienceDirect S1364032125005453 | Koyun yünü, kenevir, keten, jüt lifleri: λ = 0,031–0,046 W/mK |
 | **K09** | Kenevir esaslı yalıtım ölçümleri | λ = 0,055–0,065 W/mK (kenevir kırığı / hempcrete; lif keçesinden farklıdır) |
 | **K10** | Genleştirilmiş mantar levha (ICB) çalışmaları | ρ ≈ 110 kg/m³ · λ = 0,040–0,050 W/mK |
 

@@ -9,7 +9,7 @@
 Amaç, çekilmiş C3, C4 ve D modüllerinden yaşam sonu ölçütünü türetmekti.
 Modüllere bakınca daha temel bir şey görüldü ve yön değişti.
 
-EN 15804 muhasebesinde biyo-esaslı bir malzemenin A1–A3'te aldığı biyojenik
+EN 15804 muhasebesinde biyo-bazlı bir malzemenin A1–A3'te aldığı biyojenik
 karbon, C3'te (enerji geri kazanımlı yakma) yeniden salınır. Veri bunu birebir
 doğruluyor:
 
@@ -64,7 +64,7 @@ döngüsü karbonu** ölçütü alıyor.
 | R04 | Camyünü | 1,079 | 1,086 | 1,033 |
 | R02 | XPS | 3,188 | 6,880 | 5,497 |
 
-S1'de biyo-esaslı malzemelerin çoğu **karbon-negatif** görünüyor. S2'de
+S1'de biyo-bazlı malzemelerin çoğu **karbon-negatif** görünüyor. S2'de
 tamamı pozitife dönüyor ve camyününe göre üstünlükleri ~2,7 kgCO₂e/kg'dan
 ~0,8'e iniyor; kenevir ve keten camyününün **gerisine** düşüyor.
 
@@ -101,7 +101,7 @@ kayıtları çıkarıldığında etki **zayıflamıyor, güçleniyor**:
 | CRITIC | Saman balya | **Camyünü** | 0,333 |
 | Eşit | Mantar (ICB) | **Camyünü** | 0,643 |
 
-CRITIC ve eşit ağırlık, biyo-esaslı bir malzemeden camyününe dönüyor.
+CRITIC ve eşit ağırlık, biyo-bazlı bir malzemeden camyününe dönüyor.
 Entropi zaten camyününü birinci veriyordu — kendi ayrı sapması nedeniyle.
 
 ## 5. Makale açısından anlamı
@@ -115,8 +115,8 @@ Bu, çalışmanın ana savının **üçüncü ve en güçlü örneği**:
 1. **Fonksiyonel birim kurgusu** — sabit U hedefi, iklim bölgesine göre
    sıralama farkı üretilmesini analitik olarak imkânsız kılıyor.
 2. **Ağırlıklandırma yöntemi** — entropi, yayılımı yüksek tek bir ölçüt
-   üzerinden biyo-esaslı malzemeleri sistematik olarak geriye itiyor.
-3. **Sistem sınırı** — A1–A3'te kesilen bir hesap biyo-esaslı malzemeleri
+   üzerinden biyo-bazlı malzemeleri sistematik olarak geriye itiyor.
+3. **Sistem sınırı** — A1–A3'te kesilen bir hesap biyo-bazlı malzemeleri
    karbon-negatif gösteriyor; C modülleri eklendiğinde birinci sıra
    **altı bölgenin altısında da** camyününe geçiyor.
 
@@ -132,7 +132,7 @@ hâline geliyor.
 1. **C3 senaryosu varsayımdır.** Modüller enerji geri kazanımlı yakma
    senaryosunu yansıtıyor. Düzenli depolama, yeniden kullanım veya uzun ömürlü
    ürüne dönüştürme senaryolarında biyojenik karbonun bir kısmı depoda kalır.
-   Bulgu, "biyo-esaslı malzeme iyi değildir" demiyor; **yaşam sonu senaryosunun
+   Bulgu, "biyo-bazlı malzeme iyi değildir" demiyor; **yaşam sonu senaryosunun
    sonucu belirlediğini** söylüyor.
 2. **On alternatif.** Tarımsal atık esaslı paneller ve miselyum kompozit,
    EPD bulunmadığı için bu analizin dışında.

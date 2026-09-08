@@ -9,7 +9,7 @@
 
 ## Makalenin özgün yönü
 
-Biyo-esaslı yalıtım malzemelerini karşılaştıran çalışmalar, malzemelerin aynı
+Biyo-bazlı yalıtım malzemelerini karşılaştıran çalışmalar, malzemelerin aynı
 ısıl geçirgenlik değerini sağlayacak kalınlıkta kullanıldığı "eşdeğer ısıl
 performans" kurgusunu benimsemekte ve sonuçların iklim koşullarına göre
 değişeceğini örtük olarak varsaymaktadır. Bu çalışmanın özgün yönü, bir malzeme
@@ -34,15 +34,15 @@ kullanan ilk karşılaştırmalı malzeme seçimi çalışmasıdır.
    yapıların eklenmesi gerektiğini de belirlemektedir.
 
 2. **Ağırlıklandırma yönteminin yönlü etkisinin gösterilmesi.** Ağırlıklandırma
-   yönteminin sıralamayı etkilediği bilinmektedir; bu çalışma, biyo-esaslı
+   yönteminin sıralamayı etkilediği bilinmektedir; bu çalışma, biyo-bazlı
    malzemeler bağlamında etkinin **sistematik ve tek yönlü** olduğunu ve
    nedeninin yayılımı yüksek tek bir sıralı ölçüt olduğunu göstermektedir.
 
 3. **Sistem sınırının belirleyiciliğinin ölçülmesi.** Ürün beyanı modülleri
-   kullanılarak, biyo-esaslı malzemelerin depoladığı biyojenik karbonun yaşam
+   kullanılarak, biyo-bazlı malzemelerin depoladığı biyojenik karbonun yaşam
    sonunda yeniden salındığı ve sistem sınırı seçiminin birinci sıradaki
    malzemeyi tüm bölgelerde değiştirdiği gösterilmektedir. Yaşam sonu salım
-   oranı bir duyarlılık parametresi olarak tanımlanarak, biyo-esaslı üstünlüğün
+   oranı bir duyarlılık parametresi olarak tanımlanarak, biyo-bazlı üstünlüğün
    hangi eşiğe kadar korunduğu sayısallaştırılmaktadır.
 
 4. **Uygulamaya dönük kural.** Çalışma, bir malzeme sıralamasının ancak

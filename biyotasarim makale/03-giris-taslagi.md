@@ -28,7 +28,7 @@ bileşeninin toplam yaşam döngüsü etkisi içinde gömülü karbonun payı g�
 büyümekte; bu da malzeme seçimini enerji verimliliği tartışmasının merkezine
 taşımaktadır [KAYNAK: gömülü karbon payı çalışmaları].
 
-Biyo-esaslı yapı malzemeleri — kenevir lifi, ahşap lifi, selüloz, saman,
+Biyo-bazlı yapı malzemeleri — kenevir lifi, ahşap lifi, selüloz, saman,
 genleştirilmiş mantar, kenevir-kireç ve tarımsal atık esaslı paneller — bu
 noktada iki nedenle öne çıkmaktadır. Birincisi, üretimlerinin gömülü karbonu
 mineral ve petrokimya esaslı muadillerine kıyasla düşüktür. İkincisi ve daha
@@ -51,7 +51,7 @@ kuramsal çerçeve olarak değil, ölçüt setinin somut biçimde genişletilmes
 olarak işletilmekte; genişlemenin karara ne kadar fark ettirdiği sayısal olarak
 ölçülmektedir.
 
-İkinci bir örtük varsayım, iklim bağımlılığına ilişkindir. Biyo-esaslı
+İkinci bir örtük varsayım, iklim bağımlılığına ilişkindir. Biyo-bazlı
 malzemeleri karşılaştıran ÇÖKV çalışmaları genellikle tek bir sıralama üretir
 ve bu sıralamanın iklim koşullarına göre değişeceği zımnen kabul edilir
 [KAYNAK: Avrupa ölçekli MCDA çalışmaları]. Oysa karşılaştırma "eşdeğer ısıl
@@ -70,11 +70,11 @@ oluşur mu?
 modele dâhil edildiğinde bölge etkisi hangi koşulda ve ne büyüklükte ortaya
 çıkar?
 
-**AS3.** Ağırlıklandırma yönteminin seçimi, biyo-esaslı alternatiflerin
+**AS3.** Ağırlıklandırma yönteminin seçimi, biyo-bazlı alternatiflerin
 sıralamadaki yerini ne ölçüde belirler; biyojenik karbon ve yaşam sonu
 ölçütlerinin etkisini maskeler mi?
 
-Çalışmanın amacı, belirli bir malzemeyi "en iyi" ilan etmek değil, biyo-esaslı
+Çalışmanın amacı, belirli bir malzemeyi "en iyi" ilan etmek değil, biyo-bazlı
 yapı kabuğu malzemelerinin karşılaştırılmasında kullanılan kurgunun kendisini
 sınamak ve iklim bölgesi etkisinin hangi koşullarda anlamlı hâle geldiğini
 göstermektir. Bu yönüyle çalışma, literatürde yaygın biçimde kullanılan ancak
@@ -82,7 +82,7 @@ gerekçelendirilmeden benimsenen iki varsayımı — eşdeğer performans kurgus
 iklim duyarlılığı ve ağırlıklandırma yönteminin nötrlüğü — sınanabilir biçimde
 ele almaktadır.
 
-Makalenin kalanı şu şekilde düzenlenmiştir: İkinci bölümde biyo-esaslı yapı
+Makalenin kalanı şu şekilde düzenlenmiştir: İkinci bölümde biyo-bazlı yapı
 malzemeleri ve malzeme seçiminde ÇÖKV literatürü ele alınmakta, araştırma
 boşluğu sayısal olarak ortaya konmaktadır. Üçüncü bölümde fonksiyonel birim
 tanımı, ölçüt seti, ağırlıklandırma ve sıralama yöntemleri ile hesap temelinin
@@ -97,7 +97,7 @@ tartışmakta, altıncı bölüm sonuçları özetlemektedir.
 
 - Uzunluk şu hâliyle yaklaşık 1,8 sayfa; hedefe uygun. Kuramsal arka plan
   bölümüne kayan içerik varsa oradan buraya çekilmemeli.
-- 3. paragraf (biyo-esaslı malzemelerin iki özelliği) atıf yoğunluğu en yüksek
+- 3. paragraf (biyo-bazlı malzemelerin iki özelliği) atıf yoğunluğu en yüksek
   yer olacak; en az 6–8 kaynak beklenir.
 - 5. paragraftaki "matematiksel olarak mümkün değildir" iddiası güçlü bir
   cümledir; Yöntem bölümünde türetimi eksiksiz verilmeli, aksi hâlde hakem

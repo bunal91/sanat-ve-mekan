@@ -79,7 +79,7 @@ Azami 20 cm yalıtım kalınlığı kısıtı, uygun alternatif kümesini bölge
 değiştirmektedir. 1–4. bölgelerde eleme yoktur; 5. ve 6. bölgelerde dört
 alternatif elenmektedir: **kenevir-kireç (22 cm), saman balya (22 cm), pirinç
 kavuzu paneli (26 cm) ve fındık kabuğu paneli (22 cm)**. Elenenlerin tamamı
-yüksek ısı iletkenlikli, hacimli biyo-esaslı ürünlerdir.
+yüksek ısı iletkenlikli, hacimli biyo-bazlı ürünlerdir.
 
 ### Mekanizmaların sıralamaya etkisi
 
@@ -124,9 +124,9 @@ yerleştirmektedir. Dikkat çekici ayrıntı şudur: bu alt kümede CRITIC'in de
 ağır ölçütü yangına tepkidir, ancak payı %16,9'dur. **CRITIC aynı ölçütü
 tanımakta, fakat tek başına egemen olmasına izin vermemektedir.**
 
-**AS3'ün cevabı:** ağırlıklandırma yönteminin seçimi, biyo-esaslı
+**AS3'ün cevabı:** ağırlıklandırma yönteminin seçimi, biyo-bazlı
 alternatiflerin sıralamadaki yerini belirlemektedir ve bu etki yönlüdür —
-entropi, sistematik olarak biyo-esaslı grubun aleyhine çalışmaktadır.
+entropi, sistematik olarak biyo-bazlı grubun aleyhine çalışmaktadır.
 
 ## 4.5. Sıralama yöntemleri arasındaki uyum
 
@@ -142,7 +142,7 @@ yöntemden bağımsız bir malzeme tavsiyesi olarak okunmamalıdır.
 
 ## 4.6. Sistem sınırının etkisi
 
-Yaşam döngüsü modülleri incelendiğinde, biyo-esaslı malzemelerin A1–A3'te
+Yaşam döngüsü modülleri incelendiğinde, biyo-bazlı malzemelerin A1–A3'te
 aldığı biyojenik karbonun C3'te yeniden salındığı görülmektedir. Altı
 malzemede alım ve salım ±0,04 kgCO₂e/kg içinde birbirini götürmektedir
 (ahşap lifi +0,038; koyun yünü +0,041; selüloz +0,041; saman +0,022;
@@ -181,7 +181,7 @@ S2–S3 = 0,939.
 çıkarıldığında etki zayıflamamakta, güçlenmektedir: Spearman(S1, S2)
 1. Bölgede 0,758'den **0,333'e**, 4. Bölgede 0,612'den **0,286'ya**
 inmektedir. Bulgu ağırlıklandırma yönteminden de bağımsızdır; CRITIC ve eşit
-ağırlık, S1'de biyo-esaslı bir malzemeden S2'de camyününe geçmektedir.
+ağırlık, S1'de biyo-bazlı bir malzemeden S2'de camyününe geçmektedir.
 
 ### 4.6.1. Yaşam sonu senaryosunun duyarlılığı
 
@@ -209,15 +209,15 @@ senaryo belirsizliğini tarayan bir parametredir.
 
 Üç sonuç çıkmaktadır.
 
-**Birincisi**, biyo-esaslı üstünlük yalnızca yüksek salım oranlarında
+**Birincisi**, biyo-bazlı üstünlük yalnızca yüksek salım oranlarında
 kaybolmaktadır. CRITIC ağırlıklandırmasında eşik 0,51 ile 0,82 arasındadır;
 yani depolanan biyojenik karbonun **yarısından fazlası** yaşam sonunda
-salınmadıkça biyo-esaslı bir malzeme birinci sırada kalmaktadır. 4.6'daki
-sıralama değişimi, bu nedenle "biyo-esaslı malzemeler geride kalır"
+salınmadıkça biyo-bazlı bir malzeme birinci sırada kalmaktadır. 4.6'daki
+sıralama değişimi, bu nedenle "biyo-bazlı malzemeler geride kalır"
 biçiminde değil, "beyan edilen yakma senaryosu altında geride kalır"
 biçiminde okunmalıdır.
 
-**İkincisi**, eşik sıcak bölgelerde daha yüksektir (1. Bölge 0,82; 6. Bölge 0,51). Sıcak bölgelerde biyo-esaslı malzemeler ısıl kütle üzerinden ek bir
+**İkincisi**, eşik sıcak bölgelerde daha yüksektir (1. Bölge 0,82; 6. Bölge 0,51). Sıcak bölgelerde biyo-bazlı malzemeler ısıl kütle üzerinden ek bir
 üstünlük taşıdığı için, birinci sırayı kaybetmeden daha büyük bir karbon
 yükünü soğurabilmektedirler.
 
@@ -226,7 +226,7 @@ salım oranından tamamen bağımsız olarak birinci sıradadır. Bu, 4.4'teki
 bulgunun bir başka görünümüdür — entropi altında sıralamayı yangına tepki
 ölçütü belirlemekte, karbon muhasebesi sonucu hiç etkilememektedir.
 
-**Önemli sınırlılık.** Düşük φ değerleri, biyo-esaslı malzemenin düzenli
+**Önemli sınırlılık.** Düşük φ değerleri, biyo-bazlı malzemenin düzenli
 depolamaya gönderilmesi durumuna karşılık gelebilir; ancak depolamada
 biyobozunma sonucu oluşan metanın küresel ısınma potansiyeli karbondioksitten
 yüksektir. Bu nedenle düşük φ, doğrudan "daha iyi iklim performansı" anlamına
