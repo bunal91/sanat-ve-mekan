@@ -225,6 +225,41 @@ Revizyonun hesaba dokunan başlıkları:
 - Yangına tepki sınıfının sayısallaştırılmasına duyarlılık çözümlemesi eklendi
   (`model/duyarlilik.py`).
 
+## Benzerlik raporu
+
+9 Eylül 2026 tarihli rapor, revizyon öncesi metin üzerinde %15 genel benzerlik
+vermiştir. Raporun işaretlediği parçalar tek tek çıkarıldığında dağılım şudur:
+
+| Nerede | İşaretli sözcük | Belgeye oranı |
+|---|---|---|
+| Kaynaklar listesi | 663 | %13,3 |
+| Gövde metni | 67 | %1,3 |
+| **Toplam** | **730** | **%14,6** |
+
+Yani oranın neredeyse tamamı kaynakça künyelerinden gelmektedir; bunlar doğru
+verilmiş atıflardır ve değiştirilemez. **Raporu "Bibliography" ve "Quotes"
+hariç tutma seçenekleri açık biçimde yeniden almak gerekir**; iThenticate ve
+Turnitin bu ayarları taşımaktadır. Kaynak sayısı revizyonla 29'dan 37'ye
+çıktığı için, kaynakça dâhil alınan bir rapor daha yüksek bir oran verecektir.
+
+Gövdedeki 67 sözcüklük eşleşme dört yerdeydi ve üçü yeniden yazıldı:
+
+- Giriş'in TS 825 paragrafı (sektörel yayınlardaki kalıp anlatımla örtüşüyordu)
+  yeniden kuruldu; "120–150" ve "70–90 kWh/m²·yıl" ifadeleri çıkarıldı.
+- Entropi ve CRITIC anlatımı yeniden yazıldı, formüller numaralı denkleme alındı.
+- Özgül ısı kaybı anlatımı yeniden yazıldı, formüller numaralı denkleme alındı.
+- TOPSIS yakınlık katsayısı ve kullanım faktörü de numaralı denkleme alındı.
+
+Değiştirilmeyenler ve nedenleri:
+
+- **"3. Sonuçlar ve Tartışmalar (Results and Discussions)"** başlığı derginin
+  kendi zorunlu başlığıdır; dergipark eşleşmesi bundandır.
+- **Isı kaybı ve entropi formülleri** standardın ve yöntemin kendi biçimidir.
+- **"Q_H (kWh/m²)", "Q_C (kWh/m²)"** gibi tablo başlıkları semboldür.
+
+Denklem numaralandırması bu revizyonla birlikte 4'ten **11'e** çıkmıştır; bu
+aynı zamanda derginin "denklemler numaralandırılır" kuralına tam uyum sağlar.
+
 ## Terim kararı
 
 Metnin tamamında **"biyo-bazlı"** kullanılmaktadır ("biyo-esaslı" değil).

@@ -28,7 +28,7 @@ Comparisons of bio-based building envelope materials commonly rely on an equival
 
 ## 1. Giriş §(Introduction)§
 
-Binalar, Türkiye'nin nihai enerji tüketiminde en büyük paylardan birine sahiptir; konut ve hizmet binalarının toplam nihai enerji tüketimindeki payı üçte bire yakındır [1]. Bu payın büyüklüğü, yapı kabuğunun ısıl performansını konfor meselesi olmaktan çıkarıp enerji politikasının doğrudan konusu hâline getirmektedir. TS 825 Binalarda Isı Yalıtımı Kuralları standardı 2024 yılında revize edilmiş [2], 1 Nisan 2025 itibarıyla zorunlu standart olarak yürürlüğe girmiştir [3]. Revizyon iki yapısal değişiklik getirmiştir: derece gün bölgesi sayısı dörtten altıya çıkarılmış ve binaların yalnızca ısıtma ihtiyacına göre tasarlanması dönemi sona ererek soğutma ihtiyacı da hesaba dâhil edilmiştir. Tavsiye edilen ısıl geçirgenlik değerleri iyileştirilmiş, yıllık enerji limitleri sektörel olarak 120–150 kWh/m²·yıl düzeyinde ifade edilen önceki durumdan, bina türüne ve bölgeye bağlı olarak tanımlanan daha düşük limitlere çekilmiştir [3, 4].
+Binalar, Türkiye'nin nihai enerji tüketiminde en büyük paylardan birine sahiptir; konut ve hizmet binalarının toplam nihai enerji tüketimindeki payı üçte bire yakındır [1]. Bu payın büyüklüğü, yapı kabuğunun ısıl performansını konfor meselesi olmaktan çıkarıp enerji politikasının doğrudan konusu hâline getirmektedir. Ulusal ısı yalıtımı standardının (TS 825) 2024 baskısı [2], 1 Nisan 2025'ten bu yana zorunlu uygulamadadır [3]. Bu baskı kendisinden önceki çerçeveden iki noktada ayrılır. Birincisi, ülkenin iklimsel ayrışması dört derece gün bölgesi yerine altı bölgeyle temsil edilmektedir. İkincisi, yıllık enerji dengesi artık yalnızca ısıtma üzerinden kurulmamakta, soğutma ihtiyacı da dengeye girmektedir. Tavsiye edilen ısıl geçirgenlik değerleri sıkılaştırılmış, izin verilen yıllık enerji tüketimi ise bina türüne ve bölgeye göre ayrışan daha düşük eşiklere bağlanmıştır [3, 4].
 
 Bu düzenleyici değişim, yapı kabuğunda kullanılacak yalıtım malzemesinin seçimini yeniden gündeme getirmektedir. Gerekli yalıtım kalınlıklarının artması, malzeme başına düşen kütlenin ve dolayısıyla gömülü karbonun da artması anlamına gelir. İşletme enerjisi düştükçe bir yapı bileşeninin toplam yaşam döngüsü etkisi içinde gömülü karbonun payı görece büyümekte, bu da malzeme seçimini enerji verimliliği tartışmasının merkezine taşımaktadır [5]. Türkiye bağlamında optimum yalıtım kalınlığı ve enerji verimli yenileme çalışmaları da bu tartışmanın uygulamaya dönük tarafını oluşturmaktadır [6, 7].
 
@@ -94,17 +94,29 @@ Her bölge için ısıtma derece günü (IDG) ve soğutma derece günü (SDG) he
 
 ### 2.5. Ağırlıklandırma ve İklim Ayarı §(Weighting and Climate Adjustment)§
 
-Üç objektif yöntem karşılaştırmalı olarak kullanılmıştır. Shannon entropisinde normalize matris üzerinden e_j = −k Σ_m p_{mj} ln p_{mj} ve k = 1/ln n ile w_j ∝ 1 − e_j hesaplanır. CRITIC'te C_j = σ_j Σ_k (1 − ρ_{jk}) ile standart sapmanın yanı sıra ölçütler arası korelasyon da hesaba katılır [29]. Eşit ağırlık w_j = 1/m kontrol kurgusudur. Uzman anketine dayalı subjektif ağırlıklandırma, yanıt havuzuna bağımlılığı ortadan kaldırmak ve tekrarlanabilirliği korumak amacıyla bilinçli olarak kullanılmamıştır.
+Üç objektif ağırlıklandırma yöntemi karşılaştırmalı olarak kullanılmıştır. Birincisinde ağırlık, bir sütunun taşıdığı bilginin ölçüsü olan Shannon entropisinden türetilir; bir sütunun entropisi bire ne kadar uzaksa ağırlığı o kadar büyür:
+
+e_j = −(1/ln n) Σ_m p_{mj} ln p_{mj},   w_j ∝ 1 − e_j     (4)
+
+Burada p_{mj} normalize matriste m alternatifinin j sütunu içindeki payı, n ise alternatif sayısıdır. İkinci yöntemde ağırlık, sütunun standart sapması sd_j ile o sütunun diğer sütunlarla çelişme miktarının çarpımından gelir:
+
+C_j = sd_j Σ_k (1 − ρ_{jk})     (5)
+
+Bu ölçü, yayılımı yüksek olmakla birlikte başka bir ölçütle güçlü ilişkili olan sütunların payını sınırlar [29]. Üçüncüsü w_j = 1/m ile tanımlı eşit ağırlıktır ve kontrol kurgusu olarak yer alır. Uzman anketine dayalı subjektif ağırlıklandırma, sonucun yanıt havuzuna bağımlı hâle gelmesini önlemek ve hesabın bağımsız olarak yinelenebilmesini korumak amacıyla bilinçli olarak dışarıda bırakılmıştır.
 
 Bölgeye bağlı ağırlık ayarı şu biçimdedir:
 
-w′_j = w_j (1 + α s_j(b))     (4)
+w′_j = w_j (1 + α s_j(b))     (6)
 
-Burada alansal ısıl kapasite için s_j(b) = σ_b, nem duyarlılığı için s_j(b) = 1 − σ_b alınır; diğer ölçütlerde s_j = 0'dır. Gerekçe fizikseldir: ısıl kütle kazançların kullanılabilirliğini artırdığı için kazançların paya sahip olduğu bölgelerde anlamlıdır, yoğuşma ve küf riski ise ısıtma sezonunun uzunluğuyla ağırlaşır. Duyarlılık parametresi α temel çalıştırmada 1,0 alınmıştır. Eş. 4, K_b ile orantılı olmayan bir yapı ürettiği için 2.1'deki önermenin kapsamı dışındadır. İklim ayarı σ_b'ye dayandığından yalnızca 2.4'te sayılan dört bölge için tanımlıdır.
+Burada alansal ısıl kapasite için s_j(b) = σ_b, nem duyarlılığı için s_j(b) = 1 − σ_b alınır; diğer ölçütlerde s_j = 0'dır. Gerekçe fizikseldir: ısıl kütle kazançların kullanılabilirliğini artırdığı için kazançların paya sahip olduğu bölgelerde anlamlıdır, yoğuşma ve küf riski ise ısıtma sezonunun uzunluğuyla ağırlaşır. Duyarlılık parametresi α temel çalıştırmada 1,0 alınmıştır. Eş. 6, K_b ile orantılı olmayan bir yapı ürettiği için 2.1'deki önermenin kapsamı dışındadır. İklim ayarı σ_b'ye dayandığından yalnızca 2.4'te sayılan dört bölge için tanımlıdır.
 
 ### 2.6. Sıralama ve Uygulanabilirlik Kısıtı §(Ranking and Buildability Constraint)§
 
-TOPSIS birincil yöntemdir; ağırlıklı normalize matris üzerinden ideal ve negatif ideal çözümlere Öklid uzaklıkları hesaplanarak yakınlık katsayısı C_m = d⁻_m/(d⁺_m + d⁻_m) elde edilir [33]. VIKOR (v = 0,5), toplulaştırma mantığı farklı olduğu için tamamlayıcı bir sıralama yöntemi olarak kullanılmıştır; iki yöntemin aynı sıralamayı vermesi beklenmemekte, aradaki fark yöntem duyarlılığının ölçüsü olarak raporlanmaktadır. Sıralamalar Spearman sıra korelasyonu ile karşılaştırılmıştır.
+TOPSIS birincil yöntemdir. Ağırlıklı normalize matriste her alternatifin ideal ve negatif ideal çözüme Öklid uzaklıkları (d⁺_m ve d⁻_m) hesaplanır; alternatifin puanı bu iki uzaklığın oranından gelir [33]:
+
+C_m = d⁻_m / (d⁺_m + d⁻_m)     (7)
+
+VIKOR (v = 0,5), toplulaştırma mantığı farklı olduğu için tamamlayıcı bir sıralama yöntemi olarak kullanılmıştır; iki yöntemin aynı sıralamayı vermesi beklenmemekte, aradaki fark yöntem duyarlılığının ölçüsü olarak raporlanmaktadır. Sıralamalar Spearman sıra korelasyonu ile karşılaştırılmıştır.
 
 Duvar bileşeninde uygulanabilir kabul edilen azami yalıtım kalınlığı aşıldığında alternatif, o bölge için uygun kümeden çıkarılmıştır. Temel çalıştırmada bu eşik 20 cm alınmıştır. Kısıt, Eş. 2 gereği bölgeye göre farklı alternatifleri elediğinden uygun küme bölgeye bağımlı hâle gelir.
 
@@ -122,13 +134,29 @@ Yaşam sonu senaryosunun sonucu ne ölçüde belirlediğini ölçmek için, C3 m
 
 ### 2.8. Referans Konut ve Aylık Enerji Hesabı §(Reference Dwelling and Monthly Energy Calculation)§
 
-Doğrulama adımı, tam tanımlı temsili bir referans konut üzerinde yürütülmüştür: 24,0 × 12,0 m plan, beş kat, 2,80 m kat yüksekliği, 4032 m³ brüt hacim, 1440 m² şartlandırılmış döşeme alanı, 1290,2 m² kullanım alanı, 184,8 m² pencere alanı (güneyde duvar alanının %25'i, diğer yönlerde %15'i) ve 0,393 A/V oranı. Binanın özgül ısı kaybı H = H_T + H_V biçiminde hesaplanmıştır. İletim bileşeni H_T = U_D A_opak + U_P A_pencere + 0,8 U_T A_çatı + 0,5 U_t A_taban, havalandırma bileşeni ise H_V = 0,33 n_h V_h olup havalandırılan hacim V_h = 0,8 V_brüt ve hava değişim sayısı n_h = 0,7 h⁻¹ alınmıştır. Dördüncü bölge için H = 1467 W/K'dır.
+Doğrulama adımı, tam tanımlı temsili bir referans konut üzerinde yürütülmüştür: 24,0 × 12,0 m plan, beş kat, 2,80 m kat yüksekliği, 4032 m³ brüt hacim, 1440 m² şartlandırılmış döşeme alanı, 1290,2 m² kullanım alanı, 184,8 m² pencere alanı (güneyde duvar alanının %25'i, diğer yönlerde %15'i) ve 0,393 A/V oranı. Binanın özgül ısı kaybı, iletim ve havalandırma bileşenlerinin toplamıdır:
+
+H = H_T + H_V     (8)
+
+İletim bileşeni, kabuğu oluşturan yüzeylerin ısıl geçirgenlik-alan çarpımlarından; çatı ve taban için sıcaklık düzeltme çarpanlarıyla birlikte kurulur:
+
+H_T = U_D A_opak + U_P A_pencere + 0,8 U_T A_çatı + 0,5 U_t A_taban     (9)
+
+Havalandırma bileşeni ise havalandırılan hacim üzerinden yazılır:
+
+H_V = 0,33 n_h V_h,   V_h = 0,8 V_brüt     (10)
+
+Hava değişim sayısı n_h = 0,7 h⁻¹ alınmıştır. Dördüncü bölge için H = 1467 W/K bulunmuştur.
 
 İç kazançlar 5 W/m² × kullanım alanı, güneş kazançları ise dört yönün pencere alanları üzerinden gölgelenme faktörü 0,6 ve güneş geçirme faktörü 0,6 ile hesaplanmıştır. Duvar yalıtımının etkin ısıl kapasitesine katkısı λρcK_b × opak alan biçiminde, döşeme ve iç duvarların katkısı ise 150 kJ/m²K × döşeme alanı kabulüyle hesaplanmıştır.
 
 Aylık net ısıtma ve soğutma enerjisi ihtiyaçları, kazanç ve kayıp kullanım faktörleri üzerinden belirlenmiştir. Kullanılan aylık yarı-kararlı çerçeve, tarihsel olarak EN ISO 13790 ile tanımlanmış hesap mantığına dayanmaktadır [35]; bu standart geri çekilmiş olup yerini hem aylık hem saatlik hesap yordamlarını kapsayan ISO 52016-1 almıştır [36]. Bu çalışmada aylık biçim, TS 825'in hesap yapısına yakınlığı nedeniyle kullanılmıştır.
 
-Fonksiyonel birim sabit U hedefine dayandığı için yalıtım malzemesi değiştiğinde H değişmez; malzemenin yıllık enerjiye etki edebileceği tek yol ısıl kütlesi C üzerinden kullanım faktörüdür. Bu nedenle iki kurgu karşılaştırılmıştır. Kurgu A'da kullanım faktörü yalnızca kazanç-kayıp oranına bağlıdır ve zaman sabitinden bağımsızdır. Kurgu B'de kullanım faktörü η = (1 − γ^a)/(1 − γ^(a+1)) biçimindedir; burada γ kazanç-kayıp oranı, a = a₀ + τ/τ₀, τ = C/H zaman sabiti, a₀ = 1,0 ve τ₀ = 15 saat olup bu iki katsayı konutlar için aylık yöntemde kullanılan değerlerdir. Soğutma için aynı biçimin kayıp kullanım faktörü karşılığı kullanılmıştır. Referans konutta τ, alternatife göre 41,2 ile 75,1 saat arasında değişmektedir. Gece havalandırması ve hareketli gölgeleme kontrolü modellenmemiştir; her ikisi de saatlik çözünürlük gerektirmekte ve aylık yarı-kararlı çerçevede temsil edilememektedir.
+Fonksiyonel birim sabit U hedefine dayandığı için yalıtım malzemesi değiştiğinde H değişmez; malzemenin yıllık enerjiye etki edebileceği tek yol ısıl kütlesi C üzerinden kullanım faktörüdür. Bu nedenle iki kurgu karşılaştırılmıştır. Kurgu A'da kullanım faktörü yalnızca kazanç-kayıp oranına bağlıdır ve zaman sabitinden bağımsızdır. Kurgu B'de kullanım faktörü, kazanç-kayıp oranı γ ile binanın zaman sabitine birlikte bağlıdır:
+
+η = (1 − γ^a) / (1 − γ^(a+1)),   a = a₀ + τ/τ₀,   τ = C/H     (11)
+
+Burada a₀ = 1,0 ve τ₀ = 15 saat olup bu iki katsayı konutlar için aylık yöntemde kullanılan değerlerdir. Soğutma için aynı biçimin kayıp kullanım faktörü karşılığı kullanılmıştır. Referans konutta τ, alternatife göre 41,2 ile 75,1 saat arasında değişmektedir. Gece havalandırması ve hareketli gölgeleme kontrolü modellenmemiştir; her ikisi de saatlik çözünürlük gerektirmekte ve aylık yarı-kararlı çerçevede temsil edilememektedir.
 
 ## 3. Sonuçlar ve Tartışmalar §(Results and Discussions)§
 
@@ -201,13 +229,18 @@ A_n : kullanım alanı, m²
 a₀ : kullanım faktörü sabiti, –
 c : özgül ısı kapasitesi, J/kgK
 C : etkin ısıl kapasite, J/K
+C_j : CRITIC ölçüt bilgi miktarı, –
 C_m : TOPSIS yakınlık katsayısı, –
 d : yalıtım kalınlığı, m
+d⁺, d⁻ : ideal ve negatif ideal çözüme uzaklık, –
+e : ölçüt entropisi, –
 H : özgül ısı kaybı, W/K
 IDG : ısıtma derece günü, °C·gün
 K_b : bölgeye bağlı kalınlık çarpanı, m²K/W
 n_h : hava değişim sayısı, h⁻¹
+p : normalize karar matrisi sütun payı, –
 R : ısıl direnç, m²K/W
+sd : ölçüt standart sapması, –
 SDG : soğutma derece günü, °C·gün
 U : ısıl geçirgenlik katsayısı, W/m²K
 V_h : havalandırılan hacim, m³
@@ -219,6 +252,7 @@ w : ölçüt ağırlığı, –
 θ : sıcaklık, °C
 λ : ısı iletkenlik katsayısı, W/mK
 ρ : yoğunluk, kg/m³
+ρ_{jk} : ölçütler arası korelasyon katsayısı, –
 σ_b : soğutma payı, –
 τ : zaman sabiti, h
 τ₀ : referans zaman sabiti, h
