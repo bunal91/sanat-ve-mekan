@@ -48,11 +48,11 @@ Bu çerçevede üç araştırma sorusu tanımlanmıştır. Birincisi, sabit ıs�
 
 ### 2.1. Fonksiyonel Birim ve Orantılılık Önermesi §(Functional Unit and the Proportionality Proposition)§
 
-Karşılaştırma birimi, TS 825:2024'ün ilgili derece gün bölgesi için tavsiye ettiği ısıl geçirgenlik değerini sağlayan 1 m² dış duvar bileşenidir. Malzemeleri doğrudan ısı iletkenlik katsayısına göre karşılaştırmak yanıltıcı olur; eşdeğer ısıl performans koşulu her malzemenin farklı kalınlıkta kullanılmasını gerektirir ve bu fark kütleye, gömülü karbona ve gerekli duvar kalınlığına yansır. Toplam ısıl direnç, yalıtım katmanı ile diğer katmanların ve yüzeysel dirençlerin toplamıdır:
+Karşılaştırma birimi, TS 825:2024'ün ilgili derece gün bölgesi için tavsiye ettiği ısıl geçirgenlik değerini sağlayan 1 m² dış duvar bileşenidir. Malzemeleri doğrudan ısı iletkenlik katsayısına göre karşılaştırmak yanıltıcı olur; eşdeğer ısıl performans koşulu her malzemenin farklı kalınlıkta kullanılmasını gerektirir ve bu fark kütleye, gömülü karbona ve gerekli duvar kalınlığına yansır. Toplam ısıl direnç, yalıtım katmanı ile diğer katmanların ve yüzeysel dirençlerin toplamıdır (Eş. 1):
 
 1/U_b = R_diğer + d/λ     (1)
 
-Buradan, b bölgesinde m malzemesi için gereken yalıtım kalınlığı:
+Eş. 1'den, b bölgesinde m malzemesi için gereken yalıtım kalınlığı Eş. 2 ile elde edilir:
 
 d_{m,b} = λ_m (1/U_b − R_diğer) = λ_m K_b     (2)
 
@@ -60,11 +60,11 @@ Eş. 2'deki K_b terimi yalnızca bölgeye bağlıdır ve malzemeden bağımsızd
 
 **Önerme.** Bileşende yalnızca yalıtım katmanı değişiyorsa, yani R_diğer malzemeden bağımsız bir sabitse, karar matrisinin her sütunu ya bölgeden bağımsız bir malzeme özelliğidir ya da x_{m,b} = φ(m) K_b biçiminde yazılabilir. Bu koşulda, sütun bazlı ölçek değişimine duyarsız bir normalizasyon kullanan her sıralama yöntemi tüm bölgelerde özdeş sıralama üretir.
 
-Kalınlıktan türeyen büyüklüklerin tamamı ortak K_b çarpanını taşır: birim kütle λρK_b, gömülü karbon λρεK_b, alansal ısıl kapasite λρcK_b ve gerekli yalıtım kalınlığı λK_b biçimindedir. Geriye kalan ölçütler malzeme özellikleridir ve bölgeye göre değişmez. TOPSIS'in vektörel normalizasyonunda j sütunu için:
+Kalınlıktan türeyen büyüklüklerin tamamı ortak K_b çarpanını taşır: birim kütle λρK_b, gömülü karbon λρεK_b, alansal ısıl kapasite λρcK_b ve gerekli yalıtım kalınlığı λK_b biçimindedir. Geriye kalan ölçütler malzeme özellikleridir ve bölgeye göre değişmez. TOPSIS'in vektörel normalizasyonunda j sütunu için Eş. 3 yazılır:
 
 r_{mj} = φ_j(m) K_b / [Σ_i φ_j(i)² K_b²]^(1/2) = φ_j(m) / [Σ_i φ_j(i)²]^(1/2)     (3)
 
-K_b tam olarak sadeleşir ve normalize matris bölgeden bağımsız hâle gelir. Aynı sadeleşme VIKOR'un min-maks normalizasyonunda ve entropi ile CRITIC'in dayandığı normalize sütun istatistiklerinde de gerçekleşir; dolayısıyla ağırlıklar da bölgeye göre değişmez.
+Eş. 3'te K_b tam olarak sadeleşir ve normalize matris bölgeden bağımsız hâle gelir. Aynı sadeleşme VIKOR'un min-maks normalizasyonunda ve entropi ile CRITIC'in dayandığı normalize sütun istatistiklerinde de gerçekleşir; dolayısıyla ağırlıklar da bölgeye göre değişmez.
 
 Önermenin kapsamı, dayandığı varsayımla sınırlıdır. Sonuç, TS 825'in genel bir özelliği değil, sabit ve malzemeden bağımsız bir R_diğer ile kurulan eşdeğer ısıl geçirgenlik kurgusunun sonucudur. Yalıtım dışındaki katmanların da malzemeyle birlikte değiştiği bir bileşen tanımında, ya da kalınlığa bağlı olmayan bir ölçüt bölgeye göre değişiyorsa orantılılık kırılır ve önerme uygulanmaz.
 
@@ -90,19 +90,19 @@ Bu bir çapraz kontroldür, bağımsız bir doğrulama değildir: R_diğer param
 
 Enerji hesabı ve iklim ayarı, il–bölge karşılığı bağımsız olarak doğrulanabilen dört bölge için yürütülmüştür: 1. bölge Antalya, 3. bölge İstanbul, 4. bölge Ankara, 6. bölge Erzurum. İkinci ve beşinci bölgeler için doğrulanabilir temsilci il belirlenemediğinden bu bölgeler iklime bağlı çözümlemelerin dışında bırakılmıştır. Buna karşılık orantılılık sınaması ve uygulanabilirlik kısıtı yalnızca tavsiye edilen ısıl geçirgenlik değerlerine ve ısı iletkenliğine dayandığı için altı bölgenin tamamı için yürütülmüştür.
 
-Her bölge için ısıtma derece günü (IDG) ve soğutma derece günü (SDG) hesaplanmış, soğutma payı σ_b = SDG/(IDG+SDG) olarak tanımlanmıştır. Isıtma tabanı 20 °C, soğutma tabanı 22 °C alınmıştır; 26 °C tasarım sıcaklığı aylık ortalamalarla birlikte kullanıldığında Türkiye'de nadiren aşıldığından anlamlı bir gradyan üretmemektedir.
+Her bölge için ısıtma derece günü (IDG) ve soğutma derece günü (SDG) hesaplanmış, soğutma payı σ_b = SDG/(IDG+SDG) olarak tanımlanmıştır. Isıtma taban sıcaklığı θ = 20 °C, soğutma taban sıcaklığı θ = 22 °C alınmıştır; 26 °C tasarım sıcaklığı aylık ortalamalarla birlikte kullanıldığında Türkiye'de nadiren aşıldığından anlamlı bir gradyan üretmemektedir.
 
 ### 2.5. Ağırlıklandırma ve İklim Ayarı §(Weighting and Climate Adjustment)§
 
-Üç objektif ağırlıklandırma yöntemi karşılaştırmalı olarak kullanılmıştır. Birincisinde ağırlık, bir sütunun taşıdığı bilginin ölçüsü olan Shannon entropisinden türetilir; bir sütunun entropisi bire ne kadar uzaksa ağırlığı o kadar büyür:
+Üç objektif ağırlıklandırma yöntemi karşılaştırmalı olarak kullanılmıştır. Birincisinde ağırlık, bir sütunun taşıdığı bilginin ölçüsü olan Shannon entropisinden türetilir; bir sütunun entropisi bire ne kadar uzaksa ağırlığı o kadar büyür (Eş. 4):
 
 e_j = −(1/ln n) Σ_m p_{mj} ln p_{mj},   w_j ∝ 1 − e_j     (4)
 
-Burada p_{mj} normalize matriste m alternatifinin j sütunu içindeki payı, n ise alternatif sayısıdır. İkinci yöntemde ağırlık, sütunun standart sapması sd_j ile o sütunun diğer sütunlarla çelişme miktarının çarpımından gelir:
+Burada p_{mj} normalize matriste m alternatifinin j sütunu içindeki payı, n ise alternatif sayısıdır. İkinci yöntemde ağırlık, sütunun standart sapması sd_j ile o sütunun diğer sütunlarla çelişme miktarının çarpımından gelir (Eş. 5):
 
 C_j = sd_j Σ_k (1 − ρ_{jk})     (5)
 
-Bu ölçü, yayılımı yüksek olmakla birlikte başka bir ölçütle güçlü ilişkili olan sütunların payını sınırlar [29]. Üçüncüsü w_j = 1/m ile tanımlı eşit ağırlıktır ve kontrol kurgusu olarak yer alır. Uzman anketine dayalı subjektif ağırlıklandırma, sonucun yanıt havuzuna bağımlı hâle gelmesini önlemek ve hesabın bağımsız olarak yinelenebilmesini korumak amacıyla bilinçli olarak dışarıda bırakılmıştır.
+Eş. 5'teki bu ölçü, yayılımı yüksek olmakla birlikte başka bir ölçütle güçlü ilişkili olan sütunların payını sınırlar [29]. Üçüncüsü w_j = 1/m ile tanımlı eşit ağırlıktır ve kontrol kurgusu olarak yer alır. Uzman anketine dayalı subjektif ağırlıklandırma, sonucun yanıt havuzuna bağımlı hâle gelmesini önlemek ve hesabın bağımsız olarak yinelenebilmesini korumak amacıyla bilinçli olarak dışarıda bırakılmıştır.
 
 Bölgeye bağlı ağırlık ayarı şu biçimdedir:
 
@@ -112,7 +112,7 @@ Burada alansal ısıl kapasite için s_j(b) = σ_b, nem duyarlılığı için s_
 
 ### 2.6. Sıralama ve Uygulanabilirlik Kısıtı §(Ranking and Buildability Constraint)§
 
-TOPSIS birincil yöntemdir. Ağırlıklı normalize matriste her alternatifin ideal ve negatif ideal çözüme Öklid uzaklıkları (d⁺_m ve d⁻_m) hesaplanır; alternatifin puanı bu iki uzaklığın oranından gelir [33]:
+TOPSIS birincil yöntemdir. Ağırlıklı normalize matriste her alternatifin ideal ve negatif ideal çözüme Öklid uzaklıkları (d⁺_m ve d⁻_m) hesaplanır; alternatifin puanı bu iki uzaklığın oranından gelir (Eş. 7) [33]:
 
 C_m = d⁻_m / (d⁺_m + d⁻_m)     (7)
 
@@ -134,25 +134,25 @@ Yaşam sonu senaryosunun sonucu ne ölçüde belirlediğini ölçmek için, C3 m
 
 ### 2.8. Referans Konut ve Aylık Enerji Hesabı §(Reference Dwelling and Monthly Energy Calculation)§
 
-Doğrulama adımı, tam tanımlı temsili bir referans konut üzerinde yürütülmüştür: 24,0 × 12,0 m plan, beş kat, 2,80 m kat yüksekliği, 4032 m³ brüt hacim, 1440 m² şartlandırılmış döşeme alanı, 1290,2 m² kullanım alanı, 184,8 m² pencere alanı (güneyde duvar alanının %25'i, diğer yönlerde %15'i) ve 0,393 A/V oranı. Binanın özgül ısı kaybı, iletim ve havalandırma bileşenlerinin toplamıdır:
+Doğrulama adımı, tam tanımlı temsili bir referans konut üzerinde yürütülmüştür: 24,0 × 12,0 m plan, beş kat, 2,80 m kat yüksekliği, 4032 m³ brüt hacim, A_f = 1440 m² şartlandırılmış döşeme alanı, A_n = 1290,2 m² kullanım alanı, 184,8 m² pencere alanı (güneyde duvar alanının %25'i, diğer yönlerde %15'i) ve 0,393 A/V oranı. Binanın özgül ısı kaybı, iletim ve havalandırma bileşenlerinin toplamıdır (Eş. 8):
 
 H = H_T + H_V     (8)
 
-İletim bileşeni, kabuğu oluşturan yüzeylerin ısıl geçirgenlik-alan çarpımlarından; çatı ve taban için sıcaklık düzeltme çarpanlarıyla birlikte kurulur:
+İletim bileşeni, kabuğu oluşturan yüzeylerin ısıl geçirgenlik-alan çarpımlarından; çatı ve taban için sıcaklık düzeltme çarpanlarıyla birlikte kurulur (Eş. 9):
 
 H_T = U_D A_opak + U_P A_pencere + 0,8 U_T A_çatı + 0,5 U_t A_taban     (9)
 
-Havalandırma bileşeni ise havalandırılan hacim üzerinden yazılır:
+Havalandırma bileşeni ise havalandırılan hacim üzerinden yazılır (Eş. 10):
 
 H_V = 0,33 n_h V_h,   V_h = 0,8 V_brüt     (10)
 
 Hava değişim sayısı n_h = 0,7 h⁻¹ alınmıştır. Dördüncü bölge için H = 1467 W/K bulunmuştur.
 
-İç kazançlar 5 W/m² × kullanım alanı, güneş kazançları ise dört yönün pencere alanları üzerinden gölgelenme faktörü 0,6 ve güneş geçirme faktörü 0,6 ile hesaplanmıştır. Duvar yalıtımının etkin ısıl kapasitesine katkısı λρcK_b × opak alan biçiminde, döşeme ve iç duvarların katkısı ise 150 kJ/m²K × döşeme alanı kabulüyle hesaplanmıştır.
+İç kazançlar 5 W/m² × A_n, güneş kazançları ise dört yönün pencere alanları üzerinden gölgelenme faktörü 0,6 ve güneş geçirme faktörü 0,6 ile hesaplanmıştır. Duvar yalıtımının etkin ısıl kapasitesine katkısı λρcK_b × opak alan biçiminde, döşeme ve iç duvarların katkısı ise 150 kJ/m²K × döşeme alanı kabulüyle hesaplanmıştır.
 
 Aylık net ısıtma ve soğutma enerjisi ihtiyaçları, kazanç ve kayıp kullanım faktörleri üzerinden belirlenmiştir. Kullanılan aylık yarı-kararlı çerçeve, tarihsel olarak EN ISO 13790 ile tanımlanmış hesap mantığına dayanmaktadır [35]; bu standart geri çekilmiş olup yerini hem aylık hem saatlik hesap yordamlarını kapsayan ISO 52016-1 almıştır [36]. Bu çalışmada aylık biçim, TS 825'in hesap yapısına yakınlığı nedeniyle kullanılmıştır.
 
-Fonksiyonel birim sabit U hedefine dayandığı için yalıtım malzemesi değiştiğinde H değişmez; malzemenin yıllık enerjiye etki edebileceği tek yol ısıl kütlesi C üzerinden kullanım faktörüdür. Bu nedenle iki kurgu karşılaştırılmıştır. Kurgu A'da kullanım faktörü yalnızca kazanç-kayıp oranına bağlıdır ve zaman sabitinden bağımsızdır. Kurgu B'de kullanım faktörü, kazanç-kayıp oranı γ ile binanın zaman sabitine birlikte bağlıdır:
+Fonksiyonel birim sabit U hedefine dayandığı için yalıtım malzemesi değiştiğinde H değişmez; malzemenin yıllık enerjiye etki edebileceği tek yol ısıl kütlesi C üzerinden kullanım faktörüdür. Bu nedenle iki kurgu karşılaştırılmıştır. Kurgu A'da kullanım faktörü yalnızca kazanç-kayıp oranına bağlıdır ve zaman sabitinden bağımsızdır. Kurgu B'de kullanım faktörü, kazanç-kayıp oranı γ ile binanın zaman sabitine birlikte bağlıdır (Eş. 11):
 
 η = (1 − γ^a) / (1 − γ^(a+1)),   a = a₀ + τ/τ₀,   τ = C/H     (11)
 
