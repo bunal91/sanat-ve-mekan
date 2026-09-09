@@ -1,13 +1,14 @@
 # Printable planner shop — product packs
 
-Fifteen digital-download products (one of them a bundle), all generated from HTML templates: **Dusk Ladder**, a one-page
+Sixteen digital-download products (one of them a bundle), all generated from HTML templates: **Dusk Ladder**, a one-page
 daily planner; **Party Line**, a nine-page birthday planning kit; **Confetti Club**, a nine-page
 kids' party kit; **Golden Hour**, an eleven-page milestone birthday kit; **First Move**, an eight-page
 ADHD-friendly planning set; **Same Shape**, a nine-page autism-friendly set; **Steady**, a nine-page anxiety journal;
 **Small Light**, a nine-page journal for low days; **Thirty-First**, a nine-page Halloween
 party kit; **Long December**, a nine-page Christmas planning kit; **One Table**, a nine-page
 Thanksgiving kit; **Five to Midnight**, a nine-page New Year kit; **Four Days**, a nine-page
-Easter kit; and **Night Before**, a nine-page back-to-school kit. Each has its own design language rather
+Easter kit; **Night Before**, a nine-page back-to-school kit; and **Nine Lives**, a nine-page cat
+care record. Each has its own design language rather
 than a recoloured shell. Every variant a listing
 needs — page sizes, colourways, languages, print and fillable — comes out of one build.
 
@@ -31,6 +32,7 @@ planner/
 ├── newyear.py                    # New Year kit: nine pages, the night and the turn
 ├── easter.py                     # Easter kit: nine pages, a four-day weekend
 ├── school.py                     # back-to-school kit: nine pages, for the parent
+├── cat.py                        # cat care record: nine pages, because cats hide it
 ├── src/
 │   ├── planner.template.html    # the daily planner (single source of truth)
 │   ├── readme.template.html     # the "start here" sheet the buyer opens first (both products)
@@ -50,6 +52,7 @@ planner/
 ├── newyear-planner.html         # browser/preview copy (Letter · midnight · 9 pages)
 ├── easter-planner.html          # browser/preview copy (Letter · dye · 9 pages)
 ├── school-planner.html          # browser/preview copy (Letter · term · 9 pages)
+├── cat-planner.html             # browser/preview copy (Letter · slate · 9 pages)
 ├── etsy-rehberi.html            # Turkish guide: shop setup, listing copy, pricing, niche
 ├── etsy-listings.html           # the twelve listings, ready to paste (generated)
 │   └── src/listing-copy.py       # the copy itself; src/build-listings.py renders the page
@@ -67,7 +70,8 @@ planner/
 ├── dist-thanksgiving/           # Thanksgiving kit — same shape
 ├── dist-newyear/                # New Year kit — same shape
 ├── dist-easter/                 # Easter kit — same shape
-└── dist-school/                 # back-to-school kit — same shape
+├── dist-school/                 # back-to-school kit — same shape
+└── dist-cat/                    # cat care record — same shape
 ```
 
 ## Build
@@ -93,6 +97,7 @@ python3 thanksgiving.py              # the Thanksgiving kit
 python3 newyear.py                   # the New Year kit
 python3 easter.py                    # the Easter kit
 python3 school.py                    # the back-to-school kit
+python3 cat.py                       # the cat care record
 ```
 
 Chromium (headless) does the rendering and prints the PDFs at exact page size; `PLANNER_WORK`
@@ -338,6 +343,31 @@ trips, clubs, photographs and the dressing-up day one letter at a time.
 Zilla Slab over Asap; ballpoint blue, teacher's red and pencil ochre on white. The masthead mark
 is the corner of an exercise book — blue rules behind a red margin line — and the block slides
 down a little on each page, like turning one.
+
+## The cat care record
+
+Nine pages, and the whole kit rests on one fact: cats hide illness. A cat behaves normally until
+it is quite unwell, so the only way to catch anything early is to have written the ordinary month
+down. This cat, the numbers and when to use them, the year of care, weight, food and water, the
+litter tray, the indoor day, a page for the sitter, and a dated running log. 416 form fields,
+four variants — the first product here that is not seasonal and not about an event.
+
+Three pages are meant to leave the folder. **Page 4** is twelve rows of monthly weight, because
+weight is the one thing a cat cannot mask and a steady drop is among the earliest things a vet can
+act on. **Page 2** goes on the fridge: the practice, and separately the out-of-hours cover, which
+is usually a different clinic with a different number — beside the short list of signs emergency
+vets ask people to come in for rather than wait, including a cat straining in the tray and
+producing little or nothing. **Page 8** gets left on the table for the sitter, in amounts rather
+than "a bit", with the things someone who has never met this cat needs telling.
+
+Health framing is structural, as it was in the four mental-health sets: every health page carries
+the footer *"A record book, not veterinary advice · page 2 has the numbers"*, page 2 says plainly
+that the list is not complete and that a cat seeming wrong to you is reason enough to phone, and
+the start-here sheet repeats it at length.
+
+Alegreya over Epilogue; slate, clay and plum on white — the first cool, quiet palette in the shop,
+and a deliberate refusal of the pink-kitten register. The masthead mark is two drawn paw prints, a
+pad and four toes on an arc, and they walk a little further across the corner on every page.
 
 ## How the fillable PDFs are made
 

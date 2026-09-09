@@ -886,4 +886,69 @@ No year and no month is printed anywhere, so it works for a September start, a J
  hashtags="#backtoschool #schoolplanner #parentlife #schoolrun #backtoschoolprep #momlife #familyorganisation #printableplanner #fillablepdf #digitaldownload",
  note="The biggest search window of any listing here: it runs June to early September in the northern hemisphere, with a second, smaller one in late January for Australia and New Zealand and for January-term starts. Because it is undated and says nothing about a specific month, one listing serves both. List it now even though this year's rush has passed — a listing with twelve months of history behind it is a different animal next June.",
 ),
+# ---------------------------------------------------------------- 16
+dict(
+ key="cat", name="Nine Lives", kind="Cat care kit", accent="#3c5a6e", pages="9 pages",
+ price="11.50", coupon="25% for the first two weeks (8,63 $)",
+ folder="dist-cat/etsy/",
+ section="Home & animals",
+ title="Cat Care Planner Printable, Fillable PDF Pet Health Record, Weight Log, Vet Info, Cat Sitter Instructions, 9 Pages, Letter + A4",
+ desc="""Nine pages built on the one thing that makes cats different from every other pet: they hide illness. A cat behaves normally until it is quite unwell, so the only way to catch anything early is to have written the ordinary month down.
+
+▸ THE PAGE THAT CATCHES THINGS EARLY
+Page 4 is twelve rows: one weight a month, and a column for anything else you noticed. Weight is the one thing a cat cannot hide — it is a number, it does not depend on how they are behaving that day, and a steady drop across a few months is one of the earliest things a vet can act on. Weigh on the same scales, write it down even when it is boring, and take the page to the check-up.
+
+▸ THE PAGE THAT GOES ON THE FRIDGE
+Page 2. Your practice's out-of-hours cover is very often a different clinic, in a different place, with a different number — and the moment you need it is the moment you cannot look it up. Beside it, the short list of signs that emergency vets ask people to come in for rather than wait until morning, including the one most owners do not know: a cat straining in the tray and producing little or nothing, especially a male cat, where hours matter.
+
+▸ THE PAGE YOU LEAVE ON THE TABLE
+Page 8, for whoever is feeding the cat while you are away. Feeding in amounts rather than "a bit", medication, where everything is kept, and the things a sitter who has never met this cat needs telling: where they hide, that hiding is normal on the first day, that they should be *seen* every visit even if it means looking under a bed, and that the litter tray is how you know they are eating and drinking.
+
+▸ THE NINE PAGES
+1. This cat — the facts, the microchip and insurance numbers, and what they are actually like
+2. Numbers, and when to use them
+3. The year of care — vaccination, worming, fleas, teeth, check-ups, with last done and due; plus the short list of things that are toxic to cats
+4. Weight, every month
+5. Food and water — including why cats drink badly and what to do about it
+6. The litter tray — one per cat plus one, and a diary, because the tray is an early warning system
+7. The indoor day — play that looks like hunting, scratching, height, and somewhere nobody follows them
+8. While we are away
+9. Anything different — a dated running log, so "how long has that been going on?" has an answer
+
+▸ WHAT IT IS, AND WHAT IT IS NOT
+A record book, made by a designer. Not veterinary advice, not a diagnosis, and not a substitute for phoning your practice. The signs on page 2 are the short version and are not complete — a cat that seems wrong to you is reason enough to call. Every health page says so in the footer.
+
+""" + COMMON_HOWITWORKS + """
+▸ WHAT YOU GET, INSTANTLY
+• 4 fillable kits — US Letter + A4, in colour + ink-saving mono, 9 pages each, 416 typing fields
+• 4 print kits — the same nine pages with no form fields
+• A START-HERE sheet
+• Three zips: complete, Letter only, A4 only
+
+▸ MORE THAN ONE CAT
+Pages 1 to 7 are about one animal, so save or print a copy per cat rather than sharing a sheet. Pages 8 and 9 work for the household.
+
+▸ UNDATED
+No year printed anywhere. The weight log runs January to December and starts wherever you start.
+
+""" + COMMON_NOTE + "\n" + lic("for your own cats"),
+ tags=["cat care planner","pet health record","cat planner","cat sitter notes","vet records",
+       "pet organizer","fillable pdf","cat owner gift","weight log","kitten checklist",
+       "undated planner","pet care printable","digital download"],
+ materials=["Fillable PDF, 416 typing fields","9 pages","US Letter 8.5 x 11 in","A4",
+            "Instant digital download","Undated — one file per cat",
+            "Twelve-month weight log","Vet and out-of-hours numbers on one page",
+            "Litter tray kept as a diary","A page to leave out for the sitter",
+            "Colour and ink-saving mono","A record book, not veterinary advice",
+            "Personal use licence"],
+ category="Paper & Party Supplies › Paper › Calendars & Planners",
+ attrs=["Type: Planner","Style: Minimalist","Occasion: Everyday","Digital download: Yes"],
+ alts=["Printable cat care planner cover page with microchip, insurance and vet fields and a drawn paw print",
+       "All nine pages of the cat care kit, from the emergency numbers to the running log",
+       "Close-up of the monthly weight log, twelve rows with a weight and a note against each month"],
+ pin_title="A cat care record built around the fact that cats hide illness",
+ pin_desc="A monthly weight log, the litter tray kept as a diary, the out-of-hours vet number on the fridge, and a page to leave out for the sitter. Fillable PDF, undated, one per cat.",
+ hashtags="#catcare #catsofinstagram #catmom #petplanner #cathealth #kittencare #catowner #vetvisit #printableplanner #digitaldownload",
+ note="Not seasonal — this one sells all year, with a lift in the weeks after Christmas and in kitten season (spring). Never claim it diagnoses, prevents or treats anything, and keep the \"record book, not veterinary advice\" line in the description as well as on the pages. It is also the most giftable listing here: a new-kitten present. Consider a second listing later led by \"kitten\" rather than \"cat\" - same files, different first three words.",
+),
 ]
