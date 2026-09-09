@@ -822,4 +822,68 @@ Easter moves every year, so no dates are printed anywhere. Save your filled-in c
  hashtags="#easter #easteregghunt #easterplanner #easterbasket #egghunt #easterweekend #kidsactivities #holidayplanner #printableplanner #digitaldownload",
  note="Easter moves: 2027 is 28 March, 2028 is 16 April. List in JANUARY — searches start about six weeks out and peak in the ten days before. The hunt and basket pages are the reason people buy, so make image 1 the hiding map, not the cover.",
 ),
+# ---------------------------------------------------------------- 15
+dict(
+ key="school", name="Night Before", kind="Back-to-school kit", accent="#1f5fa0", pages="9 pages",
+ price="12.50", coupon="25% until the end of June — no discount in August",
+ folder="dist-school/etsy/",
+ section="Seasonal kits",
+ title="Back to School Planner Printable, Fillable PDF, School Supplies Checklist, Uniform Sizes, Costs, Weekly Routine, 9 Pages, Letter + A4",
+ desc="""Nine pages for the parent, not the pupil. Sizes before shopping, the list and the labelling, what the year actually costs, the week as five columns, five lunchboxes, and the evening routine that decides the morning.
+
+▸ THE PAGE THAT GOES ON THE WALL
+Page 5 is the week as five columns: what goes in the bag on Monday, Tuesday, Wednesday, Thursday and Friday, what happens after school, and who is collecting. PE kit on Tuesday, library book on Thursday, recorder on Friday, forest school wellingtons on the week you forget. None of it is hard to remember and all of it is impossible to remember at half past eight, which is why this page lives by the front door and not in a folder.
+
+▸ THE PAGE THAT FIXES MORNINGS
+Page 7. Every difficult school morning is really an evening that did not happen — bag not emptied, uniform not out, shoes somewhere else, lunch not made. The evening list is meant to be ticked for the first fortnight and then never needed again, because by then it is a habit. Beside it, the morning split into two columns so nobody ends up doing both halves, and a bedtime worked back from what time they have to wake.
+
+▸ TWO THINGS THIS KIT SAYS OUT LOUD
+LABEL THE THING, NOT THE BAG. The bag comes home; the jumper does not. Everything that can be taken off during a school day needs a name on the item itself — jumper, coat, PE kit, water bottle, lunchbox, and both shoes, inside. It is an hour in August and it is the difference between losing four jumpers a year and losing none.
+
+SHOES EXACTLY, JUMPERS ONE SIZE UP. Feet are measured, not guessed, and measured at the end of August rather than in July, because children grow over the summer. Jumpers and coats can take a size up; shirts and trousers cannot, because a child in clothes that are too big is a child who cannot manage their own zip.
+
+▸ THE NINE PAGES
+1. This September — the child, the dates that are not yours to move, who does the mornings, the budget
+2. What they have grown out of — fifteen things, last size against this size, how many, where from
+3. The list, and the labelling — sixteen supply rows with a GOT column and a NAMED column
+4. What the year actually costs — twelve lines, reckoned against really, with a total
+5. The week, on one page
+6. Five lunchboxes — plus what they will actually eat, and what comes home untouched
+7. The night before
+8. The first day, and the first week — including what to ask at pick-up, because "how was school?" gets you nothing
+9. Names and numbers — the office, the absence line, other grown-ups who can collect, September admin
+
+""" + COMMON_HOWITWORKS + """
+▸ WHAT YOU GET, INSTANTLY
+• 4 fillable kits — US Letter + A4, in colour + ink-saving mono, 9 pages each, 500 typing fields
+• 4 print kits — the same nine pages with no form fields
+• A START-HERE sheet
+• Three zips: complete, Letter only, A4 only
+
+▸ MORE THAN ONE CHILD
+Print or save pages 1–4 once per child — they are the pages with sizes, costs and a teacher's name on them. Pages 5–9 work for the whole household.
+
+▸ UNDATED, AND THAT IS THE POINT
+No year and no month is printed anywhere, so it works for a September start, a January term, or an Australian school year beginning in late January. Save your filled-in copy per child and next August it opens with last year's sizes, costs and phone numbers already in it — which is exactly when you want them.
+
+""" + COMMON_NOTE + "\n" + lic("for your own family"),
+ tags=["back to school","school planner","school checklist","school supplies","uniform list",
+       "parent planner","fillable pdf","undated planner","family organizer","lunchbox planner",
+       "morning routine","school year planner","digital download"],
+ materials=["Fillable PDF, 500 typing fields","9 pages","US Letter 8.5 x 11 in","A4",
+            "Instant digital download","Undated — any school year, any country",
+            "Uniform sizing table, last size vs this size","A supply list with a named column",
+            "Twelve cost lines with a running total","The week as five columns",
+            "An evening routine, and the morning split","Colour and ink-saving mono",
+            "Personal use licence"],
+ category="Paper & Party Supplies › Paper › Calendars & Planners",
+ attrs=["Type: Planner","Occasion: Back to school","Style: Minimalist","Digital download: Yes"],
+ alts=["Printable back to school planner cover page with term dates, the morning rota and a budget box",
+       "All nine pages of the back-to-school kit, from uniform sizing to the first week",
+       "Close-up of the week page, five columns for what goes in the bag on each day"],
+ pin_title="The back-to-school page that goes by the front door",
+ pin_desc="Five columns for what goes in the bag on which day, uniform sizes before you shop, what the year really costs, and the evening routine that fixes the mornings. Fillable PDF, undated.",
+ hashtags="#backtoschool #schoolplanner #parentlife #schoolrun #backtoschoolprep #momlife #familyorganisation #printableplanner #fillablepdf #digitaldownload",
+ note="The biggest search window of any listing here: it runs June to early September in the northern hemisphere, with a second, smaller one in late January for Australia and New Zealand and for January-term starts. Because it is undated and says nothing about a specific month, one listing serves both. List it now even though this year's rush has passed — a listing with twelve months of history behind it is a different animal next June.",
+),
 ]

@@ -1,13 +1,13 @@
 # Printable planner shop — product packs
 
-Fourteen digital-download products (one of them a bundle), all generated from HTML templates: **Dusk Ladder**, a one-page
+Fifteen digital-download products (one of them a bundle), all generated from HTML templates: **Dusk Ladder**, a one-page
 daily planner; **Party Line**, a nine-page birthday planning kit; **Confetti Club**, a nine-page
 kids' party kit; **Golden Hour**, an eleven-page milestone birthday kit; **First Move**, an eight-page
 ADHD-friendly planning set; **Same Shape**, a nine-page autism-friendly set; **Steady**, a nine-page anxiety journal;
 **Small Light**, a nine-page journal for low days; **Thirty-First**, a nine-page Halloween
 party kit; **Long December**, a nine-page Christmas planning kit; **One Table**, a nine-page
-Thanksgiving kit; **Five to Midnight**, a nine-page New Year kit; and **Four Days**, a nine-page
-Easter kit. Each has its own design language rather
+Thanksgiving kit; **Five to Midnight**, a nine-page New Year kit; **Four Days**, a nine-page
+Easter kit; and **Night Before**, a nine-page back-to-school kit. Each has its own design language rather
 than a recoloured shell. Every variant a listing
 needs — page sizes, colourways, languages, print and fillable — comes out of one build.
 
@@ -30,6 +30,7 @@ planner/
 ├── thanksgiving.py               # Thanksgiving kit: nine pages, one meal, one oven
 ├── newyear.py                    # New Year kit: nine pages, the night and the turn
 ├── easter.py                     # Easter kit: nine pages, a four-day weekend
+├── school.py                     # back-to-school kit: nine pages, for the parent
 ├── src/
 │   ├── planner.template.html    # the daily planner (single source of truth)
 │   ├── readme.template.html     # the "start here" sheet the buyer opens first (both products)
@@ -48,6 +49,7 @@ planner/
 ├── thanksgiving-planner.html    # browser/preview copy (Letter · harvest · 9 pages)
 ├── newyear-planner.html         # browser/preview copy (Letter · midnight · 9 pages)
 ├── easter-planner.html          # browser/preview copy (Letter · dye · 9 pages)
+├── school-planner.html          # browser/preview copy (Letter · term · 9 pages)
 ├── etsy-rehberi.html            # Turkish guide: shop setup, listing copy, pricing, niche
 ├── etsy-listings.html           # the twelve listings, ready to paste (generated)
 │   └── src/listing-copy.py       # the copy itself; src/build-listings.py renders the page
@@ -64,7 +66,8 @@ planner/
 ├── dist-christmas/              # Christmas kit — same shape
 ├── dist-thanksgiving/           # Thanksgiving kit — same shape
 ├── dist-newyear/                # New Year kit — same shape
-└── dist-easter/                 # Easter kit — same shape
+├── dist-easter/                 # Easter kit — same shape
+└── dist-school/                 # back-to-school kit — same shape
 ```
 
 ## Build
@@ -89,6 +92,7 @@ python3 christmas.py                 # the Christmas kit
 python3 thanksgiving.py              # the Thanksgiving kit
 python3 newyear.py                   # the New Year kit
 python3 easter.py                    # the Easter kit
+python3 school.py                    # the back-to-school kit
 ```
 
 Chromium (headless) does the rendering and prints the PDFs at exact page size; `PLANNER_WORK`
@@ -308,6 +312,32 @@ grow every year when several adults buy separately and nobody adds it up.
 Marcellus over Mulish, in egg-dye colours — rhubarb, duck-egg and daffodil on white, rather than
 the usual pastel wash. The masthead egg is drawn with a dip-dye band computed from the ellipse,
 and the dye line rises one page to the next.
+
+## The back-to-school kit
+
+Nine pages for the parent rather than the pupil — which is the whole differentiator, because most
+back-to-school printables are homework trackers and timetables for the child. This one is aimed at
+whoever is sewing name tapes at eleven at night: this September at a glance, what they have grown
+out of, the list and the labelling, what the year actually costs, the week, five lunchboxes, the
+night before, the first day, and the names and numbers. 500 form fields, four variants.
+
+Two pages carry it. **Page 5** is the week as five columns — what goes in the bag on which day,
+what happens after school, who is collecting — and it is meant to be printed and left by the front
+door, because the recorder is never remembered at half past eight. **Page 7** is the evening list,
+built on the kit's own thesis: every difficult school morning is really an evening that did not
+happen. It is designed to be ticked for a fortnight and then abandoned, because by then it is a
+habit. Beside it the morning is split into two columns so nobody does both halves, and bedtime is
+worked back from the waking time.
+
+The kit also states two things plainly, because they are the two mistakes: **label the thing, not
+the bag** (the bag comes home, the jumper does not — including both shoes, inside), and **shoes
+exactly, jumpers one size up**, with feet measured at the end of August rather than in July.
+Page 4 totals twelve cost lines, because people budget the uniform and the shoes and then meet
+trips, clubs, photographs and the dressing-up day one letter at a time.
+
+Zilla Slab over Asap; ballpoint blue, teacher's red and pencil ochre on white. The masthead mark
+is the corner of an exercise book — blue rules behind a red margin line — and the block slides
+down a little on each page, like turning one.
 
 ## How the fillable PDFs are made
 
