@@ -227,38 +227,60 @@ Revizyonun hesaba dokunan başlıkları:
 
 ## Benzerlik raporu
 
-9 Eylül 2026 tarihli rapor, revizyon öncesi metin üzerinde %15 genel benzerlik
-vermiştir. Raporun işaretlediği parçalar tek tek çıkarıldığında dağılım şudur:
+İki rapor alındı: revizyon öncesi metinde %15, revizyon sonrasında %13. Raporun
+işaretlediği parçalar PDF'ten koordinatlarıyla çıkarılıp yerleri belirlendi.
 
-| Nerede | İşaretli sözcük | Belgeye oranı |
-|---|---|---|
-| Kaynaklar listesi | 663 | %13,3 |
-| Gövde metni | 67 | %1,3 |
-| **Toplam** | **730** | **%14,6** |
+**Oranın kaynağı kaynakça listesidir.** İlk raporda işaretlenen 730 sözcüğün
+663'ü (yani %13,3 puanın tamamına yakını) kaynakça künyelerindeydi; gövde
+metnindeki eşleşme yalnızca 67 sözcüktü. Bunlar doğru verilmiş atıf künyeleridir
+ve değiştirilemez.
 
-Yani oranın neredeyse tamamı kaynakça künyelerinden gelmektedir; bunlar doğru
-verilmiş atıflardır ve değiştirilemez. **Raporu "Bibliography" ve "Quotes"
-hariç tutma seçenekleri açık biçimde yeniden almak gerekir**; iThenticate ve
-Turnitin bu ayarları taşımaktadır. Kaynak sayısı revizyonla 29'dan 37'ye
-çıktığı için, kaynakça dâhil alınan bir rapor daha yüksek bir oran verecektir.
+### Aritmetik
 
-Gövdedeki 67 sözcüklük eşleşme dört yerdeydi ve üçü yeniden yazıldı:
+Kaynakça listesi tek başına belgenin %13,3'ünü oluşturmaktadır (975 / 7352
+sözcük). Bu liste raporda sayılmaya devam ettiği sürece:
 
-- Giriş'in TS 825 paragrafı (sektörel yayınlardaki kalıp anlatımla örtüşüyordu)
-  yeniden kuruldu; "120–150" ve "70–90 kWh/m²·yıl" ifadeleri çıkarıldı.
-- Entropi ve CRITIC anlatımı yeniden yazıldı, formüller numaralı denkleme alındı.
-- Özgül ısı kaybı anlatımı yeniden yazıldı, formüller numaralı denkleme alındı.
-- TOPSIS yakınlık katsayısı ve kullanım faktörü de numaralı denkleme alındı.
+| Senaryo | Beklenen oran |
+|---|---|
+| Kaynakça dâhil (bugünkü durum) | ~%12–13 |
+| Kaynakça hariç tutulursa | ~%0,3 |
+| "20 sözcükten kısa eşleşmeler hariç" | ~%0,3 |
+| "15 sözcükten kısa eşleşmeler hariç" | ~%4,7 |
+| Kaynak sayısı 37'den 28'e indirilirse | ~%9,8 |
+
+Kaynakçadaki en uzun tekil eşleşme 19 sözcüktür; bu nedenle 20 sözcüklük bir
+eşik, listenin katkısını tümüyle ortadan kaldırmaktadır.
+
+**%10 sınırı, kaynakça dâhil alınan bir raporda 37 kaynakla sağlanamaz.** Gövde
+metni sıfır benzerlik verse bile kaynakça tek başına %12 üretmektedir. Doğru
+çözüm, raporu Bibliography ve Quotes hariç tutma seçenekleriyle yeniden almaktır;
+iThenticate ve Turnitin bu ayarları taşımaktadır ve bu, dergilerin standart
+uygulamasıdır. Kaynak sayısını azaltmak sayıyı düşürür ancak makalenin literatür
+temelini ve derginin "kaynakların en az %30'u son beş yıldan" kuralına uyumunu
+zayıflatır; bu nedenle önerilmemektedir. Sınır kaynakça dâhil uygulanıyorsa
+editöre danışılması uygun olur.
+
+### Gövde metninde yapılan düzeltmeler
+
+Raporun gövdede işaretlediği dört yerden üçü yeniden yazıldı:
+
+- Giriş'in TS 825 paragrafı yeniden kuruldu; "120–150" ve "70–90 kWh/m²·yıl"
+  ifadeleri çıkarıldı.
+- Entropi ve CRITIC anlatımı ile özgül ısı kaybı anlatımı yeniden yazıldı;
+  formüller numaralı denklemlere alındı.
+- Sistem sınırı tanımındaki kalıp anlatım ("beşikten kapıya", "beşikten mezara")
+  kaldırılıp modüller kendi cümlelerimizle tanımlandı.
+- Tablo 8'in sütun başlıkları birimleriyle düzeltildi (kWh/m²·yıl).
 
 Değiştirilmeyenler ve nedenleri:
 
-- **"3. Sonuçlar ve Tartışmalar (Results and Discussions)"** başlığı derginin
-  kendi zorunlu başlığıdır; dergipark eşleşmesi bundandır.
+- **"3. Sonuçlar ve Tartışmalar (Results and Discussions)"** derginin kendi
+  zorunlu başlığıdır; dergipark eşleşmesi bundandır.
 - **Isı kaybı ve entropi formülleri** standardın ve yöntemin kendi biçimidir.
-- **"Q_H (kWh/m²)", "Q_C (kWh/m²)"** gibi tablo başlıkları semboldür.
+- **Kaynakça künyeleri** doğru atıflardır.
 
-Denklem numaralandırması bu revizyonla birlikte 4'ten **11'e** çıkmıştır; bu
-aynı zamanda derginin "denklemler numaralandırılır" kuralına tam uyum sağlar.
+Denklem numaralandırması 4'ten **11'e** çıkarıldı; hepsi metinde "Eş. n" biçiminde
+anılmaktadır. Dergi adları UBC listesine göre kısaltıldı (15 künye).
 
 ## Terim kararı
 

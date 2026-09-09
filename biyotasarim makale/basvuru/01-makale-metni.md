@@ -124,11 +124,11 @@ Duvar bileşeninde uygulanabilir kabul edilen azami yalıtım kalınlığı aş�
 
 Çevresel veriler ÖKOBAUDAT'tan alınan yaşam döngüsü değerlendirmesi veri kümeleridir [30]. Veri tabanı yalnızca doğrulanmış ürün beyanlarından oluşmamakta; ürün beyanı temelli, ortalama, temsilî ve jenerik veri kümelerini bir arada sunmaktadır. Bu çalışmada kullanılan her kaydın veri kümesi kimliği, sürüm yılı ve referans birimi ek tabloda verilmiştir.
 
-Ürün beyanı modülleri kullanılarak üç sistem sınırı tanımlanmıştır [34]: S1 yalnızca A1–A3 modüllerini (beşikten kapıya, biyojenik alım dâhil), S2 buna C3 ve C4 modüllerini (beşikten mezara), S3 ise ek olarak D modülünü kapsar. Çifte sayımı önlemek için bu analizde gömülü karbon ve biyojenik karbon ayrı ölçüt olarak kullanılmamış, yerlerini tek bir yaşam döngüsü karbonu ölçütü almıştır. Bu ölçüt setinin ana çalıştırmanınkinden farkı budur; ana çalıştırma sekiz ölçütle ve biyojenik karbonla, sistem sınırı çözümlemesi ise sekiz ölçütle ve tek bir yaşam döngüsü karbonu ölçütüyle yürütülmüştür.
+Ürün beyanının modül yapısı, hesabın nerede kesileceğini bir tasarım seçimi hâline getirmektedir. Bu çalışmada üç kesme noktası tanımlanmıştır [34]. S1, üretim modülleriyle (A1–A3) sınırlıdır ve biyojenik alımı içerir. S2, bunlara yaşam sonu işleme ve bertaraf modüllerini (C3 ve C4) ekler. S3 ise sistem sınırının ötesine taşan yük ve kazanımları temsil eden D modülünü de kapsar. Çifte sayımı önlemek için bu analizde gömülü karbon ve biyojenik karbon ayrı ölçüt olarak kullanılmamış, yerlerini tek bir yaşam döngüsü karbonu ölçütü almıştır. Bu ölçüt setinin ana çalıştırmanınkinden farkı budur; ana çalıştırma sekiz ölçütle ve biyojenik karbonla, sistem sınırı çözümlemesi ise sekiz ölçütle ve tek bir yaşam döngüsü karbonu ölçütüyle yürütülmüştür.
 
 S1 sınırında biyo-bazlı malzemelerin karbon-negatif görünmesi malzemenin bir özelliği değil, sistem sınırının ve biyojenik karbon muhasebesinin bir sonucudur: A1–A3'te atmosferden alınan karbon eksi işaretle kaydedilirken, bu karbonun yaşam sonunda geri salınması hesabın dışında bırakılmaktadır.
 
-EN 15804'ün A1 ve A2 sürümleri biyojenik karbonu farklı biçimde muhasebeleştirmektedir; veri tabanı bu iki sürümün göstergelerinin birlikte karşılaştırılmamasını öngörmektedir. Veri setinde bu fark somut olarak gözlenmiştir: kenevir ve keten lifi için 2023 tarihli kayıtlarda A1–A3 biyojenik karbon sıfıra yakınken, 2022 tarihli kayıtlarda yaklaşık −1,5 kgCO₂e/kg'dır. Bu çalışmada, lignoselülozik malzemenin kuru kütle karbon içeriğinden beklenen büyüklükle tutarlı olduğu için 2022 sürümleri kullanılmış, sonucun bu seçime duyarlılığı 3.4'te ayrıca raporlanmıştır.
+EN 15804'ün A1 ve A2 sürümleri biyojenik karbonu farklı biçimde muhasebeleştirmektedir; veri tabanı bu iki sürümün göstergelerinin birlikte karşılaştırılmamasını öngörmektedir. Veri setinde bu fark somut olarak gözlenmiştir: kenevir ve keten lifi için 2023 tarihli kayıtlarda A1–A3 biyojenik karbon sıfıra yakınken, 2022 tarihli kayıtlarda yaklaşık −1,5 kgCO₂e/kg'dır. Bu çalışmada, lignoselülozik malzemenin kuru kütle karbon içeriğinden beklenen büyüklükle tutarlı olduğu için 2022 sürümleri kullanılmış, sonucun bu seçime duyarlılığı 3.5'te ayrıca raporlanmıştır.
 
 Yaşam sonu senaryosunun sonucu ne ölçüde belirlediğini ölçmek için, C3 modülünde beyan edilen salımın gerçekleşen oranı φ bir duyarlılık parametresi olarak tanımlanmıştır. φ = 1 beyan edilen senaryoyu, φ = 0 depolanan biyojenik karbonun hiç salınmadığı sınır durumu temsil eder.
 
@@ -380,7 +380,7 @@ Bulguların mevzuata dönük karşılığı, tavsiye edilen ısıl geçirgenlik 
 
 **Tablo 8.** Referans konutun enerji ihtiyacı ve ısıl kütlenin katkısı §(Energy demand of the reference dwelling and the contribution of thermal mass)§
 
-| Bölge | Temsilci il | Q_H (kWh/m²) | Q_C (kWh/m²) | Toplam | Isıl kütle katkısı (kWh/m²) |
+| Bölge | Temsilci il | Q_H (kWh/m²·yıl) | Q_C (kWh/m²·yıl) | Toplam (kWh/m²·yıl) | Isıl kütle katkısı (kWh/m²·yıl) |
 |---|---|---|---|---|---|
 | 1 · Aşırı Sıcak | Antalya | 3,8 | 57,0 | 60,8 | 5,57 |
 | 3 · Ilıman | İstanbul | 14,1 | 29,8 | 43,9 | 5,76 |
@@ -415,27 +415,27 @@ Bulguların mevzuata dönük karşılığı, tavsiye edilen ısıl geçirgenlik 
 6. Yüce B.E., Acar M.C., Bitlis İlinde Farklı Yakıtlar ve Duvar Bileşenleri İçin Optimum Yalıtım Kalınlığı ve Enerji Tasarrufunun Analizi, Bitlis Eren Üniversitesi Fen Bilimleri Dergisi, 10(4), 1426-1434, 2021.
 7. Mıhlayanlar E., Meral S., Mevcut Binalarda Enerji Verimli Yenileme ve EKB Uygulaması, Kırklareli Üniversitesi Mühendislik ve Fen Bilimleri Dergisi, 9(2), 478-497, 2023.
 8. Hossain M.S., Therasme O., Crovella P., Volk T.A., Assessing the Environmental Impact of Biobased Exterior Insulation Panel: A Focus on Carbon Uptake and Embodied Emissions, Energies, 17, 14, 3406, 2024.
-9. Matthews H.D., Zickfeld K., Koch A., Luers A., Accounting for the climate benefit of temporary carbon storage in nature, Nature Communications, 14, 1, 5485, 2023.
-10. Andersen C.E., Rasmussen F.N., Habert G., Birgisdóttir H., Embodied GHG Emissions of Wooden Buildings — Challenges of Biogenic Carbon Accounting in Current LCA Methods, Frontiers in Built Environment, 7, 729096, 2021.
-11. Füchsl S., Huber J., Fröhling M., Röder H., Balancing the green carbon cycle — Biogenic carbon within life cycle assessment, The International Journal of Life Cycle Assessment, 30, 10, 2300-2313, 2025.
-12. Ye F., Wei H., Xiao Y., Berardi U., Quaranta G., Demartino C., Bio-based insulation materials in sustainable constructions: A review of environmental, thermal and acoustic insulation, durability, and mechanical performances, Renewable and Sustainable Energy Reviews, 223, 115872, 2025.
+9. Matthews H.D., Zickfeld K., Koch A., Luers A., Accounting for the climate benefit of temporary carbon storage in nature, Nat Commun, 14, 1, 5485, 2023.
+10. Andersen C.E., Rasmussen F.N., Habert G., Birgisdóttir H., Embodied GHG Emissions of Wooden Buildings — Challenges of Biogenic Carbon Accounting in Current LCA Methods, Front Built Environ, 7, 729096, 2021.
+11. Füchsl S., Huber J., Fröhling M., Röder H., Balancing the green carbon cycle — Biogenic carbon within life cycle assessment, Int J Life Cycle Assess, 30, 10, 2300-2313, 2025.
+12. Ye F., Wei H., Xiao Y., Berardi U., Quaranta G., Demartino C., Bio-based insulation materials in sustainable constructions: A review of environmental, thermal and acoustic insulation, durability, and mechanical performances, Renew Sustain Energy Rev, 223, 115872, 2025.
 13. Dénes T., Iştoan R., Tămaş-Gavrea D.R., Manea D.L., Hegyi A., Popa F., Vasile O., Analysis of Sheep Wool-Based Composites for Building Insulation, Polymers, 14, 10, 2109, 2022.
 14. Ranefjärd O., Strandberg-de Bruijn P.B., Wadsö L., Hygrothermal Properties and Performance of Bio-Based Insulation Materials Locally Sourced in Sweden, Materials, 17, 9, 2021, 2024.
-15. Mati-Baouche N., De Baynast H., Lebert A., Sun S., Lopez-Mingo C.J.S., Leclaire P., Michaud P., Mechanical, thermal and acoustical characterizations of an insulating bio-based composite made from sunflower stalks particles and chitosan, Industrial Crops and Products, 58, 244-250, 2014.
+15. Mati-Baouche N., De Baynast H., Lebert A., Sun S., Lopez-Mingo C.J.S., Leclaire P., Michaud P., Mechanical, thermal and acoustical characterizations of an insulating bio-based composite made from sunflower stalks particles and chitosan, Ind Crops Prod, 58, 244-250, 2014.
 16. Gößwald J., Barbu M., Petutschnigg A., Tudor E.M., Binderless Thermal Insulation Panels Made of Spruce Bark Fibres, Polymers, 13, 11, 1799, 2021.
-17. Mohammed W., Osman Z., Elarabi S., Mehats J., Charrier B., Mechanical and physical properties of biocomposites for furniture and thermal insulation, Cellulose Chemistry and Technology, 58, 3-4, 331-338, 2024.
+17. Mohammed W., Osman Z., Elarabi S., Mehats J., Charrier B., Mechanical and physical properties of biocomposites for furniture and thermal insulation, Cellul Chem Technol, 58, 3-4, 331-338, 2024.
 18. Pavelek M., Adamová T., Bio-Waste Thermal Insulation Panel for Sustainable Building Construction in Steady and Unsteady-State Conditions, Materials, 12, 12, 2004, 2019.
-19. Marín-Calvo N., González-Serrud S., James-Rivas A., Thermal insulation material produced from recycled materials for building applications: cellulose and rice husk-based material, Frontiers in Built Environment, 9, 1271317, 2023.
-20. Wildman J., Shea A., Walker P., Henk D., Extrinsic and intrinsic determinants of thermal conductivity in mycelium composites, Building Services Engineering Research and Technology, 46, 3, 317-338, 2024.
-21. Ashraf M.U., Hzami A., Alghamri R., Khattab T., Abu Rayash A., Systematic review of mycelium-based composites as sustainable insulators for carbon-neutral building envelopes, International Journal of Sustainable Engineering, 19, 1, 2665914, 2026.
+19. Marín-Calvo N., González-Serrud S., James-Rivas A., Thermal insulation material produced from recycled materials for building applications: cellulose and rice husk-based material, Front Built Environ, 9, 1271317, 2023.
+20. Wildman J., Shea A., Walker P., Henk D., Extrinsic and intrinsic determinants of thermal conductivity in mycelium composites, Build Serv Eng Res Technol, 46, 3, 317-338, 2024.
+21. Ashraf M.U., Hzami A., Alghamri R., Khattab T., Abu Rayash A., Systematic review of mycelium-based composites as sustainable insulators for carbon-neutral building envelopes, Int J Sustain Eng, 19, 1, 2665914, 2026.
 22. Siksnelyte-Butkiene I., Streimikiene D., Balezentis T., Skulskis V., A Systematic Literature Review of Multi-Criteria Decision-Making Methods for Sustainable Selection of Insulation Materials in Buildings, Sustainability, 13, 2, 737, 2021.
-23. Bajwa A.U.R., Siriwardana C., Shahzad W., Naeem M.A., Material selection in the construction industry: a systematic literature review on multi-criteria decision making, Environment Systems and Decisions, 45, 1, 8, 2025.
-24. Theilig K., Vollmer M., Lang W., Albus J., Multi-criteria decision-making for energy building renovation: Comparing exterior wall structures with the AHP, ANP, utility analysis, and TOPSIS, Building and Environment, 280, 113075, 2025.
+23. Bajwa A.U.R., Siriwardana C., Shahzad W., Naeem M.A., Material selection in the construction industry: a systematic literature review on multi-criteria decision making, Environ Syst Decis, 45, 1, 8, 2025.
+24. Theilig K., Vollmer M., Lang W., Albus J., Multi-criteria decision-making for energy building renovation: Comparing exterior wall structures with the AHP, ANP, utility analysis, and TOPSIS, Build Environ, 280, 113075, 2025.
 25. Pacheco-Torgal F., Chindaprasirt P., Comparative Performance of Bio-Based Construction Materials in Europe: A Multi-Criteria Decision Analysis, Sustainability, 18, 11, 5508, 2026.
-26. Yilmaz B.Ç., Acun Özgünler S., Yilmaz Y., A multi-criteria decision-making method for thermal insulation material selection in nZEB level questioned affordable multifamily housings, Journal of Building Physics, 47, 6, 628-650, 2024.
+26. Yilmaz B.Ç., Acun Özgünler S., Yilmaz Y., A multi-criteria decision-making method for thermal insulation material selection in nZEB level questioned affordable multifamily housings, J Build Phys, 47, 6, 628-650, 2024.
 27. Ayan B., Abacıoğlu S., Basilio M.P., A Comprehensive Review of the Novel Weighting Methods for Multi-Criteria Decision-Making, Information, 14, 5, 285, 2023.
-28. Mukhametzyanov I., Specific character of objective methods for determining weights of criteria in MCDM problems: Entropy, CRITIC and SD, Decision Making: Applications in Management and Engineering, 4, 2, 76-105, 2021.
-29. Diakoulaki D., Mavrotas G., Papayannakis L., Determining objective weights in multiple criteria problems: The CRITIC method, Computers and Operations Research, 22, 7, 763-770, 1995.
+28. Mukhametzyanov I., Specific character of objective methods for determining weights of criteria in MCDM problems: Entropy, CRITIC and SD, Decis Mak Appl Manag Eng, 4, 2, 76-105, 2021.
+29. Diakoulaki D., Mavrotas G., Papayannakis L., Determining objective weights in multiple criteria problems: The CRITIC method, Comput Oper Res, 22, 7, 763-770, 1995.
 30. ÖKOBAUDAT, Bundesministerium für Wohnen, Stadtentwicklung und Bauwesen, çevrimiçi veri tabanı, https://www.oekobaudat.de, erişim: 5 Eylül 2026.
 31. EN 13501-1, Fire classification of construction products and building elements — Part 1: Classification using data from reaction to fire tests, CEN, Brüksel, Belçika, 2018.
 32. PVGIS, Photovoltaic Geographical Information System, sürüm 5.3, Avrupa Komisyonu Ortak Araştırma Merkezi, https://re.jrc.ec.europa.eu/pvg_tools/en/, erişim: 8 Eylül 2026.
@@ -443,4 +443,4 @@ Bulguların mevzuata dönük karşılığı, tavsiye edilen ısıl geçirgenlik 
 34. EN 15804:2012+A2:2019, Sustainability of construction works — Environmental product declarations — Core rules for the product category of construction products, CEN, Brüksel, Belçika, 2019.
 35. EN ISO 13790, Energy performance of buildings — Calculation of energy use for space heating and cooling, CEN, Brüksel, Belçika, 2008 (geri çekilmiştir).
 36. ISO 52016-1, Energy performance of buildings — Energy needs for heating and cooling, internal temperatures and sensible and latent heat loads — Part 1: Calculation procedures, ISO, Cenevre, İsviçre, 2017.
-37. Wauman B., Breesch H., Saelens D., Evaluation of the accuracy of the implementation of dynamic effects in the quasi steady-state calculation method for school buildings, Energy and Buildings, 65, 173-184, 2013.
+37. Wauman B., Breesch H., Saelens D., Evaluation of the accuracy of the implementation of dynamic effects in the quasi steady-state calculation method for school buildings, Energy Build, 65, 173-184, 2013.
