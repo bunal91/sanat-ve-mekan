@@ -183,7 +183,11 @@ SHARED = f'''
   </aside>
 </section>'''
 
-HTML = f'''<title>Twelve Etsy Listings</title>
+COUNT_WORD = {10:"ten",11:"eleven",12:"twelve",13:"thirteen",14:"fourteen",15:"fifteen",
+              16:"sixteen",17:"seventeen",18:"eighteen",19:"nineteen",20:"twenty"}.get(
+    len(PRODUCTS), str(len(PRODUCTS)))
+
+HTML = f'''<title>Etsy Listing Copy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -349,10 +353,10 @@ footer.end{{ grid-column:1 / -1; border-top:1px solid var(--line-2); margin-top:
 
 <div class="wrap">
   <header class="top">
-    <p class="eyebrow">Copy &amp; paste &middot; twelve products</p>
+    <p class="eyebrow">Copy &amp; paste &middot; {COUNT_WORD} products</p>
     <h1>Every listing, written for its own product.</h1>
     <p class="lede">Title, description, all thirteen tags, materials, category, photo alt text and
-    the Pinterest copy &mdash; for each of the twelve kits, written from what that kit actually
+    the Pinterest copy &mdash; for each of the {COUNT_WORD} kits, written from what that kit actually
     does. Character counts are against Etsy&rsquo;s real limits, so nothing gets truncated on paste.
     <b>Nothing here is boilerplate except the block marked as such at the bottom.</b></p>
   </header>
