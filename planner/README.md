@@ -1,14 +1,15 @@
 # Printable planner shop — product packs
 
-Sixteen digital-download products (one of them a bundle), all generated from HTML templates: **Dusk Ladder**, a one-page
+Eighteen digital-download products (one of them a bundle), all generated from HTML templates: **Dusk Ladder**, a one-page
 daily planner; **Party Line**, a nine-page birthday planning kit; **Confetti Club**, a nine-page
 kids' party kit; **Golden Hour**, an eleven-page milestone birthday kit; **First Move**, an eight-page
 ADHD-friendly planning set; **Same Shape**, a nine-page autism-friendly set; **Steady**, a nine-page anxiety journal;
 **Small Light**, a nine-page journal for low days; **Thirty-First**, a nine-page Halloween
 party kit; **Long December**, a nine-page Christmas planning kit; **One Table**, a nine-page
 Thanksgiving kit; **Five to Midnight**, a nine-page New Year kit; **Four Days**, a nine-page
-Easter kit; **Night Before**, a nine-page back-to-school kit; and **Nine Lives**, a nine-page cat
-care record. Each has its own design language rather
+Easter kit; **Night Before**, a nine-page back-to-school kit; and three nine-page pet care
+records — **Nine Lives** for cats, **Long Lead** for dogs and **Small Hours** for hamsters.
+Each has its own design language rather
 than a recoloured shell. Every variant a listing
 needs — page sizes, colourways, languages, print and fillable — comes out of one build.
 
@@ -33,6 +34,8 @@ planner/
 ├── easter.py                     # Easter kit: nine pages, a four-day weekend
 ├── school.py                     # back-to-school kit: nine pages, for the parent
 ├── cat.py                        # cat care record: nine pages, because cats hide it
+├── dog.py                        # dog care record: nine pages, one word per thing
+├── hamster.py                    # hamster care record: nine pages, measured in cm and grams
 ├── src/
 │   ├── planner.template.html    # the daily planner (single source of truth)
 │   ├── readme.template.html     # the "start here" sheet the buyer opens first (both products)
@@ -98,6 +101,8 @@ python3 newyear.py                   # the New Year kit
 python3 easter.py                    # the Easter kit
 python3 school.py                    # the back-to-school kit
 python3 cat.py                       # the cat care record
+python3 dog.py                       # the dog care record
+python3 hamster.py                   # the hamster care record
 ```
 
 Chromium (headless) does the rendering and prints the PDFs at exact page size; `PLANNER_WORK`
@@ -368,6 +373,53 @@ the start-here sheet repeats it at length.
 Alegreya over Epilogue; slate, clay and plum on white — the first cool, quiet palette in the shop,
 and a deliberate refusal of the pink-kitten register. The masthead mark is two drawn paw prints, a
 pad and four toes on an arc, and they walk a little further across the corner on every page.
+
+## The dog care record
+
+Nine pages on the opposite thesis to the cat kit. A cat hides illness; a dog tells you everything
+and is let down by the week around it — a word that changes depending on who is holding the lead,
+a walk that is a route rather than a sniff, a weight that creeps up a kilo at a time. This dog,
+the numbers, the year of care, the walk, food and the waistline, the words, the weekly hands-on
+check, a page for the sitter, and a dated running log. 457 form fields, four variants.
+
+**Page 6** is the page no other dog planner carries, and the reason the kit exists: one agreed
+word and one hand signal for each of the ten things the household asks for, five-minute training
+slots across the week, and the three things never used as a punishment. **Page 4** logs the week's
+walks with a column for whether the dog was allowed to sniff, plus the five-second pavement test
+and the long-line recall ladder. **Page 2** goes on the fridge, with the emergency list led by the
+one owners most often cannot name: a swollen, tight belly with unproductive retching and pacing.
+
+Same health framing as the cat record — every health page footed *"A record book, not veterinary
+advice · page 2 has the numbers"*, and the listing note forbids any claim to diagnose, treat or
+prevent, plus any promise of a training result.
+
+Rokkitt over Schibsted Grotesk; moss, ochre and brick on white — earthed, deliberately unlike the
+cat kit's cool palette. Section labels get a square tick rather than a rule, warnings sit behind a
+left bar, and the masthead mark is a drawn lead with a hand loop and a trigger clip that pays out
+a little further on each page, matched by the bar under the title.
+
+## The hamster care record
+
+Nine pages for the animal the other kits get wrong. A hamster is awake when you are not, lives two
+or three years rather than fifteen, is solitary in a way that is not negotiable, and is kept well
+or badly almost entirely by numbers. 347 form fields, four variants.
+
+**Page 3** is the differentiator: the home, measured. Unbroken floor area, bar spacing, bedding
+depth in the deepest corner, wheel diameter, sand bath, hides, chews, water, room temperature —
+each with the figure experienced keepers work to and a blank for what you actually measured.
+**Page 2** starts a step earlier than the cat or dog version, because many practices register
+hamsters and have not treated one in years: it asks you to telephone today and write down a vet
+who sees small exotics. **Page 9** carries the log and, from about eighteen months, growing old.
+
+The content refuses the pet-shop defaults: one hamster per cage for a Syrian, no cotton-wool
+bedding, a solid wheel large enough that the back stays flat, sand rather than water, food
+scattered rather than poured, never woken to be held, and no plastic ball on the enrichment list —
+with the reason given each time.
+
+Petrona over Work Sans; night indigo, sand and wine. The page architecture differs from the other
+two: a dotted strip above the title rather than a rule below it, and a coloured band above each
+section label so the page reads in horizontal bands. The masthead mark is a wheel, turned a little
+further on every page.
 
 ## How the fillable PDFs are made
 

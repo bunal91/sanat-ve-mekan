@@ -951,4 +951,131 @@ No year printed anywhere. The weight log runs January to December and starts whe
  hashtags="#catcare #catsofinstagram #catmom #petplanner #cathealth #kittencare #catowner #vetvisit #printableplanner #digitaldownload",
  note="Not seasonal — this one sells all year, with a lift in the weeks after Christmas and in kitten season (spring). Never claim it diagnoses, prevents or treats anything, and keep the \"record book, not veterinary advice\" line in the description as well as on the pages. It is also the most giftable listing here: a new-kitten present. Consider a second listing later led by \"kitten\" rather than \"cat\" - same files, different first three words.",
 ),
+dict(
+ key="dog", name="Long Lead", kind="Dog care kit", accent="#3f5d4a", pages="9 pages",
+ price="12.50", coupon="25% for the first two weeks (9,38 $)",
+ folder="dist-dog/etsy/",
+ section="Home & animals",
+ title="Dog Care Planner Printable, Fillable PDF Pet Health Record, Puppy Vaccination Log, Dog Sitter Instructions, Training Log, Letter + A4",
+ desc="""Nine pages for the dog you already have. A cat hides illness; a dog tells you everything and is let down by the week around it — a word that changes depending on who is holding the lead, a walk that is a route rather than a sniff, a weight that creeps up a kilo at a time. This is the record book for all of that, and it is built for the whole house rather than for one person.
+
+▸ THE PAGE NOBODY ELSE PUTS IN A DOG PLANNER
+Page 6, and it is the reason this kit exists. If it is "come" from you, "here" from the children and the dog's name shouted twice from the garden, that is three words for one thing and none of them means anything yet. Page 6 is where the house agrees: one word each for come back, sit, down, wait, leave it, drop it, off, bed, the marker word and the release — with the hand signal beside it, five-minute training slots for the week, and the three things that are never used as a punishment.
+
+▸ THE PAGE THAT GOES ON THE FRIDGE
+Page 2. Your practice's out-of-hours cover is very often a different clinic, in a different place, with a different number — and the moment you need it is the moment you cannot look it up. Beside it, the short list of things emergency vets ask people to come in for rather than wait until morning: a swollen tight belly with retching and pacing in a deep-chested dog, overheating, a fit that will not stop, chocolate or sugar-free gum or raisins, a swallowed ball or corn cob, and the accident they got straight up from.
+
+▸ THE WALK, WRITTEN DOWN
+Page 4 is a week of walks with where, how long, off the lead and — the column that matters — whether they were allowed to sniff. Twenty minutes of proper sniffing settles a dog that an hour of marching will not. It carries the five-second pavement test for hot days, the long-line recall ladder, and room to be honest about what this dog actually needs in a day.
+
+▸ THE NINE PAGES
+1. This dog — the facts, microchip and insurance, what a stranger would need to know, and why the tag matters more than the chip on the day
+2. Numbers, and when to use them
+3. The year of care — boosters, worming, lungworm, fleas, teeth, nails, weight, with last done and due; plus what must stay out of reach and why
+4. Out — the walk, the sniffing, heat, the long line and rest days
+5. Food, and the waistline — measured meals, the treat tenth, and twelve months of weights
+6. Same word — the words, the hand signals, and five minutes three times a day
+7. Hands on — the weekly once-over, ears to tail, teeth, and a dated lump log
+8. While we are away — the sitter or kennel page, including why the lead stays on
+9. Anything different — a dated running log, so "how long has that been going on?" has an answer
+
+▸ WHAT IT IS, AND WHAT IT IS NOT
+A record book, made by a designer. Not veterinary advice, not a diagnosis, not a training course, and not a substitute for phoning your practice. The signs on page 2 are the short version and are not complete — a dog that seems wrong to you is reason enough to call. Every health page says so in the footer.
+
+""" + COMMON_HOWITWORKS + """
+▸ WHAT YOU GET, INSTANTLY
+• 4 fillable kits — US Letter + A4, in colour + ink-saving mono, 9 pages each, 457 typing fields
+• 4 print kits — the same nine pages with no form fields
+• A START-HERE sheet
+• Three zips: complete, Letter only, A4 only
+
+▸ MORE THAN ONE DOG
+Pages 1 to 7 are about one animal, so save or print a copy per dog rather than sharing a sheet. Pages 8 and 9 work for the household.
+
+▸ UNDATED
+No year printed anywhere. The weight log runs January to December and starts wherever you start.
+
+""" + COMMON_NOTE + "\n" + lic("for your own dogs"),
+ tags=["dog care planner","puppy planner","dog health record","pet sitter notes","dog training log",
+       "new puppy checklist","vet records","pet organizer","fillable pdf","dog mom gift",
+       "dog weight log","pet care printable","digital download"],
+ materials=["Fillable PDF, 457 typing fields","9 pages","US Letter 8.5 x 11 in","A4",
+            "Instant digital download","Undated — one file per dog",
+            "Twelve-month weight log","Vet and out-of-hours numbers on one page",
+            "A page the whole house agrees the words on","Walk and training log for the week",
+            "Colour and ink-saving mono","A record book, not veterinary advice",
+            "Personal use licence"],
+ category="Paper & Party Supplies › Paper › Calendars & Planners",
+ attrs=["Type: Planner","Style: Minimalist","Occasion: Everyday","Digital download: Yes"],
+ alts=["Printable dog care planner cover page with microchip, insurance and vet fields and a drawn lead",
+       "All nine pages of the dog care kit, from the emergency numbers to the running log",
+       "Close-up of the page where the household agrees one word and one hand signal for each thing they ask"],
+ pin_title="A dog care record for the whole house, not just the person who bought the lead",
+ pin_desc="One page where everybody agrees which word means come back, a week of walks with a column for sniffing, twelve months of weights, and the out-of-hours vet on the fridge. Fillable PDF, undated.",
+ hashtags="#dogcare #puppychecklist #dogtraining #dogmom #petplanner #doghealth #newpuppy #dogsitter #printableplanner #digitaldownload",
+ note="Not seasonal, but it has two real peaks: puppy season (late spring into summer) and the fortnight after Christmas, when the puppies given as presents arrive. The strongest single keyword here is \"puppy\" rather than \"dog\" - consider a second listing later led by \"New Puppy Checklist Printable\" using the same files. Never claim it diagnoses, prevents or treats anything, and never let the training page drift into promising a result; keep the \"record book, not veterinary advice\" line in the description as well as on the pages.",
+),
+dict(
+ key="hamster", name="Small Hours", kind="Hamster care kit", accent="#454b7d", pages="9 pages",
+ price="9.50", coupon="20% for the first two weeks (7,60 $)",
+ folder="dist-hamster/etsy/",
+ section="Home & animals",
+ title="Hamster Care Planner Printable, Fillable PDF Small Pet Health Record, Cage Setup Checklist, Sitter Notes, 9 Pages, Letter + A4",
+ desc="""Nine pages for an animal almost every pet planner gets wrong. A hamster is awake when you are not, lives two or three years rather than fifteen, is solitary in a way that is not negotiable, and is kept well or badly almost entirely by numbers: floor area, bedding depth, wheel diameter, room temperature, grams.
+
+▸ THE PAGE MOST HAMSTER KITS LEAVE OUT
+Page 3 measures the home. Unbroken floor area, bar spacing, bedding depth in the deepest corner, wheel diameter, the sand bath, the hides, the chews, the water, the room temperature — each with the figure experienced keepers work to, and a blank beside it for what you actually measured. Cage sizes on the shelf are generous and count shelves, tubes and lids as space; a hamster uses the floor. That one page is the difference between a hamster that digs and one that chews the bars.
+
+▸ THE PAGE THAT GOES ON THE FRIDGE
+Page 2 — and for a hamster it starts a step earlier than for a cat or a dog, because plenty of practices will register one and have not treated one in years. The page asks you to telephone today and write down a vet who sees small exotics, and whether they are in at weekends. Beside it, the short list that means phone now: wet tail in a young Syrian, a hamster cold and stiff in a cold room (torpor, not death), laboured breathing, an empty hoard, a wet chin and overgrown front teeth, a pouch that will not empty.
+
+▸ WRITTEN BY SOMEONE WHO CHECKED
+One hamster per cage, always for a Syrian. No fluffy cotton-wool bedding. A solid wheel big enough that their back stays flat. Sand, not water. Food scattered rather than poured into a bowl. Never woken up to be held. And no plastic ball on the enrichment list, with the reason given.
+
+▸ THE NINE PAGES
+1. This hamster — the facts, a species table for how long you are likely to have them, and escaping
+2. Numbers, and when to use them — including the carry box made up in advance
+3. The home, measured
+4. The week — daily, weekly, monthly, and why the whole cage is never cleaned at once
+5. Food, and the hoard — twelve months of weights in grams
+6. The night — when they are actually up, what they do with it, and the playpen
+7. In your hands — taming a week at a time, and the weekly look-over
+8. While we are away — the sitter's page, and what not to do
+9. Anything different — a dated log, and growing old, which happens quickly
+
+▸ WHAT IT IS, AND WHAT IT IS NOT
+A record book, made by a designer. Not veterinary advice and not a diagnosis. The figures on page 3 are the ones experienced keepers work to rather than the minimum a box will quote you, and the signs on page 2 are a short list, not a complete one.
+
+""" + COMMON_HOWITWORKS + """
+▸ WHAT YOU GET, INSTANTLY
+• 4 fillable kits — US Letter + A4, in colour + ink-saving mono, 9 pages each, 347 typing fields
+• 4 print kits — the same nine pages with no form fields
+• A START-HERE sheet
+• Three zips: complete, Letter only, A4 only
+
+▸ SYRIAN OR DWARF
+Both. Page 1 carries a species table — Syrian, Chinese, Roborovski, Winter White, Campbell's — with how they are kept and how long they usually live, and page 3 gives the wheel and cage figures for each size.
+
+▸ UNDATED
+No year printed anywhere. The weight log runs January to December and starts wherever you start.
+
+""" + COMMON_NOTE + "\n" + lic("for your own hamsters"),
+ tags=["hamster care","hamster planner","small pet planner","pet health record","hamster cage",
+       "hamster owner gift","pet sitter notes","fillable pdf","syrian hamster","hamster checklist",
+       "pet care printable","vet records","digital download"],
+ materials=["Fillable PDF, 347 typing fields","9 pages","US Letter 8.5 x 11 in","A4",
+            "Instant digital download","Undated — one file per hamster",
+            "Cage and wheel measurements checklist","Twelve-month weight log in grams",
+            "Species table: Syrian, dwarf and Chinese","A page to leave out for the sitter",
+            "Colour and ink-saving mono","A record book, not veterinary advice",
+            "Personal use licence"],
+ category="Paper & Party Supplies › Paper › Calendars & Planners",
+ attrs=["Type: Planner","Style: Minimalist","Occasion: Everyday","Digital download: Yes"],
+ alts=["Printable hamster care planner cover page with a species table and a drawn wheel",
+       "All nine pages of the hamster care kit, from the cage measurements to the log",
+       "Close-up of the page that measures the home: floor area, bedding depth, wheel diameter and room temperature"],
+ pin_title="The hamster page every other kit leaves out: the home, measured",
+ pin_desc="Floor area, bedding depth, wheel diameter, bar spacing and room temperature — with the figure to aim at and a blank for what you actually measured. Plus the exotics vet, the week, and twelve months of weights in grams.",
+ hashtags="#hamster #hamstercare #syrianhamster #hamstercage #smallpets #petplanner #hamstersofinstagram #petcare #printableplanner #digitaldownload",
+ note="A smaller niche than cats or dogs, so expect fewer views and a better conversion rate: the people searching are usually new owners who have just realised the cage they were sold is too small. Lead the title with \"hamster\" rather than \"small pet\", and keep the cage-measurement page in the first listing image - it is the thing this kit has that the others on Etsy do not. Priced lower on purpose; it is often bought by a parent. Never claim it diagnoses, prevents or treats anything, and keep the \"record book, not veterinary advice\" line in the description as well as on the pages.",),
 ]
