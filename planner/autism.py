@@ -388,7 +388,7 @@ body{{ background:var(--backdrop); color:var(--ink);
   letter-spacing:-.012em; }}
 .mastright{{ display:flex; align-items:flex-end; gap:16px; }}
 .pageno{{ font-family:"IBM Plex Mono",monospace; font-size:11pt; color:var(--soft); }}
-.mini .fr{{ height:.24in; }}
+.mini .fr{{ display:flex; align-items:flex-end; gap:8px; flex:none; height:.24in; }}
 
 .page{{ flex:1; min-height:0; display:flex; flex-direction:column; padding-top:15px; }}
 .two{{ flex:1 1 auto; min-height:0; display:grid; grid-template-columns:1fr 1fr; gap:0 .36in; }}

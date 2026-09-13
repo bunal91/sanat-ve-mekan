@@ -384,7 +384,7 @@ body{{ background:var(--backdrop); color:var(--ink);
 .lbl.mood{{ color:var(--mood); }} .lbl.done{{ color:var(--done); }}
 
 .page .fr{{ display:flex; align-items:flex-end; gap:9px; flex:0 0 auto; height:.32in; }}
-.mini .fr{{ height:.24in; }}
+.mini .fr{{ display:flex; align-items:flex-end; gap:8px; flex:none; height:.24in; }}
 .flbl{{ font-weight:700; font-size:8.4pt; color:var(--soft); padding-bottom:4px; white-space:nowrap; }}
 .blank{{ flex:1; border-bottom:1.4px solid var(--rule); height:100%; min-width:0; }}
 .blank.w2{{ flex:none; width:.9in; }} .blank.w3{{ flex:none; width:.55in; }}

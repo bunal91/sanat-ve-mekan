@@ -451,7 +451,7 @@ body{{ background:var(--backdrop); color:var(--ink);
 .pageno{{ font-family:"Marcellus",Georgia,serif; font-size:17pt; color:var(--rhubarb); }}
 .pageno i{{ font-style:normal; font-size:9pt; color:var(--faint); }}
 .mini{{ display:flex; gap:10px; padding-bottom:3px; }}
-.mini .fr{{ height:.22in; }}
+.mini .fr{{ display:flex; align-items:flex-end; gap:8px; flex:none; height:.22in; }}
 .rules{{ display:flex; flex-direction:column; gap:2px; padding-top:9px; flex:none; }}
 .rules span{{ height:1.2px; background:var(--ink); }}
 .rules span.rhu{{ height:3px; background:var(--rhubarb); }}
