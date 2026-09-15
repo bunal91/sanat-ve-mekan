@@ -1,6 +1,6 @@
 # Printable planner shop — product packs
 
-Eighteen digital-download products (one of them a bundle), all generated from HTML templates: **Dusk Ladder**, a one-page
+Nineteen digital-download products (one of them a bundle), all generated from HTML templates: **Dusk Ladder**, a one-page
 daily planner; **Party Line**, a nine-page birthday planning kit; **Confetti Club**, a nine-page
 kids' party kit; **Golden Hour**, an eleven-page milestone birthday kit; **First Move**, an eight-page
 ADHD-friendly planning set; **Same Shape**, a nine-page autism-friendly set; **Steady**, a nine-page anxiety journal;
@@ -8,8 +8,8 @@ ADHD-friendly planning set; **Same Shape**, a nine-page autism-friendly set; **S
 party kit; **Long December**, a nine-page Christmas planning kit; **One Table**, a nine-page
 Thanksgiving kit; **Five to Midnight**, a nine-page New Year kit; **Four Days**, a nine-page
 Easter kit; **Night Before**, a nine-page back-to-school kit; and three nine-page pet care
-records — **Nine Lives** for cats, **Long Lead** for dogs and **Small Hours** for hamsters.
-Each has its own design language rather
+records — **Nine Lives** for cats, **Long Lead** for dogs and **Small Hours** for hamsters; and
+**One Trip**, a nine-page grocery kit. Each has its own design language rather
 than a recoloured shell. Every variant a listing
 needs — page sizes, colourways, languages, print and fillable — comes out of one build.
 
@@ -36,6 +36,7 @@ planner/
 ├── cat.py                        # cat care record: nine pages, because cats hide it
 ├── dog.py                        # dog care record: nine pages, one word per thing
 ├── hamster.py                    # hamster care record: nine pages, measured in cm and grams
+├── shopping.py                   # grocery kit: nine pages, the list in your own aisle order
 ├── src/
 │   ├── planner.template.html    # the daily planner (single source of truth)
 │   ├── readme.template.html     # the "start here" sheet the buyer opens first (both products)
@@ -103,6 +104,7 @@ python3 school.py                    # the back-to-school kit
 python3 cat.py                       # the cat care record
 python3 dog.py                       # the dog care record
 python3 hamster.py                   # the hamster care record
+python3 shopping.py                  # the grocery kit
 ```
 
 Chromium (headless) does the rendering and prints the PDFs at exact page size; `PLANNER_WORK`
@@ -420,6 +422,26 @@ Petrona over Work Sans; night indigo, sand and wine. The page architecture diffe
 two: a dotted strip above the title rather than a rule below it, and a coloured band above each
 section label so the page reads in horizontal bands. The masthead mark is a wheel, turned a little
 further on every page.
+
+## The grocery kit
+
+Nine pages on two ideas nobody else prints. A shopping list is written in the kitchen, in front of
+the open fridge — not in the shop, on a phone. And it should be laid out in the order of *your*
+shop. 625 form fields, four variants.
+
+**Page 1** asks you to walk your shop in your head, door to till, and number what you pass: twelve
+numbered lines, filled in once. **Page 4**, the page that goes with you, is then six blocks you
+label yourself in that order, 42 item slots with quantity and tick columns — so the list is read
+the way the shop is walked. **Page 2** is what comes before the list: use-first, fridge, freezer,
+cupboard, household, and a short section for what you already have too much of. **Page 3** plans
+five dinners rather than seven and names the two nights nobody cooks. **Page 8** holds the level
+below which each staple goes on the list, so the list stops living in one person's head, and
+**page 7** is a month of what went in the bin, and why.
+
+Darker Grotesque over Familjen Grotesk; navy, money green and rust. The reference is a till
+receipt: dotted leaders on every section label, the page number in a corner ticket with what to do
+with that page (*once*, *weekly*, *monthly*, *running*), a torn paper edge along the foot of every
+sheet, and a masthead receipt that prints one line further on each page.
 
 ## How the fillable PDFs are made
 

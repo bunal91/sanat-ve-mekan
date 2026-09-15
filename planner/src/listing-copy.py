@@ -1078,4 +1078,69 @@ No year printed anywhere. The weight log runs January to December and starts whe
  pin_desc="Floor area, bedding depth, wheel diameter, bar spacing and room temperature — with the figure to aim at and a blank for what you actually measured. Plus the exotics vet, the week, and twelve months of weights in grams.",
  hashtags="#hamster #hamstercare #syrianhamster #hamstercage #smallpets #petplanner #hamstersofinstagram #petcare #printableplanner #digitaldownload",
  note="A smaller niche than cats or dogs, so expect fewer views and a better conversion rate: the people searching are usually new owners who have just realised the cage they were sold is too small. Lead the title with \"hamster\" rather than \"small pet\", and keep the cage-measurement page in the first listing image - it is the thing this kit has that the others on Etsy do not. Priced lower on purpose; it is often bought by a parent. Never claim it diagnoses, prevents or treats anything, and keep the \"record book, not veterinary advice\" line in the description as well as on the pages.",),
+dict(
+ key="shopping", name="One Trip", kind="Grocery kit", accent="#1f4e79", pages="9 pages",
+ price="8.50", coupon="25% for the first two weeks (6,38 $)",
+ folder="dist-shopping/etsy/",
+ section="Kitchen & home",
+ title="Grocery List Printable, Fillable PDF Meal Planner, Weekly Shopping List by Aisle, Pantry Inventory, Food Waste Log, 9 Pages, Letter + A4",
+ desc="""A grocery kit built on two things no other printable does. The first: a shopping list is written in the kitchen, standing in front of the open fridge — not in the shop, on a phone. The second: it should be laid out in the order of YOUR shop.
+
+▸ THE PAGE THE WHOLE KIT TURNS ON
+Page 1 asks you to walk your shop in your head, door to till, and number what you pass. Twelve numbered lines, filled in once. Page 4 — the page that actually goes with you — is then six blocks you label yourself in that same order, so the list is read the way the shop is walked. No more crossing the place for the thing that was three aisles back, and no more list sorted into categories invented by somebody who has never been to your supermarket.
+
+▸ WHAT COMES BEFORE THE LIST
+Page 2, the kitchen check: what has to be used in the next three days, what is low in the fridge, what is actually in the freezer, the cupboard, the cleaning things, the toiletries — and a short section for what you already have too much of. Almost everything bought twice is bought because nobody looked.
+
+▸ FIVE DINNERS, NOT SEVEN
+Page 3 plans the week honestly: what you are eating, how many will be at the table, whether it comes out of the freezer or needs shopping, and two named nights where nobody cooks. Seven dinners get planned, four get cooked, and the other three turn up on page 7.
+
+▸ THE THREE PAGES THAT MOVE MONEY
+• Page 6 — every shop of the month with what it cost, a budget line, and a unit-price table, because the small print per 100 g is the only number on the shelf that tells the truth
+• Page 7 — one honest month of what went in the bin, and why. Nothing on that page was bought carelessly; it was bought by somebody planning to eat well. Keeping it for four weeks changes the trolley more than any budget
+• Page 8 — the cupboard level: not "remember to buy rice" but the number below which rice goes on the list, so anybody in the house can write it
+
+▸ THE NINE PAGES
+1. Your shop — the aisle order, the budget, the standing list (fill in once)
+2. The kitchen check (weekly)
+3. The week's food (weekly)
+4. The list, in aisle order — 42 item slots across six blocks you name (weekly)
+5. The big shop and the top-up — two different lists, on purpose
+6. What it costs
+7. What went in the bin
+8. The cupboard, and the level (fill in once)
+9. What we forgot — the running log, and what is good where
+
+""" + COMMON_HOWITWORKS + """
+▸ WHAT YOU GET, INSTANTLY
+• 4 fillable kits — US Letter + A4, in colour + ink-saving mono, 9 pages each, 625 typing fields
+• 4 print kits — the same nine pages with no form fields
+• A START-HERE sheet
+• Three zips: complete, Letter only, A4 only
+
+▸ HOW IT IS MEANT TO BE USED
+Pages 1 and 8 are filled in once and saved. Pages 2, 3 and 4 are the weekly ones — type into them and save a copy, or print a small stack and keep them inside a cupboard door. Pages 5, 6 and 7 are monthly.
+
+▸ UNDATED
+No year and no month printed anywhere. It works for any week, in any country, in any currency — the budget and price fields are blank lines, not dollar signs.
+
+""" + COMMON_NOTE + "\n" + lic("for your own household"),
+ tags=["grocery list","meal planner","shopping list","grocery planner","pantry inventory",
+       "weekly meal plan","fillable pdf","kitchen printable","meal plan printable",
+       "budget printable","food waste log","home organization","digital download"],
+ materials=["Fillable PDF, 625 typing fields","9 pages","US Letter 8.5 x 11 in","A4",
+            "Instant digital download","Undated — any week, any currency",
+            "Shopping list in your own aisle order","42 item slots on the list page",
+            "Fridge, freezer and cupboard check","Pantry levels, so the list writes itself",
+            "A month of food waste, logged","Colour and ink-saving mono",
+            "Personal use licence"],
+ category="Paper & Party Supplies › Paper › Calendars & Planners",
+ attrs=["Type: Planner","Style: Minimalist","Occasion: Everyday","Digital download: Yes"],
+ alts=["Printable grocery list page laid out in six aisle blocks you label yourself, with quantity and tick columns",
+       "All nine pages of the grocery kit, from the aisle order to the food waste log",
+       "Close-up of the page-one aisle order: twelve numbered lines for walking your shop door to till"],
+ pin_title="A grocery list in the order of your shop, not somebody else's categories",
+ pin_desc="Write your aisle order once, and the list follows it — so you walk the shop once. Plus the fridge check that comes before the list, five dinners instead of seven, cupboard re-order levels, and one honest month of what went in the bin. Fillable PDF.",
+ hashtags="#grocerylist #mealplanning #mealplanner #groceryshopping #kitchenorganization #budgeting #foodwaste #pantryorganization #printableplanner #digitaldownload",
+ note="Evergreen, with two real peaks: January (budget and organisation resolutions) and late August into September. The search volume here is much larger than the pet kits but so is the competition, and almost every rival listing is a pretty blank list - so lead with the ONE thing they do not have: \"in aisle order\". Put page 4 in the first listing image and the aisle-order page second; do not lead with the meal planner, which is the crowded half of the search. Price is deliberately low because this is a repeat-print product people show other people. Two safe follow-on listings from the same files: one led by \"Pantry Inventory Printable\" and one by \"Meal Planner and Grocery List\".",),
 ]

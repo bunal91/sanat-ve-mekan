@@ -137,7 +137,7 @@ cheatrows = "".join(
  f'<div class="cheat"><span class="cf">{f}</span><span class="cl">{l}</span><p>{n}</p></div>'
  for f, l, n in CHEAT)
 
-SH_SECTIONS = "Daily & weekly\nParty & event kits\nSeasonal kits\nMental health & neurodivergent"
+SH_SECTIONS = "\n".join(s for s, _ in SECTIONS)   # the shop sections, in the order used here
 SH_ANNOUNCE = ("Fillable PDF planners and event kits \u2014 you type into ready-made fields, print as "
   "often as you like, and use them again next year. Every kit comes in US Letter and A4, in colour "
   "and in an ink-saving version. Instant download; nothing is posted to you.")
