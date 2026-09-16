@@ -1203,4 +1203,67 @@ These are full-page sheets, because a 4x6 card is why recipes get abbreviated in
  pin_desc="Which pan, what your oven really runs at, what it looks like when it is ready, what goes wrong — and on the back, a dated line for each time you cooked it and what you changed. Fillable PDF, full page, print the pair as many times as you like.",
  hashtags="#recipebinder #recipecards #familyrecipes #cookbook #homecooking #recipeorganization #kitchenprintable #mealprep #printableplanner #digitaldownload",
  note="The recipe rack on Etsy is dominated by EDITABLE Canva templates and by pretty blank cards, and you cannot win either fight - so do not try. Never use the word \"editable\" here; say \"fillable PDF, full page\" in the first two lines. Compete on the things a blank card cannot have: the two-sided sheet with the what-changed log, the oven-truth page, and the rescue page. Image 1 should be the front and back of the sheet side by side, not a stack of pretty cards. Evergreen with a real December peak (this is a gift - a printed binder for a parent or a newly-moved-out child) and a January lift. One safe follow-on listing from the same files: led by \"Family Recipe Book Printable\", with page 8 as the first image.",),
+dict(
+ key="cleaning", name="Ten Minutes", kind="Cleaning kit", accent="#2a56b8", pages="9 pages",
+ price="8.50", coupon="25% for the first two weeks (6,38 $)",
+ folder="dist-cleaning/etsy/",
+ section="Kitchen & home",
+ title="Cleaning Schedule Printable, Fillable PDF Cleaning Checklist, Weekly Daily Chore Chart, Household Chore Division, 9 Pages, Letter + A4",
+ desc="""Every cleaning schedule you have ever downloaded was written for a house nobody lives in — somebody else's weekly list, with a conservatory, a utility room and no cat. Two things make a schedule survive contact with a real week, and almost no printable has either.
+
+▸ MINUTES AGAINST EVERY JOB
+Page 3 is the weekly circuit: room, job, whose it is, how many minutes — and then it adds the minutes up. That total is the whole point. Nearly every cleaning schedule fails in the same place: it is a list of jobs with no idea how long they take, so it gets agreed to cheerfully on Friday and abandoned by eleven on Saturday. Time each job once, honestly, write the number in, and add them up. If it comes to four hours you have not got a schedule, you have got a wish — and something has to move, be done less often, or be done by somebody else. That is a decision you can only make when the number is in front of you.
+
+▸ A NAME AGAINST EVERY JOB — INCLUDING THE INVISIBLE HALF
+Page 4. The cleaning is the visible part. The rest is noticing that something has run out before it runs out, actually buying it, knowing where things live so they can be put back, booking the boiler and the drain, keeping the bins in the right week, and holding the whole list in your head — which is a job in itself. In most houses all of that is done by one person who did not volunteer, and it cannot be shared out until it is written down. So it is written down here, with a name beside it like any other job.
+
+▸ TEN MINUTES, MOST EVENINGS
+Page 2. A house is not kept by deep cleans. The difference between a house that feels fine and one that does not is almost never the Saturday — it is whether the kitchen was cleared before bed. Five things, timed once, with a start time and a seven-day grid. Not every evening. Most.
+
+▸ THE PAGE THAT GOES INSIDE THE CUPBOARD DOOR
+Page 6, and it is not decoration. Bleach with an ammonia-based glass cleaner, or with vinegar or a limescale remover, gives off gas — and cleaning printables almost never say so. Also on it: never two drain unblockers, never acid on marble or limestone, never decant into an unlabelled bottle, and the fact that most houses need four products rather than a cupboard full.
+
+▸ THE NINE PAGES
+1. This house — the rooms, the floors, who lives here, and what "clean enough" actually means to you both (fill in once)
+2. The ten minutes — the evening reset, and a week of ticks
+3. The circuit — the weekly round, timed, named, and totalled
+4. Who does what — including the invisible half
+5. Monthly, twice a year, once ever — honest frequencies, and a list of what it is fine to skip
+6. What not to mix
+7. When something spills — blood, wine, grease, ink, wax, a pet accident, mud
+8. One room a month — instead of a spring clean that never happens
+9. What it actually took — the log that corrects page 3
+
+""" + COMMON_HOWITWORKS + """
+▸ WHAT YOU GET, INSTANTLY
+• 4 fillable kits — US Letter + A4, in colour + ink-saving mono, 9 pages each, 434 typing fields
+• 4 print kits — the same nine pages with no form fields
+• A START-HERE sheet
+• Three zips: complete, Letter only, A4 only
+
+▸ NOT A CHALLENGE, AND NOT A GUILT TRIP
+There is no 30-day streak to break and nothing here resets if you miss three days. Page 2 has a line for what you are letting go deliberately, and page 5 has a list of things it is fine to skip, written down so they stop nagging. Nobody washes their curtains monthly, and a list that says they should is a list that gets thrown away in week three.
+
+▸ UNDATED
+No year, no month names on the weekly pages, no assumption about your house. Write your own rooms in.
+
+""" + COMMON_NOTE + "\n" + lic("for your own home"),
+ tags=["cleaning schedule","cleaning checklist","chore chart","cleaning planner",
+       "household planner","fillable pdf","weekly cleaning","chore list","home organization",
+       "deep clean list","housekeeping","family chore chart","digital download"],
+ materials=["Fillable PDF, 434 typing fields","9 pages","US Letter 8.5 x 11 in","A4",
+            "Instant digital download","Minutes against every job, and a total",
+            "A name against every job","The invisible household work, listed",
+            "What not to mix, for the cupboard door","Stain removal reference",
+            "Undated, write your own rooms in","Colour and ink-saving mono",
+            "Personal use licence"],
+ category="Paper & Party Supplies › Paper › Calendars & Planners",
+ attrs=["Type: Planner","Style: Minimalist","Occasion: Everyday","Digital download: Yes"],
+ alts=["Printable weekly cleaning schedule with columns for the room, the job, whose it is and how many minutes, and a total at the bottom",
+       "All nine pages of the cleaning kit, from the house page to the log",
+       "Close-up of the what-not-to-mix page listing bleach with ammonia, bleach with acids and two drain unblockers"],
+ pin_title="A cleaning schedule with minutes and a name against every job",
+ pin_desc="Time the jobs, add the minutes up, and find out that your quick Saturday is a four-hour plan before you agree to it. Plus the invisible household work written down with a name beside it, and the what-not-to-mix page for the cupboard door. Fillable PDF.",
+ hashtags="#cleaningschedule #cleaningchecklist #chorechart #homeorganization #cleaningroutine #householdmanagement #mentalload #cleaningtips #printableplanner #digitaldownload",
+ note="One of the biggest searches in the whole shop and also the most copied: the rack is thousands of identical daily/weekly/monthly lists in a nicer font. Do not compete on prettiness. Lead image is page 3 with the minutes column and the total, and the description's first two lines must say \"minutes\" and \"a name against every job\" - those are the only two things here that a prettier list cannot copy in an afternoon. The invisible-work page is the one that gets shared on social; the phrase people search for it by is \"mental load\", which is in the hashtags but deliberately NOT in the title, because the buyer searching for a cleaning schedule is not searching for that phrase. Peaks in January and at the start of spring. Never promise a clean house or a habit - the kit says plainly that missing three days does not mean it failed.",),
 ]

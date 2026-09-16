@@ -1,6 +1,6 @@
 # Printable planner shop — product packs
 
-Twenty digital-download products (one of them a bundle), all generated from HTML templates: **Dusk Ladder**, a one-page
+Twenty-one digital-download products (one of them a bundle), all generated from HTML templates: **Dusk Ladder**, a one-page
 daily planner; **Party Line**, a nine-page birthday planning kit; **Confetti Club**, a nine-page
 kids' party kit; **Golden Hour**, an eleven-page milestone birthday kit; **First Move**, an eight-page
 ADHD-friendly planning set; **Same Shape**, a nine-page autism-friendly set; **Steady**, a nine-page anxiety journal;
@@ -9,7 +9,7 @@ party kit; **Long December**, a nine-page Christmas planning kit; **One Table**,
 Thanksgiving kit; **Five to Midnight**, a nine-page New Year kit; **Four Days**, a nine-page
 Easter kit; **Night Before**, a nine-page back-to-school kit; and three nine-page pet care
 records — **Nine Lives** for cats, **Long Lead** for dogs and **Small Hours** for hamsters; and
-**One Trip**, a nine-page grocery kit, and **Second Time**, a nine-page recipe kit.
+**One Trip**, a nine-page grocery kit, **Second Time**, a nine-page recipe kit, and **Ten Minutes**, a nine-page cleaning kit.
 Each has its own design language rather
 than a recoloured shell. Every variant a listing
 needs — page sizes, colourways, languages, print and fillable — comes out of one build.
@@ -39,6 +39,7 @@ planner/
 ├── hamster.py                    # hamster care record: nine pages, measured in cm and grams
 ├── shopping.py                   # grocery kit: nine pages, the list in your own aisle order
 ├── recipe.py                     # recipe kit: nine pages, two of them a two-sided sheet
+├── cleaning.py                   # cleaning kit: nine pages, minutes and names against every job
 ├── src/
 │   ├── planner.template.html    # the daily planner (single source of truth)
 │   ├── readme.template.html     # the "start here" sheet the buyer opens first (both products)
@@ -108,6 +109,7 @@ python3 dog.py                       # the dog care record
 python3 hamster.py                   # the hamster care record
 python3 shopping.py                  # the grocery kit
 python3 recipe.py                    # the recipe kit
+python3 cleaning.py                  # the cleaning kit
 ```
 
 Chromium (headless) does the rendering and prints the PDFs at exact page size; `PLANNER_WORK`
@@ -470,6 +472,31 @@ Vollkorn over Plus Jakarta Sans; teal, paprika and honey. The section rule runs 
 only rather than across the column, which gives the page a different rhythm from the other four
 household kits, and the masthead mark is three ribbons of steam that curl a little higher on
 every page.
+
+## The cleaning kit
+
+Nine pages against a rack of thousands of identical daily/weekly/monthly lists. Two things make a
+schedule survive a real week, and almost no printable has either: **minutes** against every job,
+and a **name** against every job. 434 form fields, four variants.
+
+**Page 3** is the argument. It is the only full-width page in any kit here: room, job, whose it
+is, how many minutes — and then it adds the minutes up. Most schedules fail in the same place,
+being a list of jobs with no idea how long they take, agreed to cheerfully and abandoned by
+eleven. **Page 4** writes down the invisible half — noticing something has run out, buying it,
+booking the boiler, keeping the bins in the right week, holding the whole list in your head —
+with a name beside each, because it cannot be shared out until it is written down. **Page 2** is
+ten minutes most evenings rather than a heroic Saturday. **Page 6** goes inside the cupboard door:
+bleach with an ammonia-based cleaner or with an acid gives off gas, and cleaning printables
+almost never say so.
+
+The kit refuses the guilt register the rest of the rack trades in: page 2 has a line for what you
+are letting go deliberately, page 5 has a list of what it is fine to skip, and the text says
+plainly that missing three days does not mean it failed.
+
+Space Grotesk over Cabin; cobalt, amber and magenta. Section labels are filled tabs reversed out
+in white, the tick boxes are pills, and every task row ends in an amber-bordered **minutes box** —
+the kit's visual signature. The masthead mark is a pane being wiped: one smear fewer on every
+page, clear by page nine.
 
 ## How the fillable PDFs are made
 
