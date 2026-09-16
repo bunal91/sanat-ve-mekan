@@ -1143,4 +1143,64 @@ No year and no month printed anywhere. It works for any week, in any country, in
  pin_desc="Write your aisle order once, and the list follows it — so you walk the shop once. Plus the fridge check that comes before the list, five dinners instead of seven, cupboard re-order levels, and one honest month of what went in the bin. Fillable PDF.",
  hashtags="#grocerylist #mealplanning #mealplanner #groceryshopping #kitchenorganization #budgeting #foodwaste #pantryorganization #printableplanner #digitaldownload",
  note="Evergreen, with two real peaks: January (budget and organisation resolutions) and late August into September. The search volume here is much larger than the pet kits but so is the competition, and almost every rival listing is a pretty blank list - so lead with the ONE thing they do not have: \"in aisle order\". Put page 4 in the first listing image and the aisle-order page second; do not lead with the meal planner, which is the crowded half of the search. Price is deliberately low because this is a repeat-print product people show other people. Two safe follow-on listings from the same files: one led by \"Pantry Inventory Printable\" and one by \"Meal Planner and Grocery List\".",),
+dict(
+ key="recipe", name="Second Time", kind="Recipe kit", accent="#1a6460", pages="9 pages",
+ price="9.50", coupon="25% for the first two weeks (7,13 $)",
+ folder="dist-recipe/etsy/",
+ section="Kitchen & home",
+ title="Recipe Binder Printable, Fillable PDF Recipe Cards, Full Page Recipe Sheet with Scaling, Family Recipe Book Pages, 9 Pages, Letter + A4",
+ desc="""Every recipe card prints the two things you already know — ingredients and method — and loses the part that actually made the dish yours. Which pan. What your oven really runs at. What it looks like when it is ready. What goes wrong. And what you changed the second time you cooked it.
+
+▸ A RECIPE SHEET WITH A FRONT AND A BACK
+Pages 2 and 3 are a matched pair, printed back to back and run off as many times as you have dishes worth keeping. The front: the dish, where it came from, three separate timings (hands on, start to plate, can be done ahead), the pan, the oven dial AND what your oven really does, ingredients with a scaling column so the same recipe works for two or for eight, what to start first, the method, and the two lines no card has room for — what it looks like when it is ready, and what goes wrong.
+
+▸ THE BACK IS WHERE IT BECOMES YOURS
+The rest of the method, then four dated lines: what you did differently, and a tick if the change stays. Less liquid. Ten minutes longer. Onions started earlier. Write it on the day, in one line — a month later you will remember that you changed something and not what. Underneath: what to serve it with, who liked it, how it keeps, how to reheat it properly, and a box for a photograph.
+
+▸ START WITH PAGE 1, AND AN OVEN THERMOMETER
+Domestic ovens are routinely fifteen or twenty degrees out, and hotter at the back. That one fact is behind most of the cakes that sink and the chicken done on one side. Page 1 asks you to measure it once, along with your pans, your hob's real "medium", what is always in the cupboard, and what this kitchen cannot do. After that every recipe you keep carries the real number — which is what makes it repeatable by you, and by anybody else in the house.
+
+▸ THE NINE PAGES
+1. This kitchen — the oven, the hob, the pans, the household (fill in once)
+2. The recipe — the front of the sheet (print it many times)
+3. The second time — the back of the sheet
+4. Cook once, eat twice — what doubles, what freezes, and the reheating instruction that is actually useful
+5. When it goes wrong — too salty, too thin, split, bland, dry, burnt, sunk: the standard fix and a blank for yours
+6. Cooking for other people — one oven, four dishes, counted backwards from the table
+7. An index by need — not alphabetical: quick, feeds a crowd, freezes, cheap, when somebody is ill
+8. Written down before it is lost — the questions to ask while somebody cooks from memory
+9. Cups to grams, gas to fan to Fahrenheit, and the swaps that work here
+
+""" + COMMON_HOWITWORKS + """
+▸ WHAT YOU GET, INSTANTLY
+• 4 fillable kits — US Letter + A4, in colour + ink-saving mono, 9 pages each, 343 typing fields
+• 4 print kits — the same nine pages with no form fields
+• A START-HERE sheet
+• Three zips: complete, Letter only, A4 only
+
+▸ HOW PEOPLE USE IT
+Typing: save a copy of pages 2 and 3 under the name of each dish — that is how the collection builds. Printing: run pages 2 and 3 back to back twenty times and put them in a ring binder, with page 1 and page 7 at the front and pages 5 and 9 inside a cupboard door.
+
+▸ FULL PAGE, NOT A SMALL CARD
+These are full-page sheets, because a 4x6 card is why recipes get abbreviated into something nobody else can cook from. Undated, no seasonal wording, and nothing printed that assumes a country: temperatures are given three ways and the measures page covers cups and grams both.
+
+""" + COMMON_NOTE + "\n" + lic("for your own kitchen"),
+ tags=["recipe binder","recipe cards","recipe book","recipe printable","family recipe",
+       "fillable pdf","recipe template","kitchen printable","recipe sheet","cookbook pages",
+       "recipe organizer","cooking journal","digital download"],
+ materials=["Fillable PDF, 343 typing fields","9 pages","US Letter 8.5 x 11 in","A4",
+            "Instant digital download","Two-sided recipe sheet, front and back",
+            "Scaling column, for any number of people","A dated log of what you changed",
+            "Your oven's real temperature, written once","Cups to grams, gas to fan to Fahrenheit",
+            "Undated, no country assumed","Colour and ink-saving mono",
+            "Personal use licence"],
+ category="Paper & Party Supplies › Paper › Calendars & Planners",
+ attrs=["Type: Planner","Style: Minimalist","Occasion: Everyday","Digital download: Yes"],
+ alts=["Printable full-page recipe sheet with ingredients, a scaling column, the pan, the real oven temperature and a numbered method",
+       "All nine pages of the recipe kit, from the kitchen page to the conversions",
+       "The recipe sheet and its reverse side by side, showing the dated lines for what changed each time it was cooked"],
+ pin_title="A recipe sheet with the part every recipe card leaves out",
+ pin_desc="Which pan, what your oven really runs at, what it looks like when it is ready, what goes wrong — and on the back, a dated line for each time you cooked it and what you changed. Fillable PDF, full page, print the pair as many times as you like.",
+ hashtags="#recipebinder #recipecards #familyrecipes #cookbook #homecooking #recipeorganization #kitchenprintable #mealprep #printableplanner #digitaldownload",
+ note="The recipe rack on Etsy is dominated by EDITABLE Canva templates and by pretty blank cards, and you cannot win either fight - so do not try. Never use the word \"editable\" here; say \"fillable PDF, full page\" in the first two lines. Compete on the things a blank card cannot have: the two-sided sheet with the what-changed log, the oven-truth page, and the rescue page. Image 1 should be the front and back of the sheet side by side, not a stack of pretty cards. Evergreen with a real December peak (this is a gift - a printed binder for a parent or a newly-moved-out child) and a January lift. One safe follow-on listing from the same files: led by \"Family Recipe Book Printable\", with page 8 as the first image.",),
 ]

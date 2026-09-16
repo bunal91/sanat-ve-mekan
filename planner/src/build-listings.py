@@ -6,6 +6,29 @@ _spec = _ilu.spec_from_file_location("listing_copy",
 _lc = _ilu.module_from_spec(_spec); _spec.loader.exec_module(_lc)
 PRODUCTS = _lc.PRODUCTS
 
+# Etsy's real field limits. The page below prints a count against each one, but a
+# count is only useful if somebody looks at it -- so refuse to build instead.
+def _check(products):
+    bad = []
+    for p in products:
+        k = p["key"]
+        if len(p["title"]) > 140:
+            bad.append(f'{k}: title is {len(p["title"])} characters (140 max)')
+        if len(p["tags"]) != 13:
+            bad.append(f'{k}: {len(p["tags"])} tags (Etsy allows 13, use all of them)')
+        if len(p["materials"]) > 13:
+            bad.append(f'{k}: {len(p["materials"])} materials (13 max)')
+        for t in p["tags"]:
+            if len(t) > 20:
+                bad.append(f'{k}: tag "{t}" is {len(t)} characters (20 max)')
+        for m in p["materials"]:
+            if len(m) > 45:
+                bad.append(f'{k}: material "{m}" is {len(m)} characters (45 max)')
+    if bad:
+        raise SystemExit("Etsy limits exceeded:\n  " + "\n  ".join(bad))
+
+_check(PRODUCTS)
+
 E = lambda s: html.escape(s, quote=True)
 uid = 0
 def block(label, text, limit=None, mono=True, pre=True):

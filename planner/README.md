@@ -1,6 +1,6 @@
 # Printable planner shop — product packs
 
-Nineteen digital-download products (one of them a bundle), all generated from HTML templates: **Dusk Ladder**, a one-page
+Twenty digital-download products (one of them a bundle), all generated from HTML templates: **Dusk Ladder**, a one-page
 daily planner; **Party Line**, a nine-page birthday planning kit; **Confetti Club**, a nine-page
 kids' party kit; **Golden Hour**, an eleven-page milestone birthday kit; **First Move**, an eight-page
 ADHD-friendly planning set; **Same Shape**, a nine-page autism-friendly set; **Steady**, a nine-page anxiety journal;
@@ -9,7 +9,8 @@ party kit; **Long December**, a nine-page Christmas planning kit; **One Table**,
 Thanksgiving kit; **Five to Midnight**, a nine-page New Year kit; **Four Days**, a nine-page
 Easter kit; **Night Before**, a nine-page back-to-school kit; and three nine-page pet care
 records — **Nine Lives** for cats, **Long Lead** for dogs and **Small Hours** for hamsters; and
-**One Trip**, a nine-page grocery kit. Each has its own design language rather
+**One Trip**, a nine-page grocery kit, and **Second Time**, a nine-page recipe kit.
+Each has its own design language rather
 than a recoloured shell. Every variant a listing
 needs — page sizes, colourways, languages, print and fillable — comes out of one build.
 
@@ -37,6 +38,7 @@ planner/
 ├── dog.py                        # dog care record: nine pages, one word per thing
 ├── hamster.py                    # hamster care record: nine pages, measured in cm and grams
 ├── shopping.py                   # grocery kit: nine pages, the list in your own aisle order
+├── recipe.py                     # recipe kit: nine pages, two of them a two-sided sheet
 ├── src/
 │   ├── planner.template.html    # the daily planner (single source of truth)
 │   ├── readme.template.html     # the "start here" sheet the buyer opens first (both products)
@@ -105,6 +107,7 @@ python3 cat.py                       # the cat care record
 python3 dog.py                       # the dog care record
 python3 hamster.py                   # the hamster care record
 python3 shopping.py                  # the grocery kit
+python3 recipe.py                    # the recipe kit
 ```
 
 Chromium (headless) does the rendering and prints the PDFs at exact page size; `PLANNER_WORK`
@@ -442,6 +445,31 @@ Darker Grotesque over Familjen Grotesk; navy, money green and rust. The referenc
 receipt: dotted leaders on every section label, the page number in a corner ticket with what to do
 with that page (*once*, *weekly*, *monthly*, *running*), a torn paper edge along the foot of every
 sheet, and a masthead receipt that prints one line further on each page.
+
+## The recipe kit
+
+Nine pages, and the only kit here whose centre is a sheet meant to be printed many times. Every
+recipe card prints ingredients and method — the two things you already know — and loses what made
+the dish yours: which pan, what your oven really runs at, what it looks like when it is ready,
+what goes wrong, and what you changed the second time. 343 form fields, four variants.
+
+**Pages 2 and 3 are a matched pair**, printed back to back. The front carries the dish, where it
+came from, three separate timings, the pan, the oven dial *and* what the oven really does, an
+ingredient table with a scaling column, what to start first, eight numbered steps, and the two
+lines no card has room for. The back carries ten more steps and four dated lines — what you did
+differently, and a tick if the change stays — then what to serve it with, how it keeps, how to
+reheat it properly, and a box for a photograph.
+
+**Page 1** is measured once: the oven against a thermometer, the hob's real "medium", the pans by
+size rather than by adjective, and what this kitchen cannot do. **Page 5** is the rescue page —
+too salty, too thin, split, bland, dry, burnt, sunk — with the standard fix printed and a blank
+for what worked here. **Page 8** is for a recipe that only exists in somebody's hands, with the
+questions to ask while they cook. **Page 9** carries cups to grams and gas to fan to Fahrenheit.
+
+Vollkorn over Plus Jakarta Sans; teal, paprika and honey. The section rule runs under the label
+only rather than across the column, which gives the page a different rhythm from the other four
+household kits, and the masthead mark is three ribbons of steam that curl a little higher on
+every page.
 
 ## How the fillable PDFs are made
 
