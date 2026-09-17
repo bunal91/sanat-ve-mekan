@@ -252,72 +252,171 @@ function field(s, x, y, w, h, lab, prompt, lines) {
   s.addNotes("A3 basmak en iyisi; A4 de olur ama yazı alanı daralır. Her öğrenciye tek görsel verin, dört farklı görsel dolaşsın.");
 }
 
-/* =========================  SAYFA 2 — HOCA NOTU  ========================= */
+
+/* =========================  SAYFA 2 — GRUP KÂĞIDI  ========================= */
+{
+  const s = p.addSlide();
+  s.background = { color: PAPER };
+
+  s.addText("Aynı görsel, dört okuma", { x: 0.6, y: 0.3, w: 7.0, h: 0.5, isTextBox: true,
+    margin: 0, fontFace: H, fontSize: 26, bold: true, color: INK });
+  s.addText("Grup çalışması  ·  45 dakika  ·  Amaç uzlaşmak değil, ayrışmayı kullanmak", {
+    x: 0.6, y: 0.8, w: 7.6, h: 0.3, isTextBox: true, margin: 0,
+    fontFace: S, fontSize: 10.5, color: MUTED });
+  s.addText("GÖRSEL NO", { x: 8.4, y: 0.34, w: 1.2, h: 0.24, isTextBox: true, margin: 0,
+    fontFace: S, fontSize: 8, bold: true, color: FAINT, charSpacing: 1.4 });
+  dline(s, 9.55, 0.58, 10.3, 0.58, { col: MUTED, w: 0.9 });
+  s.addText("GRUP ÜYELERİ", { x: 10.5, y: 0.34, w: 1.4, h: 0.24, isTextBox: true, margin: 0,
+    fontFace: S, fontSize: 8, bold: true, color: FAINT, charSpacing: 1.4 });
+  dline(s, 10.5, 0.58, 12.73, 0.58, { col: MUTED, w: 0.9 });
+  dline(s, 10.5, 0.84, 12.73, 0.84, { col: "E4E4E8", w: 0.75 });
+
+  /* ---- 1. AYRIŞMA ---- */
+  s.addShape(p.ShapeType.rect, { x: 0.6, y: 1.12, w: 12.13, h: 1.72,
+    fill: { type: "none" }, line: { color: HAIR, width: 0.9 } });
+  s.addText("1", { x: 0.75, y: 1.2, w: 0.3, h: 0.3, isTextBox: true, margin: 0,
+    fontFace: H, fontSize: 15, bold: true, color: ACC });
+  s.addText("AYRIŞMA HARİTASI", { x: 1.1, y: 1.24, w: 3.0, h: 0.24, isTextBox: true, margin: 0,
+    fontFace: S, fontSize: 9, bold: true, color: ACC, charSpacing: 1.4 });
+  s.addText("Dört kâğıdı yan yana koyun. Çözmeye çalışmayın — sadece nerede aynı, nerede farklı okuduğunuzu yazın.",
+    { x: 4.3, y: 1.24, w: 8.3, h: 0.24, isTextBox: true, margin: 0,
+      fontFace: S, fontSize: 9, italic: true, color: MUTED });
+  s.addText("DÖRDÜMÜZ DE AYNI ŞEYİ GÖRDÜK", { x: 0.85, y: 1.56, w: 5.5, h: 0.22,
+    isTextBox: true, margin: 0, fontFace: S, fontSize: 8, bold: true, color: FAINT, charSpacing: 1.2 });
+  s.addText("AYRI OKUDUĞUMUZ YERLER  —  ve her okumanın dayandığı kanıt", { x: 6.95, y: 1.56,
+    w: 5.6, h: 0.22, isTextBox: true, margin: 0, fontFace: S, fontSize: 8, bold: true,
+    color: ACC, charSpacing: 1.2 });
+  dline(s, 6.72, 1.5, 6.72, 2.74, { col: HAIR, w: 0.9 });
+  for (let i = 0; i < 3; i++) {
+    dline(s, 0.85, 2.0 + i * 0.25, 6.5, 2.0 + i * 0.25, { col: "E4E4E8", w: 0.75 });
+    dline(s, 6.95, 2.0 + i * 0.25, 12.5, 2.0 + i * 0.25, { col: "E4E4E8", w: 0.75 });
+  }
+
+  /* ---- 2. ÜÇ KELİME ---- */
+  s.addShape(p.ShapeType.rect, { x: 0.6, y: 2.98, w: 7.3, h: 2.5,
+    fill: { type: "none" }, line: { color: HAIR, width: 0.9 } });
+  s.addText("2", { x: 0.75, y: 3.06, w: 0.3, h: 0.3, isTextBox: true, margin: 0,
+    fontFace: H, fontSize: 15, bold: true, color: ACC });
+  s.addText("ON İKİ KELİMEDEN ÜÇE", { x: 1.1, y: 3.1, w: 3.2, h: 0.24, isTextBox: true,
+    margin: 0, fontFace: S, fontSize: 9, bold: true, color: ACC, charSpacing: 1.4 });
+  s.addText("Dördünüzün kelimelerini birleştirin, sonra üçe indirin. Kanıtı olmayan kelime elenir.",
+    { x: 0.85, y: 3.38, w: 6.8, h: 0.24, isTextBox: true, margin: 0,
+      fontFace: S, fontSize: 8.5, italic: true, color: MUTED });
+  s.addText("HAVUZ", { x: 0.85, y: 3.66, w: 0.8, h: 0.2, isTextBox: true, margin: 0,
+    fontFace: S, fontSize: 7.5, bold: true, color: FAINT, charSpacing: 1.2 });
+  dline(s, 1.7, 3.84, 7.65, 3.84, { col: "E4E4E8", w: 0.75 });
+  for (let i = 0; i < 3; i++) {
+    const y = 4.02 + i * 0.46;
+    s.addText(String(i + 1), { x: 0.85, y: y + 0.02, w: 0.25, h: 0.24, isTextBox: true,
+      margin: 0, fontFace: H, fontSize: 12, bold: true, color: FAINT });
+    dline(s, 1.15, y + 0.26, 3.5, y + 0.26, { col: MUTED, w: 0.9 });
+    s.addText("kanıt", { x: 3.62, y: y + 0.04, w: 0.5, h: 0.2, isTextBox: true, margin: 0,
+      fontFace: S, fontSize: 7.5, italic: true, color: FAINT });
+    dline(s, 4.15, y + 0.26, 7.65, y + 0.26, { col: "E4E4E8", w: 0.75 });
+  }
+
+  /* ---- 3. TEK MÜDAHALE ---- */
+  s.addShape(p.ShapeType.rect, { x: 8.2, y: 2.98, w: 4.53, h: 2.5,
+    fill: { color: ACCT }, line: { color: ACC, width: 1.1 } });
+  s.addText("3", { x: 8.35, y: 3.06, w: 0.3, h: 0.3, isTextBox: true, margin: 0,
+    fontFace: H, fontSize: 15, bold: true, color: ACC });
+  s.addText("TEK MÜDAHALE", { x: 8.7, y: 3.1, w: 3.0, h: 0.24, isTextBox: true, margin: 0,
+    fontFace: S, fontSize: 9, bold: true, color: ACC, charSpacing: 1.4 });
+  s.addText("Üç kelimenizi daha güçlü kılmak için bu mekânda tek bir şeyi değiştirebilseydiniz, neyi değiştirirdiniz? Kaba eskiz + tek cümle. Çözüm değil, karar.",
+    { x: 8.45, y: 3.38, w: 4.03, h: 0.62, isTextBox: true, margin: 0,
+      fontFace: S, fontSize: 8.5, italic: true, color: MUTED, lineSpacing: 10.5 });
+  dline(s, 8.45, 5.24, 12.48, 5.24, { col: MUTED, w: 0.9 });
+
+  /* ---- sunum şeridi ---- */
+  s.addText("SUNUMDA ANLATACAĞINIZ ÜÇ ŞEY  ·  4 DAKİKA", { x: 0.6, y: 5.66, w: 6.0, h: 0.24,
+    isTextBox: true, margin: 0, fontFace: S, fontSize: 9, bold: true, color: ACC, charSpacing: 1.4 });
+  const pres = [
+    ["Plan tahmini", "Dört eskizden hangisini seçtiniz ya da nasıl birleştirdiniz — ve neden."],
+    ["Üç kelime", "Her kelimenin görseldeki kanıtı. Elenen kelimelerden birini de söyleyin, neden elendi."],
+    ["Tek müdahale", "Ne değiştirdiniz, hangi kelimeyi güçlendirmek için."]
+  ];
+  pres.forEach((t, i) => {
+    const x = 0.6 + i * (3.87 + 0.25);
+    s.addText(String(i + 1), { x: x, y: 5.98, w: 0.25, h: 0.24, isTextBox: true, margin: 0,
+      fontFace: H, fontSize: 12, bold: true, color: ACC });
+    s.addText(t[0], { x: x + 0.3, y: 5.98, w: 3.5, h: 0.24, isTextBox: true, margin: 0,
+      fontFace: S, fontSize: 10, bold: true, color: INK });
+    s.addText(t[1], { x: x + 0.3, y: 6.22, w: 3.55, h: 0.55, isTextBox: true, margin: 0,
+      fontFace: S, fontSize: 9, color: MUTED, lineSpacing: 11.5 });
+  });
+  s.addText("Uzlaşmak zorunda değilsiniz. Ayrıştığınız bir konuyu sunumda açıkça söyleyin — “biz burada anlaşamadık, çünkü…”",
+    { x: 0.6, y: 6.94, w: 12.13, h: 0.26, isTextBox: true, margin: 0,
+      fontFace: H, fontSize: 11.5, italic: true, color: ACC });
+  s.addNotes("Grup başına bir kâğıt. Kalemi grupta en az konuşan kişiye verin — bu, baskın öğrencinin kâğıdı ele geçirmesini engeller.");
+}
+
+/* =========================  SAYFA 3 — HOCA NOTU  ========================= */
 {
   const s = p.addSlide();
   s.background = { color: PAPER };
   s.addText("Egzersizi yönetme notu", { x: 0.6, y: 0.32, w: 8.0, h: 0.5, isTextBox: true,
     margin: 0, fontFace: H, fontSize: 24, bold: true, color: INK });
-  s.addText("Mağaza okuma  ·  75 dakika", { x: 0.6, y: 0.82, w: 8.0, h: 0.28, isTextBox: true,
-    margin: 0, fontFace: S, fontSize: 10.5, color: MUTED });
+  s.addText("Mağaza okuma  ·  bireysel 35 dk + grup 45 dk + sunum 25 dk  =  ~105 dakika", {
+    x: 0.6, y: 0.82, w: 9.0, h: 0.28, isTextBox: true, margin: 0,
+    fontFace: S, fontSize: 10.5, color: MUTED });
 
-  s.addText("GÖRSEL SEÇİM KRİTERLERİ", { x: 0.6, y: 1.35, w: 5.6, h: 0.26, isTextBox: true,
+  s.addText("GÖRSEL SEÇİM KRİTERLERİ", { x: 0.6, y: 1.32, w: 5.6, h: 0.26, isTextBox: true,
     margin: 0, fontFace: S, fontSize: 9, bold: true, color: ACC, charSpacing: 1.6 });
   const crit = [
     "Dördü birbirinden farklı olsun: biri yoğun ve ucuz, biri az ürünlü ve pahalı, biri üretimi görünür, biri koku ya da gıda ağırlıklı.",
     "Tanınmayan mağazalar seçin. Öğrenci Zara'yı tanırsa görseli okumaz, bildiğini yazar.",
-    "Logoyu ve tabelayı kırpın. Marka adı görünmesin — mekânı okumak zorunda kalsınlar.",
+    "Logoyu ve tabelayı kırpın. Marka adı görünmesin.",
     "İç mekân görseli olsun, vitrin fotoğrafı değil; dolaşım okunabilsin.",
-    "Görseli numaralandırın (1–4) ve kâğıdın üstüne numarayı yazdırın."
+    "Görselleri 1–4 numaralandırın; dağıtımı siz yapın, seçtirmeyin."
   ];
-  let y = 1.64;
+  let y = 1.6;
   crit.forEach(t => {
     dot(s, 0.72, y + 0.1, { d: 0.1, col: ACC });
-    s.addText(t, { x: 0.95, y: y - 0.04, w: 5.3, h: 0.5, isTextBox: true, margin: 0,
+    s.addText(t, { x: 0.95, y: y - 0.04, w: 5.3, h: 0.56, isTextBox: true, margin: 0,
       fontFace: S, fontSize: 10.5, color: BODY, lineSpacing: 13.5 });
-    y += 0.56;
+    y += 0.58;
   });
 
-  s.addText("AKIŞ", { x: 6.9, y: 1.35, w: 5.8, h: 0.26, isTextBox: true, margin: 0,
+  s.addText("AKIŞ", { x: 6.9, y: 1.32, w: 5.8, h: 0.26, isTextBox: true, margin: 0,
     fontFace: S, fontSize: 9, bold: true, color: ACC, charSpacing: 1.6 });
   const flow = [
-    ["10 dk", "Yönerge + birlikte bir örnek. Beşinci bir görseli ekrana yansıtıp iki kutuyu sınıfla doldurun."],
-    ["25 dk", "Bireysel ve sessiz çalışma. Konuşma yok, telefon yok, arama yok."],
-    ["10 dk", "Aynı görseli alanlar dörtlü gruplaşır ve karşılaştırır. Anlaşamadıkları yer asıl konudur."],
-    ["20 dk", "Dört grup sırayla görselini sınıfa anlatır — beşer dakika."],
-    ["10 dk", "Kapanış sorusu: “Aynı mekân başka ne satabilirdi, ne satamazdı?”"]
+    ["10 dk", "Yönerge. Beşinci bir görseli ekrana yansıtıp iki kutuyu sınıfla birlikte doldurun."],
+    ["25 dk", "Bireysel ve sessiz. Konuşma yok, telefon yok, arama yok."],
+    ["45 dk", "Grup çalışması: ayrışma haritası, on iki kelimeden üçe, tek müdahale."],
+    ["20 dk", "Dört grup sırayla anlatır — beşer dakika."],
+    ["5 dk", "Kapanış sorusu: “Aynı mekân başka ne satabilirdi, ne satamazdı?”"]
   ];
-  y = 1.64;
+  y = 1.6;
   flow.forEach(f => {
     s.addText(f[0], { x: 6.9, y: y, w: 0.75, h: 0.3, isTextBox: true, margin: 0,
       fontFace: S, fontSize: 10, bold: true, color: ACC });
-    s.addText(f[1], { x: 7.75, y: y - 0.04, w: 4.98, h: 0.5, isTextBox: true, margin: 0,
+    s.addText(f[1], { x: 7.75, y: y - 0.04, w: 4.98, h: 0.56, isTextBox: true, margin: 0,
       fontFace: S, fontSize: 10.5, color: BODY, lineSpacing: 13.5 });
-    y += 0.56;
+    y += 0.58;
   });
 
   dline(s, 0.6, 4.62, 12.73, 4.62, { col: HAIR, w: 1 });
-  s.addText("ÖRNEK DOLDURULMUŞ SATIR", { x: 0.6, y: 4.78, w: 5.6, h: 0.26, isTextBox: true,
+  s.addText("GRUP AŞAMASINDA DİKKAT", { x: 0.6, y: 4.76, w: 5.6, h: 0.26, isTextBox: true,
     margin: 0, fontFace: S, fontSize: 9, bold: true, color: ACC, charSpacing: 1.6 });
-  s.addText("Bir seramik atölyesi görseli için:", { x: 0.6, y: 5.06, w: 5.6, h: 0.28,
-    isTextBox: true, margin: 0, fontFace: S, fontSize: 10.5, italic: true, color: MUTED });
-  const ex = [
-    ["GÖRDÜĞÜM", "Ürünler tek tek, aralarında 30–40 cm boşlukla duruyor. Her parçanın üstünde ayrı bir nokta ışık var. Raf sayısı az."],
-    ["ÇIKARDIĞIM", "Ürünler birbirinin aynısı değil; her biri tekil. Marka “el yapımı” iddiasında ve bunu yoğunluk düşürerek kanıtlıyor."],
-    ["ANAHTAR KELİME", "TEKİLLİK  —  kanıt: ürünler arası boşluk ve parça başına ayrı aydınlatma."]
+  const watch = [
+    ["Uzlaşmaya zorlamayın.", "Dört okumayı ortalayan grup en değerli şeyi kaybeder. Ayrışmayı yazmaları yeter; çözmeleri gerekmiyor."],
+    ["Kalemi en az konuşana verin.", "Yoksa kâğıdı baskın öğrenci doldurur ve diğer üç okuma kaybolur."],
+    ["“Kaliteli” çıkarsa hemen müdahale edin.", "Havuzda böyle kelimeler olacak; elenme gerekçesini grup sözlü olarak kurmalı."],
+    ["Müdahale kutusunu küçük tutturun.", "Amaç tasarlamak değil, analizin bir karara bağlanabildiğini görmek. Tek cümle + kaba eskiz yeter."]
   ];
-  y = 5.42;
-  ex.forEach(e => {
-    s.addText(e[0], { x: 0.6, y: y, w: 1.75, h: 0.3, isTextBox: true, margin: 0,
-      fontFace: S, fontSize: 8.5, bold: true, color: FAINT, charSpacing: 1.2 });
-    s.addText(e[1], { x: 2.45, y: y - 0.04, w: 10.28, h: 0.5, isTextBox: true, margin: 0,
-      fontFace: H, fontSize: 12, color: BODY, lineSpacing: 16 });
-    y += 0.5;
+  y = 5.06;
+  watch.forEach((w, i) => {
+    const x = i % 2 === 0 ? 0.6 : 6.9;
+    const yy = 5.06 + Math.floor(i / 2) * 0.82;
+    s.addText(w[0], { x: x, y: yy, w: 5.83, h: 0.24, isTextBox: true, margin: 0,
+      fontFace: S, fontSize: 10.5, bold: true, color: INK });
+    s.addText(w[1], { x: x, y: yy + 0.24, w: 5.83, h: 0.52, isTextBox: true, margin: 0,
+      fontFace: S, fontSize: 10, color: MUTED, lineSpacing: 12.5 });
   });
-  s.addText("En sık görülen hata: kanıtsız çıkarım. “Lüks bir marka” yazıp geçmek. Her çıkarımın yanında görseldeki dayanağını isteyin — bu alışkanlık dönem boyunca işinize yarayacak.",
-    { x: 0.6, y: 6.98, w: 12.13, h: 0.4, isTextBox: true, margin: 0,
+  s.addText("En sık görülen hata kanıtsız çıkarımdır: “lüks bir marka” yazıp geçmek. Her çıkarımın yanında görseldeki dayanağını isteyin.",
+    { x: 0.6, y: 6.86, w: 12.13, h: 0.4, isTextBox: true, margin: 0,
       fontFace: H, fontSize: 12, italic: true, color: ACC, lineSpacing: 16 });
-  s.addNotes("Bu sayfayı öğrencilere dağıtmayın; kendinizde kalsın. Örnek satırı sadece sözlü olarak, ekrandaki beşinci görsel üzerinden gösterin.");
+  s.addNotes("Bu sayfa öğrencilere dağıtılmaz.");
 }
 
 p.writeFile({ fileName: "Magaza-Okuma-Calisma-Kagidi.pptx" }).then(f => console.log("WROTE", f));
