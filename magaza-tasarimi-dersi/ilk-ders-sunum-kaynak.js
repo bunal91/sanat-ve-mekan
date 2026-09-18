@@ -12,6 +12,8 @@ const HAIR  = "D6CCC3";   // ince çizgi
 const LIGHT = "EDE5DE";   // açık dolgu
 const ACC   = "A85C43";   // vurgu
 const ACCD  = "7E4230";   // koyu vurgu
+const SEC   = "3F6B63";   // ikincil renk — yalnızca odak noktalarında
+const SECT  = "DDE7E4";   // ikincil renk açık tonu
 const WHITE = "FFFFFF";
 
 /* ===================== TEK FONT ===================== */
@@ -67,7 +69,8 @@ function page(kicker, title, lead, o) {
   const s = p.addSlide();
   s.background = { color: PAPER };
   n += 1;
-  t(s, kicker, M, 0.44, 9.0, 0.24, { sz: 9, b: true, c: ACC, cs: 2.6 });
+  t(s, String(n).padStart(2, "0") + " · " + kicker, M, 0.44, 9.0, 0.24,
+    { sz: 9, b: true, c: ACC, cs: 2.6 });
   t(s, String(n).padStart(2, "0"), 12.05, 0.44, 0.5, 0.24, { sz: 9, b: true, c: HAIR, al: "right" });
   t(s, title, M, 0.72, 11.2, 0.68, { sz: o.ts || 27, b: true, c: INK, ls: (o.ts || 27) * 1.14 });
   line(s, M, 1.52, M + 1.3, 1.52, { col: ACC, w: 1.75 });
@@ -126,9 +129,10 @@ function cards(s, items, y, h, o) {
 function chain(s, items, y, h, o) {
   o = o || {};
   const gap = o.gap === undefined ? 0.3 : o.gap;
-  const w = (FW - gap * (items.length - 1)) / items.length;
+  const tw = o.w || FW, x0 = o.x !== undefined ? o.x : M;
+  const w = (tw - gap * (items.length - 1)) / items.length;
   items.forEach((it, i) => {
-    const x = M + i * (w + gap);
+    const x = x0 + i * (w + gap);
     const hi = o.hi ? o.hi.indexOf(i) >= 0 : false;
     const nm = Array.isArray(it) ? it[0] : it;
     const sub = Array.isArray(it) ? it[1] : null;
@@ -205,6 +209,48 @@ function list(s, items, x, y, w, o) {
   return y + items.length * rh;
 }
 
+
+/* ===================== EK DİKDÖRTGEN ŞEMALAR ===================== */
+// satır × kolon matrisi · rows: [ad, [aktif kolon indeksleri], not]
+function matrix(s, cols, rows, x, y, o) {
+  o = o || {};
+  const lw = o.lw || 1.6, ch = o.ch || 0.42, gap = 0.04;
+  const cw = (o.w - lw - 0.1) / cols.length;
+  cols.forEach((c, j) => {
+    t(s, c, x + lw + 0.1 + j * cw, y - 0.3, cw, 0.26,
+      { sz: 8.5, b: true, c: MUTED, al: "center", cs: 0.6 });
+  });
+  rows.forEach((r, i) => {
+    const yy = y + i * (ch + gap);
+    t(s, r[0], x, yy, lw, ch, { sz: 12, b: true, c: INK, va: "middle" });
+    cols.forEach((c, j) => {
+      const on = r[1].indexOf(j) >= 0;
+      const peak = o.peak && o.peak[i] === j;
+      rect(s, x + lw + 0.1 + j * cw + gap / 2, yy, cw - gap, ch,
+        { fill: peak ? SEC : (on ? ACC : LIGHT), line: false });
+    });
+    if (r[2]) t(s, r[2], x + o.w + 0.16, yy, o.nw || 3.3, ch,
+      { sz: 10, c: MUTED, va: "middle" });
+  });
+  return y + rows.length * (ch + gap) - gap;
+}
+// iki uç arasında dizilmiş dikdörtgen bloklar
+function spectrum(s, items, x, y, w, h, leftLbl, rightLbl, o) {
+  o = o || {};
+  const gap = 0.04, bw = (w - gap * (items.length - 1)) / items.length;
+  t(s, leftLbl, x, y - 0.32, w / 2, 0.26, { sz: 9, b: true, c: ACC, cs: 1.6 });
+  t(s, rightLbl, x + w / 2, y - 0.32, w / 2, 0.26,
+    { sz: 9, b: true, c: ACC, cs: 1.6, al: "right" });
+  items.forEach((it, i) => {
+    const bx = x + i * (bw + gap);
+    rect(s, bx, y, bw, h, { fill: LIGHT, line: false });
+    rect(s, bx, y, bw, 0.08, { fill: ACC, line: false });
+    t(s, it[0], bx + 0.14, y + 0.2, bw - 0.28, 0.44, { sz: 12, b: true, c: INK, ls: 14 });
+    t(s, it[1], bx + 0.14, y + 0.68, bw - 0.28, h - 0.82, { sz: 10, c: MUTED, ls: 13 });
+  });
+  return y + h;
+}
+
 /* ===================== 01 KAPAK ===================== */
 {
   const s = cover();
@@ -230,7 +276,7 @@ function list(s, items, x, y, w, o) {
 
 /* ===================== 02 DERSİN ÇERÇEVESİ ===================== */
 {
-  const s = page("01 · DERSİN ÇERÇEVESİ", "Ders izlencesinden bugünkü sunuma",
+  const s = page("DERSİN ÇERÇEVESİ", "Ders izlencesinden bugünkü sunuma",
     "İzlencede okuduğumuz dört eksen, bu sunumun da omurgası. Bugün bu dört ekseni birbirine bağlayan yöntemi kuruyoruz.");
 
   cards(s, [
@@ -250,7 +296,7 @@ function list(s, items, x, y, w, o) {
 
 /* ===================== 03 BEKLENTİLER ===================== */
 {
-  const s = page("02 · BEKLENTİLER", "Bu derste sizden ne bekliyorum?",
+  const s = page("BEKLENTİLER", "Bu derste sizden ne bekliyorum?",
     "Tasarımın yalnızca görsel olarak etkileyici olması değil, gerekçelendirilebilir olması önemli.");
 
   cards(s, [
@@ -270,12 +316,12 @@ function list(s, items, x, y, w, o) {
 
 /* ===================== 04 PROJE ===================== */
 {
-  const s = page("03 · PROJE", "Bu dönem ne tasarlıyoruz?",
+  const s = page("PROJE", "Bu dönem ne tasarlıyoruz?",
     "Ana akım olmayan bir markanın ilk fiziksel mağazasını, etkileşimli ve duyusal bir mekânsal deneyim olarak kuracaksınız.");
 
   const y = list(s, [
     ["Marka", "Ana akım olmayan, tasarım dili henüz oturmamış bir marka — sizin bulacağınız."],
-    ["Mekân", "Proje alanı bizim tarafımızdan verilecek; ölçüler alan ziyaretinde kesinleşir."],
+    ["Kimlik", "Markanın kimliğini çözümleyip onu mekânsal bir dile çevirmek."],
     ["Deneyim", "Etkileşimli, duyularla desteklenen ve teknolojiyle bütünleşmiş mekânsal deneyim."],
     ["Ölçek", "Bireysel proje; dönem boyunca tek marka üzerinden derinleşme."]
   ], M, 2.5, 6.6, { kw: 1.5, sz: 12.5, rh: 0.66 });
@@ -284,8 +330,8 @@ function list(s, items, x, y, w, o) {
   t(s, "Vitrin ve sergileme  ·  giriş ve eşik  ·  dolaşım  ·  deneyim alanı  ·  bilgi ve tanıtım  ·  satış ve kasa  ·  depolama ve stok  ·  personel",
     M, 5.62, 6.6, 0.8, { sz: 12, c: BODY, ls: 17 });
 
-  rect(s, 7.72, 2.5, 4.83, 2.55, { fill: ACC, line: false });
-  t(s, "TEMEL SORU", 8.0, 2.78, 4.27, 0.26, { sz: 9, b: true, c: "E8C9BE", cs: 2 });
+  rect(s, 7.72, 2.5, 4.83, 2.55, { fill: SEC, line: false });
+  t(s, "TEMEL SORU", 8.0, 2.78, 4.27, 0.26, { sz: 9, b: true, c: SECT, cs: 2 });
   t(s, "Markanın kimliğini, kullanıcının ihtiyaçlarını ve ürünün doğasını nasıl tek bir mekânsal dilde birleştiririz?",
     8.0, 3.15, 4.27, 1.7, { sz: 17, b: true, c: WHITE, ls: 24 });
 
@@ -294,29 +340,29 @@ function list(s, items, x, y, w, o) {
   t(s, "Atmosfer · kimlik · malzeme · ışık · renk · doku · mobilya · duyusal nitelikler",
     8.0, 5.74, 4.27, 0.6, { sz: 11.5, c: BODY, ls: 16 });
   foot(s, "Proje kapsamı ders izlencesindeki gerekliliklerden sadeleştirilerek çıkarılmıştır.");
-  s.addNotes("Alanın m²'si, kat sayısı ve tavan yüksekliği alan ziyaretinde verilecek — burada bilinçli olarak boş.");
+  s.addNotes("Alan bilgisi bilinçli olarak yok; ölçüler ayrıca duyurulacak.");
 }
 
 /* ===================== 05 TASARIM MANTIĞI ===================== */
 {
-  const s = page("04 · TASARIM MANTIĞI", "Tasarım çizimle başlamıyor.",
+  const s = page("TASARIM MANTIĞI", "Tasarım çizimle başlamıyor.",
     "Önce anlamı ve kullanıcıyı çözüyoruz; sonra bunu mekânsal karara dönüştürüyoruz.");
 
   chain(s, [
     ["Araştır", "marka · ürün · kullanıcı · rakip"],
-    ["Sentezle", "temel değerler ve üç anahtar kelime"],
-    ["Haritala", "müşterinin mekândaki yolculuğu"],
+    ["Sentezle", "marka DNA'sı ve üç anahtar kelime"],
     ["Çevir", "kelimeyi malzeme · ışık · dolaşım · sergileme kararına"],
+    ["Haritala", "müşterinin mekândaki yolculuğu ve davranışı"],
     ["Sına", "karar marka ve kullanıcıyla örtüşüyor mu?"]
-  ], 2.6, 1.85, { numbered: true, gap: 0.3, hi: [3], hs: 15, bs: 10.5 });
+  ], 2.6, 1.85, { numbered: true, gap: 0.3, hi: [2], hs: 15, bs: 10.5 });
 
   rule(s, M, 5.0, FW, "BU SUNUMUN AKIŞI DA AYNI SIRAYI İZLİYOR");
   const steps = [
-    ["Araştır", "Marka anahtarı · araştırma kaynakları · kullanıcı profili"],
-    ["Sentezle", "Anahtar kelime ölçütleri · örnek vaka"],
-    ["Haritala", "Müşteri yolculuğu · sekiz aşama · iç mimarlık modülleri"],
-    ["Çevir", "Kelime → mekânsal tasarım kararı"],
-    ["Sına", "Sınıf çalışması ve ödev"]
+    ["Araştır", "Marka DNA'sı · marka anahtarı · araştırma kaynakları · kullanıcı"],
+    ["Sentezle", "Anahtar kelime havuzu ve eleme · beş örnek kelime"],
+    ["Çevir", "Çeviri zinciri · tasarım kararı · yoğunluk kararı"],
+    ["Haritala", "Atmosfer · duyular · müşteri akışı ve davranış"],
+    ["Sına", "Vaka okuması · sınıf çalışması ve ödev"]
   ];
   const w = (FW - 0.22 * 4) / 5;
   steps.forEach((st, i) => {
@@ -327,9 +373,41 @@ function list(s, items, x, y, w, o) {
   s.addNotes("Beş adımı tahtaya yazın; dönem boyunca kritiklerde 'hangi adımdasın' diye sorun.");
 }
 
-/* ===================== 06 MARKA ANAHTARI ===================== */
+/* ===================== 06 MARKA DNA'SI (yeni) ===================== */
 {
-  const s = page("05 · MARKA ANALİZİ", "Marka Anahtarı nedir?",
+  const s = page("MARKA KİMLİĞİ", "Marka DNA'sı: bir markayı ne oluşturur?",
+    "Marka bir logo değil, bir vaadin tutarlı biçimde tekrarlanmasıdır. Bu vaat beş bileşenden oluşur.");
+
+  rule(s, M, 2.5, 7.3, "MARKANIN KENDİ İÇİNDE KURDUĞU", { c: ACC, lc: HAIR });
+  chain(s, [
+    ["Neden varız", "Markanın özü ve var oluş nedeni"],
+    ["İdeal", "Neye dönüşmek istiyor"],
+    ["Değerler", "İnanç sistemi; çalışma ve iletişim biçimi"]
+  ], 2.7, 1.18, { gap: 0.04, hs: 13, bs: 10, w: 7.3 });
+
+  rule(s, M, 4.32, 7.3, "DIŞA DÖNÜK OLARAK GÖSTERDİĞİ", { c: ACC, lc: HAIR });
+  chain(s, [
+    ["Kişilik", "Pazara konuşma biçimi, ses tonu"],
+    ["Pazar konumu", "Rekabette kendini nasıl konumlandırdığı"]
+  ], 4.52, 1.18, { gap: 0.04, hs: 13, bs: 10, w: 7.3 });
+
+  rect(s, 8.28, 2.5, 4.27, 3.2, { fill: SEC, line: false });
+  t(s, "BU DERSİN ANA KONUSU", 8.54, 2.74, 3.75, 0.26, { sz: 9, b: true, c: SECT, cs: 2 });
+  t(s, "Markanın kimliğini çözümlemek ve onu mekânsal bir dile çevirmek.",
+    8.54, 3.04, 3.75, 1.0, { sz: 17, b: true, c: WHITE, ls: 23 });
+  t(s, "Dönem boyunca her tasarım kararı bu beş bileşenden birine dayanmak zorunda. Dayanmıyorsa karar değil, tercihtir.",
+    8.54, 4.2, 3.75, 1.2, { sz: 12, c: SECT, ls: 17 });
+
+  rect(s, M, 6.0, FW, 0.64, { fill: LIGHT, line: false });
+  t(s, "Bir markanın kimliği, tekrarlanabilir olduğunda kimlik olur; tek seferlik bir jest kimlik kurmaz.",
+    M + 0.24, 6.0, 11.3, 0.64, { sz: 14, b: true, c: ACC, va: "middle" });
+  foot(s, "Kaynak: Wheeler (2017), Designing Brand Identity; Klanten vd. (2013), Brand Spaces.");
+  s.addNotes("Beş bileşeni tahtaya yazın; öğrenci kendi markası için beşini de doldurmak zorunda.");
+}
+
+/* ===================== 07 MARKA ANAHTARI ===================== */
+{
+  const s = page("MARKA ANALİZİ", "Marka Anahtarı nedir?",
     "Bir markanın özünü belirli başlıklar altında çözümlemeye yarayan çerçeve. İki grupta okunur, tek bir özde toplanır.");
 
   rule(s, M, 2.5, FW, "MARKANIN BAĞLAMI — DIŞARIDAN GELEN", { c: ACC, lc: HAIR });
@@ -359,7 +437,7 @@ function list(s, items, x, y, w, o) {
 
 /* ===================== 07 ARAŞTIRMA ===================== */
 {
-  const s = page("06 · ARAŞTIRMA", "Bir markanın kimliğini nasıl çıkarırız?",
+  const s = page("ARAŞTIRMA", "Bir markanın kimliğini nasıl çıkarırız?",
     "Bir logo ya da birkaç güzel görsel yeterli değil. Farklı kaynaklardan kanıt toplarız.");
 
   cards(s, [
@@ -380,7 +458,7 @@ function list(s, items, x, y, w, o) {
 
 /* ===================== 08 KULLANICI ===================== */
 {
-  const s = page("07 · KULLANICI", "Kullanıcı profilini nasıl anlarız?",
+  const s = page("KULLANICI", "Kullanıcı profilini nasıl anlarız?",
     "Demografik bilgi başlangıçtır; tasarım için asıl önemli olan ihtiyaç, değer ve davranıştır.");
 
   cards(s, [
@@ -399,88 +477,347 @@ function list(s, items, x, y, w, o) {
   s.addNotes("Dördüncü kart vurgulu: davranış, tasarıma en doğrudan çevrilen bilgi.");
 }
 
-/* ===================== 09 SENTEZ ===================== */
+/* ===================== SENTEZ ===================== */
 {
-  const s = page("08 · SENTEZ", "Anahtar kelimeyi nasıl belirleriz?",
-    "Kelime, markayı tarif etmekten öte tasarım kararını yönlendirebilmelidir.");
+  const s = page("SENTEZ", "Anahtar kelime nasıl çıkarılır?",
+    "Anahtar kelime, marka analizini tasarım kararına bağlayan ara duraktır. Analizden doğrudan plana geçilemez.");
 
-  cards(s, [
+  chain(s, [
+    ["Kaynaklar", "Markanın kendi ürettiği her şey: metinler, ambalaj, sosyal medya dili, müşteri yorumları, görüşme, rakiplerin dili"],
+    ["Ham kelime havuzu", "Otuz–elli kelime. Sıfat, fiil ve nesne adı; hepsini yaz, hiçbirini eleme, tekrar edenleri işaretle"],
+    ["Gruplama ve eleme", "Eş anlamlıları birleştir, kümele; markaya özgü olmayanları at: kaliteli, modern, özel"],
+    ["Üç anahtar kelime", "Özgül · kanıtlı · mekânda karşılığı kurulabilir"]
+  ], 2.5, 2.1, { numbered: true, gap: 0.28, hi: [3], hs: 14, bs: 10.5 });
+
+  rule(s, M, 5.02, FW, "ELEME ÖLÇÜTÜ");
+  const crit = [
     ["Özgül", "Her markaya uyacak kadar genel olmamalı."],
     ["Kanıtlı", "Araştırmada karşılığı bulunmalı."],
     ["Çevrilebilir", "Mekânda somut bir karşılığı kurulabilmeli."]
-  ], 2.5, 1.35, { cols: 3, numbered: true });
-
-  rule(s, M, 4.32, FW, "BU DERS İÇİN KULLANACAĞIMIZ ÖRNEK KELİMELER", { c: ACC, lc: HAIR });
-  const kw = ["CESUR", "DOĞAL", "SÜRDÜRÜLEBİLİR"];
-  const w = (FW - 0.04 * 2) / 3;
-  kw.forEach((k, i) => {
-    const x = M + i * (w + 0.04);
-    rect(s, x, 4.52, w, 0.92, { fill: ACC, line: false });
-    t(s, k, x, 4.52, w, 0.92, { sz: 26, b: true, c: WHITE, al: "center", va: "middle", cs: 2 });
+  ];
+  const w = (FW - 0.22 * 2) / 3;
+  crit.forEach((it, i) => {
+    const x = M + i * (w + 0.22);
+    t(s, it[0], x, 5.26, w, 0.28, { sz: 13.5, b: true, c: ACC });
+    t(s, it[1], x, 5.58, w, 0.5, { sz: 11.5, c: MUTED, ls: 15 });
   });
 
-  rect(s, M, 5.66, FW, 0.98, { fill: LIGHT, line: false });
-  t(s, "Bu üç kelime bir markayı tarif etmekle kalmaz; her biri malzeme, ışık, dolaşım ve sergileme kararına çevrilebilir. Bir sonraki slaytta tam olarak bunu yapacağız.",
-    M + 0.24, 5.78, 11.3, 0.8, { sz: 13.5, c: BODY, ls: 19 });
-  s.addNotes("Üç kelime dönem boyunca örnek olarak kullanılacak; öğrenci kendi markası için kendi üçlüsünü bulacak.");
+  rect(s, M, 6.16, FW, 0.62, { fill: SEC, line: false });
+  t(s, "Sınama: bu sıfatın zıttını bilinçli olarak seçen bir marka olabilir mi?",
+    M + 0.24, 6.16, 11.3, 0.62, { sz: 14, b: true, c: WHITE, va: "middle" });
+  s.addNotes("Ham havuzun uzun olması iyidir; eleme sert olmalı. Otuz kelimeden üçe inmek normaldir.");
 }
 
-/* ===================== 10 VAKA: MARKA ===================== */
+/* ===================== BEŞ ÖRNEK KELİME ===================== */
 {
-  const s = page("09 · VAKA", "Varsayımsal yerel seramik markası",
-    "Yöntemi tek bir örnek üzerinden birlikte okuyalım.");
+  const s = page("SENTEZ", "Bu derste kullanacağımız beş örnek kelime",
+    "Bunlar bir katalog değil, örnek. Kendi markanız için kendi üçlünüzü bulacaksınız.");
 
-  const y = list(s, [
-    ["Ürün", "El yapımı seramik ev ve sofra ürünleri"],
-    ["Kullanıcı", "Kentin yoğunluğu içinde yavaş ve anlamlı seçim yapmak isteyen kişi"],
+  const kw = [
+    ["CESUR", "karakterli · görünür · güçlü"],
+    ["DOĞAL", "malzemeye yakın · sıcak · yalın"],
+    ["SÜRDÜRÜLEBİLİR", "uzun ömürlü · az atık · esnek"],
+    ["TEKİLLİK", "her ürün tek · elde üretilmiş"],
+    ["GÖRÜNÜRLÜK", "üretim gizlenmiyor · süreç sahnede"]
+  ];
+  const gap = 0.04, w = (FW - gap * 4) / 5;
+  kw.forEach((k, i) => {
+    const x = M + i * (w + gap);
+    const nw = i >= 3;
+    rect(s, x, 2.6, w, 1.5, { fill: nw ? SEC : ACC, line: false });
+    t(s, k[0], x + 0.12, 2.82, w - 0.24, 0.66,
+      { sz: k[0].length > 9 ? 15 : 21, b: true, c: WHITE, al: "center", ls: 20 });
+    t(s, k[1], x + 0.12, 3.5, w - 0.24, 0.5,
+      { sz: 10, c: nw ? SECT : "F0DED7", al: "center", ls: 13 });
+  });
+  t(s, "İki kelime ikincil renkte: bunlar üretimi görünür olan, elde üretilmiş ürünlü markalar için özellikle işe yarar.",
+    M, 4.24, FW, 0.3, { sz: 11, i: true, c: MUTED });
+
+  rule(s, M, 4.82, FW, "HER KELİME MEKÂNDA BAŞKA BİR ŞEYİ DEĞİŞTİRİR", { c: ACC, lc: HAIR });
+  const eff = [
+    ["CESUR", "vurgu ve hiyerarşi"], ["DOĞAL", "malzeme ve ışık"],
+    ["SÜRDÜRÜLEBİLİR", "sistem ve işletme"], ["TEKİLLİK", "yoğunluk ve aralık"],
+    ["GÖRÜNÜRLÜK", "görüş hattı ve sınır"]
+  ];
+  eff.forEach((e, i) => {
+    const x = M + i * (w + gap);
+    rect(s, x, 5.04, w, 0.66, { fill: LIGHT, line: false });
+    t(s, e[1], x + 0.12, 5.04, w - 0.24, 0.66,
+      { sz: 11.5, b: true, c: i >= 3 ? SEC : ACC, al: "center", va: "middle", ls: 14 });
+  });
+  t(s, "Bir tasarım kararı birden fazla kelimeyi aynı anda taşıyabilir; taşıması da beklenir. Beş kelimenin hepsini kullanan bir mağaza ise hiçbirini kullanmamış olur.",
+    M, 5.94, FW, 0.62, { sz: 13.5, c: BODY, ls: 19 });
+  s.addNotes("Son iki kelime bu dersin eklediği örnekler; el üretimi ve atölyeli markalarda çok işe yarıyor.");
+}
+
+/* ===================== ÇEVİRİ ZİNCİRİ ===================== */
+{
+  const s = page("ÇEVİRİ", "Çeviri zinciri: özellikten tasarım öğesine",
+    "Bir marka özelliği doğrudan çizime dönüşmez. Arada iki durak var ve ikisi de atlanamaz.");
+
+  chain(s, [
+    ["Marka özelliği", "araştırmada bulunan somut olgu"],
+    ["Anahtar kelime", "o olgunun tek sıfata indirgenmesi"],
+    ["Mekânsal ilke", "sayısız çözüme açık genel kural"],
+    ["Tasarım öğesi", "çizilebilir, ölçülebilir karar"]
+  ], 2.5, 1.5, { numbered: true, gap: 0.3, hi: [3], hs: 15, bs: 11 });
+
+  rule(s, M, 4.32, FW, "AYNI ZİNCİR, İKİ ÖRNEK", { c: SEC, lc: HAIR });
+  const ex = [
+    ["Her ürün tek tek, elde üretiliyor", "TEKİLLİK",
+     "Düşük yoğunluk; her ürüne kendi alanı ve kendi ışığı",
+     "Tekil kaideler · nokta aydınlatma · ürünler arası geniş aralık"],
+    ["Üretim süreci gizlenmiyor", "GÖRÜNÜRLÜK",
+     "Üretimin satış alanına açılması; arka alanın sahne olması",
+     "Camlı atölye duvarı · tezgâhın vitrine bakması · açık kuruma rafı"]
+  ];
+  const gap = 0.3, w = (FW - gap * 3) / 4;
+  ex.forEach((row, r) => {
+    const y = 4.56 + r * 1.02;
+    row.forEach((cell, j) => {
+      const x = M + j * (w + gap);
+      const isKw = j === 1;
+      rect(s, x, y, w, 0.86, { fill: isKw ? SEC : LIGHT, line: false });
+      t(s, cell, x + 0.14, y, w - 0.28, 0.86,
+        { sz: isKw ? 14 : 11, b: isKw, c: isKw ? WHITE : BODY,
+          al: isKw ? "center" : "left", va: "middle", ls: isKw ? 16 : 14 });
+      if (j < 3) arrow(s, x + w + 0.06, y + 0.43, x + w + gap - 0.06, y + 0.43,
+        { col: ACC, w: 1.1 });
+    });
+  });
+  t(s, "Mekânsal ilke ile tasarım öğesini ayırmak önemli: ilke sabittir, öğe her mekânda değişir.",
+    M, 6.7, FW, 0.3, { sz: 13, b: true, c: ACC });
+  s.addNotes("Bu iki örnek makalede de geçiyor; öğrenci kendi markası için üç zincir kuracak.");
+}
+
+/* ===================== BEŞ KELİMENİN TASARIM KARARLARI ===================== */
+{
+  const s = page("ÇEVİRİ", "Beş kelime, beş tasarım kararı",
+    "Her satır bir çeviri zinciridir. Sağdaki kolon çizime giren karardır.");
+
+  table(s, [["ANAHTAR KELİME", 2.3], ["NE ANLAMA GELİYOR", 2.5], ["MEKÂNSAL İLKE", 3.0], ["TASARIM ÖĞESİ", 3.85]], [
+    ["CESUR", "Karakterli · görünür · güçlü",
+     "Tek ve güçlü bir mekânsal jest; hiyerarşi net",
+     "Merkezî kaide · güç duvarı · yüksek kontrastlı vurgu ışığı"],
+    ["DOĞAL", "Malzemeye yakın · sıcak · yalın",
+     "Malzemenin kendisi görünür kalır; ışık doğal ışığı destekler",
+     "Boyasız yüzey · ham ahşap ve taş · sıcak renk sıcaklığı"],
+    ["SÜRDÜRÜLEBİLİR", "Uzun ömürlü · az atık · esnek",
+     "Mekân sökülebilir ve yeniden kurulabilir olmalı",
+     "Vidalı birleşim · modüler teşhir · değişebilir vitrin arkalığı"],
+    ["TEKİLLİK", "Her ürün tek · elde üretilmiş",
+     "Düşük yoğunluk; her ürüne kendi alanı ve kendi ışığı",
+     "Tekil kaide · nokta aydınlatma · ürünler arası geniş aralık"],
+    ["GÖRÜNÜRLÜK", "Üretim gizlenmiyor · süreç sahnede",
+     "Üretim satış alanına açılır; arka alan sahne olur",
+     "Camlı atölye duvarı · vitrine bakan tezgâh · açık kuruma rafı"]
+  ], 2.5, { rh: 0.68, ks: 13, cs2: 10.5 });
+
+  t(s, "Sınama sorusu: bu karar, kelimeyi bilmeyen birine de aynı şeyi anlatıyor mu?",
+    M, 6.56, FW, 0.3, { sz: 13.5, b: true, c: SEC });
+  s.addNotes("Kelime–karar ilişkisinin tek referansı bu slayt; başka yerde tekrar anlatmıyoruz.");
+}
+
+/* ===================== YOĞUNLUK ===================== */
+{
+  const s = page("ÇEVİRİ", "Yoğunluk bir mesajdır",
+    "Aynı metrekareye kaç ürün konacağı estetik değil, stratejik bir karar. Az ürün ve çok boşluk değer duygusu üretir; yoğun teşhir bolluk ve erişilebilirlik duygusu.");
+
+  spectrum(s, [
+    ["Mücevher · sanat", "birim değer yüksek; boşluk doğrudan değer anlamına gelir"],
+    ["Parfüm · sofistike moda", "seçilmiş az sayıda ürün, geniş boşluk, oturarak satış"],
+    ["Seramik · zanaat", "her parça tekil; kaide ve aralık gerekir"],
+    ["Kitap · plak", "tarama davranışı; orta yoğunluk, raf metrajı önemli"],
+    ["Giyim · ayakkabı", "beden çeşidi yoğunluk üretir; stok yakınlığı belirleyici"],
+    ["Süpermarket · indirim", "bolluk sinyali, hızlı hareket, yüksek yoğunluk"]
+  ], M, 2.92, FW, 1.5, "AZ ÜRÜN — BOŞLUK DEĞERDİR", "ÇOK ÜRÜN — BOLLUK SİNYALİDİR");
+
+  rule(s, M, 4.92, FW, "YOĞUNLUK KARARI NEYİ BELİRLER");
+  const eff = [
+    ["Hız", "Yoğun mekânda insan hızlanır, seyrek mekânda yavaşlar."],
+    ["Değer algısı", "Boşluk ürünün değerini yükseltir; yoğunluk fiyat beklentisini düşürür."],
+    ["Dokunma", "Seyrek teşhir dokunmayı davet eder; yoğun teşhir gözle taramayı."],
+    ["Depo oranı", "Yoğun teşhir satış alanında stok tutar; seyrek teşhir depo ister."]
+  ];
+  const w = (FW - 0.2 * 3) / 4;
+  eff.forEach((it, i) => {
+    const x = M + i * (w + 0.2);
+    t(s, it[0], x, 5.14, w, 0.28, { sz: 13, b: true, c: ACC });
+    t(s, it[1], x, 5.46, w, 0.8, { sz: 11, c: BODY, ls: 14.5 });
+  });
+
+  rect(s, M, 6.34, FW, 0.6, { fill: LIGHT, line: false });
+  t(s, "Markanızın ürünü bu eksende nerede duruyor? Cevap, mekânsal programın ilk sayısını verir.",
+    M + 0.24, 6.34, 11.3, 0.6, { sz: 13.5, b: true, c: ACC, va: "middle" });
+  s.addNotes("Bu slayt hem yoğunluk kararını hem de sonraki slayttaki ürün kategorilerini hazırlıyor.");
+}
+
+/* ===================== VAKA: MARKA ===================== */
+{
+  const s = page("VAKA", "Varsayımsal yerel seramik markası",
+    "Yöntemi tek bir örnek üzerinden birlikte okuyalım. Aynı markaya dönem boyunca döneceğiz.");
+
+  rule(s, M, 2.5, 7.0, "MARKA DNA'SI");
+  list(s, [
+    ["Neden varız", "Gündelik yaşama üretim ve malzeme duygusu katmak"],
+    ["İdeal", "Atölyesini müşteriye açabilen, öğreten bir dükkân olmak"],
     ["Değerler", "Yerellik · zanaat · uzun kullanım"],
     ["Kişilik", "Özenli · açık sözlü · malzemeye yakın"],
-    ["Görsel dil", "Mat yüzey · toprak tonları · elle yapılmışın izi"]
-  ], M, 2.5, 7.0, { kw: 1.5, sz: 12.5, rh: 0.62 });
+    ["Pazar konumu", "Seri üretim ev ürünleri değil; imzalı zanaat parçaları"]
+  ], M, 2.74, 7.0, { kw: 1.7, sz: 12, rh: 0.56 });
 
-  rect(s, M, 5.72, 7.0, 0.9, { fill: ACC, line: false });
-  t(s, "MARKANIN ÖZÜ", M + 0.24, 5.86, 6.5, 0.24, { sz: 9, b: true, c: "E8C9BE", cs: 2 });
-  t(s, "Gündelik yaşama üretim ve malzeme duygusu katmak", M + 0.24, 6.12, 6.5, 0.4,
-    { sz: 16, b: true, c: WHITE });
+  rule(s, M, 5.66, 7.0, "ÜRÜN VE KULLANICI");
+  t(s, "El yapımı seramik ev ve sofra ürünleri. Kentin yoğunluğu içinde yavaş ve anlamlı seçim yapmak isteyen, ürünü eline almadan karar vermeyen kullanıcı.",
+    M, 5.88, 7.0, 0.7, { sz: 12, c: BODY, ls: 16.5 });
 
-  rule(s, 8.12, 2.5, 4.43, "ARAŞTIRMADAN ÇIKAN ÜÇ KELİME", { c: ACC, lc: HAIR });
-  const kw = [["CESUR", "karakterli · görünür"], ["DOĞAL", "malzemeye yakın · yalın"],
-              ["SÜRDÜRÜLEBİLİR", "uzun ömürlü · esnek"]];
+  rule(s, 8.12, 2.5, 4.43, "ARAŞTIRMADAN ÇIKAN ÜÇ KELİME", { c: SEC, lc: HAIR });
+  const kw = [["DOĞAL", "malzeme kendini gösteriyor"],
+              ["TEKİLLİK", "her parça elde, tek tek"],
+              ["GÖRÜNÜRLÜK", "çark ve fırın gizlenmiyor"]];
   kw.forEach((k, i) => {
-    const yy = 2.72 + i * 1.02;
-    rect(s, 8.12, yy, 4.43, 0.9, { fill: LIGHT, line: false });
-    t(s, k[0], 8.36, yy + 0.14, 3.95, 0.36, { sz: 17, b: true, c: ACC, cs: 1.2 });
-    t(s, k[1], 8.36, yy + 0.52, 3.95, 0.26, { sz: 11, c: MUTED });
+    const yy = 2.74 + i * 1.02;
+    rect(s, 8.12, yy, 4.43, 0.9, { fill: i === 0 ? ACC : SEC, line: false });
+    t(s, k[0], 8.36, yy + 0.14, 3.95, 0.36, { sz: 17, b: true, c: WHITE, cs: 1.2 });
+    t(s, k[1], 8.36, yy + 0.52, 3.95, 0.26, { sz: 11, c: i === 0 ? "F0DED7" : SECT });
   });
-  t(s, "Üçü de araştırmadaki kanıta dayanıyor: ürünün malzemesi, üretim biçimi ve kullanıcının seçim nedeni.",
-    8.12, 5.86, 4.43, 0.76, { sz: 11.5, c: BODY, ls: 16 });
+  t(s, "Üçü de araştırmadaki kanıta dayanıyor: ürünün malzemesi, üretim biçimi ve kullanıcının seçim nedeni. Marka beş kelimeden bu üçünü seçti.",
+    8.12, 5.86, 4.43, 1.0, { sz: 11.5, c: BODY, ls: 16 });
   foot(s, "Vaka varsayımsaldır; öğrencinin düşünme biçimini göstermek için oluşturulmuştur.");
-  s.addNotes("Bu vakayı dönem boyunca ortak referans olarak kullanın.");
+  s.addNotes("Bu markanın kelimeleri beş örnekten üçü: DOĞAL, TEKİLLİK, GÖRÜNÜRLÜK. Başka bir marka başka üçünü seçer.");
 }
 
-/* ===================== 11 TASARIMA GEÇİŞ (toplu) ===================== */
+/* ===================== ATMOSFER ===================== */
 {
-  const s = page("10 · TASARIMA GEÇİŞ", "Kelimeden mekânsal karara",
-    "Amaç kelimeyi forma çevirmek değil, tasarım kriterine çevirmek. Aynı karar birden fazla kelimeyi taşıyabilir.");
+  const s = page("ATMOSFER", "Atmosferi ne oluşturur?",
+    "Bir mekânın atmosferinin, ürünün kendisinden bağımsız olarak satın alma kararını etkilediği fikri elli yıllıktır. Fiziksel çevre üç kanaldan etki eder.");
 
-  table(s, [["ANAHTAR KELİME", 2.4], ["NE ANLAMA GELİYOR", 2.7], ["TASARIM KRİTERİ", 2.7], ["MEKÂNDAKİ KARŞILIĞI", 3.83]], [
-    ["CESUR", "Karakterli · görünür · güçlü",
-     "Vurgu öğesi", "Tek ve belirgin bir mekânsal jest: üretim tezgâhı ya da merkezî sergileme"],
-    ["DOĞAL", "Malzemeye yakın · sıcak · yalın",
-     "Malzeme ve ışık", "Doğal doku, boyasız yüzey, gün ışığını destekleyen aydınlatma"],
-    ["SÜRDÜRÜLEBİLİR", "Uzun ömürlü · az atık · esnek",
-     "Sistem ve işletme", "Sökülebilir sergileme birimi, uyarlanabilir düzen, onarılabilir detay"]
-  ], 2.5, { rh: 1.0, ks: 14, cs2: 11.5 });
+  chain(s, [
+    ["Ortam koşulları", "ısı · ışık · ses · koku · hava kalitesi"],
+    ["Mekân ve işlev", "yerleşim · ekipman · mobilya · ölçü · dolaşım"],
+    ["İşaret ve sembol", "tabela · malzeme · dekor · anlam taşıyan öğeler"]
+  ], 2.6, 1.6, { numbered: true, gap: 0.3, hi: [0], hs: 16, bs: 11.5 });
 
-  rect(s, M, 6.0, FW, 0.66, { fill: LIGHT, line: false });
-  t(s, "Sınama sorusu: bu karar, kelimeyi bilmeyen birine de aynı şeyi anlatıyor mu?",
-    M + 0.24, 6.0, 11.3, 0.66, { sz: 14, b: true, c: ACC, va: "middle" });
-  s.addNotes("Bu slayt kelime–karar ilişkisinin tek referansı; başka slaytta tekrar anlatmıyoruz.");
+  rect(s, M, 4.44, FW, 0.62, { fill: SEC, line: false });
+  t(s, "Üçü birlikte algılanır. Biri diğerini yalanladığında insan bunu fark eder — çoğu zaman nedenini adlandıramadan.",
+    M + 0.24, 4.44, 11.3, 0.62, { sz: 14, b: true, c: WHITE, va: "middle" });
+
+  rule(s, M, 5.34, FW, "MARKA KİMLİĞİ BU ÜÇ KANALA DAĞILIR");
+  const map = [
+    ["Ortam koşulları", "Kişilik ve değerler burada hissedilir: ışığın sıcaklığı, ses düzeyi, kokunun kaynağı."],
+    ["Mekân ve işlev", "Pazar konumu ve ürün burada okunur: yoğunluk, aralık, dolaşımın hızı."],
+    ["İşaret ve sembol", "Neden varız ve ideal burada anlatılır: malzeme seçimi, anlatı, yazı dili."]
+  ];
+  const w = (FW - 0.22 * 2) / 3;
+  map.forEach((it, i) => {
+    const x = M + i * (w + 0.22);
+    t(s, it[0], x, 5.56, w, 0.28, { sz: 13, b: true, c: ACC });
+    t(s, it[1], x, 5.88, w, 0.9, { sz: 11.5, c: BODY, ls: 15 });
+  });
+  foot(s, "Kaynak: Kotler (1973), Atmospherics as a Marketing Tool; Bitner (1992), Servicescapes.");
+  s.addNotes("Atmosfer = marka kimliğinin duyulur hâli. Bu cümleyi tekrarlayın.");
 }
 
-/* ===================== 12 MÜŞTERİ YOLCULUĞU NEDİR ===================== */
 {
-  const s = page("11 · MÜŞTERİ DENEYİMİ", "Müşteri Yolculuğu Haritası nedir?",
+  const s = page("ATMOSFER", "Mekân insanı ya içeri çeker ya dışarı iter",
+    "Mekânsal uyaranlar önce bir duygu üretir, duygu da bir davranışa dönüşür. Nötr bir mekân yoktur.");
+
+  const ch = [
+    ["Mekânsal uyaran", "ışık · ses · koku · yoğunluk · malzeme"],
+    ["Duygusal tepki", "haz · uyarılma · kontrol duygusu"],
+    ["Davranış", "yaklaşma ya da kaçınma"]
+  ];
+  const gap = 0.36, w = (FW - gap * 2) / 3;
+  ch.forEach((c, i) => {
+    const x = M + i * (w + gap);
+    rect(s, x, 2.6, w, 1.1, { fill: i === 2 ? SEC : LIGHT, line: false });
+    t(s, c[0], x + 0.18, 2.78, w - 0.36, 0.32, { sz: 15, b: true, c: i === 2 ? WHITE : INK });
+    t(s, c[1], x + 0.18, 3.14, w - 0.36, 0.46, { sz: 11, c: i === 2 ? SECT : MUTED, ls: 14 });
+    if (i < 2) arrow(s, x + w + 0.06, 3.15, x + w + gap - 0.06, 3.15, { col: ACC, w: 1.4 });
+  });
+
+  const out = [
+    ["YAKLAŞMA", "Girer · kalır · dolaşır · ürüne dokunur · etkileşime geçer · geri gelir", 1],
+    ["KAÇINMA", "Girmez · kısa keser · hızla çıkar · ürüne dokunmaz", 0]
+  ];
+  const ow = (FW - 0.22) / 2;
+  out.forEach((o, i) => {
+    const x = M + i * (ow + 0.22);
+    rect(s, x, 4.1, ow, 1.12, { fill: o[2] ? ACC : LIGHT, line: false });
+    t(s, o[0], x + 0.22, 4.28, ow - 0.44, 0.28, { sz: 11, b: true, c: o[2] ? SECT : MUTED, cs: 2 });
+    t(s, o[1], x + 0.22, 4.6, ow - 0.44, 0.52, { sz: 13, c: o[2] ? WHITE : BODY, ls: 17 });
+  });
+
+  rule(s, M, 5.56, FW, "TASARIMCI İÇİN SONUÇ");
+  t(s, "Her mekân bir davranış üretir; soru bunun bilinçli mi tesadüfi mi olduğudur. Işık, ses, yoğunluk ve koku üzerinde verilmeyen her karar, yerine kendiliğinden bir karar koyar.",
+    M, 5.78, FW, 0.6, { sz: 13.5, c: BODY, ls: 19 });
+  rect(s, M, 6.44, FW, 0.5, { fill: LIGHT, line: false });
+  t(s, "Bu yüzden ilk sorulacak soru şu: bu mekân kimi içeri çağırıyor, kimi dışarıda bırakıyor?",
+    M + 0.24, 6.44, 11.3, 0.5, { sz: 13, b: true, c: ACC, va: "middle" });
+  foot(s, "Kaynak: Mehrabian & Russell (1974), An Approach to Environmental Psychology.");
+  s.addNotes("Yaklaşma–kaçınma modeli dönem boyunca kritiklerin ortak dili olacak.");
+}
+
+/* ===================== DUYULAR ===================== */
+{
+  const s = page("DUYULAR", "Duyular marka kimliğini nasıl taşır?",
+    "Atmosfer tek bir duyudan doğmaz. Duyusal etki tek tek uyaranlardan değil, uyaranların birlikte çalışmasından doğar.");
+
+  const sens = [
+    ["Görme", "ışık · renk · kontrast · görüş hattı", "Işığın düzeyi mekânın hızını belirler; rengi ürünün rengini değiştirir."],
+    ["Dokunma", "malzeme · doku · sıcaklık · ağırlık", "İnsan ürünü eline aldığında sahiplik duygusu geliştirir. İnternete karşı en güçlü duyu."],
+    ["İşitme", "akustik · müzik · sessizlik", "Karar verilen yerlerde sesin düşmesi gerekir: kabin, danışma, ödeme."],
+    ["Koklama", "koku · hafıza · kaynak", "Hafızaya en doğrudan bağlanan duyu. Kokunun kaynağı ürünün kendisi olmalı."],
+    ["Tat", "tadım · ikram", "En dar kullanım alanı, ama kullanıldığı yerde en güçlü etki."],
+    ["Beden", "ısı · hava · kot · ritim · yoğunluk", "Yoğunluk en güçlü etken: kalabalıkta insan hızlanır ve erken çıkar."]
+  ];
+  let y = 2.5;
+  sens.forEach((it, i) => {
+    rect(s, M, y, 1.7, 0.6, { fill: i === 1 ? SEC : ACC, line: false });
+    t(s, it[0], M + 0.16, y, 1.5, 0.6, { sz: 14, b: true, c: WHITE, va: "middle" });
+    t(s, it[1], M + 1.86, y, 2.9, 0.6, { sz: 10.5, b: true, c: i === 1 ? SEC : ACC, va: "middle", ls: 13 });
+    t(s, it[2], M + 4.9, y + 0.02, 6.87, 0.58, { sz: 11.5, c: BODY, va: "middle", ls: 14.5 });
+    y += 0.66;
+    if (i < 5) line(s, M, y - 0.03, R, y - 0.03, { col: HAIR, w: 0.5 });
+  });
+
+  rect(s, M, 6.54, FW, 0.44, { fill: LIGHT, line: false });
+  t(s, "Fazlası eksiği kadar sorunludur: asıl sorun duyusal yoksunluk değil, denetimsiz duyusal yüklemedir.",
+    M + 0.24, 6.54, 11.3, 0.44, { sz: 12.5, b: true, c: ACC, va: "middle" });
+  foot(s, "");
+  s.addNotes("Dokunma vurgulu: fiziksel mağazanın çevrim içine karşı en güçlü kozu.");
+}
+
+{
+  const s = page("DUYULAR", "Hangi duyu, yolculuğun hangi anında?",
+    "Duyular mekânın her yerinde aynı yoğunlukta çalışmaz. Her duyunun baskın olduğu bir an vardır.");
+
+  matrix(s, ["ÇEKİM", "EŞİK", "YÖNELME", "GEZİNME", "ETKİLEŞİM", "SATIN ALMA", "AYRILIŞ"], [
+    ["Görme", [0, 1, 2, 3], "vitrin silüeti · teşhir kontrastı"],
+    ["Beden", [1, 2, 3], "eşikte ısı · koridor genişliği"],
+    ["Koklama", [1, 4], "ilk izlenim · ürünün kendi kokusu"],
+    ["İşitme", [3, 4, 5], "genel akustik · kabinde sessizlik"],
+    ["Dokunma", [3, 4], "açık raf · deneme · tezgâh"],
+    ["Tat", [4], "tadım noktası · ikram"]
+  ], M, 2.86, { w: 8.0, lw: 1.5, ch: 0.44, nw: 3.5,
+                peak: [0, 1, 1, 4, 4, 4] });
+
+  rule(s, M, 6.2, FW, "İKİ OKUMA", { c: SEC, lc: HAIR });
+  const two = [
+    ["Koyu kutular", "duyunun devrede olduğu anlar"],
+    ["İkincil renkli kutu", "o duyunun baskın olduğu tek an — bütçe ve dikkat oraya gider"]
+  ];
+  const w = (FW - 0.3) / 2;
+  two.forEach((it, i) => {
+    const x = M + i * (w + 0.3);
+    t(s, it[0], x, 6.42, 2.1, 0.28, { sz: 12, b: true, c: i ? SEC : ACC });
+    t(s, it[1], x + 2.2, 6.42, w - 2.2, 0.46, { sz: 11, c: BODY, ls: 13.5 });
+  });
+  s.addNotes("Bu matris duyusal tasarımı mood board olmaktan çıkarıp yolculuğa bağlıyor.");
+}
+
+/* ===================== MÜŞTERİ YOLCULUĞU ===================== */
+{
+  const s = page("MÜŞTERİ DENEYİMİ", "Müşteri Yolculuğu Haritası nedir?",
     "Marka ile kullanıcının temas ettiği anları bir hikâye gibi görmemizi sağlar. Her an için dört şey yazılır.");
 
   chain(s, [
@@ -510,9 +847,8 @@ function list(s, items, x, y, w, o) {
   s.addNotes("Dört başlık öğrencinin haritasında birer satır olacak.");
 }
 
-/* ===================== 13 SEKİZ AŞAMA ===================== */
 {
-  const s = page("12 · MÜŞTERİ YOLCULUĞU", "Müşteri yolculuğunun sekiz aşaması",
+  const s = page("MÜŞTERİ YOLCULUĞU", "Müşteri yolculuğunun sekiz aşaması",
     "Kaynaktaki model bu sekiz aşamayı tanımlıyor. Ortadaki altısı doğrudan iç mekânda geçiyor.");
 
   const st = ["FARKINDALIK", "ÇEKİM", "EŞİK", "YÖNLENME", "KEŞİF", "ETKİLEŞİM", "SATIN ALMA", "AYRILIŞ"];
@@ -523,8 +859,7 @@ function list(s, items, x, y, w, o) {
     rect(s, x, 2.6, w, 1.15, { fill: core ? ACC : LIGHT, line: false });
     t(s, String(i + 1).padStart(2, "0"), x + 0.1, 2.72, w - 0.2, 0.24,
       { sz: 9, b: true, c: core ? "E8C9BE" : MUTED, cs: 1.2 });
-    t(s, x2, x + 0.1, 3.02, w - 0.2, 0.6, { sz: 11, b: true, c: core ? WHITE : MUTED,
-      al: "left", ls: 13.5 });
+    t(s, x2, x + 0.1, 3.02, w - 0.2, 0.6, { sz: 11, b: true, c: core ? WHITE : MUTED, ls: 13.5 });
   });
   line(s, M + w + gap, 3.92, M + 7 * (w + gap) - gap, 3.92, { col: ACC, w: 1.5 });
   t(s, "İç mekânda geçen altı aşama — dersin tasarım konusu", M + w + gap, 4.0, 6.0, 0.26,
@@ -532,19 +867,18 @@ function list(s, items, x, y, w, o) {
   t(s, "Mekânın dışında", M, 4.0, 1.4, 0.26, { sz: 10.5, c: MUTED });
   t(s, "Mekânın dışında", M + 7 * (w + gap), 4.0, 1.4, 0.26, { sz: 10.5, c: MUTED, al: "right" });
 
-  rule(s, M, 4.66, FW, "İÇ MİMARLIK İÇİN ASIL SORU", { c: ACC, lc: HAIR });
+  rule(s, M, 4.66, FW, "İÇ MİMARLIK İÇİN ASIL SORU", { c: SEC, lc: HAIR });
   t(s, "Bu aşamaların her biri hangi mekânsal kararla destekleniyor?", M, 4.9, FW, 0.42,
-    { sz: 20, b: true, c: INK });
-  t(s, "Farkındalık ve ayrılış pazarlamanın alanına girer; aradaki altı aşama tasarımcının kurduğu deneyimdir. Bir sonraki slayt bu altı aşamanın mekânsal karşılıklarını gösteriyor.",
+    { sz: 20, b: true, c: SEC });
+  t(s, "Farkındalık ve ayrılış pazarlamanın alanına girer; aradaki altı aşama tasarımcının kurduğu deneyimdir. Bir sonraki iki slayt bu altı aşamanın mekânsal karşılıklarını ve müşterinin içerideki davranışını gösteriyor.",
     M, 5.46, FW, 0.7, { sz: 13.5, c: BODY, ls: 19 });
   foot(s, "Kaynak: I-AM İstanbul müşteri yolculuğu modeli; Sunar Bükülmez vd. (2025), Şekil 1.");
   s.addNotes("Aşama adlarını öğrenciye yazdırın; dönem boyunca bu terimlerle konuşacağız.");
 }
 
-/* ===================== 14 İÇMİMARLIK MODÜLLERİ ===================== */
 {
-  const s = page("13 · İÇ MİMARLIK AÇISINDAN", "Mağazada hangi temasları tasarlıyoruz?",
-    "Kaynak model fiziksel mağazaya uyarlandığında yönlenme, ürün, operasyon gibi iç mimarlık gerektiren alanlar öne çıkıyor.");
+  const s = page("İÇ MİMARLIK AÇISINDAN", "Mağazada hangi temasları tasarlıyoruz?",
+    "Kaynak model fiziksel mağazaya uyarlandığında yönlenme, ürün ve operasyon gibi iç mimarlık gerektiren alanlar öne çıkıyor.");
 
   cards(s, [
     ["Çekim", "Cephe · vitrin · ilk görsel temas"],
@@ -564,21 +898,56 @@ function list(s, items, x, y, w, o) {
   s.addNotes("Operasyon vurgulu: ölçümlerde öğrencilerin en zayıf olduğu modül burası.");
 }
 
-/* ===================== 15 VAKA: YOLCULUK ===================== */
+/* ===================== İÇERİDEKİ DAVRANIŞ ===================== */
 {
-  const s = page("14 · VAKA", "Seramik markasının müşteri yolculuğu",
+  const s = page("AKIŞ VE DAVRANIŞ", "İnsan içeri girdikten sonra ne yapıyor?",
+    "Müşterinin mekândaki davranışı rastgele değil. Üç eğilim, mağaza kurgusunun başlangıç noktasıdır.");
+
+  const beh = [
+    ["Sağa yönelim", "İnsanlar girer girmez sağa yönelir. Kural değil, eğilim."],
+    ["Güç duvarı", "Sağdaki ilk büyük yüzey; en güçlü ürün buraya konur."],
+    ["Görüş hattı", "Derinlik girişten okunmalı; yoksa insan tereddüt eder."],
+    ["Geçiş bölgesi", "Girişin ardına ürün konmaz; göz uyum sağlar."]
+  ];
+  const w = (FW - 0.2 * 3) / 4;
+  beh.forEach((it, i) => {
+    const x = M + i * (w + 0.2);
+    rect(s, x, 2.5, w, 1.6, { fill: i === 1 ? SEC : LIGHT, line: false });
+    tag(s, x + 0.2, 2.7, String(i + 1).padStart(2, "0"),
+      { fill: i === 1 ? WHITE : ACC, tc: i === 1 ? SEC : WHITE, d: 0.3 });
+    t(s, it[0], x + 0.2, 3.14, w - 0.4, 0.3, { sz: 14, b: true, c: i === 1 ? WHITE : INK });
+    t(s, it[1], x + 0.2, 3.48, w - 0.4, 0.58, { sz: 10.5, c: i === 1 ? SECT : MUTED, ls: 13.5 });
+  });
+
+  rule(s, M, 4.42, FW, "DÖRT PLAN TİPİ — DAVRANIŞI FARKLI BİÇİMDE KURAR", { c: ACC, lc: HAIR });
+  chain(s, [
+    ["Izgara", "Paralel raf dizileri. Verimli ve tahmin edilebilir; keşif duygusu düşük."],
+    ["Serbest akış", "Bağımsız yerleşmiş adalar. Keşif yüksek, alan verimi düşük."],
+    ["Döngü", "Müşteriyi tüm mağazadan geçiren tek rota."],
+    ["Çapraz", "Açılı yerleşim; görüş hatlarını uzatır, ürünü sürekli yeni gösterir."]
+  ], 4.62, 1.24, { gap: 0.04, hs: 13, bs: 10 });
+
+  rule(s, M, 6.1, FW, "YÖNLENDİRMENİN İKİ KATMANI");
+  t(s, "Önce mekânsal katman çalışır: görüş hatları, ışık farkı, tavan yüksekliği, zemin malzemesi, koridor genişliği. Grafik katman — tabela, etiket — ancak bunun üstüne gelir. Tabelayla çözülmeye çalışılan her yön problemi, aslında bir kurgu problemidir.",
+    M, 6.3, FW, 0.6, { sz: 12.5, c: BODY, ls: 17 });
+  s.addNotes("Bu slayt mağaza tasarımının detayına girmeden davranış bilgisini veriyor; yeterli.");
+}
+
+/* ===================== VAKA: YOLCULUK ===================== */
+{
+  const s = page("VAKA", "Seramik markasının müşteri yolculuğu",
     "Aynı marka, yolculuğun her aşamasında başka bir mekânsal karar üretir.");
 
   const j = [
-    ["Çekim", "Seçili tek ürün ve güçlü bir ilk bakış", "CESUR"],
-    ["Eşik", "Malzeme ve ışıkla markanın ilk hissi", "DOĞAL"],
-    ["Yönlenme", "Net görüş hattı ve açık bir ana rota", "DOĞAL"],
-    ["Keşif", "Koleksiyonlara göre sakin gruplama", "SÜRDÜRÜLEBİLİR"],
-    ["Etkileşim", "Dokunma, numune ve üretim anlatısı", "CESUR"],
-    ["Satın alma", "Kolay ödeme ve dikkatli paketleme", "SÜRDÜRÜLEBİLİR"],
-    ["Ayrılış", "Ürünün hikâyesiyle birlikte çıkış", "CESUR"]
+    ["Çekim", "Vitrinde tek bir parça; arkasında çalışan çark görünüyor", "GÖRÜNÜRLÜK"],
+    ["Eşik", "Ham yüzey, mat ışık ve çamurun kokusu karşılıyor", "DOĞAL"],
+    ["Yönlenme", "Net görüş hattı; rota atölyeden tartıma doğru akıyor", "GÖRÜNÜRLÜK"],
+    ["Keşif", "Her parça kendi kaidesinde, aralarında geniş boşluk", "TEKİLLİK"],
+    ["Etkileşim", "Dokunma serbest; numune ve üretim anlatısı tezgâhta", "TEKİLLİK"],
+    ["Satın alma", "Ambalajın kendisi zanaatın parçası; paketleme görünür", "DOĞAL"],
+    ["Ayrılış", "Parçanın kim tarafından yapıldığı yazan kart", "TEKİLLİK"]
   ];
-  const cols = [["AŞAMA", 2.2], ["MEKÂNSAL KARAR", 6.2], ["HANGİ KELİMEYİ TAŞIYOR", 3.23]];
+  const cols = [["AŞAMA", 2.1], ["MEKÂNSAL KARAR", 6.3], ["HANGİ KELİMEYİ TAŞIYOR", 3.23]];
   let x = M;
   const xs = cols.map(c => { const cx = x; x += c[1] + 0.04; return cx; });
   cols.forEach((c, i) => t(s, c[0], xs[i] + (i ? 0.14 : 0), 2.5, c[1], 0.24,
@@ -591,19 +960,46 @@ function list(s, items, x, y, w, o) {
       { sz: 12, b: true, c: WHITE, va: "middle" });
     rect(s, xs[1], yy, cols[1][1], 0.46, { fill: LIGHT, line: false });
     t(s, row[1], xs[1] + 0.14, yy, cols[1][1] - 0.28, 0.46, { sz: 11.5, c: BODY, va: "middle" });
-    rect(s, xs[2], yy, cols[2][1], 0.46, { fill: LIGHT, line: false });
+    const sec2 = row[2] !== "DOĞAL";
+    rect(s, xs[2], yy, cols[2][1], 0.46, { fill: sec2 ? SECT : LIGHT, line: false });
     t(s, row[2], xs[2] + 0.14, yy, cols[2][1] - 0.28, 0.46,
-      { sz: 11, b: true, c: ACC, va: "middle", cs: 1 });
+      { sz: 11, b: true, c: sec2 ? SEC : ACC, va: "middle", cs: 1 });
   });
   t(s, "Bir aşama birden fazla kelimeyi taşıyabilir; taşımıyorsa o aşama henüz tasarlanmamıştır.",
     M, 6.46, FW, 0.3, { sz: 13.5, b: true, c: ACC });
   foot(s, "Örnek senaryo; kaynak modelin öğrenci tasarımına aktarılışını göstermek için kurulmuştur.");
-  s.addNotes("Tablodaki sağ kolon, kelime–karar ilişkisinin yolculuk üzerinde okunuşu.");
+  s.addNotes("Sağ kolon kelime–karar ilişkisinin yolculuk üzerinde okunuşu.");
+}
+
+/* ===================== MARKA KATEGORİLERİ ===================== */
+{
+  const s = page("MARKA SEÇİMİ", "Hangi tür ürün satan markaları seçebilirsiniz?",
+    "Ürünün türü mekândan istediği şeyi belirler. Aşağıdaki altı grup, ihtiyaçlarına göre ayrıldı — kendi adayınız hangi gruba giriyor?");
+
+  table(s, [["ÜRÜN GRUBU", 2.55], ["ÖRNEK MARKA TÜRLERİ", 3.4], ["MEKÂNDAN NE İSTER", 5.74]], [
+    ["Yüksek değer, az ürün", "Mücevher · saat · sanat baskısı · tekil tasarım objesi",
+     "Kilitli ve vitrinli teşhir · nokta aydınlatma · oturarak satış · güvenlik ve sigorta"],
+    ["Denenen ürün", "Giyim · ayakkabı · gözlük · şapka · takı",
+     "Deneme kabini ve ayna · oturma · stok yakınlığı · ayakkabıda büyük kutu deposu"],
+    ["Koklanan ve tadılan ürün", "Parfüm · kahve ve çay · çikolata · zeytinyağı ve baharat · sabun",
+     "Test tezgâhı · havalandırma ve koku nötrleme · lavabo · dökme satış ve kapalı stok"],
+    ["Taranan ürün", "Kitap · plak · kırtasiye ve kâğıt · tohum ve bitki",
+     "Uzun raf metrajı · kategori işaretleme · oturma · bitkide su, ışık, nem ve drenaj"],
+    ["Ağır ve hacimli ürün", "Mobilya · halı ve kilim · ev tekstili · bisiklet",
+     "Kurulu kullanım senaryosu · geniş rota · asma ve katman sistemi · mal kabul ve büyük depo"],
+    ["Üretimi görünür ürün", "Seramik · deri ve ayakkabı atölyesi · terzi · fırın · kahve kavurma",
+     "Atölye ile satışın bir arada olması · fırın, çark, tezgâh · ısı, koku ve atık · kuruma rafı"]
+  ], 2.5, { rh: 0.58, ks: 12.5, cs2: 10.5 });
+
+  rect(s, M, 6.62, FW, 0.44, { fill: SEC, line: false });
+  t(s, "Son grup bu ders için en verimlisi: üretimi görünür bir marka, TEKİLLİK ve GÖRÜNÜRLÜK kelimelerini doğrudan mekâna çevirmenize izin verir.",
+    M + 0.24, 6.62, 11.3, 0.44, { sz: 11.5, b: true, c: WHITE, va: "middle" });
+  s.addNotes("Öğrenci seçim yaparken bu tabloyu kullansın: hangi gruptaysa mekânsal programı oradan başlıyor.");
 }
 
 /* ===================== 16 SINIF ÇALIŞMASINA GEÇİŞ ===================== */
 {
-  const s = page("15 · ŞİMDİ SIRA SİZDE", "Sunumdan sınıf çalışmasına geçiyoruz",
+  const s = page("ŞİMDİ SIRA SİZDE", "Sunumdan sınıf çalışmasına geçiyoruz",
     "Konuştuğumuz çerçeveyi şimdi gerçek markalar üzerinde deneyeceğiz.");
 
   chain(s, [
@@ -636,7 +1032,7 @@ function list(s, items, x, y, w, o) {
 
 /* ===================== 17 BUGÜNKÜ ÇALIŞMA ===================== */
 {
-  const s = page("16 · BUGÜNKÜ ÇALIŞMA", "Karşılaştırma paftasında ne dolduracaksınız?",
+  const s = page("BUGÜNKÜ ÇALIŞMA", "Karşılaştırma paftasında ne dolduracaksınız?",
     "Her marka için aynı soruları kullanıyoruz; böylece seçimi araştırma üzerinden karşılaştırabiliriz.");
 
   cards(s, [
@@ -667,31 +1063,38 @@ function list(s, items, x, y, w, o) {
 
 /* ===================== 18 KAYNAKLAR ===================== */
 {
-  const s = page("17 · KAYNAKLAR", "Dersin temel kaynakları",
+  const s = page("KAYNAKLAR", "Dersin temel kaynakları",
     "Sunumun çerçevesi aşağıdaki makale ve ders izlencesinden kuruldu.");
 
   const refs = [
-    ["Sunar Bükülmez, P., Girginkaya Akdağ, S. ve Ekin, G. (2025)", "Retail Design Competencies and Customer Journey Mapping Tools: A Holistic Interior Design Studio Perspective. The International Journal of Design Education, 19(2), 25–50."],
-    ["Wheeler, A. (2017)", "Designing Brand Identity. Wiley. — Marka deneyiminin temel bileşenleri."],
+    ["Sunar Bükülmez, P., Girginkaya Akdağ, S. ve Ekin, G. (2025)", "Retail Design Competencies and Customer Journey Mapping Tools. The International Journal of Design Education, 19(2), 25–50. — Marka anahtarı ve yolculuk haritası"],
+    ["Wheeler, A. (2017)", "Designing Brand Identity. Wiley. — Marka DNA'sı ve marka deneyiminin bileşenleri"],
+    ["Kotler, P. (1973)", "Atmospherics as a Marketing Tool. Journal of Retailing, 49(4), 48–64. — Atmosfer kavramı"],
+    ["Bitner, M. J. (1992)", "Servicescapes: The Impact of Physical Surroundings. Journal of Marketing, 56(2), 57–71. — Fiziksel çevrenin üç kanalı"],
+    ["Mehrabian, A. ve Russell, J. A. (1974)", "An Approach to Environmental Psychology. MIT Press. — Yaklaşma ve kaçınma davranışı"],
+    ["Spence, C. vd. (2014)", "Store Atmospherics: A Multisensory Perspective. Psychology & Marketing, 31(7), 472–488. — Duyuların birlikte çalışması"],
+    ["Pallasmaa, J. (2005)", "The Eyes of the Skin. Wiley. [Tenin Gözleri, YEM Yayın] — Mekânın bedenle deneyimlenmesi"],
     ["Lemon, K. N. ve Verhoef, P. C. (2016)", "Understanding Customer Experience Throughout the Customer Journey. Journal of Marketing, 80(6), 69–96."],
-    ["Stein, A. ve Ramaseshan, B. (2016)", "Towards the Identification of Customer Experience Touch Point Elements. Journal of Retailing and Consumer Services, 30, 8–19."],
-    ["Stickdorn, M. vd. (2018)", "This Is Service Design Doing. O'Reilly. — Hizmet tasarımı ve yolculuk haritalama yöntemleri."],
+    ["Stein, A. ve Ramaseshan, B. (2016)", "Towards the Identification of Customer Experience Touch Point Elements. JRCS, 30, 8–19."],
+    ["Underhill, P. (2008)", "Why We Buy: The Science of Shopping. Simon & Schuster. — Mağaza içi davranış ve sağa yönelim"],
     ["Mesher, L. (2010)", "Basics Interior Design: Retail Design. AVA Publishing."],
     ["İç Mimari Tasarım III ders izlencesi (2025–2026)", "Proje kapsamı, gereklilikler ve öğrenme çıktıları."]
   ];
   refs.forEach((r, i) => {
-    const yy = 2.5 + i * 0.6;
-    rect(s, M, yy + 0.08, 0.1, 0.1, { fill: ACC, line: false });
-    t(s, r[0], M + 0.26, yy, 4.0, 0.5, { sz: 11.5, b: true, c: INK, ls: 14 });
-    t(s, r[1], M + 4.4, yy, 7.37, 0.5, { sz: 11, c: BODY, ls: 14 });
-    if (i < refs.length - 1) line(s, M + 0.26, yy + 0.5, R, yy + 0.5, { col: HAIR, w: 0.5 });
+    const col = i < 6 ? 0 : 1;
+    const yy = 2.5 + (i % 6) * 0.72;
+    const cx = M + col * 5.99;
+    rect(s, cx, yy + 0.06, 0.09, 0.09, { fill: ACC, line: false });
+    t(s, r[0], cx + 0.22, yy - 0.02, 5.56, 0.28, { sz: 10.5, b: true, c: INK, ls: 13 });
+    t(s, r[1], cx + 0.22, yy + 0.24, 5.56, 0.44, { sz: 9.5, c: BODY, ls: 12 });
   });
+  line(s, 6.39, 2.46, 6.39, 6.7, { col: HAIR, w: 0.6 });
   foot(s, "Kaynak modellerdeki diyagramlar bu sunum için yeniden çizilmiştir · doi.org/10.18848/2325-128X/CGP/v19i02/25-50");
 }
 
 /* ===================== 19 ÖDEV (en son) ===================== */
 {
-  const s = page("18 · ÖDEV", "Bir sonraki derse ne getiriyorsunuz?",
+  const s = page("ÖDEV", "Bir sonraki derse ne getiriyorsunuz?",
     "Bir sonraki derse araştırılmış ve karşılaştırılmış bir başlangıçla geliyoruz.");
 
   cards(s, [
