@@ -236,9 +236,9 @@ body.push(new Table({
     margins: { top: 130, bottom: 130, left: 200, right: 160 },
     children: [
       new Paragraph({ spacing: { after: 70 }, children: [new TextRun({
-        text: "Kritik alma zorunluluğu", font: FONT, size: 21, bold: true, color: ACC })] }),
+        text: "Kritik ve teslim zorunluluğu", font: FONT, size: 21, bold: true, color: ACC })] }),
       new Paragraph({ spacing: { after: 0, line: 270 }, children: [new TextRun({
-        text: "Her ders günü en az iki kritik almak zorunludur: biri sabah seansında (09.30–12.30), biri öğleden sonra seansında (13.30–17.30). Kritikler yürütücü tarafından kayıt altına alınır ve stüdyo süreç performansı notuna doğrudan yansır. Kritik alabilmek için o haftanın çalışmasının çizim, eskiz, maket ya da dijital çıktı olarak hazır bulundurulması gerekir; elinde işi olmayan öğrenci kritik almış sayılmaz.",
+        text: "Her ders günü en az bir kritik almak ve bir teslim yapmak zorunludur. Teslim, o hafta için takvimde belirtilen çalışmanın çizim, eskiz, maket ya da dijital çıktı olarak stüdyoda hazır bulundurulmasıdır. Elinde işi olmayan öğrenci kritik almış sayılmaz. Kritikler ve teslimler yürütücü tarafından kayıt altına alınır ve stüdyo süreç performansı notuna doğrudan yansır.",
         font: FONT, size: 19 })] })
     ]
   })]})]
@@ -277,7 +277,7 @@ body.push(BUL("Sağlık raporları yalnızca jüri teslimleri için geçerlidir;
 
 body.push(H2("7.5. Devam"));
 body.push(BUL("Öğrencinin derslerin en az %80'ine devam etmesi zorunludur."));
-body.push(BUL("Her hafta (ara jüri ve final jürisi günleri dâhil) ıslak imza alınır. İmza listesini imzalamak ve takip etmek öğrencinin sorumluluğundadır."));
+body.push(BUL("Her ders günü, biri sabah biri öğleden sonra seansında olmak üzere iki kez ıslak imza alınır (araştırma sunumu, ara jüri ve final jürisi günleri dâhil). İmza listelerini imzalamak ve takip etmek öğrencinin sorumluluğundadır."));
 body.push(BUL("Ders 09.30'da başlar ve 17.30'da biter; öğrencinin bu süre boyunca stüdyoda bulunması beklenir. Sonradan imza talepleri kabul edilmez."));
 body.push(BUL("Devamsızlık sınırını aşan öğrenci final jürisine giremez ve dersten NA ile başarısız olur."));
 
@@ -285,6 +285,7 @@ body.push(H2("7.6. Katılım"));
 body.push(BUL("Süreç temelli bir ders olduğundan öğrencinin derse aktif katılımı, gelişimin izlenmesi açısından belirleyicidir."));
 body.push(BUL("Aktif katılım, dönem sonunda verilecek stüdyo süreç performansı notunun önemli bir bölümünü oluşturur."));
 body.push(BUL("Kendi kritiğiniz dışında diğer kritikleri de dinlemeniz önemle tavsiye edilir."));
+body.push(BUL("Haftalık teslimini yapmayan öğrenci o gün için kritik almamış sayılır; bu durum süreç performansı notuna yansır."));
 body.push(BUL("Kritik alabilmek için gerekli tüm ortamların, maketlerin ve üç boyutlu görsellerin stüdyo saatinde hazır bulundurulması gerekir."));
 
 body.push(H2("7.7. Diğer hükümler"));
@@ -302,35 +303,57 @@ body.push(table([3400, 3438, 1200, 1600], [
   headRow(["Değerlendirme", "Açıklama", "Puan", "Ağırlık"], [3400, 3438, 1200, 1600]),
   new TableRow({ children: [
     cell("Araştırma Sunumu", { w: 3400, b: true }),
-    cell("5. hafta · 27 Ekim · sabah seansı", { w: 3438 }),
+    cell("5. hafta · 27 Ekim 2026", { w: 3438 }),
     cell("100", { w: 1200, al: AlignmentType.CENTER }),
-    cell("%5", { w: 1600, al: AlignmentType.CENTER, b: true })]}),
+    cell("%15", { w: 1600, al: AlignmentType.CENTER, b: true })]}),
   new TableRow({ children: [
-    cell("1. Ara Jüri", { w: 3400, b: true, fill: ZEB }),
-    cell("5. hafta · 27 Ekim · öğleden sonra seansı", { w: 3438, fill: ZEB }),
+    cell("Ara Jüri", { w: 3400, b: true, fill: ZEB }),
+    cell("10. hafta · 1 Aralık 2026", { w: 3438, fill: ZEB }),
     cell("100", { w: 1200, al: AlignmentType.CENTER, fill: ZEB }),
-    cell("%20", { w: 1600, al: AlignmentType.CENTER, b: true, fill: ZEB })]}),
+    cell("%30", { w: 1600, al: AlignmentType.CENTER, b: true, fill: ZEB })]}),
   new TableRow({ children: [
-    cell("2. Ara Jüri", { w: 3400, b: true }),
-    cell("10. hafta · 1 Aralık", { w: 3438 }),
+    cell("Final Jürisi", { w: 3400, b: true }),
+    cell("Final sınav haftası · tarih fakülte takvimiyle duyurulacak", { w: 3438 }),
     cell("100", { w: 1200, al: AlignmentType.CENTER }),
-    cell("%25", { w: 1600, al: AlignmentType.CENTER, b: true })]}),
+    cell("%40", { w: 1600, al: AlignmentType.CENTER, b: true })]}),
   new TableRow({ children: [
-    cell("Final Jürisi", { w: 3400, b: true, fill: ZEB }),
-    cell("Final sınav haftası · tarih fakülte takvimiyle duyurulacak", { w: 3438, fill: ZEB }),
+    cell("Stüdyo Süreç Performansı", { w: 3400, b: true, fill: ZEB }),
+    cell("Yarıyıl boyunca kritik ve teslim düzenliliği, katılım ve gelişim", { w: 3438, fill: ZEB }),
     cell("100", { w: 1200, al: AlignmentType.CENTER, fill: ZEB }),
-    cell("%40", { w: 1600, al: AlignmentType.CENTER, b: true, fill: ZEB })]}),
-  new TableRow({ children: [
-    cell("Stüdyo Süreç Performansı", { w: 3400, b: true }),
-    cell("Yarıyıl boyunca kritik alma düzenliliği, katılım ve gelişim", { w: 3438 }),
-    cell("100", { w: 1200, al: AlignmentType.CENTER }),
-    cell("%10", { w: 1600, al: AlignmentType.CENTER, b: true })]}),
+    cell("%15", { w: 1600, al: AlignmentType.CENTER, b: true, fill: ZEB })]}),
   new TableRow({ children: [
     cell("TOPLAM", { w: 3400, b: true, fill: "E8EBEE" }),
     cell("", { w: 3438, fill: "E8EBEE" }),
     cell("—", { w: 1200, al: AlignmentType.CENTER, fill: "E8EBEE" }),
     cell("%100", { w: 1600, al: AlignmentType.CENTER, b: true, fill: "E8EBEE" })]})
 ]));
+
+body.push(SPACE(140));
+body.push(new Table({
+  width: { size: CW, type: WidthType.DXA },
+  columnWidths: [CW],
+  borders: {
+    top:    { style: BorderStyle.SINGLE, size: 2, color: ACC },
+    left:   { style: BorderStyle.SINGLE, size: 18, color: ACC },
+    bottom: { style: BorderStyle.SINGLE, size: 2, color: ACC },
+    right:  { style: BorderStyle.SINGLE, size: 2, color: ACC },
+    insideHorizontal: { style: BorderStyle.NONE, size: 0, color: "auto" },
+    insideVertical:   { style: BorderStyle.NONE, size: 0, color: "auto" }
+  },
+  rows: [new TableRow({ children: [new TableCell({
+    width: { size: CW, type: WidthType.DXA },
+    shading: { type: ShadingType.CLEAR, fill: "F6EAE6", color: "auto" },
+    margins: { top: 130, bottom: 130, left: 200, right: 160 },
+    children: [
+      new Paragraph({ spacing: { after: 70 }, children: [new TextRun({
+        text: "Başarı koşulu", font: FONT, size: 21, bold: true, color: ACC })] }),
+      new Paragraph({ spacing: { after: 0, line: 270 }, children: [new TextRun({
+        text: "Dersten başarılı sayılmak için yarıyıl sonu başarı notunun en az 60 puan olması gerekir. 60 puan CC harf notuna karşılık gelir. Bu puanın altında kalan öğrenci, jürilere katılmış olsa dahi dersten başarısız sayılır.",
+        font: FONT, size: 19 })] })
+    ]
+  })]})]
+}));
+body.push(SPACE(140));
 
 body.push(H2("Jüri değerlendirme ölçütleri"));
 body.push(P("1. Tasarım fikri ve konsept · 2. Tasarımın geliştirilmesi · 3. Mekânsal program ve işlevsellik · 4. Mekânsal kurgu ve organizasyon · 5. Mekânın atmosferi ve kimliği · 6. Detay önerileri · 7. Görsel sunum niteliği ve yeterliliği · 8. Sözlü sunum becerisi · 9. Sürece uygunluk ve zamanlama · 10. Eksiksiz ve zamanında teslim"));
@@ -343,88 +366,78 @@ body.push(P("Dersler her salı 09.30–17.30 saatleri arasında yapılır. Sabah
 
 const CAL = [
   ["1. Hafta\n29 Eylül 2026 · Salı",
-   "Tanışma, izlence ve proje brifi",
-   ["Sabah: İzlence anlatımı, ders kuralları, proje brifi",
-    "Sabah: Teorik sunum — Marka anahtarı, kullanıcı profili ve müşteri yolculuğu",
-    "Öğleden sonra: Atölye — mağaza okuma çalışması ve grup tartışması"],
+   "Oryantasyon",
+   ["Ders akışı, izlence ve ders kuralları",
+    "Proje brifi",
+    "Teorik anlatım: marka kimliği, kullanıcı profili ve müşteri yolculuğu",
+    "Sınıf içi çalışma ve tartışma"],
    ["Üç aday marka araştırması", "A3 üç marka karşılaştırma paftası", "Teslim: 6 Ekim"]],
 
   ["2. Hafta\n6 Ekim 2026 · Salı\nMersin Marina",
-   "Alan gezisi",
-   ["Tüm gün: Mersin Marina'da yerinde inceleme; ölçü, fotoğraf, yaya akışı, çevre ve komşu birim gözlemi",
+   "Alan Gezisi",
+   ["Alanın yerinde incelenmesi: ölçü, fotoğraf, yaya akışı, yön, manzara, gün ışığı, komşu birimler",
     "Aday markaların sunumu ve marka seçimi"],
-   ["Alan analizi paftası", "Seçilen marka için marka anahtarı ve üç persona", "Teslim: 13 Ekim"]],
+   ["Alan analizi", "Marka anahtarı ve kullanıcı profili", "Teslim: 13 Ekim"]],
 
   ["3. Hafta\n13 Ekim 2026 · Salı",
-   "Alan analizi ve marka analizi",
-   ["Kritikler: alan analizi, marka anahtarı, kullanıcı profili",
-    "Kritikler: müşteri yolculuğu haritası — sekiz aşama"],
-   ["Üç anahtar kelime ve gerekçeleri", "Mekânsal program ve m² dağılımı"]],
+   "Araştırma, Analiz ve Konsept Geliştirme",
+   ["Kritikler"],
+   ["Alan analizi paftaları", "Marka anahtarı", "Kullanıcı profili", "Müşteri yolculuğu haritası"]],
 
   ["4. Hafta\n20 Ekim 2026 · Salı",
-   "Konsept geliştirme ve zoning",
-   ["Kritikler: anahtar kelime → mekânsal ilke → tasarım öğesi zinciri",
-    "Kritikler: zoning şeması, ön alan ve arka alan ilişkisi, konsept panosu"],
-   ["1. Ara Jüri paftalarının hazırlanması", "1/100 zoning planı ve kesit"]],
+   "Araştırma, Analiz ve Konsept Geliştirme",
+   ["Kritikler"],
+   ["Üç anahtar kelime ve gerekçeleri", "Mekânsal program ve m² dağılımı", "Senaryo ve konsept panosu"]],
 
   ["5. Hafta\n27 Ekim 2026 · Salı",
-   "ARAŞTIRMA SUNUMLARI ve 1. ARA JÜRİ",
-   ["Sabah: Araştırma sunumları — tüm stüdyo önünde, marka, kullanıcı ve yolculuk analizi",
-    "Öğleden sonra: 1. Ara Jüri — konsept sunumları ve değerlendirme"],
-   ["Teslim: araştırma dosyası, konsept panosu, senaryo, anahtar kelime matrisi, 1/100 zoning planı ve kesit"]],
+   "ARAŞTIRMA SUNUMLARI",
+   ["Sunumlar ve kritikler"],
+   ["Teslim: marka anahtarı, kullanıcı profili, müşteri yolculuğu haritası, senaryo, anahtar kelimeler ve konsept panosu"]],
 
   ["6. Hafta\n3 Kasım 2026 · Salı",
-   "Tasarım geliştirme I — plan kurgusu",
-   ["Kritikler: mekânsal program, dolaşım, görüş hatları",
-    "Kritikler: müşteri ve personel rotalarının ayrılması"],
-   ["1/50 plan ve en az iki kesit", "Kavramsal 3B model"]],
+   "Konsept Geliştirme / Mekânsal Yerleşim",
+   ["Kritikler"],
+   ["Program öğelerinin dağılımı", "1/100 zoning şeması", "1/50 plan ve kesitler", "Kavramsal 3B modeller"]],
 
   ["7. Hafta\n10 Kasım 2026 · Salı",
-   "Atölye — Çekim ve eşik: cephe, vitrin, giriş",
-   ["Atölye: üç mesafeden cephe okuması, vitrin tipleri, eşik ve geçiş bölgesi",
-    "Kritikler: cephe ve vitrin önerileri"],
-   ["1/50 cephe ve vitrin çalışması", "Güncellenmiş plan ve kesitler"]],
+   "Konsept Geliştirme / Mekânsal Yerleşim",
+   ["Kritikler"],
+   ["Cephe, vitrin, giriş ve eşik", "1/50 plan, kesit ve cephe", "Kavramsal 3B modeller"]],
 
   ["8. Hafta\n17 Kasım 2026 · Salı",
-   "Atölye — Organizasyonel çözüm ve ergonomi",
-   ["Atölye: kasa ve kasa arkası, depo metrekare hesabı, servis rotası, erişilebilirlik",
-    "Kritikler: arka alan çözümü"],
-   ["Gerekçelendirilmiş depo çözümü", "Güncellenmiş 1/50 set"]],
+   "Tasarım Geliştirme",
+   ["Kritikler"],
+   ["Kasa, kasa arkası, depo ve personel alanı", "Servis rotası ve dolaşım", "1/50 plan ve kesitler"]],
 
   ["9. Hafta\n24 Kasım 2026 · Salı",
-   "Tasarım geliştirme II — atmosfer ve duyular",
-   ["Kritikler: malzeme, ışık, renk, doku",
-    "Kritikler: duyu–yolculuk matrisi ve üç imza an"],
-   ["2. Ara Jüri paftalarının hazırlanması", "Malzeme paneli ve aydınlatma kurgusu"]],
+   "Tasarım Geliştirme",
+   ["Kritikler"],
+   ["1/50 plan, kesit ve cephe", "1/50 tavan ve aydınlatma planı", "Malzeme paneli", "3B görseller"]],
 
   ["10. Hafta\n1 Aralık 2026 · Salı",
-   "2. ARA JÜRİ",
-   ["Tüm gün: jüri sunumları ve değerlendirme"],
-   ["Teslim: 1/50 tam set (plan, en az iki kesit, cephe), tavan ve aydınlatma planı, malzeme paneli, yönlendirme şeması, en az üç iç mekân görseli"]],
+   "ARA JÜRİ",
+   ["Jüri sunumları ve değerlendirme"],
+   ["Teslim gereklilikleri ayrıca paylaşılacaktır"]],
 
   ["11. Hafta\n8 Aralık 2026 · Salı",
-   "Atölye — Malzeme, ışık ve duyusal katman",
-   ["Atölye: aydınlatmanın dört katmanı, malzeme seçimi, akustik ve koku",
-    "Kritikler: jüri geri bildirimlerinin revizyonu"],
-   ["Revize 1/50 set", "1/20 kısmi plan ve kesit başlangıcı"]],
+   "Tasarım Geliştirme",
+   ["Kritikler"],
+   ["Revize 1/50 set", "1/20 kısmi plan ve kesit", "Malzeme, doku, renk ve aydınlatma kararları"]],
 
   ["12. Hafta\n15 Aralık 2026 · Salı",
-   "Detay tasarımı",
-   ["Kritikler: 1/20 kısmi plan ve kesit",
-    "Kritikler: mobilya ve teşhir birimi, birleşim detayı"],
-   ["1/20 kısmi plan ve kesit", "1/10–1/5 detay çalışması"]],
+   "Detay Tasarımı",
+   ["Bireysel kritikler"],
+   ["1/20 kısmi plan ve kesit", "Mobilya ve teşhir birimi", "1/10–1/5 detaylar", "Malzeme ve birleşim"]],
 
   ["13. Hafta\n22 Aralık 2026 · Salı",
-   "Detay ve sunum kurgusu",
-   ["Kritikler: detayların tamamlanması, malzeme lejantı",
-    "Kritikler: pafta kurgusu, çizim niteliği, görselleştirme, maket"],
-   ["Final paftalarının provası", "Fiziksel maket"]],
+   "Detay Tasarımı",
+   ["Bireysel kritikler"],
+   ["1/20 plan ve kesitler", "1/10–1/5 detaylar", "3B görseller", "Malzeme, aydınlatma ve renk"]],
 
   ["14. Hafta\n29 Aralık 2026 · Salı",
-   "Tamamlama ve final provası",
-   ["Kritikler: eksiklerin tamamlanması",
-    "Sözlü sunum provası"],
-   ["Final teslim paketinin tamamlanması"]],
+   "Sunum Detayları ve Tamlık",
+   ["Bireysel kritikler"],
+   ["Final teslim paketinin tamamlanması", "Pafta kurgusu ve maket", "Sözlü sunum provası"]],
 
   ["FİNAL JÜRİSİ\nFinal sınav haftası",
    "FİNAL JÜRİSİ",
@@ -449,7 +462,7 @@ body.push(table([CW1, CW2, CW3, CW4], calRows));
 body.push(SPACE(80));
 body.push(P("* Teslim tarihleri ve saatleri ders platformunda ayrıca duyurulur. Geç teslimler kabul edilmez.",
   { sz: 17, i: true, c: "5A6270", after: 40 }));
-body.push(P("10 Kasım Atatürk'ü Anma Günü'dür; ders 09.05 töreninin ardından başlar.",
+body.push(P("Her ders günü en az bir kritik alınması ve o hafta için belirtilen teslimin yapılması zorunludur.",
   { sz: 17, i: true, c: "5A6270", after: 40 }));
 body.push(P("Telafi dersleri: gerektiğinde yürütücü tarafından düzenlenir ve duyurulur.",
   { sz: 17, i: true, c: "5A6270" }));
@@ -473,8 +486,8 @@ body.push(H1("10. Ders Kaynakları"));
 
 /* --- 11. not dönüşüm --- */
 body.push(H1("11. Not Dönüşüm Tablosu"));
-const grades = [["100–90","A"],["89–85","A−"],["84–80","B+"],["79–75","B"],["74–70","B−"],
-                ["69–65","C+"],["64–60","C"],["59–55","C−"],["54–50","D+"],["49–45","D"],["44–0","F"]];
+const grades = [["100–90","AA"],["89–80","BA"],["79–70","BB"],["69–65","CB"],["64–60","CC"],
+                ["59–55","DC"],["54–50","DD"],["49–40","FD"],["39–0","FF"]];
 const gw = [1200, 1200, 1200, 1200, 1200, 1200, 1200, 1238];
 const gRows = [];
 for (let i = 0; i < grades.length; i += 4) {
@@ -492,7 +505,10 @@ for (let i = 0; i < grades.length; i += 4) {
 }
 body.push(table([1200,1200,1200,1200,1200,1200,1200,1238], gRows));
 body.push(SPACE(60));
-body.push(P("Ders başarı notu / Harf notu karşılıkları. Ders kapsamında şüpheli bir durum oluşması hâlinde ek ölçme ve değerlendirme yöntemleri uygulanır.",
+body.push(P("Ders başarı notu / Harf notu karşılıkları.", { sz: 17, i: true, c: "5A6270", after: 40 }));
+body.push(P("Dersten başarılı sayılmak için en az 60 puan (CC) alınması zorunludur.",
+  { sz: 19, b: true, c: ACC, after: 40 }));
+body.push(P("Harf notu aralıkları üniversitenin yürürlükteki ölçme ve değerlendirme yönetmeliğine göre uygulanır. Ders kapsamında şüpheli bir durum oluşması hâlinde ek ölçme ve değerlendirme yöntemleri uygulanır.",
   { sz: 17, i: true, c: "5A6270" }));
 
 /* --- 12. akademik dürüstlük --- */
