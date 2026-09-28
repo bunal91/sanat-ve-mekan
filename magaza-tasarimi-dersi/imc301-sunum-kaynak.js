@@ -4,253 +4,243 @@ pptx.layout = "LAYOUT_WIDE";
 pptx.author = "Kapadokya Üniversitesi";
 pptx.title  = "Marka Anahtarını Okumak ve Müşteri Deneyimini Haritalamak";
 
-/* ------------------------------------------------------------- palet */
-const PAPER="FFFFFF", SAND="F5F1EA",
-      INK="14171C", BODY="4B525C", MUT="9AA2AD", FAINT="C9CEd5".toUpperCase(),
-      TEAL="0F3D3E", TEAL2="3C6E6A", CORAL="E4572E", CORAL2="F2B8A2",
-      WHITE="FFFFFF";
-const F="Georgia";
-const M=0.82, R=12.51, FW=R-M;
+/* -------- palet: kullanıcının hazırladığı 01 numaralı slayttan ölçüldü */
+const BG="F6F4EF", BLACK="000000", INK="222220", BODY="49423F", MUT="776B63",
+      ACC="9E6048", ACCT="EDDFD8", FAINT="D4CCC4", WHITE="FFFFFF", HOLLOW="C9C2BA";
+const F="Calibri";
+const M=0.96, RM=12.56, CW=RM-M;
+const D=0.19;                       /* nokta çapı */
 let n=0;
 
-function slide(bg){ const s=pptx.addSlide(); s.background={color:bg||PAPER}; return s; }
-
+function slide(){ const s=pptx.addSlide(); s.background={color:BG}; return s; }
 function t(s,str,x,y,w,h,o){
   o=o||{};
   s.addText(str,{x,y,w,h,isTextBox:true,fontFace:F,
-    fontSize:o.sz||11, bold:!!o.b, italic:!!o.i, color:o.c||BODY,
+    fontSize:o.sz||12, bold:!!o.b, italic:!!o.i, color:o.c||BODY,
     align:o.al||"left", valign:o.va||"top", charSpacing:o.ls||0,
     lineSpacing:o.lh, margin:0, wrap:o.wrap===false?false:true});
 }
-function dot(s,cx,cy,d,o){
-  o=o||{}; const c=o.c||CORAL;
+/* tam kenardan kenara yatay çizgi */
+function rule(s,y,o){ o=o||{};
+  s.addShape("line",{x:o.x0===undefined?0:o.x0, y:y,
+    w:(o.x1===undefined?13.333:o.x1)-(o.x0===undefined?0:o.x0), h:0,
+    line:{color:o.c||BLACK,width:o.w||1.5}});
+}
+function drop(s,x,y1,y2,o){ o=o||{};
+  s.addShape("line",{x:x,y:y1,w:0,h:y2-y1,line:{color:o.c||BLACK,width:o.w||1.5}});
+}
+function node(s,cx,cy,o){ o=o||{}; const d=o.d||D, c=o.c||BLACK;
   s.addShape("ellipse",{x:cx-d/2,y:cy-d/2,w:d,h:d,
-    fill:o.hollow?{type:"none"}:{color:c}, line:{color:c,width:o.lw||1}});
+    fill:o.hollow?{color:BG}:{color:c}, line:{color:c,width:o.lw||1.5}});
 }
-function axis(s,x1,y,x2,o){ o=o||{};
-  s.addShape("line",{x:x1,y:y,w:x2-x1,h:0,line:{color:o.c||FAINT,width:o.w||1}});
+function fill(s,x,y,w,h,c){
+  s.addShape("rect",{x,y,w,h,fill:{color:c||ACC},line:{color:c||ACC,width:0.5}});
 }
-function kick(s,str,x,y,c){ t(s,str.toUpperCase(),x||M,y||0.50,7.5,0.24,
-  {sz:8.5,c:c||CORAL,ls:2.4,b:true}); }
-function num(s){ t(s,String(n).padStart(2,"0"),R-0.7,6.94,0.7,0.26,
-  {sz:8.5,c:FAINT,al:"right",ls:1.4,b:true}); }
-
-/* başlık üstte — içerik altta akar */
-function pTop(kicker,title,lead,o){
-  o=o||{}; n++; const s=slide(o.bg);
-  kick(s,kicker,M,0.50,o.kc);
-  t(s,title,M,0.78,o.tw||FW*0.82,0.62,{sz:o.ts||34,c:o.tc||INK});
-  if(lead) t(s,lead,M,1.46,FW*0.74,0.5,{sz:13.5,i:true,c:o.lc||TEAL2,lh:18});
-  num(s); return s;
+/* terrakota etiket — büyük harf değil, başlık düzeni */
+function label(s,str,x,y,w,o){ o=o||{}; t(s,str,x,y,w||3.2,0.28,{sz:o.sz||14,b:true,c:o.c||ACC}); }
+/* dikey liste — her madde kendi satırında */
+function vlist(s,items,x,y,w,o){ o=o||{};
+  items.forEach(function(it,i){
+    t(s,it,x,y+i*(o.pitch||0.245),w,0.3,{sz:o.sz||12.5,c:o.c||BODY,lh:o.lh||17});
+  });
 }
-/* başlık solda dikey — içerik sağda */
-function pSide(kicker,title,lead,o){
-  o=o||{}; n++; const s=slide(o.bg);
-  kick(s,kicker,M,0.50,o.kc);
-  t(s,title,M,1.24,3.35,1.8,{sz:32,c:o.tc||INK,lh:37});
-  if(lead) t(s,lead,M,3.30,3.35,1.6,{sz:12.5,i:true,c:o.lc||TEAL2,lh:17});
-  num(s); return s;
+function page(title,lead){
+  n++; const s=slide();
+  t(s,title,M,0.70,CW,0.52,{sz:28,b:true,c:INK});
+  t(s,String(n).padStart(2,"0"),11.9,0.46,0.66,0.26,{sz:10,c:FAINT,al:"right",b:true});
+  if(lead) t(s,lead,M,1.28,CW*0.80,0.5,{sz:14,c:MUT,lh:19});
+  return s;
 }
-const CX=4.62, CW=R-CX;   /* pSide içerik sütunu */
-/* ============================================================ 01 KAPAK */
+/* yatay çizgi üzerinde düğümler + altında metin */
+function hrow(s,y,xs,items,o){
+  o=o||{}; rule(s,y);
+  items.forEach(function(it,i){
+    const x=xs[i], hi=(o.hi===i);
+    node(s,x,y,{hollow:o.hollowIdx&&o.hollowIdx.indexOf(i)>=0});
+    const tx=x-0.06, w=o.w||2.6;
+    if(hi){ fill(s,x-0.15,y+0.02,o.hw||2.79,o.hh||1.14);
+      t(s,it[0],tx+0.05,y+0.16,(o.hw||2.79)-0.3,0.3,{sz:15,b:true,c:WHITE});
+      t(s,it[1],tx+0.05,y+0.46,(o.hw||2.79)-0.3,0.66,{sz:12,c:ACCT,lh:16});
+    } else {
+      t(s,it[0],tx,y+0.16,w,0.3,{sz:15,b:true,c:INK});
+      t(s,it[1],tx,y+0.46,w,0.9,{sz:12,c:MUT,lh:16});
+    }
+  });
+}
+/* dikey çizgi üzerinde düğümler */
+function vrow(s,x,y0,items,o){
+  o=o||{}; const p=o.pitch||0.74;
+  drop(s,x,y0-0.22,y0+(items.length-1)*p+0.30);
+  items.forEach(function(it,i){
+    node(s,x,y0+i*p,{hollow:o.hollowIdx&&o.hollowIdx.indexOf(i)>=0});
+  });
+}
+/* ======================================================== KAPAK (numarasız) */
 (function(){
-  n++; const s=slide(TEAL);
-  t(s,"Marka Anahtarını Okumak",M,2.30,11.3,0.82,{sz:44,c:WHITE});
-  t(s,"ve Müşteri Deneyimini Haritalamak",M,3.10,11.4,0.82,{sz:44,c:CORAL2});
-  const ws=["MARKA","KULLANICI","DENEYİM","MEKÂN"];
-  let x=M;
+  const s=slide();
+  t(s,"Marka Anahtarını Okumak",M,1.52,11.6,0.72,{sz:44,b:true,c:INK});
+  t(s,"ve Müşteri Deneyimini Haritalamak",M,2.26,11.6,0.72,{sz:44,b:true,c:ACC});
+  const y=4.30; rule(s,y);
+  const ws=[["MARKA"],["KULLANICI"],["DENEYİM"],["MEKÂN"]];
+  const xs=[1.04,4.06,7.04,9.92];
   ws.forEach(function(w,i){
-    const bw=w.length*0.125+0.20;
-    dot(s,x+0.05,4.94,0.09,{c:i===3?CORAL:TEAL2});
-    t(s,w,x+0.26,4.82,bw,0.3,{sz:10.5,c:i===3?CORAL:"9DB3AF",ls:2.6,b:true});
-    x+=0.26+bw+0.62;
+    node(s,xs[i],y);
+    t(s,w[0],xs[i]-0.06,y+0.18,2.6,0.3,{sz:15,b:true,c:i===3?ACC:INK,ls:1.2});
   });
-  t(s,"İç Mimari Proje III  ·  Birinci ders",M,6.42,6,0.3,{sz:10.5,c:"6E8F8B",i:true});
+  t(s,"İç Mimari Proje III  ·  Birinci ders",M,6.40,6,0.3,{sz:13,c:MUT});
 })();
 
-/* ================================================= 02 MARKADAN MEKÂNA */
+/* ================================================== 01 MARKADAN MEKÂNA */
 (function(){
-  const s=pTop("Markadan mekâna","Markadan Mekâna");
-  const it=[["01","Marka kimliği","Markayı araştırmak ve kimliğini çözümlemek."],
-    ["02","Kullanıcı","Kullanıcının ihtiyaç, değer ve davranışlarını anlamak."],
-    ["03","Deneyim","Etkileşim, duyular, teknoloji ve müşteri yolculuğunu tasarlamak."],
-    ["04","Mekân","Kimliği atmosfer, malzeme, ışık ve mekânsal kurguya çevirmek."]];
-  it.forEach(function(r,i){
-    const x=M+i*2.72, y=1.82+i*0.52;
-    t(s,r[0],x,y,0.7,0.36,{sz:22,c:i===3?CORAL:CORAL2});
-    t(s,r[1],x,y+0.40,2.5,0.34,{sz:16,c:i===3?CORAL:INK});
-    t(s,r[2],x,y+0.76,2.5,0.9,{sz:10.5,c:MUT,lh:14});
-  });
-  t(s,"İŞLEVLER",M,5.34,2.4,0.26,{sz:8.5,c:TEAL,ls:2.4,b:true});
-  t(s,"Vitrin ve sergileme · giriş ve eşik · dolaşım · deneyim alanı · bilgi ve tanıtım · satış ve kasa · depolama ve stok · personel",
-    M,5.62,FW,0.5,{sz:13,c:BODY,lh:19});
-  t(s,"TASARIM KAPSAMI",M,6.24,2.8,0.26,{sz:8.5,c:TEAL,ls:2.4,b:true});
-  t(s,"Atmosfer · kimlik · malzeme · ışık · renk · doku · mobilya · duyusal nitelikler",
-    M,6.52,FW,0.5,{sz:13,c:BODY,lh:19});
+  const s=page("Markadan mekâna");
+  const y=2.12, xs=[1.04,4.06,7.04,9.92];
+  hrow(s,y,xs,[
+    ["Marka kimliği","Markayı araştırmak ve kimliğini çözümlemek."],
+    ["Kullanıcı","Kullanıcının ihtiyaç, değer ve davranışlarını anlamak."],
+    ["Deneyim","Etkileşim, duyular, teknoloji ve müşteri yolculuğunu tasarlamak."],
+    ["Mekân","Kimliği atmosfer, malzeme, ışık ve mekânsal kurguya çevirmek."]],
+    {hi:3,w:2.7});
+  drop(s,xs[3],2.03,4.23);
+  label(s,"İşlevler",xs[3]-0.02,4.02,3.0);
+  vlist(s,["vitrin ve sergileme","giriş ve eşik","dolaşım","deneyim alanı",
+    "bilgi ve tanıtım","satış ve kasa","depolama ve stok","personel"],xs[3]+0.07,4.38,2.5);
+  label(s,"Tasarım kapsamı",M,5.86,3.0);
+  vlist(s,["atmosfer","kimlik","malzeme","ışık"],M,6.22,2.0);
+  vlist(s,["renk","doku","mobilya","duyusal nitelikler"],M+2.2,6.22,2.4);
 })();
 
-/* ============================================== 03 ALTI YETKİNLİK */
+/* ================================================ 02 ALTI YETKİNLİK */
 (function(){
-  const s=pTop("Markadan mekâna","Markadan Mekâna","tasarımın gerekçelendirilebilir olması");
-  const it=[["01","Marka analizi","Markanın misyonunu, değerlerini, ürünlerini ve kimliğini araştırmak."],
-    ["02","Kullanıcı odağı","Kullanıcı profilini ihtiyaç, değer ve davranışlarıyla anlamak."],
-    ["03","Deneyim ve duyular","Mekânı görme, dokunma, işitme, koku ve hareket üzerinden düşünmek."],
-    ["04","Teknoloji entegrasyonu","Fiziksel ve dijital temasları deneyimi destekleyecek biçimde kurmak."],
-    ["05","Mekânsal kimlik","Kimliği atmosfer, malzeme, ışık, renk, doku ve kurguya çevirmek."],
-    ["06","Uygulanabilirlik","Ergonomi, operasyon, depolama, dolaşım ve detay kararlarını gözetmek."]];
-  it.forEach(function(r,i){
-    const c=i%3, rr=Math.floor(i/3);
-    const x=M+c*3.86+rr*0.62, y=2.36+rr*2.06+c*0.24;
-    t(s,r[0],x,y,0.7,0.3,{sz:15,c:CORAL,ls:1.2});
-    t(s,r[1],x,y+0.30,3.3,0.66,{sz:17,c:INK,lh:21});
-    t(s,r[2],x,y+1.02,3.3,0.9,{sz:10.5,c:MUT,lh:14});
-  });
+  const s=page("Markadan mekâna","tasarımın gerekçelendirilebilir olması");
+  const xs=[1.04,4.62,8.20];
+  hrow(s,2.34,xs,[
+    ["Marka analizi","Markanın misyonunu, değerlerini, ürünlerini ve kimliğini araştırmak."],
+    ["Kullanıcı odağı","Kullanıcı profilini ihtiyaç, değer ve davranışlarıyla anlamak."],
+    ["Deneyim ve duyular","Mekânı görme, dokunma, işitme, koku ve hareket üzerinden düşünmek."]],
+    {w:3.2});
+  hrow(s,4.62,xs,[
+    ["Teknoloji entegrasyonu","Fiziksel ve dijital temasları deneyimi destekleyecek biçimde kurmak."],
+    ["Mekânsal kimlik","Kimliği atmosfer, malzeme, ışık, renk, doku ve kurguya çevirmek."],
+    ["Uygulanabilirlik","Ergonomi, operasyon, depolama, dolaşım ve detay kararlarını gözetmek."]],
+    {w:3.2});
 })();
 
-/* =================================================== 04 MARKA DNA'SI */
+/* ==================================================== 03 MARKA DNA'SI */
 (function(){
-  const s=pSide("Marka analizi","Marka DNA’sı",
-    "Markanın kimliğini çözümlemek ve onu mekânsal bir dile çevirmek.");
-  t(s,"Marka bir vaadin\ntutarlı biçimde\ntekrarlanmasıdır.",CX,1.22,CW,1.7,{sz:27,c:TEAL,lh:34});
-  t(s,"DIŞARIDAN GELEN  ·  markanın bağlamı",CX,3.20,CW,0.26,{sz:8.5,c:CORAL,ls:2.2,b:true});
-  const a=[["Rekabet","Başka hangi seçenekler var?"],
-           ["Hedef kullanıcı","Kime sesleniyor?"],["Amaçlar","Neyi başarmak istiyor?"]];
-  a.forEach(function(r,i){
-    const x=CX+i*2.66;
-    t(s,r[0],x,3.52,2.4,0.3,{sz:14,c:INK});
-    t(s,r[1],x,3.84,2.4,0.44,{sz:10.5,c:MUT,lh:13});
-  });
-  t(s,"KENDİ KURDUĞU  ·  markanın ifadesi",CX,4.54,CW,0.26,{sz:8.5,c:CORAL,ls:2.2,b:true});
-  const b=[["Misyon","Var olma nedeni"],["Değerler","Neye inanıyor?"],
-           ["Faydalar","İşlevsel ve duygusal olarak ne sunuyor?"],
-           ["Kişilik","Bir insan olsaydı nasıl biri olurdu?"],
-           ["Görsel dil","Renk · biçim · malzeme · görüntü"],
-           ["İletişim tonu","Nasıl konuşuyor?"]];
-  b.forEach(function(r,i){
-    const c=i%3, rr=Math.floor(i/3);
-    const x=CX+c*2.66, y=4.86+rr*0.96;
-    t(s,r[0],x,y,2.4,0.3,{sz:13,c:TEAL});
-    t(s,r[1],x,y+0.30,2.4,0.58,{sz:10,c:MUT,lh:13});
-  });
+  const s=page("Marka DNA’sı","Markanın kimliğini çözümlemek ve onu mekânsal bir dile çevirmek.");
+  t(s,"Marka bir vaadin tutarlı biçimde tekrarlanmasıdır.",M,1.76,11.2,0.44,{sz:22,b:true,c:ACC});
+  label(s,"Markanın bağlamı — dışarıdan gelen",M,2.60,5.4);
+  const x3=[1.04,4.86,8.68];
+  hrow(s,3.06,x3,[["Rekabet","Başka hangi seçenekler var?"],
+    ["Hedef kullanıcı","Kime sesleniyor?"],["Amaçlar","Neyi başarmak istiyor?"]],{w:3.4});
+  label(s,"Markanın ifadesi — kendi kurduğu",M,4.30,5.4);
+  const x6=[1.04,2.96,4.88,6.80,8.72,10.64];
+  hrow(s,4.76,x6,[["Misyon","Var olma nedeni"],["Değerler","Neye inanıyor?"],
+    ["Faydalar","İşlevsel ve duygusal olarak ne sunuyor?"],
+    ["Kişilik","Bir insan olsaydı nasıl biri olurdu?"],
+    ["Görsel dil","Renk · biçim · malzeme · görüntü"],
+    ["İletişim tonu","Nasıl konuşuyor?"]],{w:1.78});
   t(s,"Kaynak: Sunar Bükülmez, Girginkaya Akdağ ve Ekin (2025), Marka Anahtarı Analizi aracı (I-AM İstanbul).",
-    M,6.94,8.6,0.3,{sz:8.5,c:MUT,i:true});
+    M,6.90,9.6,0.3,{sz:11,c:MUT});
 })();
-/* ================================================= 05 MARKA KİMLİĞİ */
+/* ================================================== 04 MARKA KİMLİĞİ */
 (function(){
-  const s=pTop("Araştırma","Marka Kimliği",
-    "Araştırmanın amacı aynı anlamı farklı kanıtlarda görebilmek.");
-  const it=[["01","Web sitesi","Misyon · ürün dili · değerler"],
-    ["02","Sosyal medya","Görsel dil · iletişim · kullanıcı"],
-    ["03","Ürün","Malzeme · biçim · fiyat · kullanım"],
-    ["04","Kullanıcı yorumları","Beklenti · memnuniyet · sorunlar"],
-    ["05","Rakipler","Farklılaşma · konum · fırsat"],
-    ["06","Gözlem","Gerçek davranış · temas · bağlam"]];
-  it.forEach(function(r,i){
-    const c=i%3, rr=Math.floor(i/3);
-    const x=M+c*3.86+rr*0.58, y=2.30+rr*1.98+c*0.26;
-    t(s,r[0],x,y,0.7,0.3,{sz:15,c:i===5?CORAL:CORAL2,ls:1.2});
-    t(s,r[1],x,y+0.30,3.3,0.62,{sz:17,c:i===5?CORAL:INK,lh:21});
-    t(s,r[2],x,y+0.96,3.3,0.5,{sz:10.5,c:MUT,lh:14});
-  });
+  const s=page("Marka kimliği","Araştırmanın amacı aynı anlamı farklı kanıtlarda görebilmek.");
+  const xs=[1.04,4.62,8.20];
+  hrow(s,2.34,xs,[["Web sitesi","Misyon · ürün dili · değerler"],
+    ["Sosyal medya","Görsel dil · iletişim · kullanıcı"],
+    ["Ürün","Malzeme · biçim · fiyat · kullanım"]],{w:3.2});
+  hrow(s,4.44,xs,[["Kullanıcı yorumları","Beklenti · memnuniyet · sorunlar"],
+    ["Rakipler","Farklılaşma · konum · fırsat"],
+    ["Gözlem","Gerçek davranış · temas · bağlam"]],{w:3.2,hi:2,hw:3.4,hh:1.0});
   t(s,"Kaynak: Sunar Bükülmez vd. (2025), marka analizi ve kullanıcı profili bölümleri.",
-    M,6.94,8.6,0.3,{sz:8.5,c:MUT,i:true});
+    M,6.90,9.6,0.3,{sz:11,c:MUT});
 })();
 
-/* ============================================== 06 KULLANICI PROFİLİ */
+/* ================================================ 05 KULLANICI PROFİLİ */
 (function(){
-  const s=pTop("Kullanıcı","Kullanıcı Profili",
-    "Davranışı okunabilen kullanıcı, mekânsal karar üretir.");
-  const it=[["Kim?","Yaş · yaşam biçimi · sosyo-ekonomik bağlam"],
+  const s=page("Kullanıcı profili","Davranışı okunabilen kullanıcı, mekânsal karar üretir.");
+  const xs=[1.04,4.62,8.20];
+  hrow(s,2.34,xs,[["Kim?","Yaş · yaşam biçimi · sosyo-ekonomik bağlam"],
     ["Neye değer veriyor?","Değerler · öncelikler · inançlar"],
-    ["Neye ihtiyacı var?","İşlevsel ve duygusal ihtiyaçlar"],
-    ["Nasıl davranıyor?","Arıyor · karşılaştırıyor · seçiyor · bekliyor"],
+    ["Neye ihtiyacı var?","İşlevsel ve duygusal ihtiyaçlar"]],{w:3.2});
+  hrow(s,4.44,xs,[["Nasıl davranıyor?","Arıyor · karşılaştırıyor · seçiyor · bekliyor"],
     ["Ne hissediyor?","Merak · güven · huzursuzluk · aidiyet"],
-    ["Ne bekliyor?","Hız · keşif · kişisellik · kolaylık"]];
-  it.forEach(function(r,i){
-    const c=i%2, rr=Math.floor(i/2);
-    const x=M+c*6.0+rr*0.46, y=2.36+rr*1.42+c*0.32;
-    dot(s,x+0.06,y+0.19,0.10,{c:CORAL});
-    t(s,r[0],x+0.34,y,5.0,0.4,{sz:21,c:INK});
-    t(s,r[1],x+0.34,y+0.46,5.0,0.4,{sz:11.5,c:MUT,lh:15});
-  });
+    ["Ne bekliyor?","Hız · keşif · kişisellik · kolaylık"]],{w:3.2,hi:0,hw:3.4,hh:1.0});
+  t(s,"Kaynak: Sunar Bükülmez vd. (2025), kullanıcı profili ve persona yaklaşımı.",
+    M,6.90,9.6,0.3,{sz:11,c:MUT});
 })();
 
-/* ========================================== 07 ANAHTAR KELİME · YÖNTEM */
+/* ======================================= 06 ANAHTAR KELİME · YÖNTEM */
 (function(){
-  const s=pTop("Sentez","Anahtar Kelime","Markanın analizini tasarım kararına bağlar.");
-  const st=[["01","Kaynaklar","Markanın kendi ürettiği her şey: metinler, ambalaj, sosyal medya dili, müşteri yorumları, görüşme, rakiplerin dili"],
-    ["02","Ham kelime havuzu","Otuz–elli kelime. Sıfat, fiil ve nesne adı; hepsini yaz, hiçbirini eleme, tekrar edenleri işaretle"],
-    ["03","Gruplama ve eleme","Eş anlamlıları birleştir, kümele; markaya özgü olmayanları at: kaliteli, modern, özel"],
-    ["04","Üç anahtar kelime","Özgül · kanıtlı · mekânda karşılığı kurulabilir"]];
-  st.forEach(function(r,i){
-    const x=M+i*2.78, y=2.10+i*0.46;
-    t(s,r[0],x,y,0.7,0.3,{sz:15,c:i===3?CORAL:CORAL2,ls:1.2});
-    t(s,r[1],x,y+0.30,2.5,0.62,{sz:17,c:i===3?CORAL:INK,lh:21});
-    t(s,r[2],x,y+0.96,2.5,1.1,{sz:10.5,c:MUT,lh:14});
-  });
-  t(s,"ÜÇ KELİMENİN SINAVI",M,5.72,3.4,0.26,{sz:8.5,c:TEAL,ls:2.2,b:true});
-  ["Her markaya uyacak kadar genel olmamalı.","Araştırmada karşılığı bulunmalı.",
-   "Mekânda somut bir karşılığı kurulabilmeli."].forEach(function(r,i){
-    t(s,r,M+i*0.48,6.06+i*0.38,FW-2,0.34,{sz:13.5,c:TEAL});
-  });
+  const s=page("Anahtar kelime","Markanın analizini tasarım kararına bağlar.");
+  const y=2.34, xs=[1.04,4.06,7.04,9.92];
+  hrow(s,y,xs,[
+    ["Kaynaklar","Markanın kendi ürettiği her şey: metinler, ambalaj, sosyal medya dili, müşteri yorumları, görüşme, rakiplerin dili"],
+    ["Ham kelime havuzu","Otuz–elli kelime. Sıfat, fiil ve nesne adı; hepsini yaz, hiçbirini eleme, tekrar edenleri işaretle"],
+    ["Gruplama ve eleme","Eş anlamlıları birleştir, kümele; markaya özgü olmayanları at: kaliteli, modern, özel"],
+    ["Üç anahtar kelime","Özgül · kanıtlı · mekânda karşılığı kurulabilir"]],
+    {hi:3,w:2.7,hh:1.30});
+  drop(s,xs[3],y-0.09,4.42);
+  label(s,"Üç kelimenin sınavı",xs[3]-0.02,4.20,3.0);
+  vlist(s,["Her markaya uyacak kadar","genel olmamalı.","",
+    "Araştırmada karşılığı","bulunmalı.","",
+    "Mekânda somut bir karşılığı","kurulabilmeli."],xs[3]+0.07,4.56,2.6,{sz:13,c:INK,pitch:0.26});
 })();
 
-/* =================================== zincir (08–10 ortak, çizgisiz) */
+/* ==================================== zincir (07–09 ortak dört adım) */
 function zincir(s,y,hi){
-  const st=[["01","Marka özelliği","araştırmada bulunan somut olgu"],
-            ["02","Anahtar kelime","o olgunun tek sıfata indirgenmesi"],
-            ["03","Mekânsal ilke","sayısız çözüme açık genel kural"],
-            ["04","Tasarım öğesi","çizilebilir, ölçülebilir karar"]];
-  st.forEach(function(r,i){
-    const x=M+i*2.92, on=(hi===i);
-    t(s,r[0],x,y,0.6,0.24,{sz:9,c:on?CORAL:FAINT,ls:1.6,b:true});
-    t(s,r[1],x,y+0.24,2.6,0.34,{sz:15,c:on?CORAL:INK});
-    t(s,r[2],x,y+0.60,2.6,0.5,{sz:10,c:MUT,lh:13});
-    if(i<3) dot(s,x+2.72,y+0.40,0.075,{c:FAINT});
-  });
+  const xs=[1.04,4.06,7.04,9.92];
+  hrow(s,y,xs,[["Marka özelliği","araştırmada bulunan somut olgu"],
+    ["Anahtar kelime","o olgunun tek sıfata indirgenmesi"],
+    ["Mekânsal ilke","sayısız çözüme açık genel kural"],
+    ["Tasarım öğesi","çizilebilir, ölçülebilir karar"]],
+    {w:2.7,hi:hi,hw:2.79,hh:0.96});
+  return xs;
 }
 
-/* ========================================= 08 VAKA · MARKANIN PROFİLİ */
+/* ======================================= 07 VAKA · MARKANIN PROFİLİ */
 (function(){
-  const s=pTop("Sentez","Anahtar Kelime",
+  const s=page("Anahtar kelime",
     "Örnek vaka: yerel bir seramik markası — el yapımı seramik ev ve sofra ürünleri.");
   zincir(s,2.20);
+  label(s,"Markanın profili",M,3.62,3.0);
   const rows=[["Neden varız","Gündelik yaşama üretim ve malzeme duygusu katmak"],
     ["İdeal","Atölyesini müşteriye açabilen, öğreten bir dükkân olmak"],
     ["Değerler","Yerellik · zanaat · doğaya saygı"],
     ["Kişilik","Özenli · açık sözlü · malzemeye yakın"],
     ["Pazar konumu","Seri üretim ev ürünleri değil; imzalı zanaat parçaları"],
     ["Kullanıcı profili","Kentin yoğunluğu içinde yavaş ve anlamlı seçim yapmak isteyen, ürünü eline almadan karar vermeyen kullanıcı"]];
-  t(s,"MARKANIN PROFİLİ",M,3.70,3.0,0.26,{sz:8.5,c:CORAL,ls:2.2,b:true});
   rows.forEach(function(r,i){
-    const y=4.04+i*0.46;
-    t(s,r[0],M,y,2.4,0.34,{sz:12.5,c:TEAL});
-    t(s,r[1],M+2.6,y,FW-2.6,0.46,{sz:12.5,c:BODY,lh:16});
+    const y=4.06+i*0.50;
+    t(s,r[0],M,y,2.5,0.32,{sz:13.5,b:true,c:INK});
+    t(s,r[1],M+2.7,y,CW-2.7,0.46,{sz:13.5,c:BODY,lh:18});
   });
 })();
 
-/* ================================== 09 BEŞ ANAHTAR KELİME · tam renk */
+/* ============================================ 08 BEŞ ANAHTAR KELİME */
 (function(){
-  n++; const s=slide(TEAL);
-  kick(s,"Sentez",M,0.50,CORAL2);
-  t(s,"Bu markadan çıkan beş kelime",M,0.78,FW,0.6,{sz:34,c:WHITE});
-  t(s,"Örnek vaka: yerel bir seramik markası — el yapımı seramik ev ve sofra ürünleri.",
-    M,1.48,FW*0.8,0.4,{sz:13.5,i:true,c:"9DB3AF"});
+  const s=page("Bu markadan çıkan beş kelime",
+    "Örnek vaka: yerel bir seramik markası — el yapımı seramik ev ve sofra ürünleri.");
+  const X=1.12, y0=2.34, P=0.92;
   const ws=[["CESUR","karakterli · görünür · güçlü"],
     ["DOĞAL","malzemeye yakın · sıcak · yalın"],
     ["SÜRDÜRÜLEBİLİR","uzun ömürlü · az atık · esnek"],
     ["TEKİLLİK","her ürün tek · elde üretilmiş"],
     ["GÖRÜNÜRLÜK","üretim gizlenmiyor · süreç sahnede"]];
+  vrow(s,X,y0,ws,{pitch:P});
   ws.forEach(function(r,i){
-    const x=M+i*0.72, y=2.08+i*0.90;
-    t(s,r[0],x,y,7.2,0.48,{sz:28,c:i%2?CORAL2:WHITE,ls:1.2});
-    t(s,r[1],x,y+0.50,6.4,0.3,{sz:11,c:"8FA8A5"});
+    const y=y0+i*P;
+    t(s,r[0],X+0.42,y-0.24,5.4,0.44,{sz:26,b:true,c:i%2?ACC:INK,ls:0.8});
+    t(s,r[1],X+0.42,y+0.20,5.4,0.3,{sz:13,c:MUT});
   });
-  t(s,String(n).padStart(2,"0"),R-0.7,6.94,0.7,0.26,{sz:8.5,c:"3C6E6A",al:"right",ls:1.4,b:true});
+  t(s,"Kelime markanın analizinden çıkar.",6.90,2.34,5.0,0.36,{sz:15,b:true,c:INK});
+  t(s,"Mekânsal ilke o kelimenin kuralıdır; tasarım öğesi ise o kuralın çizilebilir hâlidir. Üç kelime seçilecek, hepsi mekânda karşılık bulacak.",
+    6.90,2.76,5.0,1.2,{sz:13.5,c:MUT,lh:19});
 })();
-/* ================================ 10 KELİME → İLKE → ÖĞE (asılı liste) */
+/* ================================= 09 KELİMEDEN TASARIM ÖĞESİNE */
 (function(){
-  const s=pTop("Sentez","Kelimeden Tasarım Öğesine",
+  const s=page("Kelimeden tasarım öğesine",
     "Örnek vaka: yerel bir seramik markası — el yapımı seramik ev ve sofra ürünleri.");
   const d=[["CESUR","karakterli · görünür · güçlü","vurgu ve hiyerarşi",
      "Koyu vurgu duvarı · ölçek atlayan tek büyük parça"],
@@ -262,47 +252,49 @@ function zincir(s,y,hi){
      "Tekil kaideler · nokta aydınlatma · ürünler arası geniş aralık"],
     ["GÖRÜNÜRLÜK","üretim gizlenmiyor · süreç sahnede","görüş hattı ve sınır",
      "Camlı atölye duvarı · tezgâhın vitrine bakması · açık kuruma rafı"]];
-  t(s,"MEKÂNSAL İLKE",4.66,2.14,2.5,0.24,{sz:8,c:MUT,ls:2.2,b:true});
-  t(s,"TASARIM ÖĞESİ",7.72,2.14,2.5,0.24,{sz:8,c:MUT,ls:2.2,b:true});
+  const X=1.12, y0=2.66, P=0.86;
+  label(s,"Mekânsal ilke",5.10,2.10,2.6,{sz:13});
+  label(s,"Tasarım öğesi",8.10,2.10,2.6,{sz:13});
+  vrow(s,X,y0,d,{pitch:P});
   d.forEach(function(r,i){
-    const y=2.48+i*0.90;
-    t(s,r[0],M,y,3.6,0.34,{sz:r[0].length>10?15:17,c:CORAL,ls:0.6});
-    t(s,r[1],M,y+0.36,3.6,0.4,{sz:10,c:MUT,lh:13});
-    t(s,r[2],4.66,y+0.04,2.9,0.5,{sz:14,c:TEAL,i:true,lh:18});
-    t(s,r[3],7.72,y+0.06,FW-6.90,0.62,{sz:11.5,c:BODY,lh:15});
+    const y=y0+i*P;
+    t(s,r[0],X+0.40,y-0.22,3.5,0.34,{sz:r[0].length>10?15:17,b:true,c:ACC,ls:0.4});
+    t(s,r[1],X+0.40,y+0.10,3.5,0.3,{sz:11.5,c:MUT});
+    t(s,r[2],5.10,y-0.16,2.9,0.36,{sz:15,b:true,c:INK});
+    t(s,r[3],8.10,y-0.18,CW-7.14,0.62,{sz:12.5,c:BODY,lh:17});
   });
 })();
 
-/* ============================================ 11 MÜŞTERİ YOLCULUĞU */
+/* ============================================ 10 MÜŞTERİ YOLCULUĞU */
 (function(){
-  const s=pTop("Müşteri yolculuğu","Müşteri Yolculuğunun Sekiz Aşaması");
-  const st=[["01","FARKINDALIK",""],["02","ÇEKİM","cephe · vitrin\nilk görsel temas"],
-    ["03","EŞİK","giriş · ilk izlenim\natmosfer"],
-    ["04","YÖNLENME","dolaşım · görüş hatları\nişaretleme"],
-    ["05","KEŞİF","ürün grupları · bilgi\nsergileme"],
-    ["06","ETKİLEŞİM","deneme · bekleme\nteknoloji"],
-    ["07","SATIN ALMA","kasa · ödeme\npaketleme"],["08","AYRILIŞ",""]];
-  const sp=FW/8, LY=3.70;
-  axis(s,M,LY,R,{c:TEAL2,w:1.25});
+  const s=page("Müşteri yolculuğunun sekiz aşaması");
+  const y=2.60, sp=1.47, X0=0.92;
+  rule(s,y);
+  const st=[["01","FARKINDALIK",""],["02","ÇEKİM","cephe\nvitrin\nilk görsel temas"],
+    ["03","EŞİK","giriş\nilk izlenim\natmosfer"],
+    ["04","YÖNLENME","dolaşım\ngörüş hatları\nişaretleme"],
+    ["05","KEŞİF","ürün grupları\nbilgi\nsergileme"],
+    ["06","ETKİLEŞİM","deneme\nbekleme\nteknoloji"],
+    ["07","SATIN ALMA","kasa\nödeme\npaketleme"],["08","AYRILIŞ",""]];
   st.forEach(function(r,i){
-    const cx=M+sp*i+sp/2, ins=(i>0&&i<7), up=(i%2===0);
-    dot(s,cx,LY,ins?0.15:0.10,{c:ins?CORAL:FAINT});
-    const ny = up ? LY-0.92 : LY+0.28;
-    t(s,r[0],cx-sp/2,ny,sp,0.22,{sz:8.5,c:ins?CORAL2:FAINT,al:"center",ls:1.6,b:true});
-    t(s,r[1],cx-sp/2,ny+0.24,sp,0.3,{sz:11,c:ins?INK:MUT,al:"center",ls:1});
-    if(r[2]) t(s,r[2],cx-sp/2-0.1,up?ny-0.66:ny+0.58,sp+0.2,0.56,
-      {sz:9.5,c:MUT,al:"center",lh:12.5});
+    const x=X0+i*sp, ins=(i>0&&i<7);
+    node(s,x,y,{hollow:!ins,c:ins?BLACK:HOLLOW});
+    t(s,r[0],x-0.06,y-0.44,1.3,0.26,{sz:11,b:true,c:ins?ACC:FAINT});
+    t(s,r[1],x-0.06,y+0.16,1.4,0.28,{sz:12,b:true,c:ins?INK:MUT,ls:0.4});
+    if(r[2]) t(s,r[2],x-0.06,y+0.46,1.4,0.76,{sz:11.5,c:MUT,lh:16});
   });
-  t(s,"Mekânın dışında",M,5.18,sp,0.3,{sz:10,c:MUT,al:"center"});
-  t(s,"Mekânın dışında",M+sp*7,5.18,sp,0.3,{sz:10,c:MUT,al:"center"});
-  t(s,"İç mekânda geçen altı aşama",M+sp,5.18,sp*6,0.3,{sz:12,c:CORAL,al:"center"});
-  t(s,"YOLCULUĞUN GÖRÜNMEYEN YÜZÜ",M,6.12,4.0,0.26,{sz:8.5,c:TEAL,ls:2.2,b:true});
-  t(s,"Depolama · personel · ergonomi",M,6.42,FW,0.34,{sz:14,c:BODY});
+  t(s,"mekânın\ndışında",X0-0.06,y+0.46,1.4,0.5,{sz:11.5,c:MUT,lh:16});
+  t(s,"mekânın\ndışında",X0+7*sp-0.06,y+0.46,1.4,0.5,{sz:11.5,c:MUT,lh:16});
+  rule(s,4.28,{x0:X0+sp,x1:X0+6*sp,w:1.5});
+  drop(s,X0+sp,4.16,4.28);  drop(s,X0+6*sp,4.16,4.28);
+  t(s,"İç mekânda geçen altı aşama",X0+sp,4.36,6.0,0.3,{sz:14,b:true,c:ACC});
+  label(s,"Yolculuğun görünmeyen yüzü",M,5.62,4.4);
+  vlist(s,["depolama","personel","ergonomi"],M,5.98,3.0,{sz:13.5});
 })();
 
-/* ================================================ 12 VAKA · YOLCULUK */
+/* ============================================== 11 VAKA · YOLCULUK */
 (function(){
-  const s=pTop("Vaka","Seramik Markasının Müşteri Yolculuğu");
+  const s=page("Seramik markasının müşteri yolculuğu");
   const rows=[["Çekim","Vitrinde tek bir parça; arkasında çalışan çark görünüyor","GÖRÜNÜRLÜK"],
     ["Eşik","Ham yüzey, mat ışık ve çamurun kokusu karşılıyor","DOĞAL"],
     ["Yönlenme","Net görüş hattı; rota atölyeden tartıma doğru akıyor","GÖRÜNÜRLÜK"],
@@ -310,17 +302,19 @@ function zincir(s,y,hi){
     ["Etkileşim","Dokunma serbest; numune ve üretim anlatısı tezgâhta","TEKİLLİK"],
     ["Satın alma","Ambalajın kendisi zanaatın parçası; paketleme görünür","SÜRDÜRÜLEBİLİRLİK"],
     ["Ayrılış","Parçanın kim tarafından yapıldığı yazan kart","TEKİLLİK"]];
+  const X=1.12, y0=1.92, P=0.72;
+  vrow(s,X,y0,rows,{pitch:P});
   rows.forEach(function(r,i){
-    const y=1.86+i*0.72, off=(i%2)?0.42:0;
-    t(s,r[0],M+off,y,2.1,0.34,{sz:16,c:TEAL});
-    t(s,r[1],M+off+2.2,y+0.04,5.3,0.44,{sz:12.5,c:BODY,lh:16});
-    t(s,r[2],8.6,y+0.06,FW-7.78,0.3,{sz:10.5,c:CORAL,ls:1.2,b:true});
+    const y=y0+i*P;
+    t(s,r[0],X+0.40,y-0.17,2.1,0.34,{sz:16,b:true,c:INK});
+    t(s,r[1],X+2.60,y-0.14,5.1,0.4,{sz:13.5,c:BODY});
+    t(s,r[2],8.90,y-0.13,CW-7.94,0.3,{sz:12.5,b:true,c:ACC,ls:0.5});
   });
 })();
 
-/* ==================================================== 13 DUYULAR */
+/* ==================================================== 12 DUYULAR */
 (function(){
-  const s=pSide("Duyular","Duyular marka kimliğini nasıl taşır?",
+  const s=page("Duyular marka kimliğini nasıl taşır?",
     "Atmosfer tek bir duyudan doğmaz; duyusal etki uyaranların birlikte çalışmasından doğar.");
   const d=[["Görme","ışık · renk · kontrast · görüş hattı","Işığın düzeyi mekânın hızını belirler; rengi ürünün rengini değiştirir."],
     ["Dokunma","malzeme · doku · sıcaklık · ağırlık","İnsan ürünü eline aldığında sahiplik duygusu geliştirir. İnternete karşı en güçlü duyu."],
@@ -328,22 +322,24 @@ function zincir(s,y,hi){
     ["Koklama","koku · hafıza · kaynak","Hafızaya en doğrudan bağlanan duyu. Kokunun kaynağı ürünün kendisi olmalı."],
     ["Tat","tadım · ikram","En dar kullanım alanı, ama kullanıldığı yerde en güçlü etki."],
     ["Beden","ısı · hava · kot · ritim · yoğunluk","Yoğunluk en güçlü etken: kalabalıkta insan hızlanır ve erken çıkar."]];
+  const X=1.12, y0=2.24, P=0.80;
+  vrow(s,X,y0,d,{pitch:P});
   d.forEach(function(r,i){
-    const y=1.14+i*0.96;
-    t(s,r[0],CX,y,1.55,0.34,{sz:17,c:CORAL});
-    t(s,r[1],CX+1.62,y+0.06,2.5,0.5,{sz:10,c:TEAL,i:true,lh:13});
-    t(s,r[2],CX+4.30,y+0.02,CW-4.30,0.66,{sz:11.5,c:BODY,lh:15});
+    const y=y0+i*P;
+    t(s,r[0],X+0.40,y-0.19,1.8,0.34,{sz:17,b:true,c:INK});
+    t(s,r[1],X+2.30,y-0.15,2.9,0.44,{sz:12.5,b:true,c:ACC,lh:16});
+    t(s,r[2],X+5.40,y-0.16,RM-(X+5.40),0.5,{sz:13,c:BODY,lh:17});
   });
 })();
 
-/* ============================================ 14 DUYU × AŞAMA */
+/* =========================================== 13 DUYU × AŞAMA */
 (function(){
-  const s=pTop("Duyular","Hangi duyu, yolculuğun hangi anında?",
+  const s=page("Hangi duyu, yolculuğun hangi anında?",
     "Duyular mekânın her yerinde aynı yoğunlukta çalışmaz; her duyunun baskın olduğu bir an vardır.");
   const cols=["ÇEKİM","EŞİK","YÖNELME","GEZİNME","ETKİLEŞİM","SATIN ALMA","AYRILIŞ"];
-  const MX=2.46, MW=6.10, sp=MW/7;
+  const MX=2.90, MW=6.30, sp=MW/7;
   cols.forEach(function(c,i){
-    t(s,c,MX+i*sp,2.28,sp,0.24,{sz:7.5,c:MUT,al:"center",ls:1.1,b:true});
+    t(s,c,MX+i*sp,2.06,sp,0.26,{sz:9.5,b:true,c:MUT,al:"center",ls:0.4});
   });
   const rows=[["Görme",[1,1,1,1,0,0,0],"vitrin silüeti · teşhir kontrastı"],
     ["Beden",[0,1,1,1,0,0,0],"eşikte ısı · koridor genişliği"],
@@ -352,46 +348,45 @@ function zincir(s,y,hi){
     ["Dokunma",[0,0,0,1,1,0,0],"açık raf · deneme · tezgâh"],
     ["Tat",[0,0,0,0,1,0,0],"tadım noktası · ikram"]];
   rows.forEach(function(r,i){
-    const y=2.76+i*0.66, cy=y+0.20;
-    t(s,r[0],M,y,1.5,0.34,{sz:15,c:TEAL});
+    const y=2.60+i*0.72, cy=y+0.19;
+    t(s,r[0],M,y,1.8,0.34,{sz:16,b:true,c:INK});
     r[1].forEach(function(v,j){
       const cx=MX+j*sp+sp/2;
-      if(v) dot(s,cx,cy,0.20,{c:CORAL}); else dot(s,cx,cy,0.075,{c:FAINT});
+      if(v) node(s,cx,cy,{d:0.22}); else node(s,cx,cy,{d:0.10,c:HOLLOW});
     });
-    t(s,r[2],M+8.30,y+0.05,FW-8.30,0.34,{sz:10,c:MUT});
+    t(s,r[2],9.50,y+0.02,CW-8.54,0.34,{sz:11.5,c:MUT});
   });
 })();
-/* ============================================== 15 ÜRÜN + BOŞLUK */
+/* ============================================== 14 ÜRÜN + BOŞLUK */
 (function(){
-  const s=pTop("Çeviri","Ürün + Boşluk");
+  const s=page("Ürün + boşluk");
   const d=[["Mücevher · sanat","birim değer yüksek; boşluk doğrudan değer anlamına gelir",1],
     ["Parfüm · sofistike moda","seçilmiş az sayıda ürün, geniş boşluk, oturarak satış",2],
     ["Seramik · zanaat","her parça tekil; kaide ve aralık gerekir",3],
     ["Kitap · plak","tarama davranışı; orta yoğunluk, raf metrajı önemli",5],
     ["Giyim · ayakkabı","beden çeşidi yoğunluk üretir; stok yakınlığı belirleyici",8]];
-  const cw=FW/5, LY=3.66;
-  t(s,"AZ ÜRÜN",M,1.72,3.0,0.26,{sz:9,c:CORAL,ls:2.4,b:true});
-  t(s,"ÇOK ÜRÜN",R-3.0,1.72,3.0,0.26,{sz:9,c:CORAL,ls:2.4,al:"right",b:true});
-  axis(s,M,LY,R,{c:TEAL2,w:1.25});
+  const y=3.30, xs=[1.04,3.40,5.76,8.12,10.48];
+  label(s,"Az ürün",M,1.66,2.4);
+  t(s,"Çok ürün",9.56,1.66,3.0,0.28,{sz:14,b:true,c:ACC,al:"right"});
+  rule(s,y);
   d.forEach(function(r,i){
-    const x=M+i*cw, cx=x+cw/2, w=cw-0.34, k=r[2], up=(i%2===0);
+    const x=xs[i], k=r[2], hi=(i===2);
     for(let j=0;j<k;j++){
       const rr=Math.floor(j/4), cc=j%4, cnt=Math.min(k-rr*4,4);
-      dot(s,cx-(cnt-1)*0.17/1+cc*0.17, 2.56+rr*0.19, 0.085, {c:CORAL});
+      node(s,x+0.30-(cnt-1)*0.11+cc*0.22, 2.36+rr*0.24, {d:0.11});
     }
-    dot(s,cx,LY,0.12,{c:TEAL});
-    const ty = up ? 3.92 : 4.86;
-    t(s,r[0],x,ty,w,0.46,{sz:14,c:INK,al:"center",lh:18});
-    t(s,r[1],x,ty+0.50,w,0.8,{sz:10.5,c:MUT,al:"center",lh:14});
+    node(s,x,y,{d:hi?0.24:0.19});
+    t(s,r[0],x-0.06,y+0.20,2.2,0.52,{sz:14.5,b:true,c:hi?ACC:INK,lh:19});
+    t(s,r[1],x-0.06,y+0.76,2.2,0.9,{sz:12,c:MUT,lh:16});
   });
   t(s,"Ürün sayısı arttıkça boşluk azalır; boşluk azaldıkça mekânın anlattığı şey değişir.",
-    M,6.44,FW,0.4,{sz:13.5,c:TEAL,i:true});
+    M,5.60,11.0,0.36,{sz:15,b:true,c:INK});
 })();
 
-/* ================================================ 16 MARKA SEÇİMİ */
+/* ================================================ 15 MARKA SEÇİMİ */
 (function(){
-  const s=pTop("Marka seçimi","Hangi tür ürün satan markaları seçebilirsiniz?",
-    "Ürünün türü mekândan istediği şeyi belirler. Kendi adayınız hangi gruba giriyor?",{ts:30,tw:FW});
+  const s=page("Hangi tür ürün satan markaları seçebilirsiniz?",
+    "Ürünün türü mekândan istediği şeyi belirler. Kendi adayınız hangi gruba giriyor?");
   const rows=[["Yüksek değer, az ürün","Mücevher · saat · sanat baskısı · tekil tasarım objesi",
       "Kilitli ve vitrinli teşhir · nokta aydınlatma · oturarak satış · güvenlik ve sigorta"],
     ["Denenen ürün","Giyim · ayakkabı · gözlük · şapka · takı",
@@ -404,35 +399,48 @@ function zincir(s,y,hi){
       "Kurulu kullanım senaryosu · geniş rota · asma ve katman sistemi · mal kabul ve büyük depo"],
     ["Üretimi görünür ürün","Seramik · deri ve ayakkabı atölyesi · terzi",
       "Atölye ile satışın bir arada olması · fırın, çark, tezgâh · ısı, koku ve atık · kuruma rafı"]];
+  const X=1.12, y0=2.26, P=0.78;
+  vrow(s,X,y0,rows,{pitch:P});
   rows.forEach(function(r,i){
-    const y=2.28+i*0.78;
-    t(s,r[0],M,y,2.7,0.52,{sz:14,c:CORAL,lh:17});
-    t(s,r[1],M+2.95,y+0.02,3.1,0.6,{sz:10.5,c:TEAL,lh:14});
-    t(s,r[2],M+6.35,y+0.02,FW-6.35,0.6,{sz:10.5,c:BODY,lh:14});
+    const y=y0+i*P, hi=(i===5);
+    t(s,r[0],X+0.40,y-0.20,2.7,0.44,{sz:14,b:true,c:hi?ACC:INK,lh:18});
+    t(s,r[1],X+3.30,y-0.18,3.2,0.5,{sz:12,c:BODY,lh:16});
+    t(s,r[2],X+6.70,y-0.18,RM-(X+6.70),0.5,{sz:12,c:MUT,lh:16});
   });
 })();
 
-/* ============================================ 17 MARKA ARAŞTIRMASI */
+/* =========================================== 16 MARKA ARAŞTIRMASI */
 (function(){
-  const s=pTop("Ödev","Marka Araştırması");
-  const st=[["01","Üç marka bul","Ana akım olmayan, mağaza kimliği henüz oluşmamış adaylar"],
-    ["02","Markayı araştır","Ürün · kullanıcı · değer ve hikâye · rakipler"],
-    ["03","Üç anahtar kelime","Markayı mekâna taşıyabilecek üç kelime seç"],
-    ["04","Üründen mekâna","Sergileme ve depolama · aydınlatma · deneyim ve duyu"],
-    ["05","Kelimeyi karara çevir","Her kelime için somut bir mekânsal karar"]];
+  const s=page("Marka araştırması");
+  const y=2.34, xs=[1.04,3.40,5.76,8.12,10.48];
+  const st=[["Üç marka bul","Ana akım olmayan, mağaza kimliği henüz oluşmamış adaylar"],
+    ["Markayı araştır","Ürün · kullanıcı · değer ve hikâye · rakipler"],
+    ["Üç anahtar kelime","Markayı mekâna taşıyabilecek üç kelime seç"],
+    ["Üründen mekâna","Sergileme ve depolama · aydınlatma · deneyim ve duyu"],
+    ["Kelimeyi karara çevir","Her kelime için somut bir mekânsal karar"]];
+  rule(s,y);
   st.forEach(function(r,i){
-    const y=1.82+i*0.86, x=M+i*0.52, on=(i===4);
-    t(s,r[0],x,y+0.06,0.8,0.4,{sz:24,c:on?CORAL:CORAL2});
-    t(s,r[1],x+1.05,y,4.6,0.42,{sz:20,c:on?CORAL:INK});
-    t(s,r[2],x+6.0,y+0.10,FW-6.4-i*0.52,0.5,{sz:11.5,c:MUT,lh:15});
+    const x=xs[i], hi=(i===4);
+    node(s,x,y,{d:hi?0.24:0.19});
+    t(s,"0"+(i+1),x-0.06,y-0.44,1.2,0.26,{sz:11,b:true,c:hi?ACC:FAINT});
+    if(hi){
+      fill(s,x-0.15,y+0.02,2.23,1.30);
+      t(s,r[0],x-0.06,y+0.14,2.0,0.56,{sz:15,b:true,c:WHITE,lh:19});
+      t(s,r[1],x-0.06,y+0.74,2.0,0.5,{sz:12,c:ACCT,lh:16});
+    } else {
+      t(s,r[0],x-0.06,y+0.16,2.2,0.5,{sz:15,b:true,c:INK,lh:19});
+      t(s,r[1],x-0.06,y+0.66,2.2,0.9,{sz:12,c:MUT,lh:16});
+    }
   });
-  t(s,"Üç aday marka stüdyoda çalışılmaya başlanabilir; teslim hafta içinde alınacaktır.",
-    M,6.42,FW,0.4,{sz:13.5,c:TEAL,i:true});
+  drop(s,xs[4],y-0.09,4.42);
+  label(s,"Teslim",xs[4]-0.02,4.20,2.4);
+  vlist(s,["Üç aday marka stüdyoda","çalışılmaya","başlanabilir; teslim","hafta içinde alınacaktır."],
+    xs[4]+0.07,4.56,2.3,{sz:12.5,c:INK,pitch:0.26});
 })();
 
-/* =================================================== 18 KAYNAKLAR */
+/* =================================================== 17 KAYNAKLAR */
 (function(){
-  const s=pSide("Kaynaklar","Dersin temel kaynakları",
+  const s=page("Dersin temel kaynakları",
     "Sunumun çerçevesi aşağıdaki makale ve ders izlencesinden kuruldu.");
   const L=[["Sunar Bükülmez, P., Girginkaya Akdağ, S. ve Ekin, G. (2025)",
       "Retail Design Competencies and Customer Journey Mapping Tools. The International Journal of Design Education, 19(2), 25–50. — Marka anahtarı ve yolculuk haritası"],
@@ -447,17 +455,18 @@ function zincir(s,y,hi){
     ["Underhill, P. (2008)","Why We Buy: The Science of Shopping. Simon & Schuster. — Mağaza içi davranış ve sağa yönelim"],
     ["Mesher, L. (2010)","Basics Interior Design: Retail Design. AVA Publishing."],
     ["İç Mimari Tasarım III ders izlencesi (2025–2026)","Proje kapsamı, gereklilikler ve öğrenme çıktıları."]];
-  const OFF=[0,1.18,1.98,2.78,3.58,4.38], cw=3.72;
+  const OFF=[0,1.02,1.76,2.50,3.24,3.98], cw=5.25;
   [L,Rr].forEach(function(list,k){
-    const x=CX+k*(cw+0.44);
+    const x=M+k*(cw+0.85);
     list.forEach(function(r,i){
-      const y=0.92+OFF[i]+k*0.30;
-      t(s,r[0],x,y,cw,0.40,{sz:10,c:CORAL,lh:13});
-      t(s,r[1],x,y+0.38,cw,i===0?0.72:0.56,{sz:9,c:MUT,lh:12});
+      const y=2.06+OFF[i];
+      node(s,x+0.05,y+0.10,{d:0.09});
+      t(s,r[0],x+0.28,y,cw-0.28,i===0?0.44:0.32,{sz:12,b:true,c:INK,lh:15});
+      t(s,r[1],x+0.28,y+(i===0?0.40:0.28),cw-0.28,i===0?0.62:0.56,{sz:11,c:MUT,lh:14});
     });
   });
   t(s,"Kaynak modellerdeki diyagramlar bu sunum için yeniden çizilmiştir · doi.org/10.18848/2325-128X/CGP/v19i02/25-50",
-    M,6.94,9.4,0.3,{sz:8.5,c:MUT,i:true});
+    M,6.90,10.6,0.3,{sz:11,c:MUT});
 })();
 
 pptx.writeFile({fileName:"IMC301-Sunum-1.pptx"}).then(function(){console.log("ok");});
