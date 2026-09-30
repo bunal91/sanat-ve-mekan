@@ -39,6 +39,39 @@ Aşağıdaki atölyeler "duyguyu çizgiyle anlatma" damarının devamıdır. Her
 
 ---
 
+## A13 · İz Atlası — *hafta 1, 2, 3* — bireysel + **grup**
+**Soru:** Elimde kaç çizgi var?
+
+Ünlü sanatçıların **iz karakterleri**, "üslup" olarak değil **dört ölçülebilir ayar** olarak öğretilir:
+tempo (BPM) · basınç (geçiş sayısı) · kesinti (2 cm'de kopma) · yoğunluk (2×2 cm'de iz sayısı).
+
+Öğrenci A3 paftada **16 kutu** doldurur — dört tempo bandı × dört sanatçı: **çok hızlı** (Matisse,
+Rodin, Calder, Steinberg) · **orta-hızlı** (van Gogh, Hokusai, Schiele, Twombly) · **orta-yavaş**
+(Delacroix, Rembrandt, Giacometti, Kollwitz) · **çok yavaş** (Ben Shahn, Seurat, Dürer, Celmins).
+Her kutu 5 dk; **kutulara hiçbir nesne çizilmez, yalnızca iz.** Hafta 1'de dört kutu (hızlı bant),
+hafta 2'de sekiz, hafta 3 açılışında son dört.
+
+**Asıl değerli aşama — aynı nesne, dört el:** Hafta 3'te sınıfa tek bir nesne konur (kırışmış kâğıt
+torba). Aynı nesne dört kez, dört farklı iz imzasıyla, 6'şar dakika. Artık kopya değil **çeviri**
+vardır: dört çizim aynı nesneyi gösterir, **dört farklı şey söyler.**
+
+**Kör okuma *(grup)*:** Dört çizim etiketsiz karıştırılıp asılır; sınıf hangisinin hangi iz olduğunu
+tahmin eder, isabet oranı tahtaya yazılır. A1 ile aynı eksen: "güzel mi" değil **"anlaşıldı mı".**
+
+A2'nin metronomuyla birlikte yürür: bant 1'de 180 BPM, bant 4'te 40 BPM — tempo seçilmez, **duyulur.**
+
+**Çerçeve cümlesi, her derste tekrarlanır:** *İz bir alettir, imza değil.* Hafta 14 sergi paftasında
+öğrenci **"kendi izim"** sayfasıyla kapatır: 16 kutudan hangisi ona yapıştı, iki cümle, altında o
+izle yapılmış tek bir çalışma.
+
+**Ayrıntılı protokol, sanatçı kataloğu, ölçme ve açık erişim görsel kaynakları:** `05-iz-atlasi.md`.
+**Öğrenci şablonu:** `05-iz-atlasi-A3-sablon.svg` (A3 yatay, doğrudan baskıya hazır).
+
+> **Araştırma değeri: yüksek.** Kör okuma, Makale A için gönderen–alıcı ekseninde ikinci veri seti
+> üretir: duygu değil **iz karakteri** aktarılıyor mu?
+
+---
+
 ## A2 · Tempo ve Metronom — *hafta 2* — bireysel
 **Soru:** Ritim çizgiye nasıl geçer?
 
