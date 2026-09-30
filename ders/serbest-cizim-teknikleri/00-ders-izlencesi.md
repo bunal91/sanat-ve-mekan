@@ -121,9 +121,9 @@ Bu dokuz adım dört evrede toplanır:
 
 **Stüdyo (20 dk):** Çizgi merdiveni — aynı sayfada on farklı basınç/hız/uzunlukta çizgi. Hayalet çizgi (ghosting): hareketi kâğıdın üstünde provalayıp sonra bırakmak. Omuzdan serbest daire, sekiz, spiral — ayakta, dik pano.
 
-**İZ ATLASI başlıyor (20 dk) — Bant 1: çok hızlı.** A3 pafta dağıtılır (`05-iz-atlasi-A3-sablon.svg`), dört kutu doldurulur: **Matisse** (tek, kesintisiz, sabit kalınlıkta kontur) · **Rodin** (kâğıda bakmadan; kaçırma düzeltilmez) · **Calder** (kalem hiç kalkmaz) · **Steinberg** (ince, eşit, yazı gibi). Metronom 180 BPM. **Kutulara hiçbir nesne çizilmez — yalnızca iz.** Her kutunun altına üç sayı: tempo / kesinti / yoğunluk.
+**USTALARIN ÇİZGİLERİ başlıyor (15 dk) — kutu 1 ve 2.** Föy dağıtılır (`06-ustalarin-cizgileri-foy.svg`). Öğrenci kendi sayfasını üç katla **sekize böler** ve ilk iki kutuyu doldurur: **1 · Cy Twombly** (kontrolü bırakan karalama, çok hafif, sayfanın yarısı boş) · **2 · Hokusai** (köşeli basamaklı fırça konturu; bastırarak başla, hareket ederken gevşet). Metronom 180 → 150 BPM. **Kutulara hiçbir nesne çizilmez — yalnızca iz.** Her kutunun altına üç sayı: tempo / kesinti / yoğunluk.
 
-> Dersin ilk gününde en doğru bant budur: hızlı, korkutmayan, sonucu "başarısız" olamayan. Amaç yetenek göstermek değil, **elin kâğıda değmesi.** *İz bir alettir, imza değil.* → Atölye A13; ayrıntı: `05-iz-atlasi.md`
+> Dersin ilk gününde bu iki kutu doğru seçimdir: **başarısız olmak imkânsızdır.** Amaç yetenek göstermek değil, **elin kâğıda değmesi.** *İz bir alettir, imza değil.* → Atölye A13; hoca notları: `06-ustalarin-cizgileri-hoca-notlari.md`
 
 #### C. Dışarı çıkıyoruz (60 dk) — dersin ilk çizimi
 
@@ -153,7 +153,7 @@ Bu dokuz adım dört evrede toplanır:
 - **Çizginin yedi ayarı:** basınç · hız · süreklilik · ritim · yoğunluk · açısallık · yön. Her biri ayrı ayrı kontrol edilebilir ve her biri okuyucuya farklı bir şey söyler.
 
 **Stüdyo**
-0. **İZ ATLASI, Bant 2 ve 3 (45 dk).** Sekiz kutu: **van Gogh** (kısa yönlü vuruşlar; ton yok, yön var) · **Hokusai** (kalın başlayıp inceye biten tek vuruş) · **Schiele** (köşeli, aniden duran, kesintili kontur) · **Twombly** (kontrolü bırakan karalama) — sonra **Delacroix** (aramalı çoklu kontur, hiçbiri silinmez) · **Rembrandt** (az ama çok kararlı vuruş; eksiltme) · **Giacometti** (kafesleşen yığın) · **Kollwitz** (geniş, ağır, kütlesel iz). Metronom 120 → 80 BPM. **Bu, aşağıdaki yedi ayarın tarihten alınmış örnek kataloğudur** ve 1. maddeye doğrudan hazırlıktır.
+0. **USTALARIN ÇİZGİLERİ tamamlanıyor (40 dk) — kutu 3–8.** **3 · Delacroix** (aramalı, dönen çoklu kontur; hiçbiri silinmez) · **4 · van Gogh** (kısa yönlü vuruş kümeleri; ton yok, yön var) · **5 · Rembrandt** (ışık alan yere dokunma; gölge tek yönlü demetlerle) · **6 · Ben Shahn** (yavaş ama yönü şaşmayan, oyma gibi kesik kontur) · **7 · Dürer** (yüzeyin eğrisini takip eden sistemli paralel tarama; ikinci katman açıyla) · **8 · Seurat** (kalemi yan yatır, çizgi yok, yalnızca değer — **dokulu kâğıt şart**). Metronom 120 → 40 BPM. **Bu, aşağıdaki yedi ayarın tarihten alınmış örnek kataloğudur** ve 1. maddeye doğrudan hazırlıktır. Kapanışta üç soru: *Sekiz kutu ayırt edilebiliyor mu? Hangisi en zor geldi? Hangisi sana en yakın?* → `06-ustalarin-cizgileri-hoca-notlari.md`
 1. Yedi ayarın tek tek denenmesi: aynı motif, yedi değişken.
 2. **Duygu matrisi:** 12 kareli ızgara, her kareye tek bir hâl — *tedirginlik, dinginlik, öfke, beklenti, yorgunluk, neşe, yalnızlık, panik, ağırlık, hafiflik, kararsızlık, kararlılık.* **Kural: temsilî hiçbir şey yok** — yüz yok, sembol yok, ok yok. Yalnızca çizgi.
 3. **Kör eşleştirme oyunu *(grup)*:** Kareler kesilir, etiketleri kaldırılır, karıştırılır. Gruplar hangi karenin hangi duyguya ait olduğunu tahmin eder. **Sınıfın isabet oranı tahtaya yazılır** ve şans düzeyiyle (12 seçenekte %8,3) karşılaştırılır. Tartışma "güzel mi" değil, **"anlaşıldı mı"** ekseninde yürür.
@@ -183,8 +183,7 @@ Grafik notasyon geleneğine dayanır: Cornelius Cardew'ün *Treatise*'i (1963–
 - **Kısalma (foreshortening):** Düzlem bize dönükken tam, açıyla bakıldıkça daralır. *(Kurallı perspektif değil, gözle okuma.)*
 
 **Stüdyo**
-0. **İZ ATLASI kapanışı (15 dk) — Bant 4: çok yavaş.** Son dört kutu: **Ben Shahn** (titrek ama kararlı, oyma gibi kesik çizgi — *yavaşlık titreklik değildir*) · **Seurat** (çizgi görünmez, yalnızca değer var) · **Dürer** (paralel, hesaplı, kesişen tarama; sistem) · **Celmins** (tek izin ayrılmadığı yüzey; çizim bir süre ölçüsüdür). Metronom 40 BPM. Yavaş bant, bu haftanın 50 elips sabrını doğrudan hazırlar; Seurat ve Dürer kutuları **hafta 8–9'un habercisidir.**
-0b. **Aynı nesne, dört el (30 dk) — atölyenin asıl değerli aşaması.** Sınıfa tek bir nesne konur: **kırışmış kâğıt torba** (hem kontur, hem kırık düzlem, hem ton, hem doku barındırır; "güzel çizilmiş" ölçütü yoktur). Aynı nesne dört kez, 6'şar dakika, dört farklı iz imzasıyla — Matisse / van Gogh / Giacometti / Seurat. Artık kopya değil **çeviri** vardır: dört çizim aynı nesneyi gösterir, **dört farklı şey söyler.**
+0b. **Aynı nesne, dört el (30 dk) — atölyenin asıl değerli aşaması.** Sınıfa tek bir nesne konur: **kırışmış kâğıt torba** (hem kontur, hem kırık düzlem, hem ton, hem doku barındırır; "güzel çizilmiş" ölçütü yoktur). Aynı nesne dört kez, 6'şar dakika, geçen haftanın sekizinden seçilen dört iz imzasıyla — **Hokusai / van Gogh / Delacroix / Seurat.** Artık kopya değil **çeviri** vardır: dört çizim aynı nesneyi gösterir, **dört farklı şey söyler.**
 0c. **Kör okuma (15 dk) *(grup)*.** Dört çizim etiketsiz karıştırılıp asılır; sınıf hangisinin hangi iz imzasıyla yapıldığını tahmin eder, **isabet oranı tahtaya yazılır.** Hafta 2'deki kör eşleştirme oyunuyla aynı eksen: **"güzel mi" değil "anlaşıldı mı".** → Atölye A13; ayrıntı: `05-iz-atlasi.md`
 1. **50 elips** — farklı açıklıklarda, hepsi tek yönde; en iyi beşi işaretlenir.
 2. Bir silindirik nesnenin (bardak, kutu, kova) ağzı: aynı elips, beş farklı göz yüksekliğinden.
@@ -192,7 +191,7 @@ Grafik notasyon geleneğine dayanır: Cornelius Cardew'ün *Treatise*'i (1963–
 4. Üçgen ağı: üç nokta belirlenir, aralarındaki açılar okunarak bağlanır.
 5. **Düzlem kompozisyonu:** Yalnızca kare, elips ve üçgenden bir sayfa kompozisyon. Kandinsky'nin diline geri dönüş.
 
-**Ev tekrarı 2:** 100 elips, 50 kare, 30 üçgen + bir düzlem kompozisyonu. Ayrıca **İz Atlası'ndan seçilen bir bant (4 kutu), farklı bir aletle** (tükenmez, çini kalem, kamış, çöp şiş + mürekkep) bir kez daha üretilir — izin **aletten mi elden mi** geldiğini görmek için. Getirilir.
+**Ev tekrarı 2:** 100 elips, 50 kare, 30 üçgen + bir düzlem kompozisyonu. Ayrıca **Ustaların Çizgileri'nden seçilen iki kutu, farklı bir aletle** (tükenmez, çini kalem, kamış, çöp şiş + mürekkep) bir kez daha üretilir — izin **aletten mi elden mi** geldiğini görmek için. Getirilir.
 
 ---
 
@@ -455,7 +454,7 @@ Model: bir sandalye (tercihen ikonik bir tasarım — Thonet No.14, Eames DSW ve
 
 **Kapanış ölçümü:** Hafta 1'in protokolü tekrarlanır — herkes dışarıda bir nesne seçer, 10 dakika bakar, içeride hafızadan çizer. İlk hafta çizimleri dağıtılır; ikisi yan yana final dosyasının ilk sayfası olur.
 
-**"KENDİ İZİM" sayfası — İz Atlası'nın kapanışı.** Final dosyasına bir sayfa daha eklenir: öğrenci, hafta 1–3'te doldurduğu **16 kutudan hangisinin kendisine yapıştığını iki cümleyle** yazar ve altına o izle yapılmış tek bir çalışma koyar. Atölye böylece **taklitle başlayıp kendi izinin beyanıyla kapanır** — dersin "iz bir alettir, imza değil" kuralının son testi budur.
+**"KENDİ İZİM" sayfası — Ustaların Çizgileri'nin kapanışı.** Final dosyasına bir sayfa daha eklenir: öğrenci, hafta 1–2'de doldurduğu **sekiz kutudan hangisinin kendisine yapıştığını iki cümleyle** yazar ve altına o izle yapılmış tek bir çalışma koyar. Atölye böylece **taklitle başlayıp kendi izinin beyanıyla kapanır** — dersin "iz bir alettir, imza değil" kuralının son testi budur.
 
 **Dış değerlendiriciler:** Bölüm dışından üç davetli (mimarlık, endüstriyel tasarım, psikoloji) rubrikle ayrıca puanlar.
 
@@ -604,10 +603,12 @@ Rubrik **1. hafta öğrencilere dağıtılır.** Her ölçüt 20 puan üzerinden
 - Sanguine/sepya çubuk, beyaz pastel — renkli kâğıt üzerine ışık için
 - Kraft veya gri eskiz rulosu · aydınger rulosu · katlanır tabure
 
-**Eğitmen tarafından sağlanır (hafta 1–3, İz Atlası)**
-- Öğrenci başına 1 adet **A3 İz Atlası paftası** (`05-iz-atlasi-A3-sablon.svg`, yatay baskı)
-- **Metronom** — telefon uygulaması yeterli (40 / 80 / 120 / 180 BPM)
-- Açık erişim reprodüksiyon seti (bkz. `05-iz-atlasi.md`, Bölüm 8) — projeksiyon için
+**Eğitmen tarafından sağlanır (hafta 1–3, Ustaların Çizgileri)**
+- Öğrenci başına 1 adet **öğrenci föyü** (`06-ustalarin-cizgileri-foy.svg`, A4)
+- Sekiz reprodüksiyon — `cizimteknikleri/masters' lines/`; **sırayla, tek tek** projeksiyona verilir
+- **Metronom** — telefon uygulaması yeterli (180 → 40 BPM)
+- **Dokulu/gren kâğıt** — yalnızca 8. kutu (Seurat) için, sınıf sayısı kadar. Düz kâğıtta o kutu çalışmaz.
+- Kalın keçeli veya yassı uçlu marker (2. kutu) · kamış veya çöp şiş + mürekkep (3–4. kutu)
 - Hafta 3 için **kırışmış kâğıt torba**, sınıf sayısının yarısı kadar
 - 2×2 cm'lik karton **ölçüm penceresi** — yoğunluk sayımı için, 5 adet
 
@@ -635,10 +636,11 @@ Rubrik **1. hafta öğrencilere dağıtılır.** Her ölçüt 20 puan üzerinden
 - Bothwell, D. & Mayfield, M. *Notan: The Dark-Light Principle of Design.* Dover.
 - Henshilwood, C. ve ark. "An abstract drawing from the 73,000-year-old levels at Blombos Cave, South Africa." *Nature*, 2018.
 
-### İz karakteri (mark-making) — hafta 1–3, İz Atlası
+### İz karakteri (mark-making) — hafta 1–3, Ustaların Çizgileri
 - **Nicolaïdes, K.** *The Natural Way to Draw* (1941) ve **Goldstein, N.** *The Art of Responsive Drawing* — izin tempo ekseninde (çok hızlı → çok yavaş) sınıflandırılması.
 - Met Museum, *Vincent van Gogh (1853–1890): The Drawings* — kamış kalem ve iz teknikleri.
 - Drawing Matter, *Álvaro Siza: Fast and Slow Lines* — aynı tempo eksenini mimari çizimde kuran metin.
+- **Sekiz reprodüksiyon:** `cizimteknikleri/masters' lines/` — Twombly · Hokusai · Delacroix · van Gogh · Rembrandt · Ben Shahn · Dürer · Seurat.
 - **Açık erişim görsel kaynakları:** Met Open Access (CC0) · National Gallery of Art Open Access (CC0) · Van Gogh Museum koleksiyonu · MoMA Drawings and Prints · Getty Research Institute (Simms Kollwitz koleksiyonu) · Drawing Matter · Morgan Library, *Drawn to Greatness.* Tam liste ve adresler: `05-iz-atlasi.md`, Bölüm 8.
 
 ### Saha ve mesleki pratik

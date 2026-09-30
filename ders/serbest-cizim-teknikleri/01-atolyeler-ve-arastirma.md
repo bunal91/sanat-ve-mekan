@@ -39,33 +39,52 @@ Aşağıdaki atölyeler "duyguyu çizgiyle anlatma" damarının devamıdır. Her
 
 ---
 
-## A13 · İz Atlası — *hafta 1, 2, 3* — bireysel + **grup**
+## A13 · Ustaların Çizgileri — *hafta 1 ve 2* — bireysel + **grup**
 **Soru:** Elimde kaç çizgi var?
 
-Ünlü sanatçıların **iz karakterleri**, "üslup" olarak değil **dört ölçülebilir ayar** olarak öğretilir:
+Sekiz ustanın **iz karakteri**, "üslup" olarak değil **dört ölçülebilir ayar** olarak öğretilir:
 tempo (BPM) · basınç (geçiş sayısı) · kesinti (2 cm'de kopma) · yoğunluk (2×2 cm'de iz sayısı).
 
-Öğrenci A3 paftada **16 kutu** doldurur — dört tempo bandı × dört sanatçı: **çok hızlı** (Matisse,
-Rodin, Calder, Steinberg) · **orta-hızlı** (van Gogh, Hokusai, Schiele, Twombly) · **orta-yavaş**
-(Delacroix, Rembrandt, Giacometti, Kollwitz) · **çok yavaş** (Ben Shahn, Seurat, Dürer, Celmins).
-Her kutu 5 dk; **kutulara hiçbir nesne çizilmez, yalnızca iz.** Hafta 1'de dört kutu (hızlı bant),
-hafta 2'de sekiz, hafta 3 açılışında son dört.
+Öğrenci **kendi sayfasını üç katla sekize böler** ve kutuları **sırayla** doldurur. Sıra rastgele
+değildir; sayfa yukarıdan aşağı **kontrolsüzden sisteme, çizgiden tona** ilerler:
+
+| | Sanatçı | İzin özü | BPM |
+|---|---|---|---|
+| 1 | **Cy Twombly** | kontrolü bırakan karalama; sayfanın yarısı boş | 180 |
+| 2 | **Katsushika Hokusai** | köşeli, basamaklı, kesintili fırça konturu | 150 |
+| 3 | **Eugène Delacroix** | arayan, dönen çoklu kontur; hiçbiri silinmez | 120 |
+| 4 | **Vincent van Gogh** | kısa, yönlü vuruş kümeleri; ton yok, yön var | 100 |
+| 5 | **Rembrandt** | eksiltme; ışığa dokunma, gölge tek yönlü demetlerle | 80 |
+| 6 | **Ben Shahn** | yavaş ama yönü şaşmayan, oyma gibi kesik kontur | 50 |
+| 7 | **Albrecht Dürer** | yüzeyi saran sistemli paralel tarama, açılı ikinci katman | 40 |
+| 8 | **Georges Seurat** | çizgi yok; kalemin yanıyla saf değer, dokulu kâğıt | 40 |
+
+Her kutu **6 dakika**; **kutulara hiçbir nesne çizilmez, yalnızca iz.** Hafta 1'de kutu 1–2 (elin ilk
+ısınması), hafta 2'de kutu 3–8. **Twombly'yle başlamanın sebebi:** ilk kutuda **başarısız olmak
+imkânsızdır** — dönemin ilk saatindeki kaygıyı ortadan kaldıran tek şey budur. **Seurat'yla bitmesinin
+sebebi:** o kutu hafta 8'in ton skalasını ve hafta 9'un ışık-gölgesini doğrudan hazırlar.
 
 **Asıl değerli aşama — aynı nesne, dört el:** Hafta 3'te sınıfa tek bir nesne konur (kırışmış kâğıt
-torba). Aynı nesne dört kez, dört farklı iz imzasıyla, 6'şar dakika. Artık kopya değil **çeviri**
-vardır: dört çizim aynı nesneyi gösterir, **dört farklı şey söyler.**
+torba). Aynı nesne dört kez, 6'şar dakika, sekizden seçilen dört iz imzasıyla — Hokusai / van Gogh /
+Delacroix / Seurat. Artık kopya değil **çeviri** vardır: dört çizim aynı nesneyi gösterir, **dört
+farklı şey söyler.**
 
 **Kör okuma *(grup)*:** Dört çizim etiketsiz karıştırılıp asılır; sınıf hangisinin hangi iz olduğunu
 tahmin eder, isabet oranı tahtaya yazılır. A1 ile aynı eksen: "güzel mi" değil **"anlaşıldı mı".**
 
-A2'nin metronomuyla birlikte yürür: bant 1'de 180 BPM, bant 4'te 40 BPM — tempo seçilmez, **duyulur.**
+A2'nin metronomuyla birlikte yürür: 180 → 40 BPM. Tempo seçilmez, **duyulur.** Bu tek araç, sekiz
+kutunun birbirinden ayrışmasını sağlayan en etkili şeydir.
 
-**Çerçeve cümlesi, her derste tekrarlanır:** *İz bir alettir, imza değil.* Hafta 14 sergi paftasında
-öğrenci **"kendi izim"** sayfasıyla kapatır: 16 kutudan hangisi ona yapıştı, iki cümle, altında o
+**Çerçeve cümlesi, her kutuda tekrarlanır:** *İz bir alettir, imza değil.* Hafta 14 sergi paftasında
+öğrenci **"kendi izim"** sayfasıyla kapatır: sekiz kutudan hangisi ona yapıştı, iki cümle, altında o
 izle yapılmış tek bir çalışma.
 
-**Ayrıntılı protokol, sanatçı kataloğu, ölçme ve açık erişim görsel kaynakları:** `05-iz-atlasi.md`.
-**Öğrenci şablonu:** `05-iz-atlasi-A3-sablon.svg` (A3 yatay, doğrudan baskıya hazır).
+**Reprodüksiyonlar:** `cizimteknikleri/masters' lines/` — sırayla, **tek tek** projeksiyona verilir.
+Hepsi aynı anda ekranda olursa öğrenci karşılaştırır, taklit etmez.
+
+**Öğrenci föyü:** `06-ustalarin-cizgileri-foy.svg` (A4, baskıya hazır).
+**Hoca notları — ayırt edici özellikler, tipik hatalar, yönlendirme cümleleri:** `06-ustalarin-cizgileri-hoca-notlari.md`.
+**Genişletilmiş 16'lık katalog ve yedek sanatçılar:** `05-iz-atlasi.md`.
 
 > **Araştırma değeri: yüksek.** Kör okuma, Makale A için gönderen–alıcı ekseninde ikinci veri seti
 > üretir: duygu değil **iz karakteri** aktarılıyor mu?

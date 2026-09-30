@@ -4,6 +4,17 @@
 
 ---
 
+> ### ⚑ BU DOSYANIN STATÜSÜ
+> **Derste yürütülen hâl sekiz sanatçılıdır** — Twombly · Hokusai · Delacroix · van Gogh · Rembrandt ·
+> Ben Shahn · Dürer · Seurat. Reprodüksiyonlar `cizimteknikleri/masters' lines/` klasöründedir.
+> Öğrenci föyü: **`06-ustalarin-cizgileri-foy.svg`** · Hoca notları: **`06-ustalarin-cizgileri-hoca-notlari.md`**
+>
+> Bu dosya **genişletilmiş referans kataloğudur:** 16 sanatçı, dört tempo bandı, artı beş mimar.
+> Bir kutuyu değiştirmek, ikinci bir tur açmak ya da başka bir derse uyarlamak istediğinizde
+> yedek havuz burasıdır. `05-iz-atlasi-A3-sablon.svg` de bu 16'lık genişletilmiş sürümün paftasıdır.
+
+---
+
 ## 0. NEDEN
 
 Yeni başlayan öğrencinin gerçek problemi kötü çizmek değil, **tek bir çizgiye sahip olmaktır**: yavaş,
