@@ -1,7 +1,7 @@
 const pptxgen = require("pptxgenjs");
 const p = new pptxgen();
-p.defineLayout({ name:"A3P", width:11.69, height:16.54 });   // A3 dikey
-p.layout = "A3P";
+p.defineLayout({ name:"A3L", width:16.54, height:11.69 });   // A3 yatay
+p.layout = "A3L";
 p.author = "IMC321 Serbest Çizim Teknikleri";
 p.title  = "Çizgilerle Şiir / Çizgilerle Şarkı — Pafta";
 
@@ -10,61 +10,62 @@ const F="Arial";
 const T=(o)=>Object.assign({isTextBox:true,margin:0},o);
 
 /* --- ızgara --- */
-const M=0.75, W=11.69-2*M;            // 10.19
+const M=0.70, W=16.54-2*M;             // 15.14
 const G=0.22;                          // tek oluk ölçüsü
-const LW=3.40, RW=W-LW-G;              // sol 3.40 · sağ 6.57
-const BY=1.40, BH=3.80;                // üst blok
-const R1=0.78, R2=0.92, R3=BH-R1-R2-2*G;   // 1.66
-const SY=5.63, SQ=W;                   // çizim karesi: tam genişlik
+const BY=1.42, BB=10.80, BH=BB-BY;     // gövde: 9.38
+const SQ=BH;                           // çizim karesi (kare)
+const LW=W-SQ-G;                       // sol sütun: 5.54
+const SX=M+LW+G;                       // kare sol kenarı
+const R1=0.78, R2=0.92;                // kimlik · künye satırları
+const REST=BH-R1-R2-3*G;               // 7.02
+const R3=4.95, R4=REST-R3;             // kaynak 4.95 · duygular 2.07
 
 function rect(s,x,y,w,h){
   s.addShape(p.ShapeType.rect,{x,y,w,h,fill:{type:"none"},line:{color:INK,width:1}});
 }
-function label(s,x,y,w,txt){
+function cell(s,x,y,w,h,txt){
+  rect(s,x,y,w,h);
   s.addText(txt,T({x:x+0.14,y:y+0.12,w:w-0.28,h:0.20,
     fontFace:F,fontSize:9.5,bold:true,charSpacing:0.8,color:INK}));
 }
-function cell(s,x,y,w,h,txt){ rect(s,x,y,w,h); label(s,x,y,w,txt); }
 
 function pafta(song){
   const s=p.addSlide(); s.background={color:WHITE};
 
   /* başlık */
   s.addText("IMC321  ·  SERBEST ÇİZİM TEKNİKLERİ  ·  ÖDEV 1",
-    T({x:M,y:0.58,w:W,h:0.18,fontFace:F,fontSize:9.5,charSpacing:1.2,color:GREY}));
+    T({x:M,y:0.55,w:W,h:0.18,fontFace:F,fontSize:9.5,charSpacing:1.2,color:GREY}));
   s.addText(song?"Çizgilerle Şarkı":"Çizgilerle Şiir",
-    T({x:M,y:0.82,w:W,h:0.40,fontFace:F,fontSize:22,bold:true,color:INK}));
+    T({x:M,y:0.79,w:W,h:0.40,fontFace:F,fontSize:22,bold:true,color:INK}));
 
   /* ---- sol sütun ---- */
-  if(song){
-    cell(s,M,BY,LW,R1+G+R2,"KAREKOD");                       // 1.92
-    cell(s,M,BY+R1+G+R2+G,LW,R3,"SÖZLER");                   // 1.66 — sağdaki duygular ile aynı hiza
-  }else{
-    cell(s,M,BY,LW,BH,"ŞİİR");                               // uzun dikey alan
-  }
-
-  /* ---- sağ sütun ---- */
-  const RX=M+LW+G;
-  const w3=(RW-2*G)/3, w2=(RW-G)/2;
-  cell(s,RX,            BY,w3,R1,"AD SOYAD");
-  cell(s,RX+w3+G,       BY,w3,R1,"ÖĞRENCİ NO");
-  cell(s,RX+2*(w3+G),   BY,w3,R1,"TARİH");
+  const w3=(LW-2*G)/3, w2=(LW-G)/2;
+  cell(s,M,            BY,w3,R1,"AD SOYAD");
+  cell(s,M+w3+G,       BY,w3,R1,"ÖĞRENCİ NO");
+  cell(s,M+2*(w3+G),   BY,w3,R1,"TARİH");
 
   const Y2=BY+R1+G;
-  cell(s,RX,      Y2,w2,R2,song?"ESER ADI":"ŞİİRİN ADI");
-  cell(s,RX+w2+G, Y2,w2,R2,song?"SANATÇI":"ŞAİR");
+  cell(s,M,      Y2,w2,R2,song?"ESER ADI":"ŞİİRİN ADI");
+  cell(s,M+w2+G, Y2,w2,R2,song?"SANATÇI":"ŞAİR");
 
   const Y3=Y2+R2+G;
-  cell(s,RX,Y3,RW,R3,song?"ŞARKININ DUYGULARI":"ŞİİRİN DUYGULARI");
+  if(song){
+    const qh=1.95;
+    cell(s,M,Y3,         LW,qh,          "KAREKOD");
+    cell(s,M,Y3+qh+G,    LW,R3-qh-G,     "SÖZLER");
+  }else{
+    cell(s,M,Y3,LW,R3,"ŞİİR");
+  }
+
+  const Y4=Y3+R3+G;
+  cell(s,M,Y4,LW,R4,song?"ŞARKININ DUYGULARI":"ŞİİRİN DUYGULARI");
 
   /* ---- çizim karesi ---- */
-  s.addText("ÇİZİM ALANI",T({x:M,y:SY-0.21,w:W,h:0.18,
-    fontFace:F,fontSize:9.5,bold:true,charSpacing:0.8,color:INK}));
-  rect(s,M,SY,SQ,SQ);
+  cell(s,SX,BY,SQ,SQ,"ÇİZİM ALANI");
 
   /* ---- alt satır ---- */
   s.addText("Yalnızca çizgi: yazı, sembol ve figür kullanılmaz.",
-    T({x:M,y:SY+SQ+0.14,w:W,h:0.18,fontFace:F,fontSize:9.5,italic:true,color:GREY}));
+    T({x:M,y:BB+0.16,w:W,h:0.18,fontFace:F,fontSize:9.5,italic:true,color:GREY}));
 }
 
 pafta(false);   // slayt 1 — şiir
