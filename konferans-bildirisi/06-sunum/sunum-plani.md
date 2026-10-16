@@ -88,12 +88,31 @@ göstermek titizlik olarak okunur ve soru-cevapta seni korur.
 
 ---
 
+## Üretilen dosyalar
+
+| Dosya | Ne |
+|---|---|
+| `ICSMMEP26_Presentation_Unal.pptx` | 17 slayt, İngilizce, her slaytta konuşmacı notu |
+| `ICSMMEP26_Presentation_Unal.pdf` | Yedek — konferans bilgisayarında font sorunu çıkarsa |
+| `sunum-uret.js` | Üretim betiği; metin değişirse yeniden çalıştırılır |
+
+Tasarım: koyu orman yeşili + kabuk kremi + terrakota vurgu. Başlık Cambria,
+gövde Calibri (ikisi de Office ile birlikte geliyor, font sorunu çıkmaz).
+
+### Tezden alınan görsellerde yapılan düzeltmeler
+
+- Gerilme–şekil değiştirme grafiklerinin Türkçe başlık, eksen adı ve açıklama
+  kutuları kırpılarak kaldırıldı; yerine İngilizce etiketler slayt üzerinde eklendi.
+  Eğrilerin kendisine dokunulmadı.
+- Kemerli panel fotoğrafı, tezde yanına yerleştirilmiş Türkçe duyusal ölçek
+  grafiğinden ayrıldı.
+
 ## Hazırlık adımları
 
-1. [ ] Fotoğrafları topla (aşağıdaki liste)
+1. [x] Fotoğrafları topla — tezden çıkarıldı, `03-gorseller/` içinde
 2. [ ] Karşılaştırma tablosundaki referans değerleri kaynaklandır
-3. [ ] Slaytları üret
-4. [ ] Konuşma metni / konuşmacı notları
+3. [x] Slaytları üret
+4. [x] Konuşmacı notları — her slaytta gömülü
 5. [ ] Prova — 12 dakikayı aşmamalı
 6. [ ] Soru-cevap hazırlığı (aşağıda)
 
