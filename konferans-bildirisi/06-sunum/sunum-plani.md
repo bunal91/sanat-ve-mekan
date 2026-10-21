@@ -1,7 +1,28 @@
-# ICSMMEP-26 Sunum Planı — teknik sürüm
+# ICSMMEP-26 Sunum Planı — teknik sürüm, dış kaynak ağırlıklı
 
-**Format:** 15 dakika → ~13 dakika konuşma + ~2 dakika soru-cevap
-**Dil:** İngilizce · **Slayt:** 21 · **Konuşmacı notu:** her slaytta, tam cümle
+**Format:** 15 dakika → ~13:30 konuşma + soru-cevap
+**Dil:** İngilizce · **Slayt:** 23 (son slayt kaynaklar, süre dışı) · **Konuşmacı notu:** her slaytta
+
+## Tez-bağımlılığı konusunda not
+
+Kendi doktora çalışmasını konferansta sunmak standart akademik pratiktir ve
+intihal değildir. Sunumdaki "derived from the author's doctoral dissertation"
+beyanı **kaldırılmamalı** — asıl koruma odur.
+
+Gerçek risk sunum değil, **bildiri tam metnidir.** Tezden hakemli dergi makalesi
+planlanıyorsa, bazı dergiler konferans tam metnini önceki yayın sayar. Hedef
+derginin politikası tam metin göndermeden önce kontrol edilmeli.
+
+Bu sürümde tez bağımlılığı veriyi azaltarak değil, **dış kaynağı artırarak**
+düşürüldü:
+
+- Slayt 2–4 tamamen dış literatür: yumurta kabuğu değerlendirme derlemeleri,
+  agar–gliserol sistemleri, ve Materiom verisiyle belgelenmiş boşluk.
+- Ürün önerisi slaydından tezin dirençlilik öznitelikleri çerçevesi
+  (modülerlik / bağlantısallık / bolluk / çeşitlilik) çıkarıldı; yerine
+  mühendislik dilinde sistem özellikleri kondu.
+- Karşılaştırma bloklarına agar film literatürüyle konumlandırma eklendi.
+- Kaynaklar slaydı eklendi; soru-cevap boyunca ekranda kalır.
 
 ## Hedef kitle varsayımı
 
@@ -16,31 +37,34 @@ karıştırıcısı (8), kerfli kesit (12), ve tüm sınırlılıklar (20).
 
 ## Akış
 
-| # | Slayt | Blok | ~süre |
-|---|---|---|---|
-| 1 | Title | Giriş | 0:20 |
-| 2 | Problem statement — filler bio-based, binder is not | Giriş | 0:50 |
-| 3 | Aim, scope and research questions | Giriş | 0:40 |
-| 4 | Constituents and their function | Üretim | 0:40 |
-| 5 | Protocol I — mineral fraction | Üretim | 0:50 |
-| 6 | Protocol II — binder phase and thermal regime | Üretim | 0:55 |
-| 7 | Protocol III — compositing, casting, drying | Üretim | 0:55 |
-| 8 | Formulation matrix and derived ratios | Karakterizasyon | 0:55 |
-| 9 | Test programme | Karakterizasyon | 0:45 |
-| 10 | Compressive strength scales with solids concentration | Karakterizasyon | 1:00 |
-| 11 | Failure mode — progressive crushing | Karakterizasyon | 0:50 |
-| 12 | Flexural behaviour — plasticiser is decisive | Karakterizasyon | 1:00 |
-| 13 | Reaction to fire | Karakterizasyon | 0:40 |
-| 14 | Hygric response and bulk density | Karakterizasyon | 0:40 |
-| 15 | Benchmark I — conventional interior materials | Karşılaştırma | 0:45 |
-| 16 | Benchmark II — bio-based composites | Karşılaştırma | 0:55 |
-| 17 | A derived property — modulus of resilience | Karşılaştırma | 1:00 |
-| 18 | Product proposal — modular demountable system | Uygulama | 0:50 |
-| 19 | Potentials for sustainable interiors | Uygulama | 0:45 |
-| 20 | Limitations of the study | Kapanış | 0:50 |
-| 21 | Conclusions | Kapanış | 0:35 |
+| # | Slayt | Blok | ~süre | Kaynak |
+|---|---|---|---|---|
+| 1 | Title | Giriş | 0:15 | — |
+| 2 | State of the art I — eggshell valorisation | Giriş | 0:50 | **Dış** |
+| 3 | State of the art II — agar as a structural binder | Giriş | 0:55 | **Dış** |
+| 4 | The gap is documented, not rhetorical | Giriş | 0:50 | **Dış** |
+| 5 | Aim, scope and research questions | Giriş | 0:35 | Kendi |
+| 6 | Constituents and their function | Üretim | 0:35 | Karma |
+| 7 | Protocol I — mineral fraction | Üretim | 0:45 | Kendi |
+| 8 | Protocol II — binder phase and thermal regime | Üretim | 0:50 | Kendi |
+| 9 | Protocol III — compositing, casting, drying | Üretim | 0:50 | Kendi |
+| 10 | Formulation matrix and derived ratios | Karakterizasyon | 0:50 | Kendi |
+| 11 | Test programme | Karakterizasyon | 0:40 | Kendi |
+| 12 | Compressive strength scales with solids concentration | Karakterizasyon | 1:00 | Kendi |
+| 13 | Failure mode — progressive crushing | Karakterizasyon | 0:45 | Kendi |
+| 14 | Flexural behaviour — plasticiser is decisive | Karakterizasyon | 0:55 | Kendi |
+| 15 | Fire, hygric response and density | Karakterizasyon | 0:50 | Karma |
+| 16 | Benchmark I — conventional interior materials | Karşılaştırma | 0:45 | **Dış** |
+| 17 | Benchmark II — bio-based composites | Karşılaştırma | 0:55 | **Dış** |
+| 18 | A derived property — modulus of resilience | Karşılaştırma | 0:55 | Karma |
+| 19 | Application pathway — modular demountable system | Uygulama | 0:45 | Kendi |
+| 20 | Potentials for sustainable interiors | Uygulama | 0:45 | Karma |
+| 21 | Limitations of the study | Kapanış | 0:50 | Kendi |
+| 22 | Conclusions | Kapanış | 0:35 | Kendi |
+| 23 | Selected references | — | süre dışı | **Dış** |
 
-**Toplam ≈ 13:00**
+**Toplam ≈ 13:30.** Yedi slayt tamamen dış literatüre, dört slayt karmaya
+dayanıyor — sunumun ilk üç buçuk dakikası tamamen alanın mevcut durumu.
 
 ## Veriden yeni çıkarılan iki sonuç
 
@@ -72,7 +96,19 @@ Tek veri noktası ve bir ölçüm önerisi olarak sunuluyor, sıralama olarak de
 
 ## Zaman daralırsa
 
-Kısalt: 13, 14, 19. **Dokunma: 2, 10, 16, 17, 20.**
+Kısalt: 15, 20. **Dokunma: 3, 4, 12, 17, 18, 21.**
+
+## ⚠ Teyit edilecek künyeler
+
+Aşağıdakiler web aramasından alındı, **tam metinleriyle doğrulanmalı:**
+
+- Ngayakamo, B. & Onwualu, A.P. (2022), *Heliyon* — dergi adı ve cilt/sayfa teyidi
+- Hernández, V. vd. (2022), *Materials* 15(11), 3954, DOI 10.3390/ma15113954 — teyitli
+- Materiom özellik verisi sayısı (dört reçete) — sunum gününe yakın yeniden kontrol
+- Frontiers in Materials 9:1024977 (2022) — yazar adları eklenmeli
+
+Slayt 2'deki "%5–30 dolgu oranı" aralığı derleme özetinden geliyor; derlemenin
+kendisinden doğrulanmalı.
 
 ## Soru-cevap hazırlığı
 

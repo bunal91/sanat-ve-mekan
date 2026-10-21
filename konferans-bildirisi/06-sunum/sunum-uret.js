@@ -74,40 +74,97 @@ s.addText([
 ], { placeholder: "body" });
 s.addNotes("Good morning. Betul Unal, Department of Interior Architecture, Cappadocia University. This paper reports the production protocol and mechanical characterisation of a fully bio-based composite made from waste eggshell bound in an agar-glycerol matrix, and proposes an evaluation criterion better suited to this class of material than compressive strength alone.");
 
-/* ========== 2 problem & gap ========== */
+/* ========== 2 state of the art I ========== */
 s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Introduction" });
-s.addText("Problem statement: the filler is bio-based, the binder is not", { placeholder: "title" });
-kicker(s, 0.55, 1.22, 6.0, "ESTABLISHED USES OF EGGSHELL WASTE");
+s.addText("State of the art I — eggshell valorisation", { placeholder: "title" });
+kicker(s, 0.55, 1.2, 7.3, "WHERE EGGSHELL WASTE CURRENTLY GOES");
 s.addTable([
   [H("Application"), H("Matrix"), H("Reference")],
-  [DL("Cement replacement"), DL("Portland clinker"), DL("Teara et al. 2020")],
+  [DL("Cement and concrete replacement"), DL("Portland clinker"), DL("Teara et al. 2020")],
   [DL("Laterite brick stabilisation"), DL("Cement"), DL("Adogla et al. 2016")],
   [DL("Asphalt binder modification"), DL("Bitumen"), DL("Razzaq & Yousif 2017")],
   [DL("Soil stabilisation"), DL("Lime substitute"), DL("Soundara et al. 2015")],
   [DL("Ceramic wall tile"), DL("Ceramic body"), DL("Vilarinho et al. 2020")],
-  [DL("Particulate filler"), DL("PLA, epoxy, PVC, PU"), DL("Kim & Pal 2010")],
-], { x: 0.55, y: 1.56, w: 6.0, colW: [2.3, 1.8, 1.9], rowH: 0.36, fontSize: 12,
+  [DL("Particulate filler"), DL("PLA, epoxy, PVC, PU"), DL("Owuamanam & Cree 2020")],
+  [DL("Bio-packaging reinforcement"), DL("Starch, PLA films"), DL("Recent reviews, 2021–2025")],
+], { x: 0.55, y: 1.54, w: 7.3, colW: [3.1, 2.1, 2.1], rowH: 0.36, fontSize: 12,
      fontFace: THEME.bodyFontFace, border: { type: "solid", color: "DEDAD1", pt: 1 }, fill: { color: "FFFFFF" }, objectName: "lit-table" });
-card(s, 0.55, 4.3, 6.0, 0.95, "gap-note", "F6E8DF");
-s.addText("In every reported case the binding phase remains petrochemical or clinker-based. The waste is valorised; the matrix is not.",
-  S({ x: 0.85, y: 4.3, w: 5.4, h: 0.95, fontSize: 12.5, bold: true, color: C.accent1, valign: "middle", lineSpacing: 17 }));
-card(s, 6.95, 1.22, 5.8, 4.03, "this-card", THEME.colors.accent4);
-kicker(s, 7.3, 1.45, 5.1, "THIS STUDY", true);
+s.addText("Reviews: Ngayakamo & Onwualu, Heliyon 2022  ·  Owuamanam & Cree, J. Compos. Sci. 4(2):70, 2020  ·  Frontiers in Materials 9:1024977, 2022",
+  S({ x: 0.55, y: 4.2, w: 7.3, h: 0.5, fontSize: 10.5, italic: true, color: C.accent6, lineSpacing: 14 }));
+card(s, 0.55, 4.8, 7.3, 1.45, "pattern", "F6E8DF");
+kicker(s, 0.9, 5.0, 6.6, "THE PATTERN ACROSS THIS LITERATURE");
+s.addText("Eggshell enters as a mineral filler. The binding phase it enters remains petrochemical, clinker-based or ceramic. Reported loadings sit between 5% and 30% of the matrix. The waste is valorised; the matrix is not.",
+  S({ x: 0.9, y: 5.35, w: 6.6, h: 0.85, fontSize: 12, color: C.text1, lineSpacing: 16 }));
+card(s, 8.15, 1.2, 4.6, 5.05, "why-caco3", THEME.colors.accent4);
+kicker(s, 8.5, 1.42, 3.9, "WHY THE FIELD KEEPS RETURNING TO IT", true);
 s.addText([
-  { text: "Mineral phase", options: { bold: true, color: "FFFFFF", breakLine: true } },
-  { text: "Waste eggshell powder, 150 µm", options: { color: "D8E2DA", breakLine: true } },
+  { text: "Approximately 94% calcium carbonate, chemically close to quarried limestone.", options: { bullet: true, breakLine: true } },
+  { text: "A porous, layered shell microstructure with a protein-bound crystalline matrix.", options: { bullet: true, breakLine: true } },
+  { text: "Specific gravity of 0.85–2.66, lighter than most mineral fillers.", options: { bullet: true, breakLine: true } },
+  { text: "Continuously generated, geographically distributed, and currently landfilled at scale.", options: { bullet: true } },
+], S({ x: 8.5, y: 1.85, w: 3.9, h: 3.1, fontSize: 12, color: "FFFFFF", paraSpaceAfter: 8, lineSpacing: 16 }));
+s.addText("The material argument for eggshell is settled. The open question is what binds it.",
+  S({ x: 8.5, y: 5.3, w: 3.9, h: 0.75, fontSize: 12, bold: true, italic: true, color: "F0C9A8", lineSpacing: 16 }));
+s.addNotes("Let me start with where the field is, not where my work is. Eggshell valorisation is well established across construction and packaging - cement, bitumen, lime substitution, ceramic bodies, and as a particulate filler in thermoplastics. Reported loadings run from five to thirty percent. The reason the field keeps returning to it is clear: it is 94 percent calcium carbonate, chemically close to quarried limestone, with a useful porous microstructure and a lower specific gravity than most mineral fillers. So the material argument for eggshell is settled. What is not settled is what binds it - and that is where this study sits.");
+
+/* ========== 3 state of the art II ========== */
+s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Introduction" });
+s.addText("State of the art II — agar as a structural binder", { placeholder: "title" });
+card(s, 0.55, 1.2, 6.0, 2.75, "agar-lit");
+kicker(s, 0.9, 1.42, 5.3, "WHAT IS KNOWN ABOUT AGAR–GLYCEROL SYSTEMS");
+s.addText([
+  { text: "Hernández et al. (Materials 15:3954, 2022) mapped 32 agar–glycerin–water formulations by design of experiments, trained a regression model on the result, and released the dataset openly.", options: { breakLine: true } },
+  { text: " ", options: { fontSize: 8, breakLine: true } },
+  { text: "Across the agar film literature the direction is consistent: glycerol raises elongation and lowers tensile strength. Agar fraction and the agar–glycerol interaction, not glycerol alone, govern stiffness.", options: {} },
+], S({ x: 0.9, y: 1.8, w: 5.3, h: 2.0, fontSize: 12, color: C.text1, lineSpacing: 16 }));
+card(s, 0.55, 4.15, 6.0, 2.1, "agar-limit", "F6E8DF");
+kicker(s, 0.9, 4.37, 5.3, "AND WHAT IS NOT");
+s.addText("That body of work concerns unfilled thin films, tested in tension, for packaging. Agar has not been characterised as the binder of a mineral-filled cast solid in bending, which is the loading case for an interior surface component.",
+  S({ x: 0.9, y: 4.75, w: 5.3, h: 1.35, fontSize: 12, color: C.text1, lineSpacing: 16 }));
+card(s, 6.85, 1.2, 5.9, 5.05, "shift", THEME.colors.accent4);
+kicker(s, 7.2, 1.42, 5.2, "THE SHIFT THIS STUDY MAKES", true);
+s.addTable([
+  [H("—"), H("Agar film literature"), H("This study")],
+  [DL("Form", { color: "FFFFFF" }), DL("Thin cast film"), DL("Cast solid, 20–50 mm")],
+  [DL("Filler", { color: "FFFFFF" }), DL("Unfilled or organic"), DL("Mineral, 66% of solids")],
+  [DL("Loading", { color: "FFFFFF" }), DL("Uniaxial tension"), DL("Compression and bending")],
+  [DL("Application", { color: "FFFFFF" }), DL("Packaging"), DL("Interior surfaces")],
+  [DL("Property set", { color: "FFFFFF" }), DL("Tensile, barrier"), DL("Strength, fire, hygric")],
+], { x: 7.2, y: 1.8, w: 5.2, colW: [1.5, 1.9, 1.8], rowH: 0.44, fontSize: 11.5,
+     fontFace: THEME.bodyFontFace, border: { type: "solid", color: "DEDAD1", pt: 1 }, fill: { color: "FFFFFF" }, objectName: "shift-table" });
+s.addText("The compositional logic is carried over from the film literature. The form, the filler, the loading case and the property set are not.",
+  S({ x: 7.2, y: 4.65, w: 5.2, h: 1.0, fontSize: 12.5, bold: true, color: "F0C9A8", lineSpacing: 17 }));
+s.addNotes("Second, what is known about the binder. Agar-glycerol systems are reasonably well characterised - Hernandez and colleagues mapped thirty-two agar, glycerin and water formulations by design of experiments in 2022 and released the dataset openly. The consistent finding across that literature is that glycerol raises elongation and lowers tensile strength, and that stiffness is governed by the agar fraction and the agar-glycerol interaction rather than glycerol alone. But all of that concerns unfilled thin films, tested in tension, for packaging. Agar has not been characterised as the binder of a mineral-filled cast solid in bending - which is the actual loading case for an interior surface component. That is the shift this study makes: the compositional logic carries over, the form and the loading case do not.");
+
+/* ========== 4 the gap, evidenced ========== */
+s = pres.addSlide({ masterName: "CONTENT_DARK", sectionTitle: "Introduction" });
+s.addText("The gap is not rhetorical — it is documented", { placeholder: "title" });
+card(s, 0.55, 1.2, 6.0, 2.4, "materiom", "15302A");
+kicker(s, 0.9, 1.42, 5.3, "AN OPEN COMMONS ALREADY EXISTS", true);
+s.addText("Materiom publishes biomaterial recipes under CC-BY-SA, excludes petrochemical ingredients, archives each recipe as prior art, and indexes property data on the Materials Data Facility with citable DOIs. The infrastructure for shared procedures is built.",
+  S({ x: 0.9, y: 1.8, w: 5.3, h: 1.6, fontSize: 12, color: "FFFFFF", lineSpacing: 16 }));
+card(s, 0.55, 3.8, 6.0, 2.45, "four", "15302A");
+kicker(s, 0.9, 4.02, 5.3, "BUT THE PROPERTY DATA IS THIN", true);
+s.addText("Property data currently exists for four recipes:",
+  S({ x: 0.9, y: 4.38, w: 5.3, h: 0.3, fontSize: 12, color: "C7D4C9" }));
+s.addText([
+  { text: "agar bioplastic", options: { bullet: true, breakLine: true } },
+  { text: "gelatin bioplastic", options: { bullet: true, breakLine: true } },
+  { text: "mycelium–walnut shell composite", options: { bullet: true, breakLine: true } },
+  { text: "mussel shell–sucrose ceramic", options: { bullet: true } },
+], S({ x: 0.9, y: 4.72, w: 5.3, h: 1.4, fontSize: 12, color: "FFFFFF", paraSpaceAfter: 4, lineSpacing: 15 }));
+s.addText("materiom.org/data, accessed October 2026",
+  S({ x: 0.55, y: 6.32, w: 6.0, h: 0.3, fontSize: 10, italic: true, color: "AFC4B7" }));
+stat(s, 6.95, 1.3, 2.7, "4", "recipes with published property data", true);
+stat(s, 9.95, 1.3, 2.8, "> 50 000", "articles queued for automated recipe extraction", true);
+card(s, 6.95, 3.0, 5.8, 3.25, "gap-read", "15302A");
+kicker(s, 7.3, 3.22, 5.1, "WHAT THIS MEANS FOR THE PRESENT WORK", true);
+s.addText([
+  { text: "The nearest analogue in that set is the mussel shell–sucrose ceramic: a shell mineral in a biological binder. Nothing in it couples a shell mineral to an agar binder, and nothing reports compressive, flexural, ignitability and hygric data for the same formulation family.", options: { color: "FFFFFF", breakLine: true } },
   { text: " ", options: { fontSize: 10, breakLine: true } },
-  { text: "Binding phase", options: { bold: true, color: "FFFFFF", breakLine: true } },
-  { text: "Agar (seaweed polysaccharide) plasticised with glycerol", options: { color: "D8E2DA", breakLine: true } },
-  { text: " ", options: { fontSize: 10, breakLine: true } },
-  { text: "Protective finish", options: { bold: true, color: "FFFFFF", breakLine: true } },
-  { text: "Shellac, three coats", options: { color: "D8E2DA" } },
-], S({ x: 7.3, y: 1.9, w: 5.1, h: 2.7, fontSize: 14, lineSpacing: 19 }));
-s.addText("Both phases are biological and biodegradable.",
-  S({ x: 7.3, y: 4.62, w: 5.1, h: 0.4, fontSize: 13, bold: true, italic: true, color: "F0C9A8" }));
-s.addText("Scope note: this is a non-loadbearing interior surface material. It is not proposed as a structural substitute for any material in the table above.",
-  S({ x: 0.55, y: 5.55, w: 12.2, h: 0.5, fontSize: 12, italic: true, color: C.accent6 }));
-s.addNotes("Eggshell valorisation is well established. What the literature shares is that the shell always enters a synthetic or clinker matrix - cement, bitumen, lime, ceramic, or a thermoplastic. So the waste is valorised while the binder is not. This study replaces the binder as well. I should set the scope immediately: this is a non-loadbearing interior surface material, and I am not proposing it against any structural material.");
+  { text: "So the contribution is not a claim that nobody has thought of this. It is a protocol and a property set entering a commons that is currently four recipes deep.", options: { bold: true, color: "F0C9A8" } },
+], S({ x: 7.3, y: 3.6, w: 5.1, h: 2.5, fontSize: 12, lineSpacing: 16 }));
+s.addNotes("I want to be careful here, because claiming a gap is cheap. So let me show you the gap rather than assert it. Materiom is an open commons for biomaterial recipes - CC-BY-SA licensed, petrochemical ingredients excluded, each recipe archived as prior art, property data indexed with citable DOIs. The infrastructure for shared procedures exists. But property data currently exists for four recipes: agar bioplastic, gelatin bioplastic, mycelium-walnut shell composite, and mussel shell-sucrose ceramic. The nearest analogue to this work is the last one - a shell mineral in a biological binder. Nothing in that set couples a shell mineral to an agar binder, and nothing reports compressive, flexural, ignitability and hygric data for one formulation family. So my contribution is not that nobody thought of this. It is a protocol and a property set entering a commons that is four recipes deep.");
 
 /* ========== 3 aim ========== */
 s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Introduction" });
@@ -351,60 +408,43 @@ s.addText("At 18.8% glycerol the composite deformed without developing measurabl
   S({ x: 8.65, y: 4.7, w: 3.75, h: 1.65, fontSize: 11.5, color: C.text1, lineSpacing: 16 }));
 s.addNotes("Flexure, to ASTM D790. The decisive variable is plasticiser. At 18.8 percent glycerol the composite deformed without developing measurable resistance - the machine registered nothing usable. Halving it produced a section that resists while still flexing: 2.325 megapascals at a modulus of 192. The transition is sharp and it lies between those two values, which is itself useful to know. Two disclosures. First, as I showed earlier, the glycerol effect is confounded with solids concentration. Second, look at the tension face - it is kerfed. D790 assumes a solid rectangle and my calculation uses the full twenty millimetre depth, so some of this compliance is geometric. The modulus I am quoting is a lower bound on the bulk material.");
 
-/* ========== 13 fire ========== */
+/* ========== 13 fire + hygric ========== */
 s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Characterisation" });
-s.addText("Reaction to fire", { placeholder: "title" });
-s.addImage({ path: G + "10-alev-testi.png", x: 0.55, y: 1.3, w: 2.1, h: 4.55, objectName: "flame" });
-card(s, 3.0, 1.3, 4.6, 4.55, "fire-card");
-kicker(s, 3.35, 1.52, 3.9, "ISO 11925-1, SINGLE-FLAME EDGE IGNITION");
-s.addText("40 × 50 mm dried specimen, flame applied at 45° to the upper corner for 15 s; repeated at the lower corner.",
-  S({ x: 3.35, y: 1.92, w: 3.9, h: 0.7, fontSize: 11.5, color: C.accent6, lineSpacing: 15 }));
-stat(s, 3.35, 2.7, 1.85, "~10 s", "to ignition under direct flame");
-stat(s, 5.4, 2.7, 1.85, "4 s", "to self-extinguish after flame removal");
+s.addText("Reaction to fire, hygric response and density", { placeholder: "title" });
+s.addImage({ path: G + "10-alev-testi.png", x: 0.55, y: 1.25, w: 1.75, h: 3.79, objectName: "flame" });
+card(s, 2.5, 1.25, 4.5, 5.05, "fire-card");
+kicker(s, 2.85, 1.45, 3.8, "IGNITABILITY — ISO 11925-1");
+s.addText("40 × 50 mm dried specimen; flame at 45° to the upper corner for 15 s, repeated at the lower corner.",
+  S({ x: 2.85, y: 1.8, w: 3.8, h: 0.6, fontSize: 11, color: C.accent6, lineSpacing: 14 }));
+stat(s, 2.85, 2.45, 1.8, "~10 s", "to ignition");
+stat(s, 4.85, 2.45, 1.8, "4 s", "to self-extinguish");
 s.addText([
-  { text: "Charring remained local to the point of flame contact.", options: { bullet: true, breakLine: true } },
+  { text: "Charring local to the flame contact point.", options: { bullet: true, breakLine: true } },
   { text: "No lateral flame spread in either ignition.", options: { bullet: true, breakLine: true } },
-  { text: "No melting and no dripping — no thermoplastic behaviour.", options: { bullet: true, breakLine: true } },
-  { text: "Physical integrity retained outside the charred zone.", options: { bullet: true } },
-], S({ x: 3.35, y: 4.05, w: 3.9, h: 1.6, fontSize: 11.5, color: C.text1, paraSpaceAfter: 6, lineSpacing: 15 }));
-card(s, 7.95, 1.3, 4.8, 2.5, "fire-mech", THEME.colors.accent4);
-kicker(s, 8.3, 1.52, 4.1, "MECHANISM", true);
-s.addText("The calcium carbonate fraction is the probable contributor: carbonates endothermically decompose and release CO₂, which dilutes the flame front locally. This is consistent with the absence of lateral spread, but was not verified calorimetrically here.",
-  S({ x: 8.3, y: 1.92, w: 4.1, h: 1.75, fontSize: 12, color: "FFFFFF", lineSpacing: 16 }));
-card(s, 7.95, 4.0, 4.8, 1.85, "fire-limit", "F6E8DF");
-kicker(s, 8.3, 4.22, 4.1, "WHAT THIS IS NOT");
-s.addText("ISO 11925-1 is an ignitability test. No Euroclass reaction-to-fire classification was determined, and no cone calorimetry, smoke density or toxicity data were obtained.",
-  S({ x: 8.3, y: 4.6, w: 4.1, h: 1.15, fontSize: 11.5, color: C.text1, lineSpacing: 16 }));
-s.addNotes("Reaction to fire, by single-flame ignitability. Ignition at around ten seconds under direct flame, self-extinguishing four seconds after the flame is removed. Charring stayed local, there was no lateral spread, and - importantly for a polymer-adjacent material - no melting and no dripping. The probable mechanism is the carbonate fraction: carbonates decompose endothermically and release carbon dioxide, which dilutes the flame front locally. I did not verify that calorimetrically. And to be clear about what this is not: 11925-1 is an ignitability test. There is no Euroclass classification here, no cone calorimetry, no smoke density, no toxicity data.");
-
-/* ========== 14 water & density ========== */
-s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Characterisation" });
-s.addText("Hygric response and bulk density", { placeholder: "title" });
-card(s, 0.55, 1.3, 6.0, 4.55, "water-card");
-kicker(s, 0.9, 1.52, 5.3, "WATER ABSORPTION — ASTM D570");
-s.addText("40 × 50 mm specimen, fully dried, three coats of shellac. Initial mass 10 g, full immersion in distilled water at ambient temperature for 24 h.",
-  S({ x: 0.9, y: 1.92, w: 5.3, h: 0.75, fontSize: 11.5, color: C.accent6, lineSpacing: 15 }));
-stat(s, 0.9, 2.75, 2.5, "0.7%", "mass gain over 24 h, shellac-coated");
-s.addText([
-  { text: "Slight dimensional expansion observed, consistent with water penetrating inter-fibre voids.", options: { bullet: true, breakLine: true } },
-  { text: "Where the coating was thin, local dissolution and surface loss occurred.", options: { bullet: true, breakLine: true } },
-  { text: "Coating integrity, not the composite itself, is the limiting factor for any humid application.", options: { bullet: true } },
-], S({ x: 0.9, y: 4.05, w: 5.3, h: 1.6, fontSize: 11.5, color: C.text1, paraSpaceAfter: 6, lineSpacing: 15 }));
-card(s, 6.75, 1.3, 6.0, 4.55, "dens-card");
-kicker(s, 7.1, 1.52, 5.3, "BULK DENSITY — COMPARATIVE POSITION");
-s.addText("C3 specimen: 173 g over a 125 cm³ mould volume.",
-  S({ x: 7.1, y: 1.92, w: 5.3, h: 0.35, fontSize: 11.5, color: C.accent6 }));
+  { text: "No melting, no dripping — no thermoplastic behaviour.", options: { bullet: true } },
+], S({ x: 2.85, y: 3.75, w: 3.8, h: 1.1, fontSize: 11, color: C.text1, paraSpaceAfter: 5, lineSpacing: 14 }));
+s.addText("Probable mechanism: endothermic carbonate decomposition releasing CO₂, diluting the flame front locally. Not verified calorimetrically. ISO 11925-1 is an ignitability test — no Euroclass classification, cone calorimetry, smoke or toxicity data were obtained.",
+  S({ x: 2.85, y: 4.95, w: 3.8, h: 1.25, fontSize: 10.5, italic: true, color: C.accent1, lineSpacing: 14 }));
+card(s, 7.2, 1.25, 5.55, 2.2, "water-card");
+kicker(s, 7.55, 1.45, 4.85, "WATER ABSORPTION — ASTM D570");
+s.addText("40 × 50 mm specimen, three shellac coats, 10 g initial mass, 24 h full immersion.",
+  S({ x: 7.55, y: 1.8, w: 4.85, h: 0.4, fontSize: 11, color: C.accent6, lineSpacing: 14 }));
+s.addText("0.7%", S({ x: 7.55, y: 2.2, w: 1.5, h: 0.55, fontSize: 28, bold: true, color: C.accent1, fontFace: THEME.headFontFace, valign: "bottom" }));
+s.addText("mass gain over 24 h. Slight dimensional expansion; local dissolution where the coating was thin. Coating integrity, not the composite, is the limiting factor for humid use.",
+  S({ x: 9.2, y: 2.18, w: 3.2, h: 1.3, fontSize: 11, color: C.text1, lineSpacing: 14 }));
+card(s, 7.2, 3.6, 5.55, 2.72, "dens-card");
+kicker(s, 7.55, 3.8, 4.85, "BULK DENSITY — COMPARATIVE POSITION");
 s.addTable([
-  [H("Material"), H("Density (g/cm³)"), H("Reference")],
+  [H("Material"), H("g/cm³"), H("Reference")],
   [DL("This study (C3)", { bold: true, color: C.accent1 }), D("1.38", HI), DL("—")],
   [DL("Mycelium, cellulose composites"), D("0.3 – 0.8"), DL("Jones et al. 2020")],
   [DL("Fired clay brick"), D("1.6 – 2.0"), DL("William & Owen 1995")],
   [DL("Normal-weight concrete"), D("2.4"), DL("William & Owen 1995")],
-], { x: 7.1, y: 2.4, w: 5.3, colW: [2.5, 1.5, 1.3], rowH: 0.44, fontSize: 11.5,
+], { x: 7.55, y: 4.14, w: 4.85, colW: [2.05, 0.95, 1.85], rowH: 0.35, fontSize: 10.5,
      fontFace: THEME.bodyFontFace, border: { type: "solid", color: "DEDAD1", pt: 1 }, fill: { color: "FFFFFF" }, objectName: "dens-table" });
-s.addText("Denser than the fungal and cellulosic bio-material family, lighter than fired clay and concrete. The density is quoted on a mould-volume basis and is therefore a lower bound: the dried specimen occupies less volume than the mould.",
-  S({ x: 7.1, y: 4.5, w: 5.3, h: 1.2, fontSize: 11.5, italic: true, color: C.accent6, lineSpacing: 16 }));
-s.addNotes("Two environmental properties. On water: with three shellac coats, 0.7 percent mass gain over twenty-four hours of full immersion. There was slight dimensional expansion, and where the coating was thin the surface dissolved locally - so coating integrity, not the composite, is the limiting factor for humid use. On density: 1.38 grams per cubic centimetre, which places the material between the fungal and cellulosic bio-materials below it and fired clay above it. And note that this is on a mould-volume basis, so it is a lower bound - the dried specimen occupies less volume than the mould did.");
+s.addText("Quoted on a mould-volume basis and therefore a lower bound.",
+  S({ x: 7.55, y: 5.99, w: 4.85, h: 0.32, fontSize: 10, italic: true, color: C.accent6 }));
+s.addNotes("Three environmental properties together. On fire: ignition at around ten seconds under direct flame, self-extinguishing four seconds after removal, charring local, no lateral spread, and no melting or dripping. The probable mechanism is endothermic carbonate decomposition releasing carbon dioxide, which dilutes the flame front - not verified calorimetrically. And to be explicit: 11925-1 is an ignitability test. No Euroclass, no cone calorimetry, no smoke or toxicity data. On water: 0.7 percent mass gain over twenty-four hours with three shellac coats, with local dissolution where the coating was thin - so coating integrity is the limiting factor, not the composite. On density: 1.38, between the fungal and cellulosic materials below and fired clay above, and quoted on a mould-volume basis so it is a lower bound.");
 
 /* ========== 15 benchmark conventional ========== */
 pres.addSection({ title: "Benchmarking" });
@@ -465,7 +505,7 @@ card(s, 0.55, 4.7, 12.2, 1.55, "bio-read", THEME.colors.accent4);
 kicker(s, 0.9, 4.9, 11.5, "WHERE THE MATERIAL SITS", true);
 s.addText([
   { text: "An order of magnitude above the fungal and lime-binder family in compression, and squarely inside the bio-polymer band in stiffness — between soy bioplastic at 124 MPa and flax-fibre PLA at 198 MPa, within the LDPE range. ", options: { color: "FFFFFF" } },
-  { text: "A mineral-filled, water-cast, oven-free material reaches the stiffness of melt-processed bio-polymers.", options: { bold: true, color: "F0C9A8" } },
+  { text: "A mineral-filled, water-cast, oven-free material reaches the stiffness of melt-processed bio-polymers. Unfilled agar films reported in the packaging literature sit one to two orders of magnitude below this; the mineral phase, not the binder, is carrying the stiffness.", options: { bold: true, color: "F0C9A8" } },
 ], S({ x: 0.9, y: 5.25, w: 11.5, h: 0.95, fontSize: 12.5, lineSpacing: 17 }));
 s.addNotes("Second benchmark, and this is the one that matters. Against the bio-based family the position changes completely. In compression the material is an order of magnitude above mycelium composites and hempcrete - the fungal and lime-binder family. In stiffness it sits squarely inside the bio-polymer band: 192 megapascals, between soy bioplastic at 124 and flax-fibre PLA at 198, inside the LDPE range. I want to underline what that means. This is a water-cast material, dried at room temperature, with no oven and no extrusion - and it reaches the stiffness of melt-processed bio-polymers. Wood is still two orders of magnitude above, and I am not going to pretend otherwise.");
 
@@ -516,14 +556,14 @@ s.addText([
 card(s, 3.95, 4.1, 8.8, 2.6, "prop-sys", THEME.colors.accent4);
 kicker(s, 4.3, 4.32, 8.1, "SYSTEM CHARACTERISTICS", true);
 s.addText([
-  { text: "Modularity — ", options: { bold: true, color: "FFFFFF" } },
-  { text: "repeated cast units assembled without adhesive, so the assembly is reversible.", options: { color: "D8E2DA", breakLine: true } },
-  { text: "Connectivity — ", options: { bold: true, color: "FFFFFF" } },
-  { text: "units interlock, distributing load across neighbours rather than through a frame.", options: { color: "D8E2DA", breakLine: true } },
-  { text: "Redundancy — ", options: { bold: true, color: "FFFFFF" } },
-  { text: "a damaged unit is replaceable; the system does not depend on any single component.", options: { color: "D8E2DA", breakLine: true } },
-  { text: "Diversity — ", options: { bold: true, color: "FFFFFF" } },
-  { text: "colour, texture and format vary within one formulation family, from pigments and mould geometry.", options: { color: "D8E2DA" } },
+  { text: "Reversible assembly — ", options: { bold: true, color: "FFFFFF" } },
+  { text: "repeated cast units joined without adhesive, so components can be recovered intact.", options: { color: "D8E2DA", breakLine: true } },
+  { text: "Distributed load path — ", options: { bold: true, color: "FFFFFF" } },
+  { text: "units interlock and share load across neighbours rather than transferring it through a frame.", options: { color: "D8E2DA", breakLine: true } },
+  { text: "Unit replaceability — ", options: { bold: true, color: "FFFFFF" } },
+  { text: "a damaged unit is exchanged without dismantling the assembly; no single component is critical.", options: { color: "D8E2DA", breakLine: true } },
+  { text: "Formulation-family variation — ", options: { bold: true, color: "FFFFFF" } },
+  { text: "colour, texture and format vary from pigments and mould geometry at constant composition.", options: { color: "D8E2DA" } },
 ], S({ x: 4.3, y: 4.7, w: 8.1, h: 1.9, fontSize: 12, lineSpacing: 18 }));
 s.addNotes("The product proposal follows from the measurements rather than being imposed on them. Low strength with high deformation capacity means the component carries its own weight and handling loads and nothing else. Self-extinguishing with no dripping means interior surfaces away from ignition sources. Coating-dependent water resistance means dry interiors, not wet rooms and not facades. And repeatable small-format casting means a module rather than a sheet - which matters, because it means failure is replaced one unit at a time. The system is assembled without adhesive, so it is reversible; units interlock so load distributes across neighbours; a damaged unit is replaceable; and colour and texture vary within a single formulation family.");
 
@@ -591,6 +631,34 @@ s.addText("Betül Ünal  ·  Department of Interior Architecture, Cappadocia Uni
 s.addText("Testing: Advanced Construction Materials Research Laboratory, Hacettepe University, with thanks to Dr Hüseyin İlcan. Derived from the author's doctoral dissertation, Hacettepe University, 2025.",
   S({ x: 0.55, y: 6.74, w: 12.2, h: 0.32, fontSize: 10, italic: true, color: "AFC4B7" }));
 s.addNotes("Five conclusions. A reproducible protocol, reported parameter by parameter. Solids concentration, not mineral content, governs compressive strength - linear across the range tested. Plasticiser content sets the brittle-ductile transition, and that transition lies between 18.8 and 10.3 percent glycerol. A water-cast, ambient-dried material reaches bio-polymer stiffness without an oven. And strength alone is the wrong criterion for this class: deformation capacity governs service behaviour, and strength and modulus should be reported together so that the modulus of resilience can be derived. Thank you. I am happy to take questions.");
+
+/* ========== references ========== */
+s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Closing" });
+s.addText("Selected references", { placeholder: "title" });
+const refs = [
+ ["Reviews and state of the art", [
+   "Ngayakamo, B. & Onwualu, A.P. (2022). Recent advances in green processing technologies for valorisation of eggshell waste for sustainable construction materials. Heliyon.",
+   "Owuamanam, S. & Cree, D. (2020). Progress of bio-calcium carbonate waste eggshell and seashell fillers in polymer composites: a review. Journal of Composites Science, 4(2), 70.",
+   "Biogenic calcium carbonate derived from waste shells for advanced material applications: a review (2022). Frontiers in Materials, 9, 1024977." ]],
+ ["Agar and bio-polymer systems", [
+   "Hernández, V., Ibarra, D., Triana, J.F., Martínez-Soto, B. et al. (2022). Agar biopolymer films for biodegradable packaging: a reference dataset for exploring the limits of mechanical performance. Materials, 15(11), 3954.",
+   "Materiom (2026). Open biomaterial recipe commons and property database. materiom.org/data.",
+   "Mansour et al. (2021); Dweib et al. (2004); Faruk et al. (2012); Zhao et al. (2022) — bio-polymer elastic moduli." ]],
+ ["Comparative material data", [
+   "Jones, M. et al. (2020) — mycelium composite density and compressive strength. Islam et al. (2018) — mycelium modulus.",
+   "Arnaud, L. & Gourlay, E. (2012) — hempcrete. Kim & Pal (2010) — eggshell-filled PLA. Shah et al. (2016) — mineral-filled biocomposites.",
+   "Nemli & Aydın (2007) — MDF. Altun (2006) — travertine. Klyosov (2007) — WPC. Velasco & Gaona (2011) — compressed mushroom panel. Pope & Hudson (1989) — pine." ]],
+];
+refs.forEach(([h, items], i) => {
+  const y = 1.25 + i * 1.78;
+  card(s, 0.55, y, 12.2, 1.6, "ref-" + i);
+  kicker(s, 0.9, y + 0.14, 11.5, h.toUpperCase());
+  s.addText(items.map((x, j) => ({ text: x, options: { bullet: true, breakLine: j < items.length - 1 } })),
+    S({ x: 0.9, y: y + 0.46, w: 11.5, h: 1.05, fontSize: 10.5, color: C.accent6, paraSpaceAfter: 3, lineSpacing: 13 }));
+});
+s.addText("Standards: ASTM D790-17 · ISO 11925-1:2020 · ASTM D570-98(2018).   Full reference list available on request.",
+  S({ x: 0.55, y: 6.6, w: 12.2, h: 0.3, fontSize: 10.5, italic: true, color: C.accent6 }));
+s.addNotes("Selected references, left up for questions. The standards used are listed at the bottom.");
 
 (async () => {
   await pres.writeFile({ fileName: OUT });
