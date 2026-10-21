@@ -1,4 +1,18 @@
-# ICSMMEP-26 Sunum Planı — teknik sürüm, dış kaynak ağırlıklı
+# ICSMMEP-26 Sunum Planı — teknik, dış kaynak ağırlıklı, minimal
+
+## Görsel dil
+
+Minimal akademik: beyaz zemin, kart ve kutu yok, ayrım boşlukla ve tipografiyle
+yapılıyor. Terrakota vurgu yalnızca anahtar sayılarda ve slayt başına bir
+cümlede. Koyu zemin yalnızca üç slaytta — başlık, boşluk tespiti ve dirençlilik
+modülü — yani anlatının üç dönüm noktasında.
+
+Tablolar açık gri hatlarla ve beyaz zeminle, başlık satırı hafif tonda.
+Protokol adımları turuncu daire yerine `01 02 03` numaralandırmasıyla.
+Açıklayıcı düzyazı slayttan konuşmacı notlarına taşındı: slayt sayıyı ve iddiayı
+taşıyor, gerisini konuşmacı söylüyor.
+
+Başlık Cambria, gövde Calibri — ikisi de Office ile gelir, font sorunu çıkmaz.
 
 **Format:** 15 dakika → ~13:30 konuşma + soru-cevap
 **Dil:** İngilizce · **Slayt:** 23 (son slayt kaynaklar, süre dışı) · **Konuşmacı notu:** her slaytta
