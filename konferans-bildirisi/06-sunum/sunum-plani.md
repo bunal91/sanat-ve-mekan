@@ -118,7 +118,7 @@ kendisinden doğrulanmalı.
 | R² = 0,994 üç noktayla mı? | Evet, slayt 10'da aynen böyle yazıyor. Yasa değil, test edilebilir hipotez. |
 | Kerfli kesite D790 nasıl uygulandı? | Dolu dikdörtgen varsayımıyla; bu yüzden raporlanan modül alt sınır. Slayt 12. |
 | Büzülme ne kadar? | Ölçülmedi. Yoğunluk kalıp hacmi üzerinden, alt sınır. Slayt 7 ve 14. |
-| Yangın sınıfı? | Yok. ISO 11925-1 yalnızca tutuşabilirlik. Euroclass, koni kalorimetre, duman yok. Slayt 13. |
+| Yangın sınıfı? | Yok. ISO 11925-2 yalnızca tutuşabilirlik. Euroclass, koni kalorimetre, duman yok. Slayt 13. |
 | Nem/küf dayanımı? | Veri yok. Gomalak %0,7'ye indiriyor ama uzun vadeli test yapılmadı. |
 | LCA var mı? | Yok. Slayt 19 bunu açıkça niteliksel potansiyel olarak sunuyor. |
 | Ahşaptan zayıf, ne anlamı var? | Ahşap biyo-atıktan üretilmiyor, MDF'nin yapıştırıcısı formaldehit esaslı. Karşılaştırma tek eksende yapılmaz; slayt 16 doğru aileyi gösteriyor. |

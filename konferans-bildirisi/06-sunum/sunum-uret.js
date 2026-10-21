@@ -178,7 +178,7 @@ kicker(s, 0.9, 3.78, 5.2, "SCOPE");
 s.addText([
   { text: "Five formulations, two mechanical test programmes", options: { bullet: true, breakLine: true } },
   { text: "Three specimens per formulation", options: { bullet: true, breakLine: true } },
-  { text: "Standardised tests: ASTM D790, ISO 11925-1, ASTM D570", options: { bullet: true, breakLine: true } },
+  { text: "Standardised tests: ASTM D790, ISO 11925-2, ASTM D570", options: { bullet: true, breakLine: true } },
   { text: "Single laboratory, ambient curing, no accelerated ageing", options: { bullet: true } },
 ], S({ x: 0.9, y: 4.15, w: 5.2, h: 1.85, fontSize: 12.5, color: C.accent6, paraSpaceAfter: 6 }));
 card(s, 6.85, 1.25, 5.9, 4.9, "rq", THEME.colors.accent4);
@@ -312,7 +312,7 @@ s.addTable([
   [H("Property"), H("Standard"), H("Specimen geometry"), H("n"), H("Measured quantity")],
   [DL("Compressive behaviour"), DL("— (cube compression)"), DL("50 mm cube moulds"), D("3 per mix"), DL("Maximum load; compressive stress")],
   [DL("Flexural behaviour"), DL("ASTM D790, three-point"), DL("180 × 60 × 20 mm, 120 mm span"), D("3 per mix"), DL("Flexural strength; flexural modulus")],
-  [DL("Reaction to fire"), DL("ISO 11925-1"), DL("40 × 50 mm, 45°, 15 s edge flame"), D("2 ignitions"), DL("Time to ignition; time to self-extinguish")],
+  [DL("Reaction to fire"), DL("ISO 11925-2"), DL("40 × 50 mm, 45°, 15 s edge flame"), D("2 ignitions"), DL("Time to ignition; time to self-extinguish")],
   [DL("Water absorption"), DL("ASTM D570"), DL("40 × 50 mm, shellac-coated"), D("1"), DL("Mass gain after 24 h immersion")],
   [DL("Bulk density"), DL("Gravimetric"), DL("50 mm cube"), D("1"), DL("Mass / mould volume")],
 ], { x: 0.55, y: 1.3, w: 12.2, colW: [2.5, 2.45, 3.5, 1.15, 2.6], rowH: 0.52, fontSize: 12,
@@ -413,7 +413,7 @@ s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Characterisation" });
 s.addText("Reaction to fire, hygric response and density", { placeholder: "title" });
 s.addImage({ path: G + "10-alev-testi.png", x: 0.55, y: 1.25, w: 1.75, h: 3.79, objectName: "flame" });
 card(s, 2.5, 1.25, 4.5, 5.05, "fire-card");
-kicker(s, 2.85, 1.45, 3.8, "IGNITABILITY — ISO 11925-1");
+kicker(s, 2.85, 1.45, 3.8, "IGNITABILITY — ISO 11925-2");
 s.addText("40 × 50 mm dried specimen; flame at 45° to the upper corner for 15 s, repeated at the lower corner.",
   S({ x: 2.85, y: 1.8, w: 3.8, h: 0.6, fontSize: 11, color: C.accent6, lineSpacing: 14 }));
 stat(s, 2.85, 2.45, 1.8, "~10 s", "to ignition");
@@ -423,7 +423,7 @@ s.addText([
   { text: "No lateral flame spread in either ignition.", options: { bullet: true, breakLine: true } },
   { text: "No melting, no dripping — no thermoplastic behaviour.", options: { bullet: true } },
 ], S({ x: 2.85, y: 3.75, w: 3.8, h: 1.1, fontSize: 11, color: C.text1, paraSpaceAfter: 5, lineSpacing: 14 }));
-s.addText("Probable mechanism: endothermic carbonate decomposition releasing CO₂, diluting the flame front locally. Not verified calorimetrically. ISO 11925-1 is an ignitability test — no Euroclass classification, cone calorimetry, smoke or toxicity data were obtained.",
+s.addText("Probable mechanism: endothermic carbonate decomposition releasing CO₂, diluting the flame front locally. Not verified calorimetrically. ISO 11925-2 is an ignitability test — no Euroclass classification, cone calorimetry, smoke or toxicity data were obtained.",
   S({ x: 2.85, y: 4.95, w: 3.8, h: 1.25, fontSize: 10.5, italic: true, color: C.accent1, lineSpacing: 14 }));
 card(s, 7.2, 1.25, 5.55, 2.2, "water-card");
 kicker(s, 7.55, 1.45, 4.85, "WATER ABSORPTION — ASTM D570");
@@ -444,7 +444,7 @@ s.addTable([
      fontFace: THEME.bodyFontFace, border: { type: "solid", color: "DEDAD1", pt: 1 }, fill: { color: "FFFFFF" }, objectName: "dens-table" });
 s.addText("Quoted on a mould-volume basis and therefore a lower bound.",
   S({ x: 7.55, y: 5.99, w: 4.85, h: 0.32, fontSize: 10, italic: true, color: C.accent6 }));
-s.addNotes("Three environmental properties together. On fire: ignition at around ten seconds under direct flame, self-extinguishing four seconds after removal, charring local, no lateral spread, and no melting or dripping. The probable mechanism is endothermic carbonate decomposition releasing carbon dioxide, which dilutes the flame front - not verified calorimetrically. And to be explicit: 11925-1 is an ignitability test. No Euroclass, no cone calorimetry, no smoke or toxicity data. On water: 0.7 percent mass gain over twenty-four hours with three shellac coats, with local dissolution where the coating was thin - so coating integrity is the limiting factor, not the composite. On density: 1.38, between the fungal and cellulosic materials below and fired clay above, and quoted on a mould-volume basis so it is a lower bound.");
+s.addNotes("Three environmental properties together. On fire: ignition at around ten seconds under direct flame, self-extinguishing four seconds after removal, charring local, no lateral spread, and no melting or dripping. The probable mechanism is endothermic carbonate decomposition releasing carbon dioxide, which dilutes the flame front - not verified calorimetrically. And to be explicit: 11925-2 is an ignitability test. No Euroclass, no cone calorimetry, no smoke or toxicity data. On water: 0.7 percent mass gain over twenty-four hours with three shellac coats, with local dissolution where the coating was thin - so coating integrity is the limiting factor, not the composite. On density: 1.38, between the fungal and cellulosic materials below and fired clay above, and quoted on a mould-volume basis so it is a lower bound.");
 
 /* ========== 15 benchmark conventional ========== */
 pres.addSection({ title: "Benchmarking" });
@@ -656,7 +656,7 @@ refs.forEach(([h, items], i) => {
   s.addText(items.map((x, j) => ({ text: x, options: { bullet: true, breakLine: j < items.length - 1 } })),
     S({ x: 0.9, y: y + 0.46, w: 11.5, h: 1.05, fontSize: 10.5, color: C.accent6, paraSpaceAfter: 3, lineSpacing: 13 }));
 });
-s.addText("Standards: ASTM D790-17 · ISO 11925-1:2020 · ASTM D570-98(2018).   Full reference list available on request.",
+s.addText("Standards: ASTM D790-17 · ISO 11925-2:2020 · ASTM D570-98(2018).   Full reference list available on request.",
   S({ x: 0.55, y: 6.6, w: 12.2, h: 0.3, fontSize: 10.5, italic: true, color: C.accent6 }));
 s.addNotes("Selected references, left up for questions. The standards used are listed at the bottom.");
 

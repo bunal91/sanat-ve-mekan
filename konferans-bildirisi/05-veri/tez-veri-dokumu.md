@@ -94,7 +94,7 @@ Numune 180×60×20 mm, destek açıklığı L = 120 mm.
 
 ## 4. Diğer testler
 
-**Alev tepkisi (ISO 11925-1):** 40×50 mm numune, 45°, 15 s alev.
+**Alev tepkisi (ISO 11925-2):** 40×50 mm numune, 45°, 15 s alev.
 Tutuşma ~10. saniyede; alev çekilince **4 saniyede kendi kendine sönme**.
 Lokal kömürleşme, alev yayılımı yok. Erime/damlama yok.
 
