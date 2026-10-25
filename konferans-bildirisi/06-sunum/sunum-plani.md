@@ -1,84 +1,67 @@
-# ICSMMEP-26 Sunum Planı — teknik, dış kaynak ağırlıklı, minimal
+# ICSMMEP-26 Sunum Planı
 
-## Görsel dil
+**Format:** 15 dakika → ~13 dakika konuşma + soru-cevap
+**Dil:** İngilizce · **Slayt:** 19 (son slayt kaynaklar, süre dışı)
+**Konuşmacı notu:** her slaytta, tam cümle
 
-Minimal akademik: beyaz zemin, kart ve kutu yok, ayrım boşlukla ve tipografiyle
-yapılıyor. Terrakota vurgu yalnızca anahtar sayılarda ve slayt başına bir
-cümlede. Koyu zemin yalnızca üç slaytta — başlık, boşluk tespiti ve dirençlilik
-modülü — yani anlatının üç dönüm noktasında.
+## Tasarım sistemi
 
-Tablolar açık gri hatlarla ve beyaz zeminle, başlık satırı hafif tonda.
-Protokol adımları turuncu daire yerine `01 02 03` numaralandırmasıyla.
-Açıklayıcı düzyazı slayttan konuşmacı notlarına taşındı: slayt sayıyı ve iddiayı
-taşıyor, gerisini konuşmacı söylüyor.
+**Tek yazı tipi: Calibri.** Baştan sona, istisnasız — grafik eksenleri ve tablolar
+dahil. Tek değişken ağırlık (normal / kalın) ve boyut. Serif yok.
 
-Başlık Cambria, gövde Calibri — ikisi de Office ile gelir, font sorunu çıkmaz.
+**Renk malzemenin kendisinde.** Yeşil kaldırıldı ("biyo = yeşil" klişesi).
+Sistem neredeyse akromatik: siyaha yakın mürekkep, gri kademeler, saç teli
+inceliğinde çizgiler, beyaz kâğıt. Tek vurgu toprak kırmızısı (#B4513A) ve
+yalnızca anahtar sayılarda, tek bir cümlede ve diyagramlarda. Böylece
+**fotoğraflardaki krem, gri ve alev turuncusu tek renkli zeminde öne çıkıyor.**
 
-**Format:** 15 dakika → ~13:30 konuşma + soru-cevap
-**Dil:** İngilizce · **Slayt:** 23 (son slayt kaynaklar, süre dışı) · **Konuşmacı notu:** her slaytta
+**Başlıklar azaltıldı.** Çoğu slaytta büyük başlık yok; üstte 9 punto, harf
+aralığı açılmış küçük bir bölüm etiketi var. Kalın ifade cümlesi yalnızca
+iddiası olan altı slaytta: 2, 6, 9, 10, 11, 14, 15.
 
-## Tez-bağımlılığı konusunda not
+**Üç diyagram metnin yerini aldı:**
 
-Kendi doktora çalışmasını konferansta sunmak standart akademik pratiktir ve
-intihal değildir. Sunumdaki "derived from the author's doctoral dissertation"
-beyanı **kaldırılmamalı** — asıl koruma odur.
+| Slayt | Diyagram | Ne yapıyor |
+|---|---|---|
+| 2 | Dolgu / bağlayıcı istifi | İki istif yan yana; sağdaki bağlayıcı bloğu kırmızı. Boşluk tek bakışta görünüyor |
+| 6 | Protokol akışı | Sıcaklık satırı, dört numaralı blok, oklar, detay listeleri. **Üç slayt tek slayda indi** |
+| 15 | Gerilme–şekil değiştirme şeması | Akmaya kadarki gölgeli üçgen. Üçgenin alanı formülün ta kendisi: ½σε = σ²/2E |
 
-Gerçek risk sunum değil, **bildiri tam metnidir.** Tezden hakemli dergi makalesi
-planlanıyorsa, bazı dergiler konferans tam metnini önceki yayın sayar. Hedef
-derginin politikası tam metin göndermeden önce kontrol edilmeli.
+Son blok (23 °C, kür) dolgusuz ve ince siyah konturlu — ısıl aşamalardan
+görsel olarak ayrılıyor. Küçük bir detay ama akışı okutuyor.
 
-Bu sürümde tez bağımlılığı veriyi azaltarak değil, **dış kaynağı artırarak**
-düşürüldü:
+**Koyu zemin üç slaytta:** kapak, boşluk tespiti, dirençlilik modülü. Anlatının
+üç dönüm noktası.
 
-- Slayt 2–4 tamamen dış literatür: yumurta kabuğu değerlendirme derlemeleri,
-  agar–gliserol sistemleri, ve Materiom verisiyle belgelenmiş boşluk.
-- Ürün önerisi slaydından tezin dirençlilik öznitelikleri çerçevesi
-  (modülerlik / bağlantısallık / bolluk / çeşitlilik) çıkarıldı; yerine
-  mühendislik dilinde sistem özellikleri kondu.
-- Karşılaştırma bloklarına agar film literatürüyle konumlandırma eklendi.
-- Kaynaklar slaydı eklendi; soru-cevap boyunca ekranda kalır.
-
-## Hedef kitle varsayımı
-
-Malzeme mühendisleri ve akademisyenler. Tasarım kuramı beklentileri yok;
-standart, numune geometrisi, n, dağılım ve kaynak bekliyorlar. Sunum buna göre
-kurgulandı: her sayı kaynağıyla, her yöntem standardıyla, her sınır açıkça.
-
-**Güç, iddiayı büyütmekten değil, kesinlikten geliyor.** Soru sorulamaması
-isteniyorsa yol, zayıf noktaları hakemden önce ve daha net söylemektir. Bu
-yüzden dört ayrı yerde beyan var: numune geometrisi (slayt 7), formülasyon
-karıştırıcısı (8), kerfli kesit (12), ve tüm sınırlılıklar (20).
+**Kapak** fotoğrafı sağa taşırıyor, sol tarafta koyu bir scrim üzerinde başlık.
+Malzeme ilk saniyeden görünüyor.
 
 ## Akış
 
-| # | Slayt | Blok | ~süre | Kaynak |
-|---|---|---|---|---|
-| 1 | Title | Giriş | 0:15 | — |
-| 2 | State of the art I — eggshell valorisation | Giriş | 0:50 | **Dış** |
-| 3 | State of the art II — agar as a structural binder | Giriş | 0:55 | **Dış** |
-| 4 | The gap is documented, not rhetorical | Giriş | 0:50 | **Dış** |
-| 5 | Aim, scope and research questions | Giriş | 0:35 | Kendi |
-| 6 | Constituents and their function | Üretim | 0:35 | Karma |
-| 7 | Protocol I — mineral fraction | Üretim | 0:45 | Kendi |
-| 8 | Protocol II — binder phase and thermal regime | Üretim | 0:50 | Kendi |
-| 9 | Protocol III — compositing, casting, drying | Üretim | 0:50 | Kendi |
-| 10 | Formulation matrix and derived ratios | Karakterizasyon | 0:50 | Kendi |
-| 11 | Test programme | Karakterizasyon | 0:40 | Kendi |
-| 12 | Compressive strength scales with solids concentration | Karakterizasyon | 1:00 | Kendi |
-| 13 | Failure mode — progressive crushing | Karakterizasyon | 0:45 | Kendi |
-| 14 | Flexural behaviour — plasticiser is decisive | Karakterizasyon | 0:55 | Kendi |
-| 15 | Fire, hygric response and density | Karakterizasyon | 0:50 | Karma |
-| 16 | Benchmark I — conventional interior materials | Karşılaştırma | 0:45 | **Dış** |
-| 17 | Benchmark II — bio-based composites | Karşılaştırma | 0:55 | **Dış** |
-| 18 | A derived property — modulus of resilience | Karşılaştırma | 0:55 | Karma |
-| 19 | Application pathway — modular demountable system | Uygulama | 0:45 | Kendi |
-| 20 | Potentials for sustainable interiors | Uygulama | 0:45 | Karma |
-| 21 | Limitations of the study | Kapanış | 0:50 | Kendi |
-| 22 | Conclusions | Kapanış | 0:35 | Kendi |
-| 23 | Selected references | — | süre dışı | **Dış** |
+| # | Slayt | ~süre | Kaynak |
+|---|---|---|---|
+| 1 | Cover | 0:15 | — |
+| 2 | The filler was already bio-based · **diyagram** | 0:50 | **Dış** |
+| 3 | What is already known — eggshell + agar | 0:50 | **Dış** |
+| 4 | A commons four recipes deep | 0:50 | **Dış** |
+| 5 | Aim and questions | 0:35 | Kendi |
+| 6 | Production protocol · **diyagram** | 1:20 | Kendi |
+| 7 | Constituents and formulations | 0:55 | Karma |
+| 8 | Test programme | 0:40 | Kendi |
+| 9 | Compression — packing density | 1:00 | Kendi |
+| 10 | Failure mode | 0:45 | Kendi |
+| 11 | Flexure — plasticiser | 0:55 | Kendi |
+| 12 | Fire, moisture, density | 0:50 | Karma |
+| 13 | Against conventional materials | 0:45 | **Dış** |
+| 14 | Against bio-based composites | 0:55 | **Dış** |
+| 15 | Modulus of resilience · **diyagram** | 0:55 | Karma |
+| 16 | Application pathway + potentials | 0:55 | Karma |
+| 17 | Limitations | 0:50 | Kendi |
+| 18 | Conclusions | 0:35 | Kendi |
+| 19 | Selected references | süre dışı | **Dış** |
 
-**Toplam ≈ 13:30.** Yedi slayt tamamen dış literatüre, dört slayt karmaya
-dayanıyor — sunumun ilk üç buçuk dakikası tamamen alanın mevcut durumu.
+**Toplam ≈ 13:00.** Protokolün üç slayttan tek diyagrama inmesi ve uygulama ile
+potansiyellerin birleşmesiyle 23 slayttan 19'a düşüldü.
 
 ## Veriden yeni çıkarılan iki sonuç
 
@@ -110,7 +93,7 @@ Tek veri noktası ve bir ölçüm önerisi olarak sunuluyor, sıralama olarak de
 
 ## Zaman daralırsa
 
-Kısalt: 15, 20. **Dokunma: 3, 4, 12, 17, 18, 21.**
+Kısalt: 5, 12. **Dokunma: 2, 4, 6, 9, 14, 15, 17.**
 
 ## ⚠ Teyit edilecek künyeler
 
