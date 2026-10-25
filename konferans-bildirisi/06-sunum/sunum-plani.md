@@ -1,83 +1,88 @@
 # ICSMMEP-26 Sunum Planı
 
-**Format:** 15 dakika konuşma · **Slayt:** 25 (son slayt kaynaklar, süre dışı)
+**Format:** 15 dakika konuşma · **Slayt:** 27 (son slayt kaynaklar, süre dışı)
 **Dil:** İngilizce · **Konuşmacı notu:** her slaytta, tam cümle
 
 ## Tasarım sistemi
 
-**Tek yazı tipi: Calibri.** Grafik eksenleri ve tablolar dahil, istisnasız.
-Tek değişken ağırlık ve boyut.
+Tek yazı tipi **Calibri**, istisnasız. Başlıklar iki–üç kelime, aynı konumda,
+20 punto kalın. Neredeyse akromatik palet; tek toprak vurgusu sayılarda,
+diyagramlarda ve slayt başına en fazla bir cümlede. Renk fotoğraflarda.
 
-**Başlıklar iki–üç kelime.** Cümle değil, etiket: *The waste · The problem ·
-The binder · The gap · Protocol · Compression · Crushing · Flexure · Fire ·
-Resilience · Limits.* Slayt başına tek başlık, aynı konumda, 20 punto kalın.
+## Yedi diyagram
 
-**Renk malzemede.** Neredeyse akromatik sistem; tek toprak vurgusu yalnızca
-sayılarda, diyagramlarda ve slayt başına en fazla bir cümlede. Fotoğraflardaki
-krem ve alev rengi tek renkli zeminde öne çıkıyor.
+| Slayt | Diyagram | Ne yapıyor |
+|---|---|---|
+| 3 | Dolgu / bağlayıcı istifi | İki istif; sağdaki bağlayıcı bloğu kırmızı. Boşluk tek bakışta |
+| 7 | Araştırma tasarımı | Produce → Measure → Position → Propose, numaralı daireler |
+| 10 | Mineral hazırlığı | Beş aşama, küçülen daireler tane boyutu indirgemesini gösteriyor |
+| 11 | **Sıcaklık profili** | Zaman–sıcaklık eğrisi; iki plato, dört işaretçi. Bağlayıcı aşamasının tamamı tek grafikte |
+| 12 | Kür zaman çizelgesi | Gün 0 → 4 → 11, kalıpta ve ortamda geçen süre ayrı bloklar |
+| 22 | Gerilme–şekil değiştirme şeması | Gölgeli üçgen formülün kendisi |
+| 23 | Döngüsellik şeridi | Altı adım, altıncı blok kırmızı: döngünün kapandığı yer |
 
-**Fotoğraflar büyük.** Üç slayt tam kanama: kapak (sol tarafta tam opak panel,
-sağda fotoğraf), malzeme (13,33 × 7,5 tam sayfa), eğilme (üçlü fotoğraf +
-koyu panel). Test fotoğrafları 5 inç yüksekliğinde.
+## Üç büyük fotoğraf slaytı
 
-**Beş diyagram metnin yerini aldı:**
+Kapak (solda tam opak panel, sağda fotoğraf), malzeme (13,33 × 7,5 tam sayfa),
+eğilme (üçlü fotoğraf + koyu panel). Test fotoğrafları 4,8–5,4 inç yüksekliğinde.
 
-| Slayt | Diyagram |
-|---|---|
-| 3 | Dolgu / bağlayıcı istifi — boşluk tek bakışta |
-| 9 | Protokol akışı — sıcaklık satırı, dört blok, oklar |
-| 20 | Gerilme–şekil değiştirme şeması — gölgeli üçgen formülün kendisi |
-| 22 | Döngüsellik zinciri — altı adım, geri dönüş oku |
-| 3, 5 | Dikey kurallar ve blok karşıtlıkları |
+## Slayttaki tek formül
 
-## Formüller azaltıldı
+**Ur = σ²/2E**, ve onu diyagram açıklıyor. σf = 3FL/2bd², katı derişimi
+regresyonu ve Ur aritmetiği konuşmacı notlarında — aritmetiğin tamamı
+doğrulandı, çıkarılma sebebi görsel yük ve kürsüde savunma yükü.
 
-Slaytta **tek formül** kaldı: Ur = σ²/2E, ve onu diyagram açıklıyor.
+## Hipotez üzerine not
 
-| Formül | Nerede |
-|---|---|
-| σf = 3FL/2bd² | Slayttan çıkarıldı → tam metinde ve konuşmacı notunda |
-| σc = 6,93·(katı/su) + 0,04 | Denklem çıkarıldı → grafik + "R² = 0,99" notu; denklem konuşmacı notunda |
-| Ur = σ²/2E | **Kaldı** — diyagramla birlikte |
-| 2,325² / (2×192) aritmetiği | Slayttan çıkarıldı → konuşmacı notunda |
+Tezin kendi hipotezi **mekânsal dirençlilik** üzerine kurulu: *"biyoloji temelli
+tasarım yaklaşımıyla geliştirilen bir malzemeden oluşturulan iç mekân tasarım
+kurgusunun, taşıdığı dirençlilik öznitelikleri aracılığıyla mekânsal dirençlilik
+kapasitesine katkılar sunabileceği."*
 
-Hepsinin aritmetiği doğrulandı; çıkarılma sebebi hata değil, görsel yük ve
-kürsüde savunma yükü. Sorulursa cevaplar notlarda hazır.
+Bu, tasarım araştırması dili. Malzeme kongresi için hipotez bu bildirinin
+kapsamına göre yeniden yazıldı:
+
+> A fully bio-based eggshell–agar composite can be produced repeatably under
+> ambient conditions, and its performance for interior surfaces is governed by
+> deformation capacity rather than by strength.
+
+İki cümlecik, ikisini de bildiri test ediyor. Orijinali tercih edersen slayt 8
+değiştirilir — ama o haliyle mekânsal dirençlilik çerçevesinin tamamını
+anlatmak gerekir, ki bu sunumda yok.
 
 ## Akış ve süre
 
-| # | Slayt | ~süre |
-|---|---|---|
-| 1 | Cover | 0:20 |
-| 2 | The waste · **büyük fotoğraf** | 0:40 |
-| 3 | The problem · **diyagram** | 0:50 |
-| 4 | The binder | 0:45 |
-| 5 | The gap | 0:45 |
-| 6 | Questions | 0:30 |
-| 7 | **Malzeme — tam kanama fotoğraf** | 0:25 |
-| 8 | What each does | 0:40 |
-| 9 | Protocol · **diyagram** | 1:20 |
-| 10 | Formulations | 0:50 |
-| 11 | Tests | 0:35 |
-| 12 | Compression | 0:55 |
-| 13 | Crushing · **büyük fotoğraf** | 0:50 |
-| 14 | Flexure | 0:50 |
-| 15 | **Bending — üçlü fotoğraf** | 0:40 |
-| 16 | Fire · **büyük fotoğraf** | 0:45 |
-| 17 | Water and weight | 0:40 |
-| 18 | Versus stone and board | 0:45 |
-| 19 | Versus bio-based | 0:50 |
-| 20 | Resilience · **diyagram** | 1:05 |
-| 21 | Where it fits | 0:45 |
-| 22 | Why it matters · **diyagram** | 0:50 |
-| 23 | Limits | 0:50 |
-| 24 | Conclusions | 0:40 |
-| 25 | References | süre dışı |
+| # | Slayt | ~süre | Not |
+|---|---|---|---|
+| 1 | Cover | 0:20 | tam kanama fotoğraf |
+| 2 | The waste | 0:40 | büyük fotoğraf bandı |
+| 3 | The problem | 0:50 | **diyagram** |
+| 4 | The binder | 0:40 | |
+| 5 | The gap | 0:45 | |
+| 6 | Aim and scope | 0:40 | |
+| 7 | Method | 0:45 | **diyagram** |
+| 8 | Questions + hypothesis | 0:40 | |
+| 9 | Material | 0:25 | **tam kanama fotoğraf** |
+| 10 | Stage 1 — the mineral | 0:50 | **diyagram** |
+| 11 | Stage 2 — the binder | 1:00 | **diyagram** |
+| 12 | Stage 3 — casting and cure | 0:50 | **diyagram** |
+| 13 | Formulations | 0:45 | |
+| 14 | Tests | 0:30 | |
+| 15 | Compression | 0:50 | |
+| 16 | Crushing | 0:45 | büyük fotoğraf |
+| 17 | Flexure | 0:45 | |
+| 18 | Bending | 0:40 | **üçlü fotoğraf** |
+| 19 | Fire and water | 0:45 | büyük fotoğraf |
+| 20 | Versus stone and board | 0:40 | |
+| 21 | Versus bio-based | 0:45 | |
+| 22 | Resilience | 1:00 | **diyagram** |
+| 23 | Where it fits | 0:45 | **diyagram** |
+| 24 | Limits | 0:40 | üç grup |
+| 25 | Next | 0:40 | dört deney |
+| 26 | Conclusions | 0:35 | |
+| 27 | References | süre dışı | |
 
-**Toplam ≈ 15:00.** 19 slayttan 25'e çıkıldı; eklenenler kuram açılışı
-(2, 4, 6), tam kanama malzeme slaytı (7), eğilme fotoğraf slaytı (15) ve
-döngüsellik diyagramı (22). Slayt başına düşen metin azaldı, slayt sayısı arttı —
-minimal olmanın yolu bu.
+**Toplam ≈ 15:00.**
 
 ## Zaman daralırsa
 
