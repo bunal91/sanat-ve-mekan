@@ -44,7 +44,7 @@ const fig = (s,x,y,w,v,l,d,sz) => {
   s.addText(l, S({ x, y:y+(sz||32)/48+0.04, w, h:0.46, fontSize:9.5, color:d?K.onDg:K.grey, valign:"top", lineSpacing:12.5 })); };
 const list = (s,x,y,w,h,items,d,sz) => s.addText(
   items.map((t,i)=>({ text:t, options:{ bullet:{ characterCode:"2013" }, breakLine:i<items.length-1 } })),
-  S({ x,y,w,h, fontSize:sz||12, color:d?K.onD:K.body, paraSpaceAfter:6, lineSpacing:(sz||12)+5 }));
+  S({ x,y,w,h, fontSize:sz||12, color:d?K.onD:K.body, valign:"top", paraSpaceAfter:6, lineSpacing:(sz||12)+5 }));
 const TH = (t) => ({ text:t, options:{ bold:true, color:K.ink, fill:{ color:K.panel }, align:"center", valign:"middle", fontSize:10.5, fontFace:F } });
 const TD = (t,o={}) => ({ text:t, options:Object.assign({ align:"center", valign:"middle", color:K.body, fontSize:10.5, fontFace:F }, o) });
 const TL = (t,o={}) => TD(t, Object.assign({ align:"left" }, o));
@@ -621,13 +621,13 @@ s.addNotes("Flexure, to ASTM D790. The decisive variable is plasticiser content.
 /* ===================== 20 · flexural deformation ===================== */
 s = pres.addSlide({ masterName:"FULL", sectionTitle:"Results" });
 s.addImage({ path:G+"06-egilme-buyuk-sehim.jpg", x:0, y:0, w:3.38, h:7.5, objectName:"b1" });
-s.addImage({ path:G+"07-egilme-yakin-yiv.jpeg", x:3.48, y:0, w:5.0, h:3.75, objectName:"b2" });
-s.addImage({ path:G+"08b-yivli-panel-kemer.jpg", x:3.48, y:3.85, w:5.0, h:3.65, objectName:"b3" });
-s.addShape(pres.ShapeType.rect, { x:8.58, y:0, w:4.75, h:7.5, fill:{ color:K.dark }, line:{ color:K.dark, transparency:100 }, objectName:"pane" });
-s.addText("Flexural deformation", S({ x:9.1, y:1.4, w:3.7, h:0.5, fontSize:20, bold:true, color:K.onD, valign:"middle" }));
-txt(s, 9.1, 2.1, 3.7, 2.8, "The beam is deflected well beyond the failure point of a comparable ceramic without parting. Transverse kerfs on the tension face permit the panel to be arched by hand.\n\nThe kerfs are also why the measured compliance is partly geometric, and why the reported modulus is a lower bound rather than a material constant.", true, 12);
-em(s, 9.1, 5.1, 3.7, 0.9, "Substantial deformation with retained integrity, in both test programmes.", true, true);
-micro(s, 9.1, 6.25, 3.7, "Three-point rig at high deflection · close-up of the kerfed tension face · panel arched by hand", true);
+s.addImage({ path:G+"07-egilme-yakin-yiv.jpeg", x:3.48, y:0, w:4.48, h:3.36, objectName:"b2" });
+s.addImage({ path:G+"08c-kemer.jpg", x:3.48, y:3.85, w:4.48, h:3.65, objectName:"b3" });
+s.addShape(pres.ShapeType.rect, { x:7.96, y:0, w:5.37, h:7.5, fill:{ color:K.dark }, line:{ color:K.dark, transparency:100 }, objectName:"pane" });
+s.addText("Flexural deformation", S({ x:8.45, y:1.4, w:4.2, h:0.5, fontSize:20, bold:true, color:K.onD, valign:"middle" }));
+txt(s, 8.45, 2.1, 4.2, 2.7, "The beam is deflected well beyond the failure point of a comparable ceramic without parting. Transverse kerfs on the tension face permit the panel to be arched by hand.\n\nThe kerfs are also why the measured compliance is partly geometric, and why the reported modulus is a lower bound rather than a material constant.", true, 12);
+em(s, 8.45, 5.0, 4.2, 0.9, "Substantial deformation with retained integrity, in both test programmes.", true, true);
+micro(s, 8.45, 6.3, 4.2, "Three-point rig at high deflection · close-up of the kerfed tension face · panel arched by hand", true);
 s.addNotes("I would rather show this than ask you to take it on the numbers. On the left, the three-point rig at high deflection: the beam is deflected well past the failure point of a comparable ceramic and it has not parted. In the middle, a close-up of the tension face, where the transverse kerfs are visible. Below, the same panel arched by hand. The kerfs are why it arches, and they are also why I report the modulus as a lower bound rather than a material constant. The common result across both test programmes is substantial deformation with retained integrity, and that is the observation the final argument rests on.");
 
 /* ===================== 21 · fire, water, density ===================== */
@@ -803,7 +803,7 @@ H2(s, 0.8, 1.42, 11.7, "Three classes, each with a defined remedy");
  .forEach(([h,items],i)=>{ const x = 0.8 + i*4.0;
   s.addText(h, S({ x, y:1.95, w:3.6, h:0.35, fontSize:13, bold:true, color:K.ink }));
   rule(s, x, 2.42, 3.6);
-  list(s, x, 2.6, 3.6, 3.0, items, false, 12); });
+  list(s, x, 2.58, 3.6, 3.2, items, false, 12); });
 rule(s, 0.8, 5.85, 11.7);
 em(s, 0.8, 6.05, 11.7, 0.5, "Each limitation above corresponds to a defined next experiment, set out on the following slide.", false, true);
 s.addNotes("The limitations, grouped in three classes rather than listed, because the grouping is itself informative. Measurement: no dispersion data, strain assumed rather than instrumented, shrinkage unquantified so density is a lower bound. Process: the flexural series is confounded, the kerfed section was calculated as solid, and stirring was manual in a single laboratory by a single operator. Untested: durability of any kind, reaction-to-fire classification beyond ignitability, and life-cycle assessment. I would rather set these out than have them found. Each one corresponds to a defined next experiment, which is the next slide.");
