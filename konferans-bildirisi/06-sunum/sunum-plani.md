@@ -1,36 +1,70 @@
 # ICSMMEP-26 Sunum Planı
 
-**Format:** 15 dakika konuşma · **Slayt:** 27 (son slayt kaynaklar, süre dışı)
-**Dil:** İngilizce · **Konuşmacı notu:** her slaytta, tam cümle
+**Format:** 15 dakika konuşma · **Slayt:** 29 (son slayt kaynaklar, süre dışı)
+**Dil:** İngilizce · **Konuşmacı notu:** her slaytta, tam cümle, konuşulacak hâliyle
 
-## Tasarım sistemi
+## Tip ölçeği — üç kademe, istisnasız
 
-Tek yazı tipi **Calibri**, istisnasız. Başlıklar iki–üç kelime, aynı konumda,
-20 punto kalın. Neredeyse akromatik palet; tek toprak vurgusu sayılarda,
-diyagramlarda ve slayt başına en fazla bir cümlede. Renk fotoğraflarda.
+Tek yazı tipi **Calibri**. Vurgu punto ile değil, **kalın** ve *italik* ile yapılır.
+
+| Kademe | Punto | Nerede |
+|---|---|---|
+| Slayt başlığı | 20 kalın | Her slaytta aynı yerde, aynı boyda. İki–dört kelime |
+| Ara başlık | 13 kalın | Slayt içindeki her alt başlık. Tek boy, istisnası yok |
+| Gövde | 12 | Düz metin. Vurgu: 12 kalın ya da 12 kalın italik |
+| Tablo | 10.5 · 10 | — |
+| Dipnot | 9 | Kaynak, sınırlılık, yöntem notu |
+
+Büyük rakamlar (94–97%, 0.7%, 14.1 kJ/m³) başlık değil, **veri gösterimi**;
+bu yüzden ölçeğin dışında.
+
+## Metin slaytta
+
+Her slaytta konuşulacak şeyin bir bölümü yazılı. Kısa cümleler, akademik
+kayıtta; "what it can and cannot do", "it crushes", "on strength alone it does
+not compete" gibi konuşma dili ifadelerin tamamı akademik karşılıklarıyla
+değiştirildi.
+
+## Açılış kurgusu — yeniden yazıldı
+
+Eski "The waste" ve "The problem" slaytları kaldırıldı. Yerine, boşluğu
+iddia etmek yerine **gösteren** üç slayt:
+
+| # | Slayt | Ne yapıyor |
+|---|---|---|
+| 2 | Background | Çıkış noktası: kabuk nedir, ne kadar, nereye gidiyor. Fotoğraf yok — eski slayttaki üretim fotoğrafı konuyla ilgisizdi |
+| 3 | Prior applications | **On satırlık literatür tablosu.** Uygulama / bağlayıcı faz / kaynak. Orta sütun aşağı okunduğunda boşluk kendiliğinden görünüyor |
+| 5 | Research gap | Üç numaralı boşluk, ikisi önceki iki slayttan türüyor |
+
+Materiom slaytı kaldırıldı. Yerini, tezin kendi doğrulanmış kaynaklarından
+kurulan literatür tablosu ve üç maddelik boşluk tanımı aldı.
+
+## Araştırma çerçevesi — her biri kendi slaytında
+
+| # | Slayt | İçerik |
+|---|---|---|
+| 6 | Aim | Amaç cümlesi + dört numaralı hedef |
+| 7 | Scope | Kapsam içi tablo / kapsam dışı liste |
+| 8 | Method | Produce → Measure → Position → Propose diyagramı |
+| 9 | Research questions | Beş soru, her biri türüne göre etiketli |
+| 10 | Hypothesis | Hipotez + iki cümleciği hangi bölümün test ettiği |
 
 ## Yedi diyagram
 
 | Slayt | Diyagram | Ne yapıyor |
 |---|---|---|
-| 3 | Dolgu / bağlayıcı istifi | İki istif; sağdaki bağlayıcı bloğu kırmızı. Boşluk tek bakışta |
-| 7 | Araştırma tasarımı | Produce → Measure → Position → Propose, numaralı daireler |
-| 10 | Mineral hazırlığı | Beş aşama, küçülen daireler tane boyutu indirgemesini gösteriyor |
-| 11 | **Sıcaklık profili** | Zaman–sıcaklık eğrisi; iki plato, dört işaretçi. Bağlayıcı aşamasının tamamı tek grafikte |
-| 12 | Kür zaman çizelgesi | Gün 0 → 4 → 11, kalıpta ve ortamda geçen süre ayrı bloklar |
-| 22 | Gerilme–şekil değiştirme şeması | Gölgeli üçgen formülün kendisi |
-| 23 | Döngüsellik şeridi | Altı adım, altıncı blok kırmızı: döngünün kapandığı yer |
-
-## Üç büyük fotoğraf slaytı
-
-Kapak (solda tam opak panel, sağda fotoğraf), malzeme (13,33 × 7,5 tam sayfa),
-eğilme (üçlü fotoğraf + koyu panel). Test fotoğrafları 4,8–5,4 inç yüksekliğinde.
+| 8 | Araştırma tasarımı | Dört numaralı daire, dört adım |
+| 12 | Mineral hazırlığı | Beş aşama, küçülen daireler tane boyutu indirgemesini gösteriyor |
+| 13 | **Sıcaklık profili** | Zaman–sıcaklık eğrisi; iki plato, dört işaretçi. Bağlayıcı aşamasının tamamı tek grafikte |
+| 14 | Kür zaman çizelgesi | Gün 0 → 4 → 11; kalıpta ve ortamda geçen süre ayrı bloklar |
+| 17 | Basma grafiği | Katı derişimi – gerilme |
+| 22 | Karşılaştırma grafiği | Basma ve eğilme, beş malzeme |
+| 24 | Gerilme–şekil değiştirme şeması | Gölgeli üçgen formülün kendisi |
 
 ## Slayttaki tek formül
 
-**Ur = σ²/2E**, ve onu diyagram açıklıyor. σf = 3FL/2bd², katı derişimi
-regresyonu ve Ur aritmetiği konuşmacı notlarında — aritmetiğin tamamı
-doğrulandı, çıkarılma sebebi görsel yük ve kürsüde savunma yükü.
+**Ur = σ²/2E**, ve onu diyagram açıklıyor. σf = 3FL/2bd² ve katı derişimi
+regresyonu dipnotta; aritmetiğin tamamı doğrulandı.
 
 ## Hipotez üzerine not
 
@@ -39,98 +73,55 @@ tasarım yaklaşımıyla geliştirilen bir malzemeden oluşturulan iç mekân ta
 kurgusunun, taşıdığı dirençlilik öznitelikleri aracılığıyla mekânsal dirençlilik
 kapasitesine katkılar sunabileceği."*
 
-Bu, tasarım araştırması dili. Malzeme kongresi için hipotez bu bildirinin
-kapsamına göre yeniden yazıldı:
+Malzeme kongresi için bu bildirinin kapsamına göre yeniden yazıldı:
 
 > A fully bio-based eggshell–agar composite can be produced repeatably under
-> ambient conditions, and its performance for interior surfaces is governed by
-> deformation capacity rather than by strength.
+> ambient conditions, and its performance as an interior surface material is
+> governed by deformation capacity rather than by compressive strength.
 
-İki cümlecik, ikisini de bildiri test ediyor. Orijinali tercih edersen slayt 8
-değiştirilir — ama o haliyle mekânsal dirençlilik çerçevesinin tamamını
-anlatmak gerekir, ki bu sunumda yok.
+Slayt 10 bunu iki cümleciğe ayırıp her birini hangi bölümün test ettiğini
+gösteriyor. Orijinal ifade slaytın altında köken notu olarak duruyor.
 
 ## Akış ve süre
 
-| # | Slayt | ~süre | Not |
+Tam anlatımda **yaklaşık 17:55**. 15:00'e inmek için sağ sütundaki kısaltmalar.
+
+| # | Slayt | Tam | 15:00 için |
 |---|---|---|---|
-| 1 | Cover | 0:20 | tam kanama fotoğraf |
-| 2 | The waste | 0:40 | büyük fotoğraf bandı |
-| 3 | The problem | 0:50 | **diyagram** |
-| 4 | The binder | 0:40 | |
-| 5 | The gap | 0:45 | |
-| 6 | Aim and scope | 0:40 | |
-| 7 | Method | 0:45 | **diyagram** |
-| 8 | Questions + hypothesis | 0:40 | |
-| 9 | Material | 0:25 | **tam kanama fotoğraf** |
-| 10 | Stage 1 — the mineral | 0:50 | **diyagram** |
-| 11 | Stage 2 — the binder | 1:00 | **diyagram** |
-| 12 | Stage 3 — casting and cure | 0:50 | **diyagram** |
-| 13 | Formulations | 0:45 | |
-| 14 | Tests | 0:30 | |
-| 15 | Compression | 0:50 | |
-| 16 | Crushing | 0:45 | büyük fotoğraf |
-| 17 | Flexure | 0:45 | |
-| 18 | Bending | 0:40 | **üçlü fotoğraf** |
-| 19 | Fire and water | 0:45 | büyük fotoğraf |
-| 20 | Versus stone and board | 0:40 | |
-| 21 | Versus bio-based | 0:45 | |
-| 22 | Resilience | 1:00 | **diyagram** |
-| 23 | Where it fits | 0:45 | **diyagram** |
-| 24 | Limits | 0:40 | üç grup |
-| 25 | Next | 0:40 | dört deney |
-| 26 | Conclusions | 0:35 | |
-| 27 | References | süre dışı | |
+| 1 | Cover | 0:20 | — |
+| 2 | Background | 0:45 | 0:30 · ilk paragrafı oku, rakamları gösterme |
+| 3 | Prior applications | 0:50 | 0:30 · tabloyu okuma, orta sütunu işaret et |
+| 4 | Agar as binder | 0:45 | — |
+| 5 | Research gap | 0:50 | — |
+| 6 | Aim | 0:35 | — |
+| 7 | Scope | 0:35 | 0:15 · tablo okunur, anlatılmaz |
+| 8 | Method | 0:40 | — |
+| 9 | Research questions | 0:30 | 0:15 · yalnız 01 ve 05 |
+| 10 | Hypothesis | 0:35 | — |
+| 11 | Material | 0:20 | 0:10 |
+| 12 | Stage 1 — mineral | 0:45 | — |
+| 13 | Stage 2 — binder | 0:55 | — |
+| 14 | Stage 3 — cure | 0:45 | — |
+| 15 | Formulations | 0:40 | — |
+| 16 | Test programme | 0:30 | **atla** · raporlama kuralını 15'in üstünde söyle |
+| 17 | Compression | 0:45 | — |
+| 18 | Compressive failure | 0:40 | — |
+| 19 | Flexure | 0:45 | — |
+| 20 | Flexural deformation | 0:35 | 0:20 · göster, tek cümle |
+| 21 | Fire, water, density | 0:40 | — |
+| 22 | Conventional materials | 0:35 | 0:20 |
+| 23 | Bio-based composites | 0:40 | — |
+| 24 | Modulus of resilience | 0:55 | — |
+| 25 | Application envelope | 0:40 | 0:25 |
+| 26 | Limitations | 0:35 | — |
+| 27 | Further work | 0:35 | 0:15 · dörtten ikisini say |
+| 28 | Conclusions | 0:30 | — |
+| 29 | References | — | süre dışı, soru için açık bırak |
 
-**Toplam ≈ 15:00.**
+**Dokunma: 3, 5, 8, 13, 17, 19, 24.** Sunumun iskeleti bunlar.
 
-## Zaman daralırsa
+## Kaynaklar slaytı
 
-Kısalt: 5, 12. **Dokunma: 2, 4, 6, 9, 14, 15, 17.**
-
-## ⚠ Teyit edilecek künyeler
-
-Aşağıdakiler web aramasından alındı, **tam metinleriyle doğrulanmalı:**
-
-- Ngayakamo, B. & Onwualu, A.P. (2022), *Heliyon* — dergi adı ve cilt/sayfa teyidi
-- Hernández, V. vd. (2022), *Materials* 15(11), 3954, DOI 10.3390/ma15113954 — teyitli
-- Materiom özellik verisi sayısı (dört reçete) — sunum gününe yakın yeniden kontrol
-- Frontiers in Materials 9:1024977 (2022) — yazar adları eklenmeli
-
-Slayt 2'deki "%5–30 dolgu oranı" aralığı derleme özetinden geliyor; derlemenin
-kendisinden doğrulanmalı.
-
-## Soru-cevap hazırlığı
-
-| Soru | Cevap |
-|---|---|
-| Standart sapma? | Tek tek numune değerleri saklanmadı. Slayt 9'da beyan edildi; ortalamalar n=3. |
-| R² = 0,994 üç noktayla mı? | Evet, slayt 10'da aynen böyle yazıyor. Yasa değil, test edilebilir hipotez. |
-| Kerfli kesite D790 nasıl uygulandı? | Dolu dikdörtgen varsayımıyla; bu yüzden raporlanan modül alt sınır. Slayt 12. |
-| Büzülme ne kadar? | Ölçülmedi. Yoğunluk kalıp hacmi üzerinden, alt sınır. Slayt 7 ve 14. |
-| Yangın sınıfı? | Yok. ISO 11925-2 yalnızca tutuşabilirlik. Euroclass, koni kalorimetre, duman yok. Slayt 13. |
-| Nem/küf dayanımı? | Veri yok. Gomalak %0,7'ye indiriyor ama uzun vadeli test yapılmadı. |
-| LCA var mı? | Yok. Slayt 19 bunu açıkça niteliksel potansiyel olarak sunuyor. |
-| Ahşaptan zayıf, ne anlamı var? | Ahşap biyo-atıktan üretilmiyor, MDF'nin yapıştırıcısı formaldehit esaslı. Karşılaştırma tek eksende yapılmaz; slayt 16 doğru aileyi gösteriyor. |
-| Ölçeklenebilir mi? | Protokol öğütücü, elek, ocak ve silikon kalıp istiyor. Dağıtık üretime uygun; endüstriyel ölçek test edilmedi. |
-
-## Dosyalar
-
-| Dosya | Ne |
-|---|---|
-| `ICSMMEP26_Presentation_Unal.pptx` | Sunum — 21 slayt |
-| `ICSMMEP26_Presentation_Unal.pdf` | Yedek |
-| `ICSMMEP26_Presentation_v1_overview.pptx` | Önceki genel sürüm (17 slayt), arşiv |
-| `sunum-uret.js` | Üretim betiği |
-
-Tasarım: koyu orman yeşili, kabuk kremi, terrakota vurgu. Cambria + Calibri
-(ikisi de Office ile gelir).
-
-## Hazırlık
-
-- [x] Görseller tezden çıkarıldı → `../03-gorseller/`
-- [x] Türkçe etiketli grafikler temizlendi, İngilizce etiketler eklendi
-- [x] Karşılaştırma değerleri tezin kaynaklı tablolarıyla değiştirildi
-- [x] Slaytlar üretildi, konuşmacı notları yazıldı
-- [ ] **Prova — 13 dakikayı aşmamalı**
-- [ ] Konferansın kesin konuşma/soru bölümlemesinin teyidi
+Tek liste, bölüm başlığı yok, iki sütun, alfabetik, 36 kaynak — sunumda
+geçen her atıf. 8 punto; arkadan okunması beklenmiyor, soru anında açık
+kalması için orada.
