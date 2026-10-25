@@ -49,17 +49,41 @@ kurulan literatür tablosu ve üç maddelik boşluk tanımı aldı.
 | 9 | Research questions | Beş soru, her biri türüne göre etiketli |
 | 10 | Hypothesis | Hipotez + iki cümleciği hangi bölümün test ettiği |
 
-## Yedi diyagram
+## On dört diyagram
 
 | Slayt | Diyagram | Ne yapıyor |
 |---|---|---|
-| 8 | Araştırma tasarımı | Dört numaralı daire, dört adım |
+| 2 | **Bertaraf / değerlendirme yolları** | Gıda işleme → atık kabuk → dallanma: depolama ya da ikincil mineral kaynak. Çalışmanın hangi dalda durduğu tek bakışta |
+| 3 | **İki faz bandı** | Tablonun altında iki şerit: mineral faz (atıktan geri kazanılıyor) / bağlayıcı faz (çimento, seramik, petrokimya). Tablonun orta sütununun özeti |
+| 4 | **Termotersinir döngü** | Jel ⇄ sol, iki ok: ısıtma 95 °C, soğutma oda sıcaklığı. Kimyasal çapraz bağ olmadığını gösteriyor |
+| 7 | **Özellik kapsamı şeridi** | Dokuz kutu: beşi dolu (ölçülen), dördü boş (ölçülmeyen). Kapsam tartışması tek satırda biter |
+| 8 | Araştırma tasarımı | Produce → Measure → Position → Propose, numaralı daireler |
+| 10 | Hipotez eşlemesi | Her cümleciğin yanında onu test eden slayt aralığı |
 | 12 | Mineral hazırlığı | Beş aşama, küçülen daireler tane boyutu indirgemesini gösteriyor |
 | 13 | **Sıcaklık profili** | Zaman–sıcaklık eğrisi; iki plato, dört işaretçi. Bağlayıcı aşamasının tamamı tek grafikte |
 | 14 | Kür zaman çizelgesi | Gün 0 → 4 → 11; kalıpta ve ortamda geçen süre ayrı bloklar |
+| 15 | **Karışım bileşimi çubukları** | Beş karışım, dört bileşen, oransal. Su bandının C1'den C3'e kısalması basma bulgusunun kendisi |
+| 16 | **Numune geometrileri** | Dört çizim: platenler arasında küp, iki mesnetli kiriş ve açıklık, 45° eğimli numune ve alev, daldırma kabı. Tablodaki geometri sütunu kaldırıldı, yerini çizim aldı |
 | 17 | Basma grafiği | Katı derişimi – gerilme |
 | 22 | Karşılaştırma grafiği | Basma ve eğilme, beş malzeme |
+| 23 | **Logaritmik konum ekseni** | Elastisite modülü 1–10 000 MPa arasında; mantar ve LDPE bantları, bu çalışma vurgulu. Tabloların söylediğini gösteriyor |
 | 24 | Gerilme–şekil değiştirme şeması | Gölgeli üçgen formülün kendisi |
+
+Kalın yazılanlar bu turda eklendi. Hepsi metnin yerine geçti, metne eklenmedi:
+S3'te vurgu cümlesi iki banda, S4'te gerekçe paragrafı döngüye, S7'de kapsam dışı
+listesi şeride, S16'da tablonun numune sütunu çizimlere dönüştü.
+
+## Slaytta konuşma metni
+
+Her slaytta konuşulacak cümlelerin bir bölümü yazılı; konuşmacı notundan birebir
+alındı. Bu turda eklenenler:
+
+- **S2** — *"The case for eggshell as a mineral phase is settled. This paper is concerned with the phase that binds it."* Diyagramın sağında, dönüm cümlesi
+- **S4** — *"The transition is physical, not chemical: no reactive hardener, no cure temperature, and at 66% mineral loading no coupling agent."*
+- **S15** — su bandının neden kısaldığı, çubukların yanında
+- **S16** — raporlama kuralı (ortalama, standart sapma yok, tekil belirlemeler) tablonun hemen altında, rakamlardan önce
+- **S21** — *"The probable mechanism is endothermic decomposition of the carbonate fraction, diluting the flame front. This was not verified calorimetrically."*
+- **S23** — *"Water-cast and ambient-dried, the composite attains the stiffness range of melt-processed bio-polymers."*
 
 ## Slayttaki tek formül
 
@@ -118,7 +142,7 @@ Tam anlatımda **yaklaşık 17:55**. 15:00'e inmek için sağ sütundaki kısalt
 | 28 | Conclusions | 0:30 | — |
 | 29 | References | — | süre dışı, soru için açık bırak |
 
-**Dokunma: 3, 5, 8, 13, 17, 19, 24.** Sunumun iskeleti bunlar.
+**Dokunma: 3, 5, 8, 13, 15, 16, 17, 19, 23, 24.** Sunumun iskeleti bunlar.
 
 ## Kaynaklar slaytı
 
