@@ -108,41 +108,56 @@ gösteriyor. Orijinal ifade slaytın altında köken notu olarak duruyor.
 
 ## Akış ve süre
 
-Tam anlatımda **yaklaşık 17:55**. 15:00'e inmek için sağ sütundaki kısaltmalar.
+28 slayt. Metnin kendisi **13:00** (140 kelime/dakika, 1 845 kelime). Slayt
+geçişleri, ekrana dönüp işaret etme ve nefes payıyla sahnede **≈ 14:30**.
+Metin bilerek 15:00'in altına yazıldı: hiçbir konuşma kağıt üstündeki süreyle
+gitmez.
 
-| # | Slayt | Tam | 15:00 için |
-|---|---|---|---|
-| 1 | Cover | 0:20 | — |
-| 2 | Background | 0:45 | 0:30 · ilk paragrafı oku, rakamları gösterme |
-| 3 | Prior applications | 0:50 | 0:30 · tabloyu okuma, orta sütunu işaret et |
-| 4 | Agar as binder | 0:45 | — |
-| 5 | Research gap | 0:50 | — |
-| 6 | Aim | 0:35 | — |
-| 7 | Scope | 0:35 | 0:15 · tablo okunur, anlatılmaz |
-| 8 | Method | 0:40 | — |
-| 9 | Research questions | 0:30 | 0:15 · yalnız 01 ve 05 |
-| 10 | Hypothesis | 0:35 | — |
-| 11 | Material | 0:20 | 0:10 |
-| 12 | Stage 1 — mineral | 0:45 | — |
-| 13 | Stage 2 — binder | 0:55 | — |
-| 14 | Stage 3 — cure | 0:45 | — |
-| 15 | Formulations | 0:40 | — |
-| 16 | Test programme | 0:30 | **atla** · raporlama kuralını 15'in üstünde söyle |
-| 17 | Compression | 0:45 | — |
-| 18 | Compressive failure | 0:40 | — |
-| 19 | Flexure | 0:45 | — |
-| 20 | Flexural deformation | 0:35 | 0:20 · göster, tek cümle |
-| 21 | Fire, water, density | 0:40 | — |
-| 22 | Conventional materials | 0:35 | 0:20 |
-| 23 | Bio-based composites | 0:40 | — |
-| 24 | Modulus of resilience | 0:55 | — |
-| 25 | Application envelope | 0:40 | 0:25 |
-| 26 | Limitations | 0:35 | — |
-| 27 | Further work | 0:35 | 0:15 · dörtten ikisini say |
-| 28 | Conclusions | 0:30 | — |
-| 29 | References | — | süre dışı, soru için açık bırak |
+| # | Slayt | Süre | # | Slayt | Süre |
+|---|---|---|---|---|---|
+| 1 | Cover | 0:15 | 15 | Formulations | 0:35 |
+| 2 | Background | 0:35 | 16 | Test programme | 0:20 |
+| 3 | Prior applications | 0:35 | 17 | Compression | 0:35 |
+| 4 | Agar as binder | 0:30 | 18 | Compressive failure | 0:35 |
+| 5 | Research gap | 0:35 | 19 | Flexure | 0:35 |
+| 6 | Aim | 0:20 | 20 | Flexural deformation | 0:20 |
+| 7 | Scope | 0:20 | 21 | Fire, water, density | 0:35 |
+| 8 | Method | 0:20 | 22 | Conventional materials | 0:30 |
+| 9 | Research questions | 0:15 | 23 | Bio-based composites | 0:35 |
+| 10 | Hypothesis | 0:20 | 24 | Modulus of resilience | 0:55 |
+| 11 | Material | 0:10 | 25 | Application envelope | 0:30 |
+| 12 | Stage 1 — mineral | 0:30 | 26 | Limitations and further work | 0:35 |
+| 13 | Stage 2 — binder | 0:35 | 27 | Conclusions | 0:30 |
+| 14 | Stage 3 — cure | 0:30 | 28 | References | süre dışı |
 
-**Dokunma: 3, 5, 8, 13, 15, 16, 17, 19, 23, 24.** Sunumun iskeleti bunlar.
+**Dokunma: 3, 5, 13, 15, 17, 19, 24.** Sunumun iskeleti bunlar.
+
+Konuşulacak metnin tamamı `konusma-metni.md` ve basılmaya hazır hâli
+`ICSMMEP26_Konusma_Metni.pdf` dosyalarında. Slaytların konuşmacı notları metinden
+biraz daha dolu; onlar soru–cevap için yedek, kürsüde okunacak olan basılı metin.
+
+## Seyreltme turu
+
+29 slayttan 28'e indi ve her slayt hafifledi:
+
+| Slayt | Ne çıktı |
+|---|---|
+| 2 | Üç büyük rakamdan biri ("> 12 ay toplama") |
+| 4 | Karşılaştırma tablosunun dördüncü satırı |
+| 6 | Dört hedefin uzun açıklamaları — artık yarım satır |
+| 10 | Cümleciklerin uzun gövdeleri |
+| 12 | "Terminology" bloğu → dipnota indi |
+| 14 | "Mould material" bloğu → dipnota indi |
+| 15 | Tablodan iki sütun (Solids g, Glycerol % solids) |
+| 16 | **Tablonun tamamı.** Geriye dört numune çizimi kaldı; standart ve numune sayısı çizimin altına yazıldı |
+| 18, 19 | Sağ sütundaki fazladan paragraflar |
+| 21 | Yoğunluk tablosundan bir satır |
+| 23 | **Elastisite modülü tablosu.** Logaritmik eksen zaten onu gösteriyor |
+| 25 | Döngüsellik paragrafı tek cümleye indi |
+| 26 + 27 | **Birleşti.** Her sınırlılık, onu çözen deneyle yan yana tek tabloda |
+
+26 ve 27'nin birleşmesi hem bir slayt hem de yarım dakika kazandırdı, üstelik
+sınırlılığı çözümüyle yan yana koyduğu için ayrı hâllerinden daha açık.
 
 ## Kaynaklar slaytı
 
