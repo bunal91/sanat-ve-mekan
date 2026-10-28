@@ -16,9 +16,9 @@ Provada 11:00–11:30 çıkıyorsa doğru hızdasın.
 İngilizce paragraflar konuşulacak metnin kendisidir. Köşeli parantez içindeki
 Türkçe notlar sahne yönergesidir, okunmaz. Sayıları bilerek yazıyla yazdım.
 
-**Slaytlar artık neredeyse boş.** Ekranda yalnız veri, diyagram ve bir vurgu
-cümlesi var. Anlatım burada; ekrana bakıp okuyacak bir şey yok, o yüzden
-kalabalığa dönmeden izleyiciye bak.
+**Kalın yazılan cümleler slaytta birebir aynı duruyor.** İstersen ekrandan
+okuyabilirsin, istersen izleyiciye söylersin — ikisi de doğru görünür. Düz
+yazılanlar yalnız bu metinde; onları ekrana bakmadan söyle.
 
 ---
 
@@ -40,8 +40,8 @@ construction.
 
 [Sağdaki şemaya işaret et]
 
-So it has two routes: landfill, or a secondary mineral resource. The case for
-eggshell as a mineral phase is settled. This paper is about the binder.
+So it has two routes: landfill, or a secondary mineral resource. **The case for
+eggshell as a mineral phase is settled. This paper is about the binder.**
 
 ---
 
@@ -56,7 +56,7 @@ ceramic–metal composites, in bone scaffolds, and in wallpaper.
 
 But read the middle column downwards. In every case the mineral is recovered
 from waste while the binding phase stays cementitious, ceramic or petrochemical.
-The burden is carried by the binder, and the binder is untouched.
+**The burden is carried by the binder, and the binder is untouched.**
 
 ---
 
@@ -67,8 +67,8 @@ sets on cooling without chemical crosslinking: no reactive hardener, no cure
 temperature, and at sixty-six per cent mineral loading, no coupling agent.
 
 Its behaviour with glycerol is well mapped — but only as unfilled thin film, in
-tension, for packaging. The compositional logic transfers. The loading case does
-not, and for an interior surface that is bending.
+tension, for packaging. **The compositional logic transfers. The loading case
+does not, and for an interior surface that is bending.**
 
 ---
 
@@ -79,8 +79,8 @@ characterised only as an unfilled film in tension, not as the binder of a
 mineral-filled cast solid in bending. Third, property sets are fragmentary, in
 separate studies on separate formulations.
 
-Let me state the contribution precisely. It is not a novel constituent. It is a
-documented protocol and a single coherent property set.
+Let me state the contribution precisely. **It is not a novel constituent. It is
+a documented protocol and a single coherent property set.**
 
 ---
 
@@ -88,8 +88,8 @@ documented protocol and a single coherent property set.
 
 The aim, narrow on purpose: document a reproducible protocol for a fully
 bio-based eggshell–agar composite, and characterise it against published
-standards. Four objectives follow. The fourth — deriving an evaluation criterion
-for this material class — is where I will spend most time.
+standards. Four objectives follow. **The fourth — deriving an evaluation
+criterion for this material class — is where I will spend most time.**
 
 ---
 
@@ -99,8 +99,8 @@ Scope, set out so that nothing I say is read beyond it.
 
 [Alttaki şeride işaret et]
 
-The filled boxes are what was determined. The outlined boxes are what was not:
-durability, fire classification, life-cycle assessment, structural use.
+**The filled boxes are what was determined. The outlined boxes are what was
+not:** durability, fire classification, life-cycle assessment, structural use.
 
 ---
 
@@ -108,16 +108,16 @@ durability, fire classification, life-cycle assessment, structural use.
 
 Four stages, and the order is the method. Produce, recording every parameter.
 Measure against published standards. Position against two material families.
-Propose an evaluation criterion derived from the observed behaviour. Properties
-first, application envelope second.
+Propose an evaluation criterion derived from the observed behaviour.
+**Properties first, application envelope second.**
 
 ---
 
 ## 9 · Research questions — 0:15
 
 Five questions. Two on formulation, two on benchmarking, and the fifth asks
-whether compressive strength is an adequate criterion for this class at all. One
-to four are answered by measurement. Five is answered by argument.
+whether compressive strength is an adequate criterion for this class at all.
+**One to four are answered by measurement. Five is answered by argument.**
 
 ---
 
@@ -127,9 +127,9 @@ Two clauses. First: the composite can be produced repeatably under ambient
 conditions. Second: its performance as an interior surface is governed by
 deformation capacity rather than strength.
 
-On provenance: the dissertation states a broader hypothesis framed on spatial
+**On provenance: the dissertation states a broader hypothesis framed on spatial
 resilience. This is its materials-engineering component, restated within the
-scope of these tests.
+scope of these tests.**
 
 ---
 
@@ -137,17 +137,17 @@ scope of these tests.
 
 Stage one. Whole shell from a single bakery, cleaned by hand, heat-treated at
 one hundred and twenty degrees for twenty minutes, milled, and sieved through a
-one hundred and fifty micrometre mesh, passing fraction only. That particle size
-was chosen to match the eggshell polymer-composite literature, so the mineral
-phase here is comparable with that work.
+one hundred and fifty micrometre mesh, passing fraction only. **That particle
+size was chosen to match the eggshell polymer-composite literature, so the
+mineral phase here is comparable with that work.**
 
 ---
 
 ## 12 · Stage 2 · Binder preparation — 0:30
 
 Stage two, drawn as a temperature–time profile. Water and glycerol are
-pre-mixed before any solids. Agar is added incrementally under continuous
-stirring; bulk addition forms agglomerates that do not redisperse. Up to
+pre-mixed before any solids. **Agar is added incrementally under continuous
+stirring; bulk addition forms agglomerates that do not redisperse.** Up to
 ninety-five degrees and held until the agar is fully in solution. Then down to
 eighty while viscosity develops, and the shell goes in near the end; earlier, it
 sediments. Fifty-five minutes in total. The set points and total time are
@@ -158,14 +158,14 @@ recorded; the ramp rates are not.
 ## 13 · Stage 3 · Casting and cure — 0:25
 
 Stage three. Cast into silicone moulds, demoulded on day four, then seven days
-at twenty-three degrees. Day eleven, finished, with three shellac coats. No
-thermal input after the fifty-five minute preparation: the entire cure is at
-room temperature.
+at twenty-three degrees. Day eleven, finished, with three shellac coats. **No
+thermal input after the 55-minute preparation: the entire cure is at room
+temperature.**
 
 [Panele işaret et]
 
-The limitation: the composite shrinks as water evaporates, and post-drying
-dimensions were not logged, so every dimension I quote is a mould dimension.
+**The limitation: the composite shrinks as water evaporates, and post-drying
+dimensions were not logged, so every dimension I quote is a mould dimension.**
 
 ---
 
@@ -173,8 +173,8 @@ dimensions were not logged, so every dimension I quote is a mould dimension.
 
 Two things to read here. In the compressive series, shell-to-binder is exactly
 two point zero zero in all three mixes. That was not planned as a control, but
-it means solids concentration is the only variable — and you can see it in the
-bars: the water band shortens from C1 to C3.
+it means **solids concentration is the only variable — the water band shortens
+from C1 to C3.**
 
 In the flexural series I declare a confound. Glycerol was halved but batch mass
 was held constant, so water rose to compensate.
@@ -186,9 +186,9 @@ was held constant, so water rose to compensate.
 Four specimen geometries, with the standard and the number of specimens under
 each.
 
-I want the reporting convention on record before any numbers appear. Mechanical
-values are means of three specimens; individual values were not retained, so I
-cannot give standard deviations.
+I want the reporting convention on record before any numbers appear.
+**Mechanical values are means of three specimens; individual values were not
+retained, so I cannot give standard deviations.**
 
 ---
 
@@ -199,9 +199,9 @@ only variable, and compressive stress rises linearly with it, from two point
 five five to four point one zero megapascals.
 
 Three points will fit almost any line, so I call this a hypothesis rather than a
-law. But the physical reading is clear: strength is governed by packing density,
-not by mineral content. The route to a stronger composite is to remove water,
-not to add shell.
+law. But the physical reading is clear. **Strength is governed by packing
+density, not by mineral content. The route to a stronger composite is to remove
+water, not to add shell.**
 
 ---
 
@@ -213,8 +213,9 @@ ten per cent strain, no abrupt load drop.
 
 [Fotoğrafı göster]
 
-The cube has barrelled. It is shorter and wider, and still a single body. One
-honesty point: the strain axis assumes ten per cent maximum deformation from
+**The cube has barrelled. It is shorter and wider, and still a single body.
+Failure proceeds by progressive crushing rather than by fracture.** One honesty
+point: the strain axis assumes ten per cent maximum deformation from
 observation, not instrumented measurement.
 
 ---
@@ -224,7 +225,8 @@ observation, not instrumented measurement.
 Flexure, to ASTM D790. The decisive variable is plasticiser content. At eighteen
 point eight per cent glycerol the composite deformed without developing
 measurable resistance. Halving it gives two point three two five megapascals at
-a modulus of one hundred and ninety-two.
+a modulus of one hundred and ninety-two. **The transition is sharp, and it lies
+between those two values.**
 
 Two limitations. The glycerol effect is confounded with solids concentration.
 And the specimen is kerfed on its tension face while the standard assumes a
@@ -235,16 +237,17 @@ solid rectangle, so this modulus is a lower bound.
 ## 19 · Flexural deformation — 0:20
 
 I would rather show you this than ask you to take it on the numbers. The beam is
-deflected well past where a comparable ceramic would part. Both test programmes
-gave the same result: substantial deformation with retained integrity.
+deflected well past where a comparable ceramic would part. **Both test
+programmes gave the same result: substantial deformation with retained
+integrity.**
 
 ---
 
 ## 20 · Fire, water, density — 0:30
 
 Ignition at around ten seconds under direct flame, self-extinguishing four
-seconds after removal, with no lateral spread and no dripping. This is an
-ignitability test; there is no Euroclass classification.
+seconds after removal, with no lateral spread and no dripping. **This is an
+ignitability test; there is no Euroclass classification.**
 
 Water: zero point seven per cent mass gain over twenty-four hours of immersion,
 so coating integrity is the limiting factor, not the composite. Density, one
@@ -256,8 +259,9 @@ point three eight: above the fungal materials, below fired clay.
 
 First benchmark, against what this would sit alongside in an interior. Let me be
 direct. One sixth the compressive strength of MDF, one twentieth that of
-travertine — a stone the material resembles. On strength alone this composite is
-not competitive with engineered wood or stone, and I will not claim otherwise.
+travertine — a stone the material resembles. **On strength alone this composite
+is not competitive with engineered wood or stone**, and I will not claim
+otherwise.
 
 ---
 
@@ -269,8 +273,8 @@ magnitude above mycelium and hempcrete.
 [Logaritmik eksene işaret et]
 
 In stiffness, one hundred and ninety-two megapascals: inside the LDPE band.
-Water-cast, dried at room temperature, no oven, no autoclave, no extruder — and
-it reaches the stiffness of melt-processed bio-polymers. Wood is still two
+**Water-cast, dried at room temperature, no oven, no autoclave, no extruder —
+and it reaches the stiffness of melt-processed bio-polymers.** Wood is still two
 orders of magnitude above.
 
 ---
@@ -281,12 +285,12 @@ This brings me to question five, and the diagram is the argument.
 
 The shaded area is the energy absorbed per unit volume before permanent damage.
 That area is one half sigma epsilon, and epsilon is sigma over E, so it reduces
-to sigma squared over two E. Notice where the modulus sits: in the denominator.
-The low modulus that counted against the material a moment ago is what raises
-this quantity. Here, about fourteen kilojoules per cubic metre.
+to sigma squared over two E. **Notice where the modulus sits: in the
+denominator.** The low modulus that counted against the material a moment ago is
+what raises this quantity. Here, about fourteen kilojoules per cubic metre.
 
-Strength records the load at which a material stops performing, not whether it
-then fails gracefully or catastrophically — and for a demountable component,
+**Strength records the load at which a material stops performing, not whether it
+then fails gracefully or catastrophically** — and for a demountable component,
 that is what governs service life.
 
 ---
@@ -297,8 +301,8 @@ The envelope follows from the measurements. Non-loadbearing, because four point
 one megapascals supports nothing more. Dry interiors, because water performance
 depends on the coating. Away from ignition sources: self-extinguishing, but
 unclassified. Modular rather than sheet, because damage is then replaced one
-unit at a time. No life-cycle assessment was carried out, so these are
-qualitative potentials.
+unit at a time. **No life-cycle assessment was carried out, so these are
+qualitative potentials.**
 
 ---
 
@@ -310,8 +314,8 @@ individual values. Strain assumed — instrument it. Shrinkage unquantified —
 record the post-drying geometry. The kerfed section calculated as solid — test
 an un-kerfed one.
 
-Every value I reported today is a lower bound. I would rather set these out than
-have them found.
+**Every value I reported today is a lower bound. I would rather set these out
+than have them found.**
 
 ---
 

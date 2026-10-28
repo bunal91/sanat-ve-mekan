@@ -130,33 +130,41 @@ geçişleri ve işaret duraklarıyla sahnede **≈ 12:20 – 12:45**.
 
 **Dokunma: 3, 5, 12, 14, 16, 18, 23.** Sunumun iskeleti bunlar.
 
-## Minimal tur — slaytta ne kaldı
+## Slayttaki cümle = söylenen cümle
 
-Kural: **konuşulan cümle slaytta durmaz.** Ekranda yalnız veri, diyagram ve
-slayt başına en fazla bir vurgu cümlesi var.
+Her slaytta, konuşma metninden **birebir alınmış** en az bir cümle var. Konuşma
+metninde bu cümleler **kalın** yazılı: kalın olanı ekrandan okuyabilirsin, düz
+olanı ekrana bakmadan söylersin. İzleyiciye bazı şeyleri slayttan okuyormuşsun
+gibi görünür, çünkü gerçekten öyle.
 
-| Slayt | Kaldırılan |
+| Slayt | Slaytta ve metinde aynı duran cümle |
 |---|---|
-| 2 | İki paragraflık giriş metni. Yerine iki rakam ve dikey akış şeması |
-| 4 | İki paragraflık agar anlatımı. Yerine döngü diyagramı ve üç maddelik liste |
-| 5 | Üç boşluğun uzun gövdeleri → her biri tek satır |
-| 6 | Dört hedefin açıklamaları → yalnız başlıklar |
-| 7 | Kapsam dışı paragrafı → tek cümle |
-| 8 | Kapanış paragrafı ve dört düğümün alt satırları |
-| 9 | Kapanış cümlesi |
-| 10 | Cümleciklerin gövdeleri → yalnız "slayt 11–14 / 16–23" oku |
-| 11 | Gerekçe paragrafı → dipnot |
-| 12 | Yöntem gerekçesi paragrafı |
-| 13 | "Thermal input" bloğu; sınırlılık paneli kısaldı |
-| 14 | İki yorum bloğu → tek vurgu cümlesi |
-| 15 | Raporlama paragrafı → tek vurgu cümlesi |
-| 16, 17, 18 | Yorum paragrafları → yalnız vurgu cümlesi |
-| 19 | İki paragraf → bir vurgu, bir kısa satır |
-| 20 | Yangın mekanizması paragrafı → konuşmacı notuna |
-| 21, 22, 23, 24 | Yorum paragrafları kısaldı ya da dipnota indi |
-| **11 (eski)** | **Malzeme tam sayfa fotoğrafı slaytı tamamen kaldırıldı** — kapak zaten malzemeyi gösteriyor |
+| 2 | The case for eggshell as a mineral phase is settled. This paper is about the binder. |
+| 3 | The burden is carried by the binder, and the binder is untouched. |
+| 4 | The compositional logic transfers. The loading case does not, and for an interior surface that is bending. |
+| 5 | It is not a novel constituent. It is a documented protocol and a single coherent property set. |
+| 6 | The fourth — deriving an evaluation criterion for this material class — is where I will spend most time. |
+| 7 | The filled boxes are what was determined. The outlined boxes are what was not. |
+| 8 | Properties first, application envelope second. |
+| 9 | One to four are answered by measurement. Five is answered by argument. |
+| 10 | On provenance: the dissertation states a broader hypothesis framed on spatial resilience… |
+| 11 | That particle size was chosen to match the eggshell polymer-composite literature… |
+| 12 | Agar is added incrementally under continuous stirring; bulk addition forms agglomerates that do not redisperse. |
+| 13 | No thermal input after the 55-minute preparation… · The limitation: the composite shrinks as water evaporates… |
+| 14 | Solids concentration is the only variable — the water band shortens from C1 to C3. |
+| 15 | Mechanical values are means of three specimens; individual values were not retained… |
+| 16 | Strength is governed by packing density, not by mineral content. · The route to a stronger composite is to remove water, not to add shell. |
+| 17 | The cube has barrelled… · Failure proceeds by progressive crushing rather than by fracture. |
+| 18 | The transition is sharp, and it lies between those two values. |
+| 19 | Both test programmes gave the same result: substantial deformation with retained integrity. |
+| 20 | This is an ignitability test; there is no Euroclass classification. |
+| 21 | On strength alone this composite is not competitive with engineered wood or stone. |
+| 22 | Water-cast, dried at room temperature, no oven, no autoclave, no extruder… |
+| 23 | Notice where the modulus sits: in the denominator. · Strength records the load at which a material stops performing… |
+| 24 | No life-cycle assessment was carried out, so these are qualitative potentials. |
+| 25 | Every value I reported today is a lower bound. I would rather set these out than have them found. |
 
-29 → 28 → **27 slayt**. Konuşma metni 2 142 → 1 845 → **1 569 kelime**.
+Denge şu: slaytta bir cümle, geri kalanı veri ve diyagram. Paragraf yok.
 
 ## Kaynaklar slaytı
 
