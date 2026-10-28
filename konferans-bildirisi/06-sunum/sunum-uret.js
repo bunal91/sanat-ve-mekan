@@ -137,7 +137,7 @@ s.addShape(pres.ShapeType.downArrow, { x:11.1, y:3.92, w:0.18, h:0.26,
   fill:{ color:K.acc }, line:{ color:K.acc, transparency:100 }, objectName:"d3" });
 node(s, 6.9, 4.3, 2.6, 0.5, "Landfill", "ghost");
 node(s, 9.9, 4.3, 2.6, 0.5, "Mineral resource", "acc");
-em(s, 6.9, 5.3, 5.6, 1.2, "The case for eggshell as a mineral phase is settled. This paper is about the binder.", false, true);
+em(s, 6.9, 5.3, 5.6, 1.2, "The case for eggshell as a mineral phase is settled. This paper is about the phase that binds it.", false, true);
 s.addNotes("The point of departure. Eggshell arises continuously as a food-processing by-product and is predominantly landfilled. Chemically it is almost pure calcium carbonate, between ninety-four and ninety-seven percent by mass, held in a porous protein-bound crystalline structure, and its specific gravity sits below that of most mineral fillers used in construction. That composition and that uninterrupted supply are why a substantial literature already incorporates it into construction and polymer materials. All shell used in this study came from a single bakery, collected over more than a year. I want to be clear at the outset: the case for eggshell as a mineral phase is settled, and this paper does not re-make it. The paper is concerned with the phase that binds it.");
 
 /* ===================== 3 · prior applications ===================== */
@@ -158,47 +158,16 @@ tbl(s, [
   [TL("Wallpaper"), TL("Cellulosic furnish"), TL("Tutuş et al. (2018)")],
 ], { x:0.8, y:1.8, w:11.7, colW:[4.7,3.1,3.9], rowH:0.34 });
 rule(s, 0.8, 5.72, 11.7);
-em(s, 0.8, 5.88, 11.2, 0.4, "The burden is carried by the binder, and the binder is untouched.");
+em(s, 0.8, 5.88, 11.2, 0.4, "The burden is carried by the binder, and the binder is left untouched.");
 s.addShape(pres.ShapeType.rect, { x:0.8, y:6.15, w:11.7, h:0.38, fill:{ color:K.acc },
   line:{ color:K.acc, transparency:100 }, objectName:"ph1" });
-s.addText("MINERAL PHASE   ·   recovered from waste in every study above",
+s.addText("MINERAL PHASE   ·   recovered from waste",
   S({ x:1.0, y:6.15, w:11.3, h:0.38, fontSize:11, bold:true, charSpacing:0.4, color:K.onD, valign:"middle" }));
 s.addShape(pres.ShapeType.rect, { x:0.8, y:6.53, w:11.7, h:0.38, fill:{ color:K.dark },
   line:{ color:K.dark, transparency:100 }, objectName:"ph2" });
-s.addText("BINDING PHASE   ·   cementitious, ceramic or petrochemical in every study above",
+s.addText("BINDING PHASE   ·   cementitious, ceramic or petrochemical",
   S({ x:1.0, y:6.53, w:11.3, h:0.38, fontSize:11, bold:true, charSpacing:0.4, color:K.onD, valign:"middle" }));
 s.addNotes("This is the literature the study departs from, and reading down the middle column is the whole argument. Eggshell has been used as a partial cement replacement in concrete, as a stabiliser in compressed laterite brick and in clay, as a filler in hot-mix asphalt, in eco-ceramic wall tile, as a particulate filler in PVC and in flexible polyurethane foam, in ceramic-metal composites, in bone scaffolds, and even in wallpaper. The valorisation is real and it is well evidenced. But in every one of those cases the mineral is recovered from waste while the binding phase remains cementitious, ceramic or petrochemical. The environmental burden of the material is carried by the binder, and the binder is untouched.");
-
-/* ===================== 4 · agar as binder ===================== */
-s = pres.addSlide({ masterName:"PAGE", sectionTitle:"Introduction" });
-H1(s, "Agar as binder");
-H2(s, 0.8, 1.5, 5.5, "Thermoreversible setting");
-node(s, 0.9, 2.3, 1.9, 0.5, "Gel — solid");
-node(s, 4.2, 2.3, 1.9, 0.5, "Sol — in solution");
-s.addShape(pres.ShapeType.rightArrow, { x:2.92, y:2.36, w:1.16, h:0.16,
-  fill:{ color:K.acc }, line:{ color:K.acc, transparency:100 }, objectName:"cyh" });
-s.addShape(pres.ShapeType.leftArrow, { x:2.92, y:2.68, w:1.16, h:0.16,
-  fill:{ color:K.ink }, line:{ color:K.ink, transparency:100 }, objectName:"cyc" });
-s.addText("heat, 95 °C", S({ x:2.8, y:2.06, w:1.4, h:0.24, fontSize:9.5, color:K.acc, align:"center" }));
-s.addText("cool, ambient", S({ x:2.8, y:2.88, w:1.4, h:0.24, fontSize:9.5, color:K.grey, align:"center" }));
-rule(s, 0.8, 3.6, 5.5);
-list(s, 0.8, 3.8, 5.5, 2.0, [
-  "No reactive hardener, no cure temperature",
-  "66% mineral loading, no coupling agent",
-  "32 glycerol formulations published as open data",
-], false, 12);
-micro(s, 0.8, 6.0, 5.5, "Hernández et al. (2022), Materials 15(11), 3954");
-vrule(s, 6.7, 1.45, 5.4);
-H2(s, 7.2, 1.45, 5.3, "Form and loading case in this study");
-tbl(s, [
-  [TH("—"), TH("Film literature"), TH("This study")],
-  [TL("Form"), TL("Thin cast film"), TL("Cast solid, 20–50 mm")],
-  [TL("Mineral phase"), TL("Unfilled"), TL("66% of solids")],
-  [TL("Loading"), TL("Uniaxial tension"), TL("Compression and bending")],
-], { x:7.2, y:1.85, w:5.3, colW:[1.5,1.8,2.0], rowH:0.62 });
-em(s, 7.2, 4.6, 5.3, 1.2,
-  "The compositional logic transfers. The loading case does not, and for an interior surface that is bending.", false, true);
-s.addNotes("The binder is agar, a thermoreversible polysaccharide extracted from red seaweed. It melts on heating and sets on cooling without chemical crosslinking, which means no reactive hardener and no elevated-temperature cure. Its behaviour with glycerol is reasonably well mapped: Hernandez and colleagues ran thirty-two agar, glycerin and water formulations by design of experiments in 2022 and released the dataset openly. But note the scope of that work. Unfilled thin films, loaded in uniaxial tension, evaluated for packaging. The compositional logic transfers to this study. The form and the loading case do not, and for an interior surface the loading case is bending.");
 
 /* ===================== 5 · research gap ===================== */
 s = pres.addSlide({ masterName:"DARK", sectionTitle:"Introduction" });
@@ -206,16 +175,16 @@ H1(s, "Research gap", true);
 H2(s, 0.8, 1.45, 11.7, "Three gaps follow from the preceding two slides", true);
 rule(s, 0.8, 1.9, 11.7, true);
 [["01","The binding phase is never biological",
-      "Both phases biological and biodegradable: not reported."],
+      "No study reports an eggshell composite in which both phases are of biological origin."],
  ["02","Agar is characterised only as an unfilled film",
-      "As the binder of a mineral-filled cast solid in bending: not reported."],
+      "Never as the binder of a mineral-filled solid in bending."],
  ["03","Property sets are reported in fragments",
-      "All four properties for one formulation family: not reported."]]
+      "Property data is scattered across separate studies on separate formulations."]]
  .forEach(([n,h,b],i)=>{ const y = 2.3 + i*1.45;
   item(s, n, y, h, b, true, 1.55, 5.0, 6.9, 5.6);
   if (i<2) rule(s, 0.8, y+1.15, 11.7, true); });
 em(s, 0.8, 6.65, 11.2, 0.5,
-  "It is not a novel constituent. It is a documented protocol and a single coherent property set.", true, true);
+  "This is not a novel constituent. It is a documented protocol and a single coherent property set.", true, true);
 s.addNotes("Three gaps follow directly from those two slides. First, the binding phase is never biological. Across the whole eggshell literature the mineral is recovered from waste while the matrix stays Portland clinker, bitumen, lime, a ceramic body or a thermoplastic - no study reports an eggshell composite in which both phases are biological and fully biodegradable. Second, agar is characterised only as an unfilled film in tension for packaging, not as the binder of a highly mineral-filled cast solid in bending. Third, property sets are reported in fragments: compressive, flexural, fire and hygric behaviour appear in separate studies on separate formulations, and no single study gives all four for one formulation family. I want to state the contribution precisely, because overclaiming here would be easy. It is not a novel constituent. It is a documented protocol and a single coherent property set.");
 
 /* ===================== 6 · aim ===================== */
@@ -224,7 +193,7 @@ s = pres.addSlide({ masterName:"PAGE", sectionTitle:"Framework" });
 H1(s, "Aim");
 s.addShape(pres.ShapeType.rect, { x:0.8, y:1.45, w:11.7, h:1.15, fill:{ color:K.panel },
   line:{ color:K.panel, transparency:100 }, objectName:"aimp" });
-s.addText([{ text:"To document a reproducible production protocol for a fully bio-based eggshell–agar composite, and to characterise its mechanical, reaction-to-fire and hygric behaviour against published test standards.",
+s.addText([{ text:"To document a reproducible production protocol for a fully bio-based eggshell–agar composite, and to characterise it against published test standards.",
              options:{ bold:true, color:K.ink } }],
   S({ x:1.15, y:1.72, w:11.0, h:0.7, fontSize:13, lineSpacing:19 }));
 H2(s, 0.8, 3.2, 11.7, "Objectives");
@@ -237,7 +206,7 @@ rule(s, 0.8, 3.6, 11.7);
   s.addText(n, S({ x, y:3.85, w:2.7, h:0.3, fontSize:12, bold:true, color:K.acc }));
   s.addText(h, S({ x, y:4.2, w:2.6, h:0.8, fontSize:13, bold:true,
     color:i===3?K.acc:K.ink, lineSpacing:21 })); });
-em(s, 0.8, 5.25, 11.2, 0.5, "The fourth — deriving an evaluation criterion for this material class — is where I will spend most time.", false, true);
+em(s, 0.8, 5.25, 11.2, 0.5, "The fourth, deriving an evaluation criterion for this material class, is where I will spend most of my time.", false, true);
 micro(s, 0.8, 6.0, 11.2, "Standards applied: ASTM D790-17 · ISO 11925-2:2020 · ASTM D570-98(2018).");
 s.addNotes("The aim, stated narrowly on purpose: document a reproducible production protocol for a fully bio-based eggshell-agar composite, and characterise its mechanical, reaction-to-fire and hygric behaviour against published test standards. Four objectives follow. One, document the protocol in full, every parameter, in a form another laboratory can repeat. Two, characterise against published standards rather than ad hoc procedures. Three, position the results against two material families using published property data. Four, derive an evaluation criterion appropriate to this material class - and that fourth objective is the one I will spend most time on at the end.");
 
@@ -255,9 +224,13 @@ tbl(s, [
   [TL("Application"), TL("Non-loadbearing interior surfaces")],
 ], { x:0.8, y:1.85, w:7.0, colW:[1.9,5.1], rowH:0.5 });
 vrule(s, 8.4, 1.45, 3.9);
-H2(s, 8.9, 1.45, 3.6, "Not a specification");
-em(s, 8.9, 1.85, 3.6, 1.4,
-  "Characterisation data only.", false, true);
+H2(s, 8.9, 1.45, 3.6, "Outside scope");
+list(s, 8.9, 1.9, 3.6, 2.2, [
+  "Durability and ageing",
+  "Fire classification",
+  "Life-cycle assessment",
+  "Structural use",
+], false, 12);
 rule(s, 0.8, 5.6, 11.7);
 H2(s, 0.8, 5.78, 11.7, "Property coverage");
 [["Compression",1],["Flexure",1],["Ignitability",1],["Water absorption",1],["Bulk density",1],
@@ -267,19 +240,19 @@ H2(s, 0.8, 5.78, 11.7, "Property coverage");
     fill:{ color:on?K.ink:"FFFFFF" }, line:{ color:on?K.ink:K.faint, width:1 }, objectName:"ch"+i });
   s.addText(lbl, S({ x:x+0.06, y:6.2, w:1.08, h:0.52, fontSize:9.5, bold:true, lineSpacing:11.5,
     color:on?K.onD:K.faint, align:"center", valign:"middle" })); });
-em(s, 0.8, 6.85, 11.2, 0.4, "The filled boxes are what was determined. The outlined boxes are what was not.");
+em(s, 0.8, 6.85, 11.2, 0.4, "The filled boxes are the properties I determined. The outlined boxes are the ones I did not.");
 s.addNotes("Scope, set out explicitly so that nothing I say today is read beyond it. Within scope: five formulations, three specimens per formulation for the mechanical work, five properties, three published standards, ambient cure in a single laboratory by a single operator, and an application envelope of non-loadbearing interior surfaces. Outside scope: structural use, durability and accelerated ageing, reaction-to-fire classification, and life-cycle assessment. None of those four was generated in this work. What follows is characterisation data, not a performance specification, and I will return to each exclusion at the end as a defined next experiment.");
 
 /* ===================== 8 · method ===================== */
 s = pres.addSlide({ masterName:"PAGE", sectionTitle:"Framework" });
 H1(s, "Method");
 H2(s, 0.8, 1.42, 11.7, "A material-driven sequence in four stages");
-const MS = [["Produce","Develop the composite and record every production parameter.","Iterative formulation over twelve months"],
-            ["Measure","Characterise the cured material against published test standards.","Compression · flexure · ignitability · absorption"],
-            ["Position","Benchmark the results against two material families.","Conventional interior materials · bio-based composites"],
-            ["Propose","Derive an evaluation criterion from the observed behaviour.","Deformation capacity reported alongside strength"]];
+const MS = [["Produce","every parameter recorded"],
+            ["Measure","against published standards"],
+            ["Position","against two material families"],
+            ["Propose","from the observed behaviour"]];
 const MX=0.8, MW=2.78, MG=0.33;
-MS.forEach(([h,b,c],i)=>{
+MS.forEach(([h,b],i)=>{
   const x = MX + i*(MW+MG);
   s.addShape(pres.ShapeType.ellipse, { x, y:1.95, w:0.46, h:0.46,
     fill:{ color:i===3?K.acc:"FFFFFF" }, line:{ color:i===3?K.acc:K.ink, width:1.25 }, objectName:"mo"+i });
@@ -291,7 +264,7 @@ MS.forEach(([h,b,c],i)=>{
     fill:{ color:K.faint }, line:{ color:K.faint, transparency:100 }, objectName:"ma"+i });
 });
 rule(s, 0.8, 4.5, 11.7);
-em(s, 0.8, 4.7, 11.2, 0.5, "Properties first, application envelope second.");
+em(s, 0.8, 4.7, 11.2, 0.5, "The properties came first, and the application envelope was derived from them.");
 micro(s, 0.8, 5.4, 11.2, "Material-driven design after Karana et al. (2015)");
 s.addNotes("Four stages, and the order is the method. Produce, recording every production parameter. Measure against published standards. Position against two material families, conventional interior materials and bio-based composites. And propose an evaluation criterion derived from the observed behaviour. This is a material-driven sequence in the sense of Karana and colleagues: the properties are measured first and the application envelope is derived from them, rather than the material being selected to satisfy a form decided in advance. The design proposal I show near the end follows from the measurements and not the reverse.");
 
@@ -309,7 +282,7 @@ rule(s, 0.8, 1.5, 11.7);
   s.addText(q, S({ x:1.55, y, w:8.6, h:0.6, fontSize:13, bold:true, color:K.ink, lineSpacing:19 }));
   s.addText(t, S({ x:10.4, y:y+0.04, w:2.1, h:0.3, fontSize:10.5, color:K.grey, align:"right" }));
   rule(s, 0.8, y+0.72, 11.7); });
-em(s, 0.8, 6.7, 11.2, 0.4, "One to four are answered by measurement. Five is answered by argument.", false, true);
+em(s, 0.8, 6.7, 11.2, 0.4, "The first four I can answer by measurement. The fifth I can only answer by argument.", false, true);
 
 s.addNotes("Five research questions. The first two are formulation questions - which variable governs compressive strength, and what plasticiser content does to flexural behaviour. The next two are benchmarking questions against the two material families. The fifth asks whether compressive strength is an adequate evaluation criterion for this class of material at all, and it is the question I care most about. Questions one to four are answered by measurement. Question five is answered by argument from those measurements, which is a different kind of claim and I will flag it as such when I get there.");
 
@@ -331,11 +304,11 @@ rule(s, 0.8, 3.5, 11.7);
   s.addText(n, S({ x:0.8, y:y+0.03, w:1.1, h:0.3, fontSize:12, bold:true, color:K.acc }));
   s.addText(h, S({ x:2.1, y, w:4.3, h:0.62, fontSize:13, bold:true, color:K.ink, lineSpacing:18 }));
   arw(s, 8.1, y+0.17);
-  s.addText(i===0?"tested on slides 11–14":"tested on slides 16–23",
+  s.addText(i===0?"tested on slides 10–13":"tested on slides 15–22",
     S({ x:8.5, y:y+0.02, w:4.0, h:0.4, fontSize:12, bold:true, color:K.acc, valign:"middle" }));
   if (i<1) rule(s, 0.8, y+1.0, 11.7); });
 rule(s, 0.8, 6.15, 11.7);
-micro(s, 0.8, 6.35, 11.2, "On provenance: the dissertation states a broader hypothesis framed on spatial resilience. This is its materials-engineering component, restated within the scope of these tests.");
+txt(s, 0.8, 6.35, 11.2, 0.5, "The dissertation behind this paper frames a broader hypothesis around spatial resilience, and what you see here is its materials-engineering component.", false, 11.5);
 s.addNotes("The hypothesis, in two clauses, because the two are tested by different parts of the paper. First clause: a fully bio-based eggshell-agar composite can be produced repeatably under ambient conditions. That is tested by the protocol and the formulation series - a defined procedure, a fixed shell-to-binder ratio, five formulations, and a cure that requires no thermal input after mixing. Second clause: its performance as an interior surface material is governed by deformation capacity rather than by compressive strength. That is tested by the mechanical results and the two benchmarks. On provenance, and I would rather say this than have it asked: the dissertation this derives from states a broader hypothesis framed on spatial resilience in interior design. What you see here is the materials-engineering component of that, restated within the scope of the tests actually reported.");
 
 /* ===================== 12 · stage 1 ===================== */
@@ -361,8 +334,8 @@ P1.forEach(([h,b,par],i)=>{
     fill:{ color:K.faint }, line:{ color:K.faint, transparency:100 }, objectName:"pa"+i });
 });
 rule(s, 0.8, 4.75, 11.7);
-txt(s, 0.8, 4.95, 11.2, 0.6, "That particle size was chosen to match the eggshell polymer-composite literature, so the mineral phase here is comparable with that work.", false, 12);
-micro(s, 0.8, 5.8, 11.2, "The 120 °C step is decontamination and drying, not sterilisation: sterility was not verified.");
+txt(s, 0.8, 4.95, 11.2, 0.6, "I chose 150 µm so that the mineral phase here would be comparable with the eggshell polymer-composite literature.", false, 12);
+txt(s, 0.8, 5.65, 11.2, 0.6, "The heat step is decontamination and drying rather than sterilisation, because sterility was never verified.", false, 12);
 s.addNotes("Stage one, the mineral phase. Whole shell from a single bakery, cleaned of membrane and residue by hand, heat-treated at 120 degrees for twenty minutes, milled in a laboratory grinder to a homogeneous powder, and sieved through a 150 micrometre mesh with only the passing fraction retained. The circles contract across the diagram to show what the stage actually does, which is progressive size reduction. Two points of precision. The 150 micrometre figure was selected to match the particle size used in the eggshell polymer-composite literature, so that the mineral phase here is comparable with that work. And I report the 120 degree step as decontamination and drying rather than sterilisation, because dry-heat sterilisation requires around 160 to 170 degrees for one to two hours and sterility was not verified.");
 
 /* ===================== 13 · stage 2 ===================== */
@@ -394,8 +367,9 @@ s.addText("55 min total", S({ x:bx+bw-2.2, y:yAmb-0.42, w:2.2, h:0.3, fontSize:1
   s.addShape(pres.ShapeType.rect, { x:x+0.57, y:yy, w:0.012, h:5.0-yy,
     fill:{ color:K.faint }, line:{ color:K.faint, transparency:100 }, objectName:"dl"+i });
 });
-txt(s, 0.8, 6.05, 11.2, 0.6, "Agar is added incrementally under continuous stirring; bulk addition forms agglomerates that do not redisperse.", false, 12);
-micro(s, 0.8, 6.75, 11.2, "Schematic. The two set points and the total heating time are recorded; intermediate ramp rates are not. Stirring was manual.");
+txt(s, 0.8, 6.0, 11.2, 0.55, "Agar is thermoreversible: it melts when you heat it and sets again as it cools, so no hardener and no cure temperature are needed.", false, 12);
+txt(s, 0.8, 6.6, 11.2, 0.55, "The agar is added a little at a time under constant stirring, because added all at once it forms agglomerates that never redisperse.", false, 12);
+micro(s, 0.8, 7.2, 11.2, "Schematic. The set points and the total time are recorded; the ramp rates are not, and stirring was manual.");
 s.addNotes("Stage two, binder preparation, drawn as a temperature-time profile because that is what the stage is. Water and glycerol are pre-mixed first, before any solids are present. Agar is then added incrementally under continuous stirring - bulk addition forms agglomerates that do not redisperse. The mixture is taken to 95 degrees and held until the agar is fully in solution, because if viscosity builds before complete dissolution the gel network is patchy. The temperature is then reduced to 80 and held while viscosity develops, and the shell fraction is introduced incrementally near the end; introduced earlier, it sediments. Fifty-five minutes in total. This is a schematic: the two set points and the total time are recorded, the intermediate ramp rates are not, and stirring was manual so shear rate is not a controlled quantity.");
 
 /* ===================== 14 · stage 3 ===================== */
@@ -421,12 +395,12 @@ dim(s, cx+cw*0.36+0.3, cy+0.44, 5.0, 0.3, "≈ 23 °C, shielded from direct sun 
     color:K.grey, align:(i===2?"right":"left") }));
 });
 rule(s, 0.8, 4.45, 11.7);
-txt(s, 0.8, 4.65, 11.2, 0.5, "No thermal input after the 55-minute preparation: the entire cure is at room temperature.", false, 12);
-micro(s, 0.8, 5.25, 11.2, "Silicone moulds release without a parting agent and without damaging a partially consolidated specimen. 50 mm cube moulds for compression, flat moulds otherwise.");
+txt(s, 0.8, 4.65, 11.2, 0.5, "After the 55-minute preparation the material receives no further heat, so the entire cure happens at room temperature.", false, 12);
+micro(s, 0.8, 5.25, 11.2, "Silicone moulds · 50 mm cube moulds for compression, flat moulds otherwise.");
 s.addShape(pres.ShapeType.rect, { x:0.8, y:5.85, w:11.7, h:0.85, fill:{ color:K.panel },
   line:{ color:K.panel, transparency:100 }, objectName:"disc" });
 s.addText([{ text:"Limitation   ", options:{ bold:true, color:K.acc } },
-           { text:"the composite shrinks as water evaporates, and post-drying dimensions were not logged, so every dimension I quote is a mould dimension.", options:{ color:K.ink } }],
+           { text:"the composite shrinks as the water evaporates, and I did not log the dried dimensions, so every dimension I quote today is a mould dimension.", options:{ color:K.ink } }],
   S({ x:1.15, y:6.0, w:11.0, h:0.55, fontSize:12, lineSpacing:17, valign:"middle" }));
 s.addNotes("Stage three, casting and cure, drawn as a timeline. Day zero, cast into silicone moulds - silicone because it flexes enough to release without a parting agent and without damaging a specimen that has not fully consolidated. Four days in mould for setting and initial drying, demoulded on day four, then seven further days at around 23 degrees shielded from direct sun and forced air movement. Day eleven, finished specimen, with three shellac coats where water resistance is required. Note that there is no thermal input at all after the fifty-five minute preparation: the entire cure proceeds at room temperature, which matters for the embodied-energy argument later. The limitation, which I will repeat because it affects every number that follows: the composite shrinks appreciably as water evaporates, cross-sections were measured at test time but post-drying dimensions were not logged, so every dimension I quote is a mould dimension.");
 
@@ -456,8 +430,8 @@ swatch(s, 4.4, 5.02, K.grey, "glycerol");
   s.addText(Math.round(100*w/tot)+"% water", S({ x:6.52, y, w:1.1, h:0.22, fontSize:9.5,
     color:i<3?K.acc:K.grey, bold:i<3, valign:"middle" })); });
 vrule(s, 8.0, 4.45, 2.4);
-em(s, 8.4, 4.75, 4.1, 1.4, "Solids concentration is the only variable — the water band shortens from C1 to C3.", false, true);
-micro(s, 8.4, 6.3, 4.1, "Flexural series confounded: glycerol halved at fixed batch mass, so water rose with it.");
+em(s, 8.4, 4.75, 4.1, 1.6, "Solids concentration is the only variable, and you can see it in the bars: the water band gets shorter from C1 to C3.", false, true);
+txt(s, 8.4, 6.3, 4.1, 0.8, "The glycerol was halved while the batch mass stayed the same, so the water rose to compensate.", false, 11.5);
 s.addNotes("The formulation matrix with the derived ratios, and there are two things to read in it. In the compressive series shell-to-binder is exactly two point zero zero in all three mixes. That was not planned as a control, but the consequence is that solids concentration is the only variable in the series, which makes the compression result interpretable. In the flexural series I declare a confound: glycerol was halved but batch mass was held at 770 grams, so water rose to compensate and the other ratios shifted with it. The plasticiser effect is therefore not cleanly isolated, and I will say so again when I present the flexural data.");
 
 /* ===================== 16 · test programme ===================== */
@@ -481,7 +455,7 @@ const SPX = (i) => 0.8 + i*2.95;
     fill:{ color:K.line }, line:{ color:K.line, transparency:100 }, objectName:"sp"+i });
 });
 rule(s, 0.8, 5.7, 11.7);
-em(s, 0.8, 5.9, 11.2, 0.5, "Mechanical values are means of three specimens; individual values were not retained, so I cannot give standard deviations.");
+em(s, 0.8, 5.9, 11.2, 0.5, "The mechanical values are means of three specimens, and because I did not retain the individual values, I cannot give you standard deviations.");
 /* 1 cube between platens */
 let x0 = SPX(0)+0.95;
 s.addShape(pres.ShapeType.downArrow, { x:x0+0.38, y:2.6, w:0.14, h:0.24,
@@ -510,7 +484,8 @@ x0 = SPX(3)+0.5;
 s.addShape(pres.ShapeType.rect, { x:x0, y:2.93, w:1.85, h:0.85, fill:{ color:"FFFFFF" }, line:{ color:K.ink, width:1.25 }, objectName:"vs" });
 s.addShape(pres.ShapeType.rect, { x:x0+0.02, y:3.16, w:1.81, h:0.6, fill:{ color:K.acc, transparency:72 }, line:{ color:K.acc, transparency:100 }, objectName:"wt" });
 s.addShape(pres.ShapeType.rect, { x:x0+0.6, y:3.3, w:0.65, h:0.34, fill:{ color:K.panel }, line:{ color:K.ink, width:1 }, objectName:"cp" });
-micro(s, 0.8, 6.5, 11.2, "Ignitability, absorption and density rest on single determinations.  ·  All testing: Advanced Construction Materials Research Laboratory, Hacettepe University.  ·  Schematic, not to scale.");
+txt(s, 0.8, 6.45, 11.2, 0.5, "The fire, absorption and density figures are single determinations.", false, 11.5);
+micro(s, 0.8, 7.0, 11.2, "All testing: Advanced Construction Materials Research Laboratory, Hacettepe University.  ·  Schematic, not to scale.");
 s.addNotes("The test programme. I want the reporting convention on the record before any numbers appear. Mechanical values are means of three specimens; individual values were not retained, so I cannot give standard deviations. The ignitability, absorption and density figures rest on single determinations and are indicative rather than characteristic values. Compression was run as cube compression rather than to a named standard, and I flag that as a deviation.");
 
 /* ===================== 17 · compression ===================== */
@@ -524,8 +499,8 @@ tbl(s, [
   [TD("C3"), TD("0.59"), TD("6.80",ACC), TD("4.10",ACC)],
 ], { x:0.8, y:1.85, w:4.6, colW:[0.7,1.6,1.15,1.15], rowH:0.42 });
 rule(s, 0.8, 3.7, 4.6);
-em(s, 0.8, 3.85, 4.6, 0.8, "Strength is governed by packing density, not by mineral content.");
-txt(s, 0.8, 4.55, 4.6, 0.9, "The route to a stronger composite is to remove water, not to add shell.", false, 12);
+em(s, 0.8, 3.85, 4.6, 0.9, "Strength here is governed by packing density, not by mineral content.");
+txt(s, 0.8, 4.85, 4.6, 0.9, "The way to a stronger composite is to take water out, not to put more shell in.", false, 12);
 micro(s, 0.8, 5.75, 4.6, "Linear over the range tested, R² = 0.99 — three formulations, therefore a hypothesis rather than a law.  ·  Fitted relation: σᴄ = 6.93 (solids : water) + 0.04");
 s.addChart(pres.ChartType.bar, [{ name:"σ", labels:["C1  0.37","C2  0.44","C3  0.59"], values:[2.55,3.12,4.10] }],
   { x:5.9, y:1.6, w:6.6, h:4.8, barDir:"col", chartColors:[K.ink], showLegend:false,
@@ -554,8 +529,8 @@ list(s, 3.9, 5.5, 5.2, 1.4, [
 vrule(s, 9.5, 1.5, 5.0);
 em(s, 10.0, 1.5, 2.5, 1.8, "Failure proceeds by progressive crushing rather than by fracture.", false, true);
 rule(s, 10.0, 3.3, 2.5);
-txt(s, 10.0, 3.5, 2.5, 1.6, "The cube has barrelled. It is shorter and wider, and still a single body.", false, 12);
-micro(s, 0.8, 7.0, 11.2, "Strain derived from an assumed 10% maximum deformation based on observation, not instrumented measurement.  ·  Bulk density 1.38 g/cm³, mould-volume basis.");
+txt(s, 10.0, 3.5, 2.5, 1.9, "It has barrelled, it is shorter and wider, and it is still a single body.", false, 12);
+micro(s, 0.8, 7.0, 11.2, "The strain scale assumes ten per cent deformation from observation, not instrumented measurement.  ·  Bulk density 1.38 g/cm³, mould-volume basis.");
 s.addNotes("This is the failure mode, and it is what I would ask about from where you are sitting. The curve is linear to about one megapascal, then stiffness falls away progressively as the agar network yields and the mineral redistributes. Peak arrives near ten percent strain with no abrupt load drop, and beyond peak the specimen continues to deform while holding together. The photograph shows the consequence: the cube has barrelled, it is shorter and wider, and it is still a single body. Energy is absorbed rather than released. One honesty point on the axis: the strain scale derives from an assumed ten percent maximum deformation based on observation, not from instrumented measurement.");
 
 /* ===================== 19 · flexure ===================== */
@@ -570,12 +545,10 @@ tbl(s, [
 rule(s, 0.8, 3.35, 7.3);
 H2(s, 0.8, 3.55, 4.6, "Flexural stress (MPa) – strain, F2");
 s.addImage({ path:G+"09b-egilme-egrisi.png", x:0.8, y:3.95, w:4.6, h:2.6, objectName:"fc" });
-em(s, 5.8, 3.95, 2.5, 1.4, "The transition is sharp, and it lies between those two values.", false, true);
+em(s, 5.8, 3.95, 2.5, 1.6, "The transition is sharp, and it lies between those two compositions.", false, true);
 vrule(s, 8.6, 1.45, 5.3);
 H2(s, 9.1, 1.45, 3.4, "Limitation");
-txt(s, 9.1, 1.85, 3.4, 2.2, "The specimen is kerfed on its tension face. The standard assumes a solid rectangular section and the calculation uses the full section, so part of the measured compliance is geometric and the reported modulus is a lower bound.", false, 12);
-rule(s, 9.1, 4.3, 3.4);
-em(s, 9.1, 4.5, 3.4, 1.0, "Flexural resistance is governed by plasticiser content.");
+txt(s, 9.1, 1.85, 3.4, 2.4, "The specimen is kerfed on its tension face while the standard assumes a solid rectangle, so the modulus I am quoting is a lower bound.", false, 12);
 micro(s, 9.1, 5.7, 3.1, "Confounded with solids concentration: batch mass was held constant, so water rose as glycerol fell.");
 micro(s, 0.8, 6.7, 7.3, "Flexural strength computed as σꜰ = 3FL / 2bd² on the full rectangular section.");
 s.addNotes("Flexure, to ASTM D790. The decisive variable is plasticiser content. At 18.8 percent glycerol the composite deformed without developing measurable resistance - the instrument registered nothing usable at all. Halving it gives 2.325 megapascals at a modulus of 192. The transition is sharp and it lies between those two values, which is itself a useful thing to know and a target for the next formulation series. Two limitations. The glycerol effect is confounded with solids concentration, as I flagged on the formulation slide. And the specimen is kerfed on its tension face while the standard assumes a solid rectangle, so the modulus I am quoting is a lower bound on the bulk material rather than a material constant.");
@@ -587,8 +560,8 @@ s.addImage({ path:G+"07-egilme-yakin-yiv.jpeg", x:3.48, y:0, w:4.48, h:3.36, obj
 s.addImage({ path:G+"08c-kemer.jpg", x:3.48, y:3.85, w:4.48, h:3.65, objectName:"b3" });
 s.addShape(pres.ShapeType.rect, { x:7.96, y:0, w:5.37, h:7.5, fill:{ color:K.dark }, line:{ color:K.dark, transparency:100 }, objectName:"pane" });
 s.addText("Flexural deformation", S({ x:8.45, y:1.4, w:4.2, h:0.5, fontSize:20, bold:true, color:K.onD, valign:"middle" }));
-em(s, 8.45, 2.1, 4.2, 1.4, "Both test programmes gave the same result: substantial deformation with retained integrity.", true, true);
-txt(s, 8.45, 3.9, 4.2, 1.6, "Deflected well beyond where a comparable ceramic parts. The kerfs are also why the reported modulus is a lower bound.", true, 12);
+em(s, 8.45, 2.1, 4.2, 1.6, "Both test programmes gave me the same result: substantial deformation with the integrity retained.", true, true);
+txt(s, 8.45, 4.0, 4.2, 1.6, "The beam is deflected well past the point where a comparable ceramic would have parted, and it is still intact.", true, 12);
 micro(s, 8.45, 6.0, 4.2, "Three-point rig at high deflection · kerfed tension face · panel arched by hand", true);
 s.addNotes("I would rather show this than ask you to take it on the numbers. On the left, the three-point rig at high deflection: the beam is deflected well past the failure point of a comparable ceramic and it has not parted. In the middle, a close-up of the tension face, where the transverse kerfs are visible. Below, the same panel arched by hand. The kerfs are why it arches, and they are also why I report the modulus as a lower bound rather than a material constant. The common result across both test programmes is substantial deformation with retained integrity, and that is the observation the final argument rests on.");
 
@@ -600,12 +573,12 @@ H2(s, 3.5, 1.45, 3.3, "Ignitability");
 fig(s, 3.5, 1.9, 3.3, "≈ 10 s", "to ignition under direct flame");
 fig(s, 3.5, 3.1, 3.3, "4 s", "to self-extinguish after flame removal");
 list(s, 3.5, 4.3, 3.3, 1.3, ["Charring remains local","No lateral flame spread","No melting and no dripping"], false, 11.5);
-txt(s, 3.5, 5.75, 3.3, 0.8, "This is an ignitability test; there is no Euroclass classification.", false, 12);
+txt(s, 3.5, 5.75, 3.3, 0.9, "It is an ignitability test, and there is no Euroclass classification behind it.", false, 12);
 micro(s, 3.5, 6.65, 3.3, "ISO 11925-2:2020. No cone calorimetry, smoke or toxicity data.");
 vrule(s, 7.3, 1.45, 4.9);
 H2(s, 7.8, 1.45, 4.7, "Water absorption, 24 h immersion");
 s.addText("0.7%", S({ x:7.8, y:1.85, w:1.8, h:0.6, fontSize:32, bold:true, color:K.acc, valign:"bottom" }));
-txt(s, 9.7, 1.95, 2.8, 1.2, "mass gain, shellac-coated. Coating integrity is the limiting factor, not the composite.", false, 11.5);
+txt(s, 9.7, 1.95, 2.8, 1.3, "mass gain. It is the coating that limits humid service rather than the composite itself.", false, 11.5);
 rule(s, 7.8, 3.2, 4.7);
 H2(s, 7.8, 3.4, 4.7, "Bulk density");
 tbl(s, [
@@ -637,9 +610,9 @@ s.addChart(pres.ChartType.bar, [
      valGridLine:{ color:K.line, size:1 }, catGridLine:{ style:"none" }, objectName:"bc1" });
 micro(s, 0.8, 6.5, 8.3, "Velasco & Gaona (2011) · Klyosov (2007) · Nemli & Aydın (2007) · Altun (2006)");
 vrule(s, 9.5, 1.45, 5.0);
-em(s, 10.0, 1.5, 2.5, 1.8, "On strength alone this composite is not competitive with engineered wood or stone.", false, true);
+em(s, 10.0, 1.5, 2.5, 2.0, "On strength alone this composite is not competitive with engineered wood or stone.", false, true);
 rule(s, 10.0, 3.6, 2.5);
-txt(s, 10.0, 3.8, 2.5, 1.6, "One sixth of MDF. One twentieth of travertine, a stone it visually resembles.", false, 12);
+txt(s, 10.0, 3.9, 2.5, 1.8, "It has one sixth the compressive strength of MDF and one twentieth that of travertine.", false, 12);
 s.addNotes("First benchmark, against the materials this would sit alongside in an interior. Let me be direct. One sixth the compressive strength of MDF and one twentieth that of travertine - and travertine is the relevant aesthetic comparison, because the material resembles it. It does exceed compressed mushroom panel, the only other fully bio-based board in the set, by a factor of three in compression. But on strength alone the composite is not competitive with engineered wood or stone, and I am not going to claim otherwise.");
 
 /* ===================== 23 · bio-based composites ===================== */
@@ -688,7 +661,7 @@ s.addText("This study  192", S({ x:lpos(192)-1.05, y:LY-0.9, w:2.1, h:0.26,
   fontSize:11, bold:true, color:K.acc, align:"center" }));
 micro(s, 7.0, 4.0, 5.5, "Unlabelled points: soy-based bioplastic 124, flax-fibre PLA 198, pine 11 000.");
 rule(s, 0.8, 4.6, 11.7);
-em(s, 0.8, 4.85, 11.7, 0.5, "Water-cast, dried at room temperature, no oven, no autoclave, no extruder — and it reaches the stiffness of melt-processed bio-polymers.");
+em(s, 0.8, 4.85, 11.7, 0.5, "It was cast from water and dried at room temperature, with no oven, no autoclave and no extruder, and it still reaches the stiffness of melt-processed bio-polymers.");
 micro(s, 0.8, 5.5, 11.2, "An order of magnitude above the fungal and lime-binder family in compression; wood remains two orders of magnitude above.  ·  Values are reported as published; specimen geometry and test method differ between sources.");
 s.addNotes("Second benchmark, and this is the one that matters. Against the bio-based family the position changes completely. In compression, an order of magnitude above mycelium composites and hempcrete, and within the range reported for eggshell-filled PLA. In stiffness, 192 megapascals - between soy bioplastic at 124 and flax-fibre PLA at 198, inside the LDPE range. Note what that means in process terms. This is water-cast and dried at room temperature, with no oven, no autoclave and no extruder, and it reaches the stiffness of melt-processed bio-polymers. One caution: the cited values come from studies with differing specimen geometry and test method, so this is a position statement rather than a controlled comparison. And wood remains two orders of magnitude above in modulus.");
 
@@ -709,10 +682,10 @@ vrule(s, 6.3, 1.42, 5.0, true);
 s.addText("Ur  =  σ² / 2E", S({ x:6.8, y:1.95, w:3.2, h:0.5, fontSize:22, bold:true, color:K.onD }));
 s.addText("14.1 kJ/m³", S({ x:6.8, y:2.6, w:3.2, h:0.55, fontSize:26, bold:true, color:K.acc }));
 micro(s, 6.8, 3.2, 3.2, "computed from this study's own σꜰ = 2.325 MPa and Eꜰ = 192 MPa", true);
-em(s, 6.8, 3.8, 3.2, 0.9, "Notice where the modulus sits: in the denominator.", true);
-txt(s, 6.8, 4.8, 3.2, 1.9, "Strength records the load at which a material stops performing, not whether it then fails gracefully or catastrophically.", true, 12);
+em(s, 6.8, 3.8, 3.2, 1.0, "Notice where the modulus sits in that expression: it is in the denominator.", true);
+txt(s, 6.8, 5.0, 3.2, 1.9, "Strength tells you the load at which a material stops performing. It does not tell you whether it then fails gracefully or catastrophically.", true, 12);
 H2(s, 10.4, 1.42, 2.1, "Limitation", true);
-txt(s, 10.4, 1.85, 2.1, 2.6, "No comparative table is possible: the literature reports strength and modulus separately. A reporting convention, not a ranking.", true, 11.5);
+txt(s, 10.4, 1.85, 2.1, 2.6, "I cannot give you a comparative table, because the literature reports strength and modulus in separate studies.", true, 11.5);
 micro(s, 0.9, 6.85, 11.1, "Resilience as a property of systems that absorb disturbance and retain function, after Holling (1973).", true);
 s.addNotes("This brings me to research question five, and the diagram is the argument. The shaded area under the elastic region is the energy a material absorbs per unit volume before it takes permanent damage. Because that area is one half sigma epsilon, and epsilon is sigma over E, the area reduces to sigma squared over two E. Notice where the elastic modulus sits: in the denominator. So the low modulus that counted against the material on the previous slide is the same property that raises this quantity. For this formulation it comes to about 14 kilojoules per cubic metre, computed from this study's own two measurements. Both test programmes gave the same qualitative result, substantial deformation with retained integrity. Strength records the load at which a material ceases to perform. It does not record whether it then fails gracefully or catastrophically, and for a demountable non-loadbearing component that is what governs service life. The limitation, stated plainly: I cannot give you a comparative table, because the literature reports strength and modulus in separate studies on separate formulations. This is a data point and a proposed reporting convention, not a ranking, and the value inherits the lower-bound modulus.");
 
@@ -735,7 +708,7 @@ H2(s, 6.1, 1.42, 6.4, "Conditions of use, each traced to a measured result");
   if (i<3) rule(s, 6.1, y+0.72, 6.4); });
 rule(s, 6.1, 5.5, 6.4);
 micro(s, 6.1, 5.7, 6.4, "Every constituent, the shellac included, is biodegradable; reversible fixing recovers the module intact. What is displaced is quarried limestone.");
-txt(s, 0.8, 6.3, 4.6, 0.8, "No life-cycle assessment was carried out, so these are qualitative potentials.", false, 11.5);
+txt(s, 0.8, 6.25, 4.6, 0.9, "I did not carry out a life-cycle assessment, so these are qualitative potentials rather than quantified claims.", false, 11.5);
 s.addNotes("The application envelope follows from the measurements rather than being imposed on them, and each condition traces to a specific result. Non-loadbearing surfaces, carrying self-weight and handling loads only, because 4.1 megapascals supports nothing more. Dry interiors, not wet rooms and not facades, because water performance depends on coating integrity. Away from ignition sources: it self-extinguishes, but it carries no classification. And modular rather than sheet, which matters because damage is then replaced one unit at a time rather than refinishing a surface. On end of life: every constituent including the shellac is biodegradable, and reversible fixing allows the module to be recovered intact. What is displaced is quarried limestone, in a surface application rather than a downcycled one. The caveat: no life-cycle assessment was carried out, so these are qualitative potentials grounded in the protocol and not quantified claims.");
 
 /* ===================== 26 · limitations and further work ===================== */
@@ -754,7 +727,7 @@ tbl(s, [
 ], { x:0.8, y:1.82, w:11.7, colW:[6.3,5.4], rowH:0.58 });
 rule(s, 0.8, 6.1, 11.7);
 em(s, 0.8, 6.3, 11.2, 0.5,
-  "Every value I reported today is a lower bound. I would rather set these out than have them found.", false, true);
+  "Every value I have given you today is a lower bound, and I would rather set that out myself than have you find it.", false, true);
 
 s.addNotes("The limitations, each next to the experiment that resolves it, because that pairing is the point. No dispersion data, because individual specimen values were not retained - repeat the series and retain them. Compressive strain assumed from observation - instrument it. Shrinkage unquantified, so density is a lower bound - record the post-drying geometry. The kerfed section was calculated as a solid rectangle - test an un-kerfed one. The flexural series is confounded - vary glycerol at constant solids concentration. And durability, fire classification and life-cycle assessment are simply untested and outside this paper. Every value I reported today is a lower bound. I would rather set these out than have them found, and none of them is unknown to me.");
 
@@ -765,7 +738,7 @@ H1(s, "Conclusions", true);
  ["Packing density governs compressive strength","not mineral content"],
  ["Plasticiser content sets brittle or ductile response","the transition is sharp"],
  ["Bio-polymer stiffness without thermal processing","water-cast, ambient-dried"],
- ["Strength alone is an insufficient criterion","report σ and E together"]]
+ ["Strength on its own is not an adequate criterion","report σ and E together"]]
  .forEach(([h,b],i)=>{ const y = 1.85 + i*0.92;
   s.addText(String(i+1).padStart(2,"0"), S({ x:0.8, y:y+0.04, w:0.55, h:0.3, fontSize:12, bold:true, color:K.acc }));
   s.addText(h, S({ x:1.5, y, w:7.3, h:0.45, fontSize:13, bold:true, color:K.onD, valign:"middle" }));
