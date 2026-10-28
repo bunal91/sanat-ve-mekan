@@ -108,56 +108,55 @@ gösteriyor. Orijinal ifade slaytın altında köken notu olarak duruyor.
 
 ## Akış ve süre
 
-28 slayt. Metnin kendisi **13:00** (140 kelime/dakika, 1 845 kelime). Slayt
-geçişleri, ekrana dönüp işaret etme ve nefes payıyla sahnede **≈ 14:30**.
-Metin bilerek 15:00'in altına yazıldı: hiçbir konuşma kağıt üstündeki süreyle
-gitmez.
+27 slayt. Metnin kendisi **11:00** (140 kelime/dakika, 1 569 kelime). Slayt
+geçişleri ve işaret duraklarıyla sahnede **≈ 12:20 – 12:45**.
 
 | # | Slayt | Süre | # | Slayt | Süre |
 |---|---|---|---|---|---|
-| 1 | Cover | 0:15 | 15 | Formulations | 0:35 |
-| 2 | Background | 0:35 | 16 | Test programme | 0:20 |
-| 3 | Prior applications | 0:35 | 17 | Compression | 0:35 |
-| 4 | Agar as binder | 0:30 | 18 | Compressive failure | 0:35 |
-| 5 | Research gap | 0:35 | 19 | Flexure | 0:35 |
-| 6 | Aim | 0:20 | 20 | Flexural deformation | 0:20 |
-| 7 | Scope | 0:20 | 21 | Fire, water, density | 0:35 |
-| 8 | Method | 0:20 | 22 | Conventional materials | 0:30 |
-| 9 | Research questions | 0:15 | 23 | Bio-based composites | 0:35 |
-| 10 | Hypothesis | 0:20 | 24 | Modulus of resilience | 0:55 |
-| 11 | Material | 0:10 | 25 | Application envelope | 0:30 |
-| 12 | Stage 1 — mineral | 0:30 | 26 | Limitations and further work | 0:35 |
-| 13 | Stage 2 — binder | 0:35 | 27 | Conclusions | 0:30 |
-| 14 | Stage 3 — cure | 0:30 | 28 | References | süre dışı |
+| 1 | Cover | 0:15 | 15 | Test programme | 0:20 |
+| 2 | Background | 0:30 | 16 | Compression | 0:30 |
+| 3 | Prior applications | 0:30 | 17 | Compressive failure | 0:30 |
+| 4 | Agar as binder | 0:25 | 18 | Flexure | 0:30 |
+| 5 | Research gap | 0:30 | 19 | Flexural deformation | 0:20 |
+| 6 | Aim | 0:15 | 20 | Fire, water, density | 0:30 |
+| 7 | Scope | 0:15 | 21 | Conventional materials | 0:25 |
+| 8 | Method | 0:15 | 22 | Bio-based composites | 0:30 |
+| 9 | Research questions | 0:15 | 23 | Modulus of resilience | 0:45 |
+| 10 | Hypothesis | 0:20 | 24 | Application envelope | 0:25 |
+| 11 | Stage 1 — mineral | 0:25 | 25 | Limitations and further work | 0:30 |
+| 12 | Stage 2 — binder | 0:30 | 26 | Conclusions | 0:25 |
+| 13 | Stage 3 — cure | 0:25 | 27 | References | süre dışı |
+| 14 | Formulations | 0:30 | | | |
 
-**Dokunma: 3, 5, 13, 15, 17, 19, 24.** Sunumun iskeleti bunlar.
+**Dokunma: 3, 5, 12, 14, 16, 18, 23.** Sunumun iskeleti bunlar.
 
-Konuşulacak metnin tamamı `konusma-metni.md` ve basılmaya hazır hâli
-`ICSMMEP26_Konusma_Metni.pdf` dosyalarında. Slaytların konuşmacı notları metinden
-biraz daha dolu; onlar soru–cevap için yedek, kürsüde okunacak olan basılı metin.
+## Minimal tur — slaytta ne kaldı
 
-## Seyreltme turu
+Kural: **konuşulan cümle slaytta durmaz.** Ekranda yalnız veri, diyagram ve
+slayt başına en fazla bir vurgu cümlesi var.
 
-29 slayttan 28'e indi ve her slayt hafifledi:
-
-| Slayt | Ne çıktı |
+| Slayt | Kaldırılan |
 |---|---|
-| 2 | Üç büyük rakamdan biri ("> 12 ay toplama") |
-| 4 | Karşılaştırma tablosunun dördüncü satırı |
-| 6 | Dört hedefin uzun açıklamaları — artık yarım satır |
-| 10 | Cümleciklerin uzun gövdeleri |
-| 12 | "Terminology" bloğu → dipnota indi |
-| 14 | "Mould material" bloğu → dipnota indi |
-| 15 | Tablodan iki sütun (Solids g, Glycerol % solids) |
-| 16 | **Tablonun tamamı.** Geriye dört numune çizimi kaldı; standart ve numune sayısı çizimin altına yazıldı |
-| 18, 19 | Sağ sütundaki fazladan paragraflar |
-| 21 | Yoğunluk tablosundan bir satır |
-| 23 | **Elastisite modülü tablosu.** Logaritmik eksen zaten onu gösteriyor |
-| 25 | Döngüsellik paragrafı tek cümleye indi |
-| 26 + 27 | **Birleşti.** Her sınırlılık, onu çözen deneyle yan yana tek tabloda |
+| 2 | İki paragraflık giriş metni. Yerine iki rakam ve dikey akış şeması |
+| 4 | İki paragraflık agar anlatımı. Yerine döngü diyagramı ve üç maddelik liste |
+| 5 | Üç boşluğun uzun gövdeleri → her biri tek satır |
+| 6 | Dört hedefin açıklamaları → yalnız başlıklar |
+| 7 | Kapsam dışı paragrafı → tek cümle |
+| 8 | Kapanış paragrafı ve dört düğümün alt satırları |
+| 9 | Kapanış cümlesi |
+| 10 | Cümleciklerin gövdeleri → yalnız "slayt 11–14 / 16–23" oku |
+| 11 | Gerekçe paragrafı → dipnot |
+| 12 | Yöntem gerekçesi paragrafı |
+| 13 | "Thermal input" bloğu; sınırlılık paneli kısaldı |
+| 14 | İki yorum bloğu → tek vurgu cümlesi |
+| 15 | Raporlama paragrafı → tek vurgu cümlesi |
+| 16, 17, 18 | Yorum paragrafları → yalnız vurgu cümlesi |
+| 19 | İki paragraf → bir vurgu, bir kısa satır |
+| 20 | Yangın mekanizması paragrafı → konuşmacı notuna |
+| 21, 22, 23, 24 | Yorum paragrafları kısaldı ya da dipnota indi |
+| **11 (eski)** | **Malzeme tam sayfa fotoğrafı slaytı tamamen kaldırıldı** — kapak zaten malzemeyi gösteriyor |
 
-26 ve 27'nin birleşmesi hem bir slayt hem de yarım dakika kazandırdı, üstelik
-sınırlılığı çözümüyle yan yana koyduğu için ayrı hâllerinden daha açık.
+29 → 28 → **27 slayt**. Konuşma metni 2 142 → 1 845 → **1 569 kelime**.
 
 ## Kaynaklar slaytı
 
