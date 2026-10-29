@@ -16,9 +16,9 @@ yazıyla yazdım; kürsüde rakam görüp duraksamayasın diye.
 
 | | |
 |---|---|
-| Metin | **11:05** · 140 kelime/dakika |
+| Metin | **11:15** · 140 kelime/dakika |
 | 26 slayt geçişi, duraklar | ~1:15 |
-| **Sahnede** | **≈ 12:20** |
+| **Sahnede** | **≈ 12:30** |
 
 ---
 
@@ -83,10 +83,13 @@ is the one the paper turns on.**
 
 ---
 
-## 6 · Scope — 0:15
+## 6 · Scope — 0:25
 
 The boundaries of the work are set out here, so that nothing said today is read
-beyond them.
+beyond them. Five formulations were produced, with three specimens each for the
+mechanical tests, and three published standards were applied. The whole series
+was cured at ambient conditions in a single laboratory, and the application
+envelope throughout is non-loadbearing interior surfaces.
 
 [Alttaki şeride işaret et]
 
@@ -380,8 +383,8 @@ classification rather than a substitute for it.
 
 # Provaya dair
 
-- Yüksek sesle, kronometreyle oku. Metnin kendisi 11:05; sahnede duraklarla
-  12:20 civarı.
+- Yüksek sesle, kronometreyle oku. Metnin kendisi 11:15; sahnede duraklarla
+  12:30 civarı.
 - 13 dakikayı geçersen **hızlanarak değil, cümle atarak kısalt.** Sırasıyla:
   1. Slayt 16, *"The strain scale assumes ten per cent deformation…"* cümlesi.
   2. Slayt 10, *"The heat step is decontamination and drying…"* cümlesi.
