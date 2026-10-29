@@ -132,39 +132,41 @@ geçişleri ve işaret duraklarıyla sahnede **≈ 12:20 – 12:45**.
 
 ## Slayttaki cümle = söylenen cümle
 
-Her slaytta, konuşma metninden **birebir alınmış** en az bir cümle var. Konuşma
-metninde bu cümleler **kalın** yazılı: kalın olanı ekrandan okuyabilirsin, düz
-olanı ekrana bakmadan söylersin. İzleyiciye bazı şeyleri slayttan okuyormuşsun
-gibi görünür, çünkü gerçekten öyle.
+Slaytta duran her tam cümle konuşma metninde birebir geçiyor. Geriye kalanlar
+başlık, etiket, tablo verisi ve dipnot. Konuşma metninde bu cümleler **kalın**
+yazılı: kalın olanı ekrandan okuyabilirsin, düz olanı ekrana bakmadan söylersin.
 
-| Slayt | Slaytta ve metinde aynı duran cümle |
+Bilerek esnetilen iki istisna: **araştırma soruları slaytı** (beş soru ekranda,
+metinde tek tek okunmuyor) ve **kaynaklar slaytı**.
+
+## Dil
+
+Metin ve slaytlar kişisiz, ağırlıklı olarak edilgen bir dilde. Konuşma metninde
+açılış tanıtımı dışında **tek bir birinci tekil şahıs yok**; "I chose", "I did
+not log", "I cannot give you" gibi kalıpların hepsi edilgene çevrildi ve
+slaytlar da buna göre güncellendi.
+
+| Önce | Sonra |
 |---|---|
-| 2 | The case for eggshell as a mineral phase is settled. This paper is about the binder. |
-| 3 | The burden is carried by the binder, and the binder is untouched. |
-| 4 | The compositional logic transfers. The loading case does not, and for an interior surface that is bending. |
-| 5 | It is not a novel constituent. It is a documented protocol and a single coherent property set. |
-| 6 | The fourth — deriving an evaluation criterion for this material class — is where I will spend most time. |
-| 7 | The filled boxes are what was determined. The outlined boxes are what was not. |
-| 8 | Properties first, application envelope second. |
-| 9 | One to four are answered by measurement. Five is answered by argument. |
-| 10 | On provenance: the dissertation states a broader hypothesis framed on spatial resilience… |
-| 11 | That particle size was chosen to match the eggshell polymer-composite literature… |
-| 12 | Agar is added incrementally under continuous stirring; bulk addition forms agglomerates that do not redisperse. |
-| 13 | No thermal input after the 55-minute preparation… · The limitation: the composite shrinks as water evaporates… |
-| 14 | Solids concentration is the only variable — the water band shortens from C1 to C3. |
-| 15 | Mechanical values are means of three specimens; individual values were not retained… |
-| 16 | Strength is governed by packing density, not by mineral content. · The route to a stronger composite is to remove water, not to add shell. |
-| 17 | The cube has barrelled… · Failure proceeds by progressive crushing rather than by fracture. |
-| 18 | The transition is sharp, and it lies between those two values. |
-| 19 | Both test programmes gave the same result: substantial deformation with retained integrity. |
-| 20 | This is an ignitability test; there is no Euroclass classification. |
-| 21 | On strength alone this composite is not competitive with engineered wood or stone. |
-| 22 | Water-cast, dried at room temperature, no oven, no autoclave, no extruder… |
-| 23 | Notice where the modulus sits: in the denominator. · Strength records the load at which a material stops performing… |
-| 24 | No life-cycle assessment was carried out, so these are qualitative potentials. |
-| 25 | Every value I reported today is a lower bound. I would rather set these out than have them found. |
+| I chose 150 µm so that… | The 150 µm fraction was selected so that… |
+| …and I did not log the dried dimensions | …and the dried dimensions were not logged |
+| because I did not retain the individual values, I cannot give you standard deviations | since the individual values were not retained, standard deviations cannot be reported |
+| Notice where the modulus sits in that expression | The modulus sits in the denominator |
+| I cannot give you a comparative table | A comparative table cannot be assembled |
+| I did not carry out a life-cycle assessment | No life-cycle assessment was carried out |
+| Every value I have given you today is a lower bound | Every value reported here is a lower bound |
 
-Denge şu: slaytta bir cümle, geri kalanı veri ve diyagram. Paragraf yok.
+İzleyiciye doğrudan hitap da kaldırıldı: "Look at the cube", "you can see it in
+the bars", "I would rather show you this" gibi ifadeler yerine kişisiz karşılıkları
+kondu. Soru–cevap bölümünde birinci tekil şahıs duruyor; orada soru doğrudan
+konuşmacıya sorulmuş oluyor.
+
+## Slayt numaraları
+
+Her slaytın sağ alt köşesinde numara var, 13 punto kalın. Numaralar konuşma
+metnindeki başlık numaralarıyla aynı; kürsüde kaybolursan ekrana bakıp metinde
+o başlığa dönebilirsin. Numara yer tutucu alan olarak değil **gerçek metin
+olarak** basılıyor, çünkü yer tutucu her görüntüleyicide render edilmiyor.
 
 ## Kaynaklar slaytı
 
