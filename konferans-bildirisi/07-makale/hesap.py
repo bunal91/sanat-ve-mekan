@@ -126,7 +126,9 @@ sig = [COMPRESSION[k]["sigma"] for k in ids]
 for name, key in [("solids_to_water", "solids_to_water"),
                   ("water_mass_fraction", "water_mass_fraction"),
                   ("agar_dry_pct", "agar_dry_pct"),
-                  ("glycerol_dry_pct", "glycerol_dry_pct")]:
+                  ("glycerol_dry_pct", "glycerol_dry_pct"),
+                  ("glycerol_to_agar", "glycerol_to_agar"),
+                  ("shell_batch_mass_g", "shell")]:
     xs = [res["formulations"][k][key] for k in ids]
     res["fits"][name] = dict(x=xs, y=sig, **linfit(xs, sig))
 # Orijinden geçen tek parametreli orantı: σ = k·(katı/su)
@@ -227,7 +229,7 @@ if __name__ == "__main__":
         if n == "proportional":
             print(f"  orantı: σ = {f['k']:.3f}·x | en büyük sapma {f['max_rel_dev_pct']:.1f} %")
         else:
-            print(f"  fit {n}: eğim {f['slope']:.4f} kesişim {f['intercept']:.4f} R² {f['r2']:.4f} "
+            print(f"  fit {n}: eğim {f['slope']:.4f} kesişim {f['intercept']:.4f} R² {f['r2']:.5f} "
                   f"t {f['t']:.2f} p {f['p_two_sided']:.3f}")
     fx = res["flexure"]
     print("== Eğilme")
