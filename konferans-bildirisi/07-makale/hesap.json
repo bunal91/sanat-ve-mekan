@@ -1,0 +1,427 @@
+{
+ "formulations": {
+  "C1": {
+   "test": "compression",
+   "water": 325,
+   "shell": 80,
+   "agar": 35,
+   "glycerol": 5,
+   "total": 445,
+   "nonvolatile": 120,
+   "solids_to_water": 0.36923076923076925,
+   "water_mass_fraction": 0.7303370786516854,
+   "shell_dry_pct": 66.66666666666667,
+   "agar_dry_pct": 29.166666666666668,
+   "glycerol_dry_pct": 4.166666666666667,
+   "shell_to_binder": 2.0,
+   "shell_to_agar": 2.2857142857142856,
+   "glycerol_to_agar": 0.14285714285714285,
+   "agar_in_liquid_pct": 9.58904109589041
+  },
+  "C2": {
+   "test": "compression",
+   "water": 310,
+   "shell": 90,
+   "agar": 40,
+   "glycerol": 5,
+   "total": 445,
+   "nonvolatile": 135,
+   "solids_to_water": 0.43548387096774194,
+   "water_mass_fraction": 0.6966292134831461,
+   "shell_dry_pct": 66.66666666666667,
+   "agar_dry_pct": 29.62962962962963,
+   "glycerol_dry_pct": 3.7037037037037037,
+   "shell_to_binder": 2.0,
+   "shell_to_agar": 2.25,
+   "glycerol_to_agar": 0.125,
+   "agar_in_liquid_pct": 11.267605633802816
+  },
+  "C3": {
+   "test": "compression",
+   "water": 280,
+   "shell": 110,
+   "agar": 45,
+   "glycerol": 10,
+   "total": 445,
+   "nonvolatile": 165,
+   "solids_to_water": 0.5892857142857143,
+   "water_mass_fraction": 0.6292134831460674,
+   "shell_dry_pct": 66.66666666666667,
+   "agar_dry_pct": 27.272727272727273,
+   "glycerol_dry_pct": 6.0606060606060606,
+   "shell_to_binder": 2.0,
+   "shell_to_agar": 2.4444444444444446,
+   "glycerol_to_agar": 0.2222222222222222,
+   "agar_in_liquid_pct": 13.432835820895523
+  },
+  "F1": {
+   "test": "flexure",
+   "water": 450,
+   "shell": 190,
+   "agar": 70,
+   "glycerol": 60,
+   "total": 770,
+   "nonvolatile": 320,
+   "solids_to_water": 0.7111111111111111,
+   "water_mass_fraction": 0.5844155844155844,
+   "shell_dry_pct": 59.375,
+   "agar_dry_pct": 21.875,
+   "glycerol_dry_pct": 18.75,
+   "shell_to_binder": 1.4615384615384615,
+   "shell_to_agar": 2.7142857142857144,
+   "glycerol_to_agar": 0.8571428571428571,
+   "agar_in_liquid_pct": 12.068965517241379
+  },
+  "F2": {
+   "test": "flexure",
+   "water": 480,
+   "shell": 190,
+   "agar": 70,
+   "glycerol": 30,
+   "total": 770,
+   "nonvolatile": 290,
+   "solids_to_water": 0.6041666666666666,
+   "water_mass_fraction": 0.6233766233766234,
+   "shell_dry_pct": 65.51724137931035,
+   "agar_dry_pct": 24.137931034482758,
+   "glycerol_dry_pct": 10.344827586206897,
+   "shell_to_binder": 1.9,
+   "shell_to_agar": 2.7142857142857144,
+   "glycerol_to_agar": 0.42857142857142855,
+   "agar_in_liquid_pct": 12.068965517241379
+  }
+ },
+ "compression": {
+  "C1": {
+   "F_kN": 3.89,
+   "sigma": 2.55,
+   "implied_area_mm2": 1525.4901960784314,
+   "implied_edge_mm": 39.05752419289312,
+   "area_ratio_to_mould": 0.6101960784313726,
+   "linear_shrinkage_pct": 21.884951614213765,
+   "strength_per_ratio": 6.906249999999999,
+   "nominal_stress_on_mould": 1.556
+  },
+  "C2": {
+   "F_kN": 4.3,
+   "sigma": 3.12,
+   "implied_area_mm2": 1378.2051282051282,
+   "implied_edge_mm": 37.12418521941092,
+   "area_ratio_to_mould": 0.5512820512820513,
+   "linear_shrinkage_pct": 25.751629561178156,
+   "strength_per_ratio": 7.164444444444444,
+   "nominal_stress_on_mould": 1.72
+  },
+  "C3": {
+   "F_kN": 6.8,
+   "sigma": 4.1,
+   "implied_area_mm2": 1658.5365853658539,
+   "implied_edge_mm": 40.72513456534986,
+   "area_ratio_to_mould": 0.6634146341463415,
+   "linear_shrinkage_pct": 18.549730869300273,
+   "strength_per_ratio": 6.957575757575757,
+   "nominal_stress_on_mould": 2.72
+  }
+ },
+ "fits": {
+  "solids_to_water": {
+   "x": [
+    0.36923076923076925,
+    0.43548387096774194,
+    0.5892857142857143
+   ],
+   "y": [
+    2.55,
+    3.12,
+    4.1
+   ],
+   "slope": 6.925389353511655,
+   "intercept": 0.03866826208782337,
+   "r2": 0.994499355705651,
+   "n": 3,
+   "t": 13.446073230731786,
+   "p_two_sided": 0.04725914488837797
+  },
+  "water_mass_fraction": {
+   "x": [
+    0.7303370786516854,
+    0.6966292134831461,
+    0.6292134831460674
+   ],
+   "y": [
+    2.55,
+    3.12,
+    4.1
+   ],
+   "slope": -15.214761904761898,
+   "intercept": 13.684761904761901,
+   "r2": 0.9985124696876961,
+   "n": 3,
+   "t": 25.908593329884685,
+   "p_two_sided": 0.024559570353585906
+  },
+  "agar_dry_pct": {
+   "x": [
+    29.166666666666668,
+    29.62962962962963,
+    27.272727272727273
+   ],
+   "y": [
+    2.55,
+    3.12,
+    4.1
+   ],
+   "slope": -0.5324183263915184,
+   "intercept": 18.531575160923893,
+   "r2": 0.7191908545259267,
+   "n": 3,
+   "t": 1.6003554534258577,
+   "p_two_sided": 0.3555518148962676
+  },
+  "glycerol_dry_pct": {
+   "x": [
+    4.166666666666667,
+    3.7037037037037037,
+    6.0606060606060606
+   ],
+   "y": [
+    2.55,
+    3.12,
+    4.1
+   ],
+   "slope": 0.5324183263915182,
+   "intercept": 0.7842976145399474,
+   "r2": 0.7191908545259261,
+   "n": 3,
+   "t": 1.6003554534258557,
+   "p_two_sided": 0.35555181489626797
+  },
+  "proportional": {
+   "k": 7.005455829219072,
+   "residuals": [
+    -0.03662984463473462,
+    0.06923697759814651,
+    -0.028215042218382003
+   ],
+   "max_rel_dev_pct": 2.2191338973764907
+  }
+ },
+ "flexure": {
+  "F_N": 310.0,
+  "L": 120.0,
+  "b": 60.0,
+  "d": 20.0,
+  "E": 192.0,
+  "sigma_f": 2.325,
+  "strain_elastic": 0.012109375,
+  "strain_check_6Dd_L2": 0.012109375,
+  "midspan_deflection_mm": 1.453125,
+  "span_to_depth": 6.0,
+  "energy_index_kJ_m3": 14.077148437500002,
+  "volume_average_kJ_m3": 1.564127604166667,
+  "stored_energy_J": 0.225234375,
+  "span_volume_cm3": 144.0
+ },
+ "comparators": {
+  "appels_2019": {
+   "TRN": {
+    "process": "non-pressed",
+    "sigma": 0.22,
+    "E": 3,
+    "strain_pct": 7.333333333333333,
+    "energy_index": 8.066666666666666
+   },
+   "TBN": {
+    "process": "non-pressed",
+    "sigma": 0.29,
+    "E": 9,
+    "strain_pct": 3.222222222222222,
+    "energy_index": 4.672222222222222
+   },
+   "PCN": {
+    "process": "non-pressed",
+    "sigma": 0.05,
+    "E": 1,
+    "strain_pct": 5.0,
+    "energy_index": 1.2500000000000002
+   },
+   "PRN": {
+    "process": "non-pressed",
+    "sigma": 0.06,
+    "E": 1,
+    "strain_pct": 6.0,
+    "energy_index": 1.8
+   },
+   "PCC": {
+    "process": "cold-pressed",
+    "sigma": 0.24,
+    "E": 12,
+    "strain_pct": 2.0,
+    "energy_index": 2.4
+   },
+   "PRC": {
+    "process": "cold-pressed",
+    "sigma": 0.21,
+    "E": 15,
+    "strain_pct": 1.4,
+    "energy_index": 1.4699999999999998
+   },
+   "TRH": {
+    "process": "heat-pressed",
+    "sigma": 0.86,
+    "E": 80,
+    "strain_pct": 1.075,
+    "energy_index": 4.6225
+   },
+   "PCH": {
+    "process": "heat-pressed",
+    "sigma": 0.62,
+    "E": 34,
+    "strain_pct": 1.8235294117647058,
+    "energy_index": 5.652941176470589
+   },
+   "PRH": {
+    "process": "heat-pressed",
+    "sigma": 0.87,
+    "E": 72,
+    "strain_pct": 1.2083333333333333,
+    "energy_index": 5.2562500000000005
+   }
+  },
+  "appels_ranges": {
+   "non-pressed": {
+    "sigma": [
+     0.05,
+     0.29
+    ],
+    "E": [
+     1,
+     9
+    ],
+    "strain_pct": [
+     3.222222222222222,
+     7.333333333333333
+    ],
+    "energy_index": [
+     1.2500000000000002,
+     8.066666666666666
+    ]
+   },
+   "cold-pressed": {
+    "sigma": [
+     0.21,
+     0.24
+    ],
+    "E": [
+     12,
+     15
+    ],
+    "strain_pct": [
+     1.4,
+     2.0
+    ],
+    "energy_index": [
+     1.4699999999999998,
+     2.4
+    ]
+   },
+   "heat-pressed": {
+    "sigma": [
+     0.62,
+     0.87
+    ],
+    "E": [
+     34,
+     80
+    ],
+    "strain_pct": [
+     1.075,
+     1.8235294117647058
+    ],
+    "energy_index": [
+     4.6225,
+     5.652941176470589
+    ]
+   }
+  },
+  "boards": {
+   "Particleboard P2 (EN 312)": {
+    "sigma": 11.0,
+    "E": 1600.0,
+    "strain_pct": 0.6875,
+    "energy_index": 37.8125,
+    "this_over_board_sigma": 0.2113636363636364,
+    "this_over_board_E": 0.12,
+    "this_over_board_index": 0.3722882231404959
+   },
+   "MDF, general purpose (EN 622-5)": {
+    "sigma": 20.0,
+    "E": 2200.0,
+    "strain_pct": 0.9090909090909091,
+    "energy_index": 90.9090909090909,
+    "this_over_board_sigma": 0.11625,
+    "this_over_board_E": 0.08727272727272728,
+    "this_over_board_index": 0.15484863281250003
+   }
+  },
+  "concrete_C20_25": {
+   "fctm": 2.2,
+   "Ecm": 30000.0,
+   "h": 20.0,
+   "fctm_fl": 3.4760000000000004,
+   "strain_pct_axial": 0.007333333333333334,
+   "strain_pct_flex": 0.011586666666666667,
+   "energy_index_axial": 0.08066666666666668,
+   "energy_index_flex": 0.20137626666666672,
+   "this_over_concrete_index": 69.90470461348639
+  },
+  "plasterboard": {
+   "parallel": 4.74,
+   "perpendicular": 2.62,
+   "this_over_parallel": 0.49050632911392406,
+   "this_over_perpendicular": 0.8874045801526718
+  },
+  "pla_esp": {
+   "flex_strength": 67.0,
+   "flex_modulus": 3400.0,
+   "strength_ratio": 28.817204301075268,
+   "modulus_ratio": 17.708333333333332
+  },
+  "elsacker_2019": {
+   "comp_strength": [
+    0.35,
+    0.45
+   ],
+   "density": [
+    59.77,
+    187.29
+   ],
+   "water_24h": [
+    24.45,
+    30.28
+   ],
+   "c_series_over_mycelium": [
+    5.666666666666666,
+    11.714285714285714
+   ]
+  },
+  "fired_brick": {
+   "comp_strength": 3.12,
+   "density": 1.76,
+   "water_abs": 12.2
+  },
+  "this_over_mycelium": {
+   "sigma_over_strongest": 2.6724137931034484,
+   "E_over_stiffest": 2.4,
+   "index_over_best": 1.7451010459710747,
+   "index_over_worst": 11.26171875
+  }
+ },
+ "other": {
+  "mass_C3_g": 173.0,
+  "nominal_density_g_cm3": 1.384,
+  "areal_mass_20mm_kg_m2": 27.68,
+  "water_gain_g": 0.07,
+  "water_final_g": 10.069999999999999
+ }
+}
