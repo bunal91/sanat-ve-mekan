@@ -10,6 +10,7 @@ Word ve PDF sürümleri `makale-docx.py` ile üretilir.
 | `hesap.py` → `hesap.json` | Metindeki tüm türetilmiş sayıların tek kaynağı |
 | `sekil-uret.py` → `sekiller/` | Şekiller (tez fotoğrafları + hesaptan çizimler) |
 | `makale-docx.py` | Markdown → Word dönüştürücü (pandoc + python-docx) |
+| `jscmt/` | Aynı makalenin JSCMT yazar yönergesine göre hazırlanmış sürümü (ayrıntı için `jscmt/OKU-BENI.md`) |
 
 Yeniden üretmek için: `python3 hesap.py && python3 sekil-uret.py && python3 makale-docx.py`
 (Pillow, numpy, matplotlib, python-docx, lxml ve pandoc gerekir.)
