@@ -22,9 +22,9 @@ Rather than interpreting low flexural stiffness solely as a material deficiency,
 
 ## 1. Introduction
 
-Eggshell is generated continuously as a food-processing and household waste stream, and is landfilled at scale despite a composition that makes it attractive as a mineral feedstock. Shell is approximately 94% calcium carbonate, with the balance made up of organic matter, calcium phosphate and magnesium carbonate (William and Owen, 1995; Torres et al., 2010). Its layered, porous microstructure, in which calcium carbonate crystals are bound within a protein fibre matrix, gives the material a lower specific gravity than most mineral fillers while retaining mechanical stability (Shafiei et al., 2019; Bhartiya and Dubey, 2018).
+Eggshell is generated continuously as a food-processing and household waste stream, and is landfilled at scale despite a composition that makes it attractive as a mineral feedstock. Shell is approximately 94% calcium carbonate, with the balance made up of organic matter, calcium phosphate and magnesium carbonate (Ngayakamo and Onwualu, 2022; Skórczewska et al., 2022; Torres et al., 2010). Its layered, porous microstructure, in which calcium carbonate crystals are bound within a protein fibre matrix, gives the material a lower specific gravity than most mineral fillers while retaining mechanical stability (Shafiei et al., 2019; Bhartiya and Dubey, 2018).
 
-These properties have supported a broad body of valorisation research. Eggshell powder has been used to replace part of the cement fraction in concrete (Teara et al., 2019), to stabilise compressed laterite bricks (Adogla et al., 2016), to modify hot-mix asphalt binders (Razzaq and Yousif, 2017), as a lime substitute in soil stabilisation (Soundara and Vilasini, 2015), as a source of biogenic calcium carbonate in eco-ceramic wall tiles (Vilarinho et al., 2022), in wallpaper production (Tutuş et al., 2018), as a filler in flexible polyurethane foams (Victor et al., 2019), as a thermal stabiliser in poly(vinyl chloride) composites (Skórczewska et al., 2020), and as a reinforcement in ceramic–metal systems (Yönetken et al., 2016; Bilici et al., 2023). Reviews of the field confirm both the breadth of this work and the consistency of its outcomes (Owuamanam and Cree, 2020).
+These properties have supported a broad body of valorisation research. Eggshell powder has been used to replace part of the cement fraction in concrete (Teara et al., 2019), to stabilise compressed laterite bricks (Adogla et al., 2016), to modify hot-mix asphalt binders (Razzaq and Yousif, 2017), as a lime substitute in soil stabilisation (Soundara and Vilasini, 2015), as a source of biogenic calcium carbonate in eco-ceramic wall tiles (Vilarinho et al., 2022), in wallpaper production (Tutuş et al., 2018), as a filler in flexible polyurethane foams (Victor et al., 2019), as a thermal stabiliser in poly(vinyl chloride) composites (Skórczewska et al., 2022), and as a reinforcement in ceramic–metal systems (Yönetken et al., 2022; Bilici et al., 2023). Reviews of the field confirm both the breadth of this work and the consistency of its outcomes (Owuamanam and Cree, 2020).
 
 What this literature shares is the position eggshell occupies within the composite. In each case the shell enters as a particulate filler suspended in a matrix that is itself petrochemical, clinker-based or ceramic. The waste stream is valorised; the binding phase is not. A composite in which both the filler and the binder are biological and biodegradable remains comparatively unexplored for construction and interior applications.
 
@@ -124,15 +124,15 @@ The flexural specimens carry transverse kerfs on the tension face. ASTM D790-17 
 
 Under direct flame impingement, ignition occurred at approximately 10 s. On removal of the flame source, specimens self-extinguished within 4 s. Charring was confined to the region of flame contact, and no lateral flame spread was observed in either of two ignitions, at the upper and lower corners respectively. Smoke and a characteristic combustion odour were observed; no melting or dripping occurred, indicating the absence of thermoplastic behaviour. Physical integrity was retained outside the charred zone.
 
-The calcium carbonate fraction is the probable contributor to this behaviour, carbonates decomposing endothermically with release of carbon dioxide which dilutes the flame front locally (Hirschler, 2013). This mechanism was not verified calorimetrically in the present work. ISO 11925-2:2020 is an ignitability test; no reaction-to-fire classification was determined, and no cone calorimetry, smoke density or toxicity data were obtained.
+A probable contributor to this behaviour is the mineral fraction, which, at about two-thirds of the dry mass, reduces the proportion of combustible matter and leaves an inert residue; mineral fillers act on fire in general through heat absorption, the heat capacity of the residue and dilution of the gas phase (Hull et al., 2011). Calcium carbonate itself decomposes only between about 650 and 770 °C (Skórczewska et al., 2022), so its endothermic decomposition is unlikely to be the first-order mechanism in a small-flame exposure. None of these mechanisms was verified calorimetrically in the present work. ISO 11925-2:2020 is an ignitability test; no reaction-to-fire classification was determined, and no cone calorimetry, smoke density or toxicity data were obtained.
 
 ### 3.4 Water absorption
 
 The shellac-coated specimen gained approximately 0.7% in mass over 24 hours of full immersion. Slight dimensional expansion was observed, consistent with water penetrating inter-fibre voids. The specimen retained its structural integrity, but local dissolution and surface loss occurred at points where the coating was thin or incomplete. Coating integrity rather than the composite itself therefore governs performance in humid conditions.
 
-### 3.5 Bulk density
+### 3.5 Recorded cube mass
 
-The C3 specimen had a mass of 173 g, giving a bulk density of approximately 1.38 g/cm³ on a mould-volume basis. Because the dried specimen occupies less volume than the mould, this value is a lower bound. For context, mycelium and cellulose-based composites are generally reported in the range 0.3–0.8 g/cm³ (Jones et al., 2020), while fired clay brick and normal-weight concrete fall at 1.6–2.0 and 2.4 g/cm³ respectively (William and Owen, 1995). The composite is therefore denser than the fungal and cellulosic bio-material family and lighter than conventional mineral construction materials.
+A mass of 173 g was recorded for one C3 cube, which on the 125 cm³ volume of the mould would correspond to 1.38 g/cm³. This figure is not used: the non-volatile constituents of the whole C3 batch (Table 1) weigh 165 g, so a dried cube cast from that batch cannot weigh more. Either the cube was weighed before it had dried, or the recipe masses refer to a different batch size. No density is therefore claimed for the dried material.
 
 ## 4. Discussion
 
@@ -200,13 +200,13 @@ Bilici, V.O., Peşmen, G., Yönetken, A. and Erol, A. (2023) 'Effect of variatio
 
 Hernández, V., Ibarra, D., Triana, J.F., Martínez-Soto, B., Faúndez, M., Vasco, D.A., Gordillo, L., Herrera, F., García-Herrera, C. and Garmulewicz, A. (2022) 'Agar biopolymer films for biodegradable packaging: a reference dataset for exploring the limits of mechanical performance', *Materials*, 15(11), 3954. doi: 10.3390/ma15113954.
 
-Hirschler, M.M. (2013) 'Flammability and fire testing', in Kutz, M. (ed.) *Handbook of environmental degradation of materials*. Oxford: William Andrew Publishing, pp. 197–230.
+Hull, T.R., Witkowski, A. and Hollingbery, L. (2011) 'Fire retardant action of mineral fillers', *Polymer Degradation and Stability*, 96(8), pp. 1462–1469. doi: 10.1016/j.polymdegradstab.2011.05.006.
 
 International Organization for Standardization (2020) *ISO 11925-2: Reaction to fire tests — Ignitability of products subjected to direct impingement of flame — Part 2: Single-flame source test*. Geneva: ISO.
 
-Jones, M., Mautner, A., Luenco, S., Bismarck, A. and John, S. (2020) 'Engineered mycelium composite construction materials: fabrication and characterization', *Journal of Bionanoscience*, 14(1), pp. 1–10.
-
 Karana, E., Barati, B., Rognoli, V. and Zeeuw van der Laan, A. (2015) 'Material driven design (MDD): a method to design for material experiences', *International Journal of Design*, 9(2), pp. 35–54.
+
+Ngayakamo, B. and Onwualu, A.P. (2022) 'Recent advances in green processing technologies for valorisation of eggshell waste for sustainable construction materials', *Heliyon*, 8(6), e09649. doi: 10.1016/j.heliyon.2022.e09649.
 
 Owuamanam, S. and Cree, D. (2020) 'Progress of bio-calcium carbonate waste eggshell and seashell fillers in polymer composites: a review', *Journal of Composites Science*, 4(2), 70.
 
@@ -214,7 +214,7 @@ Razzaq, A.K. and Yousif, R.A. (2017) 'Sustainability of HMA by using of egg shel
 
 Shafiei, S., Omidi, M., Nasehi, F., Golzar, H., Mohammadrezaei, D., Rezai Rad, M. and Khojasteh, A. (2019) 'Egg shell-derived calcium phosphate/carbon dot nanofibrous scaffolds for bone tissue engineering: fabrication and characterization', *Materials Science and Engineering: C*, 100, pp. 564–575. doi: 10.1016/j.msec.2019.03.003.
 
-Skórczewska, K., Kwiatkowski, W. and Kwiatkowski, M. (2020) 'Poly(vinyl chloride) composites with waste eggshell as a natural filler: improved thermal stability', *Polymer Composites*, 41(9), pp. 3580–3589.
+Skórczewska, K., Lewandowski, K., Szewczykowski, P., Wilczewski, S., Szulc, J., Stopa, P. and Nowakowska, P. (2022) 'Waste eggshells as a natural filler for the poly(vinyl chloride) composites', *Polymers*, 14(20), 4372. doi: 10.3390/polym14204372.
 
 Soundara, B. and Vilasini, P.P. (2015) 'Effect of egg shell powder on the properties of clay', *50th Indian Geotechnical Conference*, Pune, India, 17–19 December.
 
@@ -228,6 +228,4 @@ Victor, E.I., Louis, I.C., Alfred, N.O. and Ozioma, U.N. (2019) 'Use of chicken 
 
 Vilarinho, I.S., Filippi, E. and Seabra, M.P. (2022) 'Development of eco-ceramic wall tiles with bioCaCO₃ from eggshells waste', *Open Ceramics*, 9, 100220. doi: 10.1016/j.oceram.2022.100220.
 
-William, J.S. and Owen, J.C. (1995) *Egg science and technology*. 4th edn. Boca Raton, FL: CRC Press.
-
-Yönetken, A., Erol, A., Yakar, A. and Peşmen, G. (2016) 'Investigation of ceramic-metal composites produced by electroless Ni plating of AlN-Astaloy Cr-M', *International Journal of Chemical, Molecular, Nuclear, Materials and Metallurgical Engineering*, 10(3).
+Yönetken, A., Erol, A. and Peşmen, G. (2022) 'Characterization of egg shell powder-doped ceramic–metal composites', *Open Chemistry*, 20(1), pp. 716–724. doi: 10.1515/chem-2022-0175.

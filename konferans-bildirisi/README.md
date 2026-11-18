@@ -51,6 +51,9 @@ bölümlerinde konumlanmalı.
 | `02-notlar/` | Okuma notları, literatür haritası, konu ve tez notları |
 | `03-gorseller/` | Numune fotoğrafları, grafikler, SEM görüntüleri |
 | `04-metin/` | Özet, iskelet, tam metin, kaynakça |
+| `05-veri/` | Tez verisi dökümü ve kontrolleri |
+| `06-sunum/` | Sunum (pptx/pdf), konuşma metni, notlu pptx |
+| `07-makale/` | Genişletilmiş dergi makalesi (`makale.md` → Word/PDF), hesap ve şekil betikleri |
 
 ## İş sırası
 

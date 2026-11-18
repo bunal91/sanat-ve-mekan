@@ -61,7 +61,7 @@ A second obstacle is procedural. Material-driven design places the material and 
 
 A third issue is the criterion by which such materials are judged. Studies of eggshell-filled polymers report tensile and flexural strength, modulus and impact energy (Owuamanam & Cree, 2020). A common finding is that the filler raises stiffness (Cree et al., 2023; Owuamanam et al., 2021; Skórczewska et al., 2022), while impact energy falls (Cree et al., 2023; Owuamanam et al., 2021) and strength may not exceed that of the unfilled matrix (Owuamanam et al., 2021). Judged by strength, a soft bio-based composite will always appear as a weak version of whatever it is compared with. Strength, however, records the stress at which a material ceases to carry load. It says nothing of how much deformation the material accommodates before that point, or of what happens after it.
 
-Two established concepts address those questions. In materials science, the modulus of resilience is the strain energy per unit volume that a material absorbs elastically, *U*~r~ = *σ*~y~^2^/2*E* (Callister & Rethwisch, 2018), and the ratio *σ*~f~^2^/*E* is the index by which materials are ranked for the storage of elastic energy (Ashby, 2011). In systems ecology, resilience denotes the capacity of a system to absorb disturbance and persist, as distinct from stability, the capacity to return to equilibrium (Holling, 1973). Holling (1996) later separated engineering resilience, which concerns recovery near an equilibrium, from ecological resilience, which concerns the magnitude of disturbance that can be absorbed before a system changes its structure. The dissertation from which this article derives (Ünal, 2025) treats the resilience of interior space in the second sense. The present article is its materials component, and asks whether the first, measurable sense can serve as an evaluation criterion for the material.
+Two established concepts address those questions. In materials science, the modulus of resilience is the strain energy per unit volume that a material absorbs elastically, *U*~r~ = *σ*~y~^2^/2*E* (Callister & Rethwisch, 2018), and the ratio *σ*~f~^2^/*E* is the index by which materials are ranked for the storage of elastic energy (Ashby, 2011). In systems ecology, resilience denotes the capacity of a system to absorb disturbance and persist, as distinct from stability, the capacity to return to equilibrium (Holling, 1973). Holling (1996) later separated engineering resilience, which concerns recovery near an equilibrium, from ecological resilience, which concerns the magnitude of disturbance that can be absorbed before a system changes its structure. The dissertation from which this article derives (Ünal, 2025) is concerned with spatial resilience, a concept of the second kind. The present article is its materials component, and asks whether the first, which can be measured, can serve as a criterion for evaluating the material.
 
 ## 1.4 Aim, research questions and hypothesis
 
@@ -134,19 +134,19 @@ Table: **Table 2.** Production protocol: parameters that were set, and quantitie
 
 Five formulations were prepared, three for compression (C1–C3) and two for flexure (F1, F2). Table 3 gives the batch masses and the proportions derived from them, and Figure 3 shows the composition of the dried solid. Two derived quantities are used below. The solids-to-water ratio, S/W, is the mass of the non-volatile constituents (eggshell, agar and glycerol) divided by the mass of water in the batch. It describes the mixture as weighed out and not as cast, since evaporation during the cook was not measured. The dry-basis shares are the masses of the three non-volatile constituents as percentages of their sum, and describe the composition of the solid that remains after drying.
 
-Table: **Table 3.** Formulations: batch masses and derived proportions. S/W is the solids-to-water ratio of the mixture as weighed out; dry-basis shares refer to the non-volatile mass.
+Table: **Table 3.** Formulations: batch masses and derived proportions. C1–C3 form the compression series and F1–F2 the flexure series. S/W is the solids-to-water ratio of the mixture as weighed out; dry-basis shares refer to the non-volatile mass.
 
-| ID | Test | Water (g) | Eggshell (g) | Agar (g) | Glycerol (g) | S/W | Water (% of batch) | Eggshell (% dry) | Agar (% dry) | Glycerol (% dry) | Glycerol : agar |
-|:---|:------------|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|
-| C1 | Compression | 325 | 80 | 35 | 5 | 0.369 | 73.0 | 66.7 | 29.2 | 4.2 | 0.14 |
-| C2 | Compression | 310 | 90 | 40 | 5 | 0.435 | 69.7 | 66.7 | 29.6 | 3.7 | 0.13 |
-| C3 | Compression | 280 | 110 | 45 | 10 | 0.589 | 62.9 | 66.7 | 27.3 | 6.1 | 0.22 |
-| F1 | Flexure | 450 | 190 | 70 | 60 | 0.711 | 58.4 | 59.4 | 21.9 | 18.8 | 0.86 |
-| F2 | Flexure | 480 | 190 | 70 | 30 | 0.604 | 62.3 | 65.5 | 24.1 | 10.3 | 0.43 |
+| ID | Water (g) | Eggshell (g) | Agar (g) | Glycerol (g) | S/W | Water (% of batch) | Eggshell (% dry) | Agar (% dry) | Glycerol (% dry) | Glycerol : agar |
+|:--|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|
+| C1 | 325 | 80 | 35 | 5 | 0.369 | 73.0 | 66.7 | 29.2 | 4.2 | 0.14 |
+| C2 | 310 | 90 | 40 | 5 | 0.435 | 69.7 | 66.7 | 29.6 | 3.7 | 0.13 |
+| C3 | 280 | 110 | 45 | 10 | 0.589 | 62.9 | 66.7 | 27.3 | 6.1 | 0.22 |
+| F1 | 450 | 190 | 70 | 60 | 0.711 | 58.4 | 59.4 | 21.9 | 18.8 | 0.86 |
+| F2 | 480 | 190 | 70 | 30 | 0.604 | 62.3 | 65.5 | 24.1 | 10.3 | 0.43 |
 
 The formulations were arrived at empirically during development, and no factorial design was intended. Their recalculated proportions nevertheless have a clear structure. In the compression series the batch mass is constant at 445 g, and so is the mineral share of the dry mass: in all three formulations the mass of eggshell is exactly twice the combined mass of agar and glycerol, 66.7% of the solid. What changes monotonically is the water content, from 73.0% of the batch in C1 to 62.9% in C3 (S/W from 0.37 to 0.59). The shares of agar and glycerol change by a few points, and not monotonically.
 
-In the flexure series the masses of eggshell and agar are identical in F1 and F2. Glycerol is halved, from 60 g to 30 g, and water is raised by 30 g to keep the batch at 770 g. On a dry basis the only difference between F1 and F2 is therefore the glycerol content, 18.8% against 10.3% of the solid, or 0.86 against 0.43 parts of glycerol per part of agar. The binder solutions are concentrated: agar amounts to between 9.6% and 13.4% of the liquid phase, beyond the range of 0.5–8% covered by the film-forming mixtures of Hernández et al. (2022), who note that their most concentrated mixtures gave a thick, rubber-like material unsuited to film testing.
+In the flexure series the masses of eggshell and agar are identical in F1 and F2. Glycerol is halved, from 60 g to 30 g, and water is raised by 30 g to keep the batch at 770 g. On a dry basis the only difference between F1 and F2 is therefore the glycerol content, 18.8% against 10.3% of the solid, or 0.86 against 0.43 parts of glycerol per part of agar. The binder solutions are concentrated: agar amounts to between 9.6% and 13.4% of the liquid phase, beyond the range of 0.5–8% covered by the film-forming mixtures of Hernández et al. (2022), who report that higher agar contents gave a thick, rubber-like material unsuited to tensile testing.
 
 ![**Figure 3.** Formulations: (a) composition of the non-volatile mass, which is the composition of the dried solid; (b) solids-to-water ratio of the mixture as weighed out.](sekiller/Fig3_formulations.png){width=16cm}
 
@@ -162,7 +162,7 @@ Table: **Table 4.** Test programme and departures from the standards referred to
 | Three-point bending | ASTM D790-17: configuration and Eq. (1) | Cast in 180 × 60 × 20 mm moulds; span 120 mm; three per formulation (F1, F2) | Maximum load; nominal flexural strength; flexural modulus | Span-to-depth ratio 6:1 instead of 16:1; kerfed tension face; mould dimensions used in Eq. (1) |
 | Small-flame exposure | ISO 11925-2:2020: edge exposure, 45°, 15 s | 40 × 50 mm; two exposures | Time to ignition; time to self-extinction; spread; melting and dripping | Hand-held gas lighter; specimen 40 × 50 mm instead of 250 × 90 mm; no test enclosure |
 | Water absorption | ASTM D570-98(2018): 24 h immersion | 40 × 50 mm, 10 g, three coats of shellac; one specimen | Mass gain | Non-standard specimen; coated specimen only |
-| Mass | — | One C3 cube | Mass | Dried volume not measured |
+| Mass | — | One C3 cube | Mass | Moisture state, dried volume and batch size not recorded |
 
 ### 2.5.1 Compression
 
@@ -172,7 +172,7 @@ Cubes cast in 50 mm moulds were loaded between flat platens to maximum load. Bec
 
 Three-point bending used the configuration and the stress formula of ASTM D790-17 (ASTM International, 2017). Specimens were cast in moulds of 180 × 60 × 20 mm and tested on a span of 120 mm. Flexural strength was calculated as
 
-$$\sigma_f = \frac{3FL}{2bd^{2}} \qquad (1)$$
+$$\sigma_f = \frac{3FL}{2bd^{2}} \qquad \text{(1)}$$
 
 where *F* is the maximum load, *L* the span, *b* the width and *d* the depth, the last two taken as the mould dimensions (*b* = 60 mm, *d* = 20 mm). Midspan deflection was measured by a displacement transducer bearing on the lower face of the specimen (Figure 6a), and the flexural modulus *E*~f~ was reported by the machine from the initial linear part of the load–deflection record.
 
@@ -184,7 +184,7 @@ The response to a small flame was observed under exposure conditions taken from 
 
 ### 2.5.4 Water absorption and mass
 
-Water absorption was determined by the 24 h immersion procedure of ASTM D570-98(2018) (ASTM International, 2018) on a single specimen of 40 × 50 mm with an initial mass of 10 g, finished with three coats of shellac. The specimen geometry is not that of the standard, and no uncoated specimen was tested, so the result describes the coated surface and not the composite. In addition, the mass of one C3 cube was recorded.
+Water absorption was determined by the 24 h immersion procedure of ASTM D570-98(2018) (ASTM International, 2018) on a single specimen of 40 × 50 mm with an initial mass of 10 g, finished with three coats of shellac. The specimen geometry is not that of the standard, and no uncoated specimen was tested, so the result describes the coated surface and not the composite. The mass of one C3 cube was also recorded (Section 3.4).
 
 ## 2.6 Derived quantities and benchmark data
 
@@ -192,11 +192,11 @@ The relation between mean compressive strength and S/W was examined by least-squ
 
 For the flexural result, two quantities were derived on the idealisation of linear-elastic behaviour up to maximum load. The first is the elastic strain capacity,
 
-$$\varepsilon_{el} = \frac{\sigma_f}{E_f} \qquad (2)$$
+$$\varepsilon_{el} = \frac{\sigma_f}{E_f} \qquad \text{(2)}$$
 
 the outer-fibre strain that corresponds to the flexural strength at the measured modulus. The second is the modulus of resilience evaluated at the flexural strength,
 
-$$U = \frac{\sigma_f^{2}}{2E_f} \qquad (3)$$
+$$U = \frac{\sigma_f^{2}}{2E_f} \qquad \text{(3)}$$
 
 which is the elastic strain energy per unit volume at the outer fibre at midspan, and half of the index *σ*~f~^2^/*E* of Ashby (2011). Where a yield point is defined, Eq. (3) with the yield stress is the modulus of resilience of the textbooks (Callister & Rethwisch, 2018). Here the flexural strength takes its place, and *U* is used as an index for comparison, not as a measured property; it is referred to below as the resilience index. For a rectangular beam in three-point bending, the elastic energy density averaged over the span is *U*/9, a geometric factor common to all materials.
 
@@ -222,7 +222,7 @@ Dividing the mean load by the mean stress gives the loaded area implied by the o
 
 Strength increased with the solids-to-water ratio of the mixture (Figure 4). The least-squares line through the three means is
 
-$$\sigma_c = 6.93\,(S/W) + 0.04 \qquad (4)$$
+$$\sigma_c = 6.93\,(S/W) + 0.04 \qquad \text{(4)}$$
 
 with *σ*~c~ in MPa, R^2^ = 0.994 and *p* = 0.047 on one residual degree of freedom. The intercept is negligible, so that strength is in effect proportional to S/W: the quotient *σ*~c~/(S/W) lies between 6.9 and 7.2 MPa for all three formulations, and a line through the origin with a slope of 7.0 MPa reproduces each mean to within 2.2%. A straight line in the water mass fraction of the batch fits equally well (R^2^ = 0.999); three points cannot distinguish between the two descriptions. The dry-basis shares of agar and glycerol show no comparable relation (R^2^ = 0.72 in both cases, *p* = 0.36), and the eggshell share is constant.
 
@@ -250,7 +250,7 @@ Under the flame the specimen ignited after about 10 s. When the flame was remove
 
 The shellac-coated specimen gained about 0.7% in mass in 24 h of immersion, that is, about 0.07 g on 10 g. A slight swelling was noted. The specimen remained intact, but at points where the coating was thin or incomplete the surface softened and material was lost locally.
 
-A mass of 173 g was recorded for one C3 cube. Referred to the 125 cm^3^ volume of the mould this corresponds to 1.38 g/cm^3^. Because the dried volume was not measured, and Table 5 indicates that the dried cubes were considerably smaller than the mould, the figure cannot be converted into a bulk density of the dried material and is given as a nominal value only.
+A mass of 173 g was recorded for one C3 cube. Referred to the 125 cm^3^ volume of the mould this would correspond to 1.38 g/cm^3^, but the figure is not used, because it cannot be reconciled with the recipe: the non-volatile constituents of the whole C3 batch in Table 3 weigh 165 g, so that a dried cube cast from that batch cannot weigh more. Either the cube was weighed before it had dried, or the recipe masses refer to a different batch size than the one from which the cube was cast. The mass is therefore reported as an unresolved record, not as a density, and no density is claimed for the dried material.
 
 ## 3.5 Derived flexural quantities
 
@@ -280,7 +280,7 @@ Table: **Table 6.** Flexural benchmark. *ε*~el~ and *U* are calculated from Eqs
 
 | Material | Basis | *σ*~f~ (MPa) | *E*~f~ (MPa) | *ε*~el~ (%) | *U* (kJ/m^3^) | Source |
 |:----------------------|:---------------|-------:|-------:|-------:|-------:|:--------------|
-| Concrete C20/25, section depth 20 mm | Design values | 3.5 | 30 000 | 0.012 | 0.20 | CEN (2004) |
+| Concrete C20/25, flexural value extrapolated to a 20 mm section | Design values | 3.5 | 30 000 | 0.012 | 0.20 | CEN (2004) |
 | Mycelium composites, non-pressed (four) | Measured means | 0.05–0.29 | 1–9 | 3.2–7.3 | 1.3–8.1 | Appels et al. (2019) |
 | Mycelium composites, cold-pressed (two) | Measured means | 0.21–0.24 | 12–15 | 1.4–2.0 | 1.5–2.4 | Appels et al. (2019) |
 | Mycelium composites, heat-pressed (three) | Measured means | 0.62–0.87 | 34–80 | 1.1–1.8 | 4.6–5.7 | Appels et al. (2019) |
@@ -294,13 +294,13 @@ Table: **Table 6.** Flexural benchmark. *ε*~el~ and *U* are calculated from Eqs
 
 The comparison with conventional interior boards is unfavourable on every count but one. The nominal flexural strength of F2 is 21% of the minimum required of P2 particleboard and 12% of that required of general-purpose MDF; its modulus is 12% and 9% of the respective requirements. Since boards in service exceed their minimum requirements, the real gap is wider. The composite cannot replace a wood-based board wherever the board spans, carries shelves or holds fixings. Standard 12.5 mm gypsum plasterboard, the usual interior lining, has a measured flexural strength of 2.6 MPa across and 4.7 MPa along the direction of production (Ranachowski et al., 2020); the composite, at 2.3 MPa, lies just below the weaker direction. The one respect in which it exceeds the wood-based boards is elastic strain capacity, 1.2% against 0.7% and 0.9%.
 
-Plasterboard also offers a point of comparison for moisture. Ranachowski et al. (2020) found that immersion in water reduced the flexural strength of plasterboards by 70–80%. Sensitivity to water is thus shared by the incumbent lining material, which is nonetheless used throughout dry interiors. It defines a condition of use, not a disqualification.
+Plasterboard also offers a point of comparison for moisture. Ranachowski et al. (2020) found that a cycle of immersion in water and drying at room temperature reduced the flexural strength of plasterboards by 70–80%. Sensitivity to water is thus shared by the incumbent lining material, which is nonetheless used throughout dry interiors. It defines a condition of use, not a disqualification.
 
 ## 4.4 How does it compare with other bio-based composites?
 
-Against other bio-based composites the position is different. In compression, the 2.6–4.1 MPa of the C series compares with 0.35–0.45 MPa reported for mycelium composites on flax tow (Elsacker et al., 2019), an advantage of about one order of magnitude, and is of the same order as the 3.12 MPa of clay bricks containing eggshell and granite waste fired at 900 °C (Ngayakamo et al., 2020). In flexure, F2 has 2.7 times the strength of the strongest and 2.4 times the modulus of the stiffest of the nine mycelium composites of Appels et al. (2019), including those consolidated by heat pressing, and its resilience index is between 1.7 and 11 times theirs.
+Against other bio-based composites the position is different. In compression, the 2.6–4.1 MPa of the C series compares with 0.35–0.45 MPa reported for mycelium composites on flax tow (Elsacker et al., 2019), an advantage of roughly six- to twelve-fold, and is of the same order as the 3.12 MPa of clay bricks containing eggshell and granite waste fired at 900 °C (Ngayakamo et al., 2020). In flexure, F2 has 2.7 times the strength of the strongest and 2.4 times the modulus of the stiffest of the nine mycelium composites of Appels et al. (2019), including those consolidated by heat pressing, and its resilience index is between 1.7 and 11 times theirs.
 
-The two families are not substitutes for each other. The composite is a dense, mineral-rich solid, whereas mycelium composites have densities of 0.06–0.39 g/cm^3^ (Appels et al., 2019; Elsacker et al., 2019) and are valued above all as insulation (Jones et al., 2020). At the other end of the range, polylactic acid filled with eggshell powder reaches a flexural strength of 67 MPa and a flexural modulus of 3.4 GPa (Cree et al., 2023), some 29 and 18 times the values of F2; but it is a thermoplastic with a minor mineral filler, a different class of material and of process. Nor is the water absorbed by mycelium composites in 24 h, 24–30% (Elsacker et al., 2019), comparable with the 0.7% measured here, which refers to a coated specimen and to a different test.
+The two families are not substitutes for each other. The composite is a mineral-rich solid, two-thirds of its dry mass being calcite, whose specific gravity is 2.07–2.50 (Ngayakamo & Onwualu, 2022); its density was not reliably determined (Section 3.4), but it can be expected to lie well above that of mycelium composites, which is 0.06–0.39 g/cm^3^ (Appels et al., 2019; Elsacker et al., 2019), and these are valued above all as insulation (Jones et al., 2020). At the other end of the range, polylactic acid filled with eggshell powder reaches a flexural strength of 67 MPa and a flexural modulus of 3.4 GPa (Cree et al., 2023), some 29 and 18 times the values of F2; but it is a thermoplastic with a minor mineral filler, a different class of material and of process. Nor is the water absorbed by mycelium composites in 24 h, 24–30% (Elsacker et al., 2019), comparable with the 0.7% measured here, which refers to a coated specimen and to a different test.
 
 What distinguishes the present material within the bio-based family is therefore not a single property. It is the combination of a process that needs a hotplate, a mould and time with mechanical values that lie between those of grown composites and those of filled thermoplastics.
 
@@ -334,7 +334,7 @@ The environmental case for the material is likewise a potential and not a result
 
 ## 4.7 Limitations and further work
 
-The limitations of the dataset are substantial. They are stated in Table 8 together with the experiment that would remove each of them. Three qualify every number in the article. Dispersion is unknown, because only means were retained. The dimensions of the dried specimens were not logged, so that the compressive stresses cannot be recomputed and the flexural values are nominal. And the formulations were not designed to separate the variables, so that the effects of water and of plasticiser are indicated and not isolated. The first four rows of the table describe a single repeat series that could be completed with the equipment already used.
+The limitations of the dataset are substantial. They are stated in Table 8 together with the experiment that would remove each of them. Three qualify every number in the article. Dispersion is unknown, because only means were retained. The dimensions of the dried specimens were not logged, so that the compressive stresses cannot be recomputed and the flexural values are nominal. And the formulations were not designed to separate the variables, so that the effects of water and of plasticiser are indicated and not isolated. The first four rows of the table could all be addressed by one new series, made with the same protocol and tested on the same equipment.
 
 Table: **Table 8.** Limitations of the study, their consequences, and the experiments that would remove them.
 
@@ -343,7 +343,7 @@ Table: **Table 8.** Limitations of the study, their consequences, and the experi
 | Individual specimen values were not retained | Means only, without standard deviation; regression on three means with one residual degree of freedom | Repeat each series with at least five specimens and retain every value |
 | Formulations were not designed as a factorial series | Water content and glycerol-to-agar ratio vary together in the C series; only two glycerol levels in the F series | Vary water at a fixed dry composition, and glycerol at a fixed water content, in small steps |
 | Evaporation during the cook was not measured | The water content as cast is unknown; S/W describes the recipe | Weigh the mixture before casting |
-| Dried dimensions and masses were not logged | Compressive stresses cannot be recomputed; flexural values rest on mould dimensions; shrinkage and density are undetermined | Record the dimensions and mass of every specimen after drying |
+| Dried dimensions and masses were not logged; the recorded cube mass conflicts with the recipe | Compressive stresses cannot be recomputed; flexural values rest on mould dimensions; shrinkage and density are undetermined | Record the dimensions and mass of every specimen after drying, and state the batch size |
 | Flexural specimens were kerfed and tested at a span-to-depth ratio of 6:1 | *σ*~f~ and *E*~f~ describe the kerfed panel, with a contribution of shear to the deflection; they are not material constants | Test plain specimens at a ratio of 16:1 alongside kerfed ones |
 | Compressive strain was not instrumented | No stress–strain curve, no compressive modulus, no energy absorption in compression | Instrumented compression tests |
 | No unloading or post-peak record | Elastic recovery, for which the resilience index stands, and the energy absorbed beyond maximum load were not measured | Loading–unloading cycles; full load–deflection record to large deflection |
@@ -359,7 +359,7 @@ Table: **Table 8.** Limitations of the study, their consequences, and the experi
 2. At a constant mineral share of 66.7%, mean compressive strength rose from 2.55 to 4.10 MPa in proportion to the solids-to-water ratio of the mixture (*σ*~c~ ≈ 7.0 S/W, with *σ*~c~ in MPa; three formulation means). Water content, not mineral content, is the variable associated with strength.
 3. Halving the glycerol content at constant eggshell and agar content changed the flexural response from too compliant to measure to a nominal flexural strength of 2.33 MPa at a modulus of 192 MPa.
 4. Under a small flame the material ignited in about 10 s and extinguished itself about 4 s after the flame was removed, without melting or dripping; with a shellac coating it gained 0.7% in mass in 24 h of immersion. Neither result amounts to a classification.
-5. Against benchmark data from verified sources, the composite exceeds mycelium composites in compressive strength by about an order of magnitude, and exceeds the best of them in flexural strength, modulus and resilience index (14.1 kJ/m^3^) by factors of 2.7, 2.4 and 1.7. It falls below the minimum requirements for particleboard and MDF on all three, and exceeds them only in elastic strain capacity (1.2%).
+5. Against benchmark data from verified sources, the composite exceeds mycelium composites in compressive strength by a factor of six to twelve, and exceeds the best of them in flexural strength, modulus and resilience index (14.1 kJ/m^3^) by factors of 2.7, 2.4 and 1.7. It falls below the minimum requirements for particleboard and MDF on all three, and exceeds them only in elastic strain capacity (1.2%).
 6. Strength alone is an inadequate criterion for this class of material. Strength, modulus and failure mode should be reported together. The resilience index derived from the first two captures recoverable deformation but not the retention of integrity beyond maximum load, which was the most distinctive behaviour observed and remains to be quantified.
 7. The results are means of three specimens without dispersion, on nominal or unlogged dimensions and in part on non-standard specimens. They justify a controlled series; they do not justify specification.
 
@@ -377,7 +377,7 @@ Table: **Table 8.** Limitations of the study, their consequences, and the experi
 
 **Data availability.** All data on which the article is based are given in its tables. Individual specimen values were not retained. The script used to compute the derived quantities is available from the author.
 
-**Use of generative AI.** During the preparation of this manuscript the author used Claude (Anthropic) to assist with drafting and language editing of the English text and with checking calculations and reference details. The author reviewed and edited the content and takes full responsibility for it.
+**Use of generative AI.** [Check the journal's policy, then adapt or delete: During the preparation of this manuscript the author used Claude (Anthropic) to assist with drafting and language editing of the English text and with checking calculations and reference details. The author reviewed and edited the content and takes full responsibility for it.]{custom-style="Placeholder"}
 
 # References {.unnumbered}
 
@@ -460,7 +460,7 @@ Teara, A., Doh, S. I., Chin, S. C., Ding, Y. J., Wong, J., & Jiang, X. X. (2019)
 
 Torres, F. G., Troncoso, O. P., Piaggio, F., & Hijar, A. (2010). Structure–property relationships of a biopolymer network: The eggshell membrane. *Acta Biomaterialia, 6*(9), 3687–3693. <https://doi.org/10.1016/j.actbio.2010.03.014>
 
-Ünal, B. (2025). *Biyoloji bazlı malzemelerin üretiminden mekânsal dirençlilik analizine: Tasarım odaklı deneysel bir yaklaşım* [From the production of biology-based materials to spatial resilience analysis: An experimental design-based approach] [Doctoral dissertation, Hacettepe University].
+Ünal, B. (2025). *Biyoloji bazlı malzemelerin üretiminden mekânsal dirençlilik analizine: Tasarım odaklı deneysel bir yaklaşım* [From the production of biology-based materials to spatial resilience analysis: An experimental design-based approach] [Doctoral dissertation, Hacettepe University]. [YÖK National Thesis Center number or URL — to be added]{custom-style="Placeholder"}
 
 Victor, E. I., Louis, I. C., Alfred, N. O., & Ozioma, U. N. (2019). Use of chicken eggshells as fillers in flexible polyurethane foam production. *International Journal of Industrial Engineering, 3*(1), 1–6. <https://doi.org/10.65000/w49y5h42>
 
