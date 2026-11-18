@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""JSCMT makalesinin şekilleri (Fig. 1–6).
+"""JSCMT makalesinin şekilleri (Fig. 1–8; numaralar metindeki ilk atıf sırasıdır).
 
 Çıktılar (sekiller/):
   Fig_N.png   — Word'e gömülen sürüm (yerleşim boyutunda en az 300 dpi)
   Fig_N.tif   — ayrı dosya olarak yüklenecek bitmap (LZW, 300 dpi)
-  Fig_N.eps   — yalnızca çizim şekilleri (Fig. 2, 6): vektör, canlı metin
+  Fig_N.eps   — yalnızca çizim şekilleri (Fig. 6, 8): vektör, canlı metin
   panels/     — fotoğraf panelleri etiketsiz ve ayrı (etiketler ayrı katman şartı için)
 
 Çizimler ../hesap.json'dan, fotoğraflar ../../03-gorseller/ klasöründeki tez
@@ -139,12 +139,12 @@ ax.set_xlim(0, 0.7); ax.set_ylim(0, 5)
 ax.set_xticks([0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7]); ax.set_yticks([0, 1, 2, 3, 4, 5])
 ax.set_xlabel("Solids-to-water ratio of the mixture, S/W (g/g)"); ax.set_ylabel("Mean compressive strength (MPa)")
 ax.grid(True); bare(ax)
-report[2] = save_plot(fig, 2, 10.5)
+report[6] = save_plot(fig, 6, 10.5)
 
 # ---------------------------------------------------------------- Fig. 3 · basma fotoğrafı
 c = Image.open(os.path.join(SRC, "04-basma-ficilasmis-kup.jpeg")).convert("RGB").crop((20, 440, 563, 930))
-c.save(os.path.join(PAN, "Fig_3_original_crop.tif"), compression="tiff_lzw", dpi=(300, 300))
-report[3] = save_bitmap(c.resize((c.width * 2, c.height * 2), Image.LANCZOS), 3, 8.0)
+c.save(os.path.join(PAN, "Fig_7_original_crop.tif"), compression="tiff_lzw", dpi=(300, 300))
+report[7] = save_bitmap(c.resize((c.width * 2, c.height * 2), Image.LANCZOS), 7, 8.0)
 
 # ---------------------------------------------------------------- Fig. 4 · eğilme fotoğrafları
 early = Image.open(os.path.join(SRC, "07-egilme-yakin-yiv.jpeg")).convert("RGB").rotate(-90, expand=True)
@@ -203,7 +203,13 @@ ax.set_xlabel("Flexural modulus (MPa)"); ax.set_ylabel("Flexural strength (MPa)"
 ax.set_xticks([1, 10, 100, 1000, 10000]); ax.set_xticklabels(["1", "10", "100", "1 000", "10 000"])
 ax.set_yticks([0.1, 1, 10]); ax.set_yticklabels(["0.1", "1", "10"])
 ax.minorticks_off(); bare(ax)
-report[6] = save_plot(fig, 6, 14.5)
+report[8] = save_plot(fig, 8, 14.5)
+
+# yüklenen metinden alınan iki şekil (deneme parçaları ve bileşim grafiği): 07-makale/sekiller/ içinden
+GEN = os.path.join(HERE, "..", "sekiller")
+for n, src, w in ((2, "Fig2_trial_pieces.png", 8.5), (3, "Fig3_formulations.png", 12.0)):
+    gi = Image.open(os.path.join(GEN, src)).convert("RGB")
+    report[n] = save_bitmap(gi, n, w)
 
 print("Gömme boyutundaki etkin çözünürlük (dpi):")
 for n, d in sorted(report.items()):

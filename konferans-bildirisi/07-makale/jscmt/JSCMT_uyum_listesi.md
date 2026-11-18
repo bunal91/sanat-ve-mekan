@@ -1,153 +1,111 @@
 # JSCMT yazar yönergesi — uyum listesi
 
-Makale: *Production, properties and evaluation of a fully bio-based eggshell–agar composite for interior surfaces*
-Dosya: `Unal_JSCMT_Manuscript.docx` (14 sayfa, A4; gövde ≈ 5 800 sözcük, özet 297 sözcük; 43 kaynak, 6 şekil, 5 tablo, 4 denklem)
+**Makale:** Production, Characterisation and Evaluation of a Fully Bio-Based Eggshell–Agar Composite for Interior Surfaces
 
-Yönergedeki her kural aşağıda, nasıl karşılandığıyla birlikte sıralanmıştır. Biçim kuralları `check.py` ile belgenin kendisi üzerinde de denetlenir (54 kontrol, hepsi geçti). İçerik kuralları (örneğin tartışmanın kapsamı) okunarak denetlendi.
+**Dosya:** `Unal_JSCMT_Manuscript.docx` — 16 sayfa, A4. Özet 254 sözcük; gövde yaklaşık 6 900 sözcük; 8 şekil, 8 tablo, 4 denklem, 44 kaynak.
 
-## 1. Genel kurallar
+**Denetim:** `check.py` belgenin kendisinde 48 biçim kuralını denetledi; hepsi geçti. İçerik kuralları metin okunarak denetlendi.
 
-| Kural | Nasıl karşılandı |
-|:--------------|:------------------------------------------------------|
-| Dil İngilizce | Tüm metin İngilizce (İngiliz imlası); belge dili en-GB |
-| Makale türü: Research Article | İlk sayfanın başında "Research Article" etiketi |
-| Yalnızca Word (.docx) | `Unal_JSCMT_Manuscript.docx`; PDF yalnızca önizleme |
-| Sayfa sınırı yok | 14 sayfa |
-| Dergi şablonuna göre düzenleme | Derginin Manuscript Template dosyası taban alındı: A4, şablonun kenar boşlukları, Times New Roman 10 pt, iki yana yaslı gövde ve ilk satır girintisi, numaralı kalın 1. düzey ve italik 2. düzey başlıklar, 8 pt kaynakça, alt bilgide ortalı sayfa numarası (ilk sayfada yok) |
-| Şekiller kabul edilebilir kalitede, ayrı dosya | `Unal_JSCMT_Figures.zip`: Fig_1–6 TIFF (≥ 300 dpi), Fig_2 ve Fig_6 ayrıca EPS (vektör) |
-| Madde sırası | Başlık sayfası, Abstract + Keywords, Introduction, Materials and Methods, Results and Discussion, Conclusion, Acknowledgements, Conflicts of Interest, Author contributions, Data availability statement, Financial Disclosure, Peer-review, Use of AI for writing assistance, Ethics Approval, References, Figures, Tables |
+## 1. Yüklediğiniz metinden ne değişti
 
-## 2. Başlık sayfası
+- **İçerik korundu.** Metin yüklediğiniz sürümle aynı. Yapısal değişiklikler yönergeden geliyor: giriş alt başlıkları kaldırıldı (1.1–1.4); Results ve Discussion tek bölümde birleşti (3. Results and Discussion; eski 4.1–4.4 → 3.6–3.9); "Conclusions" → "4. Conclusion".
+- **Şekil ve tablolar geri konuldu.** Yüklediğiniz sürümdeki 8 şekil ve 8 tablonun hepsi var. Önceki JSCMT sürümünde 6 şekil ve 5 tablo vardı.
+- **Şekil numaraları değişti.** Yönerge şekillerin metinde ardışık sırayla atıf almasını istiyor. Yöntemler bölümü eğilme ve alev fotoğraflarına atıf yaptığı için şekiller yeniden numaralandı:
 
-| Kural | Nasıl karşılandı |
-|:--------------|:------------------------------------------------------|
-| Başlık: TNR 14 pt, kalın, ortalı, kısa, kaynak/kısaltma yok | Uygulandı; 13 sözcük, kısaltma ve kaynak yok |
-| Yazar: TNR 11 pt, kalın, italik değil, ortalı; üst simge küçük harfle kurum işareti | "Betül Ünal" + üst simge *a,b* |
-| Kurum: bölüm, fakülte, üniversite, şehir + posta kodu, ülke; asıl kurum = işin çoğunun yapıldığı yer; güncel adres eklenebilir | *a* = Hacettepe (işin yapıldığı yer); *b* = güncel adres, Cappadocia Üniversitesi |
-| Yazışma yazarı: yıldız + dipnot (tel., faks, e-posta, 16 haneli ORCID) | Yıldız gerçek Word dipnotu; içeriği tel., faks, e-posta, ORCID |
-| Kısa başlık ≤ 80 karakter | "Eggshell–agar composite for interior surfaces" (45 karakter) |
+| Yeni | Eski (yüklediğiniz sürüm) | İçerik |
+|:--|:--|:--|
+| Fig. 1 | Fig. 1 | Üretim dizisi (a–d) |
+| Fig. 2 | Fig. 2 | Deneme parçaları |
+| Fig. 3 | Fig. 3 | Bileşim ve S/W grafiği |
+| Fig. 4 | Fig. 6 | Eğilme deneyi (a–c) |
+| Fig. 5 | Fig. 7 | Küçük alev deneyi |
+| Fig. 6 | Fig. 4 | Basınç dayanımı – S/W grafiği |
+| Fig. 7 | Fig. 5 | Basınç altında küp |
+| Fig. 8 | Fig. 8 | Dayanım – modül haritası |
 
-## 3. Özet ve anahtar sözcükler
+- **Atıflar Vancouver'a çevrildi.** APA biçimindeki (yazar, yıl) atıflar köşeli parantezli numaraya çevrildi; 44 kaynak ilk geçiş sırasıyla numaralandı. Torres (2010) kaynağı eklendi: yüklediğiniz metinde vardı ama önceki Vancouver listesinde yoktu.
+- **SI birimleri.** 1,38 g/cm³ → 1380 kg/m³; 125 cm³ → 125 000 mm³.
+- **Özet ve anahtar sözcükler.** Özette MDF ilk geçtiği yerde tanımlandı. "non-loadbearing" → "non-load-bearing".
+- **Yöntemler.** Yüklediğiniz metinde tedarikçi, model ve menşe bilgileri yoktu. Bunlar yönergenin istediği biçimde `[[...]]` yer tutucusu olarak eklendi; uydurma değer yok.
+- **Peer-review.** "Externally peer-reviewed" ifadesi, henüz hakemlenmemiş bir yazı için doğru değildi. Yer tutucuya çevrildi.
+- **Kurum.** Yönergeye göre ana kurum, işin çoğunun yapıldığı yer: Hacettepe (a). Cappadocia güncel adres olarak (b) yazıldı. Yüklediğiniz metinde yalnızca Cappadocia vardı; bu konuda karar sizin.
 
-| Kural | Nasıl karşılandı |
-|:--------------|:------------------------------------------------------|
-| ≤ 300 sözcük | 297 sözcük |
-| TNR 9 pt, italik ve kalın değil | Uygulandı |
-| Kendi başına anlaşılır, kaynaksız | Atıf yok |
-| Amaç → yöntem → bulgu → sonuç | Bu sırada |
-| Kısaltmalar tanımlı | MDF özette tanımlı |
-| 4–6 anahtar sözcük, noktalı virgülle, TNR 10 pt, italik ve kalın değil | 6 sözcük, noktalı virgülle |
+## 2. Şekil ve tabloların yeri: yönergelerde çelişki
 
-## 4. Bölümler
+- Yönergedeki "Article Structure" listesi şekil ve tabloları en sona koyuyor (16. Figures, 17. Tables).
+- Şablon ve yönergenin diğer maddeleri şekil ve tabloların metne gömülmesini istiyor ("Figures and tables should be embedded"; şablon: "Main text (including figures and tables)").
+- **Yapılan:** Metne gömüldü; her şekil ve tablo ilk atıf yapılan paragrafın hemen arkasında. Sona taşınması gerekirse tek adımda değişir.
 
-| Kural | Nasıl karşılandı |
-|:--------------|:------------------------------------------------------|
-| Introduction kısa, alt başlıksız | 812 sözcük, alt başlık yok; tezden türetildiği açıkça söylendi |
-| Methods tekrarlanabilir; kimyasallarda firma, şehir, ülke; istatistik testi ve anlamlılık düzeyi | Protokol adım adım (sıcaklıklar, süreler, kütleler); tedarikçi bilgileri sarı yer tutucu (aşağıda); iki yanlı t-testi, anlamlılık düzeyi 0,05 |
-| Results ve Discussion birleşik; tablo ve şekiller yalnız gerekli olanlarla sınırlı | "3. Results and Discussion"; 5 tablo, 6 şekil |
-| Tartışma: önem, çıkarımlar, sınırlılıklar, bağlam, ileri araştırma | Önem ve bağlam: 3.4–3.5; çıkarımlar ve kullanım sınırı: 3.6; sınırlılıklar ve ileri araştırma: 3.6 ve Tablo 5 |
-| Conclusion kısa; yeni hipotez ve öneri | 198 sözcük; öneri (dayanım, modül ve göçme biçimi birlikte bildirilsin) ve hipotez (maksimum yük ötesi enerji) |
-| Acknowledgements, kaynaklardan önce | Uygulandı |
+## 3. Biçim kuralları
 
-## 5. Atıflar ve kaynakça (Vancouver)
+| Yönerge | Durum |
+|:--|:--|
+| İngilizce, Research Article | Uygulandı (İngiliz imlası; "Research Article" etiketi) |
+| Yalnızca Word (.docx); sayfa sınırı yok | `Unal_JSCMT_Manuscript.docx`; PDF yalnızca önizleme |
+| Şablona göre biçim | Derginin şablonu taban alındı. Yüklediğiniz şablon depodaki kopyayla aynı |
+| Başlık: TNR 14 pt kalın ortalı, kısa, kaynak ve kısaltma yok | 13 sözcük; uygulandı |
+| Yazarlar: TNR 11 pt kalın, italik değil, ortalı; üst simge kurum harfi | Uygulandı |
+| Kurum: bölüm, fakülte, üniversite, şehir ve posta kodu, ülke | Uygulandı; fakülte adı ve posta kodu yer tutucu |
+| Yazışma yazarı: yıldız, dipnot (tel., faks, e-posta, ORCID) | Uygulandı; tel., faks ve ORCID yer tutucu |
+| Kısa başlık ≤ 80 karakter | 45 karakter |
+| Özet ≤ 300 sözcük, atıfsız, TNR 9 pt, italik ve kalın değil | 254 sözcük; MDF tanımlı |
+| Anahtar sözcük 4–6, noktalı virgül, TNR 10 pt | 6 sözcük |
+| Giriş özlü, alt başlıksız | Alt başlıksız. Uzunluk: bkz. §5 |
+| Yöntem tekrarlanabilir; tedarikçi, şehir, ülke; istatistik testi ve anlamlılık | Protokol ayrıntılı; tedarikçiler yer tutucu; iki yanlı t-testi, α = 0,05 |
+| Sonuçlar ve tartışma birleşik | "3. Results and Discussion" |
+| Tartışma: önem, sınırlılık, bağlam, ileri araştırma | Bölüm 3.6–3.9 ve Tablo 7–8 |
+| Sonuç kısa; yeni hipotez ve öneri | Hipotez ve öneri var; uzunluk: bkz. §5 |
+| Teşekkür, çıkar çatışması, yazar katkısı, veri, finansman, hakem, yapay zekâ, etik | Hepsi var; finansman ve hakem yer tutucu |
+| Vancouver: köşeli parantez, ilk geçiş sırası; altı yazardan fazlası "et al." | 44 kaynak; hepsi atıflı |
+| Şekiller ardışık atıf ("Fig. N") | Fig. 1–8 |
+| Bitmap ≥ 300 dpi (yerleşim boyutunda) | 307–566 dpi; Fig. 6 ve 8 ayrıca EPS |
+| Etiketli bitmap'te etiketler ayrı katmanda | Kısmen; bkz. §4 |
+| Şekil altyazısı: TNR 9 pt, kalın, italik değil, yalnızca ilk sözcük büyük, şeklin altında | Uygulandı |
+| Tablo başlığı: açıklayıcı, iki yana yaslı, tablonun üstünde | Uygulandı |
+| Tablo: birim sütun başlıklarında, dikey çizgi yok | Uygulandı (S/W için g/g eklendi) |
+| SI birimleri | Uygulandı |
+| Denklemler sağda numaralı, metinde atıflı | 4 denklem, Word denklem nesnesi |
+| Veri kullanılabilirliği beyanı | Uygulandı |
 
-| Kural | Nasıl karşılandı |
-|:--------------|:------------------------------------------------------|
-| Köşeli parantezli numara, geçiş sırasıyla: [4], [7-10, 13, 15] | Sayılar ilk geçiş sırasıyla otomatik; üç ve daha fazla ardışık numara aralık olarak yazıldı |
-| Kaynakça numara sırasıyla; Vancouver biçimi | 43 kaynak, hepsi metinde atıflı; 6'dan fazla yazarda ilk 6 + et al.; dergi adları kısaltılmış; DOI "doi:" ile |
-| Şablondaki örnek türleri (makale, kitap, tez, standart, bildiri) | Hepsi kullanıldı |
+## 4. Yazarın dolduracağı yerler (sarı işaretli)
 
-## 6. Şekiller
+- ORCID (başlık sayfası ve dipnot), telefon ve faks (dipnot), Hacettepe kampüs ve posta kodu, Cappadocia fakültesinin adı.
+- Yöntemler: agar (derece, tedarikçi, şehir, ülke); gliserol (saflık, tedarikçi); su (musluk veya damıtık); şellak (tür, tedarikçi); etüv (model, üretici); öğütücü (model, üretici); elek (üretici); silikon kalıp (tedarikçi); terazi (model, üretici); ısıtma cihazı (model, üretici); test makineleri (üretici, model, yük hücresi kapasitesi, şehir, ülke).
+- Konferans bildirisi: özet veya tam metin yayımlandı mı; komite değerlendirmesi var mı (Peer-review).
+- CRediT rolleri; yazar katkı formu.
+- Finansman beyanı.
+- Yapay zekâ beyanının gerçek kullanımı yansıttığının onayı.
 
-| Kural | Nasıl karşılandı |
-|:--------------|:------------------------------------------------------|
-| Metinde ardışık atıf: "Fig. 1", "Figs. 2, 3-5" | Fig. 1 → 2.2; Fig. 2, 3 → 3.1; Fig. 4 → 3.2; Fig. 5 → 3.3; Fig. 6 → 3.4 |
-| Bitmap ≥ 300 dpi veya vektör | Yerleşim boyutunda 311–566 dpi; çizimler ayrıca EPS |
-| Etiketli bitmap'te etiketler ayrı katmanda | Etiketler görüntüye gömülü; bu yüzden etiketsiz sürümler ve tek tek paneller zip içinde (katmanlı dosya üretilmedi) |
-| Bölümler a, b, c | Fig. 1 (a–d) ve Fig. 4 (a–c) |
-| Altyazı: TNR 9 pt, kalın, italik değil, yalnız ilk sözcük büyük, şeklin altında | Uygulandı |
-| Şekiller "Figures" bölümünde, kaynakçadan sonra | Uygulandı |
+## 5. Dikkat edilmesi gerekenler
 
-## 7. Tablolar
+- **Yapay zekâ beyanı.** Beyan "drafting and language editing" ifadesini içeriyor. JSCMT politikası yapay zekâyı yalnızca okunabilirlik ve dil için serbest bırakıyor; bilimsel içerik, yorum veya sonuç üretiminde kullanılmamasını istiyor. Beyanı gerçek kullanıma göre yazdım. Politikayla çelişip çelişmediğine sizin karar vermeniz gerekir; gerekirse editöre sorun veya ifadeyi değiştirin. Gönderimden önce içeriği tamamen kendiniz gözden geçirmiş olmalısınız.
+- **Çift yayın.** Konferans bildirisinin özeti veya tam metni yayımlandıysa dergiye bildirilmesi gerekir. Teşekkür bölümünde sunum belirtildi.
+- **Benzerlik taraması.** Dergi iThenticate'te %20'yi aşan benzerliği ön ret sebebi sayıyor. Tezle örtüşme bu orana katkı yapabilir; tez Introduction'da kaynak gösterildi.
+- **Yazarlık ve teşekkür.** Danışman (Prof. Dr. Duygu Koca) ile laboratuvar sorumlusu (Dr Hüseyin İlcan) metinde anılıyor. Yazarlık ölçütlerini karşılamıyorlarsa ve adlarının teşekkürde geçmesine izin vermemişlerse metinden çıkarın.
+- **Dizin durumu.** JSCMT'nin ISSN kaydına göre Scopus ve DOAJ'da görünüyor. ESCI ve TR Dizin durumunu doğrulayamadım. ÜAK puanı bu bilgiye bağlı; gönderimden önce kontrol edin.
+- **Giriş uzunluğu.** Giriş 1 349 sözcük; yönerge "özlü" istiyor. Tablo 1 ile tekrarlayan paragraflar kısaltılabilir. İsterseniz bunu yapabilirim.
+- **Sonuç uzunluğu.** 456 sözcük. Yönerge "kısa" istiyor; kısaltılabilir.
+- **Görüntü işleme.** Fig. 1, 4, 5, 7 fotoğraflarında yalnızca kırpma ve ölçekleme yapıldı. Fig. 2 tek bir orijinal fotoğraf. Fig. 3, 6 ve 8 hesap verilerinden çizildi. Derginin istediği gibi orijinal fotoğraflar talep üzerine verilebilmeli.
 
-| Kural | Nasıl karşılandı |
-|:--------------|:------------------------------------------------------|
-| Metinde ardışık atıf | Tablo 1 → 2.3; 2 → 2.4; 3 → 3.1; 4 → 3.4; 5 → 3.6 |
-| Açıklayıcı başlık, iki yana yaslı, tablonun üstünde; TNR 9 pt kalın | Uygulandı |
-| Sütun başlıklarında birim | Uygulandı (sayısal sütunlar) |
-| Dikey çizgi yok | Yalnız yatay çizgiler (üst, başlık altı, alt) |
-| Tablolar "Tables" bölümünde, şekillerden sonra | Uygulandı |
+## 6. Doğrulanamayan içerik
 
-## 8. Birimler ve denklemler
+- EN 1992-1-1'deki eğilme çekme dayanımı bağıntısı ((1,6 − h/1000) çarpanı) ve 2,2 MPa ortalama çekme dayanımı standart metninden doğrulanmadı.
+- Cappadocia fakülte adı üçüncü bir kaynaktan; Hacettepe posta kodu ve kampüs yer tutucu.
+- EKSIG 2017 kaynağında yayıncı yazılmadı.
+- Fig. 4a'daki "displacement transducer" ifadesi fotoğraftan çıkarıldı; ekipmanı siz doğrulayın.
+- Fig. 2 ve 3 bitmap; etiketler görüntünün içinde. Katman ayrımı yapılmadı. Editör kaynak dosya isterse Fig. 3 için vektör sürüm gerekir.
 
-| Kural | Nasıl karşılandı |
-|:--------------|:------------------------------------------------------|
-| SI birimleri | mm, g, N, kN, MPa, kJ/m³, °C, µm; sayı ile birim arasında bölünmez boşluk |
-| Denklemler | 4 denklem, Word denklem nesnesi (düzenlenebilir), sağda (1)–(4); metinde "Eq. (n)" ile atıflı |
+## 7. Şekil dosyaları
 
-## 9. Bildirimler
+`Unal_JSCMT_Figures.zip` içinde: Fig_1–8 TIFF (≥300 dpi), Fig_6 ve Fig_8 EPS, etiketsiz paneller (`unlabelled_panels/`) ve açıklayan `README.txt`.
 
-| Başlık | Durum |
-|:--------------|:------------------------------------------------------|
-| Acknowledgements | Yazıldı (laboratuvar, yardım eden kişi, yumurta kabuğu sağlayan işletme, danışman, konferans sunumu); **onayın gerektiği yer var** |
-| Conflicts of Interest | "Çıkar çatışması yok" beyanı |
-| Author contributions | CRediT rolleriyle; **senin onayın gerekli**, ayrıca dergi katkı formunu doldurman gerekir |
-| Data availability statement | Dergi politikasındaki "makul talep üzerine" biçimi; bireysel örnek değerlerinin saklanmadığı da yazıldı |
-| Financial Disclosure | **Yer tutucu**; fonlanmadıysa metin olduğu gibi kalabilir |
-| Peer-review | "Externally peer-reviewed." |
-| Use of AI for writing assistance | Kullanımın gerçek biçimini yazan beyan; **senin onayın gerekli** (bkz. §13) |
-| Ethics Approval | İnsan ve hayvan denek yok; yumurta kabukları gıda atığı |
-| Supplementary materials (isteğe bağlı) | Kullanılmadı |
-
-## 10. Gönderim beyanı
-
-* Daha önce yayımlanmamış (özet, yayımlanmış konferans konuşması ve tez hariç): tezden türetildiği Introduction'da, konferans sunumu Acknowledgements'ta belirtildi. Konferans tam metninin bildiri kitabında yayımlanıp yayımlanmadığını **sen doğrulamalısın**; yayımlandıysa dergiye bildirmen gerekir.
-* Başka yerde değerlendirmede değil: gönderim sistemindeki beyanı sen onaylarsın.
-* iThenticate benzerlik taraması: derginin politikasına göre benzerlik %20'yi aşarsa ön ret. Tez ve konferans metniyle örtüşme bu orana katkı yapabilir; tezi Introduction'da kaynak göstermek bunun için konuldu.
-
-## 11. Şablon ile yapıştırdığın yönerge çatıştığında
-
-Şablon dosyası ile yazar yönergesi birkaç yerde birbirinden ayrılıyor. Her yerde yapıştırdığın yönergeyi izledim.
-
-| Konu | Şablon | Yönerge (uygulanan) |
-|:--------------|:-----------------|:-----------------|
-| Başlık | 16 pt | TNR 14 pt, kalın, ortalı |
-| Yazar satırı | 13 pt | TNR 11 pt, kalın, ortalı |
-| Tablo başlığı | Ortalı | İki yana yaslı, tablonun üstünde, TNR 9 pt kalın |
-| Şekil altyazısı | "Figure 1", ortalı | "Fig. 1", şeklin altında, sola yaslı, TNR 9 pt kalın |
-| Şekil ve tablonun yeri | Metin içinde | Kaynakçadan sonra, "Figures" ve "Tables" bölümlerinde |
-| Bildirim başlıkları | Declaration of Competing Interest / Conflict of interest, Funding, Author's Contributions, Ethics | Conflicts of Interest, Financial Disclosure, Author contributions, Data availability statement, Ethics Approval |
-| Ethics Approval'ın yeri | Author's Contributions'tan sonra | Yönergede yeri belirtilmemiş: Use of AI'dan sonra, References'tan önce |
-
-Şablondaki "satır sonunda heceleme yapma" kuralı da uygulandı: otomatik heceleme kapalı.
-
-## 12. Senin doldurman gerekenler (sarı işaretli)
-
-* ORCID (başlık sayfasında ve dipnotta), telefon, faks
-* Hacettepe adresi (kampüs, posta kodu) ve Cappadocia Üniversitesi'nde İç Mimarlık'ın bağlı olduğu fakültenin adı
-* 2.1 ve 2.2: agar (kalite), gliserol (saflık), su (musluk/damıtık), şellak (tür), silikon kalıplar, etüv, öğütücü, elek: tedarikçi/üretici, şehir, ülke ve model
-* 2.4: test makineleri (üretici, model, yük hücresi kapasitesi, şehir, ülke; eğilme makinesinde Besmak Material Testing)
-* Konferans bildiri kitabında özet ya da tam metin yayımlandı mı
-* CRediT rolleri (ve katkı formu)
-* Finansman beyanı
-* Yapay zekâ beyanının gerçek kullanımı yansıttığının onayı
-
-## 13. Dikkat edilmesi gerekenler
-
-* **Yapay zekâ politikası.** Derginin politikası yapay zekâyı yalnızca okunabilirlik ve dil için serbest bırakır; bilimsel çıkarımların ve sonuçların üretimini kapsamaz. Metindeki beyan kullanımı olduğu gibi yazıyor (metnin taslağı, dil düzeltmesi, türetilmiş değerlerin hesabı, kaynak ayrıntılarının kontrolü). Beyanı yumuşatmadım, çünkü yazılan şey gerçeği yansıtmalı. Gönderiden önce tüm içeriği kendin gözden geçirmiş olmalısın ve beyanı gerçek kullanımına göre onaylamalısın; politikayla çatışıp çatışmadığına sen karar verirsin.
-* **Yazarlık ve teşekkür.** Danışmanın ve laboratuvardaki kişinin yazar olarak mı yoksa teşekkürde mi anılacağı yazarlık ölçütlerine bağlı; teşekkürde adlarının geçmesi için onları bilgilendirmen gerekir.
-* **Mevzuat.** Dizin bilgisi: JSCMT'nin Scopus ve DOAJ kaydı ISSN kaydına göre var görünüyor; ESCI ve TR Dizin durumunu doğrulayamadım. Yükseltme puanı için ÜAK Tablo 8 §3 puanları (Scopus/ESCI 10, TR Dizin 8, diğer dizin 5) bu bilgiye bağlı; göndermeden önce kontrol et.
-* **Dosyada doğrulanamayan noktalar.** (1) EN 1992-1-1'deki eğilme çekme dayanımı bağıntısı (1,6 − h/1000) standardın kendisinden doğrulanamadı; elindeki nüshayla karşılaştır. (2) Cappadocia Üniversitesi'ndeki fakülte adı yalnız üçüncü bir kaynaktan. (3) EKSIG 2017 kaynağında yayıncı yazılmadı. (4) Fig. 4a'daki "displacement transducer" ifadesi fotoğraftan çıkarıldı; ekipmanı sen doğrula.
-* **Önizleme PDF'i.** LibreOffice ile üretildi. Denklemlerdeki alt simgeler orada eğik görünür, Word'de dik görünür; sayfa kırılımları Word'de birkaç satır kayabilir.
-* **Konferans tam metni.** Konferans bildirisinin Word dosyasında eski kaynakça girişleri duruyor (Markdown sürümü düzeltildi); bildiri kitabına gönderilecekse yeniden üretilmeli.
-
-## 14. Yeniden üretme
+## 8. Yeniden üretme
 
 ```
 cd konferans-bildirisi/07-makale/jscmt
-python3 sekil-uret.py      # şekiller (tez fotoğrafları ve ../hesap.json)
-python3 build.py           # Unal_JSCMT_Manuscript.docx
-python3 check.py           # 54 kuralı belgenin üzerinde denetler
+python3 sekil-uret.py     # Fig_1–8 (ve panels/)
+python3 build.py          # Unal_JSCMT_Manuscript.docx
+python3 check.py          # 48 biçim kuralı
 ```
 
-Metin `makale-jscmt.md`, tablolar ve şekil altyazıları `tablolar.py`, kaynaklar `refs.py` içinde; sayılar `../hesap.json`'dan gelir.
+Kaynak metin `makale-jscmt.md`; tablolar ve şekil altyazıları `tablolar.py`; kaynaklar `refs.py`; sayılar `../hesap.json`.

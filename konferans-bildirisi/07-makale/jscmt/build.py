@@ -46,7 +46,7 @@ BLACK = RGBColor(0, 0, 0)
 W_NS = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
 M_NS = "http://schemas.openxmlformats.org/officeDocument/2006/math"
 
-TITLE = "Production, properties and evaluation of a fully bio-based eggshell–agar composite for interior surfaces"
+TITLE = "Production, Characterisation and Evaluation of a Fully Bio-Based Eggshell–Agar Composite for Interior Surfaces"
 RUNNING_TITLE = "Eggshell–agar composite for interior surfaces"
 AUTHOR = "Betül Ünal"
 EMAIL = "b.unal91@gmail.com"
@@ -70,7 +70,13 @@ def blocks(text):
             out.extend(blocks(head))
             out.extend(blocks(rest))
             continue
-        if b.startswith("## "):
+        mfig = re.fullmatch(r"@@FIG (\d+)", b)
+        mtab = re.fullmatch(r"@@TAB (\d+)", b)
+        if mfig:                                      # şekil: metindeki ilk atıfın hemen arkasına
+            out.append(("fig", int(mfig.group(1))))
+        elif mtab:                                    # tablo: metindeki ilk atıfın hemen arkasına
+            out.append(("tab", int(mtab.group(1))))
+        elif b.startswith("## "):
             out.append(("h2", b[3:].strip()))
         elif b.startswith("# "):
             out.append(("h1", b[2:].strip()))
@@ -282,13 +288,24 @@ def main():
     decl_blocks = blocks(content["DECLARATIONS"])
 
     # --- atıf numaraları: gövde metni → bildirimler → altyazılar → tablolar (ilk geçiş sırası)
-    texts = [content["ABSTRACT"], content["KEYWORDS"]] + [b[1] for b in body_blocks] + [b[1] for b in decl_blocks]
-    num = number_citations(texts)
-    n_body = len(num)
-    texts2 = texts + [f[2] for f in FIGURES]
-    for spec in TABLES.values():
-        texts2 += [c for row in spec["rows"] for c in row]
-    num = number_citations(texts2)
+    def seq_texts(with_decl):
+        seq = [content["ABSTRACT"], content["KEYWORDS"]]
+        for kind, text in body_blocks:
+            if kind == "fig":
+                seq.append(FIGURES[text - 1][2])
+            elif kind == "tab":
+                spec = TABLES[f"T{text}"]
+                seq += [spec["caption"]] + spec["head"] + [c for row in spec["rows"] for c in row]
+            elif kind in ("h1", "h2", "eq"):
+                continue
+            else:
+                seq.append(text)
+        if with_decl:
+            seq += [b[1] for b in decl_blocks if b[0] != "h2"]
+        return seq
+
+    n_body = len(number_citations(seq_texts(False)))
+    num = number_citations(seq_texts(True))
     late = [k for k, v in num.items() if v > n_body]
     if late:
         print("UYARI: gövdede ilk kez geçmeyen atıflar:", late)
@@ -383,7 +400,7 @@ def main():
 
     affil = [
         ("a", "Department of Interior Architecture and Environmental Design, Institute of Fine Arts, Hacettepe University, [[Beytepe Campus, 06800]] Ankara, Türkiye"),
-        ("b", "Present address: Department of Interior Architecture, [[Faculty of Architecture, Design and Fine Arts]], Cappadocia University, Mustafapaşa Campus, 50420 Ürgüp, Nevşehir, Türkiye"),
+        ("b", "Present address: Department of Interior Architecture and Environmental Design, [[Faculty of Architecture, Design and Fine Arts]], Cappadocia University, Mustafapaşa Campus, 50420 Ürgüp, Nevşehir, Türkiye"),
     ]
     for letter, text in affil:
         p = doc.add_paragraph(); pfmt(p, C, after=2)
@@ -419,6 +436,16 @@ def main():
         elif kind == "eq":
             eq_n += 1
             add_equation(doc, text, eq_n)
+        elif kind == "fig":
+            fn, w, cap = FIGURES[text - 1]
+            pp = doc.add_paragraph(); pfmt(pp, C, before=6, after=2, keep_next=True)
+            pp.add_run().add_picture(os.path.join(FIGDIR, fn), width=Cm(w))
+            add_caption(doc, f"Fig. {text}.", cap, fmt, L, above=False)
+        elif kind == "tab":
+            spec = TABLES[f"T{text}"]
+            add_caption(doc, f"Table {text}.", spec["caption"], fmt, J, above=True)
+            add_table(doc, spec, fmt)
+            sp = doc.add_paragraph(); pfmt(sp, L, after=6)
         else:
             p = doc.add_paragraph(); pfmt(p, J, after=11.5, first=0.42)
             add_inline(p, fmt(text.replace("\n", " ")), 10)
@@ -440,21 +467,6 @@ def main():
         p = doc.add_paragraph(); pfmt(p, L, after=2, left=0.55, first=-0.55)
         p.paragraph_format.tab_stops.add_tab_stop(Cm(0.55))
         add_inline(p, typography(f"{n}.\t{refs.vancouver(key)}"), 8)
-
-    # --- şekiller (16) ve tablolar (17)
-    p = doc.add_paragraph(style="Heading 1"); pfmt(p, L, before=0, after=12, keep_next=True, page_break=True)
-    r = p.add_run("Figures"); set_font(r, 10, bold=True, italic=False)
-    for i, (fn, w, cap) in enumerate(FIGURES, 1):
-        pp = doc.add_paragraph(); pfmt(pp, C, before=6, after=2, keep_next=True)
-        pp.add_run().add_picture(os.path.join(FIGDIR, fn), width=Cm(w))
-        add_caption(doc, f"Fig. {i}.", cap, fmt, L, above=False)
-
-    p = doc.add_paragraph(style="Heading 1"); pfmt(p, L, before=0, after=12, keep_next=True, page_break=True)
-    r = p.add_run("Tables"); set_font(r, 10, bold=True, italic=False)
-    for i, (k, spec) in enumerate(TABLES.items(), 1):
-        add_caption(doc, f"Table {i}.", spec["caption"], fmt, J, above=True)
-        add_table(doc, spec, fmt)
-        sp = doc.add_paragraph(); pfmt(sp, L, after=6)
 
     cp = doc.core_properties
     cp.title = TITLE; cp.author = AUTHOR; cp.language = "en-GB"

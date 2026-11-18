@@ -25,7 +25,7 @@ def abbr_pages(p):
 
 
 J = {  # dergi kısaltmaları (NLM / ISO 4)
-    "mater_des": "Mater Des", "polymers": "Polymers (Basel)", "open_ceram": "Open Ceram", "heliyon": "Heliyon",
+    "acta_biomater": "Acta Biomater", "mater_des": "Mater Des", "polymers": "Polymers (Basel)", "open_ceram": "Open Ceram", "heliyon": "Heliyon",
     "iop_earth": "IOP Conf Ser Earth Environ Sci", "iop_mse": "IOP Conf Ser Mater Sci Eng",
     "phys_chem_earth": "Phys Chem Earth", "environ_chall": "Environ Chall", "constr_build": "Constr Build Mater",
     "ijie": "Int J Ind Eng", "waste": "Waste", "appl_mech": "Appl Mech", "j_compos": "J Compos Sci",
@@ -69,6 +69,7 @@ REFS = {
     "holling1973": dict(t=A, au="Holling CS", ti="Resilience and stability of ecological systems", j="annu_rev", y=1973, v="4", p="1-23", doi="10.1146/annurev.es.04.110173.000245"),
     "hull2011": dict(t=A, au="Hull TR, Witkowski A, Hollingbery L", ti="Fire retardant action of mineral fillers", j="polym_degrad", y=2011, v="96", i="8", p="1462-1469", doi="10.1016/j.polymdegradstab.2011.05.006"),
     "ranachowski2020": dict(t=A, au="Ranachowski Z, Ranachowski P, Dębowski T, Brodecki A, Kopec M, Roskosz M, et al.", ti="Mechanical and non-destructive testing of plasterboards subjected to a hydration process", j="materials", y=2020, v="13", i="10", p="2405", doi="10.3390/ma13102405"),
+    "torres2010": dict(t=A, au="Torres FG, Troncoso OP, Piaggio F, Hijar A", ti="Structure–property relationships of a biopolymer network: the eggshell membrane", j="acta_biomater", y=2010, v="6", i="9", p="3687-3693", doi="10.1016/j.actbio.2010.03.014"),
 }
 
 # kitap, bölüm, standart, tez, bildiri
